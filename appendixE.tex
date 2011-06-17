@@ -1,0 +1,72 @@
+%\ifthenelse{\value{noa} = 1}
+%%...................then
+%{\chapter*{APPENDIX: THIS IS THE FIRST APPENDIX}
+%\addcontentsline{toc}{chapter}{APPENDIX: THIS IS THE FIRST APPENDIX}
+%\chaptermark{Appendix}
+%\markboth{Appendix}{Appendix}
+%\setcounter{chapter}{1}}
+%%...................else
+{\chapter{THIS IS THE FIRST APPENDIX}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%ADD LABEL
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Proof of Proposition 1.
+
+(1) Since B(T,T)=1, Equation (8) yields
+
+$$B(t,T)=e^{\theta (T-t)}\frac{E((\delta(T))^{\alpha-1}|\mathfrak{F}_{t})}{(\delta(t))^{\alpha-1}}$$
+
+Using the fact that
+
+$$(\frac{\delta(T)}{\delta(t)})^{\alpha-1}=exp{(\alpha-1)(\mu_{1}-\frac{1}{2}\sigma_{1}^{2})(T-t)
++\sigma_{1}(\alpha-1)(W_{1}(T)-W_{1}(t))}\prod_{i=N(t)+1}^{N(T)}\widetilde{V}_{i}^{\alpha-1}$$
+
+$$E(\prod_{i=N(t)+1}^{N(t)}\widetilde{V}_{i}^{\alpha-1})=\sum_{j=0}{\infty}e^{-\lambda(T-t)}\frac{[\lambda(T-t)]^{j}}{j!}{\zeta_{1}^{(\alpha-1)}+1}^{j}$$
+$$=exp{\lambda\zeta_{1}^{(\alpha-1)}(T-t)}$$
+
+First equation yields
+
+$$B(t,T)=exp[-(T-t){\theta -(\alpha-1)(\mu_{1}-\frac{1}{2}\sigma_{1}^{2})-\frac{1}{2}\sigma_{1}^{2}(\alpha-1)^{2}-\lambda\zeta_{1}^{(\alpha-1)}}]$$
+
+Note that it implies
+
+$$e^{-r(T-t)}=E(U_{c}(\delta(T),T)/U_{c}(\delta(t),t)|\mathfrak{F}_{t})$$
+
+which shows that Z(t) is a martingale under P. Furthermore, it leads to
+
+$$Z(t)=(\delta(0))^{\alpha-1}e^{(r-\theta)t}exp{(\alpha-1)(\mu_{1}-\frac{1}{2}\sigma_{1}^{2})t +\sigma_{1}(\alpha-1)(W_{1}(t))}\prod_{i=1}^{N(t)}\widetilde{V}_{i}^{\alpha-1}$$
+$$=(\delta(0))^{\alpha-1}exp{-\frac{1}{2}\sigma_{1}^{2}(\alpha-1)^{2}-\lambda\zeta_{1}^{(\alpha-1)}}t
++\sigma_{1}(\alpha-1)(W_{1}(t))\prod_{i=1}^{N(t)}\widetilde{V}_{i}^{\alpha-1}$$
+
+Now
+
+$$\psi_{s}(t)=\frac{E(U_{c}(\delta(T),T)\psi_{s}(T)|\mathfrak{F}_{t})}{(U_{c}(\delta(t),t))}=e^{-rT}E\{\frac{Z(T)}{Z(t)}\psi_{s}(T)|\mathfrak{F}_{t}\}$$
+$$=e^{-rT}E^{*}(\psi_{s}(T)|\mathfrak{F}_{t})$$
+
+Proof of Theorem 1. The Girsanov theorem for jump-diffusion processes tells us that under $P^{*}$, $W_{1}^{\prime}(t)= W_{1}(t)-\sigma_{1}(\alpha-1)t$ is a new Brownian motion and under $P^{*}$ the jump rate of N(t) is $\lambda^{*}=\lambda E(\widetilde{V}_{i}^{\alpha-1})=\lambda (\zeta_{1}^{(\alpha-1)}+1)$ and
+$\widetilde{V}_{i}$ has a new density $f_{\widetilde{V}}^{*}(x)=(1/(\zeta_{1}^{(\alpha-1)}+1))x^{\alpha-1}f_{\widetilde{V}}(x)$. Therefore, dynamics of S(t) is given by
+
+$$\frac{dS(t)}{S(t-)}=\mu dt+\sigma\{ \rho dW_{1}(t)+\sqrt{1-\rho^{2}} dW_{2}(t)\} + \Delta (\sum_{i=1}^{N(t)}(V_{i}^{\beta}-1))$$
+$$=\{\mu + \sigma_{1}\sigma\rho (\alpha-1)dt + \sigma\{\rho dW_{1}^{\prime}(t)+\sqrt{1-\rho^{2}} dW_{2}(t)\}+ \Delta (\sum_{i=1}^{N(t)}(V_{i}^{\beta}-1))$$
+
+Because
+
+$$E^{*}(\widetilde{V}_{i}^{\beta})=\int_{0}^{\infty}x^{\beta}\frac{1}{\zeta_{1}^{(\alpha-1)}+1}x^{(\alpha-1)}f_{\widetilde{V}}(x)dx$$
+$$=\frac{1}{\zeta_{1}^{(\alpha-1)}+1}E(\widetilde{V}^{\alpha+\beta-1})=\frac{\zeta_{1}^{\alpha+\beta-1}+1}{\zeta_{1}^{\alpha-1}+1}$$
+
+we have $$\lambda^{*}\{E^{*}(\widetilde{V}^{\beta})-1\}=\lambda(\zeta_{1}^{\alpha+\beta-1}-\zeta_{1}^{\alpha-1})$$.
+
+Therefore
+
+$$\frac{dS(t)}{S(t-)}=\{\mu + \sigma_{1}\sigma\rho (\alpha-1)+ \lambda(\zeta_{\alpha+\beta-1}-\zeta_{\alpha-1})\}dt$$
+$$-\lambda^{*}\{E^{*}(\widetilde{V}^{\beta})-1\}dt+\sigma\{\rho dW_{1}^{\prime}(t)+\sqrt{1-\rho^{2}} dW_{2}(t)\}+ \Delta (\sum_{i=1}^{N(t)}(V_{i}^{\beta}-1))$$
+
+Hence to satisfy the rational equilibrium requirement $S(t)=e^{-r(T-t)}E^{*}(S(T)|\mathfrak{F})$ we must have $\mu + \sigma_{1}\sigma\rho (\alpha-1)+ \lambda(\zeta_{\alpha+\beta-1}-\zeta_{\alpha-1})=r$
+
+So, under the measure $P^{*}$, the dynamics of S(t) is given by
+
+$$\frac{dS(t)}{S(t-)}=rdt-\lambda^{*}\{E^{*}(\widetilde{V}^{\beta})-1\}dt+\sigma\{\rho dW_{1}^{\prime}(t)+\sqrt{1-\rho^{2}} dW_{2}(t)\}+ \Delta (\sum_{i=1}^{N(t)}(V_{i}^{\beta}-1))$$ 

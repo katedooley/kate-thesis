@@ -1,0 +1,78 @@
+% user defined commands %
+% Here is where you define optional commands such as macros, new commands,
+% and new environments to be used in your paper
+
+% optional command to prevent a word from breaking across a line %
+\hyphenchar\font=-1
+
+% UF template specific commands %
+% Commands to produce proper bullet list (creates the \uflistb and \bitem commands) %
+\newenvironment{uflistb}[1]{\begin{hangparas}{.34in}{1}}{\end{hangparas}} %
+\newcommand{\bitem}{\noindent\singlespacing\labelitemi\hspace{.25in}} %
+
+% Commands for enumerated lists (creates the \uflistn and \nitem commands) %
+\newcounter{ufcount}%
+\newenvironment{uflistn}[1]{\begin{hangparas}{.36in}{1}\setcounter{ufcount}{1}}{\end{hangparas}} %
+\renewcommand{\labelitemii}{\arabic{ufcount}.} %
+\newcommand{\nitem}{\noindent\singlespacing\labelitemii\hspace{.23in}\addtocounter{ufcount}{1}} %
+\newcommand{\labelbitemi}{\labelitemi}
+\newcommand{\labelbitemii}{\labelitemii}
+\newcommand{\labelbitemiii}{\labelitemiii}
+\newcommand{\labelbitemiv}{\labelitemiv}
+% Shorcut commands for misc stuff %
+
+\newlength{\widthOfItem}
+\renewenvironment{itemize}{%
+\begin{list}{
+\labelitemi}{%
+\setlength{\itemsep}{0.5\baselineskip}
+\setlength{\labelwidth}{2em}
+\setlength{\listparindent}{.32in}%
+\setlength{\leftmargin}{.32in}
+\setlength{\rightmargin}{0in}}
+\settowidth{\widthOfItem}{\labelitemi}
+\setlength{\labelsep}{\leftmargin-\widthOfItem}
+\singlespacing
+}{\end{list}}
+
+% shortcut for setting up inserting \prime command in mathmode to avoid errors %
+\newcommand{\p}{^{\prime}}
+
+% shortcuts for prime color text
+\newcommand{\red}{\textcolor[rgb]{1.00,0.00,0.00}}
+\newcommand{\green}{\textcolor[rgb]{0.00,1.00,0.00}}
+\newcommand{\blue}{\textcolor[rgb]{0.00,0.00,1.00}}
+
+% Shorcut commands for mathmatical formulas %
+
+\newcommand{\latex}{\LaTeX 2\ensuremath{\epsilon}}
+
+% THEOREM Environments ---------------------------------------------------
+%These environments are provided as a convenience - feel free to modify if needed
+
+\newtheorem{theorem}{Theorem}%[chapter]%To link the theorem to each chapter uncomment the chapter option
+\newtheorem{lemma}{Lemma}%[theorem]% To link each lemma to a theorem uncomment the theorem option
+\newtheorem{corollary}{Corollary}%[theorem]% To link each corollary to a theorem uncomment the theorem option
+% to link a corollary to a chapter change the theorem option to chapter
+\newtheorem{definition}{Definition}%[chapter] %the same is true for both definitions and assumptions
+\newtheorem{assumption}{Assumption}%[chapter] %
+
+
+%These were some user commands I've run across that I thought some might want to incorporate into their work
+%\newcommand{\bdm}{
+ %   \begin{displaymath}}
+
+%\newcommand{\edm}{
+%    \end{displaymath}}
+
+%\newcommand{\be}{
+%    \begin{equation}}
+
+%\newcommand{\ee}{
+%    \end{equation}}
+
+%\newcommand{\bea}{
+ %   \begin{eqnarray}}
+
+%\newcommand{\eea}{
+%    \end{eqnarray}}

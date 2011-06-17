@@ -1,0 +1,67 @@
+\BOOKMARK [0][-]{chapter*.1}{ACKNOWLEDGMENTS}{}
+\BOOKMARK [0][-]{tableofcontents.0}{TABLE OF CONTENTS}{}
+\BOOKMARK [0][-]{chapter*.3}{LIST OF TABLES}{}
+\BOOKMARK [0][-]{chapter*.4}{LIST OF FIGURES}{}
+\BOOKMARK [0][-]{chapter*.5}{LIST OF SYMBOLS}{}
+\BOOKMARK [0][-]{section*.6}{ABSTRACT}{}
+\BOOKMARK [0][-]{chapter.1}{The Search for Gravitational Waves}{}
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{The theory of gravitational radiation}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Sources}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{Methods of detection}{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{State of ground-based interferometry}{chapter.1}
+\BOOKMARK [1][-]{section.1.6}{Purpose of this work}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Laser interferometers for gravitational-wave detection}{}
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Measuring GW strain with light}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Light as a photon}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Light as a wave}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{Signal versus noise}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Sensitivity Limits}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{Power Recycled Michelson Interferometers}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{More Laser Power}{chapter.2}
+\BOOKMARK [1][-]{section.2.7}{Digital Control in LIGO}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Input Optics for high laser power}{}
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Problems in Initial LIGO}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Design of Enhanced LIGO Input Optics}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Electro-optic modulator}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Mode cleaner}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{Faraday isolator}{section.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.3.1}{Thermal birefringence}{subsection.3.2.3}
+\BOOKMARK [3][-]{subsubsection.3.2.3.2}{Thermal lensing}{subsection.3.2.3}
+\BOOKMARK [3][-]{subsubsection.3.2.3.3}{Polarizers}{subsection.3.2.3}
+\BOOKMARK [3][-]{subsubsection.3.2.3.4}{Heat conduction}{subsection.3.2.3}
+\BOOKMARK [2][-]{subsection.3.2.4}{Mode matching telescope}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{Input Optics performance}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Optical efficiency}{section.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.1.1}{Mode cleaner losses}{subsection.3.3.1}
+\BOOKMARK [3][-]{subsubsection.3.3.1.2}{Faraday isolator losses}{subsection.3.3.1}
+\BOOKMARK [2][-]{subsection.3.3.2}{Faraday isolation ratio}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.3}{Thermal drift}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.4}{Thermal lensing}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.5}{Mode matching}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.6}{EOM}{section.3.3}
+\BOOKMARK [1][-]{section.3.4}{Discussion}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Aligning the interferometer}{}
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.1.1}{Layout}{section.4.1}
+\BOOKMARK [2][-]{subsection.4.1.2}{Optical levers}{section.4.1}
+\BOOKMARK [1][-]{section.4.2}{Wave-front Sensors}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Cavities with radiation pressure}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Enhanced LIGO ASC design}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Alignment performance at high laser power}{}
+\BOOKMARK [1][-]{section.5.1}{Beam spot motion}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Angular mirror motion}{chapter.5}
+\BOOKMARK [1][-]{section.5.3}{Open loop gains and opto-mechanical TFs}{chapter.5}
+\BOOKMARK [1][-]{section.5.4}{Heating related measurements}{chapter.5}
+\BOOKMARK [1][-]{section.5.5}{DC readout related measurements}{chapter.5}
+\BOOKMARK [1][-]{section.5.6}{ASC noisebudget}{chapter.5}
+\BOOKMARK [1][-]{section.5.7}{ASC to DARM noisebudget}{chapter.5}
+\BOOKMARK [0][-]{chapter.6}{Prospects for Advanced LIGO}{}
+\BOOKMARK [1][-]{section.6.1}{Subtracting Seismic Noise from ASC}{chapter.6}
+\BOOKMARK [1][-]{section.6.2}{Filtering ASC out of DARM}{chapter.6}
+\BOOKMARK [1][-]{section.6.3}{Model of aLIGO ASC with no PRM}{chapter.6}
+\BOOKMARK [0][-]{chapter.7}{Summary}{}
+\BOOKMARK [0][-]{chapter*.7}{REFERENCES}{}
+\BOOKMARK [0][-]{chapter*.8}{BIOGRAPHICAL SKETCH}{}

@@ -1,0 +1,192 @@
+% user defined commands %
+% Here is where you define optional commands such as macros, new commands,
+% and new environments to be used in your paper
+
+
+% optional command to prevent a word from breaking across a line %
+\hyphenchar\font=-1
+
+% UF template specific commands %
+
+% Commands to produce proper bullet list
+\newlength{\widthOfItem}
+\let\Itemize=\itemize
+\let\endItemize=\enditemize
+\renewenvironment{itemize}{%
+	\begin{Itemize}
+		\setlength{\itemsep}{0.5\baselineskip}
+		\setlength{\labelwidth}{2em}
+		\setlength{\listparindent}{.32in}%
+		\setlength{\leftmargin}{.32in}
+		\setlength{\rightmargin}{0in}
+		\settowidth{\widthOfItem}{\labelitemi}
+		\setlength{\labelsep}{\leftmargin-\widthOfItem}
+		\renewcommand{\labelitemii}{--}
+		\singlespacing}{%
+	\end{Itemize}}
+
+% Commands for enumerated lists
+% \newcounter{ufcount}
+% \renewenvironment{enumerate}{
+% 	\setcounter{ufcount}{1}
+% 	\begin{list}{%
+% 		\arabic{ufcount}.}{%
+% 		\setlength{\itemsep}{0.5\baselineskip}
+% 		\setlength{\labelsep}{.24in}
+% 		\setlength{\labelwidth}{.1in}
+% 		\setlength{\listparindent}{.34in}%
+% 		\setlength{\leftmargin}{.35in}
+% 		\setlength{\rightmargin}{0in}
+% 		\usecounter{ufcount}}
+% 		\singlespacing
+% 	}{\end{list}}
+
+% Shorcut commands for misc stuff %
+
+% new command set that should be inserted before short captions (<2 lines), in order to left align the caption as per the editorial office mandate %
+
+%\makeatletter
+%\long\def\@makecaption#1#2{%
+%  \vskip\abovecaptionskip
+%  \sbox\@tempboxa{#1: #2}%
+%  \ifdim \wd\@tempboxa >\hsize
+%    #1: #2\par
+%  \else
+%    \global \@minipagefalse
+%    \hb@xt@\hsize{\box\@tempboxa\hfil}%
+%  \fi
+%  \vskip\belowcaptionskip}
+%\makeatother
+
+
+% shortcut for setting up inserting \prime command in mathmode to avoid errors %
+\newcommand{\p}{^{\prime}}
+
+% shortcuts for prime color text
+% \newcommand{\red}{\textcolor[rgb]{1.00,0.00,0.00}}
+% \newcommand{\green}{\textcolor[rgb]{0.00,1.00,0.00}}
+% \newcommand{\blue}{\textcolor[rgb]{0.00,0.00,1.00}}
+
+%=======================================================
+% math notation
+
+% Spaces
+\newcommand{\field}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\Kfield}{\field{K}}
+\newcommand{\reals}{\field{R}}
+\newcommand{\complex}{\field{C}}
+\newcommand{\integers}{\field{Z}}
+\newcommand{\naturalNumbers}{\field{N}}
+\newcommand{\Space}[1]{\ensuremath{\mathcal{#1}}}
+
+% theorem like environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{question}{Question}
+\newcounter{mypropcounter}[subsection]
+\newtheorem{property}[mypropcounter]{Property}
+\newcounter{myclaimcounter}[subsection]
+\newtheorem{claim}[myclaimcounter]{Claim}
+
+% object notation
+\newcommand{\mtx}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\x}{\mtx{x}}
+\newcommand{\randomVariable}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\randomProcess}[2][t]{\ensuremath{\mathbf{#2}(#1)}}
+\newcommand{\cdotdot}{\ensuremath{(\cdot, \cdot)}}
+\newcommand{\fdot}{\ensuremath{(\cdot)}}
+
+% Operators
+\newcommand{\E}[2][]{\ensuremath{\mathrm{E}_{#1}\left\{#2\right\}}}
+\newcommand{\ip}[2]{\ensuremath{\left\langle #1 , #2 \right\rangle}}
+\newcommand{\innerProd}[2]{\ip{#1}{#2}}
+\newcommand{\norm}[1]{\ensuremath{\left\|#1\right\|}}
+\newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
+
+%=======================================================
+% Spike trains
+
+\newcommand{\eventSpace}{\ensuremath{\mathcal{T}}}
+\newcommand{\probabilitySpace}{\ensuremath{(\Omega,\mathcal{B},P)}}
+\newcommand{\spkTrain}[1]{\ensuremath{S_{#1}}}
+\newcommand{\spkTrainIndexSet}{\ensuremath{\mathcal{I}}}
+\newcommand{\spkTrainSpace}{\ensuremath{\mathcal{S}(\eventSpace)}}
+\newcommand{\spkTrainSet}[2][]{\ensuremath{\{t^{#1}_{#2} \in \eventSpace:#2 = 1, \ldots, N_{#1}\}}}
+
+% spike train measures
+\newcommand{\dVP}{\ensuremath{d_{\mbox{\footnotesize VP}}}}
+\newcommand{\dvR}{\ensuremath{d_{\mbox{\footnotesize vR}}}}
+\newcommand{\dCS}{\ensuremath{d_{\mbox{\footnotesize CS}}}}
+\newcommand{\dCC}{\ensuremath{d_{\mbox{\footnotesize CC}}}}
+
+%=======================================================
+% Point processes, kernel and CIP macros
+
+\newcommand{\eventSpace}{\ensuremath{\mathcal{T}}}
+\newcommand{\probabilitySpace}{\ensuremath{(\Omega,\mathcal{B},P)}}
+\newcommand{\pp}[1]{\ensuremath{p_{#1}}}
+\newcommand{\pointProcessSpace}{\ensuremath{\mathcal{P}(\eventSpace)}}
+\newcommand{\pointProcessSet}[2][]{\ensuremath{\{t^{#1}_{#2} \in \eventSpace:#2 = 1, \ldots, N_{#1}\}}}
+\newcommand{\pointProcessWav}[2][t]{\ensuremath{s_{#2}(#1)}}
+\newcommand{\filteredPointProcess}[2][t]{\ensuremath{q_{#2}(#1)}}
+\newcommand{\quantt}{\ensuremath{\check{t}}}
+
+\newcommand{\kernel}[1]{\ensuremath{k#1}}
+\newcommand{\kernelInputSpace}{\ensuremath{\eventSpace\times\eventSpace}}
+\newcommand{\kernelHilbertSpace}{\ensuremath{\HilbertSpace_{\kernel{}}}}
+\newcommand{\dimKernelSpace}{\ensuremath{|\kernelHilbertSpace|}}
+\newcommand{\kernelMapping}[2][]{\ensuremath{\Phi^{#1}_{#2}}}
+\newcommand{\kernelEigenfunc}[1]{\ensuremath{\phi_{#1}}}
+\newcommand{\innerProdHk}[2]{\ensuremath{\left\langle#1, #2\right\rangle_{\kernelHilbertSpace}}}
+
+\newcommand{\CIP}{\ensuremath{V}}
+\newcommand{\CIPpp}[2]{\ensuremath{\CIP(\pp{#1},\pp{#2})}}
+\newcommand{\CIPhat}{\ensuremath{\hat{\CIP}}}
+\newcommand{\CIPkernelFunc}[2][\cdot]{\CIP(#2,#1)}%\ensuremath{V_{#2}(#1)}}
+\newcommand{\CIPkernelInputSpace}{\ensuremath{\pointProcessSpace\times\pointProcessSpace}}
+\newcommand{\CIPHilbertSpace}{\ensuremath{\HilbertSpace_{\CIP}}}
+%\newcommand{\dimCIPkernelSpace}{\ensuremath{|\VCIPHilbertSpace|}}
+\newcommand{\CIPkernelMapping}[1]{\ensuremath{\Psi_{#1}}}
+\newcommand{\CIPkernelEigenfunc}[1]{\ensuremath{\psi_{#1}}}
+\newcommand{\innerProdHv}[2]{\ensuremath{\left\langle#1, #2\right\rangle_{\CIPHilbertSpace}}}
+
+\newcommand{\CIK}{\ensuremath{I}}
+\newcommand{\HS}[1][]{\ensuremath{\mathcal{H}_{#1}}}
+\newcommand{\HilbertSpace}[1][]{\ensuremath{\mathcal{H}_{#1}}}
+\newcommand{\CIKHS}{\HilbertSpace[\CIK]}
+\newcommand{\CIKst}[2]{\ensuremath{\CIK(\spkTrain{#1},\spkTrain{#2})}}
+\newcommand{\mCIK}{\ensuremath{I}}
+\newcommand{\mCIKst}[2]{\ensuremath{\mCIK(\spkTrain{#1},\spkTrain{#2})}}
+\newcommand{\mCIKpp}[2]{\ensuremath{\mCIK(\pp{#1},\pp{#2})}}
+\newcommand{\mCIKhat}{\ensuremath{\hat{\mCIK}}}
+\newcommand{\mCIKernelFunc}[2][\cdot]{\mCIK(#2,#1)}
+%\newcommand{\mCIKInputSpace}{\ensuremath{\pointProcessSpace\times\pointProcessSpace}}
+\newcommand{\mCIKHS}{\HilbertSpace[\mCIK]}
+%\newcommand{\dimCIPkernelSpace}{\ensuremath{|\VCIPHilbertSpace|}}
+\newcommand{\mCIKernelMapping}{\ensuremath{\Lambda}}
+\newcommand{\mCIKernelEigenfunc}{\ensuremath{\psi}}
+\newcommand{\ipMCIK}[2]{\ensuremath{\ip{#1}{#2}_{\mCIKHS}}}
+
+\newcommand{\RKHSpcaeigfcn}{\ensuremath{\psi}}
+\newcommand{\RKHSpcaeigval}{\ensuremath{\rho}}
+
+%=======================================================
+% other commands & environments
+
+\newcommand{\equationref}[1]{equation~\ref{#1}}
+\newcommand{\Equationref}[1]{Equation~\ref{#1}}
+\newcommand{\figureref}[1]{figure~\ref{#1}}
+\newcommand{\Figureref}[1]{Figure~\ref{#1}}
+\newcommand{\tableref}[1]{table~\ref{#1}}
+\newcommand{\Tableref}[1]{Table~\ref{#1}}
+
+\newcommand{\etal}{et al.}
+\newcommand{\figcontent}[2][tbp]{\begin{figure}[#1]\centering #2 \end{figure}}
+\newcommand{\tabcontent}[2][tbp]{\begin{table}[#1]\centering #2 \end{table}}
+\newenvironment{cfig}[1][tbp]{\begin{figure}[#1]\centering}{\end{figure}}
+

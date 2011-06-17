@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
+The top-level auxiliary file: dissertation.aux
+A level-1 auxiliary file: acknowledgements.aux
+A level-1 auxiliary file: TOC.aux
+A level-1 auxiliary file: abbreviations.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: chapter0.aux
+A level-1 auxiliary file: chapter1.aux
+A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter6.aux
+The style file: apsrev.bst
+A level-1 auxiliary file: bio.aux
+Database file #1: group-1530.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 21 entries,
+            3411 wiz_defined-function locations,
+            1332 strings with 27405 characters,
+and the built_in function-call counts, 18388 in all, are:
+= -- 884
+> -- 895
+< -- 123
++ -- 810
+- -- 222
+* -- 2718
+:= -- 1851
+add.period$ -- 21
+call.type$ -- 21
+change.case$ -- 84
+chr.to.int$ -- 21
+cite$ -- 23
+duplicate$ -- 1626
+empty$ -- 1387
+format.name$ -- 500
+if$ -- 3319
+int.to.chr$ -- 1
+int.to.str$ -- 22
+missing$ -- 241
+newline$ -- 78
+num.names$ -- 60
+pop$ -- 339
+preamble$ -- 1
+purify$ -- 84
+quote$ -- 0
+skip$ -- 730
+stack$ -- 0
+substring$ -- 368
+swap$ -- 1422
+text.length$ -- 117
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 126
+warning$ -- 0
+while$ -- 49
+width$ -- 0
+write$ -- 245

@@ -1,0 +1,60 @@
+%\documentclass[12pt,dvipdfm,final,CPage]{ufthesis}   % <-- what UF really wants
+\documentclass[12pt,pdftex,final,CPage]{ufthesis}
+\renewcommand{\rmdefault}{ma1}
+
+
+%% Define packages to be used and options
+\include{packages}
+\include{extraparameters}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+
+% This is for section numbers in equations. Remove it if it's already in the (inactive?) style file
+\numberwithin{equation}{section}
+
+% Prevent figures, tables or algorithms from using a separate page or column alone
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
+
+\include{userinfo}
+
+\include{usersetcommands}
+
+\begin{document}
+
+\maketitle
+\makecopyright
+\dedication{\input{dedication}}
+
+\include{acknowledgements}
+\include{TOC}
+\include{abbreviations}
+
+\addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}% This extra line adds the word CHAPTER to the table of contents %
+\phantomsection
+
+\include{abstract}
+
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+
+
+%\include{appendix}
+
+\bibliographystyle{apsrev}
+\bibliography{group-1530}
+
+\include{bio}
+
+
+\end{document}  

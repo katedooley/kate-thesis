@@ -1,0 +1,72 @@
+%If you have a single appendix, you need to change {\chapter*{APPENDIX: THIS IS THE FIRST APPENDIX}
+%to {\chapter*{APPENDIX: YOUR APPENDIX TITLE HERE} if you have two or more appendices
+%you need to change {\chapter{THIS IS THE FIRST APPENDIX}} to
+%{\chapter{YOUR APPENDIX TITLE HERE}}
+%
+%If you make these changes correctly Latex will complain bitterly about the additions to the TOC
+%but will make them correctly in a manner acceptable to the Editorial Office.
+
+\ifthenelse{\value{noa} = 1}
+%...................then
+{\chapter*{APPENDIX: THIS IS THE FIRST APPENDIX}
+\addcontentsline{toc}{chapter}{APPENDIX: THIS IS THE FIRST APPENDIX}
+\chaptermark{Appendix}
+\markboth{Appendix}{Appendix}
+\setcounter{chapter}{1}}
+%...................else
+{\chapter{Overlap integrals}}
+%...................
+
+
+A measure of the mode matching can be given by the amount of power
+coupled from one mode into another. This is calculated as the square
+of the overlap integral of two fields, $\psi_1$ and $\psi_2$, for a particular z-axis
+(propagation direction) cross-section:
+\begin{equation}
+P = \left| \langle \psi \mid \psi' \rangle \right|^2
+= \left[\int_{-\infty}^\infty \psi^\star(x) \psi'(x) \, dx \right]^2
+\end{equation}
+We are interested in the lowest order Hermite-Gaussian mode:
+\begin{equation}
+\psi(x,z) = u_0(x,z) = \left[ \frac{2}{\pi w_0^2} \right]^{1/4} \left[
+  \frac{q_0}{q(z)} \right]^{1/2} \exp{\left[ \frac{-i k x^2}{2 q(z)}
+  \right] }
+\end{equation}
+which can be rewritten as a function of $x$ and $q$ using
+$q_0=i \mbox{Im}(q)$, and $w_0^2 = -2 q_0 i/k$:
+\begin{equation}
+u_0(x,q) = \left[ \frac{-k \mbox{Im}(q)}{\pi q^2} \right]^{1/4} \exp{\left[ \frac{-i k x^2}{2 q}
+  \right] }
+\label{eq:u0_xq}
+\end{equation}
+Eq. (\ref{eq:u0_xq}) is normalized such that $\langle u_0 \mid u_0
+\rangle = 1$.
+
+We want to know the square of the overlap integral for two fields
+given by different $q$ parameters at one location $z$. First, the
+overlap integral:
+\begin{align}
+\langle q_1 \mid q_2 \rangle
+&= \int_{-\infty}^\infty u_0(x, q_1) u_0(x, q_2) \, dx \\
+&= \left[ \frac{k^2 \mbox{Im}(q^\star_1) \mbox{Im}(q_2)}{\pi^2
+    q^{\star 2}_1 q^2_2} \right]^{1/4} \int_{-\infty}^\infty
+\exp{\left[ -\left[ \frac{-i k}{2 q^\star_1} + \frac{i k}{2 q_2}
+  \right]x^2} \right] \, dx \\
+&= \left[ -\frac{k^2 \mbox{Im}(q_1) \mbox{Im}(q_2)}{\pi^2
+    q^{\star 2}_1 q^2_2} \right]^{1/4} \sqrt{\frac{\pi}{\left[ \frac{-i k}{2 q^\star_1} + \frac{i k}{2 q_2}
+  \right]}} \\
+&= \left[ \mbox{Im}(q_1) \mbox{Im}(q_2) \right]^{1/4}
+\sqrt{\frac{2}{q^\star_1 q_2 \left( 1/q_2 - 1/q^\star_1 \right)}} 
+\end{align}
+Then, the power is given by:
+\begin{align}
+\left| \langle q_1 \mid q_2 \rangle \right|^2
+&= \frac{2 \sqrt{\mbox{Im}(q_1) \mbox{Im}(q_2)}}  
+{\sqrt{q^\star_1 q_1 q^\star_2 q_2 \left[\frac{1}{q_2} - \frac{1}{q^\star_1} \right]
+    \left[\frac{1}{q^\star_2} - \frac{1}{q_1} \right]}} \\
+&= \frac{2 \sqrt{\mbox{Im}(q_1) \mbox{Im}(q_2)}}{|q_2 - q^\star_1 |} 
+\label{eq:power_qs}
+\end{align}
+Note that Eq. (\ref{eq:power_qs}) simplifies to 1 when $q_1 = q_2$ and
+that this whole formulation assumes that the beams are propagating
+along the same z-axis.

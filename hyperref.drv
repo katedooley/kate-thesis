@@ -1,0 +1,81 @@
+%%
+%% This is file `hyperref.drv',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% hyperref.dtx  (with options: `driver')
+%% 
+%% File: hyperref.dtx Copyright 1995-2001 Sebastian Rahtz,
+%%
+%% This file is part of the `Hyperref Bundle'.
+%% -------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the `Hyperref Bundle' is
+%% given in the file `manifest.txt'.
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesFile{hyperref.drv}
+  [2007/05/03 v6.76e
+  Hyperref documentation driver file]
+\documentclass{ltxdoc}
+\usepackage{array,times}
+\def\ttdefault{cmtt}
+\usepackage[%
+  colorlinks,%
+  hyperindex=false,% done by hypdoc
+  pdfusetitle,%
+  pdfpagelabels%
+]{hyperref}
+\usepackage[numbered]{hypdoc}
+\usepackage{bmhydoc}
+\pdfstringdefDisableCommands{\let\\\textbackslash}%
+\EnableCrossrefs
+\CodelineIndex
+\begin{document}
+  %
+  % title
+  %
+  \GetFileInfo{hyperref.sty}%
+  \title{Hypertext marks in \LaTeX}%
+  \author{Sebastian Rahtz\\%
+    Email: \texttt{sebastian.rahtz@oucs.ox.ac.uk}\\[1.5ex]%
+    Heiko Oberdiek\\%
+    Email: \texttt{oberdiek@uni-freiburg.de}}%
+  \date{processed \today}%
+  \maketitle
+  %
+  % overview
+  %
+  \makeatletter
+  \@ifundefined{HyperrefOverview}{}{%
+    \HyperrefOverview\relax
+    \newpage
+  }%
+  %
+  % table of contents
+  %
+  \section{\contentsname}%
+  \makeatletter
+  \@starttoc{toc}%
+  \newpage
+  %
+  % source code documentation
+  %
+  \let\Email\texttt
+  \DocInput{hyperref.dtx}%
+  %
+  % index
+  %
+  \PrintIndex
+\end{document}
+\endinput
+%%
+%% End of file `hyperref.drv'.
