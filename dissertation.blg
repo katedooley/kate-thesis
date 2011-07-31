@@ -11,13 +11,14 @@ A level-1 auxiliary file: chapter3.aux
 A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
 A level-1 auxiliary file: chapter6.aux
+A level-1 auxiliary file: chapter7.aux
 The style file: apsrev.bst
 A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 21 entries,
             3411 wiz_defined-function locations,
-            1332 strings with 27405 characters,
+            1333 strings with 27417 characters,
 and the built_in function-call counts, 18388 in all, are:
 = -- 884
 > -- 895

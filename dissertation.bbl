@@ -12,6 +12,30 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem[{\citenamefont{Sidles and Sigg}(2006)}]{Sidles2006Optical}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Sidles}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
+  \bibinfo{journal}{Physics Letters A} \textbf{\bibinfo{volume}{354}},
+  \bibinfo{pages}{167} (\bibinfo{year}{2006}), ISSN \bibinfo{issn}{03759601},
+  \urlprefix\url{http://dx.doi.org/10.1016/j.physleta.2006.01.051}.
+
+\bibitem[{\citenamefont{Hirose et~al.}(2010)\citenamefont{Hirose, Kawabe, Sigg,
+  Adhikari, and Saulson}}]{Hirose2010Angular}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Hirose}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Kawabe}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.~R.} \bibnamefont{Saulson}},
+  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{49}},
+  \bibinfo{pages}{3474} (\bibinfo{year}{2010}),
+  \urlprefix\url{http://dx.doi.org/10.1364/AO.49.003474}.
+
+\bibitem[{\citenamefont{Barsotti and Evans}(2009)}]{Barsotti2009modeling}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Barsotti}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}}, \bibinfo{type}{Tech.
+  Rep.} \bibinfo{number}{T080186}, \bibinfo{institution}{LIGO Laboratory}
+  (\bibinfo{year}{2009}).
+
 \bibitem[{\citenamefont{Linsay et~al.}(1983)\citenamefont{Linsay, Saulson,
   Weiss, and Whitcomb}}]{Linsay1983Study}
 \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Linsay}},
@@ -143,30 +167,6 @@
   \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
   \bibinfo{pages}{459} (\bibinfo{year}{2007}),
   \urlprefix\url{http://dx.doi.org/10.1364/OE.15.000459}.
-
-\bibitem[{\citenamefont{Sidles and Sigg}(2006)}]{Sidles2006Optical}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Sidles}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
-  \bibinfo{journal}{Physics Letters A} \textbf{\bibinfo{volume}{354}},
-  \bibinfo{pages}{167} (\bibinfo{year}{2006}), ISSN \bibinfo{issn}{03759601},
-  \urlprefix\url{http://dx.doi.org/10.1016/j.physleta.2006.01.051}.
-
-\bibitem[{\citenamefont{Hirose et~al.}(2010)\citenamefont{Hirose, Kawabe, Sigg,
-  Adhikari, and Saulson}}]{Hirose2010Angular}
-\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Hirose}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Kawabe}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.~R.} \bibnamefont{Saulson}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{49}},
-  \bibinfo{pages}{3474} (\bibinfo{year}{2010}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.49.003474}.
-
-\bibitem[{\citenamefont{Barsotti and Evans}(2009)}]{Barsotti2009modeling}
-\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Barsotti}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{T080186}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{2009}).
 
 \bibitem[{\citenamefont{Garfinkle}(2005)}]{Garfinkle2005Gauge}
 \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Garfinkle}}

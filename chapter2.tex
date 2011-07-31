@@ -1,6 +1,49 @@
 \chapter{Laser interferometers for gravitational-wave detection}
 
-\section{Introduction}
+\section{Signal versus noise}
+The factors that must be considered in the design of any detector can
+be grouped into two categories: signal and noise. The ability to make
+a claim of detection is largely dependent on the magnitude of the
+signal to noise ratio (SNR). An SNR of 8 is desired for detection
+confidence in LIGO. For laser interferometers, the strength of the GW
+signal is proportional to the length of the arms and the amount of
+power in the arms. (See Eq. \ref{}.) The change in the distance
+between the mirrors, $\Delta L$, is bigger for a given strain the
+longer the arms. And with more circulating power, the greater the
+amount of power that will show up at the AS port for a given
+displacement from the dark fringe. Therefore, the two fundamental ways
+to make a GW produce a bigger signal in an interferometer are: 1) make
+the arms longer, and 2) increase the circulating power.
+
+No matter how large a signal one might have, it won't be found
+confidently, or at all, if there is too much noise. The noise itself
+is best grouped into categories of displacement noise and sensing
+noise, which affect the length of the arms and the measurement of the
+signal, respectively. Interferometers for GW detection are plagued
+primarily by displacement noise below 70~Hz and sensing noise above
+200~Hz.
+
+In the next sections I will describe briefly the specific types of
+displacement and sensing noises affecting the sensitivity of laser
+interferometers. A summary of the noise budget is shown in
+Fig. \ref{}. 
+
+
+\subsection{Displacement noise} 
+ground motion, thermal noise
+
+seismic noise physically displaces the mirrors, resulting in changes in the length
+of the arm. 
+
+\subsection{Sensing noise}
+stray light, shot noise
+
+Shot noise is a quantum mechanical effect of the detection
+of photons which creates uncertainty in the phase of the light, and
+therefore the power, at the AS port.
+
+
+\section{Power-recycled Fabry-Perot Michelson}
 The typical detector configuration is a power-recycled Fabry-Perot
 Michelson laser interferometer featuring suspended test masses in
 vacuum as depicted in Figure \ref{fig:IFOschematic}. A diode-pumped,
@@ -78,37 +121,6 @@ effect of gravitational waves.
 
 
 
-\section{Signal versus noise}
-The factors that must be considered in the design of any detector can
-be grouped into two categories: signal and noise. The ability to make
-a claim of detection is largely dependent on the magnitude of the
-signal to noise ratio. For laser interferometers, the strength of the
-GW signal is proportional to the length of the arms and the amount of
-power in the arms. (See Eq. \ref{}.) Therefore, the two primary
-fundamental ways to make a GW produce a bigger signal in an
-interferometer are: 1) make the arms longer, and 2) increase the
-circulating power. The change in the distance between the mirrors,
-$\Delta L$, is bigger for a given strain the longer the arms. With
-more circulating power, the greater the amount that will show up at
-the AS port for a given displacement from the dark fringe.
-
-No matter how large a signal one might have, it won't be found
-confidently, or at all, if there is too much noise in the
-background. The source of the noise may be from  Interferometers for GW detection are plagued primarily by
-seismic noise (below 70~Hz) and shot noise (above 200~Hz). Seismic
-noise physically displaces the mirrors, resulting in changes in the
-length of the arm. Shot noise is a quantum mechanical effect of the
-detection of photons which creates uncertainty in the phase of the
-light, and therefore the power, at the AS port.
-
-
-\subsection{Sensitivity Limits}
-\begin{itemize}
-\item Displacement noise (ground motion, thermal noise)
-\item Sensing noise (stray light, shot noise)
-\end{itemize}
-
-
 
 
 \section{Power Recycled Michelson Interferometers}
@@ -128,4 +140,5 @@ light, and therefore the power, at the AS port.
 \section{Digital Control in LIGO}
 The LIGO interferometers are interfaced through a digital control
 system. 
+
 
