@@ -7,53 +7,57 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: chapter0.aux
 A level-1 auxiliary file: chapter1.aux
 A level-1 auxiliary file: chapter2.aux
-A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter3a.aux
+A level-1 auxiliary file: chapter4a.aux
 A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
 A level-1 auxiliary file: chapter6.aux
 A level-1 auxiliary file: chapter7.aux
+A level-1 auxiliary file: appendixAA.aux
 The style file: apsrev.bst
 A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 21 entries,
+Warning--can't use both author and editor fields in Siegman1986Lasers
+You've used 19 entries,
             3411 wiz_defined-function locations,
-            1333 strings with 27417 characters,
-and the built_in function-call counts, 18388 in all, are:
-= -- 884
-> -- 895
-< -- 123
-+ -- 810
-- -- 222
-* -- 2718
-:= -- 1851
-add.period$ -- 21
-call.type$ -- 21
-change.case$ -- 84
-chr.to.int$ -- 21
-cite$ -- 23
-duplicate$ -- 1626
-empty$ -- 1387
-format.name$ -- 500
-if$ -- 3319
+            1314 strings with 26396 characters,
+and the built_in function-call counts, 15855 in all, are:
+= -- 771
+> -- 747
+< -- 106
++ -- 668
+- -- 186
+* -- 2310
+:= -- 1628
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 78
+chr.to.int$ -- 19
+cite$ -- 20
+duplicate$ -- 1405
+empty$ -- 1208
+format.name$ -- 423
+if$ -- 2864
 int.to.chr$ -- 1
-int.to.str$ -- 22
-missing$ -- 241
-newline$ -- 78
-num.names$ -- 60
-pop$ -- 339
+int.to.str$ -- 20
+missing$ -- 210
+newline$ -- 72
+num.names$ -- 57
+pop$ -- 303
 preamble$ -- 1
-purify$ -- 84
+purify$ -- 76
 quote$ -- 0
-skip$ -- 730
+skip$ -- 626
 stack$ -- 0
-substring$ -- 368
-swap$ -- 1422
-text.length$ -- 117
+substring$ -- 331
+swap$ -- 1213
+text.length$ -- 97
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 126
-warning$ -- 0
-while$ -- 49
+type$ -- 112
+warning$ -- 1
+while$ -- 46
 width$ -- 0
-write$ -- 245
+write$ -- 218
+(There was 1 warning)

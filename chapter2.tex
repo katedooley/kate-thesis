@@ -18,7 +18,7 @@ the arms longer, and 2) increase the circulating power.
 No matter how large a signal one might have, it won't be found
 confidently, or at all, if there is too much noise. The noise itself
 is best grouped into categories of displacement noise and sensing
-noise, which affect the length of the arms and the measurement of the
+noise which affect the length of the arms and the measurement of the
 signal, respectively. Interferometers for GW detection are plagued
 primarily by displacement noise below 70~Hz and sensing noise above
 200~Hz.
@@ -26,7 +26,16 @@ primarily by displacement noise below 70~Hz and sensing noise above
 In the next sections I will describe briefly the specific types of
 displacement and sensing noises affecting the sensitivity of laser
 interferometers. A summary of the noise budget is shown in
-Fig. \ref{}. 
+Fig. \ref{fig:NB}. 
+
+
+\begin{figure}
+\begin{centering}
+%\includegraphics[width=0.8\textwidth]{figures/.pdf}
+\caption{Noise budget place holder.}
+\label{fig:NB}
+\end{centering}
+\end{figure}
 
 
 \subsection{Displacement noise} 
@@ -42,30 +51,6 @@ Shot noise is a quantum mechanical effect of the detection
 of photons which creates uncertainty in the phase of the light, and
 therefore the power, at the AS port.
 
-
-\section{Power-recycled Fabry-Perot Michelson}
-The typical detector configuration is a power-recycled Fabry-Perot
-Michelson laser interferometer featuring suspended test masses in
-vacuum as depicted in Figure \ref{fig:IFOschematic}. A diode-pumped,
-power amplified, and intensity and frequency stabilized Nd:YAG laser
-emits light at 1064~nm. The laser is directed to a Michelson
-interferometer whose two arm lengths are set to maintain destructive
-interference of the recombined light at the anti-symmetric (AS)
-port. An appropriately polarized gravitational wave will
-differentially change the arm lengths, producing signal at the AS port
-proportional to the GW strain and the input power. The Fabry-Perot
-cavities in the Michelson arms and a power recycling mirror (RM) at
-the symmetric port are two modifications to the Michelson
-interferometer that increase the laser power in the arms and therefore
-improve the detector's sensitivity to GWs.
-
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.8\textwidth]{figures/IFOschematic.pdf}
-\caption{Power-recycled Fabry-Perot Michelson laser interferometer.}
-\label{fig:IFOschematic}
-\end{centering}
-\end{figure}
 
 
 
@@ -123,22 +108,90 @@ effect of gravitational waves.
 
 
 
-\section{Power Recycled Michelson Interferometers}
+
+\section{Power-recycled Fabry-Perot Michelson interferometers}
+The typical detector configuration is a power-recycled Fabry-Perot
+Michelson laser interferometer featuring suspended test masses in
+vacuum as depicted in Figure \ref{fig:IFOschematic}. A diode-pumped,
+power amplified, and intensity and frequency stabilized Nd:YAG laser
+emits light at 1064~nm. The laser is directed to a Michelson
+interferometer whose two arm lengths are set to maintain destructive
+interference of the recombined light at the anti-symmetric (AS)
+port. An appropriately polarized gravitational wave will
+differentially change the arm lengths, producing signal at the AS port
+proportional to the GW strain and the input power. The Fabry-Perot
+cavities in the Michelson arms and a power recycling mirror (RM) at
+the symmetric port are two modifications to the Michelson
+interferometer that increase the laser power in the arms and therefore
+improve the detector's sensitivity to GWs.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.8\textwidth]{figures/IFOschematic.pdf}
+\caption{Power-recycled Fabry-Perot Michelson laser interferometer.}
+\label{fig:IFOschematic}
+\end{centering}
+\end{figure}
+
+
 \begin{itemize}
+\item degrees of freedom
 \item phase detection, sidebands
 \item sub-systems, basic loops
+\item DARM
 \end{itemize}
 
 
 
 
+\section{Controlling the interferometer}
+The ability of the interferometer to provide a differential arm length
+signal depends on the many interferometer cavities being locked all at
+once. It is the light, after all, that serves as our probe of arm
+length. However, the motion of the mirrors is too large for this state
+to naturally occur. For example, the rms pendular displacement of the
+mirrors without control is 1 \micron, equivalent to a full laser
+wavelength. The arm length would swing from one free spectral range to
+the next, never staying put long enough for resonance to occur and for
+light from the arm to make its way to the anti-symmetric port.
+
+The motion of the interferometer must be controlled enough such that
+resonance is achieved and so that error signals fall in a linear
+regime. Control does not improve the strain sensitivity, but it makes
+the strain measurement possible. The strain is determined by undoing
+the (carefully measured) effect of the control system on the
+differential arm length error signal.
+
+Design considerations for the control loops include how much motion at
+what frequencies can be tolerated, and the signal to noise ratio of
+the motion sensor.
+
+
+
+\subsection{Digital Control in LIGO}
+The physical components of the LIGO interferometers are interfaced
+through a digital control system. 
+
+
+
+\subsection{Mirror actuation}
+Each mirror is equipped with four optical sensor and electro-magnetic
+(OSEM) actuators for providing control to the mirror. Magnets arranged
+to form the four corners of a square are glued on the mirror's back
+surface, and the OSEM units envelop them. Length control of the
+cavities, for instance, sends current of the same magnitude through
+each coil on a given mirror to provide a piston force for changing the
+mirror's position.
+
+
+
 \section{More Laser Power}
-
-
-
-
-\section{Digital Control in LIGO}
-The LIGO interferometers are interfaced through a digital control
-system. 
+Shot noise results from an uncertainty in the arrival time of photons
+on a detector:
+\begin{equation}
+P_{shot} = \sqrt{2 h_p \nu P_{DC}} \mbox{ W/$\sqrt{\mbox{Hz}}$}
+\label{eq:shotnoise}
+\end{equation}
+where $P_{DC}$ is the DC power on the wavefront sensor, $h_p$ is Planck's constant and $\nu$ is the frequency of the laser light. 
 
 

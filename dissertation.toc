@@ -14,43 +14,54 @@
 \contentsline {section}{\numberline {3.1}Signal versus noise}{18}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Displacement noise}{18}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Sensing noise}{18}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Power-recycled Fabry-Perot Michelson}{19}{section.3.2}
-\contentsline {section}{\numberline {3.3}Measuring GW strain with light}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Light as a photon}{19}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Light as a wave}{20}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Power Recycled Michelson Interferometers}{21}{section.3.4}
-\contentsline {section}{\numberline {3.5}More Laser Power}{21}{section.3.5}
-\contentsline {section}{\numberline {3.6}Digital Control in LIGO}{21}{section.3.6}
-\contentsline {chapter}{\numberline {4}{Angular mirror motion}}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}The mirrors as torsion pendula}{22}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Torque to angle transfer function}{23}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Seismic noise torque}{25}{section.4.3}
-\contentsline {section}{\numberline {4.4}Actuation noise torque}{25}{section.4.4}
-\contentsline {section}{\numberline {4.5}Radiation pressure torque}{26}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Tilt eigenmodes of a Fabry-Perot cavity}{27}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Soft and hard modes}{29}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Stability}{31}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}How much suppression is necessary?}{33}{section.4.6}
-\contentsline {section}{\numberline {4.7}Appendix xx--misaligned cavity axis}{33}{section.4.7}
-\contentsline {chapter}{\numberline {5}{Sensing and controlling mirror motion in the radiation pressure eigenbasis}}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{36}{section.5.1}
-\contentsline {section}{\numberline {5.2}Sensing}{36}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}OSEMs}{36}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Optical levers}{36}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Camera image}{37}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}QPDs}{38}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}WFSs}{38}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Control}{38}{section.5.3}
-\contentsline {section}{\numberline {5.4}Sensor noise and noise contribution to DARM}{38}{section.5.4}
-\contentsline {section}{\numberline {5.5}Solving the noise problem with the eigenbasis}{38}{section.5.5}
-\contentsline {section}{\numberline {5.6}ASC to DARM noisebudget}{38}{section.5.6}
-\contentsline {section}{\numberline {5.7}Beam spot motion}{41}{section.5.7}
-\contentsline {section}{\numberline {5.8}Heating related measurements}{41}{section.5.8}
-\contentsline {section}{\numberline {5.9}DC readout related measurements}{41}{section.5.9}
-\contentsline {section}{\numberline {5.10}ASC noisebudget}{41}{section.5.10}
-\contentsline {chapter}{\numberline {6}{Experimental measurement of the Sidles-Sigg effect}}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Measured modes}{43}{section.6.1}
-\contentsline {chapter}{\numberline {7}{Summary}}{44}{chapter.7}
-\contentsline {extrachapter}{REFERENCES}{46}{chapter*.7}
-\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{48}{chapter*.8}
+\contentsline {section}{\numberline {3.2}Measuring GW strain with light}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Light as a photon}{19}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Light as a wave}{19}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Power-recycled Fabry-Perot Michelson interferometers}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}Controlling the interferometer}{21}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Digital Control in LIGO}{21}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Mirror actuation}{21}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}More Laser Power}{22}{section.3.5}
+\contentsline {chapter}{\numberline {4}{Input Optics}}{23}{chapter.4}
+\contentsline {chapter}{\numberline {5}{ASC Introduction}}{24}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{24}{section.5.1}
+\contentsline {section}{\numberline {5.2}Overview of interferometer alignment}{24}{section.5.2}
+\contentsline {section}{\numberline {5.3}Sources of mirror motion}{26}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Ground motion}{27}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Coil actuators}{28}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Radiation pressure}{29}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Noise from angular control}{29}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Tolerance for angular motion}{30}{section.5.4}
+\contentsline {section}{\numberline {5.5}Angular control limitations}{31}{section.5.5}
+\contentsline {chapter}{\numberline {6}{Dynamic response of coupled pendula}}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}The mirror as a torsion pendulum}{33}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Torque to angle transfer function of a pendulum}{34}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}The radiation pressure angular spring}{36}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Diagonalizing the modified equations of motion}{37}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Soft and hard modes}{39}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}{Sensing and controlling mirror motion in the radiation pressure eigenbasis}}{44}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{44}{section.7.1}
+\contentsline {section}{\numberline {7.2}Sensor noise and noise contribution to DARM}{44}{section.7.2}
+\contentsline {section}{\numberline {7.3}Solving the noise problem with the eigenbasis}{44}{section.7.3}
+\contentsline {section}{\numberline {7.4}ASC to DARM noisebudget}{44}{section.7.4}
+\contentsline {section}{\numberline {7.5}Beam spot motion}{44}{section.7.5}
+\contentsline {section}{\numberline {7.6}Heating related measurements}{45}{section.7.6}
+\contentsline {section}{\numberline {7.7}DC readout related measurements}{45}{section.7.7}
+\contentsline {section}{\numberline {7.8}ASC noisebudget}{46}{section.7.8}
+\contentsline {chapter}{\numberline {8}{Experimental measurement of the Sidles-Sigg effect}}{49}{chapter.8}
+\contentsline {section}{\numberline {8.1}Measured modes}{49}{section.8.1}
+\contentsline {chapter}{\numberline {9}{Summary}}{50}{chapter.9}
+\contentsline {chapter}{\numberline {10}{Appendix}}{52}{chapter.10}
+\contentsline {section}{\numberline {10.1}Misaligned cavity axis}{52}{section.10.1}
+\contentsline {section}{\numberline {10.2}Power in a misaligned cavity}{52}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Displaced cavity}{53}{subsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.1.1}Power}{53}{subsubsection.10.2.1.1}
+\contentsline {subsubsection}{\numberline {10.2.1.2}$U_1$ field}{53}{subsubsection.10.2.1.2}
+\contentsline {subsection}{\numberline {10.2.2}Tilted cavity}{54}{subsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.2.1}Power}{55}{subsubsection.10.2.2.1}
+\contentsline {subsubsection}{\numberline {10.2.2.2}$U_1$ field}{55}{subsubsection.10.2.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Displaced and tilted cavity}{55}{subsection.10.2.3}
+\contentsline {section}{\numberline {10.3}Initial DC alignment of the interferometer}{55}{section.10.3}
+\contentsline {extrachapter}{REFERENCES}{57}{chapter*.7}
+\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{59}{chapter*.8}

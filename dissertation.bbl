@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{19}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -34,7 +34,9 @@
 \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Barsotti}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}}, \bibinfo{type}{Tech.
   Rep.} \bibinfo{number}{T080186}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{2009}).
+  (\bibinfo{year}{2009}),
+  \urlprefix\url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid%
+=6570}.
 
 \bibitem[{\citenamefont{Linsay et~al.}(1983)\citenamefont{Linsay, Saulson,
   Weiss, and Whitcomb}}]{Linsay1983Study}
@@ -168,84 +170,46 @@
   \bibinfo{pages}{459} (\bibinfo{year}{2007}),
   \urlprefix\url{http://dx.doi.org/10.1364/OE.15.000459}.
 
+\bibitem[{\citenamefont{Willems et~al.}(2009)\citenamefont{Willems, Brooks,
+  Mageswaran, Sannibale, Vorvick, Atkinson, Amin, and
+  Adams}}]{Willems2009Thermal}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Willems}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Brooks}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Mageswaran}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Sannibale}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Vorvick}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Atkinson}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Amin}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
+  \emph{\bibinfo{title}{{Thermal Compensation in Enhanced LIGO}}}
+  (\bibinfo{year}{2009}).
+
 \bibitem[{\citenamefont{Garfinkle}(2005)}]{Garfinkle2005Gauge}
 \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Garfinkle}}
   (\bibinfo{year}{2005}), \eprint{gr-qc/0511083},
   \urlprefix\url{http://arxiv.org/abs/gr-qc/0511083}.
 
-\bibitem[{\citenamefont{Camp et~al.}(1996)\citenamefont{Camp, Reitze, and
-  Tanner}}]{Camp1996InputOutput}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Camp}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Reitze}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Tanner}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T960170},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1996}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28745}.
+\bibitem[{\citenamefont{Fritschel and
+  Shoemaker}(1997)}]{Fritschel1997Alignment}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Shoemaker}},
+  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T952007},
+  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1997}).
 
-\bibitem[{\citenamefont{Fritschel et~al.}(2001)\citenamefont{Fritschel, Bork,
-  Gonz\'{a}lez, Mavalvala, Ouimette, Rong, Sigg, and
-  Zucker}}]{Fritschel2001Readout}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Bork}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Gonz\'{a}lez}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Mavalvala}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Ouimette}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Rong}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Zucker}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{40}},
-  \bibinfo{pages}{4988} (\bibinfo{year}{2001}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.40.004988}.
+\bibitem[{\citenamefont{Group}(1998)}]{ISCGroup1998ASC}
+\bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Group}}, \bibinfo{type}{Tech.
+  Rep.}, \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1998}).
 
-\bibitem[{Que(2008)}]{Quetschke2008ElectroOptic}
-\emph{\bibinfo{title}{{Electro-Optic Modulators and Modulation for Enhanced
-  LIGO and Beyond}}} (\bibinfo{publisher}{Optical Society of America},
-  \bibinfo{year}{2008}),
-  \urlprefix\url{http://www.opticsinfobase.org/abstract.cfm?id=169025}.
+\bibitem[{\citenamefont{Siegman}(1986)}]{Siegman1986Lasers}
+\bibinfo{author}{\bibfnamefont{A.~E.} \bibnamefont{Siegman}},
+  \emph{\bibinfo{title}{{Lasers}}} (\bibinfo{publisher}{University Science
+  Books}, \bibinfo{address}{55D Gate Five Road, Sausalito, CA 94965},
+  \bibinfo{year}{1986}).
 
-\bibitem[{\citenamefont{Zucker}(2002)}]{Zucker2002H1}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Zucker}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{T020113}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{2002}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=27031}.
-
-\bibitem[{\citenamefont{Khazanov et~al.}(2004)\citenamefont{Khazanov, Andreev,
-  Mal'shakov, Palashov, Poteomkin, Sergeev, Shaykin, Zelenogorsky, Ivanov, Amin
-  et~al.}}]{Khazanov2004Compensation}
-\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Khazanov}},
-  \bibinfo{author}{\bibfnamefont{N.~F.} \bibnamefont{Andreev}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Mal'shakov}},
-  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Palashov}},
-  \bibinfo{author}{\bibfnamefont{A.~K.} \bibnamefont{Poteomkin}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Sergeev}},
-  \bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Shaykin}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Zelenogorsky}},
-  \bibinfo{author}{\bibfnamefont{I.~A.} \bibnamefont{Ivanov}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Amin}}, \bibnamefont{et~al.},
-  \bibinfo{journal}{IEEE Journal of Quantum Electronics}
-  \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{1500} (\bibinfo{year}{2004}),
-  ISSN \bibinfo{issn}{0018-9197},
-  \urlprefix\url{http://dx.doi.org/10.1109/JQE.2004.834766}.
-
-\bibitem[{\citenamefont{Delker et~al.}(1997)\citenamefont{Delker, Adhikari,
-  Yoshida, and Reitze}}]{Delker1997Design}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Delker}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Yoshida}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Reitze}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T970143},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1997}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28875}.
-
-\bibitem[{\citenamefont{Kwee et~al.}(2007)\citenamefont{Kwee, Seifert, Willke,
-  and Danzmann}}]{Kwee2007Laser}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Kwee}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Seifert}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Willke}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Danzmann}},
-  \bibinfo{journal}{The Review of scientific instruments}
-  \textbf{\bibinfo{volume}{78}} (\bibinfo{year}{2007}), ISSN
-  \bibinfo{issn}{0034-6748},
-  \urlprefix\url{http://dx.doi.org/10.1063/1.2754400}.
+\bibitem[{\citenamefont{Anderson}(1984)}]{Anderson1984Alignment}
+\bibinfo{author}{\bibfnamefont{D.~Z.} \bibnamefont{Anderson}},
+  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{23}},
+  \bibinfo{pages}{2944} (\bibinfo{year}{1984}),
+  \urlprefix\url{http://dx.doi.org/10.1364/AO.23.002944}.
 
 \end{thebibliography}
