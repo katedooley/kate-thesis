@@ -1,42 +1,14 @@
-\chapter{Sensing and controlling mirror motion in the radiation pressure eigenbasis} 
+\chapter{Angular sensing and control characterization and performance in the radiation pressure eigenbasis} 
+Once the theory of radiation pressure's effect on angular mechanical
+transfer functions was fully appreciated and published in 2006 by
+Sidles and Sigg (Ref. \cite{Sidles2006Optical}), the concern arised that radiation
+pressure might be the factor limiting Initial LIGO's ability to
+increase the input power. Although radiation pressure torques were
+proven to not be the cause of difficulty in operating at higher powers
+\cite{Hirose2010Angular}
 
 
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/oplevOLG.pdf}
-\caption{ETMX optical lever open loop transfer function. Uses the
-  filters in the oplev servo filter bank, only (no coil output
-  filters). The model of the plant is tuned to match the data,
-  resulting in a pitch resonance of 0.65 Hz and a damping factor of
-  $\gamma$ = 0.02. The UGF is at 2.2~Hz and the phase margin is
-  $38^\circ$.}
-\label{fig:}
-\end{centering}
-\end{figure}
-
-
-
-
-\section{Introduction}
-% The mirror motions must be controlled so that the mirrors are
-% stationary with respect to one another as best as possible. The
-% mirrors must be held in place at DC, and be quiet at AC. The DC
-% pointing is easily determined, but our ability to know exactly how the
-% mirrors are moving at AC is limited. The noise floor of the sensors
-% dominates the signal above 20 Hz. Therefore, any gain in the servo at
-% 20 Hz and above will impress the sensor noise floor onto the mirrors,
-% resulting in the introduction of motion rather than suppression. Angle
-% to length couplings of the mirror drives make this noise impression
-% particularly detrimental since it is comparable to the strain
-% sensititivity up to about 70 Hz. In order to avoid having the angular
-% control loops be the limiting noise source for DARM up to 70 Hz, a low
-% pass filter must be included in the control design. A low pass filter,
-% however, changes the phase of the loop such that to maintain loop
-% stability, the overall gain must be limited. A compromise must then be
-% reached between how much DC gain to use and how much
-% noise impression to tolerate. This was achieved for Initial LIGO with
-% up to xx~kW circulating power.
 
 
 The Enhanced LIGO goal of increasing the input power to 30 W from the
@@ -161,43 +133,364 @@ pressure torques is best.
 % \end{itemize}
 
 
+
+\section{The Initial LIGO WFS basis}
+In Initial LIGO, the basis for angular control was the sensor
+basis. The wavefront sensors are located such that they sense
+common/differential ETM/ITM angular motion. Thus, the filters were
+designed to feedback to those sets of motions. This does not, however,
+lend itself to easily handling radiation pressure torque. Since the
+WFS basis is not the radiation pressure eigenbasis of Section
+\ref{sec:eigenbasis}, each control servo must handle mixtures of the
+soft and hard modes. Due to radiation pressure, each mirror has two
+resonances, a more complicated plant than that offered by the
+eigenbasis which has a single resonance for each mode. 
+
+Since the soft mode is statically unstable, it needs high
+(\textcolor{blue}{how high?}) DC gain at all times. In the WFS basis,
+that would mean uniformly increasing the gains of all of the control
+loops, since the control of the soft mode is split amongst the
+loops. This poses a problem because increasing the gains impresses
+sensing noise on the mirrors, affecting DARM, and impresses input beam
+motion on the mirrors, making the interferometer as a whole less
+steady. 
+
+Once the Enhanced LIGO 35~W laser was installed and before
+modifications to the Initial LIGO ASC basis were made, we succeeded in
+operating the interferometer with 14~W input power. The unstable modes
+were activated full force, but with high enough WSF gains, they were
+controlled, albeit not that well. Figure ... shows a comparison of
+DARM during the Nov 2008 lock in the old basis and an Enhanced LIGO
+lock at the same power in the new basis. 
+
+
+
+\section{Calibrations}
+Since the data is collected digitally, the units are in digital
+counts. This must be converted into physical units in order to make
+meaningful statements beyond relative comparisons.
+
+\subsection{Beam spot motion}
+\begin{itemize} 
+\item calibration
+\item residuals, perhaps for different kinds of seismic
+\end{itemize}
+
+\subsection{Angular mirror motion}
+
+
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.8\columnwidth]{figures/olgs6W.pdf}
-\caption{Pitch open loop gains of the 5 WFS loops as measured with 6 W
+\includegraphics[width=1.0\columnwidth]{figures/OLcal_pitch.pdf}
+\caption{Optical lever calibration data and fits to Eq. \ref{eq:pwr_disptilt} (pitch).}
+\end{centering}
+\end{figure}
+
+
+\subsection{WFS error signals}
+
+
+
+\section{Input beam motion}
+\textcolor{blue}{Breakdown of source of mirror motion.}
+
+The beam centering servo only operates up to about 10~mHz, meaning the
+beam-centering degree of freedom is uncontrolled at higher
+frequencies. The source of beam de-centering on the mirrors is input
+beam motion. The HAM seismic isolation tables from which the input
+optics are suspended have resonant ``stack'' modes from about 0.8~Hz
+to 3~Hz. The excess table motion at these frequencies is transmitted
+to the MMTs. 
+
+I measured the impression of the input beam motion on the mirrors by
+increasing the gain of the common-degree-of-freedom WFS servos (CH,
+CS, RM) for about 10~minutes. Comparing the amount of angular
+motion of the mirrors from this time of high common WFS gain to a time
+with nominal WFS gain and similar seismic motion, we can see the
+effect directly. Fig. \ref{fig:inputbeam_impression} shows comparison
+spectra, demonstrating how there is higher test mass motion around
+1~Hz when the common WFS gains are higher.
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=0.333\textwidth]{figures/ETMX_highnom.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/ITMX_highnom.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/ETMY_highnom.pdf}}
+\subfigure{\includegraphics[width=0.333\textwidth]{figures/ITMY_highnom.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/RM_highnom.pdf}}
+\caption{Input beam motion impression on the core mirrors. Mirror
+  motion when the common WFS gains (WFS2a, WFS3, WFS4) are increased by a
+  factor of 2.5 is compared to mirror motion when the WFS gains are
+  nominal. Both spectra come from a time of similar seismic activity
+  (typical weekday afternoon noise).}
+\label{fig:inputbeam_impression}
+\end{centering}
+\end{figure}
+
+A more quantitative study of the effects of input beam motion is to
+measure transfer coefficients between the input beam motion and the
+mirror angular (or beam spot) motion. During a full interferometer
+lock I put lines in MMT1, MMT2, and MMT3 at 1.05~Hz, 1.25~Hz, and
+0.85~Hz, respectively, selecting excitation amplitudes large enough to
+appear in the common WFS spectra. I compared the amplitudes of the
+lines in the MMT spectra with those in the WFS spectra. The counts to
+counts transfer coefficients are shown in Table
+\ref{table:inputbeam_TFcoeffs}. Since sensing is flat, I use the shape
+of the WFS loop to extrapolate this transfer coefficent at one
+frequency to other frequencies. The result is a transfer function
+useful for making a noisebudget of input beam motion to test mass
+motion. Selecting a science mode time of typical day-time seismic
+noise, I made a noisebudget as found in Fig. \ref{fig:inputbeam_NB}.
+
+\begin{table}
+\centering
+\caption{\textcolor{blue}{Make this!!!}}
+\begin{tabular}{l l l l l l}
+\hline
+\end{tabular}
+\label{table:inputbeam_TFcoeffs}
+\end{table}
+
+
+\begin{figure}
+\begin{centering}
+%\includegraphics[width=1.0\columnwidth]{figures/}
+\caption{\textcolor{blue}{Make this!!}}
+\label{fig:inputbeam_NB}
+\end{centering}
+\end{figure}
+
+
+\textcolor{blue}{Wiener filter beam spot motion to show corner seismic is primary
+contributor when the WFS gains are high. Also show seismic noise 
+coherent with mirror motion in general.}
+
+
+
+\section{The marginally-stable Power Recycling Cavity}
+The power recycling cavity (PRC) is the linear cavity formed by the RM
+and ITMs. Since the radius of curvature of both the RM and the ITMs
+points in the same direction, the cavity is geometrically
+unstable. For example, in its cold state at LLO the $g$-factor of the
+cavity is 1.00005 and at LHO it's 1.00003. The beam in the PRC is not
+spatially contained and may be made of many higher order modes. The
+heating of the ITMs from the kilowatts of power in the arm cavities
+together with the ITM thermal compensation system (TCS) serve the role
+of making the PRC geometrically stable for interferometer
+operation. The heating and cooling of the ITMs is a very complicated
+process and therefore not very precise, so the value of the hot PRC's
+$g$-factor is usually not constant.
+
+The changing $g$-factor has potentially severe consequences for the
+ASC. Because of its geometry, the power build-up in the PRC is very
+sensitve to both the mirror angles and the $g$-factor. Power
+fluctuation is detrimental because the signal to noise ratios of the
+sensors that probe the PRC light degrade due to the presence of
+increased junk light that contributes shot noise but not
+signal. WFS1Q, WFS2I, and WFS2Q are the most sensitive to the PRC
+because their signals are derived from the 25~MHz sidebands. Their
+sensitivity to mirror motion is therefore subject to change. Since
+achieving a flat power build-up in the PRC is a difficult task (too
+much motion in the PRC is quite often a cause of lock loss), we must
+update the real-time control system to reflect their changing
+sensitivites. Otherwise, the mirror angles will not be accurately
+controlled.
+
+An estimate of the expected power fluctuations based on the $g$-factor
+and RM motion is a straightforward excercise when using
+Eq. \ref{eq:cavitydisptilt_mirrorangle} and Eq. \ref{eq:pwr_disptilt}
+as derived in the Appendix. If we estimate the $g$-factors of the RM
+and ITM as $g_{RM} = 1+\delta$ and $g_{ITM} = 1 - \delta$ ($\delta =6
+\times 10^{-4}$ for LLO the cold state) and approximate the distance
+of each mirror to the cavity waist as $z$ since the two mirrors are
+very close to each other compared to the waist location, then
+Eq. \ref{eq:cavitydisptilt_mirrorangle} reduces to:
+\begin{equation}
+\left\llbracket \begin{array}{c}
+a_{PRC} \\
+\alpha_{PRC} \end{array} \right\rrbracket = 
+\left\llbracket \begin{array}{cc}
+z(2+\delta)/\delta & z(2-\delta)/\delta \\
+-1/\delta & -1/\delta \end{array} \right\rrbracket
+\left\llbracket \begin{array}{c}
+\theta_{RM}\\
+\theta_{ITM} \end{array} \right\rrbracket.
+\end{equation}
+
+Fig. \ref{fig:prc_power} plots the power in the PRC as a function of
+$\theta_{RM}$ for several values of $\delta$, demonstrating
+the sensitivity of the PRC to the ITM heating.  For example, the
+typcial RM angular displacement of $10^{-7}$ rad results in a 66\%
+power loss when the PRC $g$-factor is very near instability with a
+value of $1-0.0001$. Only as the $g$-factor moves further from $1$
+does the angular motion of the RM have less and less of an effect on
+the power build-up.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1.0\columnwidth]{figures/prc_power.pdf}
+\caption{Dependence of power build-up in the power recycling cavity on
+  the PRC's $g$-factor and the RM tilt. TCS is necessary for
+  stabilizing the PRC's geometry and therefore its sensitivity to
+  mirror motion. For simplicity, the ITM is assumed stationary in
+  these plots.}
+\label{fig:prc_power}
+\end{centering}
+\end{figure}
+
+
+\subsection{SPOB power scaling}
+The effect of the marginally stable recycling cavity can be seen by
+tracking the ASC sensing matrix elements as $g$ changes. I excited
+three of the test masses (ETMX, ITMX, RM) at three different
+frequencies (9.7~Hz, 10.7~Hz, and 11.7~Hz, respectively) during a full
+interferometer lock and changed the TCS settings so that over the
+course of 15 minutes the $g$-factor steadily changed. Demodulating
+each of the WFS signals at each of the three excitation frequencies as
+a function of time shows the strength of the WFS response to the motion
+of these three mirrors over the course of the study. To compensate for
+the difference in pendulum responses to the excitations, I multiplied
+the demodulated signals for a particular excitation $f$ by
+$(f/9.7)^2$. I also normalized the response by the phase of the
+mirror's motion as witnessed by the optical levers.
+
+The results are shown in Fig. \ref{fig:WFStrack}. As expected, WFS1Q,
+WFS2I, and WFS2Q show dependence on the PRC power, and therefore the
+$g$-factor. The WFS3 and WFS4 sensing elements are flat. The power in
+the PRC as measured by the $2f$-demodulated POB signal, NSPOB,
+is also shown in Fig. \ref{fig:WFStrack} for this time period. In
+order to compensate for this $g$-factor dependence, we multiply the
+WFS\{1Q, 2I, 2Q\} error signals in real-time by
+\begin{equation}
+\frac{1}{P_{in}} \left[\frac{NSPOB}{350}\right]^{-1/2}
+\end{equation}
+and WFS3I and WFS4I by $1/P_{in}$, where the 350 is the reference
+NSPOB, treated as nominal. Thus, during interferometer operation, all
+WFS signals are normalized to input power and are not dependent on the
+PRC power. This correction to the WFS signals is called SPOB power
+scaling.
+
+
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/spob_gaintracking.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS1Q_track.pdf}}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2Q_track.pdf}}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS3I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS4I_track.pdf}}
+\caption{Measurement of the dependence of the WFS error signals on the
+power recycling cavity geometry. WFS1Q, WFS2I, WFS2Q are more
+sensitive to test mass motion as the power in the recycling cavity
+increases. To achieve a dependable feedback system, the error signals
+are scaled in real-time, forcing their responses to be flat with
+power. This range of SPOB is low for normal operations.}
+\label{fig:WFStrack}
+\end{centering}
+\end{figure}
+
+
+\subsection{Sideband imbalance}
+Show OSA scan of AS port.
+
+
+
+
+\section{The ASC sensing matrix}
+
+
+
+\subsection{Optical gain matrix}
+
+
+\subsection{Diagonalizing the ASC drive matrix}
+
+
+
+
+\section{DC readout related measurements}
+\begin{itemize}
+\item RF created from DC offset beam moving on WFS1
+\item RF vs DC vs power comparison of (AS) beam spot motion on WFS1
+\end{itemize}
+
+
+% \section{ASC noisebudget}
+% \begin{itemize}
+% \item seismic - breakdown of soure of motion
+% \item L2A
+% \item input beam 
+% \item electronics noise
+% \item shot noise
+% \end{itemize}
+
+
+
+
+\section{The effect of the ASC}
+
+
+\begin{figure}
+\begin{centering}
+%\includegraphics[width=0.8\columnwidth]{figures/olgs6W.pdf}
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/allolgs_6W_mags.pdf}}
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/allolgs_6W_phases.pdf}}
+\caption{Open loop gains (pitch) of the 5 WFS loops as measured with 6 W
   input power.}
 \label{fig:olgs6W}
 \end{centering}
 \end{figure}
 
 
-
-\section{Sensor noise and noise contribution to DARM}
-
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_mags.pdf}}
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_phases.pdf}}
+\caption{Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four
+  different powers.}
+\label{fig:DSolgs}
+\end{centering}
+\end{figure}
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.7\textwidth]{figures/ASCdofsignals.pdf}
-\includegraphics[width=0.7\textwidth]{figures/ASConoff.pdf}
-\caption{Top: Comparison of motion with and without the
-  ASC. Eigenbasis residual during 10 W lock, and background derived
-  from loop correction. Completely different day from bottom
-  plot. Bottom: Propagation of sensor signals from 10 W lock through
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs2b_olgs_mags.pdf}}
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs2b_olgs_phases.pdf}}
+\caption{Open loop gains (pitch) of the differential hard (WFS2B) loop as measured at four
+  different powers.}
+\label{fig:DHolgs}
+\end{centering}
+\end{figure}
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_DS.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_CS.pdf}}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_DH.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_CH.pdf}}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_RM.pdf}}
+\caption{Propagation of sensor signals from 10 W lock through
   input matrix and power scaling to eigenbasis, compared with
   eigenbasis reconstruction of optical lever signals when
   interferometer not locked, but optics under oplev damping. Data are
-  taken 45 minutes apart.}
+  taken 45 minutes apart. \textcolor{blue}{Perhaps include loop-undone
+  backgrounds, too, using my measured OLTFs. FIX POWER SCALING.}}
 \label{fig:}
 \end{centering}
 \end{figure}
 
 
-\section{Solving the noise problem with the eigenbasis}
+% \begin{figure}
+% \begin{centering}
+% \includegraphics[width=0.7\textwidth]{figures/ASCdofsignals.pdf}
+% \caption{Top: Comparison of motion with and without the
+%   ASC. Eigenbasis residual during 10 W lock, and background derived
+%   from loop correction. Completely different day from next
+%   plot. (Perhaps merge with next plot)}
+% \label{fig:}
+% \end{centering}
+% \end{figure}
 
 
 
 
 \section{ASC to DARM noisebudget}
+Broadband effect on DARM.
+
+\subsection{Tuning the cut-off filters} 
 The cut-off frequency of the lowpass filters for the WFS control are
 of particular importance in the DARM noisebudget. The lowpass filter
 is necessary for suppressing the impression of sensing noise on
@@ -205,7 +498,7 @@ suspension control.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.8\textwidth]{figures/cutoffWFS1_DARM.pdf}
+\includegraphics[width=1.0\textwidth]{figures/cutoffWFS1_DARMcompare.pdf}
 \caption{Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}
 \label{fig:WFS1cutoff}
 \end{centering}
@@ -214,36 +507,23 @@ suspension control.
 
 
 
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1.0\columnwidth]{figures/ASC2DARM_TFs.pdf}
+\caption{ASC to DARM transfer function for four of the five wavefront
+  sensor loops. The RM to DARM transfer function could not be measured
+  because the contribution is so small. The fitted curves can be
+  multiplied by the WFS error signals at any time to calculate the ASC
+  noise contribution to DARM. \textcolor{blue}{Need to turn cts into Watts.}}
+\end{centering}
+\end{figure}
 
 
 
-\section{Beam spot motion}
-\begin{itemize} 
-\item calibration
-\item residuals, perhaps for different kinds of seismic
-\end{itemize}
+
+\section{Feed-forward}
 
 
-\section{Heating related measurements}
-\begin{itemize} 
-\item effect of PRC g-parameter on ASC sensing matrix
-\item SPOB power scaling
-\end{itemize}
-
-\section{DC readout related measurements}
-\begin{itemize}
-\item RF created from DC offset beam moving on WFS1
-\item RF vs DC vs power comparison of (AS) beam spot motion on WFS1
-\end{itemize}
-
-\section{ASC noisebudget}
-\begin{itemize}
-\item seismic - breakdown of soure of motion
-\item L2A
-\item input beam 
-\item electronics noise
-\item shot noise
-\end{itemize}
-
-
-
+\section{Advanced LIGO}
+The Advanced LIGO interferometers will have heavier mirrors, a stable
+recycling cavity, and more circulating power. 

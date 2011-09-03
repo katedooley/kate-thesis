@@ -1,5 +1,4 @@
 \chapter{Dynamic response of coupled pendula}
-\section{Introduction}
 In order to design a control system that reduces the angular motion of
 the interferometer mirrors to the levels necessary for stable
 interferometer operation and minimal impact on strain sensitivity, the
@@ -23,10 +22,10 @@ Enhanced LIGO powers.
 
 \section{The mirror as a torsion pendulum}
 \label{sec:pendTF}
-The mirrors in LIGO are torsion pendula. They are suspended from a
-single \textcolor{blue}{xx m diameter} wire that makes contact with
-the bottom of the barrel of the mirror as shown in
-Fig. \ref{fig:suspension}. Stand-offs glued just below the mirror's
+The mirrors in LIGO may be regarded as torsion pendula. Each mirror is
+suspended from a single \textcolor{blue}{xx m diameter} wire that
+loops around the bottom of the barrel of the mirror as shown in
+Fig. \ref{fig:suspension}. Stand-offs glued just above the mirror's
 center of mass on both sides of the barrel mark the final point of
 contact of the wire with the mirror, and both ends of the wire are
 clamped to the top of a suspension cage. The mirror is free to twist
@@ -75,42 +74,27 @@ time domain to the frequency domain, we have:
 \begin{equation}
 I s^2 \Theta + \gamma s \Theta + \kappa_p \Theta = \tau_{ext}
 \end{equation}
-where $s$ is a complex parameter. We are only interested in examining
-the transfer function for a pure sine wave excitation, $e^{i\omega
-  t}$, so we substitute $s=i\omega$ to get
+where $s$ is a complex parameter. The transfer function is then
+defined as
 \begin{equation}
-\mathrm{TF} := \frac{\Theta}{\tau_{ext}} = \frac{1}{I s^2 + \gamma s +
-  \kappa_p} = \frac{1/I}{\omega_0^2  - \omega^2 + i \gamma \omega / I}.
+H(s) := \frac{\Theta(s)}{\tau_{ext}(s)} = \frac{1}{I s^2 + \gamma s + \kappa_p}.
 \label{eq:TF}
 \end{equation}
-% which has poles at 
-% \begin{equation}
-% s = s_\pm = \frac{-\gamma \pm \sqrt{\gamma^2 - 4 I \kappa}}{2 I}.
-% \label{eq:TFpoles}
-% \end{equation}
-% The resonant frequency of this system can be computed by finding the
-% $\omega$ at which the amplitude of the transfer function, $[I^2
-% [\omega^2 - \omega_0^2]^2 + \gamma^2 \omega^2]^{-1/2}$, is maximized:
-% \begin{equation}
-% \omega_{res} = \sqrt{\omega_0^2 - \frac{\gamma^2}{2I^2}}.
-% \end{equation}
-% We note that damping serves to reduce the resonant frequency.
+We are only interested in examining the transfer function for a pure
+sine wave excitation, $e^{i\omega t}$, so we substitute $s=i\omega$ to
+get
+\begin{equation}
+H(\omega) = \frac{1/I}{\omega_0^2  - \omega^2 + i \gamma \omega / I}.
+\end{equation}
+The resonant frequency of this damped system can be computed by finding the
+$\omega$ at which the amplitude of the transfer function, $[I^2
+[\omega^2 - \omega_0^2]^2 + \gamma^2 \omega^2]^{-1/2}$, is maximized:
+\begin{equation}
+\omega_{res} = \sqrt{\omega_0^2 - \frac{\gamma^2}{2I^2}}.
+\end{equation}
+We note that damping serves to reduce the resonant frequency.
 
-
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/myplot.pdf}
-\caption{Torque to pitch transfer function of a LIGO core optic
-  (blue). The optic acts like a free mass at high frequencies (green)
-  and the DC magnitude of the transfer function is determined by the
-  inverse torsional constant (red). A damping constant $\gamma =
-  0.006$ ($Q=32$) was selected for pictorial reasons only. The
-  resonant frequency of LIGO core optics in yaw is 0.5~Hz.}
-\label{fig:pendTF}
-\end{centering}
-\end{figure}
-
-A more familiar quantity to use than $\gamma$ for describing the
+A quantity that is more familiar than $\gamma$ for describing the
 losses of a system with a real resonance is the quality factor,
 $Q~:=~\omega_{res}/\mathrm{FWHM}$, where FWHM is that computed for the
 amplitude squared of the transfer function. When the losses are small,
@@ -119,7 +103,7 @@ Feynman 23-4). The quality factor is then well approximated by $Q =
 \sqrt{\kappa_p I}/\gamma$. The transfer function written in terms of
 $Q$ is
 \begin{equation}
-\mathrm{TF} = \frac{1/I}{\omega_0^2  - \omega^2 + i \omega \omega_0 / Q}.
+H(\omega) = \frac{1/I}{\omega_0^2  - \omega^2 + i \omega \omega_0 / Q}.
 \label{eq:TFpendulum}
 \end{equation}
 
@@ -130,6 +114,19 @@ the mirror acts like a free mass, one that is not held in place by
 suspension wires nor subject to damping. For torques applied to the
 mirror below its resonant frequency, the mirror's angle is determined
 by the inverse of the torsional constant.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{figures/pendTF.pdf}
+\caption{Torque to pitch transfer function of a LIGO core optic
+  (blue). The optic acts like a free mass at high frequencies (red)
+  and the DC magnitude of the transfer function is determined by the
+  inverse torsional constant (green). A damping constant $\gamma =
+  0.006$ ($Q=32$) was selected for pictorial representation only. The
+  resonant frequency of LIGO core optics in yaw is 0.5~Hz.}
+\label{fig:pendTF}
+\end{centering}
+\end{figure}
 
 
 
@@ -157,7 +154,7 @@ g_2 & 1\\
 \theta_2 \end{array} \right\rrbracket .
 \label{eq:x}
 \end{equation}
-The g-factor is defined as $g_i=1-R_i/L$ where $R_i$ is the radius of
+The $g$-factor is defined as $g_i=1-R_i/L$ where $R_i$ is the radius of
 curvature of each of the mirrors, respectively, and $L$ is the length
 of the cavity.
 
@@ -191,8 +188,9 @@ the radiation pressure angular spring.
 
 
 \subsection{Diagonalizing the modified equations of motion}
+\label{sec:eigenbasis}
 The radiation pressure spring modifies the pendulum angular equation
-of motion and therefore the torque to angle transfer function,
+of motion and therefore the torque to angle transfer function
 through the addition of an angle-dependent torque term. Re-writing
 Eq. \ref{eq:eqmotion} in matrix form and with the radiation pressure
 spring term, the two equations that describe the motion of two mirrors
@@ -374,7 +372,7 @@ Just as in Sec. \ref{sec:t2a}, we can take the Laplace transform of
 each of the equations in Eq. \ref{eq:rp_eqmotion} to get the general
 form of the modal torque to angle transfer function:
 \begin{equation}
-\frac{\Theta^\prime}{\tau_{ext}^\prime} = \frac{1}{I s^2 + \gamma s +
+H^\prime(s) = \frac{\Theta^\prime(s)}{\tau_{ext}^\prime(s)} = \frac{1}{I s^2 + \gamma s +
   \kappa_p + \kappa_{rp}}.
 \label{eq:modalTF}
 \end{equation} 
@@ -398,8 +396,8 @@ about the stability of the cavity and the nature of its response to
 external torque. Recalling the equation of an angular spring, $\tau =
 - \kappa_{tot} \theta$, a restoring torque is provided only if
 $\kappa_{tot} > 0$, which is equivalent to the condition for
-stability. If $\kappa_{tot} < 0$, the spring serves to amplify the
-angle, resulting in an unstable, run-away situation. Furthermore,
+stability. If $\kappa_{tot} < 0$, the spring is an anti-spring,
+resulting in an unstable, run-away situation. Furthermore, 
 while $\kappa_{tot}$ is positive, its magnitude directly relates to
 the stiffness of the spring.
 
@@ -455,117 +453,38 @@ as light resonates in the cavity: the hard mode's spring constant
 increases and the soft mode's spring constant decreases. The critical
 power at which the soft mode becomes unstable is 10~kW, which
 corresponds to approximately 6~W input power (for Enhanced LIGO
-efficiencies) to the interferometer.  Table \ref{table:k_tot}
-highlights the values of the spring constants for the typical power
-used in Initial LIGO and for the highest of powers achieved in
-Enhanced LIGO, and the transfer functions for these spring constants
-is found in Fig. \ref{fig:optomechhardsoft}. The resonant frequency,
-$\omega_0 = \sqrt{\kappa_{tot}/I}$, increases with power for the hard
-modes and decreases for the soft modes. These are the transfer
-functions for which controls must be designed.
+efficiencies) to the interferometer. Above the critical power,
+radiation pressure creates an optical anti-spring. 
+
+Table \ref{table:k_tot} highlights the values of the spring constants
+for the typical power that was used in Initial LIGO (9~kW) and for the
+highest of powers achieved in Enhanced LIGO (40~kW). The corresponding
+transfer functions for these spring constants is found in
+Fig. \ref{fig:optomechhardsoft}. The resonant frequency, $\omega_0 =
+\sqrt{\kappa_{tot}/I}$, increases with power for the hard modes and
+decreases for the soft modes. Once $\kappa_{tot}$ becomes negative, as
+is the case for the Enhanced LIGO soft mode, there is no real resonant
+frequency.
 
 
 \begin{table}
 \centering
 \caption{Torsional spring constants (pitch) for the soft and hard modes of a typical
   Initial LIGO power and the highest of Enhanced LIGO powers. The soft
-mode in Enhanced LIGO is unstable.}
+mode in Enhanced LIGO is unstable. The $\kappa_p$ values assume a
+resonant frequency of 0.6~Hz.}
 \begin{tabular}{l l l l l}
+\hline
  & $P_{circ}$ & $\kappa_{p}$ & $\kappa_{tot}$, soft mode &
  $\kappa_{tot}$, hard mode\\
 % & (kW) & (Nm/rad) & (Nm/rad) & (Nm/rad) \\
-\hline\hline
+\hline
 Initial LIGO & 9 kW & 0.721 Nm/rad& 0.0734 Nm/rad & 0.867 Nm/rad\\
 Enhanced LIGO & 40 kW & 0.721 Nm/rad& -2.18 Nm/rad & 1.38 Nm/rad\\
 \hline
 \end{tabular}
 \label{table:k_tot}
 \end{table}
-
-
-% Since the spring constant directly informs the resonant frequency of
-% the eigenmode, $\omega_0 = \sqrt{\kappa_{tot}/I}$, it is interesting
-% to note that as power increases, the hard mode's resonant frequency
-% increases, but the soft mode's resonant frequency decreases. Above the
-% critical power for the soft mode, $\omega_0$ becomes imaginary; the
-% system has no real resonance. This effect and the splitting of the
-% modes is demonstrated in Fig. \ref{fig:TFrainbow}, a plot of the
-% torque to angle transfer function for a sampling of spring
-% constants. 
-
-% \begin{figure}
-% \begin{centering}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/TFrainbow_mags.pdf}}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/TFrainbow_phases.pdf}}
-% \caption{Magnitude and phase of the torque to pitch transfer function
-%   as a function of torsional constant for a fixed damping coefficient
-%   of $\gamma^2/4I = 1.77 \times 10^{-4}$. This range of $\kappa$
-%   represents the torsional constants experienced while powering up
-%   Enhanced LIGO.}
-% \label{fig:TFrainbow}
-% \end{centering}
-% \end{figure}
-
-
-% The phase of the transfer function is best understood by evaluating
-% the poles of the transfer function,
-% \begin{equation}
-% s = s_\pm = \frac{-\gamma \pm \sqrt{\gamma^2 - 4 I \kappa_{tot}}}{2 I},
-% \label{eq:TFpoles}
-% \end{equation}
-% which indicate whether a system will respond to an excitation in a
-% sinusoidal and/or exponential matter\footnote{The inverse Laplace
-%   transform of the transfer function is the impulse response.}. As
-% long as the poles are negative, the angular motion will decay or be
-% sinusoidal. However, if a pole is positive, the system's motion will
-% experience exponential growth. When the two poles are negative, each
-% contributes $-90^\circ$ of phase to the transfer function, yielding
-% the $180^\circ$ drop as seen in Fig. \ref{fig:TFrainbow}.
-
-% The conditions on $\kappa_{tot}$ for $s_\pm$ to be in a particular
-% half of the s-plane are easily derived from
-% Eq. \ref{eq:TFpoles}. First, we notice that $s_-$ will always be in
-% the left half of the plane and that $s_+$ is the potentially
-% problematic pole. All possibilities for the pole in question are
-% enumerated in Table \ref{table:s_0} and demonstrate that as is shown
-% in the previous subsection, stability is determined by the sign of
-% $\kappa$. Figure \ref{fig:pendTF_k} shows how the pole locations
-% change as a function of $\kappa$, using the same set of values as in
-% Fig. \ref{fig:TFrainbow}.
-
-
-
-% \begin{table}
-% \centering
-% \caption{Conditions on total torsional constant $\kappa$ for determining
-%   system stability.}
-% \begin{tabular}{l l l}
-% $\kappa$ condition & pole $s_+$ & impulse response \\
-% \hline\hline
-% $\kappa < 0$ & real positive & statically unstable\\
-% $\kappa = 0$ & zero & \\
-% $0 < \kappa < \gamma^2/4I $ & real negative & stable decay \\
-% $\kappa > \gamma^2/4I$ & real negative, and imaginary & stable,
-% oscillatory \\
-% \hline
-% \end{tabular}
-% \label{table:s_0}
-% \end{table}
-
-
-
-% \begin{figure}
-% \begin{centering}
-% \includegraphics[width=0.8\textwidth]{figures/TFrainbow_poles.pdf}
-% \caption{Poles of the torque to pitch transfer function as a function
-%   of torsional constant, $\kappa_{tot}$. Crosses show $s_+$ and
-%   asterisks show $s_-$. Poles in the right half of the s-plane
-%   indicate the system is unstable.}
-% \label{fig:TFrainbow_poles}
-% \end{centering}
-% \end{figure}
-
-
 
 \begin{figure}
 \begin{centering}
@@ -581,6 +500,81 @@ for Enhanced LIGO.}
 \end{centering}
 \end{figure}
 
+
+One final comment about the analysis of the modified transfer function
+(Eq. \ref{eq:modalTF}) is that the two poles,
+\begin{equation}
+s = s_\pm = \frac{-\gamma \pm \sqrt{\gamma^2 - 4 I \kappa_{tot}}}{2 I},
+\label{eq:TFpoles}
+\end{equation}
+provide an additional \textcolor{blue}{(find better word)} way to view
+the stability of the system. As long as the poles are negative, the
+impulse response will decay or be sinusoidal. However, if a pole is
+positive, the system's motion will experience exponential growth. The
+constraints for $s_\pm$ to be in a particular half of the s-plane are
+easily derived from Eq. \ref{eq:TFpoles}. Note that $s_-$ will always
+be in the left half of the plane and that $s_+$ is the pole that has
+the potential of falling in the right half of the plane. Table
+\ref{table:s_0} show how the s-plane locations for $s_+$ depend on
+$\kappa_{tot}$. The sign of $\kappa_{tot}$ determines stability, as
+expected, and we see that the nature of the stable response depends on
+the damping coefficient. Figure \ref{fig:TFrainbow_poles} plots the
+pole locations for a range of $\kappa_{tot}$ experienced while
+powering up Enhanced LIGO.
+
+% \begin{figure}
+% \begin{centering}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/TFrainbow_mags.pdf}}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/TFrainbow_phases.pdf}}
+% \caption{Magnitude and phase of the torque to pitch transfer function
+%   as a function of torsional constant for a fixed damping coefficient
+%   of $\gamma^2/4I = 1.77 \times 10^{-4}$. This range of $\kappa$
+%   represents the torsional constants experienced while powering up
+%   Enhanced LIGO.}
+% \label{fig:TFrainbow}
+% \end{centering}
+% \end{figure}
+
+\begin{table}
+\centering
+\caption{Conditions on total torsional constant $\kappa_{tot}$ for determining
+  system stability.}
+\begin{tabular}{l l l}
+$\kappa_{tot}$ condition & pole $s_+$ & impulse response \\
+\hline\hline
+$\kappa_{tot} < 0$ & real positive & statically unstable\\
+$\kappa_{tot} = 0$ & zero & \\
+$0 < \kappa_{tot} < \gamma^2/4I $ & real negative & stable decay \\
+$\kappa_{tot} > \gamma^2/4I$ & real negative, and imaginary & stable,
+oscillatory \\
+\hline
+\end{tabular}
+\label{table:s_0}
+\end{table}
+
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.667\textwidth]{figures/TFrainbow_poles.pdf}
+\caption{Poles of the torque to pitch transfer function as a function
+  of torsional constant, $\kappa_{tot}$. Crosses show $s_+$ and
+  asterisks show $s_-$. Poles in the right half of the s-plane
+  indicate the system is unstable.}
+\label{fig:TFrainbow_poles}
+\end{centering}
+\end{figure}
+
+
+
+\section{Implications}
+These are the transfer functions for which controls must be designed.
+
+
+
+
+\section{ASC loops}
+
+\subsection{Optical lever servo compensation}
 
 
 

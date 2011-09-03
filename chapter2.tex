@@ -1,4 +1,10 @@
-\chapter{Laser interferometers for gravitational-wave detection}
+\chapter{Design basics of laser interferometers for gravitational-wave detection}
+I introduce in this chapter some of the basic principles about the
+design of sensitive intstruments (and the LIGO detectors in
+particular) to set the stage for delving into the details of the
+following chapters. I explain why a Fabry-Perot Michelson laser
+interferometer 
+
 
 \section{Signal versus noise}
 The factors that must be considered in the design of any detector can
@@ -134,47 +140,85 @@ improve the detector's sensitivity to GWs.
 \end{figure}
 
 
-\begin{itemize}
-\item degrees of freedom
-\item phase detection, sidebands
-\item sub-systems, basic loops
-\item DARM
-\end{itemize}
-
-
-
 
 \section{Controlling the interferometer}
 The ability of the interferometer to provide a differential arm length
-signal depends on the many interferometer cavities being locked all at
-once. It is the light, after all, that serves as our probe of arm
-length. However, the motion of the mirrors is too large for this state
-to naturally occur. For example, the rms pendular displacement of the
-mirrors without control is 1 \micron, equivalent to a full laser
-wavelength. The arm length would swing from one free spectral range to
-the next, never staying put long enough for resonance to occur and for
-light from the arm to make its way to the anti-symmetric port.
+signal depends on the many interferometer cavities being locked
+\textcolor{blue}{(define locking!)} all at once since it is the light
+that serves as our probe of arm length. The motion of the mirrors
+without any control is too large for a locked state to naturally
+occur. The rms pendular displacement of the mirrors without control is
+1 \micron, equivalent to a full laser wavelength. The arm length would
+swing from one free spectral range to the next, never staying put long
+enough at any particular FSR. 
 
-The motion of the interferometer must be controlled enough such that
-resonance is achieved and so that error signals fall in a linear
-regime. Control does not improve the strain sensitivity, but it makes
-the strain measurement possible. The strain is determined by undoing
-the (carefully measured) effect of the control system on the
-differential arm length error signal.
+The motion of the interferometer mirrors must be controlled enough so
+that resonance is achieved and error signals fall in a linear
+regime. Since the strain sensitivity is determined by mathematically
+undoing the (carefully measured) effect of the control system on DARM,
+control does not directly improve the strain sensitivity. The purpose
+control serves is to make the strain measurement possible. Control,
+however, introduces noise so there is a fine balance that must be
+found between too much and too little control.
 
 Design considerations for the control loops include how much motion at
 what frequencies can be tolerated, and the signal to noise ratio of
 the motion sensor.
 
 
+\subsection{RF sidebands}
+
+
 
 \subsection{Digital Control in LIGO}
-The physical components of the LIGO interferometers are interfaced
-through a digital control system. 
+Although the interferometer is an analog instrument, it is interfaced
+through a digital control system. The analog sensor signals are sent
+through an analog-to-digital converter (ADC), digitally filtered, and
+then sent through a digital-to-analog converter (DAC) before returning
+to the interferometer's actuators as control signals. The use of a digital
+control system means complex filters can be more easily implemented
+than they would with analog electronics, and the potential 
+
+There a select few control systems that remain completely analog, like
+the laser intensity stabilization servo (ISS). When the frequencies of
+interest extend beyond several tens of thousands of Hz, the use of
+computers becomes impractical.
 
 
 
-\subsection{Mirror actuation}
+
+\subsection{Mirror suspension and actuation}
+The primary interferometer optics are suspended in vacuum so that they
+act like free masses at the frequencies in the GW detection band. Each
+mirror is hung from a single \textcolor{blue}{xx m diameter} wire that
+loops around the bottom of the barrel of the mirror as shown in
+Fig. \ref{fig:suspension}. Stand-offs glued just above the mirror's
+center of mass on both sides of the barrel mark the final point of
+contact of the wire with the mirror, and both ends of the wire are
+clamped to the top of a suspension cage.
+
+Minimal contact with the mirrors is necessary to avoid thermal
+noise. Therefore, the suspensions provide minimal damping to the
+mirrors. Damping for the large optics is instead achieved
+electronically through the use of optical levers. Figure
+\ref{fig:oplevOLG} shows the open loop gain of the optical lever
+servo, demonstrating that it provides velocity damping only (no DC
+control) between 0.2~Hz and 2~Hz.
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/oplevEX_mags.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/oplevEX_phases.pdf}}
+\caption{ETMX pitch optical lever open loop transfer function. Uses the
+  filters in the oplev servo filter bank, only (no coil output
+  filters). The model of the plant is tuned to match the data,
+  resulting in a pitch resonance of 0.65 Hz and a damping factor of
+  $\gamma$ = 0.02. The UGF is at 2.2~Hz and the phase margin is
+  $38^\circ$.}
+\label{fig:oplevOLG}
+\end{centering}
+\end{figure}
+
 Each mirror is equipped with four optical sensor and electro-magnetic
 (OSEM) actuators for providing control to the mirror. Magnets arranged
 to form the four corners of a square are glued on the mirror's back
@@ -183,7 +227,7 @@ cavities, for instance, sends current of the same magnitude through
 each coil on a given mirror to provide a piston force for changing the
 mirror's position.
 
-
+The OSEMs provide local damping when the interferometer is not locked.
 
 \section{More Laser Power}
 Shot noise results from an uncertainty in the arrival time of photons
@@ -192,6 +236,7 @@ on a detector:
 P_{shot} = \sqrt{2 h_p \nu P_{DC}} \mbox{ W/$\sqrt{\mbox{Hz}}$}
 \label{eq:shotnoise}
 \end{equation}
-where $P_{DC}$ is the DC power on the wavefront sensor, $h_p$ is Planck's constant and $\nu$ is the frequency of the laser light. 
+where $P_{DC}$ is the DC power on the wavefront sensor, $h_p$ is
+Planck's constant and $\nu$ is the frequency of the laser light.
 
 

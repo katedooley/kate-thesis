@@ -10,7 +10,7 @@
 \BOOKMARK [1][-]{section.2.2}{Sources}{chapter.2}
 \BOOKMARK [1][-]{section.2.3}{Methods of detection}{chapter.2}
 \BOOKMARK [1][-]{section.2.4}{State of ground-based interferometry}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Laser interferometers for gravitational-wave detection}{}
+\BOOKMARK [0][-]{chapter.3}{Design basics of laser interferometers for gravitational-wave detection}{}
 \BOOKMARK [1][-]{section.3.1}{Signal versus noise}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.1.1}{Displacement noise}{section.3.1}
 \BOOKMARK [2][-]{subsection.3.1.2}{Sensing noise}{section.3.1}
@@ -19,36 +19,49 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Light as a wave}{section.3.2}
 \BOOKMARK [1][-]{section.3.3}{Power-recycled Fabry-Perot Michelson interferometers}{chapter.3}
 \BOOKMARK [1][-]{section.3.4}{Controlling the interferometer}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{Digital Control in LIGO}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.2}{Mirror actuation}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.1}{RF sidebands}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.2}{Digital Control in LIGO}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.3}{Mirror suspension and actuation}{section.3.4}
 \BOOKMARK [1][-]{section.3.5}{More Laser Power}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{Input Optics}{}
-\BOOKMARK [0][-]{chapter.5}{ASC Introduction}{}
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}
-\BOOKMARK [1][-]{section.5.2}{Overview of interferometer alignment}{chapter.5}
-\BOOKMARK [1][-]{section.5.3}{Sources of mirror motion}{chapter.5}
-\BOOKMARK [2][-]{subsection.5.3.1}{Ground motion}{section.5.3}
-\BOOKMARK [2][-]{subsection.5.3.2}{Coil actuators}{section.5.3}
-\BOOKMARK [2][-]{subsection.5.3.3}{Radiation pressure}{section.5.3}
-\BOOKMARK [2][-]{subsection.5.3.4}{Noise from angular control}{section.5.3}
-\BOOKMARK [1][-]{section.5.4}{Tolerance for angular motion}{chapter.5}
-\BOOKMARK [1][-]{section.5.5}{Angular control limitations}{chapter.5}
+\BOOKMARK [0][-]{chapter.5}{The Angular Motion of the Interferometer}{}
+\BOOKMARK [1][-]{section.5.1}{Overview of interferometer alignment}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Sources of mirror motion}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.2.1}{Ground motion}{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.2}{Coil actuators}{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.3}{Radiation pressure}{section.5.2}
+\BOOKMARK [2][-]{subsection.5.2.4}{Noise from angular control}{section.5.2}
+\BOOKMARK [1][-]{section.5.3}{Tolerance for angular motion}{chapter.5}
+\BOOKMARK [1][-]{section.5.4}{Angular control limitations}{chapter.5}
+\BOOKMARK [1][-]{section.5.5}{Wavefront sensing}{chapter.5}
 \BOOKMARK [0][-]{chapter.6}{Dynamic response of coupled pendula}{}
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}
-\BOOKMARK [1][-]{section.6.2}{The mirror as a torsion pendulum}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.2.1}{Torque to angle transfer function of a pendulum}{section.6.2}
-\BOOKMARK [1][-]{section.6.3}{The radiation pressure angular spring}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.3.1}{Diagonalizing the modified equations of motion}{section.6.3}
-\BOOKMARK [2][-]{subsection.6.3.2}{Soft and hard modes}{section.6.3}
-\BOOKMARK [0][-]{chapter.7}{Sensing and controlling mirror motion in the radiation pressure eigenbasis}{}
-\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}
-\BOOKMARK [1][-]{section.7.2}{Sensor noise and noise contribution to DARM}{chapter.7}
-\BOOKMARK [1][-]{section.7.3}{Solving the noise problem with the eigenbasis}{chapter.7}
-\BOOKMARK [1][-]{section.7.4}{ASC to DARM noisebudget}{chapter.7}
-\BOOKMARK [1][-]{section.7.5}{Beam spot motion}{chapter.7}
-\BOOKMARK [1][-]{section.7.6}{Heating related measurements}{chapter.7}
-\BOOKMARK [1][-]{section.7.7}{DC readout related measurements}{chapter.7}
-\BOOKMARK [1][-]{section.7.8}{ASC noisebudget}{chapter.7}
+\BOOKMARK [1][-]{section.6.1}{The mirror as a torsion pendulum}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.1.1}{Torque to angle transfer function of a pendulum}{section.6.1}
+\BOOKMARK [1][-]{section.6.2}{The radiation pressure angular spring}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.2.1}{Diagonalizing the modified equations of motion}{section.6.2}
+\BOOKMARK [2][-]{subsection.6.2.2}{Soft and hard modes}{section.6.2}
+\BOOKMARK [1][-]{section.6.3}{Implications}{chapter.6}
+\BOOKMARK [1][-]{section.6.4}{ASC loops}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.4.1}{Optical lever servo compensation}{section.6.4}
+\BOOKMARK [0][-]{chapter.7}{Angular sensing and control characterization and performance in the radiation pressure eigenbasis}{}
+\BOOKMARK [1][-]{section.7.1}{The Initial LIGO WFS basis}{chapter.7}
+\BOOKMARK [1][-]{section.7.2}{Calibrations}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.2.1}{Beam spot motion}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.2}{Angular mirror motion}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.3}{WFS error signals}{section.7.2}
+\BOOKMARK [1][-]{section.7.3}{Input beam motion}{chapter.7}
+\BOOKMARK [1][-]{section.7.4}{The marginally-stable Power Recycling Cavity}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.4.1}{SPOB power scaling}{section.7.4}
+\BOOKMARK [2][-]{subsection.7.4.2}{Sideband imbalance}{section.7.4}
+\BOOKMARK [1][-]{section.7.5}{The ASC sensing matrix}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.5.1}{Optical gain matrix}{section.7.5}
+\BOOKMARK [2][-]{subsection.7.5.2}{Diagonalizing the ASC drive matrix}{section.7.5}
+\BOOKMARK [1][-]{section.7.6}{DC readout related measurements}{chapter.7}
+\BOOKMARK [1][-]{section.7.7}{The effect of the ASC}{chapter.7}
+\BOOKMARK [1][-]{section.7.8}{ASC to DARM noisebudget}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.8.1}{Tuning the cut-off filters}{section.7.8}
+\BOOKMARK [1][-]{section.7.9}{Feed-forward}{chapter.7}
+\BOOKMARK [1][-]{section.7.10}{Advanced LIGO}{chapter.7}
 \BOOKMARK [0][-]{chapter.8}{Experimental measurement of the Sidles-Sigg effect}{}
 \BOOKMARK [1][-]{section.8.1}{Measured modes}{chapter.8}
 \BOOKMARK [0][-]{chapter.9}{Summary}{}
