@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{20}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,18 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Solimeno et~al.}(1991)\citenamefont{Solimeno, Barone,
+  de~Lisio, Di~Fiore, Milano, and Russo}}]{Solimeno1991FabryPerot}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Solimeno}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Barone}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{de~Lisio}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Di~Fiore}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Milano}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Russo}},
+  \bibinfo{journal}{Physical Review A} \textbf{\bibinfo{volume}{43}},
+  \bibinfo{pages}{6227} (\bibinfo{year}{1991}),
+  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.43.6227}.
 
 \bibitem[{\citenamefont{Sidles and Sigg}(2006)}]{Sidles2006Optical}
 \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Sidles}} \bibnamefont{and}
@@ -30,7 +42,7 @@
   \bibinfo{pages}{3474} (\bibinfo{year}{2010}),
   \urlprefix\url{http://dx.doi.org/10.1364/AO.49.003474}.
 
-\bibitem[{\citenamefont{Barsotti and Evans}(2009)}]{Barsotti2009modeling}
+\bibitem[{\citenamefont{Barsotti and Evans}(2009)}]{Barsotti2009Modeling}
 \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Barsotti}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}}, \bibinfo{type}{Tech.
   Rep.} \bibinfo{number}{T080186}, \bibinfo{institution}{LIGO Laboratory}
@@ -102,6 +114,13 @@
   ISSN \bibinfo{issn}{0264-9381},
   \urlprefix\url{http://dx.doi.org/10.1088/0264-9381/23/8/S10}.
 
+\bibitem[{\citenamefont{{Advanced LIGO Systems
+  Group}}(2009)}]{AdvLigoSysDesign}
+\bibinfo{author}{\bibnamefont{{Advanced LIGO Systems Group}}},
+  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T010075},
+  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2009}),
+  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=5489}.
+
 \bibitem[{\citenamefont{Adhikari et~al.}(2006)\citenamefont{Adhikari,
   Fritschel, and Waldman}}]{Adhikari2006Enhanced}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
@@ -110,31 +129,6 @@
   \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T060156},
   \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2006}),
   \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=7384}.
-
-\bibitem[{\citenamefont{L\"{u}ck et~al.}(2010)\citenamefont{L\"{u}ck, Affeldt,
-  Degallaix, Freise, Grote, Hewitson, Hild, Leong, Prijatelj, Strain
-  et~al.}}]{Luck2010Upgrade}
-\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{L\"{u}ck}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Affeldt}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Degallaix}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Freise}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Grote}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Hewitson}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Hild}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Leong}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Prijatelj}},
-  \bibinfo{author}{\bibfnamefont{K.~A.} \bibnamefont{Strain}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Journal of Physics: Conference
-  Series} \textbf{\bibinfo{volume}{228}}, \bibinfo{pages}{012012+}
-  (\bibinfo{year}{2010}), ISSN \bibinfo{issn}{1742-6596},
-  \urlprefix\url{http://dx.doi.org/10.1088/1742-6596/228/1/012012}.
-
-\bibitem[{\citenamefont{{Advanced LIGO Systems
-  Group}}(2009)}]{AdvLigoSysDesign}
-\bibinfo{author}{\bibnamefont{{Advanced LIGO Systems Group}}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T010075},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2009}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=5489}.
 
 \bibitem[{\citenamefont{Fricke et~al.}(2011)\citenamefont{Fricke, Smith,
   Abbott, Adhikari, Dooley, Evans, Fritschel, Frolov, Kawabe, and
@@ -183,6 +177,24 @@
   \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
   \emph{\bibinfo{title}{{Thermal Compensation in Enhanced LIGO}}}
   (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{L\"{u}ck et~al.}(2010)\citenamefont{L\"{u}ck, Affeldt,
+  Degallaix, Freise, Grote, Hewitson, Hild, Leong, Prijatelj, Strain
+  et~al.}}]{Luck2010Upgrade}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{L\"{u}ck}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Affeldt}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Degallaix}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Freise}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Grote}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Hewitson}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Hild}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Leong}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Prijatelj}},
+  \bibinfo{author}{\bibfnamefont{K.~A.} \bibnamefont{Strain}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Journal of Physics: Conference
+  Series} \textbf{\bibinfo{volume}{228}}, \bibinfo{pages}{012012+}
+  (\bibinfo{year}{2010}), ISSN \bibinfo{issn}{1742-6596},
+  \urlprefix\url{http://dx.doi.org/10.1088/1742-6596/228/1/012012}.
 
 \bibitem[{\citenamefont{Garfinkle}(2005)}]{Garfinkle2005Gauge}
 \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Garfinkle}}

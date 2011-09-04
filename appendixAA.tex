@@ -1,0 +1,228 @@
+\chapter{Appendix}
+
+\section{Misaligned cavity axis}
+\label{sec:misaligned_cavity}
+Here I provide the geometric argument that shows how to calculate the
+tilt $a$ and displacement $\alpha$ of a cavity as a function of mirror
+misalignment. Cavity tilt is defined by the angle formed between
+the line that connects the two beam spots (as given by Eq. \ref{eq:x}) and the line joining the
+centers of the mirrors. Cavity displacement uses the same two lines,
+yet is defined by the distance between them at the location of the
+waist of the resonant spatial mode. Based on pure geometry, the cavity
+displacement and tilt are:
+\begin{equation}
+\left\llbracket \begin{array}{c}
+a \\
+\alpha \end{array} \right\rrbracket = \frac{1}{L}
+\left\llbracket \begin{array}{cc}
+z_2 & z_1\\
+-1 & 1\end{array} \right\rrbracket
+\left\llbracket \begin{array}{c}
+x_1\\
+x_2 \end{array} \right\rrbracket
+\label{eq:cavitydisptilt}
+\end{equation}
+where $z_i$ is the distance to the waist from mirror $i$ calculated as:
+\begin{eqnarray}
+z_1 &=& \frac{g_2 (1-g_1) L}{g_1+g_2 - 2 g_1g_2} \\
+z_2 &=& L - z_1.
+\end{eqnarray}
+
+Clearly, we can combine Eqs. (\ref{eq:x}) and
+(\ref{eq:cavitydisptilt}) to arrive at an equation directly relating
+mirror tilt to cavity displacement and tilt: 
+\begin{equation}
+\left\llbracket \begin{array}{c}
+a \\
+\alpha \end{array} \right\rrbracket = \frac{1}{1-g_1g_2}
+\left\llbracket \begin{array}{cc}
+g_2z_2 + z_1 & z_2 + g_1z_1\\
+-g_2 + 1 & -1 + g_1\end{array} \right\rrbracket
+\left\llbracket \begin{array}{c}
+\theta_1\\
+\theta_2 \end{array} \right\rrbracket.
+\label{eq:cavitydisptilt_mirrorangle}
+\end{equation}
+
+
+
+\section{Power in a misaligned cavity}
+\label{sec:cavitypower}
+I'll show how to calculate the power in a cavity as a function of
+cavity axis displacement and tilt. Combined with the results of
+Eq. \ref{eq:cavitydisptilt_mirrorangle} we determine how the power
+build-up in a cavity depends on a single mirror's angular
+displacement.
+% %This can be compared with data to calibrate
+% %the optical lever error signals as will be shown in Section \ref{sec:oplevcal}. 
+
+The field of a lowest-order Gaussian laser beam along one axis at the beam waist is:
+\begin{equation}
+\psi(x) = U_0(x) = \left[ \frac{2}{\pi w_0^2} \right]^{1/4} \exp{\left[-\left[\frac{x}{w_0}\right]^2\right]}
+\end{equation}
+where $w_0$ is the beam waist radius and $U_0$ is the lowest-order
+Hermite polynomial. The Hermite polynomials are orthonormal,
+ie. $\langle U_i \mid U_j \rangle = \delta_{ij}$. For example, the
+next to lowest order polynomial is:
+\begin{equation}
+U_1(x) = \left( \frac{2}{\pi w_0^2} \right)^{1/4} \frac{2x}{w_0}
+\exp{[-(x/w_0)^2]} = \frac{2x}{w_0} U_0(x)
+\end{equation}
+
+\subsection{Displaced cavity}
+The field of a cavity with a \emph{displaced} z-axis at the cavity waist is:
+\begin{align}
+\psi \prime (x) =& \psi(x-a) \\
+ =& U_0(x-a) \\
+ =& c_0U_0(x) + c_1 U_1(x) + c_2 U_2(x) + ...\\
+\end{align}
+where $a$ is the displacement of the axis and $c_i$ are constants.
+
+%\subsubsection{Power} 
+We want to know $c_0$, the projection of the displaced cavity field onto the beam field: 
+\begin{eqnarray}
+c_0 &=& \langle \psi \mid \psi \prime \rangle \\
+&=& \int_{-\infty}^\infty \psi(x) \psi \prime(x) \, dx \\
+ &=& \exp{[-a^2/2 w_0^2]}
+\label{eq:c_0}
+\end{eqnarray}
+The power in this mode is the square of the overlap of the two fields: 
+\begin{eqnarray}
+P_0&=& \left| \langle \psi \mid \psi \prime \rangle \right| ^2\\ 
+&=& \exp{[-[a/w_0]^2]} 
+\end{eqnarray}
+
+%\subsubsection{$U_1$ field}
+For the purpose of wavefront sensing, we need to know the amplitude,
+$c_1$, of the first order $U_1$ field. This can be approximated as
+demonstrated in Anderson \cite{Anderson1984Alignment} using
+the Taylor series expansion of the exponential in $\psi \prime(x) =
+U_0(x-a)$, assuming a displacement $a$ that's small compared to waist
+size $w_0$.
+\begin{eqnarray}
+\psi \prime(x) &=& \left[ \frac{2}{\pi w_0^2} \right]^{1/4}
+\exp{\left[-\left[\frac{x-a}{w_0}\right]^2\right]} \\
+&=& \left[ \frac{2}{\pi w_0^2} \right]^{1/4} \left[1 -
+  \left[\frac{x-a}{w_0} \right]^2 + \mathcal{O}(a^4) \right] \\
+&=& \left[ \frac{2}{\pi w_0^2} \right]^{1/4} \left[ \frac{2xa}{w_0^2}
+  \left[1-\frac{x^2}{w_0^2} + ... \right] + \left[ 1 -
+    \frac{x^2}{w_0^2} + \frac{1}{2} \frac{x^4}{w_0^4}
+    - ... \right] + \mathcal{O}(a^2) \right] \\
+&=& \left[ \frac{2}{\pi w_0^2} \right]^{1/4} \left[1 +
+  \frac{2xa}{w_0^2} + \mathcal{O}(a^2) \right] \exp{\left[ -\left[\frac{x}{w_0}\right]^2
+  \right]} \\
+&=& U_0(x) + \frac{a}{w_0} U_1(x) + ...
+\end{eqnarray}
+Notice that here we find $c_0 = 1$, which is consistent with the
+exact result of Eq.~\ref{eq:c_0} when we apply our $a^2 \approx 0$
+approximation. We find that the amplitude of the first order
+Hermite-Gauss field for a displaced cavity is
+\begin{equation}c_1 = a/w_0.
+\end{equation}
+
+
+
+\subsection{Tilted cavity}
+The field of a cavity with a \emph{tilted} z-axis at the cavity waist is a tad more complex to derive. We assume the tilt, $\alpha$, is small such that $\sin{\alpha} \approx \alpha$ and $\cos{\alpha} \approx 1$. Also, we assume the beam divergence angle, $\theta_0=\lambda / \pi w_0$, is small such that the wavefronts near the waist can be considered parallel to one another. 
+
+Here, the important quantity to consider is the phase of the cavity field at the cross-section of the beam waist.  The phase is either advanced or retarded compared to that of the beam:
+\begin{eqnarray}
+\psi \prime(x) &=& \psi(x \prime) \exp{[-i k z \prime]} \\
+ & \approx& \psi(x \cos{\alpha}) \exp{[-i k x \sin{\alpha}]} \\
+ &\approx& \psi(x) \exp{[- i k x \alpha]} \\
+ &=& U_0(x) \exp{[- i k x \alpha]}
+\label{eq:psi_tilted}
+\end{eqnarray}
+where $k=2\pi / \lambda$ and $\lambda$ is the wavelength of the laser light.
+
+%\subsubsection{Power} 
+The overlap of the fields of the beam and tilted cavity is $ \exp{[-\alpha^2/2 \theta_0^2]} $. Therefore the power is:
+\begin{equation}
+P_0 = \exp{[-(\alpha/\theta_0)^2]}.
+\end{equation}
+
+%\subsubsection{$U_1$ field}
+An expansion of the exponential in Eq. \ref{eq:psi_tilted} for a small
+tilt $\alpha$ gives:
+\begin{eqnarray}
+\psi \prime(x) &=& U_0(x) [1 + i k x \alpha + \mathcal{O}(\alpha^2) ] \\
+&=& U_0(x) + \frac{i k \alpha w_0}{2} U_1(x) + \mathcal{O}(\alpha^2).
+\end{eqnarray}
+Therefore, the amplitude of the first order Hermite-Gauss field for a
+tilted cavity is 
+\begin{equation}
+c_1 = i k \alpha w_0 / 2.
+\end{equation}
+
+
+\subsection{Displaced and tilted cavity}
+The most general case, of course, is to have a cavity axis that is both displaced \emph{and} tilted at the beam waist:
+\begin{equation}
+\psi \prime(x) = \psi(x-a) \exp{[-i k (x-a) \alpha]}.
+\end{equation}
+We find:
+\begin{equation}
+\langle \psi \mid \psi \prime \rangle = \exp{\left[- \frac{a^2}{2 w_0^2} \right]} \exp{\left[-\frac{\alpha^2}{2 \theta_0^2}\right]} \exp{\left[- \frac{i a \alpha}{x_0 \theta_0}\right]}
+\end{equation}
+and
+\begin{equation}
+P_0 = \exp{\left[- \frac{a^2}{w_0^2} \right]}
+\exp{\left[-\frac{\alpha^2}{\theta_0^2}\right]}.
+\label{eq:pwr_disptilt}
+\end{equation}
+
+
+
+\section{Initial DC alignment of the interferometer}
+\label{sec:initial_alignment}
+After any kind of in-vacuum work, the DC alignment of the mirrors is
+usually too poor for the interferometer to lock. A bootstrapping
+process of tweaking the alignment by hand is necessary, assuming the
+mirrors start out pointing in generally the right direction, as is
+usually the case. As pointed out in \ref{sec:alignment_overview}, the
+QPDs at the end stations are the fixed reference points for the
+overall alignment, so this process begins with making sure the light
+reaches them. We then adjust the rest of the mirrors to maximize power
+build-up in the arms and to maximze spatial overlap of the light
+reflected from each arm.
+
+An outline of the process is presented here. ``Misalign'' means to
+intentionally point a mirror so far away from any known good positions
+as to eliminate it from the configuration.  ``Align'' and ``restore''
+mean to bring a mirror or configuration to the best known
+position(s). Centering the beam on a mirror is accomplished by using
+the suspension cage surrounding the mirror as a reference. Camera
+images and QPD readback provide the signals used for beam centering. 
+
+\begin{itemize}
+\item[] \textbf{X-arm} \vspace{-10pt}
+\item restore the x-arm (misalign RM, ITMY, and ETMY, align ITMX and ETMX) \vspace{-10pt}
+\item use ITMX to center the beam on QPDX \vspace{-10pt}
+\item use ETMX to center the beam on ITMX \vspace{-10pt}
+\item with x-arm locked, use MMT3 to maximize the x-arm power build-up (NPTRX, can expect
+  about 95\%) \vspace{-10pt}
+\item save the MMT3, ITMX, and ETMX alignment settings 
+\item[] \textbf{Y-arm} \vspace{-10pt}
+\item restore the y-arm (misalign ITMX and ETMX, align ITMY and ETMY) \vspace{-10pt}
+\item use ITMY to center the beam on QPDY \vspace{-10pt}
+\item use ETMY to center the beam on ITMY \vspace{-10pt}
+\item with y-arm locked, use BS to maximize the y-arm power build-up (NPTRY, can expect
+  about 90\%) \vspace{-10pt}
+\item save the BS, ITMY, and ETMY alignment settings 
+\item[] \textbf{Relative x-arm and y-arm} \vspace{-10pt}
+\item note AS beam position on camera while toggling between x-arm and
+  y-arm locks\vspace{-10pt}
+\item use ETMs to align the two AS beams \vspace{-10pt}
+\item restore the Michelson (misalign ETMs, align ITMs) \vspace{-10pt}
+\item use BS to make AS port as dark as possible \vspace{-10pt}
+\item re-do y-arm alignment if ambitious 
+\item[] \textbf{Recycling mirror} \vspace{-10pt}
+\item restore the PRM (misalign ETMs, align ITMs and RM)
+  \vspace{-10pt}
+\item use RM to center beam on ETMY cage 
+\item[] \textbf{Restore full interferometer--off you go!}
+\end{itemize}
+
+
+
+

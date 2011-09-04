@@ -19,45 +19,45 @@ A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in Siegman1986Lasers
-You've used 19 entries,
+You've used 20 entries,
             3411 wiz_defined-function locations,
-            1314 strings with 26396 characters,
-and the built_in function-call counts, 15855 in all, are:
-= -- 771
-> -- 747
-< -- 106
-+ -- 668
-- -- 186
-* -- 2310
-:= -- 1628
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 78
-chr.to.int$ -- 19
-cite$ -- 20
-duplicate$ -- 1405
-empty$ -- 1208
-format.name$ -- 423
-if$ -- 2864
+            1325 strings with 26683 characters,
+and the built_in function-call counts, 16844 in all, are:
+= -- 819
+> -- 796
+< -- 112
++ -- 712
+- -- 198
+* -- 2458
+:= -- 1724
+add.period$ -- 20
+call.type$ -- 20
+change.case$ -- 82
+chr.to.int$ -- 20
+cite$ -- 21
+duplicate$ -- 1491
+empty$ -- 1283
+format.name$ -- 450
+if$ -- 3046
 int.to.chr$ -- 1
-int.to.str$ -- 20
-missing$ -- 210
-newline$ -- 72
-num.names$ -- 57
-pop$ -- 303
+int.to.str$ -- 21
+missing$ -- 223
+newline$ -- 75
+num.names$ -- 60
+pop$ -- 326
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 80
 quote$ -- 0
-skip$ -- 626
+skip$ -- 661
 stack$ -- 0
-substring$ -- 331
-swap$ -- 1213
-text.length$ -- 97
+substring$ -- 355
+swap$ -- 1289
+text.length$ -- 103
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
+type$ -- 118
 warning$ -- 1
-while$ -- 46
+while$ -- 49
 width$ -- 0
-write$ -- 218
+write$ -- 229
 (There was 1 warning)
