@@ -161,13 +161,131 @@ lock at the same power in the new basis.
 \section{Calibrations}
 Since the data is collected digitally, the units are in digital
 counts. This must be converted into physical units in order to make
-meaningful statements beyond relative comparisons.
+meaningful statements beyond relative comparisons. Two ways to make a
+calibration are to \textcolor{blue}{(think about this more!)}
+\begin{itemize}
+\item work backwards through the control system and electronics chain \vspace{-10pt}
+\item inject an analog signal with a known amplitude 
+\end{itemize}
+I describe here the calibrations I made of some of the angular sensing
+channels, all the while demonstrating particular examples of these
+methods.
+
 
 \subsection{Beam spot motion}
-\begin{itemize} 
-\item calibration
-\item residuals, perhaps for different kinds of seismic
-\end{itemize}
+A quantity of interest is how much the beam moves on the ITMs and
+ETMs. It is this beam spot motion which, together with the mirror
+angular motion, creates a length signal that contributes noise to
+DARM. An elegant way of following the motion of the beam on the test
+masses is to track pickoffs of the light transmitted or reflected from
+the mirrors. We have such signals naturally available for the ETMs and
+ITMs from the QPDs which are otherwise used for ASC sensing. For
+example, QPDX and QPDY see the light transmitted through each of the
+ETMs and WFS2 sees the pickoff of light from the wedge of ITMX.
+
+To calibrate the counts of the QPD and WFS2 pitch and yaw error
+signals, \texttt{L1:ASC-QPDY\_\{PIT,YAW\}\_IN1} and
+\texttt{L1:ASC-WFS2\_\{DCPitchMon, DCYawMon\}}, I moved the beam a
+known distance on the test mass, $\Delta x$, and recorded the
+corresponding $\Delta y$ of the QPD and WFS2 readback. The ratio
+$\Delta x /\Delta y$ is the calibration from counts to meters. The
+final calibrations of these channels are shown in Table
+\ref{table:bsmcal} and the details of the procedure are described
+below. \footnote{A minor technicality is that since there are no
+  filters between the QPD error signals and the offset channel, their
+  units are exactly the same. Thus, calculating meters of beam spot
+  motion as a function of offset serves to calibrate the error
+  point. For convenience, this is what I did.}
+
+\begin{table}
+\centering
+\begin{tabular}{l l l l}
+\hline
+         & ETMX & ETMY & ITMs \\
+\hline
+pitch & 1.03e-5 m/ct & 1.21e-5 m/ct & 5.52e-2 m/ct \\
+yaw & 0.88e-5 m/ct & 0.80e-5 m/ct & 4.79e-2 m/ct \\
+\hline
+\end{tabular}
+\caption{Calibrations to be used with the QPDX, QPDY, and WFS2 DC
+  pitch and yaw error signals for a measure of beam spot motion.}
+\label{table:bsmcal}
+\end{table}
+
+
+\subsubsection{Moving the beam} 
+Moving the beam on the mirrors is straightforward because of the ASC
+system. All that we need to do is introduce an offset to the setpoint
+of the of the beam centering aspect of the ASC servo. For the ETMs we
+put a DC offset in the \texttt{L1:ASC-QPD\{X,Y\}\_\{PIT,
+  YAW\}\_\{OFFSET\}} channel and for the ITMs we changed the $X$ and
+$Y$ targets of the beam splitter beam centering servo.
+
+\subsubsection{Measuring how much the beam has moved} 
+The more difficult task is measuring just how much the beam has
+moved. For this, we make use of the lever arm mechanism of angle to
+length coupling. \textcolor{blue}{(This should be explained in the
+  previous chapter, so maybe just reference it.)} The idea is that
+when the axis of rotation of a mirror coincides with the center of the
+beam, any tilt of the mirror about this axis does not affect the path
+length of the reflected beam. However, if there is a mismatch between
+rotation axis and beam location, then the light will pick up a
+longitudinal phase shift when the mirror is tilted. During a full
+interferometer lock, this is recorded by DARM.
+
+The concept of the measurement is to move the axis of rotation of the
+mirror so that it passes through the center of the beam. We use the
+OSEMs to change the location of the axis of rotation, and we use DARM
+to determine when the axis is aligned with the beam center. For
+example, if we drive the top two osems more than the bottom two osems,
+we've created an axis of rotation that sits below the center of
+mass. The result of such tuning is an effective rebalance of the
+center of mass of the mirror so that it is aligned with the center of
+the beam. The procedure is:
+\begin{enumerate}
+\item Shake the mirror at some frequency $f$ (we use
+39.5 Hz) during a full lock \vspace{-10pt}
+\item Demodulate DARM at $f$ for several different sets of osem gains \vspace{-10pt}
+\item Fit a quadratic to the demodulated data to pinpoint the osem gains that
+  minimize the coupling to DARM
+\end{enumerate}
+
+Relating the osem gains to absolute beam position on the mirror
+requires only the geometry of the mirror and osem setup. See
+Fig. \ref{fig:mirror_osem_geometry}. We estimate the osem locations as
+being on the edge of the mirror such that the length $d$ of one side
+of the square that they form is given by $d =\sqrt{2} R$, where $R =
+12.5$ cm is the radius of the mirror.  Then, collapsing the four osems
+into a representative two at the centers of two opposite sides of the
+square, we can evaluate where the pivot point is located relative to
+center for a given force at each osem location. With the gain of each
+OSEM given as $\pm (1 \pm \alpha)$ and setting the torques equal, we
+have:
+\begin{equation}
+F [1+\alpha] x = F [1-\alpha][d-x].
+\end{equation}
+Therefore, the beam location relative to center is
+\textcolor{blue}{(fix up notation)}
+\begin{equation}
+\Delta x := \frac{d}{2} - x = \alpha \frac{d}{2},
+\end{equation}
+and for a change in a pitch or yaw coil gain, the change in beam
+position, $\Delta x$, is:
+\begin{equation}
+|\Delta{x}| = \frac{|\Delta{\mbox{gain}}| R}{\sqrt{2}} .
+\end{equation}
+
+\begin{figure}
+\begin{centering}
+%\includegraphics[width=1.0\columnwidth]{figures/}
+\end{centering}
+\caption{\textcolor{blue}{Place holder for mirror+osem geometry figure.}}
+\label{fig:mirror_osem_geometry}
+\end{figure}
+
+
+
+
 
 \subsection{Angular mirror motion}
 
