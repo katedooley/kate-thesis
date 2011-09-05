@@ -184,33 +184,12 @@ example, QPDX and QPDY see the light transmitted through each of the
 ETMs and WFS2 sees the pickoff of light from the wedge of ITMX.
 
 To calibrate the counts of the QPD and WFS2 pitch and yaw error
-signals, \texttt{L1:ASC-QPDY\_\{PIT,YAW\}\_IN1} and
+signals, \linebreak \texttt{L1:ASC-QPDY\_\{PIT,YAW\}\_IN1} and
 \texttt{L1:ASC-WFS2\_\{DCPitchMon, DCYawMon\}}, I moved the beam a
 known distance on the test mass, $\Delta x$, and recorded the
 corresponding $\Delta y$ of the QPD and WFS2 readback. The ratio
 $\Delta x /\Delta y$ is the calibration from counts to meters. The
-final calibrations of these channels are shown in Table
-\ref{table:bsmcal} and the details of the procedure are described
-below. \footnote{A minor technicality is that since there are no
-  filters between the QPD error signals and the offset channel, their
-  units are exactly the same. Thus, calculating meters of beam spot
-  motion as a function of offset serves to calibrate the error
-  point. For convenience, this is what I did.}
-
-\begin{table}
-\centering
-\begin{tabular}{l l l l}
-\hline
-         & ETMX & ETMY & ITMs \\
-\hline
-pitch & 1.03e-5 m/ct & 1.21e-5 m/ct & 5.52e-2 m/ct \\
-yaw & 0.88e-5 m/ct & 0.80e-5 m/ct & 4.79e-2 m/ct \\
-\hline
-\end{tabular}
-\caption{Calibrations to be used with the QPDX, QPDY, and WFS2 DC
-  pitch and yaw error signals for a measure of beam spot motion.}
-\label{table:bsmcal}
-\end{table}
+details of the procedure are described below.
 
 
 \subsubsection{Moving the beam} 
@@ -250,22 +229,30 @@ the beam. The procedure is:
   minimize the coupling to DARM
 \end{enumerate}
 
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\columnwidth]{figures/geometry_mirror_osems.pdf}
+\caption{Geometry of osems and mirror as used for calculating the
+  location of the axis of rotation when the torques are
+  unequal. \textcolor{blue}{Need latex in inkscape!}}
+\label{fig:mirror_osem_geometry}
+\end{centering}
+\end{figure}
+
 Relating the osem gains to absolute beam position on the mirror
-requires only the geometry of the mirror and osem setup. See
+requires only the geometry of the mirror and osem setup as sketched in
 Fig. \ref{fig:mirror_osem_geometry}. We estimate the osem locations as
 being on the edge of the mirror such that the length $d$ of one side
 of the square that they form is given by $d =\sqrt{2} R$, where $R =
-12.5$ cm is the radius of the mirror.  Then, collapsing the four osems
+12.5$ cm is the radius of the mirror. Then, collapsing the four osems
 into a representative two at the centers of two opposite sides of the
-square, we can evaluate where the pivot point is located relative to
-center for a given force at each osem location. With the gain of each
-OSEM given as $\pm (1 \pm \alpha)$ and setting the torques equal, we
-have:
+square and assigning them gains of $\pm (1 \pm \alpha)$ and a force
+$F$, we can evaluate where the pivot point $x$ is located by setting
+the sum of the torques equal to zero:
 \begin{equation}
 F [1+\alpha] x = F [1-\alpha][d-x].
 \end{equation}
-Therefore, the beam location relative to center is
-\textcolor{blue}{(fix up notation)}
+Therefore, the beam location relative to center, $\Delta x$, is
 \begin{equation}
 \Delta x := \frac{d}{2} - x = \alpha \frac{d}{2},
 \end{equation}
@@ -275,27 +262,118 @@ position, $\Delta x$, is:
 |\Delta{x}| = \frac{|\Delta{\mbox{gain}}| R}{\sqrt{2}} .
 \end{equation}
 
-\begin{figure}
-\begin{centering}
-%\includegraphics[width=1.0\columnwidth]{figures/}
-\end{centering}
-\caption{\textcolor{blue}{Place holder for mirror+osem geometry figure.}}
-\label{fig:mirror_osem_geometry}
-\end{figure}
+The final calibrations of these channels are shown in Table
+\ref{table:bsmcal}. \footnote{A minor
+  technicality is that since there are no filters between the QPD
+  error signals and the offset channel, their units are exactly the
+  same. Thus, calculating meters of beam spot motion as a function of
+  offset serves to calibrate the error point. For convenience, this is
+  what I did.}
 
-
+\begin{table}
+\centering
+\begin{tabular}{l l l l}
+\hline
+         & ETMX & ETMY & ITMs \\
+\hline
+pitch & 1.03e-5 m/ct & 1.21e-5 m/ct & 5.52e-2 m/ct \\
+yaw & 0.88e-5 m/ct & 0.80e-5 m/ct & 4.79e-2 m/ct \\
+\hline
+\end{tabular}
+\caption{Calibrations to be used with the QPDX, QPDY, and WFS2 DC
+  pitch and yaw error signals for a measure of beam spot motion.}
+\label{table:bsmcal}
+\end{table}
 
 
 
 \subsection{Angular mirror motion}
+The optical levers provide a straightfoward measure of individual
+mirror motion. The channels I calibrated were of the form
+\texttt{L1:SUS-ETMX\_OPLEV\_\{P,Y\}ERROR}, the optical lever error
+signals for each of the large optics. I made use of the dependence of
+power in a misaligned cavity to calibrate the ETM and ITM optical
+levers, and used a less precise, more primitive method to calibrate
+the RM, BS, and MMT3 optical levers.
+
+
+\subsubsection{ETM and ITM optical levers} 
+I calibrated the arm cavity optical levers by tracking the power loss
+in the locked arm as one of its mirrors is tilted. The closed form
+expression for cavity power as a function of mirror tilt is derived in
+Appendix \ref{sec:cavitypower}. All that is needed is a quadratic fit
+to the data collected. From the fit parameters, I can determine the
+factor, $\Delta \theta / \Delta y$, which converts the digital counts
+of the optical lever channel, $y$, to units of radians.
+
+To make the measurement, I locked a single arm and maximized the power
+build up. Then I slowly stepped the pitch or yaw pointing of one of
+the mirrors away to one side of resonance, and then back and to the
+other side, repeating this several times. All the while, I recorded
+the optical lever error signal of the mirror whose angle I was
+changing, and the power in the arm as determined from
+\texttt{L1:LSC-NPTR\{X,Y\}\_OUT16}, the amount of light transmitted
+through the ETMs .  \textcolor{blue}{replace with non-out16 name}
+
+From Eq. \ref{eq:pwr_disptilt}, we see that the power in the arm, $P$,
+is a function of the form 
+\begin{equation}
+P = P_{max} \exp{[-b (y-y_0)^2]},
+\label{eq:OLcalfit}
+\end{equation}
+where $b$ is related to physical cavity axis displacement $a$ and tilt
+$\alpha$ by $by^2~=~(a/w_0)^2+(\alpha/\theta_0)^2$. In order to relate
+the optical lever signal, $y$, to physical cavity parameters, we
+divide by $\Delta{\theta}^2$ and rearrange to get:
+\begin{equation}
+\frac{\Delta \theta}{\Delta y} = \sqrt{b} \left[
+  \left[\frac{\Delta a/\Delta\theta}{w_0}\right]^2 +
+  \left[\frac{\Delta\alpha/\Delta\theta}{\theta_0}\right]^2
+\right]^{-\frac{1}{2}} .
+\end{equation}
+The terms in the numerators on the right hand side are fixed constants
+based on the cavity geometry and can be calculated using
+Eq. \ref{eq:cavitydisptilt_mirrorangle}. The measurement data and fits
+are shown in Fig. \ref{fig:OLcalp}.
+
+
+\subsubsection{RM, BS, and MMT3 optical levers}
+
+The final $\Delta\theta / \Delta x$ calibrations of all optical levers
+are in Table \ref{table:oplevcal}. 
+
+\begin{table}
+\centering
+\caption[Optical lever calibration results.]{Calibrations to be used
+  with the optical lever error signals 
+  for a measure of angular mirror motion. Units are \microrad/ct.}
+\begin{tabular}{l l l l l l l l}
+\hline
+        & ETMX & ETMY & ITMX & ITMY & RM & BS & MMT3 \\
+\hline
+pitch & 49.4 & 43.0 & 14.9 & 15.6 & 61.9 & 47.3 & 57.4 \\
+yaw & 50.7 & 43.3 & 20.1 & 20.2 & 42.5 & 63.5 & 55.5 \\
+\hline
+\end{tabular}
+\label{table:oplevcal}
+\end{table}
 
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\columnwidth]{figures/OLcal_pitch.pdf}
-\caption[Optical lever calibration]{Optical lever calibration data and fits to Eq. \ref{eq:pwr_disptilt} (pitch).}
+\caption[Optical lever calibration data.]{Optical lever calibration data and
+  fits to Eq. \ref{eq:OLcalfit} (pitch).}
+\label{fig:OLcalp}
 \end{centering}
 \end{figure}
+
+
+
+
+
+
+
 
 
 \subsection{WFS error signals}

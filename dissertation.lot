@@ -1,5 +1,6 @@
-\contentsline {table}{\numberline {{6-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes. $x_i$ are the beam locations on the mirrors relative to center, $a$ is the cavity axis displacement at the waist, and $\alpha $ is the cavity axis angle with respect to a line joining the centers of the mirrors. Differences between LLO and LHO arise from the mirrors at each site having different radii of curvature. Quantities are expressed as a function of the amount of tilt in a particular mode.}}{44}{table.6.1}
-\contentsline {table}{\numberline {{6-2}}{\ignorespaces Torsional spring constants (pitch) for the soft and hard modes of a typical Initial LIGO power and the highest of Enhanced LIGO powers. The soft mode in Enhanced LIGO is unstable. The $\kappa _p$ values assume a resonant frequency of 0.6\nobreakspace {}Hz.}}{48}{table.6.2}
-\contentsline {table}{\numberline {{6-3}}{\ignorespaces Conditions on total torsional constant $\kappa _{tot}$ for determining system stability.}}{49}{table.6.3}
-\contentsline {table}{\numberline {{7-1}}{\ignorespaces Calibrations to be used with the QPDX, QPDY, and WFS2 DC pitch and yaw error signals for a measure of beam spot motion.}}{53}{table.7.1}
-\contentsline {table}{\numberline {{7-2}}{\ignorespaces \leavevmode {\color {blue}Make this!!!}}}{56}{table.7.2}
+\contentsline {table}{\numberline {{6-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes}}{43}{table.6.1}
+\contentsline {table}{\numberline {{6-2}}{\ignorespaces Torsional spring constants for the soft and hard cavity modes}}{47}{table.6.2}
+\contentsline {table}{\numberline {{6-3}}{\ignorespaces Conditions on total torsional constant $\kappa _{tot}$ for determining system stability.}}{48}{table.6.3}
+\contentsline {table}{\numberline {{7-1}}{\ignorespaces Calibrations to be used with the QPDX, QPDY, and WFS2 DC pitch and yaw error signals for a measure of beam spot motion.}}{54}{table.7.1}
+\contentsline {table}{\numberline {{7-2}}{\ignorespaces Optical lever calibration results.}}{55}{table.7.2}
+\contentsline {table}{\numberline {{7-3}}{\ignorespaces \leavevmode {\color {blue}Make this!!!}}}{56}{table.7.3}
