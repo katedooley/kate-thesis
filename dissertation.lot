@@ -1,6 +1,7 @@
 \contentsline {table}{\numberline {{6-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes}}{43}{table.6.1}
 \contentsline {table}{\numberline {{6-2}}{\ignorespaces Torsional spring constants for the soft and hard cavity modes}}{47}{table.6.2}
-\contentsline {table}{\numberline {{6-3}}{\ignorespaces Conditions on total torsional constant $\kappa _{tot}$ for determining system stability.}}{48}{table.6.3}
-\contentsline {table}{\numberline {{7-1}}{\ignorespaces Calibrations to be used with the QPDX, QPDY, and WFS2 DC pitch and yaw error signals for a measure of beam spot motion.}}{54}{table.7.1}
-\contentsline {table}{\numberline {{7-2}}{\ignorespaces Optical lever calibration results.}}{55}{table.7.2}
-\contentsline {table}{\numberline {{7-3}}{\ignorespaces \leavevmode {\color {blue}Make this!!!}}}{56}{table.7.3}
+\contentsline {table}{\numberline {{6-3}}{\ignorespaces Conditions on total torsional constant for determining system stability}}{48}{table.6.3}
+\contentsline {table}{\numberline {{7-1}}{\ignorespaces Beam spot motion calibrations}}{53}{table.7.1}
+\contentsline {table}{\numberline {{7-2}}{\ignorespaces Optical lever calibrations}}{55}{table.7.2}
+\contentsline {table}{\numberline {{7-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{56}{table.7.3}
+\contentsline {table}{\numberline {{7-4}}{\ignorespaces MMT to WFS transfer coefficients}}{58}{table.7.4}

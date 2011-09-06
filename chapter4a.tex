@@ -51,7 +51,7 @@ The MMT-directed input beam and the interferometer ``mirror'' need to be aligned
 
 \begin{figure} 
 \begin{centering} \includegraphics[width=0.6\textwidth]{figures/BCSspiricon.pdf} 
-\caption{Image of beam on beam splitter as used in the beam centering servo. The beam appears stretched because the camera's viewing angle is at $45^{\circ}$ with respect to the mirror surface. The color scale is arbitrary.}
+\caption[Beam centering servo image of beam splitter]{Image of beam on beam splitter as used in the beam centering servo. The beam appears stretched because the camera's viewing angle is at $45^{\circ}$ with respect to the mirror surface. The color scale is arbitrary.}
 \label{fig:BCS}
 \end{centering}
 \end{figure}
@@ -63,7 +63,7 @@ All mirror angles are of course interdependent and they must track each other. H
 %two input beams, one to the x-arm, one to the y-arm; and the FPM
 
 \begin{figure} \begin{centering} \includegraphics[width=0.8\textwidth]{figures/ASClayout_wctrl.pdf} 
-\caption{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo.}
+\caption[Schematic of the alignment sensing and control system]{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo.}
 \label{fig:ASClayout}
 \end{centering}
 \end{figure}
@@ -89,9 +89,10 @@ The most egregious of these torque inputs is ground motion that makes its way th
 \begin{centering}
 \includegraphics[width=1.0\columnwidth]{figures/seismic_mirrormotion.pdf}
 %\includegraphics[width=0.7\columnwidth]{figures/ifodark_mirrormotion.pdf}
-\caption{Typical angular motion of the core suspended mirrors in the
+\caption[Typical angular motion of the core suspended mirrors in the
+  absence of interferometric control]{Typical angular motion of the core suspended mirrors in the
   absence of interferometric control. Velocity damping provided by the
-  OSEMs and the optical levers is present. Once the interferometer is locked, the OSEM damping is ramped off. 
+ OSEMs and the optical levers is present. Once the interferometer is locked, the OSEM damping is ramped off. 
   % Above about 30 Hz, the plot
   % does not represent real motion; the spectrum is limited by sensor
   % (optical lever) noise.
@@ -174,14 +175,13 @@ which has a direct impact on DARM. Therefore, the alignment specifications must 
 
 \section{Angular control limitations}
 \label{sec:ASClimits}
-
 The limits for how good we can do in controlling the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Fig. \ref{fig:WFSdarknoise}. And depending on the power level, WFS1Q may instead be limited by shot noise (see Eq. \ref{eq:shotnoise}). Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. This cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at the sensor noise frequencies. 
 %Ultimately, it is the WFS noise floor that determines the best possible achievable suppression. 
 
 \begin{figure} \begin{centering} \subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs1q_darkres.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs2i_darkres.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs2q_darkres.pdf}} 
 \subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs3i_darkres.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs4i_darkres.pdf}} 
 %\includegraphics[width=1.0\textwidth]{figures/ASCsensorsignals.pdf} 
-\caption{WFS dark noise compared to typical error signal. \textcolor{blue}{Include shot noise, too, especially for WFS1.} The excess signal above the dark noise in WFS3I and WFS4I from 20~Hz on is likely acoustic noise, although this has not been verified. WFS1 and WFS2 are on a floating table in a sound proof chamber, while WFS3 and WFS4 are on a non-seismically isolated table without a sound proof enclosure.}
+\caption[WFS error signal and dark noise]{WFS dark noise compared to typical error signal. \textcolor{blue}{Include shot noise, too, especially for WFS1.} The excess signal above the dark noise in WFS3I and WFS4I from 20~Hz on is likely acoustic noise, although this has not been verified. WFS1 and WFS2 are on a floating table in a sound proof chamber, while WFS3 and WFS4 are on a non-seismically isolated table without a sound proof enclosure.}
 \label{fig:WFSdarknoise}
 \end{centering}
 \end{figure}

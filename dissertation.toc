@@ -47,37 +47,38 @@
 \contentsline {section}{\numberline {6.4}ASC loops}{49}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Optical lever servo compensation}{49}{subsection.6.4.1}
 \contentsline {chapter}{\numberline {7}{Angular sensing and control characterization and performance in the radiation pressure eigenbasis}}{50}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Initial LIGO WFS basis}{50}{section.7.1}
-\contentsline {section}{\numberline {7.2}Calibrations}{51}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Beam spot motion}{51}{subsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.1.1}Moving the beam}{52}{subsubsection.7.2.1.1}
-\contentsline {subsubsection}{\numberline {7.2.1.2}Measuring how much the beam has moved}{52}{subsubsection.7.2.1.2}
-\contentsline {subsection}{\numberline {7.2.2}Angular mirror motion}{54}{subsection.7.2.2}
-\contentsline {subsubsection}{\numberline {7.2.2.1}ETM and ITM optical levers}{54}{subsubsection.7.2.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2.2}RM, BS, and MMT3 optical levers}{55}{subsubsection.7.2.2.2}
-\contentsline {subsection}{\numberline {7.2.3}WFS error signals}{55}{subsection.7.2.3}
-\contentsline {section}{\numberline {7.3}Input beam motion}{55}{section.7.3}
-\contentsline {section}{\numberline {7.4}The marginally-stable Power Recycling Cavity}{57}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}SPOB power scaling}{58}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Sideband imbalance}{60}{subsection.7.4.2}
-\contentsline {section}{\numberline {7.5}The ASC sensing matrix}{60}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Optical gain matrix}{60}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Diagonalizing the ASC drive matrix}{60}{subsection.7.5.2}
-\contentsline {section}{\numberline {7.6}DC readout related measurements}{60}{section.7.6}
-\contentsline {section}{\numberline {7.7}The effect of the ASC}{60}{section.7.7}
-\contentsline {section}{\numberline {7.8}ASC to DARM noisebudget}{60}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}Tuning the cut-off filters}{60}{subsection.7.8.1}
-\contentsline {section}{\numberline {7.9}Feed-forward}{60}{section.7.9}
-\contentsline {section}{\numberline {7.10}Advanced LIGO}{60}{section.7.10}
-\contentsline {chapter}{\numberline {8}{Experimental measurement of the Sidles-Sigg effect}}{68}{chapter.8}
-\contentsline {section}{\numberline {8.1}Measured modes}{68}{section.8.1}
-\contentsline {chapter}{\numberline {9}{Summary}}{70}{chapter.9}
-\contentsline {chapter}{\numberline {10}{Appendix}}{72}{chapter.10}
-\contentsline {section}{\numberline {10.1}Misaligned cavity axis}{72}{section.10.1}
-\contentsline {section}{\numberline {10.2}Power in a misaligned cavity}{72}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Displaced cavity}{73}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Tilted cavity}{74}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Displaced and tilted cavity}{75}{subsection.10.2.3}
-\contentsline {section}{\numberline {10.3}Initial DC alignment of the interferometer}{75}{section.10.3}
-\contentsline {extrachapter}{REFERENCES}{77}{chapter*.7}
-\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{79}{chapter*.8}
+\contentsline {section}{\numberline {7.1}Calibrations}{50}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Beam spot motion}{51}{subsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.1.1}Moving the beam}{51}{subsubsection.7.1.1.1}
+\contentsline {subsubsection}{\numberline {7.1.1.2}Measuring how much the beam has moved}{51}{subsubsection.7.1.1.2}
+\contentsline {subsection}{\numberline {7.1.2}Angular mirror motion}{53}{subsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.2.1}ETM and ITM optical levers}{53}{subsubsection.7.1.2.1}
+\contentsline {subsubsection}{\numberline {7.1.2.2}RM, BS, and MMT3 optical levers}{54}{subsubsection.7.1.2.2}
+\contentsline {subsection}{\numberline {7.1.3}WFS error signals}{55}{subsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.3.1}Counts to Volts}{56}{subsubsection.7.1.3.1}
+\contentsline {subsubsection}{\numberline {7.1.3.2}Volts to Watts}{56}{subsubsection.7.1.3.2}
+\contentsline {section}{\numberline {7.2}Optical Gain}{56}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Diagonalizing the ASC drive matrix}{57}{subsection.7.2.1}
+\contentsline {section}{\numberline {7.3}Input beam motion}{57}{section.7.3}
+\contentsline {section}{\numberline {7.4}The marginally-stable Power Recycling Cavity}{59}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}SPOB power scaling}{60}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Sideband imbalance}{61}{subsection.7.4.2}
+\contentsline {section}{\numberline {7.5}DC readout related measurements}{61}{section.7.5}
+\contentsline {section}{\numberline {7.6}The effect of the ASC}{61}{section.7.6}
+\contentsline {section}{\numberline {7.7}ASC to DARM noisebudget}{61}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Tuning the cut-off filters}{63}{subsection.7.7.1}
+\contentsline {section}{\numberline {7.8}Feed-forward}{63}{section.7.8}
+\contentsline {section}{\numberline {7.9}Advanced LIGO}{63}{section.7.9}
+\contentsline {chapter}{\numberline {8}{Experimental measurement of the Sidles-Sigg effect}}{69}{chapter.8}
+\contentsline {section}{\numberline {8.1}Measured modes}{69}{section.8.1}
+\contentsline {chapter}{\numberline {9}{Summary}}{71}{chapter.9}
+\contentsline {chapter}{\numberline {10}{Appendix}}{73}{chapter.10}
+\contentsline {section}{\numberline {10.1}Misaligned cavity axis}{73}{section.10.1}
+\contentsline {section}{\numberline {10.2}Power in a misaligned cavity}{73}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Displaced cavity}{74}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Tilted cavity}{75}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Displaced and tilted cavity}{76}{subsection.10.2.3}
+\contentsline {section}{\numberline {10.3}Initial DC alignment of the interferometer}{76}{section.10.3}
+\contentsline {section}{\numberline {10.4}Channel names}{77}{section.10.4}
+\contentsline {extrachapter}{REFERENCES}{79}{chapter*.7}
+\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{81}{chapter*.8}
