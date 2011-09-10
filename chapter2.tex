@@ -188,6 +188,7 @@ computers becomes impractical.
 
 
 \subsection{Mirror suspension and actuation}
+\label{sec:suspension}
 The primary interferometer optics are suspended in vacuum so that they
 act like free masses at the frequencies in the GW detection band. Each
 mirror is hung from a single \textcolor{blue}{xx m diameter} wire that
@@ -196,6 +197,14 @@ Fig. \ref{fig:suspension}. Stand-offs glued just above the mirror's
 center of mass on both sides of the barrel mark the final point of
 contact of the wire with the mirror, and both ends of the wire are
 clamped to the top of a suspension cage.
+
+Each mirror is equipped with four optical sensor and electro-magnetic
+(OSEM) actuators for providing control to the mirror. Magnets arranged
+to form the four corners of a square are glued on the mirror's back
+surface, and the OSEM units envelop them. Length control of the
+cavities, for instance, sends current of the same magnitude through
+each coil on a given mirror to provide a piston force for changing the
+mirror's position.
 
 Minimal contact with the mirrors is necessary to avoid thermal
 noise. Therefore, the suspensions provide minimal damping to the
@@ -219,15 +228,17 @@ control) between 0.2~Hz and 2~Hz.
 \end{centering}
 \end{figure}
 
-Each mirror is equipped with four optical sensor and electro-magnetic
-(OSEM) actuators for providing control to the mirror. Magnets arranged
-to form the four corners of a square are glued on the mirror's back
-surface, and the OSEM units envelop them. Length control of the
-cavities, for instance, sends current of the same magnitude through
-each coil on a given mirror to provide a piston force for changing the
-mirror's position.
+The suspensions are AC damped at all times for each of the large
+optics through optical lever witnesses. Keeping the mirrors quiet
+enough with respect to their local ground is necessary to allow for
+the initial locking of the interferometer, so each suspended optic,
+small and large, is quieted by its OSEM signals during the initial
+locking stages. After the interferometer is locked, the angular OSEM
+feedback is turned off, and the position OSEM feedback remains.
 
-The OSEMs provide local damping when the interferometer is not locked.
+pitch and yaw
+
+
 
 \section{More Laser Power}
 Shot noise results from an uncertainty in the arrival time of photons

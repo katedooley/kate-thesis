@@ -5,11 +5,6 @@
 % include shot noise on at least WFS1 sensor noisebudget; maybe limiting
 % depending on power used
 
-% more gain--more motion at the end (QPDs); impress input beam motion 1 Hz and
-% above; find this data--valera and kate!
-
-% WFS3 and WFS4 input beam motion impression
-
 % how low can you go before it falls apart? valera and kate tried this
 % out--find in elog
 
@@ -34,10 +29,11 @@ This chapter discusses the causes of mirror angular displacement and the effects
 
 
 
-\section{Sources of mirror motion}
-If the interferometer can be aligned well enough by hand for the initial lock to be achieved, one might wonder why the need for continuous tweaking thereafter. The answer is that there is a continuous stream of changing torque inputs to the mirrors that cause them to twist and turn in pitch and in yaw. Some torque inputs exist regardless of the state of the interferometer, while others are a direct consequence of the control systems. The primary torque inputs are introduced here, and further discussion of some of them is found later in the chapter. The list includes:
+\section{Sources of angular mirror motion}
+There is a continuous stream of changing torque inputs to the mirrors that cause them to twist and turn in pitch and in yaw. Some torque inputs exist regardless of the state of the interferometer, while others are a direct consequence of the control systems. The primary torque inputs are introduced here, and further discussion of some of them is found later in the chapter. The list includes:
 \begin{itemize}
-\item ground motion \vspace{-10pt}
+\item ground motion \vspace{-10pt} 
+\item seismic isolation \vspace{-10pt} 
 \item coil actuators (length to angle) \vspace{-10pt}
 %\item thermal noise of pitch and yaw modes? \vspace{-10pt}
 \item radiation pressure \vspace{-10pt}
@@ -45,8 +41,11 @@ If the interferometer can be aligned well enough by hand for the initial lock to
 \end{itemize}
 
 
+
+
 \subsection{Ground motion} 
-The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions. This is the only source of angular motion that is present regardless of the state of interferometer operation, and it is also AC damped at all times for each of the large optics through optical lever witnesses. Keeping the mirrors quiet enough with respect to their local ground is necessary to allow for the initial locking of the interferometer, so each suspended optic, small and large, is quieted by its OSEM signals during the initial locking stages. An example of the shape and amount of velocity-damped angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Fig. \ref{fig:seismicMirror}. The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically. 
+The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions. 
+This is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Fig. \ref{fig:seismicMirror}. These spectra include the effect of local velocity damping since the optical levers are always on (see Sec. \ref{sec:suspension}). The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
 
 \begin{figure}
 \begin{centering}
@@ -71,6 +70,18 @@ The most egregious of these torque inputs is ground motion that makes its way th
 % times of day, probably for just one mirror. Write this section once I
 % see what I have to present.
 
+Proof that this motion indeed originates from the ground can be provided by computing Wiener filters for the seismomter signals to see their coherence with the optical lever error signals. Figures are in appendix \ref{sec:oplev_contributions}
+
+
+
+
+
+\subsubsection{Seismic isolation}
+Although the multiple layers of seismic isolation serve to make interferometer operation possible \textcolor{blue}{write something better!}, minor imperfections in their implementation can result in them serving as coupling mechanisms to mirror angle. The path from ground to mirror can be broken into two distinct parts: HEPI + stack position to angle, and suspension position to angle. The seismic tables (HEPI at LLO) are actively actuated upon in position, ie. for the tidal servo. Any position to angle coupling will twist the table. The suspension 
+
+
+\subsubsection{Seismometers}
+The seismometers are sensitive to six degrees of freedom: x, y, z, and rotation about x, y, and z. Ideally, they are set up to only measure ground motion in x, y, and z, but the signals may be contaminated by some tilt as well. \textcolor{blue}{???}
 
 
 
@@ -104,12 +115,14 @@ radiation pressure is
 \end{equation}
 where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, corresponding to an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see \ref{sec:pendTF}).
 
-Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. This is a result of the geometric coupling between beam displacements and mirror angles as will be shown in the next chapter. Radiation pressure therefore acts as an angular spring. It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. Part of the next chapter dedicates a discussion to this matter. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
+Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. 
+%This is a result of the geometric coupling between beam displacements and mirror angles as will be shown in the next chapter. Radiation pressure therefore acts as an angular spring. 
+It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. Part of the next chapter dedicates a discussion to this matter. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
 
 
 
 \subsection{Noise from angular control}
-The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The control system also impresses input beam motion on the mirrors. These issues and others are explained in more detail in \ref{sec:ASClimits}.
+The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also undercontrolled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues and others are explained in more detail in \ref{sec:ASClimits}.
 
 
 
