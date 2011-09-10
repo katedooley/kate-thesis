@@ -34,43 +34,6 @@ This chapter discusses the causes of mirror angular displacement and the effects
 
 
 
-\section{Overview of interferometer alignment}
-\label{sec:alignment_overview}
-
-There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. The sensing is accomplished by 8 sensors, which fall into three groups:
-\begin{itemize}
-\item camera image (BS)  \vspace{-10pt}
-\item quadrant photodiodes (QPDX, QPDY) \vspace{-10pt}
-\item wavefront sensors (WFS1, WFS2, WFS3, WFS4)
-\end{itemize}
-The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-Perot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the y-arm perpendicular to the x-arm.
-
-The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS), whose principle of operation is described in Section \ref{sec:wfs}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
-
-The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer on about minute time scales, and at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam pointing to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Fig. \ref{fig:BCS}. The higher frequency matching of the input beam pointing to the interferometer is achieved by the reflected port Fabry-Perot Michelson wavefront sensors, up to a couple Hz.
-
-\begin{figure} 
-\begin{centering} \includegraphics[width=0.6\textwidth]{figures/BCSspiricon.pdf} 
-\caption[Beam centering servo image of beam splitter]{Image of beam on beam splitter as used in the beam centering servo. The beam appears stretched because the camera's viewing angle is at $45^{\circ}$ with respect to the mirror surface. The color scale is arbitrary.}
-\label{fig:BCS}
-\end{centering}
-\end{figure}
-
-The one additional step needed for full interferometer alignment is to maintain the orthogonality of the y-arm to the x-arm as the x-arm and input beam together move around. This is accomplished through the pitch and yaw signals of QPDY, the QPD that monitors the light transmitted through the y-arm, which sense how the beam splitter should be pointed. \footnote{QPDX also sends a signal to the BS to compensate for whatever it has MMT3 do.}
-
-All mirror angles are of course interdependent and they must track each other. However, a rough hierarchy of who follows who can be established since ultimately the interferometer is bolted to the ground and necessarily maintains some DC orientation. This orientation comes from QPDX and QPDY, which are physically attached to piers standing on the ground and force the beams transmitted through the ETMs to stay put at a certain location on their sensors. In all, the input beam must make it to those two exact places and the other mirrors are left to line themselves up accordingly. A diagram of this alignment scheme is in Fig. \ref{fig:ASClayout}.
-
-%two input beams, one to the x-arm, one to the y-arm; and the FPM
-
-\begin{figure} \begin{centering} \includegraphics[width=0.8\textwidth]{figures/ASClayout_wctrl.pdf} 
-\caption[Schematic of the alignment sensing and control system]{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo.}
-\label{fig:ASClayout}
-\end{centering}
-\end{figure}
-
-This alignment process involving the WFS, QPDs, and BS camera relies on the entire interferometer already being locked. It manages the continuous fine-tuning of mirror angles so that maximal power buildup in the interferometer is maintained, and so that the interferometer does not wander from its linear operating point. How to achieve the initial alignment of all of the mirrors is an interesting process in itself and is documented in Appendix \ref{sec:initial_alignment}.
-
-
 \section{Sources of mirror motion}
 If the interferometer can be aligned well enough by hand for the initial lock to be achieved, one might wonder why the need for continuous tweaking thereafter. The answer is that there is a continuous stream of changing torque inputs to the mirrors that cause them to twist and turn in pitch and in yaw. Some torque inputs exist regardless of the state of the interferometer, while others are a direct consequence of the control systems. The primary torque inputs are introduced here, and further discussion of some of them is found later in the chapter. The list includes:
 \begin{itemize}
@@ -170,6 +133,46 @@ length change of the beam
 \Delta{L} = x * \theta
 \end{equation}
 which has a direct impact on DARM. Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x ~=~1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m. \textcolor{blue}{Convolve my bsm spectra and residual mirror motion spectra to show example.}
+
+
+
+
+\section{Overview of interferometer alignment}
+\label{sec:alignment_overview}
+
+There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. The sensing is accomplished by 8 sensors, which fall into three groups:
+\begin{itemize}
+\item camera image (BS)  \vspace{-10pt}
+\item quadrant photodiodes (QPDX, QPDY) \vspace{-10pt}
+\item wavefront sensors (WFS1, WFS2, WFS3, WFS4)
+\end{itemize}
+The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-Perot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the y-arm perpendicular to the x-arm.
+
+The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS), whose principle of operation is described in Section \ref{sec:wfs}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
+
+The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer on about minute time scales, and at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam pointing to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Fig. \ref{fig:BCS}. The higher frequency matching of the input beam pointing to the interferometer is achieved by the reflected port Fabry-Perot Michelson wavefront sensors, up to a couple Hz.
+
+\begin{figure} 
+\begin{centering} \includegraphics[width=0.6\textwidth]{figures/BCSspiricon.pdf} 
+\caption[Beam centering servo image of beam splitter]{Image of beam on beam splitter as used in the beam centering servo. The beam appears stretched because the camera's viewing angle is at $45^{\circ}$ with respect to the mirror surface. The color scale is arbitrary.}
+\label{fig:BCS}
+\end{centering}
+\end{figure}
+
+The one additional step needed for full interferometer alignment is to maintain the orthogonality of the y-arm to the x-arm as the x-arm and input beam together move around. This is accomplished through the pitch and yaw signals of QPDY, the QPD that monitors the light transmitted through the y-arm, which sense how the beam splitter should be pointed. \footnote{QPDX also sends a signal to the BS to compensate for whatever it has MMT3 do.}
+
+All mirror angles are of course interdependent and they must track each other. However, a rough hierarchy of who follows who can be established since ultimately the interferometer is bolted to the ground and necessarily maintains some DC orientation. This orientation comes from QPDX and QPDY, which are physically attached to piers standing on the ground and force the beams transmitted through the ETMs to stay put at a certain location on their sensors. In all, the input beam must make it to those two exact places and the other mirrors are left to line themselves up accordingly. A diagram of this alignment scheme is in Fig. \ref{fig:ASClayout}.
+
+%two input beams, one to the x-arm, one to the y-arm; and the FPM
+
+\begin{figure} \begin{centering} \includegraphics[width=0.8\textwidth]{figures/ASClayout_wctrl.pdf} 
+\caption[Schematic of the alignment sensing and control system]{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo.}
+\label{fig:ASClayout}
+\end{centering}
+\end{figure}
+
+This alignment process involving the WFS, QPDs, and BS camera relies on the entire interferometer already being locked. It manages the continuous fine-tuning of mirror angles so that maximal power buildup in the interferometer is maintained, and so that the interferometer does not wander from its linear operating point. How to achieve the initial alignment of all of the mirrors is an interesting process in itself and is documented in Appendix \ref{sec:initial_alignment}.
+
 
 
 

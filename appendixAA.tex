@@ -225,6 +225,29 @@ images and QPD readback provide the signals used for beam centering.
 
 
 
+\section{Wavefront sensors}
+A wavefront sensor is a quadrant photodiode equipped with RF
+electronics. 
+
+\subsection{Photodiodes}
+\label{sec:pds}
+The basic photoconductive photodiode is depicted in Fig. \ref{}. A
+negative voltage applied to the anode, represented by the line, does
+not yield any current across the photodiode until electrons are
+released by the energy of photons striking the diode. Electrons flow
+in the direction of the cathode which is connected to ground,
+producing a current
+\begin{equation}
+i_\gamma = \frac{q_e}{h \nu} P \epsilon
+\end{equation}
+where $q_e$ is the electron charge, $h$ is Planck's constant, $\nu$ is
+the frequency of the incident light, $P$ is the power of the light,
+and $\epsilon$ is the quantum efficiency of the diode. The quantity
+$q_e/h \nu$ is known as the \emph{responsivity}. For LIGO where
+$\lambda = 1064$ nm, the responsivity is $0.86$ A/W.
+
+
+
 \section{Channel names}
 It is often confusing why there are so many channels with almost
 identical names. And just what those names mean can also sometimes be

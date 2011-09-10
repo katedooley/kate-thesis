@@ -1,29 +1,32 @@
-\contentsline {figure}{\numberline {{2-1}}{\ignorespaces Strain sensitivities of LIGO-VIRGO collaboration interferometers}}{20}{figure.2.1}
-\contentsline {figure}{\numberline {{3-1}}{\ignorespaces LIGO noise budget}}{21}{figure.3.1}
-\contentsline {figure}{\numberline {{3-2}}{\ignorespaces Power-recycled Fabry-Perot Michelson laser interferometer}}{24}{figure.3.2}
-\contentsline {figure}{\numberline {{3-3}}{\ignorespaces Optical lever open loop transfer function}}{26}{figure.3.3}
-\contentsline {figure}{\numberline {{5-1}}{\ignorespaces Beam centering servo image of beam splitter}}{30}{figure.5.1}
-\contentsline {figure}{\numberline {{5-2}}{\ignorespaces Schematic of the alignment sensing and control system}}{31}{figure.5.2}
-\contentsline {figure}{\numberline {{5-3}}{\ignorespaces Typical angular motion of the core suspended mirrors in the absence of interferometric control}}{32}{figure.5.3}
-\contentsline {figure}{\numberline {{5-4}}{\ignorespaces WFS error signal and dark noise}}{36}{figure.5.4}
-\contentsline {figure}{\numberline {{6-1}}{\ignorespaces Sketch of a LIGO suspension}}{38}{figure.6.1}
-\contentsline {figure}{\numberline {{6-2}}{\ignorespaces Torque to pitch transfer function of a LIGO core optic}}{40}{figure.6.2}
-\contentsline {figure}{\numberline {{6-3}}{\ignorespaces Illustration of the orthogonal modes of cavity tilt}}{44}{figure.6.3}
-\contentsline {figure}{\numberline {{6-4}}{\ignorespaces Controls view of addition of radiation pressure to the pendulum transfer function}}{45}{figure.6.4}
-\contentsline {figure}{\numberline {{6-5}}{\ignorespaces Torsional spring constants of an optically coupled cavity}}{46}{figure.6.5}
-\contentsline {figure}{\numberline {{6-6}}{\ignorespaces Single cavity opto-mechanical transfer function}}{48}{figure.6.6}
-\contentsline {figure}{\numberline {{6-7}}{\ignorespaces Poles of the torque to pitch opto-mechanical transfer function}}{49}{figure.6.7}
-\contentsline {figure}{\numberline {{7-1}}{\ignorespaces Diagram of mirror and osem geometry}}{52}{figure.7.1}
-\contentsline {figure}{\numberline {{7-2}}{\ignorespaces Optical lever calibration data.}}{55}{figure.7.2}
-\contentsline {figure}{\numberline {{7-3}}{\ignorespaces LISO model of the 25 MHz resonant RF WFS front end electronics.}}{56}{figure.7.3}
-\contentsline {figure}{\numberline {{7-4}}{\ignorespaces Impression of input beam motion on the core mirrors}}{58}{figure.7.4}
-\contentsline {figure}{\numberline {{7-5}}{\ignorespaces Mirror motion due to input beam impression}}{58}{figure.7.5}
-\contentsline {figure}{\numberline {{7-6}}{\ignorespaces Theoretical dependence of power recycling cavity power on $g$-factor and mirror angle}}{60}{figure.7.6}
-\contentsline {figure}{\numberline {{7-7}}{\ignorespaces Measured dependence of the WFS error signals on the power recycling cavity geometry}}{62}{figure.7.7}
-\contentsline {figure}{\numberline {{7-8}}{\ignorespaces Open loop gains (pitch) of the 5 WFS loops as measured with 6 W input power.}}{63}{figure.7.8}
-\contentsline {figure}{\numberline {{7-9}}{\ignorespaces Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four different powers.}}{64}{figure.7.9}
-\contentsline {figure}{\numberline {{7-10}}{\ignorespaces Open loop gains (pitch) of the differential hard (WFS2B) loop as measured at four different powers.}}{65}{figure.7.10}
-\contentsline {figure}{\numberline {{7-11}}{\ignorespaces Angular motion suppression due to the ASC}}{66}{figure.7.11}
-\contentsline {figure}{\numberline {{7-12}}{\ignorespaces Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}}{67}{figure.7.12}
-\contentsline {figure}{\numberline {{7-13}}{\ignorespaces Measured ASC to DARM transfer functions}}{68}{figure.7.13}
-\contentsline {figure}{\numberline {{9-1}}{\ignorespaces Reflected beam from the Advanced LIGO pre-mode cleaner.}}{72}{figure.9.1}
+\contentsline {figure}{\numberline {{1-1}}{\ignorespaces Strain sensitivities of LIGO-VIRGO collaboration interferometers}}{17}{figure.1.1}
+\contentsline {figure}{\numberline {{2-1}}{\ignorespaces LIGO noise budget}}{20}{figure.2.1}
+\contentsline {figure}{\numberline {{2-2}}{\ignorespaces Power-recycled Fabry-Perot Michelson laser interferometer}}{23}{figure.2.2}
+\contentsline {figure}{\numberline {{2-3}}{\ignorespaces Optical lever open loop transfer function}}{25}{figure.2.3}
+\contentsline {figure}{\numberline {{4-1}}{\ignorespaces Typical angular motion of the core suspended mirrors in the absence of interferometric control}}{29}{figure.4.1}
+\contentsline {figure}{\numberline {{4-2}}{\ignorespaces Beam centering servo image of beam splitter}}{33}{figure.4.2}
+\contentsline {figure}{\numberline {{4-3}}{\ignorespaces Schematic of the alignment sensing and control system}}{34}{figure.4.3}
+\contentsline {figure}{\numberline {{4-4}}{\ignorespaces WFS error signal and dark noise}}{35}{figure.4.4}
+\contentsline {figure}{\numberline {{5-1}}{\ignorespaces Sketch of a LIGO suspension}}{37}{figure.5.1}
+\contentsline {figure}{\numberline {{5-2}}{\ignorespaces Torque to pitch transfer function of a LIGO core optic}}{39}{figure.5.2}
+\contentsline {figure}{\numberline {{5-3}}{\ignorespaces Illustration of the orthogonal modes of cavity tilt}}{43}{figure.5.3}
+\contentsline {figure}{\numberline {{5-4}}{\ignorespaces Controls view of addition of radiation pressure to the pendulum transfer function}}{44}{figure.5.4}
+\contentsline {figure}{\numberline {{5-5}}{\ignorespaces Torsional spring constants of an optically coupled cavity}}{45}{figure.5.5}
+\contentsline {figure}{\numberline {{5-6}}{\ignorespaces Single cavity opto-mechanical transfer function}}{47}{figure.5.6}
+\contentsline {figure}{\numberline {{5-7}}{\ignorespaces Poles of the torque to pitch opto-mechanical transfer function}}{48}{figure.5.7}
+\contentsline {figure}{\numberline {{6-1}}{\ignorespaces Diagram of mirror and osem geometry}}{52}{figure.6.1}
+\contentsline {figure}{\numberline {{6-2}}{\ignorespaces Optical lever calibration data.}}{54}{figure.6.2}
+\contentsline {figure}{\numberline {{6-3}}{\ignorespaces Transimpedance of the 25 MHz resonant RF WFS front end electronics. The model was made using software called LISO.}}{57}{figure.6.3}
+\contentsline {figure}{\numberline {{6-4}}{\ignorespaces Impression of input beam motion on the core mirrors}}{60}{figure.6.4}
+\contentsline {figure}{\numberline {{6-6}}{\ignorespaces Mirror motion due to input beam impression}}{62}{figure.6.6}
+\contentsline {figure}{\numberline {{6-7}}{\ignorespaces Theoretical dependence of power recycling cavity power on $g$-factor and mirror angle}}{64}{figure.6.7}
+\contentsline {figure}{\numberline {{6-8}}{\ignorespaces Measured dependence of the WFS error signals on the power recycling cavity geometry}}{65}{figure.6.8}
+\contentsline {figure}{\numberline {{6-9}}{\ignorespaces Beam spot motion on the ITMs and ETMs during a 16\nobreakspace {}W lock at night (May21, 2010, 06:02:30 UTC).}}{67}{figure.6.9}
+\contentsline {figure}{\numberline {{6-10}}{\ignorespaces Open loop gains (pitch) of the 5 WFS loops as measured with 6 W input power.}}{68}{figure.6.10}
+\contentsline {figure}{\numberline {{6-11}}{\ignorespaces Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four different powers.}}{69}{figure.6.11}
+\contentsline {figure}{\numberline {{6-12}}{\ignorespaces Open loop gains (pitch) of the differential hard (WFS2B) loop as measured at four different powers.}}{70}{figure.6.12}
+\contentsline {figure}{\numberline {{6-13}}{\ignorespaces Angular motion suppression due to the ASC}}{71}{figure.6.13}
+\contentsline {figure}{\numberline {{6-14}}{\ignorespaces Striptool example}}{72}{figure.6.14}
+\contentsline {figure}{\numberline {{6-15}}{\ignorespaces Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}}{73}{figure.6.15}
+\contentsline {figure}{\numberline {{6-16}}{\ignorespaces Measured ASC to DARM transfer functions}}{74}{figure.6.16}
+\contentsline {figure}{\numberline {{6-20}}{\ignorespaces Histogram of input powers used during S6}}{77}{figure.6.20}
+\contentsline {figure}{\numberline {{8-1}}{\ignorespaces Reflected beam from the Advanced LIGO pre-mode cleaner.}}{81}{figure.8.1}

@@ -1,7 +1,10 @@
-\contentsline {table}{\numberline {{6-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes}}{43}{table.6.1}
-\contentsline {table}{\numberline {{6-2}}{\ignorespaces Torsional spring constants for the soft and hard cavity modes}}{47}{table.6.2}
-\contentsline {table}{\numberline {{6-3}}{\ignorespaces Conditions on total torsional constant for determining system stability}}{48}{table.6.3}
-\contentsline {table}{\numberline {{7-1}}{\ignorespaces Beam spot motion calibrations}}{53}{table.7.1}
-\contentsline {table}{\numberline {{7-2}}{\ignorespaces Optical lever calibrations}}{55}{table.7.2}
-\contentsline {table}{\numberline {{7-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{56}{table.7.3}
-\contentsline {table}{\numberline {{7-4}}{\ignorespaces MMT to WFS transfer coefficients}}{58}{table.7.4}
+\contentsline {table}{\numberline {{5-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes}}{42}{table.5.1}
+\contentsline {table}{\numberline {{5-2}}{\ignorespaces Torsional spring constants for the soft and hard cavity modes}}{46}{table.5.2}
+\contentsline {table}{\numberline {{5-3}}{\ignorespaces Conditions on total torsional constant for determining system stability}}{47}{table.5.3}
+\contentsline {table}{\numberline {{6-1}}{\ignorespaces Beam spot motion calibrations}}{53}{table.6.1}
+\contentsline {table}{\numberline {{6-2}}{\ignorespaces Optical lever calibrations}}{55}{table.6.2}
+\contentsline {table}{\numberline {{6-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{56}{table.6.3}
+\contentsline {table}{\numberline {{6-5}}{\ignorespaces Optical gain in units of WFS counts / dof radian. Numbers in \leavevmode {\color {gray}gray} are the measurement results that have coherences less than 0.9. Boxes highlight the elements actually used in the control system. All other elements are set to $0$.}}{58}{table.6.5}
+\contentsline {table}{\numberline {{6-6}}{\ignorespaces Actual dof motion during sensing matrix excitations using the optical levers as witnesses. Columns are excitations and rows are the pitch motions at 9.7\nobreakspace {}Hz in units of \textmu {}rad. Ideally, this would be a diagonal matrix. It mostly is.}}{58}{table.6.6}
+\contentsline {table}{\numberline {{6-7}}{\ignorespaces Mirror gains for diagonalization.}}{59}{table.6.7}
+\contentsline {table}{\numberline {{6-8}}{\ignorespaces MMT to WFS transfer coefficients}}{62}{table.6.8}

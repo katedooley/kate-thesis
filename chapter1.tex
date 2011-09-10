@@ -1,5 +1,8 @@
 \chapter{The Search for Gravitational Waves}
 
+\textcolor{blue}{Write 1-2 pages providing a synopis of the history of
+GWs and programs to detect them.}
+
 The field of ground-based gravitational-wave (GW) physics is rapidly
 approaching a state with a high likelihood of detecting GWs for the
 first time. Such a detection will not only validate part of Einstein's
@@ -192,6 +195,100 @@ detectors.
 \end{figure}
 
 
+\section{Purpose of this work}
+The purpose of this work is to demonstrate the capability of an
+interferometric gravitational wave detector to operate at several
+times the highest of laser powers previously used. From a na\"ive
+standpoint, more power is desirable since strain sensitivity improves
+by $\sqrt{P}$ in the high frequency ($>$ 200~Hz) shot-noise-limited
+region. However, as detectors become more sensitive at low frequencies
+($<$ 70 Hz) in the years to come, radiation pressure noise will become
+the dominant noise source, making high laser power operation a design
+trade-off. Currently, seismic noise limits low frequency sensitivity,
+so exploring the technical world of increasing the laser power is a
+fruitful adventure.
+
+%Although offering an improvement to the shot-noise-limited sensitivity, 
+More power introduces a host of radiation pressure and thermally
+induced side effects that must be addressed for effective
+interferometer operation. Concerns about the practical difficulties of
+handling high power effects abounded during Initial LIGO when
+operating at the design power of 10~W proved more difficult and less
+straight-forward than expected. To achieve the Advanced LIGO design
+sensitivity, a whopping 160~W of input power is needed. Without an
+understanding of the thermal and radiation pressure problems at 10~W,
+Advanced LIGO becomes all the more daunting of a goal. 
+
+The work presented in this dissertation was carried out during
+Enhanced LIGO to verify and investigate the predicted and unforeseen
+effects of as much as 25~W of laser power. I present the design and
+the measurements I made of the performance of two of the
+interferometer subsystems that are affected by an increase in laser
+power: the Input Optics and the Angular Sensing and Control. I show
+that the thermal and radiation pressure effects on these subsystems
+are well understood and should not pose \textcolor{blue}{unsolvable,
+  pick different word} problems for
+Advanced LIGO.
+% As an
+% epilogue, I make projections of what can be expected for Advanced LIGO
+% based on the results of my experimental studies. 
+
+
+\subsection{The Input Optics high power story} 
+The performance of the Initial LIGO Input Optics degraded as the
+result of absorbing too much heat while the input power ramped up to
+7~W. Particular issues that needed to be addressed for any further
+increase in power included thermal steering of the beam rejected by
+the interferometer, a decrease in the optical isolation, and thermal
+lensing that drove the spatial mode of the beam directed at the
+interferometer away from optimal. I describe the design of the
+improved Input Optics which includes less absorptive optical
+components in order to conquer thermal issues at the source and
+changes to the design architecture that compensate for any residual
+effects. I also present the set of measurements I made to characterize
+their performance with up to 30~W input power. I show that we can
+expect the Input Optics to perform well for Advanced LIGO.
+
+
+
+\subsection{The Angular Sensing and Control high power story}
+Radiation pressure creates torques, a long-known concept, and the
+optical torque's ability to de-stabilize optical cavities was first
+recognized in 1991 by Solimeno et
+al. \cite{Solimeno1991FabryPerot}. However, the theory of radiation
+pressure's effect on angular mechanical transfer functions was not
+fully appreciated and published until 2006 by Sidles and Sigg
+\cite{Sidles2006Optical}. The concern arised that radiation pressure
+might be the factor limiting Initial LIGO's ability to increase the
+input power. Eiichi Hirose showed that the optical torque was present
+and measurable, but that it was \emph{not} limiting Initial LIGO's
+power \cite{Hirose2010Angular}.\footnote{In fact, after the Enhanced
+  LIGO laser was installed, and before any changes were made to the
+  ASC, we successfully operated the interferometer with 14~W input
+  power. See Valera Frolov's Nov. 20, 2008 elog.} The concern of the
+optical torque's role in cavity dynamics shifted to Enhanced and
+Advanced LIGO, which were designed to operate at four times and 20
+times the laser power of Initial LIGO, respectively. Lisa Barsotti
+developed a numerical model of the angular sensing and controls for
+Enhanced LIGO, specifically including radiation pressure torque. She
+showed that, in principle, the radiation pressure torque can be
+controlled without detrimental consequences to the sensitivity of the
+detector \cite{Barsotti2009Modeling}. I implemented Barsotti's
+theoretical control scheme and measured its performance with up to
+20~W of input power, demonstrating a thorough understanding of the
+principles at work and providing confidence in the ability to control
+radiation pressure torques in Advanced LIGO. I also improved upon
+Hirose's measurement of the optical angular (anti-)spring. And through
+post-analysis of angular data, I demonstrate the potential of a
+technique that may be used in Advanced LIGO for reducing the angular
+control signals.
+
+
+
+\subsection{Outline of this dissertation}
+The organization of this
+dissertation is as follows. Chapter~2 provides the astrophysical
+motivation...
 
 
 
