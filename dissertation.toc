@@ -58,26 +58,25 @@
 \contentsline {subsubsection}{\numberline {6.1.2.1}ETM and ITM optical levers}{54}{subsubsection.6.1.2.1}
 \contentsline {subsubsection}{\numberline {6.1.2.2}RM, BS, and MMT3 optical levers}{56}{subsubsection.6.1.2.2}
 \contentsline {subsection}{\numberline {6.1.3}WFS error signals}{56}{subsection.6.1.3}
-\contentsline {subsubsection}{\numberline {6.1.3.1}Counts to Volts}{56}{subsubsection.6.1.3.1}
-\contentsline {subsubsection}{\numberline {6.1.3.2}Volts to Watts}{57}{subsubsection.6.1.3.2}
 \contentsline {section}{\numberline {6.2}WFS Optical Gain}{57}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Diagonalizing the ASC drive matrix}{60}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Input beam motion}{60}{section.6.3}
-\contentsline {section}{\numberline {6.4}The marginally-stable Power Recycling Cavity}{63}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}SPOB power scaling}{64}{subsection.6.4.1}
-\contentsline {section}{\numberline {6.5}DC readout related measurements}{65}{section.6.5}
-\contentsline {section}{\numberline {6.6}The effect of the ASC}{67}{section.6.6}
-\contentsline {section}{\numberline {6.7}ASC to DARM noisebudget}{67}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Tuning the cut-off filters}{67}{subsection.6.7.1}
-\contentsline {section}{\numberline {6.8}Feed-forward}{67}{section.6.8}
-\contentsline {section}{\numberline {6.9}Advanced LIGO}{67}{section.6.9}
-\contentsline {chapter}{\numberline {7}{Experimental measurement of the Sidles-Sigg effect}}{79}{chapter.7}
-\contentsline {section}{\numberline {7.1}Measured modes}{79}{section.7.1}
-\contentsline {chapter}{\numberline {8}{Summary}}{81}{chapter.8}
-\contentsline {chapter}{\numberline {9}{Appendix}}{83}{chapter.9}
-\contentsline {section}{\numberline {9.1}Oplev contributions}{83}{section.9.1}
-\contentsline {section}{\numberline {9.2}Misaligned cavity axis}{83}{section.9.2}
-\contentsline {section}{\numberline {9.3}Power in a misaligned cavity}{83}{section.9.3}
+\contentsline {section}{\numberline {6.3}WFS output matrix}{58}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Diagonalizing the ASC drive matrix}{59}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Input beam motion}{59}{section.6.4}
+\contentsline {section}{\numberline {6.5}The marginally-stable Power Recycling Cavity}{63}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}SPOB power scaling}{64}{subsection.6.5.1}
+\contentsline {section}{\numberline {6.6}DC readout related measurements}{65}{section.6.6}
+\contentsline {section}{\numberline {6.7}The effect of the ASC}{65}{section.6.7}
+\contentsline {section}{\numberline {6.8}ASC to DARM noisebudget}{65}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Tuning the cut-off filters}{68}{subsection.6.8.1}
+\contentsline {section}{\numberline {6.9}Feed-forward}{68}{section.6.9}
+\contentsline {section}{\numberline {6.10}Advanced LIGO}{69}{section.6.10}
+\contentsline {chapter}{\numberline {7}{Experimental measurement of the Sidles-Sigg effect}}{78}{chapter.7}
+\contentsline {section}{\numberline {7.1}Measured modes}{78}{section.7.1}
+\contentsline {chapter}{\numberline {8}{Summary}}{80}{chapter.8}
+\contentsline {chapter}{\numberline {9}{Appendix}}{82}{chapter.9}
+\contentsline {section}{\numberline {9.1}Seismic contributions to optical lever spectra}{82}{section.9.1}
+\contentsline {section}{\numberline {9.2}Misaligned cavity axis}{82}{section.9.2}
+\contentsline {section}{\numberline {9.3}Power in a misaligned cavity}{82}{section.9.3}
 \contentsline {subsection}{\numberline {9.3.1}Displaced cavity}{85}{subsection.9.3.1}
 \contentsline {subsection}{\numberline {9.3.2}Tilted cavity}{86}{subsection.9.3.2}
 \contentsline {subsection}{\numberline {9.3.3}Displaced and tilted cavity}{87}{subsection.9.3.3}

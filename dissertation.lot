@@ -4,7 +4,7 @@
 \contentsline {table}{\numberline {{6-1}}{\ignorespaces Beam spot motion calibrations}}{54}{table.6.1}
 \contentsline {table}{\numberline {{6-2}}{\ignorespaces Optical lever calibrations}}{56}{table.6.2}
 \contentsline {table}{\numberline {{6-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{57}{table.6.3}
-\contentsline {table}{\numberline {{6-5}}{\ignorespaces Optical gain in units of WFS counts / dof radian. Numbers in \leavevmode {\color {gray}gray} are the measurement results that have coherences less than 0.9. Boxes highlight the elements actually used in the control system. All other elements are set to $0$.}}{59}{table.6.5}
-\contentsline {table}{\numberline {{6-6}}{\ignorespaces Actual dof motion during sensing matrix excitations using the optical levers as witnesses. Columns are excitations and rows are the pitch motions at 9.7\nobreakspace {}Hz in units of \textmu {}rad. Ideally, this would be a diagonal matrix. It mostly is.}}{59}{table.6.6}
-\contentsline {table}{\numberline {{6-7}}{\ignorespaces Mirror gains for diagonalization of drive matrix}}{60}{table.6.7}
-\contentsline {table}{\numberline {{6-8}}{\ignorespaces MMT to WFS transfer coefficients}}{63}{table.6.8}
+\contentsline {table}{\numberline {{6-4}}{\ignorespaces Optical gain at 9.7\nobreakspace {}Hz in units of WFS counts / dof radian (pitch). Numbers in \leavevmode {\color {gray}gray} are the measurement results that have coherences less than 0.9. Boxes highlight the elements actually used in the control system. All other elements are set to zero.}}{58}{table.6.4}
+\contentsline {table}{\numberline {{6-5}}{\ignorespaces WFS output matrix (pitch). For the Livingston cavity geometry $r=0.91$ and for Hanford $r=0.87$.}}{59}{table.6.5}
+\contentsline {table}{\numberline {{6-6}}{\ignorespaces Actual eigenbasis motion during sensing matrix excitations as witnessed by the optical levers. Columns are excitations and rows are the pitch motions at 9.7\nobreakspace {}Hz in units of \textmu {}rad. Ideally, this would be a diagonal matrix. It mostly is.}}{59}{table.6.6}
+\contentsline {table}{\numberline {{6-7}}{\ignorespaces Mirror gains for diagonalization of drive matrix}}{59}{table.6.7}

@@ -166,7 +166,8 @@ not affect interferometer operation. For completeness and for
 satisfaction for the trained eye, I include seismic spectra from the
 time of each measurement I present. For some people, this may seem
 excessive, but almost all of the mirror motion is in fact due to the
-ground, so the relevence is high.
+ground, so the relevence is high. These spectra are found in the
+appendix, Sec. \ref{sec:groundmotion}.
 
 
 \footnote{The convention for the naming of the WFS control signals is
@@ -183,16 +184,19 @@ ground, so the relevence is high.
 
 \section{Calibrations}
 Since the data is collected digitally, the units are in digital
-counts. This must be converted into physical units in order to make
-meaningful statements beyond relative comparisons. Two ways to make a
-calibration are to \textcolor{blue}{(think about this more!)}
+counts. This must be converted into physical units in order to
+facilitate comparison to models and to make meaningful statements. The
+typical method of calibrating a digital channel is to inject a signal
+of known amplitude into the system and take the ratio with the
+amplitude of the digital measurement of the signal. Two ways of
+determining the physical amplitude of the injected signal are
 \begin{itemize}
-\item work backwards through the control system and electronics chain \vspace{-10pt}
-\item inject an analog signal with a known amplitude 
+\item 
+\item 
 \end{itemize}
-I describe here the calibrations I made of some of the angular sensing
-channels, all the while demonstrating particular examples of these
-methods.
+I describe in this section the calibrations I made of some of the
+angular sensing channels, all the while demonstrating particular
+examples of these methods.
 
 
 \subsection{Beam spot motion}
@@ -288,12 +292,11 @@ position, $\Delta x$, is:
 \end{equation}
 
 The final calibrations of these channels are shown in Table
-\ref{table:bsmcal}. \footnote{A minor
-  technicality is that since there are no filters between the QPD
-  error signals and the offset channel, their units are exactly the
-  same. Thus, calculating meters of beam spot motion as a function of
-  offset serves to calibrate the error point. For convenience, this is
-  what I did.}
+\ref{table:bsmcal}. \footnote{A minor technicality is that since there
+  are no filters between the QPD error signals and the offset channel,
+  their units are exactly the same. Thus, calculating meters of beam
+  spot motion as a function of offset serves to calibrate the error
+  point. For convenience, this is what I did.}
 
 \begin{table}
 \centering
@@ -417,15 +420,17 @@ yaw & 50.7 & 43.3 & 20.1 & 20.2 & 42.5 & 63.5 & 55.5 \\
 
 
 \subsection{WFS error signals}
-The WFS error signals (i.e. \texttt{L1:ASC-WFS1\_Q1}) are physically Watts of power at the
-detectors. Converting the error signal in digital counts to meaningful
-Watts requires working backwards through the electronics, and can be
-divided into two parts. First, we must calibrate the WFS demodulation
-chain to backtrack WFS counts into voltage of signal at the input to
-the mixer. Second, we must convert voltage at the mixer into Watts at
-the sensor based on properties of the photodetector RF electronics.
+The WFS error signals (i.e. \texttt{L1:ASC-WFS1\_Q1}) are physically
+Watts of power at the detectors. Converting the error signal in
+digital counts to Watts requires working backwards through the
+electronics, and can be divided into two parts. First, we must
+calibrate the WFS demodulation chain to backtrack WFS counts into
+voltage of signal at the input to the mixer. Second, we must convert
+voltage at the mixer into Watts at the sensor based on properties of
+the photodetector RF electronics. \textcolor{blue}{For now, it
+  suffices to calibrate the signal in Volts.}
 
-\subsubsection{Counts to Volts} 
+%\subsubsection{Counts to Volts} 
 The analog to digital RF chain for the WFS includes a demodulation
 board, a whitening board, an anti-alias board, and the ADC. This chain
 can be calibrated by injecting a sine wave of the same frequency as a
@@ -459,37 +464,37 @@ average. The demodulation chain does not significantly distort the
 error signals.
 
 
-\subsubsection{Volts to Watts}
-The voltage created per Watt of signal on the WFS is determined by the
-responsivity (Amps/Watt) and transimpedance (Volts/Amp) of the
-diode. A model of the 25~MHz WFS transimpedance is shown in
-Fig. \ref{fig:wfs25MHzTF}, indicating a magnitude of 90~dB at
-25~MHz. The responsivity is found in Section \ref{sec:pds}. It is
-0.86~A/W. 
+% \subsubsection{Volts to Watts}
+% The voltage created per Watt of signal on the WFS is determined by the
+% responsivity (Amps/Watt) and transimpedance (Volts/Amp) of the
+% diode. A model of the 25~MHz WFS transimpedance is shown in
+% Fig. \ref{fig:wfs25MHzTF}, indicating a magnitude of 90~dB at
+% 25~MHz. The responsivity is found in Section \ref{sec:pds}. It is
+% 0.86~A/W. 
 
-The final WFS calibration numbers are found in Table \ref{tab:WFScal}.
+% The final WFS calibration numbers are found in Table \ref{tab:WFScal}.
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/wfs25MHzTF.pdf}
-\caption{Transimpedance of the 25 MHz resonant RF WFS front end
-  electronics. The model was made using software called LISO.}
-\label{fig:wfs25MHzTF}
-\end{centering}
-\end{figure}
+% \begin{figure}
+% \begin{centering}
+% \includegraphics[width=1.0\textwidth]{figures/wfs25MHzTF.pdf}
+% \caption{Transimpedance of the 25 MHz resonant RF WFS front end
+%   electronics. The model was made using software called LISO.}
+% \label{fig:wfs25MHzTF}
+% \end{centering}
+% \end{figure}
 
-\begin{table}
-\centering
-\caption[]{WFS error signal calibrations from digital counts to Watts.}
-\begin{tabular}{l l l l}
-\hline
-WFS1 & WFS2 & WFS3 & WFS4 \\
-\hline
-$3.9\times10^{-16}$ & $1.0\times10^{-14}$ & & \\
-\hline
-\end{tabular}
-\label{table:WFScal}
-\end{table}
+% \begin{table}
+% \centering
+% \caption[]{WFS error signal calibrations from digital counts to Watts.}
+% \begin{tabular}{l l l l}
+% \hline
+% WFS1 & WFS2 & WFS3 & WFS4 \\
+% \hline
+% $3.9\times10^{-16}$ & $1.0\times10^{-14}$ & & \\
+% \hline
+% \end{tabular}
+% \label{table:WFScal}
+% \end{table}
 
 
 
@@ -499,21 +504,21 @@ $3.9\times10^{-16}$ & $1.0\times10^{-14}$ & & \\
 \section{WFS Optical Gain}
 Optical gain is a term used in LIGO to described the amount of laser
 power produced at some interferometer port for a given physical change
-of some aspect of the interferometer. Photodiodes are placed where the
-optical gain is high. For the case of the wavefront sensors, one is
-placed at the anti-symmetric port where differential-mode signals are
-transmitted, one is placed to look at a pick-off of the beam in the
-recycling cavity which contains common and differential information,
-and two are placed at the reflected port, where common-mode signals
-end up. The precise locations are determined from the Gouy phases of
-the light. Details are found in Ref. \ref{}.
-
+of some aspect of the interferometer. Ideally, photodiodes are placed
+where the optical gain is high. For the case of the wavefront sensors,
+one is placed at the anti-symmetric port where differential-mode
+signals are transmitted, one is placed to look at a pick-off of the
+beam in the recycling cavity which contains common and differential
+information, and two are placed at the reflected port, where
+common-mode signals end up. The precise locations are determined from
+the Gouy phases of the light. Details are found in Ref. xx.
 
 The WFS optical gain is a measure of how much TEM01/TEM10 mode shows
 up at the locations of the wavefront sensors when a mirror (or
 specific combination of mirrors) moves in angle. Given the wavefront
 sensor is designed to measure the amplitude of this higher order mode,
 its error signal conveys the optical gain.
+% include subtlety of pick-off fractions at ports?
 
 The optical gain for each of the optics' motions is not concentrated
 in one place, although it can appear more strongly in one location
@@ -531,46 +536,81 @@ as follows:
 \item excite one of the mirrors (or specific combination of mirrors)
   at frequency $f$ \vspace{-10pt}
 \item demodulate each of the WFS signals at $f$ \vspace{-10pt}
-\item repeat for each mirror (or sets of mirrors) \vspace{-10pt}
-\item normalize to the phase of the excitation readback
+\item normalize to the phase of the excitation readback \vspace{-10pt}
+\item repeat for each mirror (or sets of mirrors)
 \end{enumerate}
-A key ... is that a notch filter at $f$ must be engaged during the
-measurement so the control servo does not suppress our excitation.
+A key aspect of the measurement is that a notch filter at frequency
+$f$ is engaged so the control servo does not suppress our excitation.
 
-An example sensing matrix is shown in Table \ref{table:sensing}. Data
-is from a 10 W lock on April 14, 2010 and the matrix is not yet
-calibrated. Rows represent excitation and columns are the wavefront
-sensors.
+An example calibrated sensing matrix in the radiation pressure
+eigenbasis as taken during a 10~W lock 
+% April 14, 2010 
+is shown in Table \ref{table:sensing}. Rows represent excitation and
+columns are the wavefront sensors.  Before inverting to create the
+input matrix, the smallest of the elements (which are more or less
+equivalent to the elements for which optical gain is also expected to
+be weak), are artificially set to zero. This avoids the contamination
+of strong signals by those with weak signal-to-noise ratios. The
+elements that remain after this process are highlighted by boxes. Note
+that the sensing matrix is in fact composed of two sub-matrices: one
+for the differential degrees of freedom, and one for the common
+degrees of freedom.
 
 \begin{table}
 \centering
-\caption{Optical gain in units of WFS counts / dof radian. Numbers in \textcolor{gray}{gray} are
-  the measurement results that have coherences less than 0.9. Boxes
-  highlight the elements actually used in the control system. All
-  other elements are set to $0$.}
+\caption{Optical gain at 9.7~Hz in units of WFS counts / dof radian
+  (pitch). Numbers in \textcolor{gray}{gray} are the measurement
+  results that have coherences less than 0.9. Boxes highlight the
+  elements actually used in the control system. All other elements are
+  set to zero.} 
 \begin{tabular}{l l l l l l}
 \hline
-WFS1 & WFS2a & WFS2b & WFS3 & WFS4 &  \\
+WFS1Q & WFS2I & WFS2Q & WFS3I & WFS4I &  \\
 \hline
-\fbox{5.8e+12}   &\textcolor{gray}{6.7e+09} & \textcolor{gray}{3.3e+09} & \textcolor{gray}{-1.3e+09}  &  \textcolor{gray}{2.2e+09} & dSoft \\
-   \textcolor{gray}{5.4+10} &  \fbox{2.1e+10} & \textcolor{gray}{-1.3e+09} & \fbox{\textcolor{gray}{-3.9e+09}} &  \fbox{\textcolor{gray}{-1.7e+10}} & cSoft \\
-\fbox{9.2e+11}  &\textcolor{gray}{-4.0e+09} & \fbox{-3.7e+09} &  \textcolor{gray}{3.4e+08} & \textcolor{gray}{-1.7e+09} & dHard \\
-   \textcolor{gray}{4.9e+11} & \fbox{-2.4e+10} & \textcolor{gray}{-1.6e+09} &  \fbox{\textcolor{gray}{1.2e+09}} & \fbox{-1.9e+10} & cHard \\
-   \textcolor{gray}{2.6e+11} & \fbox{-2.4e+10} & \textcolor{gray}{-1.1e+09} &  \fbox{7.0e+09} & \fbox{-3.5e+10} & RM \\
+\fbox{5.8e+12}   & \textcolor{gray}{3.3e+09} &\textcolor{gray}{6.7e+09} & \textcolor{gray}{-1.3e+09}  &  \textcolor{gray}{2.2e+09} & dSoft \\
+\fbox{9.2e+11}  & \fbox{-3.7e+09} &\textcolor{gray}{-4.0e+09} &  \textcolor{gray}{3.4e+08} & \textcolor{gray}{-1.7e+09} & dHard \\
+   \textcolor{gray}{5.4+10} & \textcolor{gray}{-1.3e+09} &  \fbox{2.1e+10} & \fbox{\textcolor{gray}{-3.9e+09}} &  \fbox{\textcolor{gray}{-1.7e+10}} & cSoft \\
+   \textcolor{gray}{4.9e+11} & \textcolor{gray}{-1.6e+09} & \fbox{-2.4e+10} &  \fbox{\textcolor{gray}{1.2e+09}} & \fbox{-1.9e+10} & cHard \\
+   \textcolor{gray}{2.6e+11} & \textcolor{gray}{-1.1e+09} & \fbox{-2.4e+10}  &  \fbox{7.0e+09} & \fbox{-3.5e+10} & RM \\
 \hline
 \end{tabular}
-\label{table:opgain_prelim}
+\label{table:sensing}
+\end{table}
+
+\textcolor{blue}{Paragraph discussing sensing matrix numbers.}
+
+
+
+\section{WFS output matrix}
+The WFS output matrix determines how to 
+
+
+\begin{table}
+\centering
+\caption{WFS output matrix (pitch). For the Livingston cavity geometry
+  $r=0.91$ and for Hanford $r=0.87$.}
+\begin{tabular}{l l l l l l}
+\hline 
+dSoft & dHard & cSoft & cHard & RM & \\
+\hline 
+1 & r & 1 & r & 0 & ETMX\\
+-1 & -r & 1 & r & 0 & ETMY \\
+r & -1 & r & -1 & 0 & ITMX\\
+-r & 1 & r & -1 & 0 & ITMY\\
+ 0 & 0 & 0 & 0 & 1 & RM\\
+\hline
+\end{tabular}
+\label{table:output}
 \end{table}
 
 
-
-
+\subsection{Diagonalizing the ASC drive matrix}
 
 During the sensing matrix measurement, the optical levers provide a
 record of the motion of the test masses. Properly combining their
 responses tells the amplitude of each dof's movement. The actual
 numbers for the measurement data presented in Table
-\ref{tab:opgain_prelim} are found in Table
+\ref{table:opgain_prelim} are found in Table
 \ref{table:excitations_calibrated}. This now allows us to complete the
 first part of obtaining an optical gain matrix. Each row of the
 sensing matrix should be divided by the amplitude of that dof's
@@ -579,11 +619,23 @@ excitation, the diagonal elements of Table
 angular optical gain of the interferomter in terms of WFS digital
 counts per radian.
 
+% D = 'drive' = DOF excitation to DOF excited matrix (theta_dof)
+% U = 'unknown' = hardware mostly; coils, etc.
+% M = 'mirror' = mirror gains; a diagonal matrix
+% C = 'control' = ASC output matrix
+%
+% We have D = U*M*C. A drive is multiplied first by the output matrix (C),
+% then by the mirror gains (M), then put into hardware (U) to create what's
+% actually exicted.
+%
+% To make D diagonal, we want to find a new M, M_new, which must have the
+% property M_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
+
 
 \begin{table}
 \centering
-\caption{Actual dof motion during sensing matrix excitations using the
-  optical levers as witnesses. Columns are excitations and rows are
+\caption{Actual eigenbasis motion during sensing matrix excitations as
+  witnessed by the optical levers. Columns are excitations and rows are
   the pitch motions at 9.7~Hz in units of \microrad. Ideally, this
   would be a diagonal matrix. It mostly is.}
 \begin{tabular}{l l l l l l}
@@ -602,13 +654,10 @@ dSoft & dHard  & cSoft & cHard & RM & \\
 
 
 
-
-
-\subsection{Diagonalizing the ASC drive matrix}
-
 \begin{table}
 \centering
-\caption[Mirror gains for diagonalization of drive matrix]{Mirror gains for diagonalization of drive matrix.}
+\caption[Mirror gains for diagonalization of drive matrix]{Mirror
+  gains for diagonalization of drive matrix.} 
 \begin{tabular}{l l l l l l}
 \hline
 ETMX & ETMY & ITMX & ITMY & RM & \\
@@ -631,28 +680,39 @@ ETMX & ETMY & ITMX & ITMY & RM & \\
 
 
 \section{Input beam motion}
-%\textcolor{blue}{Breakdown of source of mirror motion.}
-
-The beam centering and QPD servos only operate up to about 10~mHz,
+The beam centering and QPD servos operate up to only about 50~mHz,
 meaning the beam-centering degree of freedom is uncontrolled at higher
-frequencies. Beam spot motion on the test masses couples to
-DARM, so it is prudent to understand the sources. A contender is
-jitter on the pointing of the input beam. 
+frequencies. Since beam spot motion on the test masses couples to
+DARM, anything that causes the beam's position on the test mass to
+change on time scales faster than half a minute becomes itself a
+direct noise source for DARM. The HAM seismic isolation tables from
+which the input optics are suspended have resonant ``stack'' modes
+from about 0.8~Hz to 3~Hz. The excess table motion at these
+frequencies is transmitted to the MMTs. Jitter on the pointing of the
+input beam is thus a primary contender for beam spot motion on the
+test masses.
 
-The source of beam de-centering on the mirrors is input
-beam motion. The HAM seismic isolation tables from which the input
-optics are suspended have resonant ``stack'' modes from about 0.8~Hz
-to 3~Hz. The excess table motion at these frequencies is transmitted
-to the MMTs.
+The wavefront servos are the mechanism by which input beam motion is
+impressed on the test masses; they are responsible, among other
+things, for making the interferometer follow the input beam up to
+several Hz. The WFS detect differences between the angle of the cavity
+(as determined by the angles of the mirrors) and the angle of the beam
+impinging the cavity. If either the input beam or the cavity angle
+changes, the WFS will move the mirrors to correct for the angle
+mismatch. Thus, even if the mirrors are perfectly quiet, a
+non-stationary input beam will result in mirror motion and mirror
+motion in turn creates beam spot motion (see Eq. \ref{eq:x}).
 
 I measured the impression of the input beam motion on the mirrors by
 increasing the gain of the common-degree-of-freedom WFS servos (CH,
-CS, RM) for about 10~minutes. Comparing the amount of angular
-motion of the mirrors from this time of high common WFS gain to a time
-with nominal WFS gain and similar seismic motion, we can see the
-effect directly. Fig. \ref{fig:inputbeam_impression} shows comparison
+CS, RM) for about 10~minutes. Comparing the amount of angular motion
+of the mirrors as witnessed by the optical levers from this time of
+high common WFS gain to a time with nominal WFS gain and similar
+seismic motion, we can see the effect
+directly. Fig. \ref{fig:inputbeam_impression} shows comparison
 spectra, demonstrating how there is higher test mass motion around
-1~Hz when the common WFS gains are higher.
+1~Hz when the common WFS gains are higher. The rms mirror motion also
+increases by about 20\%.
 
 \begin{figure}
 \begin{centering}
@@ -665,70 +725,82 @@ spectra, demonstrating how there is higher test mass motion around
   cHard, RM) are increased to $2.5\times$ nominal is compared to residual
   mirror motion when the WFS gains are nominal. Both spectra come from
   a time of similar seismic activity (typical weekday afternoon
-  noise).}
+  noise), shown in Fig. \ref{fig:seismic_highgain}.}
 \label{fig:inputbeam_impression}
 \end{centering}
 \end{figure}
 
+It is possible for the extra mirror motion to result from gain peaking
+of the WFS servos. However, a plot of the WFS error signals during the
+time of nominal gain and high gain shows that there is not, in fact,
+any evidence of gain peaking. The common WFS spectra in
+Fig. \ref{fig:WFS_inputbeam} do not show any extra noise when their
+gains are higher. It is worth noting that the higher gain is evident
+in the common WFS spectra by the extra suppression seen below
+1~Hz. Also, the differential WFS spectra are unchanged, as
+expected. It can therefore be concluded with reasonable certainty that
+the increase in test mass motion between 1 and 2~Hz during this test
+is indeed due to the WFS impressing input beam motion on the mirrors.
 
 \begin{figure}
 \begin{centering}
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/testWFS1_highnom.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2A_highnom.pdf}}
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2B_highnom.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS3_highnom.pdf}}
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS4_highnom.pdf}}
-\caption[]{.}
-\label{fig:}
-\end{centering}
-\end{figure}
-
-A more quantitative study of the effects of input beam motion is to
-measure transfer coefficients between the input beam motion and the
-mirror angular (or beam spot) motion. During a full interferometer
-lock I put lines in MMT1, MMT2, and MMT3 at 1.05~Hz, 1.25~Hz, and
-0.85~Hz, respectively, selecting excitation amplitudes large enough to
-appear in the common WFS spectra. I compared the amplitudes of the
-lines in the MMT spectra with those in the WFS spectra. The counts to
-counts transfer coefficients are shown in Table
-\ref{table:inputbeam_TFcoeffs}. Since sensing is flat, I use the shape
-of the WFS loop to extrapolate this transfer coefficient at one
-frequency to other frequencies. The result is a transfer function
-useful for making a noisebudget of input beam motion to test mass
-motion. Selecting a science mode time of typical day-time seismic
-noise, I made a noisebudget as found in Fig. \ref{fig:inputbeam_NB}.
-
-
-\begin{table}
-\centering
-\caption[MMT to WFS transfer coefficients]{MMT to WFS transfer
-  coefficients. \textcolor{blue}{Make this!!!}}
-\begin{tabular}{l l l l l l}
-\hline
-          & WFS1Q & WFS2I & WFS2Q & WFS3I & WFS4I \\
-\hline
-MMT1 & \\
-MMT2 & \\
-MMT3 & \\
-\hline
-\end{tabular}
-\label{table:inputbeam_TFcoeffs}
-\end{table}
-
-
-
-\begin{figure}
-\begin{centering}
-%\includegraphics[width=1.0\columnwidth]{figures/}
-  \caption[Mirror motion due to input beam impression]{Noise budget of
-    mirror motion due to input beam impression. \textcolor{blue}{Make
-      this!!}}
-\label{fig:inputbeam_NB}
+\caption[]{Comparison of WFS error signals (the residual motion)
+  during a time of normal operation and a time when the common WFS
+  gains were $2.5\times$ higher than nominal. This excludes gain
+  peaking as a cause of the extra mirror motion witnessed during the
+  time of high gain. Fig.~\ref{fig:seismic_highgain} shows the ground
+  motion spectra at the time of this measurement.}
+\label{fig:WFS_inputbeam}
 \end{centering}
 \end{figure}
 
 
-\textcolor{blue}{Wiener filter beam spot motion to show corner seismic is primary
-contributor when the WFS gains are high. Also show seismic noise 
-coherent with mirror motion in general.}
+% A more quantitative study of the effects of input beam motion is to
+% measure transfer coefficients between the input beam motion and the
+% mirror angular (or beam spot) motion. During a full interferometer
+% lock I put lines in MMT1, MMT2, and MMT3 at 1.05~Hz, 1.25~Hz, and
+% 0.85~Hz, respectively, selecting excitation amplitudes large enough to
+% appear in the common WFS spectra. I compared the amplitudes of the
+% lines in the MMT spectra with those in the WFS spectra. The counts to
+% counts transfer coefficients are shown in Table
+% \ref{table:inputbeam_TFcoeffs}. Since sensing is flat, I use the shape
+% of the WFS loop to extrapolate this transfer coefficient at one
+% frequency to other frequencies. The result is a transfer function
+% useful for making a noisebudget of input beam motion to test mass
+% motion. Selecting a science mode time of typical day-time seismic
+% noise, I made a noisebudget as found in Fig. \ref{fig:inputbeam_NB}.
+
+
+% \begin{table}
+% \centering
+% \caption[MMT to WFS transfer coefficients]{MMT to WFS transfer
+%   coefficients. \textcolor{blue}{Make this!!!}}
+% \begin{tabular}{l l l l l l}
+% \hline
+%           & WFS1Q & WFS2I & WFS2Q & WFS3I & WFS4I \\
+% \hline
+% MMT1 & \\
+% MMT2 & \\
+% MMT3 & \\
+% \hline
+% \end{tabular}
+% \label{table:inputbeam_TFcoeffs}
+% \end{table}
+
+
+
+% \begin{figure}
+% \begin{centering}
+% %\includegraphics[width=1.0\columnwidth]{figures/}
+%   \caption[Mirror motion due to input beam impression]{Noise budget of
+%     mirror motion due to input beam impression. \textcolor{blue}{Make
+%       this!!}}
+% \label{fig:inputbeam_NB}
+% \end{centering}
+% \end{figure}
 
 
 
@@ -806,38 +878,42 @@ $g$-factor and mirror angle]{Dependence of power build-up in the power
 
 
 \subsection{SPOB power scaling}
-The effect of the marginally stable recycling cavity can be seen by
-tracking the ASC sensing matrix elements as $g$ changes. I excited
-three of the test masses (ETMX, ITMX, RM) at three different
+The signal at the wavefront sensors is proportional to the amplitude
+of the sidebands, or the square root of the sideband power. Thus, as
+the PRC $g$-factor and therefore the power in the recycling cavity
+changes, so do the WFS1 and WFS2 optical gains. In order to
+compensate for this $g$-factor dependence, we multiply the WFS\{1Q,
+2I, 2Q\} error signals in real-time by
+\begin{equation}
+\frac{1}{P_{in}} \left[\frac{NSPOB}{350}\right]^{-1/2}
+\end{equation}
+and WFS3I and WFS4I by $1/P_{in}$. NSPOB is the normalized sideband
+power in the PRC as measured by the $2f$-demodulated POB signal, and
+the 350 is the reference NSPOB, treated as nominal. Thus, during
+interferometer operation, all WFS signals are normalized to input
+power and are not dependent on the PRC power. This correction to the
+WFS signals is called SPOB power scaling.
+
+To verify that the WFS optical gains do indeed scale with the sideband
+power as expected, I tracked the WFS optical gain as $g$ changes. I
+excited three of the test masses (ETMX, ITMX, RM) at three different
 frequencies (9.7~Hz, 10.7~Hz, and 11.7~Hz, respectively) during a full
 interferometer lock and changed the TCS settings so that over the
 course of 15 minutes the $g$-factor steadily changed. Demodulating
 each of the WFS signals at each of the three excitation frequencies as
-a function of time shows the strength of the WFS response to the motion
-of these three mirrors over the course of the study. To compensate for
-the difference in pendulum responses to the excitations, I multiplied
-the demodulated signals for a particular excitation $f$ by
-$(f/9.7)^2$. I also normalized the response by the phase of the
-mirror's motion as witnessed by the optical levers.
+a function of time shows how the strength of the signal at the WFS due
+to the motion of these three mirrors changes. To compensate for the
+difference in pendulum responses to the excitations, I multiplied the
+demodulated signals for a particular excitation $f$ by $(f/9.7)^2$. I
+also normalized the response by the phase of the mirror's motion as
+witnessed by the optical levers.
 
-The results are shown in Fig. \ref{fig:WFStrack}. As expected, WFS1Q,
-WFS2I, and WFS2Q show dependence on the PRC power, and therefore the
-$g$-factor. The WFS3 and WFS4 sensing elements are flat. The
-normalized sideband power in the PRC as measured by the
-$2f$-demodulated POB signal, NSPOB, is also shown in
-Fig. \ref{fig:WFStrack} for this time period. In order to compensate
-for this $g$-factor dependence, we multiply the WFS\{1Q, 2I, 2Q\}
-error signals in real-time by
-\begin{equation}
-\frac{1}{P_{in}} \left[\frac{NSPOB}{350}\right]^{-1/2}
-\end{equation}
-and WFS3I and WFS4I by $1/P_{in}$, where the 350 is the reference
-NSPOB, treated as nominal. Thus, during interferometer operation, all
-WFS signals are normalized to input power and are not dependent on the
-PRC power. This correction to the WFS signals is called SPOB power
-scaling.
-
-
+The results are shown in Fig. \ref{fig:WFStrack}, and include a plot
+of how NSPOB changed over time. As expected, WFS1Q, WFS2I, and WFS2Q
+show dependence on the PRC power, and therefore the $g$-factor. The
+WFS3 and WFS4 sensing elements are flat. Fitting lines to each of the
+tracked elements, we find a good fit with the expected power of $1/2$
+dependence. 
 
 \begin{figure}
 \begin{centering}
