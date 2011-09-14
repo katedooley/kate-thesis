@@ -56,7 +56,7 @@ A consequence is that even when all of the mirrors are perfectly aligned at all 
 
 
 \section{Tolerance for Angular Motion}
-\textcolor{blue}{Make this section correct!}
+\textcolor{blue}{Make this section correct! power fluctations only couple quadratically (bi-linearly) to DARM, but the contrast defect thing is \emph{indistinguishable} from gravitational waves. the A2L should still be emphasized.}
 % Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residula motion must be held below 
 
 Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: power build-up degradation, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
@@ -289,13 +289,6 @@ optic]{Torque to pitch transfer function of a LIGO core optic
 
 
 
-\section{Design of the Angular Control System}
-
-
-
-
-
-
 \section{Overview of Interferometer Alignment}
 \label{sec:alignment_overview}
 
@@ -303,12 +296,12 @@ There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. Th
 \begin{itemize}
 \item camera image (BS)  \vspace{-10pt}
 \item quadrant photodiodes (QPDX, QPDY) \vspace{-10pt}
-\item wavefront sensors\footnote{Pronounced ``woofs''.} (WFS1, WFS2, WFS3, WFS4)
+\item wavefront sensors (WFS1, WFS2, WFS3, WFS4)
 \end{itemize}
 \textcolor{blue}{Figure \ref{fig:} shows the locations of these sensors.} 
 The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-Perot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the y-arm perpendicular to the x-arm.
 
-The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS), whose principle of operation is described in Section \ref{sec:wfs}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
+The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS\footnote{Pronounced ``woofs''.}), whose principle of operation is described in Section \ref{sec:wfs}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
 
 The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer on about minute time scales, and at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam pointing to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Fig. \ref{fig:BCS}. The higher frequency matching of the input beam pointing to the interferometer is achieved by the reflected port Fabry-Perot Michelson wavefront sensors, up to a couple Hz.
 
@@ -326,7 +319,7 @@ All mirror angles are of course interdependent and they must track each other. H
 %two input beams, one to the x-arm, one to the y-arm; and the FPM
 
 \begin{figure} \begin{centering} \includegraphics[width=0.8\textwidth]{figures/ASClayout_wctrl.pdf} 
-\caption[Schematic of the alignment sensing and control system]{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo.}
+\caption[Schematic of the alignment sensing and control system]{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo. \textcolor{blue}{Replace this with two drawings, one showing WFS and one showing other sensors. Label and make less cluttered.}}
 \label{fig:ASClayout}
 \end{centering}
 \end{figure}
@@ -337,6 +330,7 @@ This alignment process involving the WFS, QPDs, and BS camera relies on the enti
 
 
 \section{The Angular Sensing Scheme}
+\textcolor{blue}{overview of basic wavefront sensing, references for details}
 % \section{Wavefront sensing}
 % \label{sec:wfs}
 % \textcolor{blue}{Describe modes, reference sidebands, Gouy phases; give FP cavity example.}
@@ -345,31 +339,43 @@ This alignment process involving the WFS, QPDs, and BS camera relies on the enti
 
 
 \section{The Angular Control Servo}
-When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled Michelson with the input beam and the internal alignment of the power-recycled Michelson. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next.
+When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled Michelson with the input beam and the internal alignment of the power-recycled Michelson. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next. Creating a clear picture of the servo without the inclusion of radiation pressure is warranted.
 
-The broad picture is that we have a 
-
-
-
-\textcolor{blue}{make block figure!}
+%The broad picture is that we have a 
+Fig. \ref{fig:ASCcontrolservo} is a block diagram of the major components to the angular control servo. The torsion-like pendula of the interferometer are subject to external torque which is converted to mirror angle. The interferometer, in turn, turns the mirror angles into TEM10/01 modes at its various ports, and these modes are converted into error signals by the wavefront sensors. The voltages produced by the wavefront sensors are digitized and manipulated by the front-end computers to create control signals that are then ``made analog'' for actuation on the mirrors. The result of this process is a suppression of the error signal seen by the WFS and therefore a suppression of the physical mirror motions. 
 
 \begin{figure} 
 \begin{centering} 
-\includegraphics{figures/pendulumLoop_control.pdf} 
-\caption[]{}
-\label{fig:}
+\includegraphics{figures/ASCcontrolservo.pdf} 
+\caption[ASC control servo]{ASC control servo. \textcolor{blue}{maybe include a wavefront sensor block? Highlight analog versus digital.}}
+\label{fig:ASCcontrolservo}
 \end{centering}
 \end{figure}
+
+In Initial LIGO, the wavefront sensor signals were combined via the Input Matrix to form error signals for the differential and common ETM and ITM motions (\textcolor{blue}{explain more}). WFS control filters were designed for this basis and then those control signals were divvied out to appropriate mirrors via the Output Matrix. 
 
 
 
 \subsection{Optical lever compensation}
 \label{sec:oplevcomp}
-Each of the large optics has its own optical lever servo that provides velocity damping. Since both the WFS and the optical levers control the mirror motion when the interferometer is locked, we must consider the interaction of the two servos. Whether one views the interaction as the WFS controlling the optical-lever-controlled mirrors, or as the optical levers controlling the WFS-controlled-mirrors is arbitrary. For the purpose of explanation here, I use the former viewpoint.
+One aspect of the control servo that I will explain in detail here is the optical lever compensation.  Each of the large optics has its own optical lever servo that provides velocity damping. Since both the WFS and the optical levers control the mirror motion when the interferometer is locked, we must consider the interaction of the two servos. Whether one views the interaction as the WFS controlling the optical-lever-controlled mirrors, or as the optical levers controlling the WFS-controlled-mirrors is arbitrary. For the purpose of explanation here, I use the former viewpoint.
 
-Figure \ref{fig:} shows the simplifed control loop picture of the WFS controlling the optical-lever-controlled mirrors. The torque to angle transfer function of the pendulum is our plant, $P$, the optical lever control is $O$, and the WFS control is $W$. Since the wavefront sensors only indirectly observe the mirror angle, a lot of details are hidden behind $W$. The details are not necessary here, but they are introduced in Sec.~\ref{sec:} and studied in Chapter \ref{ch:characterization}. 
+Figure \ref{fig:OLcomp} zooms in on the portion of the Fig. \ref{fig:ASCcontrolservo} control loop picture that shows the optical lever controlling the pendulum. The torque to angle transfer function of the pendulum is our plant, $P$, the optical lever control is $O$, and the optical lever compensation is shown as $1+OP$. A result of basic control theory is that the optical lever controlled pendulum loop can be represented by its closed loop transfer function:
+\begin{equation}
+\mathrm{TF_{closed}} = \frac{P}{1+OP}
+\end{equation}
+as shown in Fig. \ref{fig:OLcomp}~B. 
 
-A non-necessary, but useful technique is to
+\begin{figure} 
+\begin{centering} 
+\subfigure[Zoom of the bottom part of Fig.~\ref{fig:ASCcontrolservo}.]{\includegraphics{figures/OLcompensation.pdf}} \subfigure[Replacement of the optical lever controlled plant with the closed loop gain representation.]{\includegraphics{figures/OLcompensation2.pdf}} 
+\subfigure[Optical lever compensation effectively removes the optical levers from the picture.]{\includegraphics{figures/OLcompensation3.pdf}} 
+\caption[Optical lever compensation scheme]{Optical lever compensation scheme. Subfigures A, B, and C are equivalent.}  
+\label{fig:OLcomp} 
+\end{centering} 
+\end{figure}
+
+One will notice that it is not a coincidence that the optical lever compensation has the same form as the denominator of the closed loop transfer function. Together, they cancel each other out, and all that remains is the simple pendulum as the plant. Including the optical lever compensation in the ASC loop is not necessary, but it is a useful technique for simplifying the design process of the WFS control filters. One need only consider how to control the simple pendulum torque to angle transfer function, rather than the optical-lever controlled pendulum.
 
 
 
