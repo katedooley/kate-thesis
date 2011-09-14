@@ -1,4 +1,5 @@
 \chapter{The Effect of High Laser Power on Interferometer Alignment}
+\label{ch:eigenmodes}
 
 % \section{Dynamic response of coupled pendula}
 
@@ -51,7 +52,8 @@ g_2 & 1\\
 \end{equation}
 The $g$-factor is defined as $g_i=1-R_i/L$ where $R_i$ is the radius of
 curvature of each of the mirrors, respectively, and $L$ is the length
-of the cavity. 
+of the cavity. It is $0.73$ ($0.71$) for the LLO (LHO) ITM and $0.54$
+($0.45$) for the LLO (LHO) ETM. 
 
 We saw in the previous chapter that the radiation pressure torque on a
 mirror depends on the position of the beam on the mirror, $\tau_{rp} =
@@ -507,35 +509,44 @@ unstable for Enhanced LIGO powers. The transfer functions for which
 controls must be designed are no longer those of a pendulum with
 resonance at 0.6~Hz (pitch) or 0.5~Hz (yaw), but those of the soft and
 hard eigenmodes, whose resonances change with power. The plant of
-Fig. \ref{fig:} is now treated as the cavity's radiation pressure-modified
-torque to angle transfer function, not a simple stand-alone pendulum
-transfer function. 
+Fig. \ref{fig:ASCcontrolservo} is now treated as the cavity's radiation
+pressure-modified torque to angle transfer function, not a simple
+stand-alone pendulum transfer function.
 
-One complication of having a radiation pressure modified plant,
-$P_{rp}$, is that the optical lever compensation (described in 
+An elegant implication of the purely geometric description of the
+cavity axis is that the radiation pressure eigenmodes are orthogonal
+independently of power. 
+
+\textcolor{blue}{put this elsewhere?} One complication of having a
+radiation pressure modified and therefore power dependent plant,
+$P_{rp}$, is that the optical lever compensation (described in
 Sec. \ref{sec:oplevcomp}) is no longer valid. The compensation of
 $1+OP$ is hard-coded in the digital control system, where the model
-for $P$ is that of a simple pendulum. Therefore, only at low powers
-does optical lever compensation adequately cancel out the effect of
-the optical-lever-controlled radiation pressure-modified plant,
-$P_{rp}/1+OP_{rp}$, and leave $P_{rp}$ for the WFS to control. Without
+for $P$ is that of a simple pendulum. The only way to achieve perfect
+compensation would be to load a new model of $P$ into the compensation
+filter bank for each new power and for each optic. Doing this in
+Enhanced LIGO was not practical, so only at low powers does the
+optical lever compensation actually cancel out the effect of the
+optical-lever-controlled radiation pressure-modified plant,
+$P_{rp}/1+OP_{rp}$, leaving simply $P_{rp}$ for the WFS to
+control. This turns out to not have deleterious effects, as shown in a
+model by Barsotti.
 
 The sensors in Initial LIGO were not tuned to specifically look for
 the combined mirror motions that create the soft and hard modes. The
-only way to provide adequate control for both modes to prevent the
-beam from falling off the mirrors (in the unstable case) or to prevent
-the mirrors from oscillating (in the stable case) would be to increase
-the gain of all of the angular control loops. Since some of the
-sensors are less good than others, this would result in excessive
-impression of noise on DARM. To minimize impact on strain sensitivity
-while reducing the angular motion of the interferometer's mirrors to
-the levels necessary for stable operation, we need to pick out the
-combination of sensors that together sense specifically the hard mode
-or the soft mode, and then design controls that rein in the effects of
-just one mode. This is the foundation of the ASC work for Enhanced
-LIGO: switching the sensors to the radiation pressure eigenmode basis,
-and increasing the gains of only those loops that require
-it. \textcolor{blue}{this needs to be corrected}
+only way to provide adequate control for both modes would be to
+increase the gain of all of the angular control loops. Since some of
+the sensors are \textcolor{blue}{less good} than others, this would
+result in excessive impression of sensor noise on DARM. To minimize
+impact on strain sensitivity while reducing the angular motion of the
+interferometer's mirrors to the levels necessary for stable operation,
+we need to pick out the combination of sensors that together sense
+specifically the hard mode or the soft mode, and then design controls
+that specifically address the characteristics of just one mode. This
+is the foundation of the ASC work for Enhanced LIGO: switching the WFS
+control to the radiation pressure eigenmode basis, and increasing the
+gains of only those loops that require it. \textcolor{blue}{I need to
+  make sure this is accurate.}
 
 
 

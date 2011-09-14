@@ -32,22 +32,20 @@
 \BOOKMARK [1][-]{section.4.1}{Tolerance for Angular Motion}{chapter.4}
 \BOOKMARK [1][-]{section.4.2}{Sources of Angular Mirror Motion}{chapter.4}
 \BOOKMARK [2][-]{subsection.4.2.1}{Ground Motion}{section.4.2}
-\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Seismic isolation}{subsection.4.2.1}
-\BOOKMARK [3][-]{subsubsection.4.2.1.2}{Seismometers}{subsection.4.2.1}
 \BOOKMARK [2][-]{subsection.4.2.2}{Coil Actuators}{section.4.2}
 \BOOKMARK [2][-]{subsection.4.2.3}{Noise from Angular Control}{section.4.2}
 \BOOKMARK [2][-]{subsection.4.2.4}{Radiation Pressure}{section.4.2}
 \BOOKMARK [1][-]{section.4.3}{The Mirror as a Torsion Pendulum}{chapter.4}
 \BOOKMARK [2][-]{subsection.4.3.1}{Torque to Angle Transfer Function of a Pendulum}{section.4.3}
 \BOOKMARK [1][-]{section.4.4}{Overview of Interferometer Alignment}{chapter.4}
-\BOOKMARK [1][-]{section.4.5}{The Angular Sensing Scheme}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{The Wavefront Sensing Scheme}{chapter.4}
 \BOOKMARK [1][-]{section.4.6}{The Angular Control Servo}{chapter.4}
 \BOOKMARK [2][-]{subsection.4.6.1}{Optical lever compensation}{section.4.6}
 \BOOKMARK [1][-]{section.4.7}{Angular Control Limitations}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{The Effect of High Laser Power on Interferometer Alignment}{}
-\BOOKMARK [1][-]{section.5.1}{The radiation pressure angular spring}{chapter.5}
-\BOOKMARK [2][-]{subsection.5.1.1}{Diagonalizing the modified equations of motion}{section.5.1}
-\BOOKMARK [2][-]{subsection.5.1.2}{Soft and hard modes}{section.5.1}
+\BOOKMARK [1][-]{section.5.1}{The Radiation Pressure Angular Spring}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.1.1}{Diagonalizing the Modified Equations of Motion}{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.2}{Soft and Hard Modes}{section.5.1}
 \BOOKMARK [1][-]{section.5.2}{Implications}{chapter.5}
 \BOOKMARK [0][-]{chapter.6}{Angular sensing and control characterization and performance in the radiation pressure eigenbasis}{}
 \BOOKMARK [1][-]{section.6.1}{Calibrations}{chapter.6}
@@ -58,15 +56,16 @@
 \BOOKMARK [3][-]{subsubsection.6.1.2.1}{ETM and ITM optical levers}{subsection.6.1.2}
 \BOOKMARK [3][-]{subsubsection.6.1.2.2}{RM, BS, and MMT3 optical levers}{subsection.6.1.2}
 \BOOKMARK [2][-]{subsection.6.1.3}{WFS error signals}{section.6.1}
-\BOOKMARK [1][-]{section.6.2}{The ASC change of basis}{chapter.6}
+\BOOKMARK [1][-]{section.6.2}{The ASC Change of Basis}{chapter.6}
 \BOOKMARK [2][-]{subsection.6.2.1}{WFS Input Matrix}{section.6.2}
-\BOOKMARK [1][-]{section.6.3}{WFS output matrix}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.3.1}{Diagonalizing the WFS drive matrix}{section.6.3}
+\BOOKMARK [2][-]{subsection.6.2.2}{WFS Output Matrix}{section.6.2}
+\BOOKMARK [2][-]{subsection.6.2.3}{Diagonalizing the WFS Drive Matrix}{section.6.2}
+\BOOKMARK [1][-]{section.6.3}{Sensing matrix stability}{chapter.6}
 \BOOKMARK [1][-]{section.6.4}{Input beam motion}{chapter.6}
 \BOOKMARK [1][-]{section.6.5}{The marginally-stable Power Recycling Cavity}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.5.1}{SPOB power scaling}{section.6.5}
-\BOOKMARK [1][-]{section.6.6}{DC readout related measurements}{chapter.6}
-\BOOKMARK [1][-]{section.6.7}{The effect of the ASC}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.5.1}{Power scaling}{section.6.5}
+\BOOKMARK [1][-]{section.6.6}{WFS Servo Open Loop Transfer Functions}{chapter.6}
+\BOOKMARK [1][-]{section.6.7}{Residual Angular Motion}{chapter.6}
 \BOOKMARK [1][-]{section.6.8}{ASC to DARM noisebudget}{chapter.6}
 \BOOKMARK [2][-]{subsection.6.8.1}{Tuning the cut-off filters}{section.6.8}
 \BOOKMARK [1][-]{section.6.9}{Feed-forward}{chapter.6}
@@ -83,8 +82,7 @@
 \BOOKMARK [2][-]{subsection.9.4.2}{Tilted cavity}{section.9.4}
 \BOOKMARK [2][-]{subsection.9.4.3}{Displaced and tilted cavity}{section.9.4}
 \BOOKMARK [1][-]{section.9.5}{Initial DC alignment of the interferometer}{chapter.9}
-\BOOKMARK [1][-]{section.9.6}{Wavefront sensors}{chapter.9}
-\BOOKMARK [2][-]{subsection.9.6.1}{Photodiodes}{section.9.6}
+\BOOKMARK [1][-]{section.9.6}{Photodiodes}{chapter.9}
 \BOOKMARK [1][-]{section.9.7}{Channel names}{chapter.9}
 \BOOKMARK [1][-]{section.9.8}{Seismic spectra}{chapter.9}
 \BOOKMARK [0][-]{chapter*.7}{REFERENCES}{}

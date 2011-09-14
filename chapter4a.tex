@@ -1,5 +1,6 @@
 \chapter{Angular Motion of the Interferometer Mirrors}
 
+\textcolor{blue}{write this introduction!}
 For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. In practice, however, the mirrors are subject to external disturbances. 
 
 The mirrors in LIGO are suspended, both to isolate them from ground motion and to simulate inertial test masses. 
@@ -89,7 +90,7 @@ There is a continuous stream of changing torque inputs to the mirrors that cause
 \item noise impression from the angular control system \vspace{-10pt}
 \item radiation pressure
 \end{itemize}
-
+\textcolor{blue}{say something about seismometer feed-forward signals. say something about imperfect HEPI pos actuation}
 
 
 
@@ -126,12 +127,12 @@ Proof that this motion indeed originates from the ground can be provided by comp
 
 
 
-\subsubsection{Seismic isolation}
-Although the multiple layers of seismic isolation serve to make interferometer operation possible \textcolor{blue}{write something better!}, minor imperfections in their implementation can result in them serving as coupling mechanisms to mirror angle. The path from ground to mirror can be broken into two distinct parts: HEPI + stack position to angle, and suspension position to angle. The seismic tables (HEPI at LLO) are actively actuated upon in position, ie. for the tidal servo. Any position to angle coupling will twist the table. The suspension 
+% \subsubsection{Seismic isolation}
+% Although the multiple layers of seismic isolation serve to make interferometer operation possible \textcolor{blue}{write something better!}, minor imperfections in their implementation can result in them serving as coupling mechanisms to mirror angle. The path from ground to mirror can be broken into two distinct parts: HEPI + stack position to angle, and suspension position to angle. The seismic tables (HEPI at LLO) are actively actuated upon in position, ie. for the tidal servo. Any position to angle coupling will twist the table. The suspension 
 
 
-\subsubsection{Seismometers}
-The seismometers are sensitive to six degrees of freedom: x, y, z, and rotation about x, y, and z. Ideally, they are set up to only measure ground motion in x, y, and z, but the signals may be contaminated by some tilt as well. \textcolor{blue}{???}
+% \subsubsection{Seismometers}
+% The seismometers are sensitive to six degrees of freedom: x, y, z, and rotation about x, y, and z. Ideally, they are set up to only measure ground motion in x, y, and z, but the signals may be contaminated by some tilt as well. \textcolor{blue}{???}
 
 
 
@@ -167,11 +168,11 @@ radiation pressure is
 \tau_{rp} = \frac{2 P x} {c}
 \label{eq:tau_rp}
 \end{equation}
-where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, corresponding to an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see Section \ref{sec:pendTF}).
+where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, corresponding to an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see Section~\ref{sec:pendTF}).
 
 Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. 
 %This is a result of the geometric coupling between beam displacements and mirror angles as will be shown in the next chapter. Radiation pressure therefore acts as an angular spring. 
-It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. The next chapter dedicates a discussion to this matter. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
+It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. Chapter~\ref{ch:eigenmodes} dedicates a discussion to this matter. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
 
 
 
@@ -180,14 +181,12 @@ It is best treated not as an external torque, but as a modification to the pendu
 
 \section{The Mirror as a Torsion Pendulum}
 \label{sec:pendTF}
-Understanding exactly how these sources of torque on the mirrors converts to angular motion requires a model of the mirror, and a calculation of its torque to angle transfer function. 
-
-In order to design a control system that reduces the angular motion of
-the interferometer mirrors to the levels necessary for stable
-interferometer operation and minimal impact on strain sensitivity, the
-angular response of the mirrors to external torque must be fully
-understood. 
-
+Understanding exactly how these sources of torque on the mirrors convert to angular motion requires a model of the mirror's torque to angle transfer function.
+% In order to design a control system that reduces the angular motion of
+% the interferometer mirrors to the levels necessary for stable
+% interferometer operation and minimal impact on strain sensitivity, the
+% angular response of the mirrors to external torque must be fully
+% understood. 
 The mirrors in LIGO may be regarded as torsion pendula. Each mirror is
 suspended from a single \textcolor{blue}{xx m diameter} wire that
 loops around the bottom of the barrel of the mirror as shown in
@@ -301,7 +300,7 @@ There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. Th
 \textcolor{blue}{Figure \ref{fig:} shows the locations of these sensors.} 
 The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-Perot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the y-arm perpendicular to the x-arm.
 
-The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS\footnote{Pronounced ``woofs''.}), whose principle of operation is described in Section \ref{sec:wfs}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
+The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS\footnote{Pronounced ``woofs''.}), whose principle of operation is described in Section \ref{sec:WFSsensing}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
 
 The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer on about minute time scales, and at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam pointing to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Fig. \ref{fig:BCS}. The higher frequency matching of the input beam pointing to the interferometer is achieved by the reflected port Fabry-Perot Michelson wavefront sensors, up to a couple Hz.
 
@@ -329,7 +328,8 @@ This alignment process involving the WFS, QPDs, and BS camera relies on the enti
 
 
 
-\section{The Angular Sensing Scheme}
+\section{The Wavefront Sensing Scheme}
+\label{sec:WFSsensing}
 \textcolor{blue}{overview of basic wavefront sensing, references for details}
 % \section{Wavefront sensing}
 % \label{sec:wfs}
@@ -342,7 +342,7 @@ This alignment process involving the WFS, QPDs, and BS camera relies on the enti
 When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled Michelson with the input beam and the internal alignment of the power-recycled Michelson. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next. Creating a clear picture of the servo without the inclusion of radiation pressure is warranted.
 
 %The broad picture is that we have a 
-Fig. \ref{fig:ASCcontrolservo} is a block diagram of the major components to the angular control servo. The torsion-like pendula of the interferometer are subject to external torque which is converted to mirror angle. The interferometer, in turn, turns the mirror angles into TEM10/01 modes at its various ports, and these modes are converted into error signals by the wavefront sensors. The voltages produced by the wavefront sensors are digitized and manipulated by the front-end computers to create control signals that are then ``made analog'' for actuation on the mirrors. The result of this process is a suppression of the error signal seen by the WFS and therefore a suppression of the physical mirror motions. 
+Fig. \ref{fig:ASCcontrolservo} is a block diagram of the major components to the angular control servo. The torsion-like pendula of the interferometer are subject to external torque which is converted to mirror angle. The interferometer, in turn, turns the mirror angles into TEM10/01 modes at its various ports, and these modes are converted into error signals by the wavefront sensors. The voltages produced by the wavefront sensors are digitized and manipulated by the front-end computers to create control signals that are then \textcolor{blue}{made analog} for actuation on the mirrors. The result of this process is a suppression of the error signal seen by the WFS and therefore a suppression of the physical mirror motions. 
 
 \begin{figure} 
 \begin{centering} 
@@ -375,7 +375,7 @@ as shown in Fig. \ref{fig:OLcomp}~B.
 \end{centering} 
 \end{figure}
 
-One will notice that it is not a coincidence that the optical lever compensation has the same form as the denominator of the closed loop transfer function. Together, they cancel each other out, and all that remains is the simple pendulum as the plant. Including the optical lever compensation in the ASC loop is not necessary, but it is a useful technique for simplifying the design process of the WFS control filters. One need only consider how to control the simple pendulum torque to angle transfer function, rather than the optical-lever controlled pendulum.
+One will notice that it is not a coincidence that the optical lever compensation has the same form as the denominator of the closed loop transfer function. Together, they cancel each other out, and all that remains as the plant is the simple pendulum. Including the optical lever compensation in the ASC loop is not necessary, but it is a useful technique for simplifying the design process of the WFS control filters. One need only consider how to control the simple pendulum torque to angle transfer function, rather than the optical-lever controlled pendulum.
 
 
 
