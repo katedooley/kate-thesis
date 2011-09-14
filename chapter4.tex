@@ -5,39 +5,38 @@
 
 The torque induced by radiation pressure, as introduced in
 Sec. \ref{sec:rp_intro}, couples the angular motion of the suspended
-mirrors, complicating the plant for which
-controls must be designed. The derivation of the angular response of the mirrors to
+mirrors, complicating the plant for which controls must be
+designed. The derivation of the angular response of the mirrors to
 external torque in the presence of radiation pressure is presented in
 several publications, but I provide my own derivation here for
 completeness. This effect is, after all, the foundation for this
 work's investigation of high power effects in the angular sensing and
-control. 
+control.
 
-\textcolor{blue}{this needs re-writing}
-Namely, radiation pressure torque has the
-effect of breaking the symmetry of the equations of motion of each of
-the mirrors. Since Enhanced LIGO embarks on the path of increasing the
-laser power, examining the effect of radiation pressure torque in
-detail is warranted. Here, we derive a set of eigenfunctions that
-diagonalize the linear cavity's response to radiation pressure and
-describe the mirrors' equations of motion in this new eigenbasis. The
-torque to angle transfer functions of the new eigenmodes are modified
-such that one mode is statically unstable at Enhanced LIGO powers.
-
-
+\textcolor{blue}{this needs re-writing} Namely, radiation pressure
+torque has the effect of breaking the symmetry of the equations of
+motion of each of the mirrors. Since Enhanced LIGO embarks on the path
+of increasing the laser power, examining the effect of radiation
+pressure torque in detail is warranted. Here, we derive a set of
+eigenfunctions that diagonalize the linear cavity's response to
+radiation pressure and describe the mirrors' equations of motion in
+this new eigenbasis. The torque to angle transfer functions of the new
+eigenmodes are modified such that one mode is statically unstable at
+Enhanced LIGO powers.
 
 
-\section{The radiation pressure angular spring}
+
+
+\section{The Radiation Pressure Angular Spring}
 The geometric axis of a cavity formed by two spherical mirrors is
-dictated by the line joining the centers of the ``spheres'' created by
-the two mirrors. Only if the mirrors are pointed directly at one
-another will the cavity axis pass through the centers of the
-mirrors. Should a laser beam resonate in the cavity, it will do so
-along this geometric axis. Thus, if the mirrors are tilted away from
-one another, the beam spot on each mirror will not be centered. The
-relationship between the positions of the beams on the mirrors
-relative to center, $x_i$, and the angles of the mirrors, $\theta_i$,
-is given by:
+dictated by the line joining the two centers of curvature. Only if the
+mirrors are pointed directly at one another will the cavity geometric
+axis pass through the centers of the mirrors. Should a laser beam
+resonate in the cavity, it will do so along this geometric axis. Thus,
+if the mirrors are tilted away from one another, the beam spot on each
+mirror will not be centered. The relationship between the positions of
+the beams on the mirrors relative to center, $x_i$, and the angles of
+the mirrors, $\theta_i$, is given by:
 \begin{equation}
 \left\llbracket \begin{array}{c}
 x_1\\
@@ -52,7 +51,7 @@ g_2 & 1\\
 \end{equation}
 The $g$-factor is defined as $g_i=1-R_i/L$ where $R_i$ is the radius of
 curvature of each of the mirrors, respectively, and $L$ is the length
-of the cavity.
+of the cavity. 
 
 We saw in the previous chapter that the radiation pressure torque on a
 mirror depends on the position of the beam on the mirror, $\tau_{rp} =
@@ -83,7 +82,7 @@ the radiation pressure angular spring.
 
 
 
-\subsection{Diagonalizing the modified equations of motion}
+\subsection{Diagonalizing the Modified Equations of Motion}
 \label{sec:eigenbasis}
 The radiation pressure spring modifies the pendulum angular equation
 of motion and therefore the torque to angle transfer function
@@ -109,7 +108,7 @@ Eq. \ref{eq:motion_rp}, the motions of each of the mirrors forming the
 cavity are tied to one another. The natural way to work with such a
 system is to rotate the coupled equations into a new basis. The
 resulting de-coupled equations of motion will described specific
-combinations of mirror tilts instead of individual mirrors. Vectors in
+combinations of mirror tilts instead of the tilt of an individual mirror. Vectors in
 the rotated basis are written with primes.
 
 In order to decouple the two equations of Eq. \ref{eq:motion_rp}, we
@@ -188,7 +187,7 @@ de-coupled equations of motion are:
 = \vec{\tau}_{ext}^\prime.
 \label{eq:rp_eqmotion}
 \end{equation}
-The radiation pressure spring constant, $\kappa_{rp}$, is 
+The radiation pressure torsion constant, $\kappa_{rp}$, is 
 \begin{equation}
 \kappa_{rp} = - \frac{2 P L}{c (1-g_1 g_2)} \lambda
 \end{equation}
@@ -196,9 +195,9 @@ where $\lambda = \lambda_a$ or $\lambda_b$, depending on the mode in
 question. 
 
 The angular motion of the Fabry-P\'{e}rot cavity is no longer
-described on an individual mirror basis. Due to radiation pressure,
-the cavity is treated as a unit and the two orthogonal modes of
-angular motion are combinations of the two mirrors' angles. The
+described by the motions of its individual mirrors. Due to radiation
+pressure, the cavity is treated as a unit and the two orthogonal modes
+of angular motion are combinations of the two mirrors' angles. The
 eigenvectors $\vec{v}_a$ and $\vec{v}_b$ describe these two sets of
 orthogonal mirror tilts, and the eigenvalues $\lambda_a$ and
 $\lambda_b$ (along with their common constants) quantify the magnitude
@@ -259,10 +258,10 @@ tilt]{Illustration of the orthogonal modes of cavity tilt. The upper
 
 
 
-\subsection{Soft and hard modes} 
+\subsection{Soft and Hard Modes} 
 The torque to angle transfer function of each of these eigenmodes has
 the same form as that of a single pendulum (Eq. \ref{eq:TF}), but the
-spring constant is modified. More importantly, the spring constant is
+torsion constant is modified. More importantly, the spring constant is
 modified differently for each mode, yielding distinct behaviors of the
 two eigenmodes. In this section, we analyze these behaviors and
 accordingly introduce the names \emph{soft} and \emph{hard} to use in
@@ -313,11 +312,11 @@ can conclude with certainty that the cavity eigenmode is stable as
 long as the quantity on the left-hand side of Eq. \ref{eq:stability}
 is negative. However, if this quantity is positive, then its magnitude
 compared to $\kappa_p$ determines stability. Since $P$, $L$, and $c$
-are all positive numbers and the g-factor is restricted to $0 < g_1g_2
+are all positive numbers and the $g$-factor is restricted to $0 < g_1g_2
 < 1$ \footnote{This is the necessary condition for a two mirror
   resonator to form a stable periodic focusing
   system. \cite[p. 747]{Siegman1986Lasers}}, the sign of the left-hand
-side is determined solely by that of $\lambda$. From the g-parameter
+side is determined solely by that of $\lambda$. From the $g$-parameter
 restriction, it can be shown that $\lambda_a$ is always positive and
 that $\lambda_b$ is always negative. Therefore, the mode whose mirror
 angles are described by $\vec{v}_a$ is either stable or unstable, and
@@ -471,6 +470,34 @@ function]{Poles of the torque to pitch transfer function as a function
 
 
 
+
+\begin{table}
+\centering
+\caption{Opto-mechanical parameters for the LIGO Livingston and LIGO
+ Hanford cavities. Differences result because the mirrors at each site have different
+ radii of curvature. \textcolor{blue}{Reference in text. put in appendix?}}
+\begin{tabular}{l l l l}
+\hline
+parameter & label & LLO & LHO \\
+\hline
+ITM $g$-factor & $g_1$ & 0.73 & 0.71 \\
+ETM $g$-factor & $g_2$ & 0.54 & 0.45 \\
+arm length & $L$ & 3995 m & 3995 m \\
+test mass moment of inertia & $I$ & 0.0507 kg m$^2$ &  0.0507 kg m$^2$ \\
+pendulum torsion constant & $\kappa_p$ & 0.72 Nm/rad (pitch)& 0.72 Nm/rad (pitch) \\ 
+& & 0.50 Nm/rad (yaw) & 0.50 Nm/rad (yaw) \\
+soft mode eigenvector & $\vec{v}_1$ & (1, 1.10) & (1, 1.14) \\
+hard mode eigenvector & $\vec{v}_2$ & (-1.10, 1) & (-1.14, 1) \\
+power when soft mode is unstable & $P_{crit}$ & 10.0 kW (pitch) & 11.6 kW (pitch)\\
+& & 7.0 kW (yaw) & 8.0 kW (yaw) \\
+\hline
+\end{tabular}
+\label{table:}
+\end{table}
+
+
+
+
 \section{Implications}
 The Enhanced LIGO goal of increasing the input power to 30 W from the
 Initial LIGO 7 W makes radiation pressure torques cross into the realm
@@ -484,8 +511,8 @@ Fig. \ref{fig:} is now treated as the cavity's radiation pressure-modified
 torque to angle transfer function, not a simple stand-alone pendulum
 transfer function. 
 
-One complication of having a power-dependent plant, which I will call
-$P_{rp}$, is that the optical lever compensation (described in
+One complication of having a radiation pressure modified plant,
+$P_{rp}$, is that the optical lever compensation (described in 
 Sec. \ref{sec:oplevcomp}) is no longer valid. The compensation of
 $1+OP$ is hard-coded in the digital control system, where the model
 for $P$ is that of a simple pendulum. Therefore, only at low powers

@@ -39,12 +39,11 @@
 \BOOKMARK [2][-]{subsection.4.2.4}{Radiation Pressure}{section.4.2}
 \BOOKMARK [1][-]{section.4.3}{The Mirror as a Torsion Pendulum}{chapter.4}
 \BOOKMARK [2][-]{subsection.4.3.1}{Torque to Angle Transfer Function of a Pendulum}{section.4.3}
-\BOOKMARK [1][-]{section.4.4}{Design of the Angular Control System}{chapter.4}
-\BOOKMARK [1][-]{section.4.5}{Overview of Interferometer Alignment}{chapter.4}
-\BOOKMARK [1][-]{section.4.6}{The Angular Sensing Scheme}{chapter.4}
-\BOOKMARK [1][-]{section.4.7}{The Angular Control Servo}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.7.1}{Optical lever compensation}{section.4.7}
-\BOOKMARK [1][-]{section.4.8}{Angular Control Limitations}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Overview of Interferometer Alignment}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{The Angular Sensing Scheme}{chapter.4}
+\BOOKMARK [1][-]{section.4.6}{The Angular Control Servo}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.6.1}{Optical lever compensation}{section.4.6}
+\BOOKMARK [1][-]{section.4.7}{Angular Control Limitations}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{The Effect of High Laser Power on Interferometer Alignment}{}
 \BOOKMARK [1][-]{section.5.1}{The radiation pressure angular spring}{chapter.5}
 \BOOKMARK [2][-]{subsection.5.1.1}{Diagonalizing the modified equations of motion}{section.5.1}
