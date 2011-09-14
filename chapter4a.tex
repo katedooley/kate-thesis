@@ -1,4 +1,39 @@
-\chapter{The Angular Motion of the Interferometer}
+\chapter{Angular Motion of the Interferometer Mirrors}
+
+For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. In practice, however, the mirrors are subject to external disturbances. 
+
+The mirrors in LIGO are suspended, both to isolate them from ground motion and to simulate inertial test masses. 
+
+
+It is necessary to actively align the mirrors for several reasons:
+\begin{itemize}
+\item find the optimal DC alignment of the interferometer \vspace{-10 pt}
+\item suppress any motion that does result from external disturbances \vspace{-10 pt}
+\item counteract a high power static instability
+\end{itemize}
+Furthermore, due to radiation pressure interaction, the system is not even stable at high power.
+
+mirrors are subject to external disturbances, plus they're not stable. we have to do something about it. 
+
+mirrors move around, this is bad, moreover they're not even stable.
+
+While we usually talk about the need to control the lengths, for every length degree of freedom, there are two angular degrees of freedom that need to be sensed and controlled for the same reasons. 
+
+The mirrors are statically unstable and need to be held in place. 
+
+This chapter discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer.
+
+
+
+
+Each torque produces an angular displacement of the mirror as governed by the mirror's torque to angle transfer function.
+
+A consequence is that even when all of the mirrors are perfectly aligned at all frequencies, the simple existence of light in the interferometer makes the arm cavities statically unstable when high enough laser powers are used.
+
+
+
+
+
 
 % normalize out seismic motion for wfs on / wfs off residual motion comparison
 
@@ -7,7 +42,6 @@
 
 % how low can you go before it falls apart? valera and kate tried this
 % out--find in elog
-
 
 % RF offsets changing 
 
@@ -18,32 +52,48 @@
 % calculate time-lag as cavity light responds to mirror displacements --> damping from RP
 
 
-For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. In practice, however, the mirrors are subject to external disturbances. 
-%move around due to three torques inputs to each mirror: the suspension, the actuators, and radiation pressure. 
-Each torque produces an angular displacement of the mirror as governed by the mirror's torque to angle transfer function and results in either a static or dynamic misalignment.
-
-The dynamic misalignments arise from torque introduced through the suspension from ground motion and through the actuators from an unbalanced piston force. Both of these torques create an angular motion independent of the state of the mirror's pointing. Radiation pressure torque, however, stands apart; its effect depends on the pointing of the mirror. A consequence is that even when all of the mirrors are perfectly aligned at all frequencies, the simple existence of light in the interferometer makes the arm cavities statically unstable when high enough laser powers are used.
-
-This chapter discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer. Background material is provided as necessary, such as the dynamics of torsion pendula, and the geometric eigenfunctions of linear cavities. The need for an Angular Sensing and Control subsystem will be apparent.
 
 
 
+\section{Tolerance for Angular Motion}
+\textcolor{blue}{Make this section correct!}
+% Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residula motion must be held below 
 
-\section{Sources of angular mirror motion}
+Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: power build-up degradation, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
+
+Since the strain sensitivity is proportional to the power buildup (see Eq. \ref{}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other, which increases the shot noise at the AS port. Too large of power fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
+
+
+\textcolor{blue}{work this paragraph in somewhere}
+The idea is that when the axis of rotation of a mirror coincides with the center of the beam, any tilt of the mirror about this axis does not affect the path length of the reflected beam. However, if there is a mismatch between rotation axis and beam location, then the light will pick up a longitudinal phase shift when the mirror is tilted. During a full interferometer lock, this is recorded by DARM.
+
+
+
+When the beam is located a distance $x$ away from the center of the mirror, an
+angular displacement of the mirror $\theta$ about its center results in a path
+length change of the beam
+\begin{equation}
+\Delta{L} = x * \theta
+\end{equation}
+which has a direct impact on DARM. Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x ~=~1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m. \textcolor{blue}{Convolve my bsm spectra and residual mirror motion spectra to show example.}
+
+
+
+
+\section{Sources of Angular Mirror Motion}
 There is a continuous stream of changing torque inputs to the mirrors that cause them to twist and turn in pitch and in yaw. Some torque inputs exist regardless of the state of the interferometer, while others are a direct consequence of the control systems. The primary torque inputs are introduced here, and further discussion of some of them is found later in the chapter. The list includes:
 \begin{itemize}
 \item ground motion \vspace{-10pt} 
 \item seismic isolation \vspace{-10pt} 
 \item coil actuators (length to angle) \vspace{-10pt}
-%\item thermal noise of pitch and yaw modes? \vspace{-10pt}
-\item radiation pressure \vspace{-10pt}
-\item noise impression from the angular control system 
+\item noise impression from the angular control system \vspace{-10pt}
+\item radiation pressure
 \end{itemize}
 
 
 
 
-\subsection{Ground motion} 
+\subsection{Ground Motion} 
 The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions. 
 This is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Fig. \ref{fig:seismicMirror}. These spectra include the effect of local velocity damping since the optical levers are always on (see Sec. \ref{sec:suspension}). The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
 
@@ -86,7 +136,7 @@ The seismometers are sensitive to six degrees of freedom: x, y, z, and rotation 
 
 
 
-\subsection{Coil actuators} 
+\subsection{Coil Actuators} 
 \label{sec:L2A}
 The imperfect piston drive of the actuators on the rear of the test masses due to length control is another torque input, albeit inconsequential. The length of the cavities is carefully controlled (that's what we strive to be most sensitive to!) and any imbalances between the four electromagnets on a single mirror will create a coupling from length drive to angle (L2A). This effect is measurable, but is carefully tuned out through selecting appropriate digital gains for each of the coils. Typically, the gain variation from unity is up to 10\%. The residual is about 1\%. For the typical rms length drive of 1~\micron on a core optic and osems separated by a distance of $\sqrt{2} R$ where $R$ is the radius of the optic, the 1\% L2A coupling results in a $10^{-8}$ radian displacement:
 \begin{equation}
@@ -96,8 +146,12 @@ The imperfect piston drive of the actuators on the rear of the test masses due t
 % Maybe include a figure that takes a typical length control spectrum signal to an optic and multiply by the above factors to show spectrum of angular motion induced by 1\% L2A.
 
 
+\subsection{Noise from Angular Control}
+The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also undercontrolled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues and others are explained in more detail in \ref{sec:ASClimits}.
 
-\subsection{Radiation pressure} 
+
+\subsection{Radiation Pressure} 
+\label{sec:rp_intro}
 Radiation pressure creates a torque when the beam impinges the mirror
 off-center. The force on the mirror due to radiation pressure is
 derived from the change in momentum of a photon upon reflection off
@@ -113,52 +167,145 @@ radiation pressure is
 \tau_{rp} = \frac{2 P x} {c}
 \label{eq:tau_rp}
 \end{equation}
-where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, corresponding to an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see \ref{sec:pendTF}).
+where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, corresponding to an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see Section \ref{sec:pendTF}).
 
 Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. 
 %This is a result of the geometric coupling between beam displacements and mirror angles as will be shown in the next chapter. Radiation pressure therefore acts as an angular spring. 
-It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. Part of the next chapter dedicates a discussion to this matter. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
+It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. The next chapter dedicates a discussion to this matter. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
 
 
 
-\subsection{Noise from angular control}
-The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also undercontrolled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues and others are explained in more detail in \ref{sec:ASClimits}.
 
 
 
-\section{Tolerance for angular motion}
-% Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residula motion must be held below 
+\section{The Mirror as a Torsion Pendulum}
+\label{sec:pendTF}
+Understanding exactly how these sources of torque on the mirrors converts to angular motion requires a model of the mirror, and a calculation of its torque to angle transfer function. 
 
-The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: power build-up degradation, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
+In order to design a control system that reduces the angular motion of
+the interferometer mirrors to the levels necessary for stable
+interferometer operation and minimal impact on strain sensitivity, the
+angular response of the mirrors to external torque must be fully
+understood. 
 
-Since the strain sensitivity is proportional to the power buildup (see Eq. \ref{}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other, which increases the shot noise at the AS port. Too large of power fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
+The mirrors in LIGO may be regarded as torsion pendula. Each mirror is
+suspended from a single \textcolor{blue}{xx m diameter} wire that
+loops around the bottom of the barrel of the mirror as shown in
+Fig. \ref{fig:suspension}. Stand-offs glued just above the mirror's
+center of mass on both sides of the barrel mark the final point of
+contact of the wire with the mirror, and both ends of the wire are
+clamped to the top of a suspension cage. The mirror is free to twist
+an angle $\theta$ about a horizontal axis passing through its center
+of mass to create motion in \emph{pitch} and about a vertical axis
+passing through its center of mass to create a motion in \emph{yaw}.
 
-
-\textcolor{blue}{work this paragraph in somewhere}
-The idea is that when the axis of rotation of a mirror coincides with the center of the beam, any tilt of the mirror about this axis does not affect the path length of the reflected beam. However, if there is a mismatch between rotation axis and beam location, then the light will pick up a longitudinal phase shift when the mirror is tilted. During a full interferometer lock, this is recorded by DARM.
-
-
-
-When the beam is located a distance $x$ away from the center of the mirror, an
-angular displacement of the mirror $\theta$ about its center results in a path
-length change of the beam
+The angular equation of motion of the mirror is governed by the sum of
+all torques on the mirror. First, let's consider the most simplistic
+scenario where there is only a pendulum restoring torque
+$\tau_p=-\kappa_p \theta$, where $\kappa_p$ is the pendulum's
+torsional constant. The equation of motion is
 \begin{equation}
-\Delta{L} = x * \theta
+I \ddot{\theta} + \kappa_p \theta = 0,
 \end{equation}
-which has a direct impact on DARM. Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x ~=~1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m. \textcolor{blue}{Convolve my bsm spectra and residual mirror motion spectra to show example.}
+which has a solution of $\theta(t) = \sin({\omega_0 t)}$, where
+$\omega_0 = \sqrt{\kappa_p/I}$ is the resonant angular frequency and
+$I$ is the mirror's moment of inertia. The pendulum torsional constant
+serves to make the mirror oscillate indefinitely about its equilibrium
+position upon the slightest of displacements.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.3\textwidth]{/Users/kate/kate-thesis/figures/suspension.pdf}
+\caption[Sketch of a LIGO suspension]{Cartoon of a LIGO
+  suspension. \textcolor{blue}{Improve this.}}
+\label{fig:suspension}
+\end{centering}
+\end{figure}
 
 
 
 
-\section{Overview of interferometer alignment}
+\subsection{Torque to Angle Transfer Function of a Pendulum}
+\label{sec:t2a}
+We are particularly interested in the pendulum's response to an
+external torque, such as seismic noise. In order to calculate the
+torque to angle transfer function, we must include an external torque
+term, $\tau_{ext}$, in the equation of motion:
+\begin{equation}
+I \ddot{\theta} + \gamma \dot{\theta} + \kappa_p \theta = \tau_{ext}.
+\label{eq:eqmotion}
+\end{equation}
+Here, we have also introduced a velocity damping term, $\gamma$, to
+best model reality. Taking the Laplace transform to convert from the
+time domain to the frequency domain, we have:
+\begin{equation}
+I s^2 \Theta + \gamma s \Theta + \kappa_p \Theta = \tau_{ext}
+\end{equation}
+where $s$ is a complex parameter. The transfer function is then
+defined as
+\begin{equation}
+H(s) := \frac{\Theta(s)}{\tau_{ext}(s)} = \frac{1}{I s^2 + \gamma s + \kappa_p}.
+\label{eq:TF}
+\end{equation}
+We are only interested in examining the transfer function for a pure
+sine wave excitation, $e^{i\omega t}$, so we substitute $s=i\omega$ to
+get
+\begin{equation}
+H(\omega) = \frac{1/I}{\omega_0^2  - \omega^2 + i \gamma \omega / I}.
+\end{equation}
+The resonant frequency of this damped system can be computed by finding the
+$\omega$ at which the amplitude of the transfer function, $[I^2
+[\omega^2 - \omega_0^2]^2 + \gamma^2 \omega^2]^{-1/2}$, is maximized:
+\begin{equation}
+\omega_{res} = \sqrt{\omega_0^2 - \frac{\gamma^2}{2I^2}}.
+\end{equation}
+We note that damping serves to reduce the resonant frequency.
+
+A quantity that is more familiar than $\gamma$ for describing the losses of a system with a real resonance is the quality factor, $Q~:=~\omega_{res}/\mathrm{FWHM}$, where FWHM is the full-width-half-max of the transfer function's amplitude-squared resonance. When the losses are small, $\omega_{res} \approx \omega_0$ and FWHM $\approx \gamma/I$ (see Feynman 23-4). The quality factor is then well approximated by $Q = \sqrt{\kappa_p I}/\gamma$. The transfer function written in terms of $Q$ is \begin{equation} H(\omega) = \frac{1/I}{\omega_0^2 - \omega^2 + i \omega \omega_0 / Q}.  \label{eq:TFpendulum} \end{equation}
+
+Figure \ref{fig:pendTF} shows the pendulum torque to angle transfer
+function (for pitch) using the parameters of a LIGO core optic. For
+external torques applied to the mirror above its resonant frequency,
+the mirror acts like a free mass, one that is not held in place by
+suspension wires nor subject to damping. For torques applied to the
+mirror below its resonant frequency, the mirror's angle is determined
+by the inverse of the torsional constant.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{figures/pendTF.pdf}
+\caption[Torque to pitch transfer function of a LIGO core
+optic]{Torque to pitch transfer function of a LIGO core optic
+  (blue). The optic acts like a free mass at high frequencies (red)
+  and the DC magnitude of the transfer function is determined by the
+  inverse torsional constant (green). A damping constant $\gamma =
+  0.006$ ($Q=32$) was selected for pictorial representation only. The
+  resonant frequency of LIGO core optics in yaw is 0.5~Hz.}
+\label{fig:pendTF}
+\end{centering}
+\end{figure}
+
+
+
+
+
+\section{Design of the Angular Control System}
+
+
+
+
+
+
+\section{Overview of Interferometer Alignment}
 \label{sec:alignment_overview}
 
 There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. The sensing is accomplished by 8 sensors, which fall into three groups:
 \begin{itemize}
 \item camera image (BS)  \vspace{-10pt}
 \item quadrant photodiodes (QPDX, QPDY) \vspace{-10pt}
-\item wavefront sensors (WFS1, WFS2, WFS3, WFS4)
+\item wavefront sensors\footnote{Pronounced ``woofs''.} (WFS1, WFS2, WFS3, WFS4)
 \end{itemize}
+\textcolor{blue}{Figure \ref{fig:} shows the locations of these sensors.} 
 The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-Perot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the y-arm perpendicular to the x-arm.
 
 The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS), whose principle of operation is described in Section \ref{sec:wfs}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
@@ -189,7 +336,50 @@ This alignment process involving the WFS, QPDs, and BS camera relies on the enti
 
 
 
-\section{Angular control limitations}
+\section{The Angular Sensing Scheme}
+% \section{Wavefront sensing}
+% \label{sec:wfs}
+% \textcolor{blue}{Describe modes, reference sidebands, Gouy phases; give FP cavity example.}
+
+
+
+
+\section{The Angular Control Servo}
+When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled Michelson with the input beam and the internal alignment of the power-recycled Michelson. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next.
+
+The broad picture is that we have a 
+
+
+
+\textcolor{blue}{make block figure!}
+
+\begin{figure} 
+\begin{centering} 
+\includegraphics{figures/pendulumLoop_control.pdf} 
+\caption[]{}
+\label{fig:}
+\end{centering}
+\end{figure}
+
+
+
+\subsection{Optical lever compensation}
+\label{sec:oplevcomp}
+Each of the large optics has its own optical lever servo that provides velocity damping. Since both the WFS and the optical levers control the mirror motion when the interferometer is locked, we must consider the interaction of the two servos. Whether one views the interaction as the WFS controlling the optical-lever-controlled mirrors, or as the optical levers controlling the WFS-controlled-mirrors is arbitrary. For the purpose of explanation here, I use the former viewpoint.
+
+Figure \ref{fig:} shows the simplifed control loop picture of the WFS controlling the optical-lever-controlled mirrors. The torque to angle transfer function of the pendulum is our plant, $P$, the optical lever control is $O$, and the WFS control is $W$. Since the wavefront sensors only indirectly observe the mirror angle, a lot of details are hidden behind $W$. The details are not necessary here, but they are introduced in Sec.~\ref{sec:} and studied in Chapter \ref{ch:characterization}. 
+
+A non-necessary, but useful technique is to
+
+
+
+
+
+
+
+
+
+\section{Angular Control Limitations}
 \label{sec:ASClimits}
 The limits for how good we can do in controlling the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Fig. \ref{fig:WFSdarknoise}. And depending on the power level, WFS1Q may instead be limited by shot noise (see Eq. \ref{eq:shotnoise}). Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. This cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at the sensor noise frequencies. 
 %Ultimately, it is the WFS noise floor that determines the best possible achievable suppression. 
@@ -204,18 +394,11 @@ The limits for how good we can do in controlling the angular motion of the inter
 
 Besides the sensing noise, there is also sometimes real signal that results in more harm than good when used as feedback. The HAM seismic isolation tables used by the Input Optics (the core optics are suspended from BSC tables) have stack modes of xx Hz that ring up the MMTs.  At low frequencies, around 1~Hz, some of the WFS signals are dominated by these angular fluctuations of the input beam. The resulting attempt of the mirrors to follow the input beam jitter leads to a magnification of the motion because of the drastically different length scales. Large power fluctuations in both arms and the power recycling cavity ensue, leading to departure from the linear error signal regime and often lock loss. 
 
-Other limitations to the reduction of mirror motion result from the nature of control loops. The cut-off filter, for example, reduces the phase margin of the open loop gain, necessarily pushing down the unity gain frequency (UGF) and therefore the magnitude of suppression at all frequencies below the UGF. A less aggressive cut-off filter, while improving the servo's stability and allowing for higher overall gains, leads to more impression of sensing noise on the optics. Also, when the phase margin of the loop is low, some mirror motion is amplified through gain peaking.
+Other limitations to the reduction of mirror motion result from the nature of control loops. The cut-off filter, for example, reduces the phase margin of the open loop gain, necessarily pushing down the unity gain frequency (UGF) and therefore the magnitude of suppression at all frequencies below the UGF. A less aggressive cut-off filter, while improving the servo's stability and allowing for higher overall gains, leads to more impression of sensing noise on the optics. Also, if the phase margin of the loop is low, mirror motion will be amplified through gain peaking.
 
 % A final point that should be noted, but is in fact insignificant, is a coupling from angular drive to length that results from the same principle of the length to angle coupling presented in \ref{sec:L2A}. 
 
 % We will show that we don't quite meet all of these requirements and the impression of sensing noise in fact plays a major role in the reduction of DARM sensitivity up to 70 Hz.
-
-
-
-\section{Wavefront sensing}
-\label{sec:wfs}
-Describe modes, reference sidebands, Gouy phases; give FP cavity example. 
-
 
 
 

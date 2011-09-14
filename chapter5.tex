@@ -1,26 +1,9 @@
 \chapter{Angular sensing and control characterization and performance in the radiation pressure eigenbasis} 
 
+\label{ch:characterization}
 
 
 
-
-% The Enhanced LIGO goal of increasing the input power to 30 W from the
-% Initial LIGO 7 W makes radiation pressure torques cross into the realm
-% of significance. In particular, the soft opto-mechanical mode which
-% approached instability for Initial LIGO powers actually becomes
-% unstable for Enhanced LIGO powers. The static instability requires
-% high DC gain. The sensors in Initial LIGO, however, were not tuned in
-% to specifically look for the combined mirror motions that create the
-% unstable mode. The only way to provide adequate DC control to prevent
-% the mirrors from falling apart would be to increase the gain of all of
-% the angular control loops. Since some of the sensors are less good
-% than others, this would result in extreme impression of noise on
-% DARM. Thus, to maintain a reasonable noise budget while reigning in
-% the static instability, we need to make the sensors specifically pick
-% out the mirror motions that together create this detrimental
-% mode. This is the basis of the ASC work for Enhanced LIGO--switching
-% the sensors to the radiation pressure eigenmode basis, and increasing
-% the gain of the single loop that is sensitive to only the unstable mode. 
 
 % In this chapter I show how the angular displacements are sensed and
 % why control filters implemented in the eigenbasis of radiation
@@ -199,7 +182,7 @@ angular sensing channels, all the while demonstrating particular
 examples of these methods.
 
 
-\subsection{Beam spot motion}
+\subsection{Beam Spot Motion}
 A quantity of interest is how much the beam moves on the ITMs and
 ETMs. It is this beam spot motion which, together with the mirror
 angular motion, creates a length signal that contributes noise to
@@ -501,7 +484,13 @@ error signals.
 
 
 
-\section{WFS Optical Gain}
+
+\section{The ASC change of basis}
+\textcolor{blue}{make block figure!}
+
+
+
+\subsection{WFS Input Matrix}
 Optical gain is a term used in LIGO to described the amount of laser
 power produced at some interferometer port for a given physical change
 of some aspect of the interferometer. Ideally, photodiodes are placed
@@ -582,8 +571,14 @@ WFS1Q & WFS2I & WFS2Q & WFS3I & WFS4I &  \\
 
 
 \section{WFS output matrix}
-The WFS output matrix determines how to 
-
+The WFS output matrix determines how to convert the radiation pressure
+eigenbasis control signals into individual mirror control signals. It
+is the basis transformation matrix, $S$, as defined in
+Eq. \ref{eq:S}. The matrix is arbitrarily normalized so the largest
+element is $1$, and it is repeated with appropriate sign changes to
+form differential and common soft and hard modes of the two arms. The
+output matrix is shown in Table \ref{table:output}, where the $r$ is
+0.91 for Livingston and 0.87 for Hanford. 
 
 \begin{table}
 \centering
@@ -604,11 +599,12 @@ r & -1 & r & -1 & 0 & ITMX\\
 \end{table}
 
 
-\subsection{Diagonalizing the ASC drive matrix}
+\subsection{Diagonalizing the WFS drive matrix}
 
 During the sensing matrix measurement, the optical levers provide a
-record of the motion of the test masses. Properly combining their
-responses tells the amplitude of each dof's movement. The actual
+record of the motion of the test masses. Properly combining the
+optical lever responses tells the amplitude of each radiation pressure
+degree of freedom's movement. The actual
 numbers for the measurement data presented in Table
 \ref{table:opgain_prelim} are found in Table
 \ref{table:excitations_calibrated}. This now allows us to complete the
@@ -619,17 +615,19 @@ excitation, the diagonal elements of Table
 angular optical gain of the interferomter in terms of WFS digital
 counts per radian.
 
-% D = 'drive' = DOF excitation to DOF excited matrix (theta_dof)
-% U = 'unknown' = hardware mostly; coils, etc.
-% M = 'mirror' = mirror gains; a diagonal matrix
-% C = 'control' = ASC output matrix
-%
-% We have D = U*M*C. A drive is multiplied first by the output matrix (C),
-% then by the mirror gains (M), then put into hardware (U) to create what's
-% actually exicted.
-%
-% To make D diagonal, we want to find a new M, M_new, which must have the
-% property M_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
+
+
+D = 'drive' = DOF excitation to DOF excited matrix (theta\_dof)
+U = 'unknown' = hardware mostly; coils, etc.
+M = 'mirror' = mirror gains; a diagonal matrix
+C = 'control' = ASC output matrix
+
+We have D = U*M*C. A drive is multiplied first by the output matrix (C),
+then by the mirror gains (M), then put into hardware (U) to create what's
+actually exicted.
+
+To make D diagonal, we want to find a new M, M\_new, which must have the
+property M\_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
 
 
 \begin{table}
@@ -691,6 +689,8 @@ from about 0.8~Hz to 3~Hz. The excess table motion at these
 frequencies is transmitted to the MMTs. Jitter on the pointing of the
 input beam is thus a primary contender for beam spot motion on the
 test masses.
+
+% can't move the input beam faster than the interferometer can follow it!
 
 The wavefront servos are the mechanism by which input beam motion is
 impressed on the test masses; they are responsible, among other

@@ -214,20 +214,6 @@ electronically through the use of optical levers. Figure
 servo, demonstrating that it provides velocity damping only (no DC
 control) between 0.2~Hz and 2~Hz.
 
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/oplevEX_mags.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/oplevEX_phases.pdf}}
-\caption[Optical lever open loop transfer function]{ETMX pitch optical
-  lever open loop transfer function. Uses the filters in the oplev
-  servo filter bank, only (no coil output filters). The model of the
-  plant is tuned to match the data, resulting in a pitch resonance of
-  0.65 Hz and a damping factor of $\gamma$ = 0.02. The UGF is at
-  2.2~Hz and the phase margin is $38^\circ$.}
-\label{fig:oplevOLG}
-\end{centering}
-\end{figure}
-
 The suspensions are AC damped at all times for each of the large
 optics through optical lever witnesses. Keeping the mirrors quiet
 enough with respect to their local ground is necessary to allow for
@@ -241,14 +227,22 @@ pitch and yaw
 
 
 \section{More Laser Power}
-Shot noise results from an uncertainty in the arrival time of photons
-on a detector:
+
+Shot noise is a Poissonian process: the average number of photons
+striking a detector, $\left<x\right>$, is equal to the variance of the
+mean number of photons, $\left<x^2\right> - \left<x\right>^2$, from a
+given chunk of time $\tau$ to another. For large $\left<x\right>$, the
+distribution becomes Gaussian, but the mean and variance are still
+equivalent. Based on this property and Parseval's theorem, the power
+on a detector due to shot noise is:
 \begin{equation}
-P_{shot} = \sqrt{2 h_p \nu P_{DC}} \mbox{ W/$\sqrt{\mbox{Hz}}$}
-\label{eq:shotnoise}
+P_{SN} = \frac{\left<x\right>}{\tau} h \nu = \sqrt{2 P_{DC} h \nu}
 \end{equation}
-where $P_{DC}$ is the DC power on the wavefront sensor, $h_p$ is
-Planck's constant and $\nu$ is the frequency of the laser light.
+where $P_{DC}$ is the DC power on the photodiode, $h = 6.626 \times
+10^{-34}$ Js is Planck's constant, and $\nu = 2.82 \times 10^{14}$ Hz
+is the frequency of the incident light. The units of shot noise are
+W/$\sqrt{\mathrm{Hz}}$.
+
 
 
 

@@ -28,39 +28,41 @@
 \BOOKMARK [1][-]{section.2.5}{More Laser Power}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Input Optics}{}
 \BOOKMARK [1][-]{section.3.1}{Radiation pressure in MC}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{The Angular Motion of the Interferometer}{}
-\BOOKMARK [1][-]{section.4.1}{Sources of angular mirror motion}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.1.1}{Ground motion}{section.4.1}
-\BOOKMARK [3][-]{subsubsection.4.1.1.1}{Seismic isolation}{subsection.4.1.1}
-\BOOKMARK [3][-]{subsubsection.4.1.1.2}{Seismometers}{subsection.4.1.1}
-\BOOKMARK [2][-]{subsection.4.1.2}{Coil actuators}{section.4.1}
-\BOOKMARK [2][-]{subsection.4.1.3}{Radiation pressure}{section.4.1}
-\BOOKMARK [2][-]{subsection.4.1.4}{Noise from angular control}{section.4.1}
-\BOOKMARK [1][-]{section.4.2}{Tolerance for angular motion}{chapter.4}
-\BOOKMARK [1][-]{section.4.3}{Overview of interferometer alignment}{chapter.4}
-\BOOKMARK [1][-]{section.4.4}{Angular control limitations}{chapter.4}
-\BOOKMARK [1][-]{section.4.5}{Wavefront sensing}{chapter.4}
-\BOOKMARK [0][-]{chapter.5}{Dynamic response of coupled pendula}{}
-\BOOKMARK [1][-]{section.5.1}{The mirror as a torsion pendulum}{chapter.5}
-\BOOKMARK [2][-]{subsection.5.1.1}{Torque to angle transfer function of a pendulum}{section.5.1}
-\BOOKMARK [1][-]{section.5.2}{The radiation pressure angular spring}{chapter.5}
-\BOOKMARK [2][-]{subsection.5.2.1}{Diagonalizing the modified equations of motion}{section.5.2}
-\BOOKMARK [2][-]{subsection.5.2.2}{Soft and hard modes}{section.5.2}
-\BOOKMARK [1][-]{section.5.3}{Implications}{chapter.5}
-\BOOKMARK [1][-]{section.5.4}{ASC loops}{chapter.5}
-\BOOKMARK [2][-]{subsection.5.4.1}{Optical lever servo compensation}{section.5.4}
+\BOOKMARK [0][-]{chapter.4}{Angular Motion of the Interferometer Mirrors}{}
+\BOOKMARK [1][-]{section.4.1}{Tolerance for Angular Motion}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Sources of Angular Mirror Motion}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{Ground Motion}{section.4.2}
+\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Seismic isolation}{subsection.4.2.1}
+\BOOKMARK [3][-]{subsubsection.4.2.1.2}{Seismometers}{subsection.4.2.1}
+\BOOKMARK [2][-]{subsection.4.2.2}{Coil Actuators}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.3}{Noise from Angular Control}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.4}{Radiation Pressure}{section.4.2}
+\BOOKMARK [1][-]{section.4.3}{The Mirror as a Torsion Pendulum}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.3.1}{Torque to Angle Transfer Function of a Pendulum}{section.4.3}
+\BOOKMARK [1][-]{section.4.4}{Design of the Angular Control System}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{Overview of Interferometer Alignment}{chapter.4}
+\BOOKMARK [1][-]{section.4.6}{The Angular Sensing Scheme}{chapter.4}
+\BOOKMARK [1][-]{section.4.7}{The Angular Control Servo}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.7.1}{Optical lever compensation}{section.4.7}
+\BOOKMARK [1][-]{section.4.8}{Angular Control Limitations}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{The Effect of High Laser Power on Interferometer Alignment}{}
+\BOOKMARK [1][-]{section.5.1}{The radiation pressure angular spring}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.1.1}{Diagonalizing the modified equations of motion}{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.2}{Soft and hard modes}{section.5.1}
+\BOOKMARK [1][-]{section.5.2}{Implications}{chapter.5}
 \BOOKMARK [0][-]{chapter.6}{Angular sensing and control characterization and performance in the radiation pressure eigenbasis}{}
 \BOOKMARK [1][-]{section.6.1}{Calibrations}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.1.1}{Beam spot motion}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.1}{Beam Spot Motion}{section.6.1}
 \BOOKMARK [3][-]{subsubsection.6.1.1.1}{Moving the beam}{subsection.6.1.1}
 \BOOKMARK [3][-]{subsubsection.6.1.1.2}{Measuring how much the beam has moved}{subsection.6.1.1}
 \BOOKMARK [2][-]{subsection.6.1.2}{Angular mirror motion}{section.6.1}
 \BOOKMARK [3][-]{subsubsection.6.1.2.1}{ETM and ITM optical levers}{subsection.6.1.2}
 \BOOKMARK [3][-]{subsubsection.6.1.2.2}{RM, BS, and MMT3 optical levers}{subsection.6.1.2}
 \BOOKMARK [2][-]{subsection.6.1.3}{WFS error signals}{section.6.1}
-\BOOKMARK [1][-]{section.6.2}{WFS Optical Gain}{chapter.6}
+\BOOKMARK [1][-]{section.6.2}{The ASC change of basis}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.2.1}{WFS Input Matrix}{section.6.2}
 \BOOKMARK [1][-]{section.6.3}{WFS output matrix}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.3.1}{Diagonalizing the ASC drive matrix}{section.6.3}
+\BOOKMARK [2][-]{subsection.6.3.1}{Diagonalizing the WFS drive matrix}{section.6.3}
 \BOOKMARK [1][-]{section.6.4}{Input beam motion}{chapter.6}
 \BOOKMARK [1][-]{section.6.5}{The marginally-stable Power Recycling Cavity}{chapter.6}
 \BOOKMARK [2][-]{subsection.6.5.1}{SPOB power scaling}{section.6.5}
@@ -74,16 +76,17 @@
 \BOOKMARK [1][-]{section.7.1}{Measured modes}{chapter.7}
 \BOOKMARK [0][-]{chapter.8}{Summary}{}
 \BOOKMARK [0][-]{chapter.9}{Appendix}{}
-\BOOKMARK [1][-]{section.9.1}{Seismic contributions to optical lever spectra}{chapter.9}
-\BOOKMARK [1][-]{section.9.2}{Misaligned cavity axis}{chapter.9}
-\BOOKMARK [1][-]{section.9.3}{Power in a misaligned cavity}{chapter.9}
-\BOOKMARK [2][-]{subsection.9.3.1}{Displaced cavity}{section.9.3}
-\BOOKMARK [2][-]{subsection.9.3.2}{Tilted cavity}{section.9.3}
-\BOOKMARK [2][-]{subsection.9.3.3}{Displaced and tilted cavity}{section.9.3}
-\BOOKMARK [1][-]{section.9.4}{Initial DC alignment of the interferometer}{chapter.9}
-\BOOKMARK [1][-]{section.9.5}{Wavefront sensors}{chapter.9}
-\BOOKMARK [2][-]{subsection.9.5.1}{Photodiodes}{section.9.5}
-\BOOKMARK [1][-]{section.9.6}{Channel names}{chapter.9}
-\BOOKMARK [1][-]{section.9.7}{Seismic spectra}{chapter.9}
+\BOOKMARK [1][-]{section.9.1}{Optical lever open loop transfer function}{chapter.9}
+\BOOKMARK [1][-]{section.9.2}{Seismic contributions to optical lever spectra}{chapter.9}
+\BOOKMARK [1][-]{section.9.3}{Misaligned cavity axis}{chapter.9}
+\BOOKMARK [1][-]{section.9.4}{Power in a misaligned cavity}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.4.1}{Displaced cavity}{section.9.4}
+\BOOKMARK [2][-]{subsection.9.4.2}{Tilted cavity}{section.9.4}
+\BOOKMARK [2][-]{subsection.9.4.3}{Displaced and tilted cavity}{section.9.4}
+\BOOKMARK [1][-]{section.9.5}{Initial DC alignment of the interferometer}{chapter.9}
+\BOOKMARK [1][-]{section.9.6}{Wavefront sensors}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.6.1}{Photodiodes}{section.9.6}
+\BOOKMARK [1][-]{section.9.7}{Channel names}{chapter.9}
+\BOOKMARK [1][-]{section.9.8}{Seismic spectra}{chapter.9}
 \BOOKMARK [0][-]{chapter*.7}{REFERENCES}{}
 \BOOKMARK [0][-]{chapter*.8}{BIOGRAPHICAL SKETCH}{}
