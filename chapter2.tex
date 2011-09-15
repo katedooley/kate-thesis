@@ -1,25 +1,30 @@
-\chapter{Design basics of laser interferometers for gravitational-wave detection}
+\chapter{Design Basics of Laser Interferometers for Gravitational-wave Detection}
 I introduce in this chapter some of the basic principles in the
 design of sensitive intstruments (and the LIGO detectors in
 particular) to set the stage for delving into the details of the
-following chapters. I explain why a Fabry-Perot Michelson laser
-interferometer 
+following chapters. 
+%I explain why a Fabry-Perot Michelson laser interferometer 
 
 
-\section{Signal versus noise}
+\section{Signal Versus Noise}
 The factors that must be considered in the design of any detector can
 be grouped into two categories: signal and noise. The ability to make
 a claim of detection is largely dependent on the magnitude of the
 signal to noise ratio (SNR). An SNR of 8 is desired for detection
-confidence in LIGO. For laser interferometers, the strength of the GW
-signal is proportional to the length of the arms and the amount of
-power in the arms. (See Eq. \ref{}.) The change in the distance
+confidence in LIGO. 
+
+For laser interferometers operating with DC readout, the strength of
+the GW signal is proportional to the length of the arms and the amount
+of power in the arms. (See Eq. \ref{}.) The change in the distance
 between the mirrors, $\Delta L$, is bigger for a given strain the
 longer the arms. And with more circulating power, the greater the
 amount of power that will show up at the AS port for a given
 displacement from the dark fringe. Therefore, the two fundamental ways
-to make a GW produce a bigger signal in an interferometer are: 1) make
-the arms longer, and 2) increase the circulating power.
+to make a GW produce a bigger signal in an interferometer are:
+\begin{enumerate}
+\item make the arms longer \vspace{-10 pt}
+\item increase the circulating power
+\end{enumerate}
 
 No matter how large a signal one might have, it won't be found
 confidently, or at all, if there is too much noise. The noise itself
@@ -44,13 +49,13 @@ Fig. \ref{fig:NB}.
 \end{figure}
 
 
-\subsection{Displacement noise} 
+\subsection{Displacement Noise} 
 ground motion, thermal noise
 
 seismic noise physically displaces the mirrors, resulting in changes in the length
 of the arm. 
 
-\subsection{Sensing noise}
+\subsection{Sensing Noise}
 stray light, shot noise
 
 Shot noise is a quantum mechanical effect of the detection
@@ -60,8 +65,8 @@ therefore the power, at the AS port.
 
 
 
-\section{Measuring GW strain with light}
-\subsection{Light as a photon} 
+\section{Measuring GW Strain with Light}
+\subsection{Light as a Photon} 
 Consider two wave packets leaving the beam splitter of a Michelson
 interferometer at the same time, each heading down a different arm. If
 an appropriately polarized gravitational wave is present, the amount
@@ -88,7 +93,7 @@ its roundtrip. Thus, $h_+$ is treated as a constant in
 Eqs. \ref{eq:trt+} and \ref{eq:trt-}.
 
 
-\subsection{Light as a wave}
+\subsection{Light as a Wave}
 The detector at the beam splitter is not a clock, but a photodetector
 which is sensitive to phase. It would be informative, therefore, to express
 the difference in arrival times as a difference in phase. To do so, we
@@ -115,7 +120,7 @@ effect of gravitational waves.
 
 
 
-\section{Power-recycled Fabry-Perot Michelson interferometers}
+\section{Power-recycled Fabry-Perot Michelson Interferometers}
 The typical detector configuration is a power-recycled Fabry-Perot
 Michelson laser interferometer featuring suspended test masses in
 vacuum as depicted in Figure \ref{fig:IFOschematic}. A diode-pumped,
@@ -125,48 +130,57 @@ interferometer whose two arm lengths are set to maintain destructive
 interference of the recombined light at the anti-symmetric (AS)
 port. An appropriately polarized gravitational wave will
 differentially change the arm lengths, producing signal at the AS port
-proportional to the GW strain and the input power. The Fabry-Perot
-cavities in the Michelson arms and a power recycling mirror (RM) at
-the symmetric port are two modifications to the Michelson
-interferometer that increase the laser power in the arms and therefore
+proportional to the GW strain and the input power. 
+
+The Fabry-Perot cavities of the Michelson arms increases the phase
+gain of the DARM signal
+
+A power recycling mirror (RM) at the symmetric port is a modification to the Michelson
+interferometer that increases the circulating laser power 
+
+in the arms and therefore
 improve the detector's sensitivity to GWs.
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.8\textwidth]{figures/IFOschematic.pdf}
-\caption[Power-recycled Fabry-Perot Michelson laser interferometer]{Power-recycled Fabry-Perot Michelson laser interferometer.}
+\caption[Power-recycled Fabry-Perot Michelson laser
+interferometer]{Power-recycled Fabry-Perot Michelson laser
+  interferometer.}
 \label{fig:IFOschematic}
 \end{centering}
 \end{figure}
 
 
 
-\section{Controlling the interferometer}
+\section{Controlling the Interferometer}
 The ability of the interferometer to provide a differential arm length
 signal depends on the many interferometer cavities being locked
-\textcolor{blue}{(define locking!)} all at once since it is the light
-that serves as our probe of arm length. The motion of the mirrors
-without any control is too large for a locked state to naturally
-occur. The rms pendular displacement of the mirrors without control is
-1 \micron, equivalent to a full laser wavelength. The arm length would
-swing from one free spectral range to the next, never staying put long
-enough at any particular FSR. 
+\textcolor{blue}{(define locking!)} all at once. It is the light,
+after all, that serves as our probe of arm length. The motion of the
+mirrors without any control is too large for a locked state to
+naturally occur. The rms pendular displacement of the mirrors without
+control is 1 \micron, equivalent to a full laser wavelength. The arm
+length would swing from one free spectral range (FSR) to the next,
+never staying put long enough at any particular FSR.
 
 The motion of the interferometer mirrors must be controlled enough so
 that resonance is achieved and error signals fall in a linear
 regime. Since the strain sensitivity is determined by mathematically
 undoing the (carefully measured) effect of the control system on DARM,
 control does not directly improve the strain sensitivity. The purpose
-control serves is to make the strain measurement possible. Control,
-however, introduces noise so there is a fine balance that must be
-found between too much and too little control.
+length control does serves is to make the strain measurement
+possible. For other degrees of freedom, such as angular motion, only
+the controlled residual matters ..
+Control, however, introduces noise so there is a fine
+balance that must be found between too much and too little control.
 
 Design considerations for the control loops include how much motion at
 what frequencies can be tolerated, and the signal to noise ratio of
 the motion sensor.
 
 
-\subsection{RF sidebands}
+\subsection{RF Sidebands}
 
 
 
@@ -187,7 +201,7 @@ computers becomes impractical.
 
 
 
-\subsection{Mirror suspension and actuation}
+\subsection{Mirror Suspension and Actuation}
 \label{sec:suspension}
 The primary interferometer optics are suspended in vacuum so that they
 act like free masses at the frequencies in the GW detection band. Each
@@ -209,10 +223,10 @@ mirror's position.
 Minimal contact with the mirrors is necessary to avoid thermal
 noise. Therefore, the suspensions provide minimal damping to the
 mirrors. Damping for the large optics is instead achieved
-electronically through the use of optical levers. Figure
-\ref{fig:oplevOLG} shows the open loop gain of the optical lever
-servo, demonstrating that it provides velocity damping only (no DC
-control) between 0.2~Hz and 2~Hz.
+electronically through the use of optical levers. They provide
+velocity damping only (no DC control) between 0.2~Hz and 2~Hz. The
+open loop transfer function of the optical lever servo is in the
+Appendix (Figure~\ref{fig:oplevOLG}).
 
 The suspensions are AC damped at all times for each of the large
 optics through optical lever witnesses. Keeping the mirrors quiet
@@ -226,7 +240,7 @@ pitch and yaw
 
 
 
-\section{More Laser Power}
+\section{DC readout / more laser power}
 Increasing the laser power in the interferometer is a 
 
 Shot noise is a Poissonian process: the average number of photons
@@ -244,8 +258,30 @@ where $P_{DC}$ is the DC power on the photodiode, $h = 6.626 \times
 is the frequency of the incident light. The units of shot noise are
 W/$\sqrt{\mathrm{Hz}}$.
 
+DC readout, as used in Enhanced LIGO, operates with a small offset,
+$x_0 \approx 10 \mathrm{pm}$, from the dark fringe. Strain induced in the
+interferometer can therefore be directly read out at the dark pork as
+simply a linear function of power. We are interested in the optical
+gain of this form of readout, the change in power at the AS port per
+change in differential arm length. 
 
-DC readout operates with a small offset (about 10~pm) from the dark
-fringe. \textcolor{blue}{I have it on paper: but type here the
-  shot-noise-limited sensitivity derivation.}
+The power at the dark port as a function of differential arm length,
+$x$, is
+\begin{equation}
+P_{AS} = P_{BS} \sin^2{(g_{\phi}kx)}
+\end{equation}
+where $g_{\phi} = 137$ is phase gain of the Fabry-Perot arms and
+$k=5.9\times10^6 \mathrm{m}^{-1}$ is the wavenumeber. The derivative
+is the optical gain:
+\begin{equation}
+\frac{dP_{AS}}{dx} = P_{BS} g_{\phi} k \sin{(g_{\phi}kx)} \cos{(g_{\phi}kx)}
+\end{equation}
+
+The sensitivity of DC readout to gravitational wave strain is
+dependent not only on the optical gain, but on the noise at
+detector. The shot-noise-limited sensitivity is the shot noise divided
+by the optical gain:
+\begin{equation}
+aoeu
+\end{equation}
 

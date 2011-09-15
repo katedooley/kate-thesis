@@ -1,11 +1,14 @@
-\contentsline {table}{\numberline {{5-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes}}{47}{table.5.1}
-\contentsline {table}{\numberline {{5-2}}{\ignorespaces Torsional spring constants for the soft and hard cavity modes}}{51}{table.5.2}
-\contentsline {table}{\numberline {{5-3}}{\ignorespaces Conditions on total torsional constant for determining system stability}}{52}{table.5.3}
-\contentsline {table}{\numberline {{5-4}}{\ignorespaces Opto-mechanical parameters for the LIGO Livingston and LIGO Hanford cavities. Differences result because the mirrors at each site have different radii of curvature. \leavevmode {\color {blue}Reference in text. put in appendix?}}}{53}{table.5.4}
-\contentsline {table}{\numberline {{6-1}}{\ignorespaces Beam spot motion calibrations}}{60}{table.6.1}
-\contentsline {table}{\numberline {{6-2}}{\ignorespaces Optical lever calibrations}}{62}{table.6.2}
-\contentsline {table}{\numberline {{6-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{63}{table.6.3}
-\contentsline {table}{\numberline {{6-4}}{\ignorespaces Optical gain at 9.7\nobreakspace {}Hz in units of WFS counts / dof radian (pitch). Numbers in \leavevmode {\color {gray}gray} are the measurement results that have coherences less than 0.9. Boxes highlight the elements actually used in the control system. All other elements are set to zero. \leavevmode {\color {blue}change to Volts!}}}{64}{table.6.4}
-\contentsline {table}{\numberline {{6-5}}{\ignorespaces WFS output matrix (pitch). For the Livingston cavity geometry $r=0.91$ and for Hanford $r=0.87$.}}{65}{table.6.5}
-\contentsline {table}{\numberline {{6-6}}{\ignorespaces Actual eigenbasis motion during sensing matrix excitations as witnessed by the optical levers. Columns are excitations and rows are the pitch motions at 9.7\nobreakspace {}Hz in units of \textmu {}rad. Ideally, this would be a diagonal matrix. It mostly is.}}{66}{table.6.6}
-\contentsline {table}{\numberline {{6-7}}{\ignorespaces Mirror gains for diagonalization of drive matrix}}{66}{table.6.7}
+\contentsline {table}{\numberline {{3-1}}{\ignorespaces Comparison of selected properties of the Initial and Enhanced LIGO EOM crystals}}{35}{table.3.1}
+\contentsline {table}{\numberline {{3-2}}{\ignorespaces Enhanced LIGO Input Optics power budget.}}{42}{table.3.2}
+\contentsline {table}{\numberline {{3-3}}{\ignorespaces Absorption values for the Livingston and Hanford mode cleaner mirrors}}{43}{table.3.3}
+\contentsline {table}{\numberline {{5-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes}}{72}{table.5.1}
+\contentsline {table}{\numberline {{5-2}}{\ignorespaces Torsional spring constants for the soft and hard cavity modes}}{76}{table.5.2}
+\contentsline {table}{\numberline {{5-3}}{\ignorespaces Conditions on total torsional constant for determining system stability}}{77}{table.5.3}
+\contentsline {table}{\numberline {{5-4}}{\ignorespaces Opto-mechanical parameters for the LIGO Livingston and LIGO Hanford cavities}}{78}{table.5.4}
+\contentsline {table}{\numberline {{6-1}}{\ignorespaces Beam spot motion calibrations}}{85}{table.6.1}
+\contentsline {table}{\numberline {{6-2}}{\ignorespaces Optical lever calibrations}}{87}{table.6.2}
+\contentsline {table}{\numberline {{6-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{88}{table.6.3}
+\contentsline {table}{\numberline {{6-4}}{\ignorespaces WFS optical gain matrix}}{89}{table.6.4}
+\contentsline {table}{\numberline {{6-5}}{\ignorespaces WFS output matrix}}{90}{table.6.5}
+\contentsline {table}{\numberline {{6-6}}{\ignorespaces Actual eigenbasis motion during sensing matrix excitations}}{91}{table.6.6}
+\contentsline {table}{\numberline {{6-7}}{\ignorespaces Mirror gains for diagonalization of drive matrix}}{91}{table.6.7}

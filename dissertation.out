@@ -5,29 +5,53 @@
 \BOOKMARK [0][-]{chapter*.5}{LIST OF SYMBOLS}{}
 \BOOKMARK [0][-]{section*.6}{ABSTRACT}{}
 \BOOKMARK [0][-]{chapter.1}{The Search for Gravitational Waves}{}
-\BOOKMARK [1][-]{section.1.1}{The theory of gravitational radiation}{chapter.1}
+\BOOKMARK [1][-]{section.1.1}{The Theory of Gravitational Radiation}{chapter.1}
 \BOOKMARK [1][-]{section.1.2}{Sources}{chapter.1}
-\BOOKMARK [1][-]{section.1.3}{Methods of detection}{chapter.1}
-\BOOKMARK [1][-]{section.1.4}{State of ground-based interferometry}{chapter.1}
-\BOOKMARK [1][-]{section.1.5}{Purpose of this work}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.5.1}{The Input Optics high power story}{section.1.5}
-\BOOKMARK [2][-]{subsection.1.5.2}{The Angular Sensing and Control high power story}{section.1.5}
-\BOOKMARK [2][-]{subsection.1.5.3}{Outline of this dissertation}{section.1.5}
-\BOOKMARK [0][-]{chapter.2}{Design basics of laser interferometers for gravitational-wave detection}{}
-\BOOKMARK [1][-]{section.2.1}{Signal versus noise}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.1.1}{Displacement noise}{section.2.1}
-\BOOKMARK [2][-]{subsection.2.1.2}{Sensing noise}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{Measuring GW strain with light}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.2.1}{Light as a photon}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.2}{Light as a wave}{section.2.2}
-\BOOKMARK [1][-]{section.2.3}{Power-recycled Fabry-Perot Michelson interferometers}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{Controlling the interferometer}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.4.1}{RF sidebands}{section.2.4}
+\BOOKMARK [1][-]{section.1.3}{Methods of Detection}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{State of Ground-based Interferometry}{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{Purpose of this Work}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.5.1}{The Input Optics High Power Story}{section.1.5}
+\BOOKMARK [2][-]{subsection.1.5.2}{The Angular Sensing and Control High Power Story}{section.1.5}
+\BOOKMARK [2][-]{subsection.1.5.3}{Outline of this Dissertation}{section.1.5}
+\BOOKMARK [0][-]{chapter.2}{Design Basics of Laser Interferometers for Gravitational-wave Detection}{}
+\BOOKMARK [1][-]{section.2.1}{Signal Versus Noise}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.1.1}{Displacement Noise}{section.2.1}
+\BOOKMARK [2][-]{subsection.2.1.2}{Sensing Noise}{section.2.1}
+\BOOKMARK [1][-]{section.2.2}{Measuring GW Strain with Light}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Light as a Photon}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Light as a Wave}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{Power-recycled Fabry-Perot Michelson Interferometers}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Controlling the Interferometer}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{RF Sidebands}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.2}{Digital Control in LIGO}{section.2.4}
-\BOOKMARK [2][-]{subsection.2.4.3}{Mirror suspension and actuation}{section.2.4}
-\BOOKMARK [1][-]{section.2.5}{More Laser Power}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Input Optics}{}
-\BOOKMARK [1][-]{section.3.1}{Radiation pressure in MC}{chapter.3}
+\BOOKMARK [2][-]{subsection.2.4.3}{Mirror Suspension and Actuation}{section.2.4}
+\BOOKMARK [1][-]{section.2.5}{DC readout / more laser power}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Input Optics Design and Characterization}{}
+\BOOKMARK [1][-]{section.3.1}{Function of the Input Optics}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Electro-optic Modulator}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.2}{Mode Cleaner}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.3}{Faraday Isolator}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.4}{Mode-matching Telescope}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Thermal Problems in Initial LIGO}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Enhanced LIGO Input Optics Design}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Electro-optic Modulator Design}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.2}{Mode Cleaner Design}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.3}{Faraday Isolator Design}{section.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.3.1}{Thermal birefringence}{subsection.3.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.3.2}{Thermal lensing}{subsection.3.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.3.3}{Polarizers}{subsection.3.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.3.4}{Heat conduction}{subsection.3.3.3}
+\BOOKMARK [2][-]{subsection.3.3.4}{Mode-matching Telescope Design}{section.3.3}
+\BOOKMARK [1][-]{section.3.4}{Performance of the Enhanced LIGO Input Optics}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.4.1}{Optical efficiency}{section.3.4}
+\BOOKMARK [3][-]{subsubsection.3.4.1.1}{Mode cleaner losses}{subsection.3.4.1}
+\BOOKMARK [3][-]{subsubsection.3.4.1.2}{Faraday isolator losses}{subsection.3.4.1}
+\BOOKMARK [2][-]{subsection.3.4.2}{Faraday Isolation Ratio}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.3}{Thermal steering}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.4}{Thermal Lensing}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.5}{Mode Matching}{section.3.4}
+\BOOKMARK [1][-]{section.3.5}{Implications for Advanced LIGO}{chapter.3}
+\BOOKMARK [1][-]{section.3.6}{Summary}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{Angular Motion of the Interferometer Mirrors}{}
 \BOOKMARK [1][-]{section.4.1}{Tolerance for Angular Motion}{chapter.4}
 \BOOKMARK [1][-]{section.4.2}{Sources of Angular Mirror Motion}{chapter.4}
@@ -52,23 +76,23 @@
 \BOOKMARK [2][-]{subsection.6.1.1}{Beam Spot Motion}{section.6.1}
 \BOOKMARK [3][-]{subsubsection.6.1.1.1}{Moving the beam}{subsection.6.1.1}
 \BOOKMARK [3][-]{subsubsection.6.1.1.2}{Measuring how much the beam has moved}{subsection.6.1.1}
-\BOOKMARK [2][-]{subsection.6.1.2}{Angular mirror motion}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.2}{Angular Mirror Motion}{section.6.1}
 \BOOKMARK [3][-]{subsubsection.6.1.2.1}{ETM and ITM optical levers}{subsection.6.1.2}
 \BOOKMARK [3][-]{subsubsection.6.1.2.2}{RM, BS, and MMT3 optical levers}{subsection.6.1.2}
-\BOOKMARK [2][-]{subsection.6.1.3}{WFS error signals}{section.6.1}
+\BOOKMARK [2][-]{subsection.6.1.3}{WFS Error Signals}{section.6.1}
 \BOOKMARK [1][-]{section.6.2}{The ASC Change of Basis}{chapter.6}
 \BOOKMARK [2][-]{subsection.6.2.1}{WFS Input Matrix}{section.6.2}
 \BOOKMARK [2][-]{subsection.6.2.2}{WFS Output Matrix}{section.6.2}
 \BOOKMARK [2][-]{subsection.6.2.3}{Diagonalizing the WFS Drive Matrix}{section.6.2}
-\BOOKMARK [1][-]{section.6.3}{Sensing matrix stability}{chapter.6}
-\BOOKMARK [1][-]{section.6.4}{Input beam motion}{chapter.6}
-\BOOKMARK [1][-]{section.6.5}{The marginally-stable Power Recycling Cavity}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.5.1}{Power scaling}{section.6.5}
+\BOOKMARK [1][-]{section.6.3}{Sensing Matrix Stability}{chapter.6}
+\BOOKMARK [1][-]{section.6.4}{Input Beam Motion}{chapter.6}
+\BOOKMARK [1][-]{section.6.5}{The Marginally-stable Power Recycling Cavity}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.5.1}{Power Scaling}{section.6.5}
 \BOOKMARK [1][-]{section.6.6}{WFS Servo Open Loop Transfer Functions}{chapter.6}
 \BOOKMARK [1][-]{section.6.7}{Residual Angular Motion}{chapter.6}
-\BOOKMARK [1][-]{section.6.8}{ASC to DARM noisebudget}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.8.1}{Tuning the cut-off filters}{section.6.8}
-\BOOKMARK [1][-]{section.6.9}{Feed-forward}{chapter.6}
+\BOOKMARK [1][-]{section.6.8}{ASC to DARM Noisebudget}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.8.1}{Tuning the Cut-off Filters}{section.6.8}
+\BOOKMARK [1][-]{section.6.9}{Feed-Forward}{chapter.6}
 \BOOKMARK [1][-]{section.6.10}{Advanced LIGO}{chapter.6}
 \BOOKMARK [0][-]{chapter.7}{Experimental measurement of the Sidles-Sigg effect}{}
 \BOOKMARK [1][-]{section.7.1}{Measured modes}{chapter.7}

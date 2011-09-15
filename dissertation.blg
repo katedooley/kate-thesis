@@ -4,7 +4,6 @@ A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: TOC.aux
 A level-1 auxiliary file: abbreviations.aux
 A level-1 auxiliary file: abstract.aux
-A level-1 auxiliary file: chapter0.aux
 A level-1 auxiliary file: chapter1.aux
 A level-1 auxiliary file: chapter2.aux
 A level-1 auxiliary file: chapter3a.aux
@@ -19,45 +18,45 @@ A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in Siegman1986Lasers
-You've used 20 entries,
+You've used 38 entries,
             3411 wiz_defined-function locations,
-            1325 strings with 26683 characters,
-and the built_in function-call counts, 16844 in all, are:
-= -- 819
-> -- 796
-< -- 112
-+ -- 712
-- -- 198
-* -- 2458
-:= -- 1724
-add.period$ -- 20
-call.type$ -- 20
-change.case$ -- 82
-chr.to.int$ -- 20
-cite$ -- 21
-duplicate$ -- 1491
-empty$ -- 1283
-format.name$ -- 450
-if$ -- 3046
+            1450 strings with 30973 characters,
+and the built_in function-call counts, 30358 in all, are:
+= -- 1515
+> -- 1372
+< -- 197
++ -- 1214
+- -- 340
+* -- 4433
+:= -- 3129
+add.period$ -- 38
+call.type$ -- 38
+change.case$ -- 155
+chr.to.int$ -- 38
+cite$ -- 41
+duplicate$ -- 2716
+empty$ -- 2332
+format.name$ -- 781
+if$ -- 5496
 int.to.chr$ -- 1
-int.to.str$ -- 21
-missing$ -- 223
-newline$ -- 75
-num.names$ -- 60
-pop$ -- 326
+int.to.str$ -- 39
+missing$ -- 409
+newline$ -- 129
+num.names$ -- 111
+pop$ -- 638
 preamble$ -- 1
-purify$ -- 80
+purify$ -- 152
 quote$ -- 0
-skip$ -- 661
+skip$ -- 1138
 stack$ -- 0
-substring$ -- 355
-swap$ -- 1289
-text.length$ -- 103
+substring$ -- 643
+swap$ -- 2336
+text.length$ -- 182
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 118
+type$ -- 226
 warning$ -- 1
-while$ -- 49
+while$ -- 90
 width$ -- 0
-write$ -- 229
+write$ -- 427
 (There was 1 warning)

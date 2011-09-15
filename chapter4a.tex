@@ -3,6 +3,8 @@
 \textcolor{blue}{write this introduction!}
 For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. In practice, however, the mirrors are subject to external disturbances. 
 
+The mode defined by the mirrors needs good overlap with the input beam's mode. (cavity axis aligned in angle and translation with input axis)
+
 The mirrors in LIGO are suspended, both to isolate them from ground motion and to simulate inertial test masses. 
 
 
@@ -27,7 +29,7 @@ This chapter discusses the causes of mirror angular displacement and the effects
 
 
 
-Each torque produces an angular displacement of the mirror as governed by the mirror's torque to angle transfer function.
+Any torque produces an angular displacement of the mirror as governed by the mirror's torque to angle transfer function.
 
 A consequence is that even when all of the mirrors are perfectly aligned at all frequencies, the simple existence of light in the interferometer makes the arm cavities statically unstable when high enough laser powers are used.
 
@@ -60,9 +62,9 @@ A consequence is that even when all of the mirrors are perfectly aligned at all 
 \textcolor{blue}{Make this section correct! power fluctations only couple quadratically (bi-linearly) to DARM, but the contrast defect thing is \emph{indistinguishable} from gravitational waves. the A2L should still be emphasized.}
 % Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residula motion must be held below 
 
-Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: power build-up degradation, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
+Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: failure to achieve maximum power gain, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
 
-Since the strain sensitivity is proportional to the power buildup (see Eq. \ref{}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other, which increases the shot noise at the AS port. Too large of power fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
+Because the strain sensitivity is proportional to the power buildup (see Eq. \ref{}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other, which increases the shot noise at the AS port. Excessive fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
 
 
 \textcolor{blue}{work this paragraph in somewhere}
@@ -95,8 +97,7 @@ There is a continuous stream of changing torque inputs to the mirrors that cause
 
 
 \subsection{Ground Motion} 
-The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions. 
-This is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Fig. \ref{fig:seismicMirror}. These spectra include the effect of local velocity damping since the optical levers are always on (see Sec. \ref{sec:suspension}). The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
+The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions and thence to the mirrors. Ground motion is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Fig. \ref{fig:seismicMirror}. These spectra include the effect of local velocity damping since the optical levers are always on (see Sec. \ref{sec:suspension}). The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
 
 \begin{figure}
 \begin{centering}
@@ -139,16 +140,13 @@ Proof that this motion indeed originates from the ground can be provided by comp
 
 \subsection{Coil Actuators} 
 \label{sec:L2A}
-The imperfect piston drive of the actuators on the rear of the test masses due to length control is another torque input, albeit inconsequential. The length of the cavities is carefully controlled (that's what we strive to be most sensitive to!) and any imbalances between the four electromagnets on a single mirror will create a coupling from length drive to angle (L2A). This effect is measurable, but is carefully tuned out through selecting appropriate digital gains for each of the coils. Typically, the gain variation from unity is up to 10\%. The residual is about 1\%. For the typical rms length drive of 1~\micron on a core optic and osems separated by a distance of $\sqrt{2} R$ where $R$ is the radius of the optic, the 1\% L2A coupling results in a $10^{-8}$ radian displacement:
-\begin{equation}
-\theta = \frac{0.01 * 10^{-6} \mbox{ m}}{\sqrt{2} * 0.125 \mbox{ m}} \approx 10^{-8} \mbox{ rad}.
-\end{equation}
+Imperfections in the behavior of the actuators on the rear of the test masses can convert piston (pure translation) drives into torque. The lengths of the cavities are carefully controlled (that's what we strive to be most sensitive to!) and any imbalances between the four electromagnets on a single mirror will create a coupling from length drive to angle (L2A). This effect is measurable, but is carefully tuned out through selecting appropriate digital gains for each of the coils. Relative gain variation is 10\% of average. The ability to tune the gains perfectly is limited and the residual length to angle coupling is about 1\%. For the typical rms length drive of 1~\micron on a core optic and osems separated by a distance of $\sqrt{2} R$ where $R$ is the radius of the optic, the 1\% L2A coupling results in a $10^{-8}$ radian displacement: \begin{equation} \theta = \frac{0.01 * 10^{-6} \mbox{ m}}{\sqrt{2} * 0.125 \mbox{ m}} \approx 10^{-8} \mbox{ rad}.  \end{equation}
 
 % Maybe include a figure that takes a typical length control spectrum signal to an optic and multiply by the above factors to show spectrum of angular motion induced by 1\% L2A.
 
 
 \subsection{Noise from Angular Control}
-The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also undercontrolled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues and others are explained in more detail in \ref{sec:ASClimits}.
+The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also undercontrolled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues are explained in more detail in \ref{sec:ASClimits}.
 
 
 \subsection{Radiation Pressure} 
@@ -168,7 +166,7 @@ radiation pressure is
 \tau_{rp} = \frac{2 P x} {c}
 \label{eq:tau_rp}
 \end{equation}
-where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, corresponding to an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see Section~\ref{sec:pendTF}).
+where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, yielding an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see Section~\ref{sec:pendTF}).
 
 Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. 
 %This is a result of the geometric coupling between beam displacements and mirror angles as will be shown in the next chapter. Radiation pressure therefore acts as an angular spring. 
@@ -300,18 +298,18 @@ There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. Th
 \textcolor{blue}{Figure \ref{fig:} shows the locations of these sensors.} 
 The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-Perot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the y-arm perpendicular to the x-arm.
 
-The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS\footnote{Pronounced ``woofs''.}), whose principle of operation is described in Section \ref{sec:WFSsensing}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. They control the relative motions of these five mirrors up to a couple Hz. 
+The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS\footnote{Pronounced ``woofs''.}), whose principle of operation is described in Section \ref{sec:WFSsensing}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. Their control signals are used to control the relative motions of these five mirrors up to a couple Hz. 
 
-The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer on about minute time scales, and at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam pointing to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Fig. \ref{fig:BCS}. The higher frequency matching of the input beam pointing to the interferometer is achieved by the reflected port Fabry-Perot Michelson wavefront sensors, up to a couple Hz.
+The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer over minute time scales; at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam pointing to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Fig. \ref{fig:BCS}. The higher frequency matching of the input beam pointing to the interferometer is achieved by the reflected port Fabry-Perot Michelson wavefront sensors, up to a couple Hz.
 
 \begin{figure} 
 \begin{centering} \includegraphics[width=0.6\textwidth]{figures/BCSspiricon.pdf} 
-\caption[Beam centering servo image of beam splitter]{Image of beam on beam splitter as used in the beam centering servo. The beam appears stretched because the camera's viewing angle is at $45^{\circ}$ with respect to the mirror surface. The color scale is arbitrary.}
+\caption[Beam centering servo image of beam splitter]{Image of beam on beam splitter as used in the beam centering servo. The beam appears stretched because the camera's viewing angle is at $45^{\circ}$ with respect to the mirror surface. The color scale is arbitrary, but orange is strong, violet is weak.}
 \label{fig:BCS}
 \end{centering}
 \end{figure}
 
-The one additional step needed for full interferometer alignment is to maintain the orthogonality of the y-arm to the x-arm as the x-arm and input beam together move around. This is accomplished through the pitch and yaw signals of QPDY, the QPD that monitors the light transmitted through the y-arm, which sense how the beam splitter should be pointed. \footnote{QPDX also sends a signal to the BS to compensate for whatever it has MMT3 do.}
+The one additional step needed for full interferometer alignment is to maintain the relative alignment of the y-arm to the x-arm as the x-arm and input beam together move around. This is accomplished through the pitch and yaw signals of QPDY, the QPD that monitors the light transmitted through the y-arm, which sense how the beam splitter should be pointed. \footnote{QPDX also sends a signal to the BS to compensate for whatever it has MMT3 do.}
 
 All mirror angles are of course interdependent and they must track each other. However, a rough hierarchy of who follows who can be established since ultimately the interferometer is bolted to the ground and necessarily maintains some DC orientation. This orientation comes from QPDX and QPDY, which are physically attached to piers standing on the ground and force the beams transmitted through the ETMs to stay put at a certain location on their sensors. In all, the input beam must make it to those two exact places and the other mirrors are left to line themselves up accordingly. A diagram of this alignment scheme is in Fig. \ref{fig:ASClayout}.
 
@@ -323,13 +321,14 @@ All mirror angles are of course interdependent and they must track each other. H
 \end{centering}
 \end{figure}
 
-This alignment process involving the WFS, QPDs, and BS camera relies on the entire interferometer already being locked. It manages the continuous fine-tuning of mirror angles so that maximal power buildup in the interferometer is maintained, and so that the interferometer does not wander from its linear operating point. How to achieve the initial alignment of all of the mirrors is an interesting process in itself and is documented in Appendix \ref{sec:initial_alignment}.
+This alignment process involving the WFS, QPDs, and BS camera relies on the entire interferometer already being locked. It manages the continuous fine-tuning of mirror angles so that maximal power buildup in the interferometer is maintained, and \textcolor{blue}{so that the interferometer does not wander from its linear operating point--define!}. How to achieve the initial alignment of all of the mirrors is an interesting process in itself and is documented in Appendix \ref{sec:initial_alignment}.
 
 
 
 
 \section{The Wavefront Sensing Scheme}
 \label{sec:WFSsensing}
+Wavefront sensors for angular sensing are the single photodiode equivalent of length sensing. Wavefront sensors are quadrant photodiodes equipped with RF electronics. They rely on the  Pound-Drever-Hall locking scheme to produce error signals. 
 \textcolor{blue}{overview of basic wavefront sensing, references for details}
 % \section{Wavefront sensing}
 % \label{sec:wfs}
@@ -347,7 +346,7 @@ Fig. \ref{fig:ASCcontrolservo} is a block diagram of the major components to the
 \begin{figure} 
 \begin{centering} 
 \includegraphics{figures/ASCcontrolservo.pdf} 
-\caption[ASC control servo]{ASC control servo. \textcolor{blue}{maybe include a wavefront sensor block? Highlight analog versus digital.}}
+\caption[ASC control servo]{ASC control servo. \textcolor{blue}{Highlight analog versus digital.}}
 \label{fig:ASCcontrolservo}
 \end{centering}
 \end{figure}
@@ -368,8 +367,8 @@ as shown in Fig. \ref{fig:OLcomp}~B.
 
 \begin{figure} 
 \begin{centering} 
-\subfigure[Zoom of the bottom part of Fig.~\ref{fig:ASCcontrolservo}.]{\includegraphics{figures/OLcompensation.pdf}} \subfigure[Replacement of the optical lever controlled plant with the closed loop gain representation.]{\includegraphics{figures/OLcompensation2.pdf}} 
-\subfigure[Optical lever compensation removes the optical levers from the picture.]{\includegraphics{figures/OLcompensation3.pdf}} 
+\subfigure[Zoom of the bottom part of Fig.~\ref{fig:ASCcontrolservo}. $P$ is the pendulum and $O$ is the optical lever control filters.]{\includegraphics{figures/OLcompensation.pdf}} \subfigure[Replacement of the optical lever controlled plant with the closed loop gain representation.]{\includegraphics{figures/OLcompensation2.pdf}} 
+\subfigure[Optical lever compensation removes the optical levers from the picture of the pendulum. External torque is still suppressed by the optical lever closed loop gain.]{\includegraphics{figures/OLcompensation3.pdf}} 
 \caption[Optical lever compensation scheme]{Optical lever compensation scheme. Subfigures A, B, and C are equivalent.}  
 \label{fig:OLcomp} 
 \end{centering} 
@@ -387,18 +386,18 @@ One will notice that it is not a coincidence that the optical lever compensation
 
 \section{Angular Control Limitations}
 \label{sec:ASClimits}
-The limits for how good we can do in controlling the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Fig. \ref{fig:WFSdarknoise}. And depending on the power level, WFS1Q may instead be limited by shot noise (see Eq. \ref{eq:shotnoise}). Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. This cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at the sensor noise frequencies. 
+The limits for how well we can control the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Fig. \ref{fig:WFSdarknoise}. Moreover, depending on the power level, WFS1Q may instead be limited by shot noise (see Eq. \ref{eq:shotnoise}). Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. The impression of sensor noise cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at frequencies where sensor noise dominates. 
 %Ultimately, it is the WFS noise floor that determines the best possible achievable suppression. 
 
 \begin{figure} \begin{centering} \subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs1q_darkres.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs2i_darkres.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs2q_darkres.pdf}} 
 \subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs3i_darkres.pdf}}\subfigure{\includegraphics[width=0.333\textwidth]{figures/wfs4i_darkres.pdf}} 
 %\includegraphics[width=1.0\textwidth]{figures/ASCsensorsignals.pdf} 
-\caption[WFS error signal and dark noise]{WFS dark noise compared to typical error signal. \textcolor{blue}{Include shot noise, too, especially for WFS1.} The excess signal above the dark noise in WFS3I and WFS4I from 20~Hz on is likely acoustic noise, although this has not been verified. WFS1 and WFS2 are on a floating table in a sound proof chamber, while WFS3 and WFS4 are on a non-seismically isolated table without a sound proof enclosure.}
+\caption[WFS error signal and dark noise]{WFS dark noise compared to typical error signal. \textcolor{blue}{Include shot noise, too, especially for WFS1.} The excess signal above the dark noise in WFS3I and WFS4I above 20~Hz is likely acoustic noise, although this hypothesis has not been verified. WFS1 and WFS2 are on a floating table in a sound proof chamber, while WFS3 and WFS4 are on a non-seismically isolated table without a sound proof enclosure.}
 \label{fig:WFSdarknoise}
 \end{centering}
 \end{figure}
 
-Besides the sensing noise, there is also sometimes real signal that results in more harm than good when used as feedback. The HAM seismic isolation tables used by the Input Optics (the core optics are suspended from BSC tables) have stack modes of xx Hz that ring up the MMTs.  At low frequencies, around 1~Hz, some of the WFS signals are dominated by these angular fluctuations of the input beam. The resulting attempt of the mirrors to follow the input beam jitter leads to a magnification of the motion because of the drastically different length scales. Large power fluctuations in both arms and the power recycling cavity ensue, leading to departure from the linear error signal regime and often lock loss. 
+Besides the sensing noise, there are also sometimes real signals that result in more harm than good when used as feedback. The HAM seismic isolation tables used by the Input Optics (the core optics are suspended from BSC tables) have stack modes at 0.8 to 3~Hz that ring up the MMTs.  At low frequencies, around 1~Hz, some of the WFS signals are dominated by these angular fluctuations of the input beam. The resulting attempt of the mirrors to follow the input beam jitter leads to a magnification of the motion because of the drastically different length scales. Large power fluctuations in both arms and the power recycling cavity ensue, leading to departure from the linear error signal regime and often lock loss. 
 
 Other limitations to the reduction of mirror motion result from the nature of control loops. The cut-off filter, for example, reduces the phase margin of the open loop gain, necessarily pushing down the unity gain frequency (UGF) and therefore the magnitude of suppression at all frequencies below the UGF. A less aggressive cut-off filter, while improving the servo's stability and allowing for higher overall gains, leads to more impression of sensing noise on the optics. Also, if the phase margin of the loop is low, mirror motion will be amplified through gain peaking.
 

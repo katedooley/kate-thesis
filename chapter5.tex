@@ -291,7 +291,7 @@ yaw & 0.88e-5 m/ct & 0.80e-5 m/ct & 4.79e-2 m/ct \\
 
 
 
-\subsection{Angular mirror motion}
+\subsection{Angular Mirror Motion}
 The optical levers provide a straightfoward measure of individual
 mirror motion. The channels I calibrated were of the form
 \texttt{L1:SUS-ETMX\_OPLEV\_\{P,Y\}ERROR}, the optical lever error
@@ -394,7 +394,7 @@ yaw & 50.7 & 43.3 & 20.1 & 20.2 & 42.5 & 63.5 & 55.5 \\
 
 
 
-\subsection{WFS error signals}
+\subsection{WFS Error Signals}
 The WFS error signals (i.e. \texttt{L1:ASC-WFS1\_Q1}) are physically
 Watts of power at the detectors. Converting the error signal in
 digital counts to Watts requires working backwards through the
@@ -540,7 +540,7 @@ degrees of freedom.
 
 \begin{table}
 \centering
-\caption{Optical gain at 9.7~Hz in units of WFS counts / dof radian
+\caption[WFS optical gain matrix]{Optical gain at 9.7~Hz in units of WFS counts / dof radian
   (pitch). Numbers in \textcolor{gray}{gray} are the measurement
   results that have coherences less than 0.9. Boxes highlight the
   elements actually used in the control system. All other elements are
@@ -575,7 +575,7 @@ output matrix is shown in Table \ref{table:output}, where the $r$ is
 
 \begin{table}
 \centering
-\caption{WFS output matrix (pitch). For the Livingston cavity geometry
+\caption[WFS output matrix]{WFS output matrix (pitch). For the Livingston cavity geometry
   $r=0.91$ and for Hanford $r=0.87$.}
 \begin{tabular}{l l l l l l}
 \hline 
@@ -624,7 +624,7 @@ property M\_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
 
 \begin{table}
 \centering
-\caption{Actual eigenbasis motion during sensing matrix excitations as
+\caption[Actual eigenbasis motion during sensing matrix excitations]{Actual eigenbasis motion during sensing matrix excitations as
   witnessed by the optical levers. Columns are excitations and rows are
   the pitch motions at 9.7~Hz in units of \microrad. Ideally, this
   would be a diagonal matrix. It mostly is.}
@@ -665,14 +665,14 @@ ETMX & ETMY & ITMX & ITMY & RM & \\
 
 
 
-\section{Sensing matrix stability}
+\section{Sensing Matrix Stability}
 \textcolor{blue}{Show how the sensing matrix changes in time (APS
   presentation).}
 
 
 
 
-\section{Input beam motion}
+\section{Input Beam Motion}
 The beam centering and QPD servos operate up to only about 50~mHz,
 meaning the beam-centering degree of freedom is uncontrolled at higher
 frequencies. Since beam spot motion on the test masses couples to
@@ -742,12 +742,15 @@ is indeed due to the WFS impressing input beam motion on the mirrors.
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/testWFS1_highnom.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2A_highnom.pdf}}
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2B_highnom.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS3_highnom.pdf}}
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS4_highnom.pdf}}
-\caption[]{Comparison of WFS error signals (the residual motion)
-  during a time of normal operation and a time when the common WFS
-  gains were $2.5\times$ higher than nominal. This excludes gain
-  peaking as a cause of the extra mirror motion witnessed during the
-  time of high gain. Fig.~\ref{fig:seismic_highgain} shows the ground
-  motion spectra at the time of this measurement.}
+\caption[Comparison of WFS error signals (the residual motion) during
+a time of normal operation and a time when the common WFS gains were
+$2.5\times$ higher than nominal]{Comparison of WFS error signals (the
+  residual motion) during a time of normal operation and a time when
+  the common WFS gains were $2.5\times$ higher than nominal. This
+  excludes gain peaking as a cause of the extra mirror motion
+  witnessed during the time of high
+  gain. Fig.~\ref{fig:seismic_highgain} shows the ground motion
+  spectra at the time of this measurement.}
 \label{fig:WFS_inputbeam}
 \end{centering}
 \end{figure}
@@ -799,7 +802,7 @@ is indeed due to the WFS impressing input beam motion on the mirrors.
 
 
 
-\section{The marginally-stable Power Recycling Cavity}
+\section{The Marginally-stable Power Recycling Cavity}
 The power recycling cavity (PRC) is the linear cavity formed by the RM
 and ITMs. Since the radius of curvature of both the RM and the ITMs
 points in the same direction, the cavity is geometrically
@@ -873,7 +876,7 @@ $g$-factor and mirror angle]{Dependence of power build-up in the power
 \end{figure}
 
 
-\subsection{Power scaling}
+\subsection{Power Scaling}
 The signal at the wavefront sensors is proportional to the amplitude
 of the sidebands, or the square root of the sideband power. Thus, as
 the PRC $g$-factor and therefore the power in the recycling cavity
@@ -1011,7 +1014,8 @@ recycling cavity geometry]{WFS optical response as a function of power
 \begin{centering}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/BSMpit.pdf}}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/BSMyaw.pdf}}
-\caption{Beam spot motion on the ITMs and ETMs during a 16~W lock at
+\caption[Beam spot motion on the ITMs and ETMs during a 16~W
+lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
   night (May21, 2010, 06:02:30 UTC).}
 \label{fig:bsm}
 \end{centering}
@@ -1062,7 +1066,7 @@ recycling cavity geometry]{WFS optical response as a function of power
 
 
 
-\section{ASC to DARM noisebudget}
+\section{ASC to DARM Noisebudget}
 Broadband effect on DARM.
 
 
@@ -1085,8 +1089,10 @@ Broadband effect on DARM.
 \begin{centering}
 \subfigure{\includegraphics[width=1.0\columnwidth]{figures/WFSpittoDARM.pdf}}
 \subfigure{\includegraphics[width=1.0\columnwidth]{figures/WFSyawtoDARM.pdf}}
-\caption[]{Wavefront sensor to DARM noisebudget for pitch (top) and
-  yaw (bottom) during a 14~W lock (July 17, 2009). \textcolor{blue}{which line width?}}
+\caption[Wavefront sensor to DARM noisebudget for pitch and
+yaw]{Wavefront sensor to DARM noisebudget for pitch (top) and yaw
+  (bottom) during a 14~W lock (July 17, 2009). \textcolor{blue}{which
+    line width?}}
 \label{fig:}
 \end{centering}
 \end{figure}
@@ -1095,9 +1101,10 @@ Broadband effect on DARM.
 \begin{centering}
 \subfigure{\includegraphics[width=1.0\columnwidth]{figures/opticspittoDARM.pdf}}
 \subfigure{\includegraphics[width=1.0\columnwidth]{figures/opticsyawtoDARM.pdf}}
-\caption[]{Optic to DARM noisebudget for pitch (top) and
-  yaw (bottom) during a 14~W lock (July 17,
-  2009). \textcolor{blue}{This height or previous figure's height?}}
+\caption[Optic to DARM noisebudget for pitch and yaw]{Optic to DARM
+  noisebudget for pitch (top) and yaw (bottom) during a 14~W lock
+  (July 17, 2009). \textcolor{blue}{This height or previous figure's
+    height?}}
 \label{fig:}
 \end{centering}
 \end{figure}
@@ -1105,7 +1112,8 @@ Broadband effect on DARM.
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\columnwidth]{figures/ASC2DARM.pdf}
-\caption[]{Total WFS and optical lever noise contribution to DARM
+\caption[Total WFS and optical lever noise contribution to DARM
+  during a 16 W lock at night]{Total WFS and optical lever noise contribution to DARM
   during a 16 W lock at night (gps time 958456964). Pitch and yaw
   contributions are added in quadrature under the assumption they are
   de-coupled.}
@@ -1117,7 +1125,7 @@ Broadband effect on DARM.
 
 
 
-\subsection{Tuning the cut-off filters} 
+\subsection{Tuning the Cut-off Filters} 
 The cut-off frequency of the lowpass filters for the WFS control are
 of particular importance in the DARM noisebudget. The lowpass filter
 is necessary for suppressing the impression of sensing noise on
@@ -1148,7 +1156,7 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 
 
 
-\section{Feed-forward}
+\section{Feed-Forward}
 Implementing a method of Wiener ﬁltering, I show that the angular
 sensing and control error signals can be predicted by ground motion
 witnessed by local seismometers.
