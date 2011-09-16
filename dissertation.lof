@@ -2,21 +2,22 @@
 \contentsline {figure}{\numberline {{2-1}}{\ignorespaces LIGO noise budget}}{24}{figure.2.1}
 \contentsline {figure}{\numberline {{2-2}}{\ignorespaces Power-recycled Fabry-Perot Michelson laser interferometer}}{26}{figure.2.2}
 \contentsline {figure}{\numberline {{3-1}}{\ignorespaces Block diagram of the Input Optics subsystem.}}{31}{figure.3.1}
-\contentsline {figure}{\numberline {{3-2}}{\ignorespaces Enhanced LIGO Input Optics optical and sensing configuration}}{35}{figure.3.2}
-\contentsline {figure}{\numberline {{3-3}}{\ignorespaces Photographs of Enhanced LIGO Input Optics \emph {in situ}}}{36}{figure.3.3}
-\contentsline {figure}{\numberline {{3-4}}{\ignorespaces Electro-optic modulator design}}{38}{figure.3.4}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {A single RTP crystal is sandwiched between three sets of electrodes that apply three different modulation frequencies. The wedged ends of the crystal separate the polarizations of the light. The p-polarized light is used in the interferometer.}}}{38}{figure.3.4}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {A schematic for each of the three impedance matching circuits of the EOM. For the three sets of electrodes, each of which creates its own $C_{crystal}$, a capacitor is placed parallel to the LC circuit formed by the crystal and a hand-wound inductor. The circuits provide 50\nobreakspace {}$\Omega $ input impedance on resonance and are housed in a separate box from the crystal.}}}{38}{figure.3.4}
-\contentsline {figure}{\numberline {{3-5}}{\ignorespaces Faraday isolator photograph and schematic.}}{40}{figure.3.5}
-\contentsline {figure}{\numberline {{3-6}}{\ignorespaces Photo indium-wrapped TGG crystal}}{42}{figure.3.6}
-\contentsline {figure}{\numberline {{3-7}}{\ignorespaces Data from the mode cleaner absorption measurement}}{46}{figure.3.7}
-\contentsline {figure}{\numberline {{3-8}}{\ignorespaces Faraday isolator isolation ratio as measured in air and in vacuum}}{47}{figure.3.8}
-\contentsline {figure}{\numberline {{3-9}}{\ignorespaces Mode cleaner and Faraday isolator thermal drift data.}}{49}{figure.3.9}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {Angular motion of the beam at the MC waist and FI rotator as the input power is stepped. The beam is double-passed through the Faraday isolator, so it experiences twice the input power.}}}{49}{figure.3.9}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {Average beam angle per power level in the MC and FI. Linear fits to the data are also shown. The slopes for MC yaw, MC pitch, FI yaw, and FI pitch, respectively, are 0.0047, 0.44, 1.8, and 3.2 \textmu {}rad/W.}}}{49}{figure.3.9}
-\contentsline {figure}{\numberline {{3-10}}{\ignorespaces Profile at high and low powers of mode cleaner transmitted beam}}{50}{figure.3.10}
-\contentsline {figure}{\numberline {{3-11}}{\ignorespaces Faraday isolator thermal lensing data}}{51}{figure.3.11}
-\contentsline {figure}{\numberline {{3-12}}{\ignorespaces EOM thermal lensing data.}}{51}{figure.3.12}
+\contentsline {figure}{\numberline {{3-2}}{\ignorespaces Beam profile through the Input Optics}}{33}{figure.3.2}
+\contentsline {figure}{\numberline {{3-3}}{\ignorespaces Enhanced LIGO Input Optics optical and sensing configuration}}{35}{figure.3.3}
+\contentsline {figure}{\numberline {{3-4}}{\ignorespaces Photographs of Enhanced LIGO Input Optics \emph {in situ}}}{36}{figure.3.4}
+\contentsline {figure}{\numberline {{3-5}}{\ignorespaces Electro-optic modulator design}}{38}{figure.3.5}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {A single RTP crystal is sandwiched between three sets of electrodes that apply three different modulation frequencies. The wedged ends of the crystal separate the polarizations of the light. The p-polarized light is used in the interferometer.}}}{38}{figure.3.5}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {A schematic for each of the three impedance matching circuits of the EOM. For the three sets of electrodes, each of which creates its own $C_{crystal}$, a capacitor is placed parallel to the LC circuit formed by the crystal and a hand-wound inductor. The circuits provide 50\nobreakspace {}$\Omega $ input impedance on resonance and are housed in a separate box from the crystal.}}}{38}{figure.3.5}
+\contentsline {figure}{\numberline {{3-6}}{\ignorespaces Faraday isolator photograph and schematic.}}{41}{figure.3.6}
+\contentsline {figure}{\numberline {{3-7}}{\ignorespaces Photo indium-wrapped TGG crystal}}{43}{figure.3.7}
+\contentsline {figure}{\numberline {{3-8}}{\ignorespaces Data from the mode cleaner absorption measurement}}{46}{figure.3.8}
+\contentsline {figure}{\numberline {{3-9}}{\ignorespaces Faraday isolator isolation ratio as measured in air and in vacuum}}{47}{figure.3.9}
+\contentsline {figure}{\numberline {{3-10}}{\ignorespaces Mode cleaner and Faraday isolator thermal drift data.}}{50}{figure.3.10}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Angular motion of the beam at the MC waist and FI rotator as the input power is stepped. The beam is double-passed through the Faraday isolator, so it experiences twice the input power.}}}{50}{figure.3.10}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Average beam angle per power level in the MC and FI. Linear fits to the data are also shown. The slopes for MC yaw, MC pitch, FI yaw, and FI pitch, respectively, are 0.0047, 0.44, 1.8, and 3.2 \textmu {}rad/W.}}}{50}{figure.3.10}
+\contentsline {figure}{\numberline {{3-11}}{\ignorespaces Profile at high and low powers of mode cleaner transmitted beam}}{51}{figure.3.11}
+\contentsline {figure}{\numberline {{3-12}}{\ignorespaces Faraday isolator thermal lensing data}}{52}{figure.3.12}
+\contentsline {figure}{\numberline {{3-13}}{\ignorespaces EOM thermal lensing data.}}{52}{figure.3.13}
 \contentsline {figure}{\numberline {{4-1}}{\ignorespaces Typical angular motion of the core suspended mirrors in the absence of interferometric control}}{58}{figure.4.1}
 \contentsline {figure}{\numberline {{4-2}}{\ignorespaces Sketch of a LIGO suspension}}{61}{figure.4.2}
 \contentsline {figure}{\numberline {{4-3}}{\ignorespaces Torque to pitch transfer function of a LIGO core optic}}{62}{figure.4.3}

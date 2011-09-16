@@ -34,22 +34,22 @@
 \contentsline {subsection}{\numberline {3.1.4}Mode-matching Telescope}{32}{subsection.3.1.4}
 \contentsline {section}{\numberline {3.2}Thermal Problems in Initial LIGO}{33}{section.3.2}
 \contentsline {section}{\numberline {3.3}Enhanced LIGO Input Optics Design}{34}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Electro-optic Modulator Design}{34}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Mode Cleaner Design}{37}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.1}Electro-optic Modulator Design}{37}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Mode Cleaner Design}{38}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Faraday Isolator Design}{39}{subsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.1}Thermal birefringence}{39}{subsubsection.3.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.3.2}Thermal lensing}{41}{subsubsection.3.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3.3}Polarizers}{41}{subsubsection.3.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Thermal birefringence}{40}{subsubsection.3.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.3.2}Thermal lensing}{40}{subsubsection.3.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3.3}Polarizers}{40}{subsubsection.3.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.3.4}Heat conduction}{42}{subsubsection.3.3.3.4}
 \contentsline {subsection}{\numberline {3.3.4}Mode-matching Telescope Design}{43}{subsection.3.3.4}
 \contentsline {section}{\numberline {3.4}Performance of the Enhanced LIGO Input Optics}{43}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Optical efficiency}{43}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.1}Optical efficiency}{44}{subsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.1.1}Mode cleaner losses}{44}{subsubsection.3.4.1.1}
-\contentsline {subsubsection}{\numberline {3.4.1.2}Faraday isolator losses}{45}{subsubsection.3.4.1.2}
-\contentsline {subsection}{\numberline {3.4.2}Faraday Isolation Ratio}{45}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Thermal steering}{47}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Thermal Lensing}{48}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Mode Matching}{52}{subsection.3.4.5}
+\contentsline {subsubsection}{\numberline {3.4.1.2}Faraday isolator losses}{46}{subsubsection.3.4.1.2}
+\contentsline {subsection}{\numberline {3.4.2}Faraday Isolation Ratio}{47}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Thermal steering}{48}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Thermal Lensing}{49}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Mode Matching}{51}{subsection.3.4.5}
 \contentsline {section}{\numberline {3.5}Implications for Advanced LIGO}{52}{section.3.5}
 \contentsline {section}{\numberline {3.6}Summary}{54}{section.3.6}
 \contentsline {chapter}{\numberline {4}{Angular Motion of the Interferometer Mirrors}}{55}{chapter.4}
