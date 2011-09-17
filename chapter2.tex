@@ -6,6 +6,91 @@ following chapters.
 %I explain why a Fabry-Perot Michelson laser interferometer 
 
 
+
+2. 'LIGO and eLIGO' or so:
+Short summary and motivation about the interferometer: Quadrupole
+waves change the light travel time in the two orthogonal arms, change
+the interference, amplified by arms, minimal detectable requires that
+we have at least one photon in the signal sidebands in the dark port
+gives us shot noise, want more power at BS. No numbers or only very
+few back on envelope numbers.
+
+2.1 Power Rec Mi: This should now contain all the important numbers,
+length, reflectivities, etc. You will need to make a decision at one
+point if you want to move many details into the appendix, maybe a
+couple tables with all relevant distances, reflectivities, etc., or if
+you want to skip them.
+
+2.2 Sensitivity limits:
+Displacement noise:
+- ground motion, 
+- thermal noise
+Sensing noise:
+- Stray light,
+- shot noise
+
+2.2.x Laser Power
+
+
+
+
+\section{Measuring Gravitational-wave Strain with Light}
+Treating light as a photon provides a very intuitive approach to
+understanding that a laser interferometer can detect graviational
+waves. Consider two wave packets leaving the beam splitter of a
+Michelson interferometer of length $L$ at the same time, each heading
+down a different arm. If an appropriately polarized gravitational wave
+is present, the amount of time the wave packet takes to travel down a
+stretched arm and back is:
+\begin{equation}
+t_{rt+} = \frac{2 L}{c} \left( 1 + \frac{h_+}{2} \right)
+\label{eq:trt+} 
+\end{equation}
+Likewise, for a compressed arm the roundtrip travel time is:
+\begin{equation}
+t_{rt-} = \frac{2 L}{c} \left( 1 - \frac{h_+}{2} \right)
+\label{eq:trt-} 
+\end{equation}
+There is a non-zero $2Lh_+/c$ difference in arrival times at the beam
+splitter, a quantity one could measure with an accurate stationary
+clock.\footnote{It should be noted that $h_+$ is treated as a constant
+  in Eqs. \ref{eq:trt+} and \ref{eq:trt-}. We use the approximation
+  that the gravitational wave wavelength $\lambda_{gw}$ is much larger
+  than the interferometer arm length $L$. This means that the temporal
+  variation of $h_+(t)$ is negligible during the time it takes the
+  photon to make its roundtrip.}
+
+The detector at the beam splitter, however, is not a clock, but a
+photodetector that measures the power of the interference of the two
+beams upon their return from the Michelson arms. It is therefore best
+to express the difference in arrival times as a difference in phase
+($\phi = \omega t$) between the two beams of light after each has
+completed its roundtrip:
+\begin{equation}
+\Delta \phi = \phi_{rt+} - \phi_{rt-} = \frac{2 L \omega}{c} h_+
+\end{equation}
+
+
+
+The second
+proves directly that the quantity physically measured at the beam splitter can be expressed
+in terms of a non-zero gauge invariant quantity. 
+
+Additional approaches that demonstrate \cite{Garfinkle2005Gauge} \cite{Saulson1997If} \cite{Faraoni2007Common}
+
+
+Perhaps of greatest importance is the concept that only gauge invariant quantities carry
+physical meaning. Introducing a gauge is often very helpful for carrying out mathematical
+calculations, but one must not get confused along the way by trying to physically interpret
+gauge dependent expressions. For general relativity and the purpose of thinking about the
+interferometer, the TT gauge is employed, but the final answer of Eq. (9) has eliminated
+any trace of gauge.
+
+
+
+
+
+
 \section{Signal Versus Noise}
 The factors that must be considered in the design of any detector can
 be grouped into two categories: signal and noise. The ability to make
@@ -61,61 +146,6 @@ stray light, shot noise
 Shot noise is a quantum mechanical effect of the detection
 of photons which creates uncertainty in the phase of the light, and
 therefore the power, at the AS port.
-
-
-
-
-\section{Measuring GW Strain with Light}
-\subsection{Light as a Photon} 
-Consider two wave packets leaving the beam splitter of a Michelson
-interferometer at the same time, each heading down a different arm. If
-an appropriately polarized gravitational wave is present, the amount
-of time the wave packet takes to travel down a stretched arm and back
-is:
-\begin{equation}
-\label{eq:trt+} 
-t_{rt+} = \frac{2 L}{c} \left( 1 + \frac{h_+}{2} \right)
-\end{equation}
-Likewise, for a compressed arm the roundtrip travel time is:
-\begin{equation}
-\label{eq:trt-} 
-t_{rt-} = \frac{2 L}{c} \left( 1 - \frac{h_+}{2} \right)
-\end{equation}
-There is a non-zero $2Lh_+/c$ difference in arrival times at the beam splitter, a quantity
-one could measure with an accurate stationary clock. This demonstrates intuitively that
-a laser interferometer can detect gravitational waves.
-
-It should be noted that we had to use the approximation that the
-gravitational wave wavelength $\lambda_{gw}$ is much larger than the
-interferometer arm length $L$. This means that the temporal variation
-of $h_+(t)$ is negligible during the time it takes the photon to make
-its roundtrip. Thus, $h_+$ is treated as a constant in
-Eqs. \ref{eq:trt+} and \ref{eq:trt-}.
-
-
-\subsection{Light as a Wave}
-The detector at the beam splitter is not a clock, but a photodetector
-which is sensitive to phase. It would be informative, therefore, to express
-the difference in arrival times as a difference in phase. To do so, we
-must move away from the photon model and think about the wave model of
-light.  The light wave's phase is given by $\phi = \omega t$ where $t$ is the proper time. Then, the
-difference in phase between the two light beams after each has
-completed its roundtrip is:
-\begin{equation}
-\Delta \phi = \phi_{rt+} - \phi_{rt-} = \frac{2 L \omega}{c} h_+
-\end{equation}
-Two time derivatives yields 
-\begin{equation}
-\frac{d^2\Delta \phi}{dt^2} = \frac{2 L \omega}{c} \partial_t \partial_t h_+.
-\end{equation}
-It can be shown \cite{Garfinkle2005Gauge} that the Riemann tensor in
-the TT gauge is $R_{tkti}~=-\frac{1}{2}\partial_t \partial_t h_{ki}$,
-and gauge invariant. Therefore, our
-physically measurable quantity can be expressed as being manifestly
-gauge invariant, proving that a laser interferometer can detect the
-effect of gravitational waves.
-
-
 
 
 

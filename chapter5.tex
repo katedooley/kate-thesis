@@ -668,6 +668,50 @@ ETMX & ETMY & ITMX & ITMY & RM & \\
 \section{Sensing Matrix Stability}
 \textcolor{blue}{Show how the sensing matrix changes in time (APS
   presentation).}
+sensing matrix stability over time, with power;
+just how diagonal is the system?
+
+The ASC input matrices are based on sensing measurements made Jan. 28th at 6 W 
+input power. By design, the input matrix is not exactly the inverse of the 
+sensing matrix, meaning the system is not completely diagonal:
+ 6 W input * 6 W sensing (by design)
+ \[ \left( \begin{array}{ccccc}
+0.79 & 0 & 0.30 & 0 & 0 \\
+0 & 1.0 & 0 & 0 & 0 \\
+0 & 0 & 1.0 & 0 & 0 \\
+0 & 0 & 0 & 1.0 & 0 \\
+0 & 0 & 0 & 0 & 1.0 
+\end{array} \right)\] 
+
+Over time, the sensing matrix changes enough that the system is even less 
+diagonal:
+6 W input * 6 W sensing (after 10 min)
+ \[ \left( \begin{array}{ccccc}
+0.79 & 0 & 0.32 & 0 & 0 \\
+0 & 1.0 & 0 & 0 & 0 \\
+-0.02 & 0 & 1.0 & 0 & 0 \\
+0 & -0.02 & 0 & 1.0 & 0.02 \\
+0 & 0.02 & 0 & 0.05 & 1.03 
+\end{array} \right)\] 
+
+6 W input * 6 W sensing (after 1 week)
+ \[ \left( \begin{array}{ccccc}
+0.67 & 0 & 0.27 & 0 & 0 \\
+0 & 0.91 & 0 & 0.03 & -0.03 \\
+0.09 & 0 & 0.84 & 0 & 0 \\
+0 & 0.15 & 0 & 0.83 & 0.27 \\
+0 & 0.06 & 0 & 0.07 & 1.04 
+\end{array} \right)\] 
+
+Using last night's sensing matrix measurements at 12 W:
+6 W input * 12 W sensing (after 3 weeks)
+ \[ \left( \begin{array}{ccccc}
+1.4 & 0 & 0.55 & 0 & 0 \\
+0 & 1.8 & 0 & -0.09 & 0.15 \\
+-0.08 & 0 & 2.0 & 0 & 0 \\
+0 & -0.22 & 0 & 1.4 & 0.64 \\
+0 & 0.30 & 0 & -0.72 & 2.9 
+\end{array} \right)\] 
 
 
 
@@ -1016,7 +1060,8 @@ recycling cavity geometry]{WFS optical response as a function of power
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/BSMyaw.pdf}}
 \caption[Beam spot motion on the ITMs and ETMs during a 16~W
 lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
-  night (May21, 2010, 06:02:30 UTC).}
+  night. Ground motion at the time of this measurement is shown in
+  Fig.~\ref{fig:seismic_bsm}}%(May21, 2010, 06:02:30 UTC).}
 \label{fig:bsm}
 \end{centering}
 \end{figure}
@@ -1031,11 +1076,40 @@ lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
   sensor error signals from 10 W lock through input matrix and power
   scaling to eigenbasis, compared with eigenbasis reconstruction of
   optical lever signals when interferometer not locked, but optics
-  under oplev damping. Data are taken 45 minutes
-  apart. \textcolor{blue}{Perhaps include loop-undone backgrounds,
-    too, using my measured OLTFs to show match to optical lever
-    background.}}
+  under oplev damping. Data are taken 45 minutes apart, and the ground
+  motions are shown in Figures~\ref{fig:seismic_nolock} and
+  \ref{fig:seismic_locked}. \textcolor{blue}{Perhaps include loop-undone
+    backgrounds, too, using my measured OLTFs to show match to optical
+    lever background.}}
+\label{fig:ASConoff}
+\end{centering}
+\end{figure}
+
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics{figures/DS_darkres.pdf}}\subfigure{\includegraphics{figures/CS_darkres.pdf}}
+\subfigure{\includegraphics{figures/DH_darkres.pdf}}\subfigure{\includegraphics{figures/CH_darkres.pdf}}
+\subfigure{\includegraphics{figures/RM_darkres.pdf}}
+\caption{}
 \label{fig:}
+\end{centering}
+\end{figure}
+
+
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics{figures/onoff_ITMX.pdf}}\subfigure{\includegraphics{figures/onoff_ITMY.pdf}}
+\subfigure{\includegraphics{figures/onoff_ETMX.pdf}}\subfigure{\includegraphics{figures/onoff_ETMY.pdf}}
+\subfigure{\includegraphics{figures/onoff_RMmir.pdf}}
+\caption[Individual mirror motion with and without ASC]{Individual
+  mirror motion with and without the ASC. The mirrors move more with
+  respect to their local grounds when the interferometer is controlled
+  than when they're on their own. Data are taken 45 minutes apart, and the ground
+  motions are shown in Figures~\ref{fig:seismic_nolock} and
+  \ref{fig:seismic_locked}.}
+\label{fig:mirror_onoff}
 \end{centering}
 \end{figure}
 
@@ -1079,7 +1153,7 @@ Broadband effect on DARM.
   transfer function could not be measured because the contribution is
   so small. The fitted curves can be multiplied by the WFS error
   signals at any time to calculate the ASC noise contribution to
-  DARM. \textcolor{blue}{Need to turn cts into Volts.}}
+  DARM. \textcolor{blue}{Need to turn cts into radians.}}
 \end{centering}
 \end{figure}
 
@@ -1087,12 +1161,11 @@ Broadband effect on DARM.
 
 \begin{figure}
 \begin{centering}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/WFSpittoDARM.pdf}}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/WFSyawtoDARM.pdf}}
+\subfigure{\includegraphics{figures/WFSpittoDARM.pdf}}
+\subfigure{\includegraphics{figures/WFSyawtoDARM.pdf}}
 \caption[Wavefront sensor to DARM noisebudget for pitch and
 yaw]{Wavefront sensor to DARM noisebudget for pitch (top) and yaw
-  (bottom) during a 14~W lock (July 17, 2009). \textcolor{blue}{which
-    line width?}}
+  (bottom) during a 14~W lock (July 17, 2009).}
 \label{fig:}
 \end{centering}
 \end{figure}
@@ -1103,8 +1176,7 @@ yaw]{Wavefront sensor to DARM noisebudget for pitch (top) and yaw
 \subfigure{\includegraphics[width=1.0\columnwidth]{figures/opticsyawtoDARM.pdf}}
 \caption[Optic to DARM noisebudget for pitch and yaw]{Optic to DARM
   noisebudget for pitch (top) and yaw (bottom) during a 14~W lock
-  (July 17, 2009). \textcolor{blue}{This height or previous figure's
-    height?}}
+  (July 17, 2009).}
 \label{fig:}
 \end{centering}
 \end{figure}
@@ -1114,10 +1186,11 @@ yaw]{Wavefront sensor to DARM noisebudget for pitch (top) and yaw
 \includegraphics[width=1.0\columnwidth]{figures/ASC2DARM.pdf}
 \caption[Total WFS and optical lever noise contribution to DARM
   during a 16 W lock at night]{Total WFS and optical lever noise contribution to DARM
-  during a 16 W lock at night (gps time 958456964). Pitch and yaw
+  during a 16 W lock at night. Pitch and yaw
   contributions are added in quadrature under the assumption they are
-  de-coupled.}
-\label{fig:}
+  de-coupled. Seismic spectra at the time of this measurment are found
+in Fig.~\ref{fig:seismic_NB}.}
+\label{fig:asc2darm}
 \end{centering}
 \end{figure}
 
@@ -1181,3 +1254,12 @@ necessary for high power operation, a key challenge for aLIGO.
 \section{Advanced LIGO}
 The Advanced LIGO interferometers will have heavier mirrors, a stable
 recycling cavity, and more circulating power. 
+
+
+
+
+\section{Summary}
+\textcolor{blue}{from Guido: add another summary here that ASC in
+  neither base was limiting us but that the experience gained for
+  aLIGO is priceless. Some catch phrase that highlights a particular
+  lesson learned would be good}
