@@ -82,7 +82,7 @@ We create a normalized yaw as
 \end{equation}
 Using the Taylor series expansion of the error function, we have a
 first order estimate for the relationship between normalized yaw and
-beam displacement $x_0$ for a beam of \textcolor{blue}{diameter(??)} $w$:
+beam displacement $x_0$ for a beam of radius $w$:
 \begin{equation}
 \frac{x_0}{\mathrm{YAW}} \approx \frac{w}{2} \sqrt{\frac{\pi}{2}}.
 \end{equation}
@@ -277,7 +277,7 @@ twice. We ensured there was 1~V~DC on the PD in both locations.
 function]{Livingston mode cleaner intensity noise transfer
   function. Red open circles are data; solid blue line is a single
   pole fit. Relating fit parameters to the model, the pole frequency
-  is $f_{MC}=4762$ Hz.}
+  is $f_p=4762$ Hz.}
 \label{fig:mcpole}
 \end{centering}
 \end{figure}
@@ -292,64 +292,61 @@ finesse is $\mathcal{F} = \mathrm{FSR}/2f_p = 1282$.
 
 
 
-\section{Carrier Mode Matching into the Interferometer}
 
-The mode matching into the interferometer can be measured by comparing
-the power reflected from the interferometer during a full lock to the
-power reflected with a single bounce off the RM.
-
-First, we will look at the interferometer visibility--what percentage
-of power sent to the interferometer is reflected by it. 
-
-Then, we'll
-consider the sources of reflected light and deduce from the visiblity
-measurements just how much of the reflected light is due to a mode
-mismatch. 
-
-For Livingston, we will see that the visibility is a very
-close approximation of the mode mismatch. However, at Hanford, much of
-the reflected light is due to an impedance mismatch, so further
-analysis of the visibility is presented to determine the mode
-matching.
+\section{Carrier Mode-matching into the Interferometer}
+\label{sec:MM}
+When a cavity is locked to an input beam, all of the light impinging
+the cavity is coupled into it if the cavity is impedance matched and
+if the input beam and the cavity are mode-matched. When these
+requirements are not met, then light is reflected from the cavity. The
+cavity visibility is a quantity that summarizes the compound effect of
+these sources of reflected light.\footnote{When there are sidebands,
+  as is the case for LIGO, the sidebands are also a source of
+  reflected light. We measured that 6\% to 8\% of the power in the
+  reflected beam during lock is sideband content, and that the 25~MHz
+  sideband visibility is 87\%.} By measuring the interferometer
+visibility and by the measuring the impedance mismatch, we can deduce
+the carrier mode-matching into the interferometer.
 
 
 \subsection{Interferometer Visibility}
-The visibility is a measure of how much carrier light is reflected from the
-locked interferometer compared to how much carrier light is sent in. Ideally,
-all of the light should be coupled into the interferometer. However,
-any mode mismatch of the input beam to the cavity or any mismatch of
-interferometer losses to PRM reflectivity (impedance mismatch, see
-Section \ref{sec:impedance}) will
-cause carrier light to be reflected. The visibility summarizes the
-compound effect of all of these sources of reflected light.
-
-To measure the visibility, we need to know only a few numbers. We must
-have a measure of how much light is sent to the interferometer for
-normalization purposes and we must have a measure of the DC reflected
-power when the interferometer is not locked (all light is reflected
-off of the RM) and when it is locked. The visibility is then given
-by:
+The visibility is a measure of how much carrier light is reflected
+from the locked interferometer compared to how much carrier light is
+sent in.  To measure the visibility, we need to know only a few
+numbers. We must have a measure of how much light is sent to the
+interferometer for normalization purposes and we must have a measure
+of the DC reflected power when the interferometer is both locked and
+not locked (all light is reflected off of the RM). The visibility is
+then given by:
 \begin{equation}
 \mbox{visibility} = 1 -
 \frac{P_{REFL_{locked}}}{P_{REFL_{unlocked}}} \frac{P_{IN_{unlocked}}}{P_{IN_{locked}}}
 \end{equation}
 
 We have two measures of how much light is being sent into the
-interferometer and several of how much light is
-reflected. \texttt{L1:IOO-MC\_PWR\_IN} is a pick off of the light on
-the PSL table just before it 
-enters vaccuum and \texttt{L1:IOO-MC\_TRANS\_SUM} is a pick off of the light just after
-the MC. \texttt{L1:LSC-REFL\_DC} is a record of the power at the REFL
-port as seen by one of the LSC REFL PDs. There are others, like WFS3
-sum, WFS4 sum, and the trigger PD that we could also look at. Together, these channels tell
-a story about the percentage of incoming light rejected by the interferometer.
+interferometer (a pick-off of the light before it enters the vacuum
+and a pick-off of the MC transmitted light) and several of how much
+light is reflected. An example showing some of these signals for LLO
+is shown in Figure \ref{fig:llomm1630}. The lock stretch ends at $t=5$
+min. Note that the amount of reflected light is increasing up to the
+end of the lock as the interferometer is losing stability. When lock
+is lost, the common mode servo kicks the mode cleaner out of lock too,
+and the MC trans power drops to 0. About 15 seconds later the MC
+relocks and then the power into it increases. About 15 seconds after
+that, at 5.5 minutes, the MC WFS turn on, improving the alignment of
+the MC to the input beam and we see another step in the power getting
+through the MC. The interferometer is still not locked, so all light
+(except for $2.7\%$) is reflected off of the recycling mirror. The
+downward spikes in the reflected light trace are the result of
+interferometer flashes, instances of all mirrors lining up correctly
+to let some light in.
 
 \begin{figure}
 \begin{centering}
 \includegraphics{figures/llo_mm1630bigger.pdf}
 \caption[End of an 8.7 W lock at Livingston on Feb. 23, 2010]{End of
   an 8.7 W lock at Livingston on Feb. 23, 2010. The mode cleaner
-  re-locks at 0.5~W about 20~seconds after lock loss and then the
+  re-locks at 0.5~W about 15~seconds after lock loss and then the
   power is increased to 2~W. Comparison of the minimum intereferometer
   reflected power during lock and the maximum reflected power out of
   lock provides a measure of interferometer mode matching.}
@@ -357,115 +354,46 @@ a story about the percentage of incoming light rejected by the interferometer.
 \end{centering}
 \end{figure}
 
-An example for LLO is shown in Figure \ref{fig:llomm1630}. The lock
-stretch ends at $t=5$ min. Note that the amount of reflected light is 
-increasing up to the end of the lock as the interferometer is losing
-stability. When lock is lost, the common mode servo kicks the mode
-cleaner out of lock too, and the MC trans power drops to 0. About 15 seconds later the MC relocks and then
-the power into it increases. About 15 seconds after that, at 5.5 minutes, the MC WFS turn
-on, improving the alignment of the MC to the input beam and we
-see another step in the power getting through the MC. The
-interferometer is still not locked, so all light (except for $2.7\%$) is reflected off of
-the recycling mirror, as seen by REFL DC. The downward spikes are the
-result of interferometer flashes, instances of all mirrors lining up
-correctly to let some light in. 
-
-The reason we look at two records of the light sent into the
-interferometer is because from one power to the next, each gives a
-different ratio of power increase. Since we don't
-have a good reason to trust one more than the other, we'll take the
-average of the two ratios for use in the vilibility calculation. In
-this example, PWR IN says that the locked state compared to the
-unlocked state had $87/6.5 = 13.4$ times more power. However, MC TRANS
-says that ratio is $326/21 = 15.5$. We'll meet in the middle and use a
-locked to unlocked input power ratio of 14.5. 
-
-Then, we will look at the average minimum of REFL when the
-interferometer is locked (here, about 290) and the average maximum
-when it is not (241) for a measure of power reflected. The dark value,
-of course, must be subtracted from each--in this case it's -22.5. The
-visibility is thus:
-\begin{equation}
-\mathrm{visibility} = 1 - \frac{290-22.5}{15.5(241-22.5)} = 92.1\%.
-\end{equation}
-The exact same calculation made for a pseudo-random sampling of
-Livingston lock stretches is shown in Table~\ref{table:llo_vis}.
-
-\begin{table}
-\centering
-\begin{tabular}{l l l l l l}
- & & & & Visibility: & \\
-Segment & Date & Time of day & PWR IN & REFL DC & trigger PD \\
-\hline\hline
-0169 & July 31, 2009 & afternoon & 7.2 W & 92.1\% & 92.0\% \\
-1009 & Nov. 20, 2009 & evening & 5.7 W & 91.7\% & 91.8\% \\
-1380 & Jan 6, 2010 & evening & 5.5 W & 92.3\% \\
-1630 & Feb 23, 2010 & morning & 8.7 W & 92.1\% & 91.8\% \\
-2180 & May 20, 2010 & evening & 11.6 W  & 91.6\% & 91.7\% \\
-2223 & May 27, 2010 & evening & 11.5 W  & 91.9\% & 91.2\% \\
-2424 & June 29, 2010 & night & 9.0 W & 91.9\% \\
-2999 & Sep. 14, 2010 & evening & 9.7 W & 91.6\% \\
-3159 & Oct. 2, 2010 & morning & 4.1 W & 91.8\%\\
-3272 & Oct. 20, 2010 & night & 7.1 W & 91.5\% & 92.1\% \\
-\hline
-\end{tabular}
-\caption{Livingston}
-\label{table:llo_vis}
-\end{table}
-
-\begin{table}
-\centering
-\begin{tabular}{l l l l l l l l}
- & & & & Visibility: & & \\
-Segment & Date & Time of day & PWR IN & REFLPD1 & WFS3 DC & WFS4 DC &
-trigger PD\\
-\hline\hline
-0128 & July 20, 2009 & morning & 7.9 W & 75.5\% & 94.0\% & 93.9\% & 94.8\%\\
-0685 & Nov. 9, 2009 & evening & 13.9 W & 72.5\% & 93.9\% & 94.1\% & 94.7\%\\
-0999 & Jan 1, 2010 & morning & 14.0 W & 81.1\% & 93.8\% & 94.2\% & 94.4\%\\
-2026 & July 9, 2010 & night & 20.3 W & 80.1\% & 92.6\% & 92.6\% & 93.4\% \\
-2340 & Oct 5, 2010 & night & 20.1 W & 78.0\% & 91.6\% & 92.1\% & 93.3\%\\
-\hline
-\end{tabular}
-\caption{Hanford}
-\label{table:lho_mm}
-\end{table}
+For this particular example, the visibility is 92.1\%.  When evaluated
+for a sampling of lock losses throughout the Enhanced LIGO run, the
+average visibility is 91.84\% $\pm$ 0.07\%.
 
 
-\subsection{Impedance Matching}
-\label{sec:impedance}
-The lower limit for the amount of power in the interferometer's reflected beam 
-can be calculated simply based on the reflectivities of the 
-mirrors. A cavity is impedance matched when the input and output
-couplers have the same reflectivity--all 
-light sent at the cavity is coupled into it. If there's a difference between the reflectivities of the two 
-mirrors, the cavity is over- or under-coupled and light will be reflected. 
 
-Treating the interferometer arms as a single mirror that forms a cavity with the RM, we want the RM 
-transmission to match the transmission of the arms. This must include all losses in the interferometer 
-such as absorption, scattering, and ETM transmission. Design estimates resulted in an RM power 
-transmission of 2.7\%. 
 
-If losses don't equal 2.7\% in reality, then we have an impedance mismatch and we will see light at the 
-REFL port. We can measure the losses implicitly via the carrier recycling gain and therefore provide a 
-good estimate of power in REFL due to impedance mismatch. The
-amplitude reflectivity of the interferometer is:
+
+\subsection{Impedance matching}
+A cavity is impedance matched when the input and output couplers have
+the same reflectivity. If there is a difference between the
+reflectivities of the two mirrors, the cavity is over- or
+under-coupled and light will be reflected. Treating the interferometer
+arms as a single mirror that forms a cavity with the RM, we want the
+RM transmission to match the transmission of the arms. This must
+include all losses in the interferometer such as absorption,
+scattering, and ETM transmission. Design estimates resulted in an RM
+power transmission of 2.7\%. If losses do not equal 2.7\%, then there is an impedance mismatch and
+we will see light at the reflected port. 
+
+The amplitude reflectivity of the interferometer is:
 \begin{equation} 
 r_{ifo} = \frac{r_{arms}-r_{rm}}{1-r_{rm}r_{arms}}.
 \end{equation}
-The composite arm cavity amplitude
-reflectivity is $r_{arms}$ and the RM amplitude reflectivity is
-$r_{rm} = \sqrt{0.973}$. 
-
-It is not so simple to know what $r_{arms}$ is
-in practice. A precise measure of all losses in the arms would be
-needed. Therefore, we turn to writing $r_{arms}$ in terms of a
-quantity that we can measure quite well, the power recycled Michelson
-carrier gain $G_{cr}$:
+The composite arm cavity amplitude reflectivity is $r_{arms}$ and the
+RM amplitude reflectivity is $r_{rm} = \sqrt{0.973}$.  It is not so
+simple to know what $r_{arms}$ is in practice. A precise measure of
+all losses in the arms would be needed. Therefore, we turn to writing
+$r_{arms}$ in terms of a quantity that we can measure, the power
+recycled Michelson carrier gain $G_{cr}$:
 \begin{equation}
 G_{cr} = g_{cr}^2 = \left[\frac{t_{rm}}{1-r_{rm}r_{arms}}\right]^2.
 \end{equation}
-Solving for $r_{arms}$ as a function of 
+Experimentally, the recycling gain is measured as
+\begin{equation}
+G_{cr} = T_{rm} \frac{\mathrm{NPTRX + NPTRY}}{2},
+\end{equation}
+where NPTRX and NPTRY are channels recording the amount of light
+transmitted through the ETMs, normalized such that NPTRX=NPTRY=1
+during a single arm lock. For Livingston, $G_{cr} = 39$.
 
 Figure \ref{fig:reflectivity} shows $R_{ifo} = r_{ifo}^2$ as a
 function of $G_{cr}$. Curves for a couple different RM reflectivities
@@ -478,57 +406,19 @@ change for minor mis-approximations of the RM reflectivity.
 mismatch]{Interferometer reflectivity due to impedance mismatch. The
   percentage of power incident on the RM that is reflected by the
   interferometer is a function of carrier recycling gain and RM
-  reflectivity. The carrier recycling gain is 39 for LLO and 75 for
-  Hanford. The recycling mirror power transmission is nominally
-  2.7\%.}
+  reflectivity. The carrier recycling gain is 39 for Livingston. The
+  recycling mirror power transmission is nominally 2.7\%.}
 \label{fig:reflectivity}
 \end{centering}
 \end{figure}
-
-Experimentally, the recycling gain is measured as
-\begin{equation}
-G_{cr} = g_{cr}^2 = T_{rm} \frac{\mathrm{NPTRX + NPTRY}}{2},
-\end{equation}
-which assumes the NPTRs are calibrated such that NPTRX=NPTRY=1 during a
-single arm lock. Figure \ref{fig:Gcr} shows the measured carrier
-recycling gain for each interferometer during the S6 science
-segments. 
-
-\begin{figure}
-\begin{centering}
-%\includegraphics[width=1.0\textwidth]{figures/S6_Gcr.pdf}
-\caption{Carrier recycling gain during S6.}
-\label{fig:Gcr}
-\end{centering}
-\end{figure}
+We find that the impedance mismatch for Livingston is only 0.07\%.
 
 
 
-\subsection{Mode Matching}
-Any difference between the amount of light seen in REFL and what's expected from impedance mismatch 
-can be contributed to imperfect mode matching.
-
-For Livingston, the story is pretty straightforward. The interferometer is nearly perfectly impedance 
-matched, so all light at the REFL port is due to imperfect mode matching. Thus, the LLO mode 
-mismatch during S6 was 8\%.
-
-We can't quite put together a clean case for Hanford yet as there's so much uncertainty in both the 
-recycling gain and the visibility numbers. The carrier recycling gain may be as low as 53 or as high as 75. 
-The visibility is either 77.5\% or 93.5\%. Table \ref{table:Gcr}
-summarizes the possiblities.
-
-\begin{table}
-\centering
-\begin{tabular}{l l l l l}
-& $G_{cr}$ & impedance mismatch & visibility & mode mismatch\\
-\hline\hline
-LLO & 39 & 0.07\% & 91.84\% $\pm$ 0.07\% & 8\%\\
-LHO & 53 & 4.0\% & 93.5\% & 2.5\% \\
-       &      &            & 77.5\% & 18.5\% \\
-       & 75 & 18.4\% & 93.5\% & impossible\\
-       &      &             & 77.5\% & 4.1\% \\ 
-\hline
-\end{tabular}
-\caption{Summary of interferometer parameters used to determine mode matching.}
-\label{table:Gcr}
-\end{table}
+\subsection{Mode-matching}
+Any difference between the interferometer visibility and what is
+expected from impedance mismatch can be contributed to imperfect mode
+matching. For Livingston, the interferometer is nearly perfectly
+impedance matched, so all light at the reflected port is due to
+imperfect mode matching. Therefore, the LLO mode mismatch during S6
+was 8\%.

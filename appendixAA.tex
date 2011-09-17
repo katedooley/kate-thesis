@@ -5,8 +5,8 @@
 \section{Parameters}
 \begin{table}
 \centering
-\caption{Mirror radii of curvatures. References are
-  \cite{Adhikari2005Input} and Garilynn Billingsley's website \textcolor{blue}{cite!}}
+\caption{Mirror radii of curvatures.} 
+%References are \cite{Adhikari2005Input} and \href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn Billingsley's website}
 \begin{tabular}{l l l l}
 \hline
 optic & L1 ROC [km] & H1 ROC [km] \\
@@ -18,7 +18,6 @@ MMT1 & 6.76 & 6.77 \\
 MMT2 & 3.16 & 3.17 \\
 MMT3 & 25.16 & 25.04\\
 RM & 15.78 & 14.40 \\
-%\href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn's site}
 BS & -189 & -336 \\
 ITMX & 14.760 & 13.910 \\ 
 ITMY & 14.520 & 13.600 \\
@@ -305,49 +304,44 @@ images and QPD readback provide the signals used for beam centering.
 
 
 
-% \section{Wavefront sensors}
-% A wavefront sensor is a quadrant photodiode equipped with RF
-% electronics. 
-
-
-\section{Photodiodes}
-\label{sec:pds}
-The basic photoconductive photodiode is depicted in Fig. \ref{}. A
-negative voltage applied to the anode, represented by the line, does
-not yield any current across the photodiode until electrons are
-released by the energy of photons striking the diode. Electrons flow
-in the direction of the cathode which is connected to ground,
-producing a current
-\begin{equation}
-i_\gamma = \frac{q_e}{h \nu} P \epsilon
-\end{equation}
-where $q_e$ is the electron charge, $h$ is Planck's constant, $\nu$ is
-the frequency of the incident light, $P$ is the power of the light,
-and $\epsilon$ is the quantum efficiency of the diode. The quantity
-$q_e/h \nu$ is known as the \emph{responsivity}. For LIGO where
-$\lambda = 1064$ nm, the responsivity is $0.86$ A/W.
+% \section{Photodiodes}
+% \label{sec:pds}
+% The basic photoconductive photodiode is depicted in Fig. \ref{}. A
+% negative voltage applied to the anode, represented by the line, does
+% not yield any current across the photodiode until electrons are
+% released by the energy of photons striking the diode. Electrons flow
+% in the direction of the cathode which is connected to ground,
+% producing a current
+% \begin{equation}
+% i_\gamma = \frac{q_e}{h \nu} P \epsilon
+% \end{equation}
+% where $q_e$ is the electron charge, $h$ is Planck's constant, $\nu$ is
+% the frequency of the incident light, $P$ is the power of the light,
+% and $\epsilon$ is the quantum efficiency of the diode. The quantity
+% $q_e/h \nu$ is known as the \emph{responsivity}. For LIGO where
+% $\lambda = 1064$ nm, the responsivity is $0.86$ A/W.
 
 
 
-\section{Channel Names}
-\textcolor{blue}{finish this or skip!}
-It is often perplexing why there are so many channels with almost
-identical names. And just what those names mean can also sometimes be
-elusive. The best advice I have to offer about how to figure out for
-one's self what the root of the channel name conveys about the data it
-represents is to browse the MEDM screens. The MEDM screens pictorially
-show the flow of which channels are derived from others, and whether
-they sit before or after an excitation point, for example. They also
-sometimes offer hints as to exactly what calculation is done under the
-scene in the front-end code to compute new channels. 
+% \section{Channel Names}
+% \textcolor{blue}{finish this or skip!}
+% It is often perplexing why there are so many channels with almost
+% identical names. And just what those names mean can also sometimes be
+% elusive. The best advice I have to offer about how to figure out for
+% one's self what the root of the channel name conveys about the data it
+% represents is to browse the MEDM screens. The MEDM screens pictorially
+% show the flow of which channels are derived from others, and whether
+% they sit before or after an excitation point, for example. They also
+% sometimes offer hints as to exactly what calculation is done under the
+% scene in the front-end code to compute new channels. 
 
-The topic I want to cover here is the difference between the
-\texttt{OUT}, \texttt{OUT16}, \texttt{OUTPUT}, and \texttt{OUTMON}
-channel name extenstions. They appear in all of the subsystems, and it
-is crucial to realize that some are good for analyzing data and some
-good for getting only a sense in real-time of what's going on. Some
-are typically recorded to disk, and some are not. These concepts
-extend to other common name extensions as well. 
+% The topic I want to cover here is the difference between the
+% \texttt{OUT}, \texttt{OUT16}, \texttt{OUTPUT}, and \texttt{OUTMON}
+% channel name extenstions. They appear in all of the subsystems, and it
+% is crucial to realize that some are good for analyzing data and some
+% good for getting only a sense in real-time of what's going on. Some
+% are typically recorded to disk, and some are not. These concepts
+% extend to other common name extensions as well. 
 
 
 

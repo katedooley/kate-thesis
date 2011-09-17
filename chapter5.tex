@@ -970,7 +970,7 @@ recycling cavity geometry]{WFS optical response as a function of power
   achieve a dependable feedback system, the error signals are scaled
   in real-time, forcing their responses to be flat with power. This
   range of SPOB is low for normal operations. \textcolor{blue}{plot as
-  ratio of first value.}}
+  ratio of first value and include fitted lines for satisfaction.}}
 \label{fig:WFStrack}
 \end{centering}
 \end{figure}
@@ -1014,8 +1014,7 @@ recycling cavity geometry]{WFS optical response as a function of power
 
 
 \section{WFS Servo Open Loop Transfer Functions}
-
-
+\label{sec:WFSolgs}
 
 \begin{figure}
 \begin{centering}
@@ -1069,32 +1068,39 @@ lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
 
 \begin{figure}
 \begin{centering}
-\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_DS.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_CS.pdf}}
-\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_DH.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_CH.pdf}}
-\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_RM.pdf}}
-\caption[Angular motion suppression due to the ASC]{Propagation of WFS
-  sensor error signals from 10 W lock through input matrix and power
-  scaling to eigenbasis, compared with eigenbasis reconstruction of
-  optical lever signals when interferometer not locked, but optics
-  under oplev damping. Data are taken 45 minutes apart, and the ground
-  motions are shown in Figures~\ref{fig:seismic_nolock} and
-  \ref{fig:seismic_locked}. \textcolor{blue}{Perhaps include loop-undone
-    backgrounds, too, using my measured OLTFs to show match to optical
-    lever background.}}
-\label{fig:ASConoff}
+\subfigure{\includegraphics{figures/DS_darkres.pdf}}\subfigure{\includegraphics{figures/CS_darkres.pdf}}
+\subfigure{\includegraphics{figures/DH_darkres.pdf}}\subfigure{\includegraphics{figures/CH_darkres.pdf}}
+\subfigure{\includegraphics{figures/RM_darkres.pdf}}
+\caption[Residual motion of the radiation pressure eigenbasis degrees
+  of freedom]{Residual motion of the radiation pressure eigenbasis degrees
+  of freedom using calibrated WFS error signals during a 10~W lock
+  compared to dark noise and the background motion as calculated using
+  the open loop transfer function measurements. The sensor dark noises
+  (see Fig.~\ref{fig:WFSdarknoise}) are put in the RP eigenbasis by
+  propagation through the WFS power scaling and WFS input matrix.}
+\label{fig:WFSresidual}
 \end{centering}
 \end{figure}
 
 
 \begin{figure}
 \begin{centering}
-\subfigure{\includegraphics{figures/DS_darkres.pdf}}\subfigure{\includegraphics{figures/CS_darkres.pdf}}
-\subfigure{\includegraphics{figures/DH_darkres.pdf}}\subfigure{\includegraphics{figures/CH_darkres.pdf}}
-\subfigure{\includegraphics{figures/RM_darkres.pdf}}
-\caption{}
-\label{fig:}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_DS.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_CS.pdf}}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_DH.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_CH.pdf}}
+\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_RM.pdf}}
+\caption[Angular motion suppression due to the ASC]{Demonstration of
+  angular motion suppression down to 4~mHz due to the ASC. Same as
+  Fig.~\ref{fig:WFSresidual}, but the background (here called ``no
+  ASC'') is the RP eigenbasis reconstruction of optical lever signals
+  when the interferometer is not locked. Data are taken 45 minutes
+  apart, and the ground motions are shown in
+  Figures~\ref{fig:seismic_nolock} and \ref{fig:seismic_locked}. The
+  differences in ground motion explains the discrepancies between 1~Hz
+  and 10~Hz.}
+\label{fig:ASConoff}
 \end{centering}
 \end{figure}
+
 
 
 
@@ -1141,9 +1147,18 @@ lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
 
 
 \section{ASC to DARM Noisebudget}
-Broadband effect on DARM.
-
-
+One of the most important figures of merit of ASC performance is how
+much noise the ASC contributes to DARM. We measure the coupling of the
+ASC to DARM by injecting broadband noise between 40 and 110 Hz in each
+of the suspension angular excitation
+points\footnote{ie. \texttt{L1:SUS-ETMX\_ASCPIT\_EXCMON}} and
+recording both the suspension angular control
+signal\footnote{ie. \texttt{L1:SUS-ETMX\_ASCPIT\_OUT}} and
+DARM. Signals from a time without excitation are subtracted from those
+with the excitation, resulting in just the contribution to each
+spectra due to noise. Dividing the noisy DARM by the noisy suspension
+control signal provides the transfer function we use to mulitiply by a
+suspension signal at any time.
 
 \begin{figure}
 \begin{centering}
@@ -1161,22 +1176,20 @@ Broadband effect on DARM.
 
 \begin{figure}
 \begin{centering}
-\subfigure{\includegraphics{figures/WFSpittoDARM.pdf}}
-\subfigure{\includegraphics{figures/WFSyawtoDARM.pdf}}
-\caption[Wavefront sensor to DARM noisebudget for pitch and
-yaw]{Wavefront sensor to DARM noisebudget for pitch (top) and yaw
-  (bottom) during a 14~W lock (July 17, 2009).}
+\subfigure[Pitch.]{\includegraphics{figures/WFSpittoDARM.pdf}}
+\subfigure[Yaw.]{\includegraphics{figures/WFSyawtoDARM.pdf}}
+\caption[Wavefront sensor to DARM noisebudget]{Wavefront sensor to
+  DARM noisebudget during a 14~W lock.} % (July 17, 2009).}
 \label{fig:}
 \end{centering}
 \end{figure}
 
 \begin{figure}
 \begin{centering}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/opticspittoDARM.pdf}}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/opticsyawtoDARM.pdf}}
-\caption[Optic to DARM noisebudget for pitch and yaw]{Optic to DARM
-  noisebudget for pitch (top) and yaw (bottom) during a 14~W lock
-  (July 17, 2009).}
+\subfigure[Pitch.]{\includegraphics[width=1.0\columnwidth]{figures/opticspittoDARM.pdf}}
+\subfigure[Yaw.]{\includegraphics[width=1.0\columnwidth]{figures/opticsyawtoDARM.pdf}}
+\caption[Optic to DARM noisebudget]{Optic to DARM noisebudget during a
+  14~W lock.}% (July 17, 2009).
 \label{fig:}
 \end{centering}
 \end{figure}
@@ -1184,12 +1197,12 @@ yaw]{Wavefront sensor to DARM noisebudget for pitch (top) and yaw
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\columnwidth]{figures/ASC2DARM.pdf}
-\caption[Total WFS and optical lever noise contribution to DARM
-  during a 16 W lock at night]{Total WFS and optical lever noise contribution to DARM
-  during a 16 W lock at night. Pitch and yaw
-  contributions are added in quadrature under the assumption they are
+\caption[Total WFS and optical lever noise contribution to DARM during
+a 16 W lock at night]{Total WFS and optical lever noise contribution
+  to DARM during a 16 W lock at night. Pitch and yaw contributions are
+  added in quadrature under the assumption they are
   de-coupled. Seismic spectra at the time of this measurment are found
-in Fig.~\ref{fig:seismic_NB}.}
+  in Fig.~\ref{fig:seismic_NB}.}
 \label{fig:asc2darm}
 \end{centering}
 \end{figure}
@@ -1202,7 +1215,17 @@ in Fig.~\ref{fig:seismic_NB}.}
 The cut-off frequency of the lowpass filters for the WFS control are
 of particular importance in the DARM noisebudget. The lowpass filter
 is necessary for suppressing the impression of sensing noise on
-suspension control. 
+suspension control signals. Steepening the cut-off frequency results
+in less sensing noise impression, but each pole used to achieve the
+steeper drop-off introduces an extra $90^{\circ}$ of phase
+loss. Likewise, lowering the cut-off frequency reduces noise
+impression, but it pushes the phase loss to lower
+frequencies.Decreasing the phase margin of the WFS loops leads to
+gain peaking and a greater likelihood of loop instability. A fine
+balance must therefore be found between loop stability and noise
+impression. Figure~\ref{fig:WFS1cutoff} demonstrates the effect on
+DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
+30~Hz.
 
 \begin{figure}
 \begin{centering}

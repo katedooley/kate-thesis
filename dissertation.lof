@@ -44,17 +44,21 @@
 \contentsline {figure}{\numberline {{6-8}}{\ignorespaces Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four different powers.}}{104}{figure.6.8}
 \contentsline {figure}{\numberline {{6-9}}{\ignorespaces Open loop gains (pitch) of the differential hard (WFS2B) loop as measured at four different powers.}}{105}{figure.6.9}
 \contentsline {figure}{\numberline {{6-10}}{\ignorespaces Beam spot motion on the ITMs and ETMs during a 16\nobreakspace {}W lock}}{106}{figure.6.10}
-\contentsline {figure}{\numberline {{6-11}}{\ignorespaces Angular motion suppression due to the ASC}}{107}{figure.6.11}
+\contentsline {figure}{\numberline {{6-11}}{\ignorespaces Residual motion of the radiation pressure eigenbasis degrees of freedom}}{107}{figure.6.11}
+\contentsline {figure}{\numberline {{6-12}}{\ignorespaces Angular motion suppression due to the ASC}}{108}{figure.6.12}
 \contentsline {figure}{\numberline {{6-13}}{\ignorespaces Individual mirror motion with and without ASC}}{109}{figure.6.13}
 \contentsline {figure}{\numberline {{6-14}}{\ignorespaces Striptool example}}{110}{figure.6.14}
 \contentsline {figure}{\numberline {{6-15}}{\ignorespaces Measured ASC to DARM transfer functions}}{111}{figure.6.15}
-\contentsline {figure}{\numberline {{6-16}}{\ignorespaces Wavefront sensor to DARM noisebudget for pitch and yaw}}{112}{figure.6.16}
-\contentsline {figure}{\numberline {{6-17}}{\ignorespaces Optic to DARM noisebudget for pitch and yaw}}{113}{figure.6.17}
+\contentsline {figure}{\numberline {{6-16}}{\ignorespaces Wavefront sensor to DARM noisebudget}}{112}{figure.6.16}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{112}{figure.6.16}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{112}{figure.6.16}
+\contentsline {figure}{\numberline {{6-17}}{\ignorespaces Optic to DARM noisebudget}}{113}{figure.6.17}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{113}{figure.6.17}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{113}{figure.6.17}
 \contentsline {figure}{\numberline {{6-18}}{\ignorespaces Total WFS and optical lever noise contribution to DARM during a 16 W lock at night}}{114}{figure.6.18}
 \contentsline {figure}{\numberline {{6-19}}{\ignorespaces Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}}{115}{figure.6.19}
 \contentsline {figure}{\numberline {{6-20}}{\ignorespaces Histogram of input powers used during S6}}{115}{figure.6.20}
 \contentsline {figure}{\numberline {{9-1}}{\ignorespaces Livingston mode cleaner intensity noise transfer function}}{125}{figure.9.1}
 \contentsline {figure}{\numberline {{9-2}}{\ignorespaces End of an 8.7 W lock at Livingston on Feb. 23, 2010}}{127}{figure.9.2}
-\contentsline {figure}{\numberline {{9-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{130}{figure.9.3}
-\contentsline {figure}{\numberline {{9-4}}{\ignorespaces Carrier recycling gain during S6.}}{130}{figure.9.4}
-\contentsline {figure}{\numberline {{10-1}}{\ignorespaces Optical lever open loop transfer function}}{133}{figure.10.1}
+\contentsline {figure}{\numberline {{9-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{128}{figure.9.3}
+\contentsline {figure}{\numberline {{10-1}}{\ignorespaces Optical lever open loop transfer function}}{131}{figure.10.1}

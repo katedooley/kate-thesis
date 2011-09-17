@@ -46,7 +46,7 @@
 \BOOKMARK [2][-]{subsection.3.4.2}{Faraday Isolation Ratio}{section.3.4}
 \BOOKMARK [2][-]{subsection.3.4.3}{Thermal steering}{section.3.4}
 \BOOKMARK [2][-]{subsection.3.4.4}{Thermal Lensing}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.5}{Mode Matching}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.5}{Mode-matching}{section.3.4}
 \BOOKMARK [1][-]{section.3.5}{Implications for Advanced LIGO}{chapter.3}
 \BOOKMARK [1][-]{section.3.6}{Summary}{chapter.3}
 \BOOKMARK [0][-]{chapter.4}{Angular Motion of the Interferometer Mirrors}{}
@@ -101,10 +101,10 @@
 \BOOKMARK [1][-]{section.9.3}{Beam Propagation Formalism}{chapter.9}
 \BOOKMARK [2][-]{subsection.9.3.1}{Beam Drift Calibration}{section.9.3}
 \BOOKMARK [1][-]{section.9.4}{Mode Cleaner Pole}{chapter.9}
-\BOOKMARK [1][-]{section.9.5}{Carrier Mode Matching into the Interferometer}{chapter.9}
+\BOOKMARK [1][-]{section.9.5}{Carrier Mode-matching into the Interferometer}{chapter.9}
 \BOOKMARK [2][-]{subsection.9.5.1}{Interferometer Visibility}{section.9.5}
-\BOOKMARK [2][-]{subsection.9.5.2}{Impedance Matching}{section.9.5}
-\BOOKMARK [2][-]{subsection.9.5.3}{Mode Matching}{section.9.5}
+\BOOKMARK [2][-]{subsection.9.5.2}{Impedance matching}{section.9.5}
+\BOOKMARK [2][-]{subsection.9.5.3}{Mode-matching}{section.9.5}
 \BOOKMARK [0][-]{chapter.10}{Appendix B}{}
 \BOOKMARK [1][-]{section.10.1}{Parameters}{chapter.10}
 \BOOKMARK [1][-]{section.10.2}{Optical Lever Open Loop Transfer Function}{chapter.10}
@@ -115,8 +115,6 @@
 \BOOKMARK [2][-]{subsection.10.5.2}{Tilted Cavity}{section.10.5}
 \BOOKMARK [2][-]{subsection.10.5.3}{Displaced and Tilted Cavity}{section.10.5}
 \BOOKMARK [1][-]{section.10.6}{Initial DC Alignment of the Interferometer}{chapter.10}
-\BOOKMARK [1][-]{section.10.7}{Photodiodes}{chapter.10}
-\BOOKMARK [1][-]{section.10.8}{Channel Names}{chapter.10}
-\BOOKMARK [1][-]{section.10.9}{Seismic Spectra}{chapter.10}
+\BOOKMARK [1][-]{section.10.7}{Seismic Spectra}{chapter.10}
 \BOOKMARK [0][-]{chapter*.7}{REFERENCES}{}
 \BOOKMARK [0][-]{chapter*.8}{BIOGRAPHICAL SKETCH}{}

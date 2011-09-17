@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Faraday Isolation Ratio}{48}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Thermal steering}{49}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Thermal Lensing}{50}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Mode Matching}{52}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}Mode-matching}{52}{subsection.3.4.5}
 \contentsline {section}{\numberline {3.5}Implications for Advanced LIGO}{53}{section.3.5}
 \contentsline {section}{\numberline {3.6}Summary}{55}{section.3.6}
 \contentsline {chapter}{\numberline {4}{Angular Motion of the Interferometer Mirrors}}{56}{chapter.4}
@@ -85,13 +85,13 @@
 \contentsline {section}{\numberline {6.4}Input Beam Motion}{95}{section.6.4}
 \contentsline {section}{\numberline {6.5}The Marginally-stable Power Recycling Cavity}{99}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Power Scaling}{100}{subsection.6.5.1}
-\contentsline {section}{\numberline {6.6}WFS Servo Open Loop Transfer Functions}{101}{section.6.6}
-\contentsline {section}{\numberline {6.7}Residual Angular Motion}{101}{section.6.7}
-\contentsline {section}{\numberline {6.8}ASC to DARM Noisebudget}{101}{section.6.8}
-\contentsline {subsection}{\numberline {6.8.1}Tuning the Cut-off Filters}{103}{subsection.6.8.1}
-\contentsline {section}{\numberline {6.9}Feed-Forward}{103}{section.6.9}
-\contentsline {section}{\numberline {6.10}Advanced LIGO}{104}{section.6.10}
-\contentsline {section}{\numberline {6.11}Summary}{105}{section.6.11}
+\contentsline {section}{\numberline {6.6}WFS Servo Open Loop Transfer Functions}{103}{section.6.6}
+\contentsline {section}{\numberline {6.7}Residual Angular Motion}{103}{section.6.7}
+\contentsline {section}{\numberline {6.8}ASC to DARM Noisebudget}{103}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Tuning the Cut-off Filters}{104}{subsection.6.8.1}
+\contentsline {section}{\numberline {6.9}Feed-Forward}{105}{section.6.9}
+\contentsline {section}{\numberline {6.10}Advanced LIGO}{110}{section.6.10}
+\contentsline {section}{\numberline {6.11}Summary}{111}{section.6.11}
 \contentsline {chapter}{\numberline {7}{Experimental measurement of the Sidles-Sigg effect}}{116}{chapter.7}
 \contentsline {section}{\numberline {7.1}Measured modes}{116}{section.7.1}
 \contentsline {chapter}{\numberline {8}{Summary}}{118}{chapter.8}
@@ -101,22 +101,20 @@
 \contentsline {section}{\numberline {9.3}Beam Propagation Formalism}{122}{section.9.3}
 \contentsline {subsection}{\numberline {9.3.1}Beam Drift Calibration}{123}{subsection.9.3.1}
 \contentsline {section}{\numberline {9.4}Mode Cleaner Pole}{124}{section.9.4}
-\contentsline {section}{\numberline {9.5}Carrier Mode Matching into the Interferometer}{124}{section.9.5}
+\contentsline {section}{\numberline {9.5}Carrier Mode-matching into the Interferometer}{124}{section.9.5}
 \contentsline {subsection}{\numberline {9.5.1}Interferometer Visibility}{126}{subsection.9.5.1}
-\contentsline {subsection}{\numberline {9.5.2}Impedance Matching}{128}{subsection.9.5.2}
-\contentsline {subsection}{\numberline {9.5.3}Mode Matching}{130}{subsection.9.5.3}
-\contentsline {chapter}{\numberline {10}{Appendix B}}{132}{chapter.10}
-\contentsline {section}{\numberline {10.1}Parameters}{132}{section.10.1}
-\contentsline {section}{\numberline {10.2}Optical Lever Open Loop Transfer Function}{132}{section.10.2}
-\contentsline {section}{\numberline {10.3}Seismic Contributions to Optical Lever Spectra}{132}{section.10.3}
-\contentsline {section}{\numberline {10.4}Misaligned Cavity Axis}{132}{section.10.4}
-\contentsline {section}{\numberline {10.5}Power in a Misaligned Cavity}{132}{section.10.5}
-\contentsline {subsection}{\numberline {10.5.1}Displaced Cavity}{136}{subsection.10.5.1}
-\contentsline {subsection}{\numberline {10.5.2}Tilted Cavity}{137}{subsection.10.5.2}
-\contentsline {subsection}{\numberline {10.5.3}Displaced and Tilted Cavity}{138}{subsection.10.5.3}
-\contentsline {section}{\numberline {10.6}Initial DC Alignment of the Interferometer}{138}{section.10.6}
-\contentsline {section}{\numberline {10.7}Photodiodes}{140}{section.10.7}
-\contentsline {section}{\numberline {10.8}Channel Names}{140}{section.10.8}
-\contentsline {section}{\numberline {10.9}Seismic Spectra}{140}{section.10.9}
-\contentsline {extrachapter}{REFERENCES}{144}{chapter*.7}
-\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{148}{chapter*.8}
+\contentsline {subsection}{\numberline {9.5.2}Impedance matching}{126}{subsection.9.5.2}
+\contentsline {subsection}{\numberline {9.5.3}Mode-matching}{129}{subsection.9.5.3}
+\contentsline {chapter}{\numberline {10}{Appendix B}}{130}{chapter.10}
+\contentsline {section}{\numberline {10.1}Parameters}{130}{section.10.1}
+\contentsline {section}{\numberline {10.2}Optical Lever Open Loop Transfer Function}{130}{section.10.2}
+\contentsline {section}{\numberline {10.3}Seismic Contributions to Optical Lever Spectra}{130}{section.10.3}
+\contentsline {section}{\numberline {10.4}Misaligned Cavity Axis}{130}{section.10.4}
+\contentsline {section}{\numberline {10.5}Power in a Misaligned Cavity}{130}{section.10.5}
+\contentsline {subsection}{\numberline {10.5.1}Displaced Cavity}{134}{subsection.10.5.1}
+\contentsline {subsection}{\numberline {10.5.2}Tilted Cavity}{135}{subsection.10.5.2}
+\contentsline {subsection}{\numberline {10.5.3}Displaced and Tilted Cavity}{136}{subsection.10.5.3}
+\contentsline {section}{\numberline {10.6}Initial DC Alignment of the Interferometer}{136}{section.10.6}
+\contentsline {section}{\numberline {10.7}Seismic Spectra}{138}{section.10.7}
+\contentsline {extrachapter}{REFERENCES}{141}{chapter*.7}
+\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{145}{chapter*.8}
