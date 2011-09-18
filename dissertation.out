@@ -13,11 +13,11 @@
 \BOOKMARK [2][-]{subsection.1.5.1}{The Input Optics High Power Story}{section.1.5}
 \BOOKMARK [2][-]{subsection.1.5.2}{The Angular Sensing and Control High Power Story}{section.1.5}
 \BOOKMARK [0][-]{chapter.2}{Laser Interferometers for Gravitational-wave Detection}{}
-\BOOKMARK [1][-]{section.2.1}{Power-recycled Fabry-Perot Michelson Interferometers}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{Signal Versus Noise}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.2.1}{Displacement Noise}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.2}{Sensing Noise}{section.2.2}
-\BOOKMARK [1][-]{section.2.3}{DC readout / more laser power}{chapter.2}
+\BOOKMARK [1][-]{section.2.1}{Measuring Gravitational-wave Strain with Light}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Power-recycled Fabry-Perot Michelson Interferometers}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Signal Versus Noise}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.3.1}{Displacement Noise}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{Sensing Noise}{section.2.3}
 \BOOKMARK [1][-]{section.2.4}{Controlling the Interferometer}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.4.1}{RF Sidebands}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.2}{Digital Control in LIGO}{section.2.4}
