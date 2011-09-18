@@ -42,11 +42,12 @@ However, in practice, instead of individual wave packets, we send a
 continuous electromagnetic wave into the interferometer. The
 difference in travel times turns into a difference in phase:
 \begin{equation}
-\Delta \phi_{\mathrm{MICH}} = \omega \Delta t = \frac{2 L \omega}{c} h.
+\Delta \phi_{\mathrm{MICH}} = \omega \Delta t = \frac{2 L}{c} \omega h,
 \label{eq:deltaphi}
 \end{equation}
-We now introduce the modified Michelson interferometer used in LIGO,
-and in this context continue the discussion of strain measurement and
+where $\omega$ is the angular frequency of the laser light. We now
+introduce the modified Michelson interferometer used in LIGO, and in
+this context continue the discussion of strain measurement and
 sensitivity.
 
 % reference to treatment as a wave, gauge-independent quantity.
@@ -86,34 +87,46 @@ the light from the other arm. The effect is that Eq.~\ref{eq:deltaphi}
 for the Fabry-Perot Michelson includes a frequency-dependent phase
 gain factor, $\phi_g(f)$:
 \begin{equation}
-\Delta \phi = \frac{2 L \omega \phi_g(f)}{c} h.
+\Delta \phi = \frac{2 L}{c} \omega \phi_g(f) h.
 \label{eq:deltaphi}
 \end{equation}
 For Enhanced LIGO, $\phi_g = 137$ at DC and falls off after 85~Hz due
 to the cavity pole.
 
+\subsection{DC readout}
 The gravitational wave readout in Enhanced LIGO did not operate
-precisely at the dark fringe at the AS port. Instead, it used a small offset
-from the dark fringe, $\phi_0 \approx 6 \times 10^{-5}$~rad.
-The electric field at the AS port was therefore $E_{AS} =
+precisely at the dark fringe at the AS port. Instead, it used a small
+offset from the quadratic minimum so that any change in phase is
+linear with power as is depicted in Figure~\ref{fig:DCreadout}. The
+offset used was $\phi_0 \approx 6 \times 10^{-5}$~rad. (cite tobin's
+thesis.)
+
+With a DC offset, the electric field at the AS port was $E_{AS} =
 E_{BS}\sin{(\phi_0 + \Delta\phi)}$. Squaring the electric field and
-expanding about $\phi_0$, we can determine the power recorded by the
+expanding about $\phi_0$, we determine the power recorded by the
 photodetector, $P_{AS}$:
 \begin{align}
 P_{AS} &= P_{BS} \sin^2{(\phi_0 + \Delta\phi)} \\
- &\approx P_{BS}\sin^2{(\phi_0)} + 2P_{BS}\sin{(\phi_0)}\cos{(\phi_0)}\Delta\phi
+% &\approx P_{BS}\sin^2{(\phi_0)} + 2P_{BS}\sin{(\phi_0)}\cos{(\phi_0)}\Delta\phi
+ &\approx P_{BS}\sin^2{(\phi_0)} + 2P_{BS}\phi_0\Delta\phi
 \end{align}
-The first term on the right hand side of the expanded $P_{BS}$ is the
-DC power due to the static offset from the fringe. The second term
-
-%, so that strain induced in the interferometer could be directly read
-%out as a linear function of power. 
+The first term on the right hand side of the expanded $P_{AS}$ is the
+DC power due to the static offset from the fringe. The second term on
+the right hand side describes how a change in phase at the AS port is
+converted to a change in power. Called the \emph{optical gain}, this
+relationship is linear and proportional to the power at the beam
+splitter. Written explicitly to highlight all of its dependencies, the
+optical gain is:
+\begin{equation}
+\frac{4 L}{c} P_{BS} \phi_0 \omega \phi_g(f) h.
+\label{eq:opticalgain}
+\end{equation}
 
 \begin{figure}
 \begin{centering}
 \includegraphics{figures/DCreadout.pdf}
-\caption[Cartoon of DC readout]{Cartoon of DC readout. The AS port is
-  not kept at the dark fringe, but is slightly offset by
+\caption[The DC readout dark fringe]{The DC readout dark fringe. The
+  AS port is not kept at the dark fringe, but is slightly offset by
   $\phi_0$. Changes in AS port phase due to gravitational wave strain
   are a linear function of power.}
 \label{fig:DCreadout}
@@ -122,22 +135,10 @@ DC power due to the static offset from the fringe. The second term
 
 
 
-The optical gain of DC readout 
-
-We are interested in the optical gain
-of this form of readout, the change in power at the AS port per change
-in differential arm length.
-
-% The way to identify signal in terms of GW signal is by comparing the
-% outputs of multiple widely separated GW detectors. No signals have
-% been detected.
-
-
-
-An appropriately polarized gravitational wave differentially changes
-the arm lengths, affecting the interference pattern at the AS port. We
-refer to the length degree of freedom affected by gravitational waves
-as DARM, the differential arm length. It is defined as
+\subsection{DARM}
+An essential term in LIGO is DARM, the differential arm length. This
+is the length degree of freedom affected by gravitational waves. It is
+defined as
 \begin{equation}
 \mathrm{DARM} := L_- := L_x - L_y
 \end{equation}
@@ -147,56 +148,29 @@ presence of a gravitational wave, the DARM signal is:
 \begin{equation}
 L_- = Lh
 \end{equation}
-The phase of the light at the AS port (Eq.~\ref{eq:deltaphi}) in terms
-of $L_-$ is:
-\begin{equation}
-\phi_- = \frac{4 \pi L_-}{\lambda}
-\end{equation}
-where $\lambda$ is the wavelength of the light.
+We see that $L$ is the conversion factor between GW strain and DARM.
 
 
 
 
 
-As we see from Eqs. xx, xx, and xx, there are three fundamental ways
-to make a GW produce a bigger signal in an interferometer:
+\section{Signal Versus Noise} 
+As we see from Eq.~\ref{eq:opticalgain}, there are three fundamental
+ways to increase the optical gain and therefore produce more power at
+the AS port for a given GW strain. The three ways are to:
 \begin{enumerate}
 \item make the arms longer \vspace{-10 pt}
-\item increase the circulating power \vspace{-10 pt}
-\item increase the finesse of the Fabry-Perot arms
+\item increase the power at the BS \vspace{-10 pt}
+\item increase the phase gain of the Fabry-Perot arms
 \end{enumerate}
-For a given strain, the change in the distance between the mirrors,
-$\Delta L$, is bigger the longer the arms. And for a given
-displacement from the dark fringe, the power that will show up at the
-AS port is greater the greater the power at the beam splitter. We
-always win by making the arms longer, but it must be noted that the
+We always win by making the arms longer, but it must be noted that the
 latter two points are only valid where the interferometer is sensing
-noise limited.
-
-
-
-\section{Signal Versus Noise}
-
-\textcolor{blue}{talk about power-recycled FP Michelsons in particular!}
+noise limited. \textcolor{blue}{finish this discussion!}
 
 The factors that must be considered in the design of any detector can
 be grouped into two categories: signal and noise. The ability to make
 a claim of detection is largely dependent on the magnitude of the
 signal to noise ratio (SNR). 
-
-For laser interferometers operating with DC readout, the strength of
-the GW signal is proportional to the length of the arms and the amount
-of power at the beam splitter. (See Eq. \ref{}.) For a given strain,
-the change in the distance between the mirrors, $\Delta L$, is bigger
-the longer the arms. And for a given displacement from the dark
-fringe, the power that will show up at the AS port is greater the
-greater the power at the beam splitter. Therefore, the two fundamental
-ways to make a GW produce a bigger signal in an interferometer are:
-\begin{enumerate}
-\item make the arms longer \vspace{-10 pt}
-\item increase the circulating power \vspace{-10 pt}
-\item increase the finesse of the Fabry-Perot arms
-\end{enumerate}
 
 No matter how large a signal one might have, it won't be found
 confidently, or at all, if there is too much noise. The noise itself
@@ -230,11 +204,8 @@ limited by thermal noise, but future generations plan to be.
 
 
 \subsection{Sensing Noise}
-The primary sensing noises are shot noise and stray light. Shot noise
-is a quantum mechanical effect of the detection of photons that
-creates uncertainty in the phase of the light. It limits the
-sensitivity of GW interferometers above 200~Hz. Stray light ???
-
+The primary sensing noise is shot noise. It limits the sensitivity of
+GW interferometers above 200~Hz.
 
 
 
@@ -273,25 +244,6 @@ sensitivity of GW interferometers above 200~Hz. Stray light ???
 % 10^{-34}$ Js is Planck's constant, and $\nu = 2.82 \times 10^{14}$ Hz
 % is the frequency of the incident light. The units of shot noise are
 % W/$\sqrt{\mathrm{Hz}}$.
-
-% DC readout, as used in Enhanced LIGO, operates with a small offset,
-% $x_0 \approx 10 \mathrm{pm}$, from the dark fringe. Strain induced in the
-% interferometer can therefore be directly read out at the dark pork as
-% simply a linear function of power. We are interested in the optical
-% gain of this form of readout, the change in power at the AS port per
-% change in differential arm length. 
-
-% The power at the dark port as a function of differential arm length,
-% $x$, is
-% \begin{equation}
-% P_{AS} = P_{BS} \sin^2{(g_{\phi}kx)}
-% \end{equation}
-% where $g_{\phi} = 137$ is phase gain of the Fabry-Perot arms and
-% $k=5.9\times10^6 \mathrm{m}^{-1}$ is the wavenumeber. The derivative
-% is the optical gain:
-% \begin{equation}
-% \frac{dP_{AS}}{dx} = P_{BS} g_{\phi} k \sin{(g_{\phi}kx)} \cos{(g_{\phi}kx)}
-% \end{equation}
 
 % The sensitivity of DC readout to gravitational wave strain is
 % dependent not only on the optical gain, but on the noise at

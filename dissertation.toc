@@ -15,12 +15,14 @@
 \contentsline {chapter}{\numberline {2}{Laser Interferometers for Gravitational-wave Detection}}{23}{chapter.2}
 \contentsline {section}{\numberline {2.1}Measuring Gravitational-wave Strain with Light}{23}{section.2.1}
 \contentsline {section}{\numberline {2.2}Power-recycled Fabry-Perot Michelson Interferometers}{24}{section.2.2}
-\contentsline {section}{\numberline {2.3}Signal Versus Noise}{27}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.1}DC readout}{24}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}DARM}{26}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Signal Versus Noise}{26}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Displacement Noise}{27}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Sensing Noise}{28}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Controlling the Interferometer}{28}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.2}Sensing Noise}{27}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Controlling the Interferometer}{27}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}RF Sidebands}{28}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Digital Control in LIGO}{29}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Digital Control in LIGO}{28}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Mirror Suspension and Actuation}{29}{subsection.2.4.3}
 \contentsline {chapter}{\numberline {3}{Input Optics Design and Characterization}}{31}{chapter.3}
 \contentsline {section}{\numberline {3.1}Function of the Input Optics}{31}{section.3.1}
