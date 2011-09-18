@@ -1,90 +1,138 @@
-\chapter{Design Basics of Laser Interferometers for Gravitational-wave Detection}
-I introduce in this chapter some of the basic principles in the
-design of sensitive intstruments (and the LIGO detectors in
-particular) to set the stage for delving into the details of the
-following chapters. 
-%I explain why a Fabry-Perot Michelson laser interferometer 
+\chapter{Laser Interferometers for Gravitational-wave Detection}
+
+% The LIGO interferometers 
+
+% Short summary and motivation about the interferometer: Quadrupole
+% waves change the light travel time in the two orthogonal arms, change
+% the interference, amplified by arms, minimal detectable requires that
+% we have at least one photon in the signal sidebands in the dark port
+% gives us shot noise, want more power at BS. No numbers or only very
+% few back on envelope numbers.
 
 
 
-2. 'LIGO and eLIGO' or so:
-Short summary and motivation about the interferometer: Quadrupole
-waves change the light travel time in the two orthogonal arms, change
-the interference, amplified by arms, minimal detectable requires that
-we have at least one photon in the signal sidebands in the dark port
-gives us shot noise, want more power at BS. No numbers or only very
-few back on envelope numbers.
+% \section{Measuring Gravitational-wave Strain with Light}
+% Treating light as a photon provides a very intuitive understanding
+% that a laser interferometer can detect gravitational waves. Consider
+% two wave packets leaving the beam splitter of a Michelson
+% interferometer at the same time, each heading down a different arm of
+% nominal length $L$. If an appropriately polarized gravitational wave
+% is present, the amount of time the wave packet takes to travel down a
+% stretched arm and back is:
+% \begin{equation}
+% t_{\mathrm{stretched}} = \frac{2 L}{c} \left( 1 + \frac{h_+}{2} \right)
+% \label{eq:trt+} 
+% \end{equation}
+% Likewise, for a compressed arm the roundtrip travel time is:
+% \begin{equation}
+% t_{\mathrm{compressed}} = \frac{2 L}{c} \left( 1 - \frac{h_+}{2} \right)
+% \label{eq:trt-} 
+% \end{equation}
+% There is a non-zero difference in arrival times at the beam splitter,
+% $\Delta t = 2Lh_+/c$, a quantity one could measure with an accurate
+% stationary clock. It should be noted that $h_+$ is treated as a
+% constant in Eqs. \ref{eq:trt+} and \ref{eq:trt-}. We use the
+% approximation that the gravitational wave wavelength $\lambda_{gw}$ is
+% much larger than the Michelson arm length $L$. This means that
+% the temporal variation of $h_+(t)$ is negligible during the time it
+% takes the photon to make its roundtrip.
 
-2.1 Power Rec Mi: This should now contain all the important numbers,
-length, reflectivities, etc. You will need to make a decision at one
-point if you want to move many details into the appendix, maybe a
-couple tables with all relevant distances, reflectivities, etc., or if
-you want to skip them.
 
-2.2 Sensitivity limits:
-Displacement noise:
-- ground motion, 
-- thermal noise
-Sensing noise:
-- Stray light,
-- shot noise
+% However, the detector is not a clock, but a
+% photodetector, which measures the power of the interference of the two
+% beams upon their return from the Michelson arms. It is therefore best
+% to express the difference in arrival times as a difference in phase
+% ($\phi = \omega t$) between the two beams of light after each has
+% completed its roundtrip:
+% \begin{equation}
+% \Delta \phi = \omega \Delta t = \frac{2 L \omega}{c} h_+.
+% \label{eq:deltaphi}
+% \end{equation}
+% We have motivated the through the example of a Michelson
+% interferometer, but now turn to the modified Michelson interferometer
+% used in LIGO to complete the discussion of strain
+% sensitivity.
 
-2.2.x Laser Power
+% reference to treatment as a wave, gauge-independent quantity.
 
 
 
+\section{Power-recycled Fabry-Perot Michelson Interferometers}
+The LIGO detector configuration is a power-recycled Fabry-Perot
+Michelson laser interferometer as depicted in
+Fig.~\ref{fig:IFOschematic}. A beam splitter (BS) directs 1064~nm
+light from a diode-pumped, power amplified, and intensity and
+frequency stabilized Nd:YAG laser to the Fabry-Perot arms, which are
+made of an input test mass mirror (ITM) and an end test mass mirror
+(ETM). Both arms are of length $L$ and are set to maintain destructive
+interference of the recombined light at the anti-symmetric (AS)
+port. A power recycling mirror (RM) at the symmetric port directs the
+constructively-interfered light back into the interferometer. 
 
-\section{Measuring Gravitational-wave Strain with Light}
-Treating light as a photon provides a very intuitive approach to
-understanding that a laser interferometer can detect graviational
-waves. Consider two wave packets leaving the beam splitter of a
-Michelson interferometer of length $L$ at the same time, each heading
-down a different arm. If an appropriately polarized gravitational wave
-is present, the amount of time the wave packet takes to travel down a
-stretched arm and back is:
+\begin{figure}
+\begin{centering}
+\includegraphics{figures/IFOsimple_thesis.pdf}
+\caption[Power-recycled Fabry-Perot Michelson laser
+interferometer]{Power-recycled Fabry-Perot Michelson laser
+  interferometer.}
+\label{fig:IFOschematic}
+\end{centering}
+\end{figure}
+
+An appropriately polarized gravitational wave differentially changes
+the arm lengths, affecting the interference pattern at the AS port. We
+refer to the length degree of freedom affected by gravitational waves
+as DARM, the differential arm length. It is defined as
 \begin{equation}
-t_{rt+} = \frac{2 L}{c} \left( 1 + \frac{h_+}{2} \right)
-\label{eq:trt+} 
+\mathrm{DARM} := L_- := L_x - L_y
 \end{equation}
-Likewise, for a compressed arm the roundtrip travel time is:
+where $L_x$ and $L_y$ are the lengths of the $x$-arm and $y$-arm,
+respectively. When there is no gravitational wave, $L_-=0$, but in the
+presence of a gravitational wave, the DARM signal is:
 \begin{equation}
-t_{rt-} = \frac{2 L}{c} \left( 1 - \frac{h_+}{2} \right)
-\label{eq:trt-} 
+L_- = Lh
 \end{equation}
-There is a non-zero $2Lh_+/c$ difference in arrival times at the beam
-splitter, a quantity one could measure with an accurate stationary
-clock.\footnote{It should be noted that $h_+$ is treated as a constant
-  in Eqs. \ref{eq:trt+} and \ref{eq:trt-}. We use the approximation
-  that the gravitational wave wavelength $\lambda_{gw}$ is much larger
-  than the interferometer arm length $L$. This means that the temporal
-  variation of $h_+(t)$ is negligible during the time it takes the
-  photon to make its roundtrip.}
-
-The detector at the beam splitter, however, is not a clock, but a
-photodetector that measures the power of the interference of the two
-beams upon their return from the Michelson arms. It is therefore best
-to express the difference in arrival times as a difference in phase
-($\phi = \omega t$) between the two beams of light after each has
-completed its roundtrip:
+The phase of the light at the AS port (Eq.~\ref{eq:deltaphi}) in terms
+of $L_-$ is:
 \begin{equation}
-\Delta \phi = \phi_{rt+} - \phi_{rt-} = \frac{2 L \omega}{c} h_+
+\phi_- = \frac{4 \pi L_-}{\lambda}
 \end{equation}
+where $\lambda$ is the wavelength of the light.
+
+% proportional to the GW strain and the laser power
+
+DARM := $:= L_- \longrightarrow L [1 + h_+(t)/2] - L[1 - h_+(t)/2] = Lh_+(t)$ \\
 
 
 
-The second
-proves directly that the quantity physically measured at the beam splitter can be expressed
-in terms of a non-zero gauge invariant quantity. 
-
-Additional approaches that demonstrate \cite{Garfinkle2005Gauge} \cite{Saulson1997If} \cite{Faraoni2007Common}
 
 
-Perhaps of greatest importance is the concept that only gauge invariant quantities carry
-physical meaning. Introducing a gauge is often very helpful for carrying out mathematical
-calculations, but one must not get confused along the way by trying to physically interpret
-gauge dependent expressions. For general relativity and the purpose of thinking about the
-interferometer, the TT gauge is employed, but the final answer of Eq. (9) has eliminated
-any trace of gauge.
+A power recycling mirror (RM) at the symmetric port and the
+Fabry-Perot cavities of the arms are modifications to the Michelson
+interferometer that increase the circulating laser power and therefore
+improve the detector's sensitivity to GWs. These two modifications
+aid in improved sensitivity in slightly different ways. The power
+recycling mirror serves to directlty increase the power at the BS,
+$P_{BS}$, a linear term in the DARM optical gain. The Fabry-Perot
+cavities have a phase gain of $\phi_g$ = 137. A function of the
+circulating power in the arms, the phase gain is also linearly
+proportional to the DARM optical gain.
+
+
+featuring suspended test masses in vacuum 
+
+% \begin{figure}
+% \begin{centering}
+% \includegraphics[width=0.8\textwidth]{figures/IFOschematic.pdf}
+% \caption[Power-recycled Fabry-Perot Michelson laser
+% interferometer]{Power-recycled Fabry-Perot Michelson laser
+%   interferometer.}
+% \label{fig:IFOschematic}
+% \end{centering}
+% \end{figure}
+
+
+
 
 
 
@@ -100,12 +148,12 @@ confidence in LIGO.
 
 For laser interferometers operating with DC readout, the strength of
 the GW signal is proportional to the length of the arms and the amount
-of power in the arms. (See Eq. \ref{}.) The change in the distance
-between the mirrors, $\Delta L$, is bigger for a given strain the
-longer the arms. And with more circulating power, the greater the
-amount of power that will show up at the AS port for a given
-displacement from the dark fringe. Therefore, the two fundamental ways
-to make a GW produce a bigger signal in an interferometer are:
+of power at the beam splitter. (See Eq. \ref{}.) For a given strain,
+the change in the distance between the mirrors, $\Delta L$, is bigger
+the longer the arms. And for a given displacement from the dark
+fringe, the power that will show up at the AS port is greater the
+greater the power at the beam splitter. Therefore, the two fundamental
+ways to make a GW produce a bigger signal in an interferometer are:
 \begin{enumerate}
 \item make the arms longer \vspace{-10 pt}
 \item increase the circulating power
@@ -149,37 +197,59 @@ therefore the power, at the AS port.
 
 
 
+\section{fk}
+The LIGO interferometers are designed to maximize signal and minimize
+noise. The arms are 4~km long, as long as could be made within a
+reasonable budget, and we always strive to operate with as much laser
+power as is available and practically possible. 
 
-\section{Power-recycled Fabry-Perot Michelson Interferometers}
-The typical detector configuration is a power-recycled Fabry-Perot
-Michelson laser interferometer featuring suspended test masses in
-vacuum as depicted in Figure \ref{fig:IFOschematic}. A diode-pumped,
-power amplified, and intensity and frequency stabilized Nd:YAG laser
-emits light at 1064~nm. The laser is directed to a Michelson
-interferometer whose two arm lengths are set to maintain destructive
-interference of the recombined light at the anti-symmetric (AS)
-port. An appropriately polarized gravitational wave will
-differentially change the arm lengths, producing signal at the AS port
-proportional to the GW strain and the input power. 
 
-The Fabry-Perot cavities of the Michelson arms increases the phase
-gain of the DARM signal
+\section{DC readout / more laser power}
+Increasing the laser power in the interferometer is a 
 
-A power recycling mirror (RM) at the symmetric port is a modification to the Michelson
-interferometer that increases the circulating laser power 
+Shot noise is a Poissonian process: the average number of photons
+striking a detector, $\left<x\right>$, is equal to the variance of the
+mean number of photons, $\left<x^2\right> - \left<x\right>^2$, from a
+given chunk of time $\tau$ to another. For large $\left<x\right>$, the
+distribution becomes Gaussian, but the mean and variance are still
+equivalent. Based on this property and Parseval's theorem, the power
+on a detector due to shot noise is:
+\begin{equation}
+P_{SN} = \frac{\left<x\right>}{\tau} h \nu = \sqrt{2 P_{DC} h \nu}
+\end{equation}
+where $P_{DC}$ is the DC power on the photodiode, $h = 6.626 \times
+10^{-34}$ Js is Planck's constant, and $\nu = 2.82 \times 10^{14}$ Hz
+is the frequency of the incident light. The units of shot noise are
+W/$\sqrt{\mathrm{Hz}}$.
 
-in the arms and therefore
-improve the detector's sensitivity to GWs.
+DC readout, as used in Enhanced LIGO, operates with a small offset,
+$x_0 \approx 10 \mathrm{pm}$, from the dark fringe. Strain induced in the
+interferometer can therefore be directly read out at the dark pork as
+simply a linear function of power. We are interested in the optical
+gain of this form of readout, the change in power at the AS port per
+change in differential arm length. 
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.8\textwidth]{figures/IFOschematic.pdf}
-\caption[Power-recycled Fabry-Perot Michelson laser
-interferometer]{Power-recycled Fabry-Perot Michelson laser
-  interferometer.}
-\label{fig:IFOschematic}
-\end{centering}
-\end{figure}
+The power at the dark port as a function of differential arm length,
+$x$, is
+\begin{equation}
+P_{AS} = P_{BS} \sin^2{(g_{\phi}kx)}
+\end{equation}
+where $g_{\phi} = 137$ is phase gain of the Fabry-Perot arms and
+$k=5.9\times10^6 \mathrm{m}^{-1}$ is the wavenumeber. The derivative
+is the optical gain:
+\begin{equation}
+\frac{dP_{AS}}{dx} = P_{BS} g_{\phi} k \sin{(g_{\phi}kx)} \cos{(g_{\phi}kx)}
+\end{equation}
+
+The sensitivity of DC readout to gravitational wave strain is
+dependent not only on the optical gain, but on the noise at
+detector. The shot-noise-limited sensitivity is the shot noise divided
+by the optical gain:
+\begin{equation}
+aoeu
+\end{equation}
+
+
 
 
 
@@ -287,51 +357,4 @@ locking stages. After the interferometer is locked, the angular OSEM
 feedback is turned off, and the position OSEM feedback remains.
 
 pitch and yaw
-
-
-
-\section{DC readout / more laser power}
-Increasing the laser power in the interferometer is a 
-
-Shot noise is a Poissonian process: the average number of photons
-striking a detector, $\left<x\right>$, is equal to the variance of the
-mean number of photons, $\left<x^2\right> - \left<x\right>^2$, from a
-given chunk of time $\tau$ to another. For large $\left<x\right>$, the
-distribution becomes Gaussian, but the mean and variance are still
-equivalent. Based on this property and Parseval's theorem, the power
-on a detector due to shot noise is:
-\begin{equation}
-P_{SN} = \frac{\left<x\right>}{\tau} h \nu = \sqrt{2 P_{DC} h \nu}
-\end{equation}
-where $P_{DC}$ is the DC power on the photodiode, $h = 6.626 \times
-10^{-34}$ Js is Planck's constant, and $\nu = 2.82 \times 10^{14}$ Hz
-is the frequency of the incident light. The units of shot noise are
-W/$\sqrt{\mathrm{Hz}}$.
-
-DC readout, as used in Enhanced LIGO, operates with a small offset,
-$x_0 \approx 10 \mathrm{pm}$, from the dark fringe. Strain induced in the
-interferometer can therefore be directly read out at the dark pork as
-simply a linear function of power. We are interested in the optical
-gain of this form of readout, the change in power at the AS port per
-change in differential arm length. 
-
-The power at the dark port as a function of differential arm length,
-$x$, is
-\begin{equation}
-P_{AS} = P_{BS} \sin^2{(g_{\phi}kx)}
-\end{equation}
-where $g_{\phi} = 137$ is phase gain of the Fabry-Perot arms and
-$k=5.9\times10^6 \mathrm{m}^{-1}$ is the wavenumeber. The derivative
-is the optical gain:
-\begin{equation}
-\frac{dP_{AS}}{dx} = P_{BS} g_{\phi} k \sin{(g_{\phi}kx)} \cos{(g_{\phi}kx)}
-\end{equation}
-
-The sensitivity of DC readout to gravitational wave strain is
-dependent not only on the optical gain, but on the noise at
-detector. The shot-noise-limited sensitivity is the shot noise divided
-by the optical gain:
-\begin{equation}
-aoeu
-\end{equation}
 

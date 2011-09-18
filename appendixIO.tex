@@ -2,55 +2,46 @@
 
 
 
-\section{Overlap Integrals}
-A measure of the mode matching can be given by the amount of power
-coupled from one mode into another. This is calculated as the square
-of the overlap integral of two fields, $\psi_1$ and $\psi_2$, for a
-particular z-axis (propagation direction) cross-section:
+\section{Mode Cleaner Pole}
+\label{sec:MCpole}
+Optical cavities act as low pass filters for intensity variations of
+the light sent into them. The model for an intensity noise transfer
+function of a cavity is that of a single pole:
 \begin{equation}
-P = \left| \langle \psi \mid \psi^{\prime} \rangle \right|^2 = \left[\int_{-\infty}^\infty \psi^\star(x) \psi^{\prime}(x) \, dx \right]^2
+\frac{E_{after}}{E_{before}} = \frac{1}{1 + s/s_0} = \frac{s_0}{s_0 - s}
 \end{equation}
-We are interested in the lowest order Hermite-Gaussian mode:
-\begin{equation}
-\psi(x,z) = u_0(x,z) = \left[ \frac{2}{\pi w_0^2} \right]^{1/4} \left[
-  \frac{q_0}{q(z)} \right]^{1/2} \exp{\left[ \frac{-i k x^2}{2 q(z)}
-  \right] }
-\end{equation}
-which can be rewritten as a function of $x$ and $q$ using
-$q_0=i \mbox{Im}(q)$, and $w_0^2 = -2 q_0 i/k$:
-\begin{equation}
-u_0(x,q) = \left[ \frac{-k \mbox{Im}(q)}{\pi q^2} \right]^{1/4} \exp{\left[ \frac{-i k x^2}{2 q}
-  \right] }
-\label{eq:u0_xq}
-\end{equation}
-Eq. (\ref{eq:u0_xq}) is normalized such that $\langle u_0 \mid u_0
-\rangle = 1$.
+where $s$ is a complex parameter. However, we are interested in only
+purely sinusoidal variations in intensity so we let $s$ be purely
+imaginary, $s=i\omega$, where $\omega$ is an angular frequency.
 
-We want to know the square of the overlap integral for two fields
-given by different $q$ parameters at one location $z$. First, the
-overlap integral:
-\begin{align}
-\langle q_1 \mid q_2 \rangle &= \int_{-\infty}^\infty u_0(x, q_1) u_0(x, q_2) \, dx \\
- &= \left[ \frac{k^2 \mathrm{Im}(q^\star_1) \mathrm{Im}(q_2)}{\pi^2 q^{\star 2}_1 q^2_2} \right]^{1/4} 
- \int_{-\infty}^\infty \exp{\left[ -\left[ \frac{-i k}{2 q^\star_1} + \frac{i k}{2 q_2} \right]x^2 \right]} \, dx \\
- &= \left[ -\frac{k^2 \mathrm{Im}(q_1) \mathrm{Im}(q_2)}{\pi^2
-     q^{\star 2}_1 q^2_2} \right]^{1/4} \sqrt{\frac{\pi}{\left[ \frac{-i k}{2 q^\star_1} + \frac{i k}{2 q_2}
-   \right]}} \\
- &= \left[ \mathrm{Im}(q_1) \mathrm{Im}(q_2) \right]^{1/4}
- \sqrt{\frac{2}{q^\star_1 q_2 \left( 1/q_2 - 1/q^\star_1 \right)}} 
-\end{align}
-Then, the power is given by:
-\begin{align}
-\left| \langle q_1 \mid q_2 \rangle \right|^2
-&= \frac{2 \sqrt{\mathrm{Im}(q_1) \mathrm{Im}(q_2)}}  
-{\sqrt{q^\star_1 q_1 q^\star_2 q_2 \left[\frac{1}{q_2} - \frac{1}{q^\star_1} \right]
-    \left[\frac{1}{q^\star_2} - \frac{1}{q_1} \right]}} \\
-&= \frac{2 \sqrt{\mathrm{Im}(q_1) \mathrm{Im}(q_2)}}{|q_2 - q^\star_1 |} 
-\label{eq:power_qs}
-\end{align}
-Note that Eq. (\ref{eq:power_qs}) simplifies to 1 when $q_1 = q_2$ as
-expected and that this whole formulation assumes that the beams are
-propagating along the same $z$-axis.
+We measured the intensity noise transfer function of the Livingston
+mode cleaner upon completion of the Enhanced LIGO Input Optics
+upgrade. We modulated the intensity of the laser light going into the
+MC by injecting a swept-sine excitation in \texttt{L1:PSL-ISS\_EXC}
+and measured the power variation of the light in two places: before
+and after the mode cleaner. We used a single photodetector (PDA55) in
+order to eliminate the PD response, and therefore made the measurement
+twice. We ensured there was 1~V~DC on the PD in both locations.
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics{figures/MCpole_mag.pdf}}
+\subfigure{\includegraphics{figures/MCpole_phase.pdf}}
+\caption[Livingston mode cleaner intensity noise transfer
+function]{Livingston mode cleaner intensity noise transfer
+  function. Red open circles are data; solid blue line is a single
+  pole fit. Relating fit parameters to the model, the pole frequency
+  is $f_p=4762$ Hz.}
+\label{fig:mcpole}
+\end{centering}
+\end{figure}
+
+Figure \ref{fig:mcpole} shows the transfer function data and the fit
+(to both magnitude and phase simultaneously). The fit has a pole
+frequency of $f_p=4762$ Hz. The $1/e$ ringdown time of the mode
+cleaner is therefore $\tau = 1/4\pi f_{MC} = 16.7$ \micro s and the
+finesse is $\mathcal{F} = \mathrm{FSR}/2f_p = 1282$.
+
 
 
 
@@ -92,6 +83,7 @@ The same equation holds true for pitch.
 
 
 \section{Beam Propagation Formalism}
+\label{sec:driftcal}
 For the input beam model and for the Input Optics beam drift
 calibrations, the ABCD matrix formalism is a useful tool to propagate
 a Gaussian beam. I choose to ignore the fact that the MC beam passes
@@ -248,48 +240,6 @@ DOF can mean PIT or YAW.
 
 
 
-\section{Mode Cleaner Pole}
-\label{sec:MCpole}
-Optical cavities act as low pass filters for intensity variations of
-the light sent into them. The model for an intensity noise transfer
-function of a cavity is that of a single pole:
-\begin{equation}
-\frac{E_{after}}{E_{before}} = \frac{1}{1 + s/s_0} = \frac{s_0}{s_0 - s}
-\end{equation}
-where $s$ is a complex parameter. However, we are interested in only
-purely sinusoidal variations in intensity so we let $s$ be purely
-imaginary, $s=i\omega$, where $\omega$ is an angular frequency.
-
-We measured the intensity noise transfer function of the Livingston
-mode cleaner upon completion of the Enhanced LIGO Input Optics
-upgrade. We modulated the intensity of the laser light going into the
-MC by injecting a swept-sine excitation in \texttt{L1:PSL-ISS\_EXC}
-and measured the power variation of the light in two places: before
-and after the mode cleaner. We used a single photodetector (PDA55) in
-order to eliminate the PD response, and therefore made the measurement
-twice. We ensured there was 1~V~DC on the PD in both locations.
-
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics{figures/MCpole_mag.pdf}}
-\subfigure{\includegraphics{figures/MCpole_phase.pdf}}
-\caption[Livingston mode cleaner intensity noise transfer
-function]{Livingston mode cleaner intensity noise transfer
-  function. Red open circles are data; solid blue line is a single
-  pole fit. Relating fit parameters to the model, the pole frequency
-  is $f_p=4762$ Hz.}
-\label{fig:mcpole}
-\end{centering}
-\end{figure}
-
-Figure \ref{fig:mcpole} shows the transfer function data and the fit
-(to both magnitude and phase simultaneously). The fit has a pole
-frequency of $f_p=4762$ Hz. The $1/e$ ringdown time of the mode
-cleaner is therefore $\tau = 1/4\pi f_{MC} = 16.7$ \micro s and the
-finesse is $\mathcal{F} = \mathrm{FSR}/2f_p = 1282$.
-
-
-
 
 
 
@@ -422,3 +372,58 @@ matching. For Livingston, the interferometer is nearly perfectly
 impedance matched, so all light at the reflected port is due to
 imperfect mode matching. Therefore, the LLO mode mismatch during S6
 was 8\%.
+
+
+
+
+
+\section{Overlap Integrals}
+A measure of the mode matching can be given by the amount of power
+coupled from one mode into another. This is calculated as the square
+of the overlap integral of two fields, $\psi_1$ and $\psi_2$, for a
+particular z-axis (propagation direction) cross-section:
+\begin{equation}
+P = \left| \langle \psi \mid \psi^{\prime} \rangle \right|^2 = \left[\int_{-\infty}^\infty \psi^\star(x) \psi^{\prime}(x) \, dx \right]^2
+\end{equation}
+We are interested in the lowest order Hermite-Gaussian mode:
+\begin{equation}
+\psi(x,z) = u_0(x,z) = \left[ \frac{2}{\pi w_0^2} \right]^{1/4} \left[
+  \frac{q_0}{q(z)} \right]^{1/2} \exp{\left[ \frac{-i k x^2}{2 q(z)}
+  \right] }
+\end{equation}
+which can be rewritten as a function of $x$ and $q$ using
+$q_0=i \mbox{Im}(q)$, and $w_0^2 = -2 q_0 i/k$:
+\begin{equation}
+u_0(x,q) = \left[ \frac{-k \mbox{Im}(q)}{\pi q^2} \right]^{1/4} \exp{\left[ \frac{-i k x^2}{2 q}
+  \right] }
+\label{eq:u0_xq}
+\end{equation}
+Eq. (\ref{eq:u0_xq}) is normalized such that $\langle u_0 \mid u_0
+\rangle = 1$.
+
+We want to know the square of the overlap integral for two fields
+given by different $q$ parameters at one location $z$. First, the
+overlap integral:
+\begin{align}
+\langle q_1 \mid q_2 \rangle &= \int_{-\infty}^\infty u_0(x, q_1) u_0(x, q_2) \, dx \\
+ &= \left[ \frac{k^2 \mathrm{Im}(q^\star_1) \mathrm{Im}(q_2)}{\pi^2 q^{\star 2}_1 q^2_2} \right]^{1/4} 
+ \int_{-\infty}^\infty \exp{\left[ -\left[ \frac{-i k}{2 q^\star_1} + \frac{i k}{2 q_2} \right]x^2 \right]} \, dx \\
+ &= \left[ -\frac{k^2 \mathrm{Im}(q_1) \mathrm{Im}(q_2)}{\pi^2
+     q^{\star 2}_1 q^2_2} \right]^{1/4} \sqrt{\frac{\pi}{\left[ \frac{-i k}{2 q^\star_1} + \frac{i k}{2 q_2}
+   \right]}} \\
+ &= \left[ \mathrm{Im}(q_1) \mathrm{Im}(q_2) \right]^{1/4}
+ \sqrt{\frac{2}{q^\star_1 q_2 \left( 1/q_2 - 1/q^\star_1 \right)}} 
+\end{align}
+Then, the power is given by:
+\begin{align}
+\left| \langle q_1 \mid q_2 \rangle \right|^2
+&= \frac{2 \sqrt{\mathrm{Im}(q_1) \mathrm{Im}(q_2)}}  
+{\sqrt{q^\star_1 q_1 q^\star_2 q_2 \left[\frac{1}{q_2} - \frac{1}{q^\star_1} \right]
+    \left[\frac{1}{q^\star_2} - \frac{1}{q_1} \right]}} \\
+&= \frac{2 \sqrt{\mathrm{Im}(q_1) \mathrm{Im}(q_2)}}{|q_2 - q^\star_1 |} 
+\label{eq:power_qs}
+\end{align}
+Note that Eq. (\ref{eq:power_qs}) simplifies to 1 when $q_1 = q_2$ as
+expected and that this whole formulation assumes that the beams are
+propagating along the same $z$-axis.
+

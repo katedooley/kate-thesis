@@ -1,4 +1,4 @@
-\begin{thebibliography}{47}
+\begin{thebibliography}{44}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -248,22 +248,6 @@
   \urlprefix\url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid%
 =6570}.
 
-\bibitem[{\citenamefont{Garfinkle}(2005)}]{Garfinkle2005Gauge}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Garfinkle}}
-  (\bibinfo{year}{2005}), \eprint{gr-qc/0511083},
-  \urlprefix\url{http://arxiv.org/abs/gr-qc/0511083}.
-
-\bibitem[{\citenamefont{Saulson}(1997)}]{Saulson1997If}
-\bibinfo{author}{\bibfnamefont{P.~R.} \bibnamefont{Saulson}},
-  \bibinfo{journal}{American Journal of Physics} \textbf{\bibinfo{volume}{65}},
-  \bibinfo{pages}{501} (\bibinfo{year}{1997}), ISSN \bibinfo{issn}{00029505},
-  \urlprefix\url{http://dx.doi.org/10.1119/1.18578}.
-
-\bibitem[{\citenamefont{Faraoni}(2007)}]{Faraoni2007Common}
-\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Faraoni}}
-  (\bibinfo{year}{2007}), \eprint{gr-qc/0702079},
-  \urlprefix\url{http://arxiv.org/abs/gr-qc/0702079}.
-
 \bibitem[{\citenamefont{Camp et~al.}(1996)\citenamefont{Camp, Reitze, and
   Tanner}}]{Camp1996InputOutput}
 \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Camp}},
@@ -457,21 +441,17 @@ um}
   Books}, \bibinfo{address}{55D Gate Five Road, Sausalito, CA 94965},
   \bibinfo{year}{1986}).
 
-\bibitem[{\citenamefont{Adhikari et~al.}(2005)\citenamefont{Adhikari, Reitze,
-  Tanner, Bland, and Ottaway}}]{Adhikari2005Input}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Reitze}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Tanner}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Bland}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Ottaway}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T010136},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2005}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=26927}.
-
 \bibitem[{\citenamefont{Anderson}(1984)}]{Anderson1984Alignment}
 \bibinfo{author}{\bibfnamefont{D.~Z.} \bibnamefont{Anderson}},
   \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{23}},
   \bibinfo{pages}{2944} (\bibinfo{year}{1984}),
   \urlprefix\url{http://dx.doi.org/10.1364/AO.23.002944}.
+
+\bibitem[{\citenamefont{Wiener}(1975)}]{Wiener1975Extrapolation}
+\bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Wiener}},
+  \emph{\bibinfo{title}{{Extrapolation, Inerpolation, and Smoothing of
+  Stationary Time Series}}} (\bibinfo{publisher}{The M.I.T. Press},
+  \bibinfo{year}{1975}), ISBN \bibinfo{isbn}{9780262730051},
+  \urlprefix\url{http://www.worldcat.org/isbn/9780262730051}.
 
 \end{thebibliography}

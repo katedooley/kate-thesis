@@ -31,47 +31,33 @@ ETMY & 8.720 & 7.320 \\
 
 
 \section{Optical Lever Open Loop Transfer Function}
+The optical lever open loop transfer function for ETMX is shown in
+Fig.~\ref{fig:oplevOLG}. The measurement was made when the
+interferometer was unlocked and only the optical lever and OSEM
+damping loops on. Because of the two unity gain crossings, one at
+2.2~Hz and one at 0.2~Hz, the optical lever loop provides only AC
+(velocity) damping. There is no DC control. 
+
+The model uses the pendulum torque to angle transfer function as the
+plant and the filters used during Enhanced LIGO as the control. The
+meausurement can be used to tune the pedulum parameters in the model
+to best determine the actual damping coefficient and resonant
+frequency. For ETMX, we find the pitch resonant frequency to be
+0.65~Hz, 8\% different from the theoretical 0.6~Hz. Also, we measure
+the ETMX damping coefficient to be 0.02. 
+
+% Make table of parameters determined for each optic for which I have a measurement?
+
 \begin{figure}
 \begin{centering}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/oplevEX_mags.pdf}}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/oplevEX_phases.pdf}}
 \caption[Optical lever open loop transfer function]{ETMX pitch optical
-  lever open loop transfer function. Uses the filters in the oplev
-  servo filter bank, only (no coil output filters). The model of the
-  plant is tuned to match the data, resulting in a pitch resonance of
-  0.65 Hz and a damping factor of $\gamma$ = 0.02. The UGF is at
-  2.2~Hz and the phase margin is $38^\circ$.}
+  lever open loop transfer function. The model of the plant is tuned
+  to match the data, resulting in a pitch resonance of 0.65 Hz and a
+  damping factor of $\gamma$ = 0.02. The UGF is at 2.2~Hz and the
+  phase margin is $38^\circ$.}
 \label{fig:oplevOLG}
-\end{centering}
-\end{figure}
-
-
-
-\section{Seismic Contributions to Optical Lever Spectra}
-\label{sec:oplev_contributions}
-
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIX.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
-\caption[]{Contribution of sesimic noise to optical lever error
-  signal. The interferometer was unlocked and optical lever and OSEM
-  AC damping present.}
-\label{fig:}
-\end{centering}
-\end{figure}
-
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
-\caption[]{Contribution of sesimic noise to optical lever error
-  signal. The interferometer was unlocked and optical lever and OSEM
-  AC damping present.}
-\label{fig:}
 \end{centering}
 \end{figure}
 
@@ -252,13 +238,68 @@ P_0 = \exp{\left[- \frac{a^2}{w_0^2} \right]}
 
 
 
+\section{Seismic Contributions to Optical Lever Spectra}
+\label{sec:oplev_contributions}
+Wiener filtering \cite{Wiener1975Extrapolation} is an incredibly
+useful method to determine the likeness of two signals. In short, the
+Wiener filter coefficients are chosen to minimize the mean square
+difference between a Wiener filtered signal and a reference time
+series. If one signal is derived from the other, then there exists a
+Wiener filter that can precisely transform one signal into the
+other. 
+
+The optical lever error signals ideally witness the mirror motion,
+which in turn is expected to come from the ground's motions. The
+optical lever signal, may, however, be contaminated by optical lever
+sensing (electronics) noise or acoustic couplings. It is therefore
+informative to calculate Wiener filters for the sesimometer signals to
+understand how much of the optical lever spectra are in fact due to
+ground motion. The contributions of the three seismometers to each
+large optic optical lever are shown in
+Fig.~\ref{fig:OLcontributions}. We see that the optical lever signals
+are almost entirely explained by ground motion, with the notable
+exceptions being a peak between 3 and 4~Hz for ITMY, and 0.3 and
+0.7~Hz for the RM, and broadband extra motion for the BS.
+
+Furthermore, the relative magnitudes of the contributions from the
+three seismometers make sense. Greater than 1~Hz, coherence is
+greatest with the nearest seismometer, and less than 1~Hz,
+seismometers contribute more equally (except for the ITMs, which are
+everywhere very coherent with the corner station seismometer).
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIX.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
+\caption[Contribution of sesimic noise to optical lever error
+signal]{Contribution of sesimic noise to optical lever error signal
+  (called residual). The interferometer was unlocked and optical lever
+  and OSEM AC damping present.}
+\label{fig:OLcontributions}
+\end{centering}
+\end{figure}
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
+%\caption[]{Fig.~\ref{fig:OLcontributions} continued.}
+Fig.~\ref{fig:OLcontributions} continued.
+\end{centering}
+\end{figure}
+
+
+
 \section{Initial DC Alignment of the Interferometer}
 \label{sec:initial_alignment}
 After any kind of in-vacuum work, the DC alignment of the mirrors is
 usually too poor for the interferometer to lock. A bootstrapping
 process of tweaking the alignment by hand is necessary, assuming the
 mirrors start out pointing in generally the right direction, as is
-usually the case. As pointed out in \ref{sec:alignment_overview}, the
+usually the case. As pointed out in Sec.~\ref{sec:alignment_overview}, the
 QPDs at the end stations are the fixed reference points for the
 overall alignment, so this process begins with making sure the light
 reaches them. We then adjust the rest of the mirrors to maximize power

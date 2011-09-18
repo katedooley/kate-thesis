@@ -675,43 +675,43 @@ The ASC input matrices are based on sensing measurements made Jan. 28th at 6 W
 input power. By design, the input matrix is not exactly the inverse of the 
 sensing matrix, meaning the system is not completely diagonal:
  6 W input * 6 W sensing (by design)
- \[ \left( \begin{array}{ccccc}
+ \[ \left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.30 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
 0 & 0 & 1.0 & 0 & 0 \\
 0 & 0 & 0 & 1.0 & 0 \\
 0 & 0 & 0 & 0 & 1.0 
-\end{array} \right)\] 
+\end{array} \right\rrbracket\] 
 
 Over time, the sensing matrix changes enough that the system is even less 
 diagonal:
 6 W input * 6 W sensing (after 10 min)
- \[ \left( \begin{array}{ccccc}
+ \[ \left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.32 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
 -0.02 & 0 & 1.0 & 0 & 0 \\
 0 & -0.02 & 0 & 1.0 & 0.02 \\
 0 & 0.02 & 0 & 0.05 & 1.03 
-\end{array} \right)\] 
+\end{array} \right\rrbracket\] 
 
 6 W input * 6 W sensing (after 1 week)
- \[ \left( \begin{array}{ccccc}
+ \[ \left\llbracket \begin{array}{ccccc}
 0.67 & 0 & 0.27 & 0 & 0 \\
 0 & 0.91 & 0 & 0.03 & -0.03 \\
 0.09 & 0 & 0.84 & 0 & 0 \\
 0 & 0.15 & 0 & 0.83 & 0.27 \\
 0 & 0.06 & 0 & 0.07 & 1.04 
-\end{array} \right)\] 
+\end{array} \right\rrbracket\] 
 
-Using last night's sensing matrix measurements at 12 W:
+Using a sensing matrix measurement at 12 W:
 6 W input * 12 W sensing (after 3 weeks)
- \[ \left( \begin{array}{ccccc}
+ \[ \left\llbracket \begin{array}{ccccc}
 1.4 & 0 & 0.55 & 0 & 0 \\
 0 & 1.8 & 0 & -0.09 & 0.15 \\
 -0.08 & 0 & 2.0 & 0 & 0 \\
 0 & -0.22 & 0 & 1.4 & 0.64 \\
 0 & 0.30 & 0 & -0.72 & 2.9 
-\end{array} \right)\] 
+\end{array} \right\rrbracket\] 
 
 
 
@@ -1072,12 +1072,14 @@ lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
 \subfigure{\includegraphics{figures/DH_darkres.pdf}}\subfigure{\includegraphics{figures/CH_darkres.pdf}}
 \subfigure{\includegraphics{figures/RM_darkres.pdf}}
 \caption[Residual motion of the radiation pressure eigenbasis degrees
-  of freedom]{Residual motion of the radiation pressure eigenbasis degrees
-  of freedom using calibrated WFS error signals during a 10~W lock
-  compared to dark noise and the background motion as calculated using
-  the open loop transfer function measurements. The sensor dark noises
-  (see Fig.~\ref{fig:WFSdarknoise}) are put in the RP eigenbasis by
-  propagation through the WFS power scaling and WFS input matrix.}
+of freedom]{Residual motion of the radiation pressure eigenbasis
+  degrees of freedom using calibrated WFS error signals during a 10~W
+  lock compared to dark noise and the background motion as calculated
+  using the open loop transfer function measurements. The sensor dark
+  noises (see Fig.~\ref{fig:WFSdarknoise}) are put in the RP
+  eigenbasis by propagation through the WFS power scaling and WFS
+  input matrix. Ground motion at the time of the residual motion
+  spectra is found in Fig.~\ref{fig:seismic_locked}.}
 \label{fig:WFSresidual}
 \end{centering}
 \end{figure}
@@ -1120,25 +1122,14 @@ lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
 \end{figure}
 
 
-% \begin{figure}
-% \begin{centering}
-% \includegraphics[width=0.7\textwidth]{figures/ASCdofsignals.pdf}
-% \caption{Top: Comparison of motion with and without the
-%   ASC. Eigenbasis residual during 10 W lock, and background derived
-%   from loop correction. Completely different day from next
-%   plot. (Perhaps merge with next plot)}
-% \label{fig:}
-% \end{centering}
-% \end{figure}
-
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\columnwidth]{figures/timeseries_ifolocked.pdf}
 \caption[Striptool example]{Time series of interferometer signals
   showing a typical lock loss and re-lock followed by an increase of
-  power to 14~W. (From July 23, 2009 elog.) \textcolor{blue}{work this
-  in somewhere.}}
+  power to 14~W.} 
+% (From July 23, 2009 elog.) \textcolor{blue}{work this in somewhere.}}
 \label{fig:striptool}
 \end{centering}
 \end{figure}

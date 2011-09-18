@@ -3,7 +3,7 @@
 \section{Function of the Input Optics}
 \label{sec:role}
 
-\begin{figure*}
+\begin{figure}
 \begin{centering}
 \includegraphics{figures/InputOpticsBlock_thesis.pdf}
 \caption[Block diagram of the Input Optics subsystem.]{Block diagram
@@ -14,7 +14,7 @@
   IO component outside of the vacuum system. Diagram is not to scale.}
 \label{fig:IOblock}
 \end{centering}
-\end{figure*}
+\end{figure}
 
 The Input Optics is one of the primary subsystems of the LIGO
 interferometers. Its purpose is to deliver an aligned, spatially
@@ -121,18 +121,18 @@ to be matched for maximal power buildup in the interferometer. The
 mode-matching telescope is a set of three suspended concave mirrors
 between the mode cleaner and interferometer that expand the beam from
 a radius of 1.6~mm at the mode cleaner waist to a radius of 37~mm at
-the recycling mirror.  The MMT should play a passive role by
-delivering properly shaped light to the interferometer without
-introducing beam jitter or any significant aberration that can reduce
-mode coupling.
+the recycling mirror as shown in Fig.~\ref{fig:ioprofile}. The MMT
+should play a passive role by delivering properly shaped light to the
+interferometer without introducing beam jitter or any significant
+aberration that can reduce mode coupling.
 
 \begin{figure}
 \begin{centering}
 \includegraphics{figures/ioprofile1W.pdf}
 \caption[Beam profile through the Input Optics]{Beam profile through
   the Input Optics. The starting point is the mode cleaner waist and
-  the three changes in trajectory are due to the three
-  mode-matching telescope mirrors.}
+  the changes in trajectory are due to the mode-matching telescope
+  mirrors.}
 \label{fig:ioprofile}
 \end{centering}
 \end{figure}
@@ -213,7 +213,7 @@ for improvement in the implementation of the MMT.
 \subfigure{\includegraphics[width=0.8\textwidth]{figures/IOpicture2.pdf}}
 \caption[Photographs of Enhanced LIGO Input
 Optics \emph{in situ}]{Photographs of Enhanced LIGO Input Optics
-  \emph{in situ}. \textcolor{blue}{fix font type and size}}
+  \emph{in situ}.} % \textcolor{blue}{fix font type and size}
 \label{fig:IOpictures}
 \end{centering}
 \end{figure}
@@ -397,10 +397,11 @@ of the two TGG crystals and one quartz rotator rather than the typical
 single TGG \citep{Khazanov2000Suppression}.  In this configuration, any
 thermal polarization distortions that the beam experiences while
 passing through the first TGG rotator will be partially undone upon
-passing through the second. \textcolor{blue}{(Add sentence of further
-  explanation.)} The multiple elements in the magnet required a larger
-magnetic field than in Initial LIGO and a Faraday rotator housing that
-is 15.5~cm in diameter by 16.1~cm long. The TGG diameter is 20~mm.
+passing through the second. 
+%\textcolor{blue}{(Add sentence of further explanation.)} 
+The multiple elements in the magnet required a larger magnetic field
+than in Initial LIGO and a Faraday rotator housing that is 15.5~cm in
+diameter by 16.1~cm long. The TGG diameter is 20~mm.
 
 \subsubsection{Thermal lensing}  
 Thermal lensing in the Faraday isolator is addressed by including
@@ -472,8 +473,8 @@ especially important consideration for the very fragile DKDP.
 \begin{figure}
 \begin{centering}
 \includegraphics{figures/TGG_scaled.jpg}
-  \caption[Photo indium-wrapped TGG crystal]{Photo of TGG crystal
-    with indium foil wrapping.}
+\caption[Photo of an indium-wrapped TGG crystal]{Photo of TGG crystal
+  with indium foil wrapping.}
 \label{fig:TGG}
 \end{centering}
 \end{figure}
@@ -599,11 +600,12 @@ are shown in Table \ref{tab:MCabsorption2}.
 \includegraphics[width=1.0\columnwidth]{figures/MCdrumheadFeb08_raw.pdf}
 %\includegraphics[width=1.0\columnwidth]{figures/MCabsorption_labelled.pdf}
 \caption[Data from the mode cleaner absorption measurement]{Data from
-  the mode cleaner absorption measurement. Power into the MC was
-  cycled between 0.9~W and 5.1~W at 3 hour intervals (bottom frame)
-  and the change in frequency of the drumhead mode of each mirror was
-  recorded (top frame). The ambient temperature (middle frame) was
-  also recorded in order to correct for its effects.}
+  the mode cleaner absorption measurement.\footnote{Credit: Valera
+    Frolov} Power into the MC was cycled between 0.9~W and 5.1~W at 3
+  hour intervals (bottom frame) and the change in frequency of the
+  drumhead mode of each mirror was recorded (top frame). The ambient
+  temperature (middle frame) was also recorded in order to correct for
+  its effects.}
 %\textcolor{blue}{This is Valera's plot from Feb. 9, 2008}
 \label{fig:MCabsorption}
 \end{centering}
@@ -612,8 +614,8 @@ are shown in Table \ref{tab:MCabsorption2}.
 \begin{table}
 \centering
 \caption[Absorption values for the Livingston and Hanford mode
- cleaner mirrors]{Absorption values for the Livingston and Hanford mode
- cleaner mirrors before (in parentheses) and after drag wiping. The precision is $\pm 10\%$.} 
+cleaner mirrors]{Absorption values for the Livingston and Hanford mode
+  cleaner mirrors before (in parentheses) and after drag wiping. The precision is $\pm 10\%$.} 
 %(from the March 8, 2008 elog and uses Muzammil's factor of $14/48$ correction.)
 \begin{tabular}{l l l}
 \hline
@@ -709,7 +711,9 @@ and its measurement QPD, so only the path length between the two were
 needed to calibrate in radians the pitch and yaw signals on the
 QPD. The interferometer reflected beam, however, passes through
 several lenses. Thus, ray transfer matrices and the two alignment
-detectors were necessary to extract the Faraday drift calibration.
+detectors were necessary to extract the Faraday drift
+calibration. Details of the calibration method are presented in
+Appendix~\ref{sec:driftcal}.
 
 Figure \ref{fig:drift} shows the calibrated beam steering data. The
 angle of the beam out of the mode cleaner does not change measurably

@@ -12,17 +12,16 @@
 \BOOKMARK [1][-]{section.1.5}{Purpose of this Work}{chapter.1}
 \BOOKMARK [2][-]{subsection.1.5.1}{The Input Optics High Power Story}{section.1.5}
 \BOOKMARK [2][-]{subsection.1.5.2}{The Angular Sensing and Control High Power Story}{section.1.5}
-\BOOKMARK [0][-]{chapter.2}{Design Basics of Laser Interferometers for Gravitational-wave Detection}{}
-\BOOKMARK [1][-]{section.2.1}{Measuring Gravitational-wave Strain with Light}{chapter.2}
+\BOOKMARK [0][-]{chapter.2}{Laser Interferometers for Gravitational-wave Detection}{}
+\BOOKMARK [1][-]{section.2.1}{Power-recycled Fabry-Perot Michelson Interferometers}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Signal Versus Noise}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Displacement Noise}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.2}{Sensing Noise}{section.2.2}
-\BOOKMARK [1][-]{section.2.3}{Power-recycled Fabry-Perot Michelson Interferometers}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{DC readout / more laser power}{chapter.2}
 \BOOKMARK [1][-]{section.2.4}{Controlling the Interferometer}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.4.1}{RF Sidebands}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.2}{Digital Control in LIGO}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.3}{Mirror Suspension and Actuation}{section.2.4}
-\BOOKMARK [1][-]{section.2.5}{DC readout / more laser power}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{Input Optics Design and Characterization}{}
 \BOOKMARK [1][-]{section.3.1}{Function of the Input Optics}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.1.1}{Electro-optic Modulator}{section.3.1}
@@ -96,24 +95,24 @@
 \BOOKMARK [1][-]{section.7.1}{Measured modes}{chapter.7}
 \BOOKMARK [0][-]{chapter.8}{Summary}{}
 \BOOKMARK [0][-]{chapter.9}{Appendix A}{}
-\BOOKMARK [1][-]{section.9.1}{Overlap Integrals}{chapter.9}
+\BOOKMARK [1][-]{section.9.1}{Mode Cleaner Pole}{chapter.9}
 \BOOKMARK [1][-]{section.9.2}{Gaussian Beam on a Split Photodetector}{chapter.9}
 \BOOKMARK [1][-]{section.9.3}{Beam Propagation Formalism}{chapter.9}
 \BOOKMARK [2][-]{subsection.9.3.1}{Beam Drift Calibration}{section.9.3}
-\BOOKMARK [1][-]{section.9.4}{Mode Cleaner Pole}{chapter.9}
-\BOOKMARK [1][-]{section.9.5}{Carrier Mode-matching into the Interferometer}{chapter.9}
-\BOOKMARK [2][-]{subsection.9.5.1}{Interferometer Visibility}{section.9.5}
-\BOOKMARK [2][-]{subsection.9.5.2}{Impedance matching}{section.9.5}
-\BOOKMARK [2][-]{subsection.9.5.3}{Mode-matching}{section.9.5}
+\BOOKMARK [1][-]{section.9.4}{Carrier Mode-matching into the Interferometer}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.4.1}{Interferometer Visibility}{section.9.4}
+\BOOKMARK [2][-]{subsection.9.4.2}{Impedance matching}{section.9.4}
+\BOOKMARK [2][-]{subsection.9.4.3}{Mode-matching}{section.9.4}
+\BOOKMARK [1][-]{section.9.5}{Overlap Integrals}{chapter.9}
 \BOOKMARK [0][-]{chapter.10}{Appendix B}{}
 \BOOKMARK [1][-]{section.10.1}{Parameters}{chapter.10}
 \BOOKMARK [1][-]{section.10.2}{Optical Lever Open Loop Transfer Function}{chapter.10}
-\BOOKMARK [1][-]{section.10.3}{Seismic Contributions to Optical Lever Spectra}{chapter.10}
-\BOOKMARK [1][-]{section.10.4}{Misaligned Cavity Axis}{chapter.10}
-\BOOKMARK [1][-]{section.10.5}{Power in a Misaligned Cavity}{chapter.10}
-\BOOKMARK [2][-]{subsection.10.5.1}{Displaced Cavity}{section.10.5}
-\BOOKMARK [2][-]{subsection.10.5.2}{Tilted Cavity}{section.10.5}
-\BOOKMARK [2][-]{subsection.10.5.3}{Displaced and Tilted Cavity}{section.10.5}
+\BOOKMARK [1][-]{section.10.3}{Misaligned Cavity Axis}{chapter.10}
+\BOOKMARK [1][-]{section.10.4}{Power in a Misaligned Cavity}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.4.1}{Displaced Cavity}{section.10.4}
+\BOOKMARK [2][-]{subsection.10.4.2}{Tilted Cavity}{section.10.4}
+\BOOKMARK [2][-]{subsection.10.4.3}{Displaced and Tilted Cavity}{section.10.4}
+\BOOKMARK [1][-]{section.10.5}{Seismic Contributions to Optical Lever Spectra}{chapter.10}
 \BOOKMARK [1][-]{section.10.6}{Initial DC Alignment of the Interferometer}{chapter.10}
 \BOOKMARK [1][-]{section.10.7}{Seismic Spectra}{chapter.10}
 \BOOKMARK [0][-]{chapter*.7}{REFERENCES}{}

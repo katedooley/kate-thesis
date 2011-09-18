@@ -50,7 +50,7 @@ presence of gravitational radiation is therefore
 \begin{equation}
 g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}.
 \end{equation}
-Just as in electrodynamics where one has freedom in choosing the
+As in electrodynamics where one has freedom in choosing the
 vector potential $\vec{A}$ for calculating the magnetic field $\vec{B}
 = \vec{\nabla} \times \vec{A}$, one also has freedom in general
 relativity in choosing the form of $h_{\mu \nu}$ for ease of calculation. A
@@ -60,8 +60,8 @@ gauge in which
 h_{\mu \nu} = 
 \left\llbracket \begin{array}{c c c c} 
 0 & 0 & 0 & 0\\ 
-0 & h_+ & h_\times & 0 \\
-0 & h_\times & -h_+ & 0 \\
+0 & h_+(t) & h_\times(t) & 0 \\
+0 & h_\times(t) & -h_+(t) & 0 \\
 0 & 0 & 0 & 0
 \end{array} \right\rrbracket
 \end{equation}
@@ -80,14 +80,25 @@ and compressed along the $y$ axis by a factor of
 \sqrt{1 \pm h_+(t)} \approx 1 \pm \frac{1}{2} h_+(t).
 \label{eq:deltaL}
 \end{equation}
-Therefore, the proper distance between two free masses located along
-either the $x$ or the $y$ axes changes by the factor in
-Eq. \ref{eq:deltaL}; their coordinate separations, however, remain
+Therefore, for two free masses located a proper distance $L$ from one
+another along either the $x$-axis or the $y$-axis, their separation is
+magnified by the factor in Eq.~\ref{eq:deltaL} in the presence of a
+gravitational wave. Their coordinate separations, however, remain
 constant. The gravitational wave perturbation is a dimensionless
-strain
+strain:
 \begin{equation}
-h = 2 \frac{\Delta L}{L}.
+h_+(t) = 2 \frac{\Delta L(t)}{L},
 \end{equation}
+where $\Delta L(t)$ is the change in separation between the free
+masses, as illustrated in Fig.~\ref{fig:strain}
+
+\begin{figure}
+\begin{centering}
+\includegraphics{figures/strain.pdf}
+\caption[Depiction of strain]{Depiction of strain.}
+\label{fig:strain}
+\end{centering}
+\end{figure}
 
 
 
@@ -217,7 +228,9 @@ detectors.
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\textwidth]{figures/GWnetwork_strains.pdf}
-\caption[Strain sensitivities of LIGO-VIRGO collaboration interferometers]{Strain sensitivities of LIGO-VIRGO collaboration interferometers.}
+\caption[Strain sensitivities of LIGO-VIRGO collaboration
+interferometers]{Strain sensitivities of LIGO-VIRGO collaboration
+  interferometers.}
 \label{fig:h_all}
 \end{centering}
 \end{figure}
