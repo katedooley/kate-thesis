@@ -5,11 +5,11 @@
 \contentsline {extrachapter}{ABSTRACT}{15}{section*.6}
 \addvspace {10pt}\noindent {CHAPTER}\hfill \par 
 \contentsline {chapter}{\numberline {1}{The Search for Gravitational Waves}}{16}{chapter.1}
-\contentsline {section}{\numberline {1.1}The Theory of Gravitational Radiation}{17}{section.1.1}
+\contentsline {section}{\numberline {1.1}The Theory of Gravitational Radiation}{16}{section.1.1}
 \contentsline {section}{\numberline {1.2}Sources}{18}{section.1.2}
 \contentsline {section}{\numberline {1.3}Methods of Detection}{19}{section.1.3}
 \contentsline {section}{\numberline {1.4}State of Ground-based Interferometry}{19}{section.1.4}
-\contentsline {section}{\numberline {1.5}Purpose of this Work}{20}{section.1.5}
+\contentsline {section}{\numberline {1.5}Purpose of this Work}{21}{section.1.5}
 \contentsline {subsection}{\numberline {1.5.1}The Input Optics High Power Story}{22}{subsection.1.5.1}
 \contentsline {subsection}{\numberline {1.5.2}The Angular Sensing and Control High Power Story}{22}{subsection.1.5.2}
 \contentsline {chapter}{\numberline {2}{Laser Interferometers for Gravitational-wave Detection}}{24}{chapter.2}
@@ -50,8 +50,8 @@
 \contentsline {subsection}{\numberline {3.4.2}Faraday Isolation Ratio}{50}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Thermal steering}{51}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Thermal Lensing}{52}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Mode-matching}{54}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Implications for Advanced LIGO}{55}{section.3.5}
+\contentsline {subsection}{\numberline {3.4.5}Mode-matching}{52}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Implications for Advanced LIGO}{54}{section.3.5}
 \contentsline {section}{\numberline {3.6}Summary}{57}{section.3.6}
 \contentsline {chapter}{\numberline {4}{Angular Motion of the Interferometer Mirrors}}{58}{chapter.4}
 \contentsline {section}{\numberline {4.1}Tolerance for Angular Motion}{58}{section.4.1}
