@@ -15,9 +15,9 @@
 \contentsline {chapter}{\numberline {2}{Laser Interferometers for Gravitational-wave Detection}}{24}{chapter.2}
 \contentsline {section}{\numberline {2.1}Measuring Gravitational-wave Strain with Light}{24}{section.2.1}
 \contentsline {section}{\numberline {2.2}Power-recycled Fabry-P\'{e}rot Michelson Interferometers}{25}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}DC readout}{25}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}DC readout}{26}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}DARM}{27}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}DARM Optical Gain}{27}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}DARM Optical Gain}{28}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Signal Versus Noise}{28}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Noises}{28}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Noise Floor}{29}{subsection.2.3.2}
@@ -26,6 +26,7 @@
 \contentsline {section}{\numberline {2.4}Controlling the Interferometer}{30}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Digital Control in LIGO}{30}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Mirror Suspension and Actuation}{31}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Summary}{32}{section.2.5}
 \contentsline {chapter}{\numberline {3}{Input Optics Design and Characterization}}{33}{chapter.3}
 \contentsline {section}{\numberline {3.1}Function of the Input Optics}{33}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Electro-optic Modulator}{33}{subsection.3.1.1}
@@ -53,68 +54,68 @@
 \contentsline {section}{\numberline {3.5}Implications for Advanced LIGO}{55}{section.3.5}
 \contentsline {section}{\numberline {3.6}Summary}{57}{section.3.6}
 \contentsline {chapter}{\numberline {4}{Angular Motion of the Interferometer Mirrors}}{58}{chapter.4}
-\contentsline {section}{\numberline {4.1}Tolerance for Angular Motion}{59}{section.4.1}
-\contentsline {section}{\numberline {4.2}Sources of Angular Mirror Motion}{60}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Ground Motion}{60}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.1}Tolerance for Angular Motion}{58}{section.4.1}
+\contentsline {section}{\numberline {4.2}Sources of Angular Mirror Motion}{59}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Ground Motion}{59}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Coil Actuators}{61}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Noise from Angular Control}{62}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Radiation Pressure}{62}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}The Mirror as a Torsion Pendulum}{63}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.3}Noise from Angular Control}{61}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Radiation Pressure}{61}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}The Mirror as a Torsion Pendulum}{62}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Torque to Angle Transfer Function of a Pendulum}{63}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Overview of Interferometer Alignment}{65}{section.4.4}
-\contentsline {section}{\numberline {4.5}The Wavefront Sensing Scheme}{68}{section.4.5}
+\contentsline {section}{\numberline {4.4}Overview of Interferometer Alignment}{64}{section.4.4}
+\contentsline {section}{\numberline {4.5}The Wavefront Sensing Scheme}{67}{section.4.5}
 \contentsline {section}{\numberline {4.6}The Angular Control Servo}{68}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Optical lever compensation}{70}{subsection.4.6.1}
-\contentsline {section}{\numberline {4.7}Angular Control Limitations}{70}{section.4.7}
-\contentsline {chapter}{\numberline {5}{The Effect of High Laser Power on Interferometer Alignment}}{74}{chapter.5}
-\contentsline {section}{\numberline {5.1}The Radiation Pressure Angular Spring}{74}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Diagonalizing the Modified Equations of Motion}{75}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Soft and Hard Modes}{78}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Pole analysis}{83}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Implications}{83}{section.5.2}
-\contentsline {chapter}{\numberline {6}{Angular sensing and control characterization and performance in the radiation pressure eigenbasis}}{86}{chapter.6}
-\contentsline {section}{\numberline {6.1}The ASC Change of Basis}{87}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}WFS Input Matrix}{87}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}WFS Output Matrix}{88}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Diagonalizing the WFS Drive Matrix}{89}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Sensing Matrix Stability}{89}{section.6.2}
-\contentsline {section}{\numberline {6.3}Input Beam Motion}{91}{section.6.3}
+\contentsline {subsection}{\numberline {4.6.1}Optical lever compensation}{69}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}Angular Control Limitations}{71}{section.4.7}
+\contentsline {chapter}{\numberline {5}{The Effect of High Laser Power on Interferometer Alignment}}{73}{chapter.5}
+\contentsline {section}{\numberline {5.1}The Radiation Pressure Angular Spring}{73}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Diagonalizing the Modified Equations of Motion}{74}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Soft and Hard Modes}{77}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Pole analysis}{82}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Implications}{82}{section.5.2}
+\contentsline {chapter}{\numberline {6}{Angular sensing and control characterization and performance in the radiation pressure eigenbasis}}{85}{chapter.6}
+\contentsline {section}{\numberline {6.1}The ASC Change of Basis}{85}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}WFS Input Matrix}{85}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}WFS Output Matrix}{87}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Diagonalizing the WFS Drive Matrix}{88}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Sensing Matrix Stability}{88}{section.6.2}
+\contentsline {section}{\numberline {6.3}Input Beam Motion}{90}{section.6.3}
 \contentsline {section}{\numberline {6.4}The Marginally-stable Power Recycling Cavity}{92}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Power Scaling}{95}{subsection.6.4.1}
 \contentsline {section}{\numberline {6.5}WFS Servo Open Loop Transfer Functions}{97}{section.6.5}
-\contentsline {section}{\numberline {6.6}Residual Angular Motion}{97}{section.6.6}
-\contentsline {section}{\numberline {6.7}ASC to DARM Noisebudget}{97}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Tuning the Cut-off Filters}{99}{subsection.6.7.1}
-\contentsline {section}{\numberline {6.8}Experimental measurement of the Sidles-Sigg effect}{99}{section.6.8}
-\contentsline {chapter}{\numberline {7}{Summary}}{115}{chapter.7}
-\contentsline {chapter}{\numberline {8}{Appendix: Input Optics Supporting Material}}{117}{chapter.8}
-\contentsline {section}{\numberline {8.1}Mode Cleaner Pole}{117}{section.8.1}
-\contentsline {section}{\numberline {8.2}Gaussian Beam on a Split Photodetector}{117}{section.8.2}
-\contentsline {section}{\numberline {8.3}Beam Propagation Formalism}{119}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Beam Drift Calibration}{120}{subsection.8.3.1}
-\contentsline {section}{\numberline {8.4}Carrier Mode-matching into the Interferometer}{121}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}Interferometer Visibility}{121}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}Impedance matching}{122}{subsection.8.4.2}
-\contentsline {subsection}{\numberline {8.4.3}Mode-matching}{124}{subsection.8.4.3}
-\contentsline {section}{\numberline {8.5}Overlap Integrals}{125}{section.8.5}
-\contentsline {chapter}{\numberline {9}{Appendix: ASC Calibrations}}{127}{chapter.9}
-\contentsline {section}{\numberline {9.1}Beam Spot Motion}{127}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Moving the beam}{128}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Measuring how much the beam has moved}{128}{subsection.9.1.2}
-\contentsline {section}{\numberline {9.2}Angular Mirror Motion}{130}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}ETM and ITM optical levers}{130}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}RM, BS, and MMT3 optical levers}{131}{subsection.9.2.2}
-\contentsline {section}{\numberline {9.3}WFS Error Signals}{132}{section.9.3}
-\contentsline {chapter}{\numberline {10}{Appendix: ASC Supporting Material}}{134}{chapter.10}
-\contentsline {section}{\numberline {10.1}Parameters}{134}{section.10.1}
-\contentsline {section}{\numberline {10.2}Optical Lever Open Loop Transfer Function}{134}{section.10.2}
-\contentsline {section}{\numberline {10.3}Misaligned Cavity Axis}{134}{section.10.3}
-\contentsline {section}{\numberline {10.4}Power in a Misaligned Cavity}{136}{section.10.4}
-\contentsline {subsection}{\numberline {10.4.1}Displaced Cavity}{136}{subsection.10.4.1}
-\contentsline {subsection}{\numberline {10.4.2}Tilted Cavity}{138}{subsection.10.4.2}
-\contentsline {subsection}{\numberline {10.4.3}Displaced and Tilted Cavity}{139}{subsection.10.4.3}
-\contentsline {section}{\numberline {10.5}Seismic Contributions to Optical Lever Spectra}{139}{section.10.5}
-\contentsline {section}{\numberline {10.6}Initial DC Alignment of the Interferometer}{141}{section.10.6}
-\contentsline {section}{\numberline {10.7}Seismic Spectra}{143}{section.10.7}
-\contentsline {extrachapter}{REFERENCES}{146}{chapter*.7}
-\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{149}{chapter*.8}
+\contentsline {section}{\numberline {6.6}Residual Angular Motion}{98}{section.6.6}
+\contentsline {section}{\numberline {6.7}ASC to DARM Noisebudget}{99}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Tuning the Cut-off Filters}{102}{subsection.6.7.1}
+\contentsline {section}{\numberline {6.8}Experimental measurement of the Sidles-Sigg effect}{105}{section.6.8}
+\contentsline {chapter}{\numberline {7}{Conclusions}}{110}{chapter.7}
+\contentsline {chapter}{\numberline {8}{Appendix: Input Optics Supporting Material}}{112}{chapter.8}
+\contentsline {section}{\numberline {8.1}Mode Cleaner Pole}{112}{section.8.1}
+\contentsline {section}{\numberline {8.2}Gaussian Beam on a Split Photodetector}{112}{section.8.2}
+\contentsline {section}{\numberline {8.3}Beam Propagation Formalism}{114}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Beam Drift Calibration}{115}{subsection.8.3.1}
+\contentsline {section}{\numberline {8.4}Carrier Mode-matching into the Interferometer}{116}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Interferometer Visibility}{116}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Impedance matching}{117}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Mode-matching}{119}{subsection.8.4.3}
+\contentsline {section}{\numberline {8.5}Overlap Integrals}{120}{section.8.5}
+\contentsline {chapter}{\numberline {9}{Appendix: ASC Calibrations}}{122}{chapter.9}
+\contentsline {section}{\numberline {9.1}Beam Spot Motion}{122}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Moving the beam}{122}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Measuring how much the beam has moved}{123}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}Angular Mirror Motion}{125}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}ETM and ITM optical levers}{125}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}RM, BS, and MMT3 optical levers}{126}{subsection.9.2.2}
+\contentsline {section}{\numberline {9.3}WFS Error Signals}{127}{section.9.3}
+\contentsline {chapter}{\numberline {10}{Appendix: ASC Supporting Material}}{128}{chapter.10}
+\contentsline {section}{\numberline {10.1}Optical Lever Open Loop Transfer Function}{128}{section.10.1}
+\contentsline {section}{\numberline {10.2}Misaligned Cavity Axis}{128}{section.10.2}
+\contentsline {section}{\numberline {10.3}Power in a Misaligned Cavity}{129}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Displaced Cavity}{130}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Tilted Cavity}{131}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Displaced and Tilted Cavity}{132}{subsection.10.3.3}
+\contentsline {section}{\numberline {10.4}Parameters}{132}{section.10.4}
+\contentsline {section}{\numberline {10.5}Initial DC Alignment of the Interferometer}{132}{section.10.5}
+\contentsline {section}{\numberline {10.6}Seismic Contributions to Optical Lever Spectra}{134}{section.10.6}
+\contentsline {section}{\numberline {10.7}Seismic Spectra}{136}{section.10.7}
+\contentsline {extrachapter}{REFERENCES}{140}{chapter*.7}
+\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{144}{chapter*.8}

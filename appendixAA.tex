@@ -2,34 +2,6 @@
 
 
 
-\section{Parameters}
-\begin{table}
-\centering
-\caption{Mirror radii of curvatures.} 
-%References are \cite{Adhikari2005Input} and \href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn Billingsley's website}
-\begin{tabular}{l l l l}
-\hline
-optic & L1 ROC [km] & H1 ROC [km] \\
-\hline
-MC1 & 0.01725 & \\
-MC2 & 80 & \\ 
-MC3 & 0.01725 & \\ 
-MMT1 & 6.76 & 6.77 \\
-MMT2 & 3.16 & 3.17 \\
-MMT3 & 25.16 & 25.04\\
-RM & 15.78 & 14.40 \\
-BS & -189 & -336 \\
-ITMX & 14.760 & 13.910 \\ 
-ITMY & 14.520 & 13.600 \\
-ETMX & 8.730 & 7.260 \\
-ETMY & 8.720 & 7.320 \\
-\hline
-\end{tabular}
-\label{tab:ROCs}
-\end{table} 
-
-
-
 \section{Optical Lever Open Loop Transfer Function}
 \label{sec:oplevOLG}
 The optical lever open loop transfer function for ETMX is shown in
@@ -239,6 +211,89 @@ P_0 = \exp{\left[- \frac{a^2}{w_0^2} \right]}
 
 
 
+\section{Parameters}
+\begin{table}
+\centering
+\caption{Mirror radii of curvatures.} 
+%References are \cite{Adhikari2005Input} and \href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn Billingsley's website}
+\begin{tabular}{l l l l}
+\hline
+optic & L1 ROC [km] & H1 ROC [km] \\
+\hline
+MC1 & 0.01725 & \\
+MC2 & 80 & \\ 
+MC3 & 0.01725 & \\ 
+MMT1 & 6.76 & 6.77 \\
+MMT2 & 3.16 & 3.17 \\
+MMT3 & 25.16 & 25.04\\
+RM & 15.78 & 14.40 \\
+BS & -189 & -336 \\
+ITMX & 14.760 & 13.910 \\ 
+ITMY & 14.520 & 13.600 \\
+ETMX & 8.730 & 7.260 \\
+ETMY & 8.720 & 7.320 \\
+\hline
+\end{tabular}
+\label{tab:ROCs}
+\end{table} 
+
+
+
+\section{Initial DC Alignment of the Interferometer}
+\label{sec:initial_alignment}
+After any kind of in-vacuum work, the DC alignment of the mirrors is
+usually too poor for the interferometer to lock. A bootstrapping
+process of tweaking the alignment by hand is necessary, assuming the
+mirrors start out pointing in generally the right direction, as is
+usually the case. As pointed out in Sec.~\ref{sec:alignment_overview}, the
+QPDs at the end stations are the fixed reference points for the
+overall alignment, so this process begins with making sure the light
+reaches them. We then adjust the rest of the mirrors to maximize power
+build-up in the arms and to maximze spatial overlap of the light
+reflected from each arm.
+
+An outline of the process is presented here. ``Misalign'' means to
+intentionally point a mirror so far away from any known good positions
+as to eliminate it from the configuration.  ``Align'' and ``restore''
+mean to bring a mirror or configuration to the best known
+position(s). Centering the beam on a mirror is accomplished by using
+the suspension cage surrounding the mirror as a reference. Camera
+images and QPD readback provide the signals used for beam centering. 
+
+\begin{itemize}
+\item[] \textbf{X-arm} \vspace{-10pt}
+\item restore the x-arm (misalign RM, ITMY, and ETMY, align ITMX and ETMX) \vspace{-10pt}
+\item use ITMX to center the beam on QPDX \vspace{-10pt}
+\item use ETMX to center the beam on ITMX \vspace{-10pt}
+\item with x-arm locked, use MMT3 to maximize the x-arm power build-up (NPTRX, can expect
+  about 95\%) \vspace{-10pt}
+\item save the MMT3, ITMX, and ETMX alignment settings 
+\item[] \textbf{Y-arm} \vspace{-10pt}
+\item restore the y-arm (misalign ITMX and ETMX, align ITMY and ETMY) \vspace{-10pt}
+\item use ITMY to center the beam on QPDY \vspace{-10pt}
+\item use ETMY to center the beam on ITMY \vspace{-10pt}
+\item with y-arm locked, use BS to maximize the y-arm power build-up (NPTRY, can expect
+  about 90\%) \vspace{-10pt}
+\item save the BS, ITMY, and ETMY alignment settings 
+\item[] \textbf{Relative x-arm and y-arm} \vspace{-10pt}
+\item note AS beam position on camera while toggling between x-arm and
+  y-arm locks\vspace{-10pt}
+\item use ETMs to align the two AS beams \vspace{-10pt}
+\item restore the Michelson (misalign ETMs, align ITMs) \vspace{-10pt}
+\item use BS to make AS port as dark as possible \vspace{-10pt}
+\item re-do y-arm alignment if ambitious 
+\item[] \textbf{Recycling mirror} \vspace{-10pt}
+\item restore the PRM (misalign ETMs, align ITMs and RM)
+  \vspace{-10pt}
+\item use RM to center beam on ETMY cage 
+\item[] \textbf{Restore full interferometer--off you go!}
+\end{itemize}
+
+
+
+
+
+
 \section{Seismic Contributions to Optical Lever Spectra}
 \label{sec:oplev_contributions}
 Wiener filtering \cite{Wiener1975Extrapolation} is a useful method to
@@ -295,58 +350,6 @@ Fig.~\ref{fig:OLcontributions} continued.
 
 
 
-\section{Initial DC Alignment of the Interferometer}
-\label{sec:initial_alignment}
-After any kind of in-vacuum work, the DC alignment of the mirrors is
-usually too poor for the interferometer to lock. A bootstrapping
-process of tweaking the alignment by hand is necessary, assuming the
-mirrors start out pointing in generally the right direction, as is
-usually the case. As pointed out in Sec.~\ref{sec:alignment_overview}, the
-QPDs at the end stations are the fixed reference points for the
-overall alignment, so this process begins with making sure the light
-reaches them. We then adjust the rest of the mirrors to maximize power
-build-up in the arms and to maximze spatial overlap of the light
-reflected from each arm.
-
-An outline of the process is presented here. ``Misalign'' means to
-intentionally point a mirror so far away from any known good positions
-as to eliminate it from the configuration.  ``Align'' and ``restore''
-mean to bring a mirror or configuration to the best known
-position(s). Centering the beam on a mirror is accomplished by using
-the suspension cage surrounding the mirror as a reference. Camera
-images and QPD readback provide the signals used for beam centering. 
-
-\begin{itemize}
-\item[] \textbf{X-arm} \vspace{-10pt}
-\item restore the x-arm (misalign RM, ITMY, and ETMY, align ITMX and ETMX) \vspace{-10pt}
-\item use ITMX to center the beam on QPDX \vspace{-10pt}
-\item use ETMX to center the beam on ITMX \vspace{-10pt}
-\item with x-arm locked, use MMT3 to maximize the x-arm power build-up (NPTRX, can expect
-  about 95\%) \vspace{-10pt}
-\item save the MMT3, ITMX, and ETMX alignment settings 
-\item[] \textbf{Y-arm} \vspace{-10pt}
-\item restore the y-arm (misalign ITMX and ETMX, align ITMY and ETMY) \vspace{-10pt}
-\item use ITMY to center the beam on QPDY \vspace{-10pt}
-\item use ETMY to center the beam on ITMY \vspace{-10pt}
-\item with y-arm locked, use BS to maximize the y-arm power build-up (NPTRY, can expect
-  about 90\%) \vspace{-10pt}
-\item save the BS, ITMY, and ETMY alignment settings 
-\item[] \textbf{Relative x-arm and y-arm} \vspace{-10pt}
-\item note AS beam position on camera while toggling between x-arm and
-  y-arm locks\vspace{-10pt}
-\item use ETMs to align the two AS beams \vspace{-10pt}
-\item restore the Michelson (misalign ETMs, align ITMs) \vspace{-10pt}
-\item use BS to make AS port as dark as possible \vspace{-10pt}
-\item re-do y-arm alignment if ambitious 
-\item[] \textbf{Recycling mirror} \vspace{-10pt}
-\item restore the PRM (misalign ETMs, align ITMs and RM)
-  \vspace{-10pt}
-\item use RM to center beam on ETMY cage 
-\item[] \textbf{Restore full interferometer--off you go!}
-\end{itemize}
-
-
-
 % \section{Photodiodes}
 % \label{sec:pds}
 % The basic photoconductive photodiode is depicted in Fig. \ref{}. A
@@ -400,6 +403,16 @@ spectra represents 30~minutes of data centered around the time of the
 measurement. There are three degrees of freedom for each seismometer,
 $x$, $y$, and $z$. They are aligned with the interferometer's $x$ and
 $y$ arm coordinate system.
+
+Although the interferometer is very sensitive to ground motion, the
+range of seismic activity for which it can maintain full lock is
+reasonably large. The microseism (0.1-0.35~Hz) varies by factors of
+several seasonally (it's worse in the winter), and the 1-3~Hz motion
+varies by factors of several from day to night. Seismic motion the
+interferometer typically cannot handle includes events like
+earthquakes (0.03-0.1~Hz) and heavy activity on site (3-10~Hz). Motion
+at these frequencies are otherwise constant and at a level so as to
+not affect interferometer operation. 
 
 \begin{figure}
 \begin{centering}

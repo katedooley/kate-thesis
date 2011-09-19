@@ -10,58 +10,55 @@ A level-1 auxiliary file: chapter3a.aux
 A level-1 auxiliary file: chapter4a.aux
 A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
-A level-1 auxiliary file: chapter6.aux
 A level-1 auxiliary file: chapter7.aux
 A level-1 auxiliary file: appendixIO.aux
+A level-1 auxiliary file: appendix_cal.aux
 A level-1 auxiliary file: appendixAA.aux
 The style file: apsrev.bst
 A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
-Repeated entry---line 1307 of file group-1530.bib
- : @article{Fricke2011DC
- :                      ,
-I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in Siegman1986Lasers
-You've used 44 entries,
+Warning--empty note in Barsotti2008Untitled
+You've used 47 entries,
             3411 wiz_defined-function locations,
-            1500 strings with 32991 characters,
-and the built_in function-call counts, 33728 in all, are:
-= -- 1716
-> -- 1444
-< -- 213
-+ -- 1263
-- -- 359
-* -- 4878
-:= -- 3530
-add.period$ -- 44
-call.type$ -- 44
-change.case$ -- 179
-chr.to.int$ -- 44
-cite$ -- 47
-duplicate$ -- 3036
-empty$ -- 2643
-format.name$ -- 834
-if$ -- 6134
+            1519 strings with 33691 characters,
+and the built_in function-call counts, 36355 in all, are:
+= -- 1836
+> -- 1581
+< -- 232
++ -- 1387
+- -- 393
+* -- 5267
+:= -- 3794
+add.period$ -- 47
+call.type$ -- 47
+change.case$ -- 191
+chr.to.int$ -- 47
+cite$ -- 51
+duplicate$ -- 3268
+empty$ -- 2839
+format.name$ -- 909
+if$ -- 6604
 int.to.chr$ -- 1
-int.to.str$ -- 45
-missing$ -- 463
-newline$ -- 147
-num.names$ -- 130
-pop$ -- 700
+int.to.str$ -- 48
+missing$ -- 496
+newline$ -- 156
+num.names$ -- 139
+pop$ -- 765
 preamble$ -- 1
-purify$ -- 176
+purify$ -- 188
 quote$ -- 0
-skip$ -- 1277
+skip$ -- 1369
 stack$ -- 0
-substring$ -- 749
-swap$ -- 2577
-text.length$ -- 192
+substring$ -- 795
+swap$ -- 2777
+text.length$ -- 210
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 260
-warning$ -- 1
-while$ -- 107
+type$ -- 278
+warning$ -- 2
+while$ -- 114
 width$ -- 0
-write$ -- 494
-(There was 1 error message)
+write$ -- 523
+(There were 2 warnings)

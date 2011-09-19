@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{47}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -144,9 +144,22 @@
   \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2006}),
   \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=7384}.
 
-\bibitem[{\citenamefont{Fricke}(2011)}]{Fricke2011DC}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Fricke}}, Ph.D. thesis,
-  \bibinfo{school}{Louisiana State University} (\bibinfo{year}{2011}).
+\bibitem[{\citenamefont{Fricke et~al.}(2011)\citenamefont{Fricke, Smith,
+  Abbott, Adhikari, Dooley, Evans, Fritschel, Frolov, Kawabe, and
+  Waldman}}]{Fricke2011DC}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Fricke}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Smith}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Dooley}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Frolov}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Kawabe}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Waldman}},
+  \bibinfo{journal}{in preparation}  (\bibinfo{year}{2011}),
+  \urlprefix\url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid%
+=8442}.
 
 \bibitem[{\citenamefont{Kissel}(2010)}]{KisselThesis}
 \bibinfo{author}{\bibfnamefont{J.~S.} \bibnamefont{Kissel}}, Ph.D. thesis,
@@ -422,17 +435,39 @@ um}
 \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Group}}, \bibinfo{type}{Tech.
   Rep.}, \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1998}).
 
-\bibitem[{\citenamefont{Siegman}(1986)}]{Siegman1986Lasers}
-\bibinfo{author}{\bibfnamefont{A.~E.} \bibnamefont{Siegman}},
-  \emph{\bibinfo{title}{{Lasers}}} (\bibinfo{publisher}{University Science
-  Books}, \bibinfo{address}{55D Gate Five Road, Sausalito, CA 94965},
-  \bibinfo{year}{1986}).
+\bibitem[{\citenamefont{Sigg}(1996)}]{Sigg1996Wavefront}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}}, \bibinfo{type}{Tech.
+  Rep.} \bibinfo{number}{T960111}, \bibinfo{institution}{LIGO Laboratory}
+  (\bibinfo{year}{1996}).
 
 \bibitem[{\citenamefont{Anderson}(1984)}]{Anderson1984Alignment}
 \bibinfo{author}{\bibfnamefont{D.~Z.} \bibnamefont{Anderson}},
   \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{23}},
   \bibinfo{pages}{2944} (\bibinfo{year}{1984}),
   \urlprefix\url{http://dx.doi.org/10.1364/AO.23.002944}.
+
+\bibitem[{\citenamefont{Fritschel et~al.}(1998)\citenamefont{Fritschel,
+  Mavalvala, Shoemaker, Sigg, Zucker, and
+  Gonz\'{a}lez}}]{Fritschel1998Alignment}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Mavalvala}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Shoemaker}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Zucker}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Gonz\'{a}lez}},
+  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{37}},
+  \bibinfo{pages}{6734} (\bibinfo{year}{1998}),
+  \urlprefix\url{http://dx.doi.org/10.1364/AO.37.006734}.
+
+\bibitem[{\citenamefont{Siegman}(1986)}]{Siegman1986Lasers}
+\bibinfo{author}{\bibfnamefont{A.~E.} \bibnamefont{Siegman}},
+  \emph{\bibinfo{title}{{Lasers}}} (\bibinfo{publisher}{University Science
+  Books}, \bibinfo{address}{55D Gate Five Road, Sausalito, CA 94965},
+  \bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Barsotti}(2008)}]{Barsotti2008Untitled}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Barsotti}}
+  (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Wiener}(1975)}]{Wiener1975Extrapolation}
 \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Wiener}},

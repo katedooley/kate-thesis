@@ -1,38 +1,12 @@
 \chapter{Angular Motion of the Interferometer Mirrors}
 
-\textcolor{blue}{write this introduction!}
-For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. In practice, however, the mirrors are subject to external disturbances. 
-
-The mode defined by the mirrors needs good overlap with the input beam's mode. (cavity axis aligned in angle and translation with input axis)
-
-The mirrors in LIGO are suspended, both to isolate them from ground motion and to simulate inertial test masses. 
-
-
-It is necessary to actively align the mirrors for several reasons:
+For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. It is necessary to actively align the mirrors for several reasons:
 \begin{itemize}
-\item find the optimal DC alignment of the interferometer \vspace{-10 pt}
-\item suppress any motion that does result from external disturbances \vspace{-10 pt}
-\item counteract a high power static instability
+\item to find the optimal DC alignment of the interferometer \vspace{-10 pt}
+\item to suppress any motion that results from external disturbances \vspace{-10 pt}
+\item to counteract a high power static instability
 \end{itemize}
-Furthermore, due to radiation pressure interaction, the system is not even stable at high power.
-
-mirrors are subject to external disturbances, plus they're not stable. we have to do something about it. 
-
-mirrors move around, this is bad, moreover they're not even stable.
-
-While we usually talk about the need to control the lengths, for every length degree of freedom, there are two angular degrees of freedom that need to be sensed and controlled for the same reasons. 
-
-The mirrors are statically unstable and need to be held in place. 
-
-This chapter discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer.
-
-
-
-
-Any torque produces an angular displacement of the mirror as governed by the mirror's torque to angle transfer function.
-
-A consequence is that even when all of the mirrors are perfectly aligned at all frequencies, the simple existence of light in the interferometer makes the arm cavities statically unstable when high enough laser powers are used.
-
+There are 16 angular degrees of freedom that need to be sensed and controlled, making the ASC one of the most complex interferometer subsystems. This chapter presents the ASC design, and discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer.
 
 
 
@@ -59,26 +33,25 @@ A consequence is that even when all of the mirrors are perfectly aligned at all 
 
 
 \section{Tolerance for Angular Motion}
-\textcolor{blue}{Make this section correct! power fluctations only couple quadratically (bi-linearly) to DARM, but the contrast defect thing is \emph{indistinguishable} from gravitational waves. the A2L should still be emphasized.}
+\label{sec:tolerance}
+%\textcolor{blue}{Make this section correct! power fluctations only couple quadratically (bi-linearly) to DARM, but the contrast defect thing is \emph{indistinguishable} from gravitational waves. the A2L should still be emphasized.}
+
+
 % Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residula motion must be held below 
 
 Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: failure to achieve maximum power gain, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
 
-Because the strain sensitivity is proportional to the power buildup (see Eq. \ref{eq:SNL}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other, which increases the shot noise at the AS port. Excessive fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
+Because the strain sensitivity is proportional to the power at the beam splitter (see Eq. \ref{eq:SNL}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Furthermore, differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other. A changing contrast defect creates power fluctuations at the AS port, making it indistinguishable from gravitational waves. Also, the DC power of the contrast defect contributes to increasing the shot noise noise-floor. Excessive fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
 
-
-\textcolor{blue}{work this paragraph in somewhere}
-The idea is that when the axis of rotation of a mirror coincides with the center of the beam, any tilt of the mirror about this axis does not affect the path length of the reflected beam. However, if there is a mismatch between rotation axis and beam location, then the light will pick up a longitudinal phase shift when the mirror is tilted. During a full interferometer lock, this is recorded by DARM.
-
-
-
-When the beam is located a distance $x$ away from the center of the mirror, an
+Another deleterious effect of poor alignment is angle to length coupling. 
+When the beam is located a distance $x$  away from the center of the mirror, an
 angular displacement of the mirror $\theta$ about its center results in a path
 length change of the beam
 \begin{equation}
-\Delta{L} = x * \theta
+\Delta{L} = x \theta
 \end{equation}
-which has a direct impact on DARM. Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x ~=~1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m. \textcolor{blue}{Convolve my bsm spectra and residual mirror motion spectra to show example.}
+which has a direct impact on DARM. Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x ~=~1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m. 
+%\textcolor{blue}{Convolve my bsm spectra and residual mirror motion spectra to show example.}
 
 
 
@@ -87,12 +60,13 @@ which has a direct impact on DARM. Therefore, the alignment specifications must 
 There is a continuous stream of changing torque inputs to the mirrors that cause them to twist and turn in pitch and in yaw. Some torque inputs exist regardless of the state of the interferometer, while others are a direct consequence of the control systems. The primary torque inputs are introduced here, and further discussion of some of them is found later in the chapter. The list includes:
 \begin{itemize}
 \item ground motion \vspace{-10pt} 
-\item seismic isolation \vspace{-10pt} 
+%\item seismic isolation \vspace{-10pt} 
 \item coil actuators (length to angle) \vspace{-10pt}
 \item noise impression from the angular control system \vspace{-10pt}
 \item radiation pressure
 \end{itemize}
-\textcolor{blue}{say something about seismometer feed-forward signals. say something about imperfect HEPI pos actuation}
+
+%\textcolor{blue}{say something about seismometer feed-forward signals. say something about imperfect HEPI pos actuation}
 
 
 
@@ -272,7 +246,7 @@ There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. Th
 \item wavefront sensors (WFS1, WFS2\footnote{Two signals are derived from WFS2.}, WFS3, WFS4): sense the angular misalignment of cavitites 
 \end{itemize}
 Figure \ref{fig:ASClayout} shows the locations of these sensors.
-The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-P\'{e}rot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the y-arm perpendicular to the x-arm.
+The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-P\'{e}rot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the beam from the beam splitter pointed at the y-arm.
 
 \begin{figure} 
 \begin{centering} 
@@ -307,12 +281,7 @@ This alignment process involving the WFS, QPDs, and BS camera relies on the enti
 
 \section{The Wavefront Sensing Scheme}
 \label{sec:WFSsensing}
-Wavefront sensors for angular sensing are the single photodiode equivalent of length sensing. Wavefront sensors are quadrant photodiodes equipped with RF electronics. They rely on the  Pound-Drever-Hall locking scheme to produce error signals. 
-\textcolor{blue}{overview of basic wavefront sensing, references for details, picture of 10 + 00 mode}
-% \section{Wavefront sensing}
-% \label{sec:wfs}
-% \textcolor{blue}{Describe modes, reference sidebands, Gouy phases; give FP cavity example.}
-
+Wavefront sensors for angular sensing are the quadrant photodiode equivalent of the single photodiodes used for length sensing. Wavefront sensors are quadrant photodiodes equipped with RF electronics and they rely on the Pound-Drever-Hall locking scheme to produce error signals \cite{Sigg1996Wavefront}. Angular misalignments of the interferometer cavities generate TEM$_{01}$ and TEM$_{10}$ spatial modes as explained in Ref.~\cite{Anderson1984Alignment}. Appendix~\ref{sec:cavitypower} also contains a derivation. The overlap of the higher order mode field with a TEM$_{00}$ reference sideband field produces an excess of power on one half of the detector compared to the other, which when demodulated at the sideband frequency, is the error signal. Reference \cite{Fritschel1998Alignment} contains a thorough description of the wavefront sensing scheme.
 
 
 
@@ -329,7 +298,9 @@ Fig.~\ref{fig:ASCcontrolservo} is a block diagram of the major components to the
 \end{centering}
 \end{figure}
 
-In Initial LIGO, the wavefront sensor signals were combined via the input matrix to form error signals for the differential and common ETM and ITM motions (\textcolor{blue}{explain more}). WFS control filters were designed for this basis and then those control signals were divvied out to appropriate mirrors via the output matrix. 
+In Initial LIGO, the wavefront sensor signals were combined via the input matrix to form error signals for the differential and common ETM and ITM motions.
+% (\textcolor{blue}{explain more}). 
+WFS control filters were designed for this basis and then those control signals were divvied out to appropriate mirrors via the output matrix. 
 
 
 

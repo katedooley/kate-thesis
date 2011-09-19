@@ -108,50 +108,36 @@
 % \item compare to mirror motion with no ifo (demonstrate ASC suppression)
 % \end{itemize}
 
-\textcolor{blue}{This intro is a work in progress! Set up reader to
-  hear about measurements of the Enhanced LIGO system.}
-The basis for angular control in Initial LIGO was the sensor
-basis. The wavefront sensors are located such that they sense
-common/differential ETM/ITM angular motion and the filters were
-designed to feed back to those sets of motions. This does not, however,
-lend itself to easily handling radiation pressure torque. Since the
-WFS basis is not the radiation pressure eigenbasis of Section
-\ref{sec:eigenbasis}, each control servo handled combinations of the
-soft and hard modes. Due to radiation pressure, each mirror has two
-resonances, a more complicated plant than that offered by the
-eigenbasis which has a single resonance for each mode.
+% \textcolor{blue}{This intro is a work in progress! Set up reader to
+%   hear about measurements of the Enhanced LIGO system.}
+% The basis for angular control in Initial LIGO was the sensor
+% basis. The wavefront sensors are located such that they sense
+% common/differential ETM/ITM angular motion and the filters were
+% designed to feed back to those sets of motions. This does not, however,
+% lend itself to easily handling radiation pressure torque. Since the
+% WFS basis is not the radiation pressure eigenbasis of Section
+% \ref{sec:eigenbasis}, each control servo handled combinations of the
+% soft and hard modes. Due to radiation pressure, each mirror has two
+% resonances, a more complicated plant than that offered by the
+% eigenbasis which has a single resonance for each mode.
 
 
 The meat of the Enhanced LIGO ASC upgrade was to switch the control servo
 from the sensor basis to the natural radiation pressure eigenmode
-basis, and to keep the contamination to DARM at a minimum. 
-
-
-Although the interferometer is very sensitive to ground motion, the
-range of seismic activity for which it can maintain full lock is
-reasonably large. The microseism (0.1-0.35~Hz) varies by factors of
-several seasonally (it's worse in the winter), and the 1-3~Hz motion
-varies by factors of several from day to night. Seismic motion the
-interferometer typically cannot handle includes events like
-earthquakes (0.03-0.1~Hz) and heavy activity on site (3-10~Hz). Motion
-at these frequencies are otherwise constant and at a level so as to
-not affect interferometer operation. 
+basis, and to keep the contamination to DARM at a minimum. This
+chapter presents the design of the new basis and measurements that
+characterize it and its effect on DARM. 
 
 For completeness and for satisfaction for the trained eye, I include
 in Appendix \ref{sec:groundmotion} seismic spectra from the time of
 each measurement I present. For some people, this may seem excessive,
 but almost all of the mirror motion is in fact due to the ground, so
-the relevence is high \textcolor{blue}{(fix wording)}. 
+the relevence is high.
 
 
-\footnote{The convention for the naming of the WFS control signals is
-  WFS1, WFS2A, WFS2B, WFS3, and WFS4, as seen in the channel
-  names. This can be misleading because of the similarity to the
-  sensor names (WFS1Q, WFS2I, WFS2Q, WFS3, and WFS4), potentially
-  leading one to assume a one-to-one correspondence. For clarity in
-  this dissertation, I refer to the WFS control signals by the degrees of
-  freedom they represent: dSoft, cSoft, dHard, cHard, and RM.}
 
+
+% \textcolor{blue}{(fix wording)}. 
 
 
 
@@ -159,12 +145,32 @@ the relevence is high \textcolor{blue}{(fix wording)}.
 
 
 \section{The ASC Change of Basis}
-\textcolor{blue}{make block figure!}
+The change in control basis from Initial LIGO to Enhanced LIGO was a
+rather straightforward operation of changing only the ASC input matrix
+and the ASC output matrix, as shown in Fig.~\ref{fig:ASCcontrolservo} and
+described in the following subsections.
+
+The convention for the naming of the WFS control signals is WFS1,
+WFS2A, WFS2B, WFS3, and WFS4, as seen in the channel names. This can
+be misleading because of the similarity to the sensor names (WFS1Q,
+WFS2I, WFS2Q, WFS3, and WFS4), potentially leading one to assume a
+one-to-one correspondence. For clarity in this dissertation, I refer
+to the WFS control signals by the radiation pressure eigenbasis
+degrees of freedom they represent: 
+\begin{itemize}
+\item differential soft (dSoft) \\
+\item common soft (cSoft) \\
+\item differential hard (dHard) \\
+\item common hard (cHard) \\
+\item recycling mirror (RM)
+\end{itemize}
+
+%\textcolor{blue}{make block figure!}
 
 
 
 \subsection{WFS Input Matrix}
-\textcolor{blue}{(Move optical gain discussion somewhere else?)}
+%\textcolor{blue}{(Move optical gain discussion somewhere else?)}
 Optical gain is a term used in LIGO to described the amount of laser
 power produced at some interferometer port for a given physical change
 of some aspect of the interferometer. Ideally, photodiodes are placed
@@ -174,7 +180,8 @@ signals are transmitted, one is placed to look at a pick-off of the
 beam in the recycling cavity which contains common and differential
 information, and two are placed at the reflected port, where
 common-mode signals end up. The precise locations are determined from
-the Gouy phases of the light. Details are found in Ref. xx.
+the Gouy phases of the light. Details are found in
+Ref.~\cite{Barsotti2009Modeling}. 
 
 The WFS optical gain is a measure of how much TEM01/TEM10 mode shows
 up at the locations of the wavefront sensors when a mirror (or
@@ -217,30 +224,54 @@ of strong signals by those with weak signal-to-noise ratios. The
 elements that remain after this process are highlighted by boxes. Note
 that the sensing matrix is in fact composed of two sub-matrices: one
 for the differential degrees of freedom, and one for the common
-degrees of freedom.
+degrees of freedom. Also, WFS1Q has particularly strong signal
+compared to the other wavefront sensors. We see in
+Sec.~\ref{sec:WFSolgs} that this allows us to provide much more
+control to the differential soft mode compared to the other modes.
 
 \begin{table}
 \centering
-\caption[WFS optical gain matrix]{Optical gain at 9.7~Hz in units of WFS counts / dof radian
-  (pitch). Numbers in \textcolor{gray}{gray} are the measurement
-  results that have coherences less than 0.9. Boxes highlight the
-  elements actually used in the control system. All other elements are
-  set to zero. \textcolor{blue}{change to Volts!}} 
+\caption[WFS optical gain matrix]{Optical gain at 9.7~Hz in units of
+  Volts per degree of freedom microradian (pitch). Numbers in
+  \textcolor{gray}{gray} are the measurement results that have
+  coherences less than 0.9. Boxes highlight the elements actually used
+  in the control system. All other elements are set to zero.}
 \begin{tabular}{l l l l l l}
 \hline
 WFS1Q & WFS2I & WFS2Q & WFS3I & WFS4I &  \\
 \hline
-\fbox{5.8e+12}   & \textcolor{gray}{3.3e+09} &\textcolor{gray}{6.7e+09} & \textcolor{gray}{-1.3e+09}  &  \textcolor{gray}{2.2e+09} & dSoft \\
-\fbox{9.2e+11}  & \fbox{-3.7e+09} &\textcolor{gray}{-4.0e+09} &  \textcolor{gray}{3.4e+08} & \textcolor{gray}{-1.7e+09} & dHard \\
-   \textcolor{gray}{5.4+10} & \textcolor{gray}{-1.3e+09} &  \fbox{2.1e+10} & \fbox{\textcolor{gray}{-3.9e+09}} &  \fbox{\textcolor{gray}{-1.7e+10}} & cSoft \\
-   \textcolor{gray}{4.9e+11} & \textcolor{gray}{-1.6e+09} & \fbox{-2.4e+10} &  \fbox{\textcolor{gray}{1.2e+09}} & \fbox{-1.9e+10} & cHard \\
-   \textcolor{gray}{2.6e+11} & \textcolor{gray}{-1.1e+09} & \fbox{-2.4e+10}  &  \fbox{7.0e+09} & \fbox{-3.5e+10} & RM \\
+\fbox{2.0}   & \textcolor{gray}{0.03} &\textcolor{gray}{0.06} & \textcolor{gray}{-0.008}  &  \textcolor{gray}{0.01} & dSoft \\
+\fbox{0.31}  & \fbox{-0.03} &\textcolor{gray}{-0.04} &  \textcolor{gray}{0.002} & \textcolor{gray}{-0.01} & dHard \\
+   \textcolor{gray}{0.02} & \textcolor{gray}{-0.01} &  \fbox{0.18} & \fbox{\textcolor{gray}{-0.02}} &  \fbox{\textcolor{gray}{-0.10}} & cSoft \\
+   \textcolor{gray}{0.17} & \textcolor{gray}{-0.01} & \fbox{-0.21} &  \fbox{\textcolor{gray}{0.007}} & \fbox{-0.12} & cHard \\
+   \textcolor{gray}{0.09} & \textcolor{gray}{-0.01} & \fbox{-0.21}  &  \fbox{0.04} & \fbox{-0.21} & RM \\
 \hline
 \end{tabular}
 \label{table:sensing}
 \end{table}
 
-\textcolor{blue}{Paragraph discussing sensing matrix numbers.}
+% \begin{table}
+% \centering
+% \caption[WFS optical gain matrix]{Optical gain at 9.7~Hz in units of WFS counts / dof radian
+%   (pitch). Numbers in \textcolor{gray}{gray} are the measurement
+%   results that have coherences less than 0.9. Boxes highlight the
+%   elements actually used in the control system. All other elements are
+%   set to zero. \textcolor{blue}{change to Volts!}} 
+% \begin{tabular}{l l l l l l}
+% \hline
+% WFS1Q & WFS2I & WFS2Q & WFS3I & WFS4I &  \\
+% \hline
+% \fbox{5.8e+12}   & \textcolor{gray}{3.3e+09} &\textcolor{gray}{6.7e+09} & \textcolor{gray}{-1.3e+09}  &  \textcolor{gray}{2.2e+09} & dSoft \\
+% \fbox{9.2e+11}  & \fbox{-3.7e+09} &\textcolor{gray}{-4.0e+09} &  \textcolor{gray}{3.4e+08} & \textcolor{gray}{-1.7e+09} & dHard \\
+%    \textcolor{gray}{5.4+10} & \textcolor{gray}{-1.3e+09} &  \fbox{2.1e+10} & \fbox{\textcolor{gray}{-3.9e+09}} &  \fbox{\textcolor{gray}{-1.7e+10}} & cSoft \\
+%    \textcolor{gray}{4.9e+11} & \textcolor{gray}{-1.6e+09} & \fbox{-2.4e+10} &  \fbox{\textcolor{gray}{1.2e+09}} & \fbox{-1.9e+10} & cHard \\
+%    \textcolor{gray}{2.6e+11} & \textcolor{gray}{-1.1e+09} & \fbox{-2.4e+10}  &  \fbox{7.0e+09} & \fbox{-3.5e+10} & RM \\
+% \hline
+% \end{tabular}
+% \label{table:sensing}
+% \end{table}
+
+%\textcolor{blue}{Paragraph discussing sensing matrix numbers.}
 
 
 
@@ -275,32 +306,46 @@ r & -1 & r & -1 & 0 & ITMX\\
 
 \subsection{Diagonalizing the WFS Drive Matrix}
 
-\textcolor{blue}{fix this} During the sensing matrix measurement, the optical levers provide a
+%\textcolor{blue}{fix this} 
+During the sensing matrix measurement, the optical levers provide a
 record of the motion of the test masses. Properly combining the
-optical lever responses tells the amplitude of each radiation pressure
-degree of freedom's movement. The actual numbers for the measurement
-data presented in Table \ref{table:sensing} are found in Table
-\ref{table:excitations_calibrated}. This now allows us to complete the
-first part of obtaining an optical gain matrix. Each row of the
-sensing matrix should be divided by the amplitude of that dof's
-excitation, the diagonal elements of Table
-\ref{table:excitations_calibrated}. The result of doing so gives the
-angular optical gain of the interferometer in terms of WFS digital
-counts per radian.
+optical lever responses (via the output matrix, Eq.~\ref{eq:output})
+tells the amplitude of each radiation pressure degree of freedom's
+movement. The actual numbers for the measurement data presented in
+Table \ref{table:sensing} are found in Table
+\ref{table:excitations_calibrated}.
+
+This matrix tells the extent to which the ASC control matrix excites
+the degree of freedom it is designed to excite. Columns are
+excitations and rows are the pitch motions at 9.7~Hz in units of
+\microrad. Ideally, this would be a diagonal matrix and it is up to at
+most a factor of two. Some modifications to the output matrix were
+necessary in order to achieve the eigenbasis motion matrix as diagonal
+as this one. The modifications take the form of gains to the mirror
+drives and are shown in Table~\ref{table:mirrorgains}.
 
 
-\textcolor{blue}{write out the rest of this section}
-D = 'drive' = DOF excitation to DOF excited matrix (theta\_dof)
-U = 'unknown' = hardware mostly; coils, etc.
-M = 'mirror' = mirror gains; a diagonal matrix
-C = 'control' = ASC output matrix
+% This now allows us to complete the
+% first part of obtaining an optical gain matrix. Each row of the
+% sensing matrix should be divided by the amplitude of that dof's
+% excitation, the diagonal elements of Table
+% \ref{table:excitations_calibrated}. The result of doing so gives the
+% angular optical gain of the interferometer in terms of WFS digital
+% counts per radian.
 
-We have D = U*M*C. A drive is multiplied first by the output matrix (C),
-then by the mirror gains (M), then put into hardware (U) to create what's
-actually exicted.
 
-To make D diagonal, we want to find a new M, M\_new, which must have the
-property M\_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
+%\textcolor{blue}{write out the rest of this section}
+% D = 'drive' = DOF excitation to DOF excited matrix (theta\_dof)
+% U = 'unknown' = hardware mostly; coils, etc.
+% M = 'mirror' = mirror gains; a diagonal matrix
+% C = 'control' = ASC output matrix
+
+% We have D = U*M*C. A drive is multiplied first by the output matrix (C),
+% then by the mirror gains (M), then put into hardware (U) to create what's
+% actually exicted.
+
+% To make D diagonal, we want to find a new M, M\_new, which must have the
+% property M\_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
 
 
 \begin{table}
@@ -341,21 +386,26 @@ ETMX & ETMY & ITMX & ITMY & RM & \\
 %  0 & 0 & 0 & 0 & 1 & RM\\
 \hline
 \end{tabular}
+\label{table:mirrorgains}
 \end{table}
 
 
 
 
 \section{Sensing Matrix Stability}
-\textcolor{blue}{Show how the sensing matrix changes in time (APS
-  presentation).}
-sensing matrix stability over time, with power;
-just how diagonal is the system?
+%\textcolor{blue}{Show how the sensing matrix changes in time (APS presentation).}
+%sensing matrix stability over time, with power;
+%just how diagonal is the system?
 
-The ASC input matrices are based on sensing measurements made Jan. 28th at 6 W 
-input power. By design, the input matrix is not exactly the inverse of the 
-sensing matrix, meaning the system is not completely diagonal:
- 6 W input * 6 W sensing (by design)
+As the interferometer conditions change, so does the sensing
+matrix. The inverse of the sensing matrix, the input matrix, is
+hardcoded in the digital control servo and not actively
+updated. Therefore, it can be expected that the ASC performance may
+not be stable. 
+
+By design, the input matrix is not exactly the inverse of the sensing
+matrix, meaning the system is not completely diagonal. For example,
+the input matrix times the sensing matrix is by design:
  \[ \left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.30 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
@@ -365,9 +415,9 @@ sensing matrix, meaning the system is not completely diagonal:
 \end{array} \right\rrbracket\] 
 
 Over time, the sensing matrix changes enough that the system is even less 
-diagonal:
-6 W input * 6 W sensing (after 10 min)
- \[ \left\llbracket \begin{array}{ccccc}
+diagonal. Only 10 minutes after having measured and created the input
+matrix, the product of the input matrix with the new sensing matrix is:
+\[ \left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.32 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
 -0.02 & 0 & 1.0 & 0 & 0 \\
@@ -375,7 +425,7 @@ diagonal:
 0 & 0.02 & 0 & 0.05 & 1.03 
 \end{array} \right\rrbracket\] 
 
-6 W input * 6 W sensing (after 1 week)
+After one week, it is:
  \[ \left\llbracket \begin{array}{ccccc}
 0.67 & 0 & 0.27 & 0 & 0 \\
 0 & 0.91 & 0 & 0.03 & -0.03 \\
@@ -384,8 +434,7 @@ diagonal:
 0 & 0.06 & 0 & 0.07 & 1.04 
 \end{array} \right\rrbracket\] 
 
-Using a sensing matrix measurement at 12 W:
-6 W input * 12 W sensing (after 3 weeks)
+And after three weeks, it is:
  \[ \left\llbracket \begin{array}{ccccc}
 1.4 & 0 & 0.55 & 0 & 0 \\
 0 & 1.8 & 0 & -0.09 & 0.15 \\
@@ -544,8 +593,9 @@ interferometer operation. The heating and cooling of the ITMs is a
 very complicated process and therefore not very precise, so the value
 of the hot PRC's $g$-factor is usually not constant.
 
-\textcolor{blue}{differentiate magnitude of SPOB vs fluctuations in
-  SPOB.} The changing $g$-factor has potentially severe consequences
+%\textcolor{blue}{differentiate magnitude of SPOB vs fluctuations in
+%SPOB.} 
+The changing $g$-factor has potentially severe consequences
 for the ASC. Because of its geometry, the power build-up in the PRC is
 very sensitve to both the mirror angles and the $g$-factor. Power
 fluctuation is detrimental because the signal to noise ratios of the
@@ -653,8 +703,8 @@ recycling cavity geometry]{WFS optical response as a function of power
   test mass motion as the power in the recycling cavity increases. To
   achieve a dependable feedback system, the error signals are scaled
   in real-time, forcing their responses to be flat with power. This
-  range of SPOB is low for normal operations. \textcolor{blue}{plot as
-  ratio of first value and include fitted lines for satisfaction.}}
+  range of SPOB is low for normal operations.} 
+%\textcolor{blue}{plot as ratio of first value and include fitted lines for satisfaction.}}
 \label{fig:WFStrack}
 \end{centering}
 \end{figure}
@@ -699,6 +749,17 @@ recycling cavity geometry]{WFS optical response as a function of power
 
 \section{WFS Servo Open Loop Transfer Functions}
 \label{sec:WFSolgs}
+The open loop transfer functions of the wavefront sensor loops as
+measured during a 6~W lock are shown in Fig.~\ref{fig:olgs6W}. As
+anticipated from the large differential soft signal seen by WFS1 in
+the sensing matrix measurement (Table~\ref{table:sensing}), that is
+the mode for which we provide the strongest suppression. However, it
+is also conditionally stable (due to a pole at zero that is engaged
+after the servo is turned on), as seen by the phase dropping below
+$-180^{\circ}$ at two frequencies. The unity gain frequency must be
+held between roughly 2 and 10~Hz. As shown here, the dSoft UGF is at
+5~Hz. For the other degrees of freedom, the UGFs are all between 0.8
+and 1~Hz. Each loop has a phase margin of 30 to $40^{\circ}$.
 
 \begin{figure}
 \begin{centering}
@@ -712,30 +773,33 @@ recycling cavity geometry]{WFS optical response as a function of power
 \end{figure}
 
 
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_mags.pdf}}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_phases.pdf}}
-\caption{Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four
-  different powers.}
-\label{fig:DSolgs}
-\end{centering}
-\end{figure}
+% \begin{figure}
+% \begin{centering}
+% \subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_mags.pdf}}
+% \subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_phases.pdf}}
+% \caption{Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four
+%   different powers.}
+% \label{fig:DSolgs}
+% \end{centering}
+% \end{figure}
 
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs2b_olgs_mags.pdf}}
-\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs2b_olgs_phases.pdf}}
-\caption{Open loop gains (pitch) of the differential hard (WFS2B) loop as measured at four
-  different powers.}
-\label{fig:DHolgs}
-\end{centering}
-\end{figure}
+% \begin{figure}
+% \begin{centering}
+% \subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs2b_olgs_mags.pdf}}
+% \subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs2b_olgs_phases.pdf}}
+% \caption{Open loop gains (pitch) of the differential hard (WFS2B) loop as measured at four
+%   different powers.}
+% \label{fig:DHolgs}
+% \end{centering}
+% \end{figure}
 
 
 
 
 \section{Residual Angular Motion}
+The residual beam spot motion is shown in Fig.~\ref{fig:bsm}. We see
+the rms beam spot motion on the ETMs is 1~mm and on the ITMs it is
+0.8~mm. This meets the requirements of Sec.~\ref{sec:tolerance}.
 
 \begin{figure}
 \begin{centering}
@@ -750,23 +814,37 @@ lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
 \end{figure}
 
 
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics{figures/DS_darkres.pdf}}\subfigure{\includegraphics{figures/CS_darkres.pdf}}
-\subfigure{\includegraphics{figures/DH_darkres.pdf}}\subfigure{\includegraphics{figures/CH_darkres.pdf}}
-\subfigure{\includegraphics{figures/RM_darkres.pdf}}
-\caption[Residual motion of the radiation pressure eigenbasis degrees
-of freedom]{Residual motion of the radiation pressure eigenbasis
-  degrees of freedom using calibrated WFS error signals during a 10~W
-  lock compared to dark noise and the background motion as calculated
-  using the open loop transfer function measurements. The sensor dark
-  noises (see Fig.~\ref{fig:WFSdarknoise}) are put in the RP
-  eigenbasis by propagation through the WFS power scaling and WFS
-  input matrix. Ground motion at the time of the residual motion
-  spectra is found in Fig.~\ref{fig:seismic_locked}.}
-\label{fig:WFSresidual}
-\end{centering}
-\end{figure}
+% \begin{figure}
+% \begin{centering}
+% \subfigure{\includegraphics{figures/DS_darkres.pdf}}\subfigure{\includegraphics{figures/CS_darkres.pdf}}
+% \subfigure{\includegraphics{figures/DH_darkres.pdf}}\subfigure{\includegraphics{figures/CH_darkres.pdf}}
+% \subfigure{\includegraphics{figures/RM_darkres.pdf}}
+% \caption[Residual motion of the radiation pressure eigenbasis degrees
+% of freedom]{Residual motion of the radiation pressure eigenbasis
+%   degrees of freedom using calibrated WFS error signals during a 10~W
+%   lock compared to dark noise and the background motion as calculated
+%   using the open loop transfer function measurements. The sensor dark
+%   noises (see Fig.~\ref{fig:WFSdarknoise}) are put in the RP
+%   eigenbasis by propagation through the WFS power scaling and WFS
+%   input matrix. Ground motion at the time of the residual motion
+%   spectra is found in Fig.~\ref{fig:seismic_locked}.}
+% \label{fig:WFSresidual}
+% \end{centering}
+% \end{figure}
+
+We quantify the effect of the ASC on the radiation pressure eigenbasis
+degrees of freedom by comparing spectra of the residual eigenbasis
+motion during lock to the equivalent eigenbasis motion as witnessed by
+the optical levers out of lock. The comparisons cannot be perfect
+because the spectra are necessarily taken at different times and
+therefore with different seismic noise conditions. However, the effect
+of the ASC is stark at low frequencies where gain is high, as is seen
+in Figure~\ref{fig:ASConoff}. At 0.01~Hz angular motion of all degrees
+of freedom is suppressed by at least one order of magnitude. The
+effect of the high gain for the differential soft degree of freedom,
+in particular, is seen here, where order of magnitude suppression is
+seen already at 1~Hz. Note that the rms angular motion is generally
+$10^{-7}$ rad/$\sqrt{\mathrm{Hz}}$.
 
 
 \begin{figure}
@@ -775,9 +853,10 @@ of freedom]{Residual motion of the radiation pressure eigenbasis
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_DH.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_CH.pdf}}
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_RM.pdf}}
 \caption[Angular motion suppression due to the ASC]{Demonstration of
-  angular motion suppression down to 4~mHz due to the ASC. Same as
-  Fig.~\ref{fig:WFSresidual}, but the background (here called ``no
-  ASC'') is the RP eigenbasis reconstruction of optical lever signals
+  angular motion suppression down to 4~mHz due to the ASC. 
+%Same as Fig.~\ref{fig:WFSresidual}, but the background (here called
+%``no  ASC'') 
+The background motion (``no ASC'') is the RP eigenbasis reconstruction of optical lever signals
   when the interferometer is not locked. Data are taken 45 minutes
   apart, and the ground motions are shown in
   Figures~\ref{fig:seismic_nolock} and \ref{fig:seismic_locked}. The
@@ -787,8 +866,15 @@ of freedom]{Residual motion of the radiation pressure eigenbasis
 \end{centering}
 \end{figure}
 
-
-
+Figure~\ref{fig:mirror_onoff} shows the same data as
+Fig.~\ref{fig:ASConoff} except in the mirror basis instead of the
+radiation pressure eigenmode basis. The ASC on/off comparison of
+mirror motion is interesting because it shows that the mirrors
+actually move more with respect to the ground when they are controlled
+by the ASC than when they are not controlled by the ASC. This is to be
+expected because the ground motion is different at each mirror and the
+job of the ASC is to control the motions of the mirrors with respect
+to each other, not with respect to the ground.
 
 \begin{figure}
 \begin{centering}
@@ -807,16 +893,16 @@ of freedom]{Residual motion of the radiation pressure eigenbasis
 
 
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1.0\columnwidth]{figures/timeseries_ifolocked.pdf}
-\caption[Striptool example]{Time series of interferometer signals
-  showing a typical lock loss and re-lock followed by an increase of
-  power to 14~W.} 
-% (From July 23, 2009 elog.) \textcolor{blue}{work this in somewhere.}}
-\label{fig:striptool}
-\end{centering}
-\end{figure}
+% \begin{figure}
+% \begin{centering}
+% \includegraphics[width=1.0\columnwidth]{figures/timeseries_ifolocked.pdf}
+% \caption[Striptool example]{Time series of interferometer signals
+%   showing a typical lock loss and re-lock followed by an increase of
+%   power to 14~W.} 
+% % (From July 23, 2009 elog.) \textcolor{blue}{work this in somewhere.}}
+% \label{fig:striptool}
+% \end{centering}
+% \end{figure}
 
 
 
@@ -831,23 +917,43 @@ recording both the suspension angular control
 signal\footnote{ie. \texttt{L1:SUS-ETMX\_ASCPIT\_OUT}} and
 DARM. Signals from a time without excitation are subtracted from those
 with the excitation, resulting in just the contribution to each
-spectra due to noise. Dividing the noisy DARM by the noisy suspension
-control signal provides the transfer function we use to mulitiply by a
-suspension signal at any time.
+spectra due to noise. Dividing the noisy DARM spectrum by the noisy
+suspension control spectrum provides the transfer function we use to
+mulitiply by a suspension signal at any time. 
+
+% \begin{figure}
+% \begin{centering}
+% \includegraphics[width=1.0\columnwidth]{figures/ASC2DARM_TFs.pdf}
+% \caption[Measured ASC to DARM transfer functions]{ASC to DARM transfer
+%   function for four of the five wavefront sensor loops. The RM to DARM
+%   transfer function could not be measured because the contribution is
+%   so small. The fitted curves can be multiplied by the WFS error
+%   signals at any time to calculate the ASC noise contribution to
+%   DARM. \textcolor{blue}{Need to turn cts into radians.}}
+% \end{centering}
+% \end{figure}
+
+Figure~\ref{fig:optic2DARM} shows the result of applying the measured
+ASC to DARM transfer function to each of the optic's angular control signals at
+a time when the interferometer was locked with 14~W input power.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=1.0\columnwidth]{figures/ASC2DARM_TFs.pdf}
-\caption[Measured ASC to DARM transfer functions]{ASC to DARM transfer
-  function for four of the five wavefront sensor loops. The RM to DARM
-  transfer function could not be measured because the contribution is
-  so small. The fitted curves can be multiplied by the WFS error
-  signals at any time to calculate the ASC noise contribution to
-  DARM. \textcolor{blue}{Need to turn cts into radians.}}
+\subfigure[Pitch.]{\includegraphics{figures/opticspittoDARM.pdf}}
+\subfigure[Yaw.]{\includegraphics{figures/opticsyawtoDARM.pdf}}
+\caption[Optic to DARM noisebudget]{Optic to DARM noisebudget during a
+  14~W lock.}% (July 17, 2009).
+\label{fig:optic2DARM}
 \end{centering}
 \end{figure}
 
-
+We also repeated the transfer function measurement with excitations
+and readback not at the suspension angular control point, but at the
+WFS error points. This allows us to view the breakdown of noise
+contributions in the WFS (radiation pressure eigenmode) basis rather
+than the optic basis. Figure~\ref{fig:wfs2DARM} shows the breakdown of
+WFS noise contributions to DARM for the same time as
+Fig.~\ref{fig:optic2DARM}.
 
 \begin{figure}
 \begin{centering}
@@ -855,19 +961,18 @@ suspension signal at any time.
 \subfigure[Yaw.]{\includegraphics{figures/WFSyawtoDARM.pdf}}
 \caption[Wavefront sensor to DARM noisebudget]{Wavefront sensor to
   DARM noisebudget during a 14~W lock.} % (July 17, 2009).}
-\label{fig:}
+\label{fig:wfs2DARM}
 \end{centering}
 \end{figure}
 
-\begin{figure}
-\begin{centering}
-\subfigure[Pitch.]{\includegraphics[width=1.0\columnwidth]{figures/opticspittoDARM.pdf}}
-\subfigure[Yaw.]{\includegraphics[width=1.0\columnwidth]{figures/opticsyawtoDARM.pdf}}
-\caption[Optic to DARM noisebudget]{Optic to DARM noisebudget during a
-  14~W lock.}% (July 17, 2009).
-\label{fig:}
-\end{centering}
-\end{figure}
+Because two angular control signals, the WFS and the optical levers,
+independently contribute signals to the suspension angular control, we
+can separate their contributions in the noisebudget. Furthermore, we
+compute the quadrature sum of the pitch and yaw contributions,
+assuming these two degrees of freedom are de-coupled, thus creating an
+upper limit for the ASC contribution to the DARM
+noisebudget. Figure~\ref{fig:seismic_NB} shows the final ASC noise in
+DARM summary for a 16~W lock at night.
 
 \begin{figure}
 \begin{centering}
@@ -882,7 +987,15 @@ a 16 W lock at night]{Total WFS and optical lever noise contribution
 \end{centering}
 \end{figure}
 
-
+The important message is that the angular sensing and control is, in
+fact, a limiting noise source for frequencies between 20~Hz and
+55~Hz. The ASC becomes less and less of a primary noise source as
+frequency increases, and by 100~Hz the ASC noise floor is a factor of
+10 below DARM. The seismic noise contribution to DARM (not shown) does
+in fact sit just below the ASC floor, so the sensitivity is not
+dramatically hindered by the ASC. An example, however, that
+demonstrates how we can reduce the ASC noise floor, if only by a small
+amount, is presented in the next section.
 
 
 
@@ -907,7 +1020,8 @@ DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
 \includegraphics[width=1.0\textwidth]{figures/cutoffWFS1_DARMcompare.pdf}
 \caption[Effect of the WFS1 lowpass filter cutoff frequency on strain
 sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
-  strain sensitivity. \textcolor{blue}{gray legend line missing?}}
+  strain sensitivity.}
+% \textcolor{blue}{gray legend line missing?}}
 \label{fig:WFS1cutoff}
 \end{centering}
 \end{figure}
@@ -947,6 +1061,24 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 
 \section{Experimental measurement of the Sidles-Sigg effect}
 
+The digital control system in which the angular control feedback
+system is implemented provides a convenient milieu in which to measure
+the response of the optomechanical system.  By injecting a disturbance
+somewhere in the loop and measuring the response at selected points in
+the loop, we can produce a measurement of the optomechanical system
+that is not sensitive to the details of the control system.   Here we
+use this system to produce measurements of the optomechanical plant at
+several different operating powers, demonstrating the modifications due
+to radiation pressure, i.e. the Sigg-Sidles effect.
+
+The various elements of the plant and the control system are depicted
+in figure~\ref{fig:RPTFmeasurement}.  For this measurement, transfer
+functions are taken from torque input to the resulting angular
+displacement (as measured by the WFS), both in the radiation pressure
+eigenbasis.  Simultaneously, an excitation is injected into the
+control leg of the servo loop.  The resulting measurement reproduces
+the transfer function of the optomechanical plant, independent of the
+control system.
 
 \begin{figure}
 \begin{centering}
@@ -959,7 +1091,15 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 \end{centering}
 \end{figure}
 
-
+Results are shown in figures~\ref{fig:hardTF} (hard mode) and
+~\ref{fig:softTF} (soft mode); least-squares fits of second-order
+transfer functions are made to the data.  In the hard mode plot, we
+can clearly see the increase of the resonant frequency with power,
+from $\sim0.65 Hz$ at 1~W input power to $\sim0.95$ Hz at 10~W input
+power.  Simultaneously, in the soft mode plot, we see the resonance
+decrease in frequency as the power is increased from 1~W to 6~W.  When
+the input power is increased to 10W and beyond, the resonance
+disappears; the plant has become statically unstable.
 
 \begin{figure}
 \begin{centering}
@@ -970,8 +1110,6 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 \end{centering}
 \end{figure}
 
-
-
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\textwidth]{figures/soft_dataandfit.pdf}
@@ -981,6 +1119,9 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 \end{centering}
 \end{figure}
 
+These measurements show a clear confirmation of the Sigg-Sidles theory
+and demonstrate a successful power-independent diagonalization of the
+sensing and control of the optomechanical system.
 
 % \section{Summary}
 % \textcolor{blue}{from Guido: add another summary here that ASC in

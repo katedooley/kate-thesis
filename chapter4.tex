@@ -10,20 +10,21 @@ mirrors, complicating the plant for which controls must be
 designed. The derivation of the angular response of the mirrors to
 external torque in the presence of radiation pressure is presented in
 several publications, but I provide my own derivation here for
-completeness. This effect is, after all, the foundation for this
-work's investigation of high power effects in the angular sensing and
-control.
+completeness. Radiation pressure torque is, after all, the foundation
+for this work's investigation of high power effects in the angular
+sensing and control. We derive a set of eigenfunctions that
+diagonalize the linear cavity's response to radiation pressure and
+describe the mirrors' equations of motion in this new eigenbasis. We
+show that the torque to angle transfer functions of the new eigenmodes
+are modified such that one mode is statically unstable at Enhanced
+LIGO powers.
 
-\textcolor{blue}{this needs re-writing} Namely, radiation pressure
-torque has the effect of breaking the symmetry of the equations of
-motion of each of the mirrors. Since Enhanced LIGO embarks on the path
-of increasing the laser power, examining the effect of radiation
-pressure torque in detail is warranted. Here, we derive a set of
-eigenfunctions that diagonalize the linear cavity's response to
-radiation pressure and describe the mirrors' equations of motion in
-this new eigenbasis. The torque to angle transfer functions of the new
-eigenmodes are modified such that one mode is statically unstable at
-Enhanced LIGO powers.
+% \textcolor{blue}{this needs re-writing} Namely, radiation pressure
+% torque has the effect of breaking the symmetry of the equations of
+% motion of each of the mirrors. Since Enhanced LIGO embarks on the path
+% of increasing the laser power, examining the effect of radiation
+% pressure torque in detail is warranted. 
+
 
 
 
@@ -514,16 +515,18 @@ just approached instability for Initial LIGO powers actually becomes
 unstable for Enhanced LIGO powers. The transfer functions for which
 controls must be designed are no longer those of a pendulum with
 resonance at 0.6~Hz (pitch) or 0.5~Hz (yaw), but those of the soft and
-hard eigenmodes, whose resonances change with power. The plant of
-Fig. \ref{fig:ASCcontrolservo} is now treated as the cavity's radiation
-pressure-modified torque to angle transfer function, not a simple
-stand-alone pendulum transfer function.
+hard eigenmodes, whose resonances change with power. For Enhanced
+LIGO, the angular control servo plant of
+Fig.~\ref{fig:ASCcontrolservo} is treated as the cavity's radiation
+pressure-modified torque to angle transfer function, not as a simple
+stand-alone pendulum transfer function. An elegant implication of the
+purely geometric description of the cavity axis is that the radiation
+pressure eigenmodes are orthogonal independently of power. Therefore,
+the modes remain independent and the control system need not be
+updated with power changes.
 
-An elegant implication of the purely geometric description of the
-cavity axis is that the radiation pressure eigenmodes are orthogonal
-independently of power. 
-
-\textcolor{blue}{put this elsewhere?} One complication of having a
+%\textcolor{blue}{put this elsewhere?} 
+One complication of having a
 radiation pressure modified and therefore power dependent plant,
 $P_{rp}$, is that the optical lever compensation (described in
 Sec. \ref{sec:oplevcomp}) is no longer valid. The compensation of
@@ -536,7 +539,7 @@ optical lever compensation actually cancel out the effect of the
 optical-lever-controlled radiation pressure-modified plant,
 $P_{rp}/1+OP_{rp}$, and leave simply $P_{rp}$ for the WFS to
 control. It this turns out that as power increases, the imperfect
-compensation actually make the loops more stable (Ref. Barsotti).
+compensation actually make the loops more stable \cite{Barsotti2008Untitled}.
 
 The sensors in Initial LIGO were not tuned to specifically look for
 the combined mirror motions that create the soft and hard modes. The
@@ -551,8 +554,8 @@ hard mode or the soft mode, and then design controls that specifically
 address the characteristics of just one mode. This is the foundation
 of the ASC work for Enhanced LIGO: switching the WFS control to the
 radiation pressure eigenmode basis, and increasing the gains of only
-those loops that require it. \textcolor{blue}{I need to make sure this
-  is accurate.}
+those loops that require it. 
+%\textcolor{blue}{I need to make sure this is accurate.}
 
 
 
