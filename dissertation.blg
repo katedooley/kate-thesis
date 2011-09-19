@@ -17,42 +17,46 @@ A level-1 auxiliary file: appendixAA.aux
 The style file: apsrev.bst
 A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
+Repeated entry---line 1307 of file group-1530.bib
+ : @article{Fricke2011DC
+ :                      ,
+I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in Siegman1986Lasers
 You've used 44 entries,
             3411 wiz_defined-function locations,
-            1502 strings with 33252 characters,
-and the built_in function-call counts, 34586 in all, are:
-= -- 1738
-> -- 1518
-< -- 221
-+ -- 1335
-- -- 377
-* -- 5028
-:= -- 3587
+            1500 strings with 32991 characters,
+and the built_in function-call counts, 33728 in all, are:
+= -- 1716
+> -- 1444
+< -- 213
++ -- 1263
+- -- 359
+* -- 4878
+:= -- 3530
 add.period$ -- 44
 call.type$ -- 44
 change.case$ -- 179
 chr.to.int$ -- 44
 cite$ -- 47
-duplicate$ -- 3108
-empty$ -- 2696
-format.name$ -- 872
-if$ -- 6283
+duplicate$ -- 3036
+empty$ -- 2643
+format.name$ -- 834
+if$ -- 6134
 int.to.chr$ -- 1
 int.to.str$ -- 45
-missing$ -- 473
+missing$ -- 463
 newline$ -- 147
 num.names$ -- 130
-pop$ -- 722
+pop$ -- 700
 preamble$ -- 1
 purify$ -- 176
 quote$ -- 0
-skip$ -- 1306
+skip$ -- 1277
 stack$ -- 0
 substring$ -- 749
-swap$ -- 2652
-text.length$ -- 201
+swap$ -- 2577
+text.length$ -- 192
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 260
@@ -60,4 +64,4 @@ warning$ -- 1
 while$ -- 107
 width$ -- 0
 write$ -- 494
-(There was 1 warning)
+(There was 1 error message)

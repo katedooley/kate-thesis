@@ -144,22 +144,9 @@
   \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2006}),
   \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=7384}.
 
-\bibitem[{\citenamefont{Fricke et~al.}(2011)\citenamefont{Fricke, Smith,
-  Abbott, Adhikari, Dooley, Evans, Fritschel, Frolov, Kawabe, and
-  Waldman}}]{Fricke2011DC}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Fricke}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Smith}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Dooley}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Frolov}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Kawabe}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Waldman}},
-  \bibinfo{journal}{in preparation}  (\bibinfo{year}{2011}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid%
-=8442}.
+\bibitem[{\citenamefont{Fricke}(2011)}]{Fricke2011DC}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Fricke}}, Ph.D. thesis,
+  \bibinfo{school}{Louisiana State University} (\bibinfo{year}{2011}).
 
 \bibitem[{\citenamefont{Kissel}(2010)}]{KisselThesis}
 \bibinfo{author}{\bibfnamefont{J.~S.} \bibnamefont{Kissel}}, Ph.D. thesis,

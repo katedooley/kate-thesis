@@ -50,10 +50,10 @@ g_2 & 1\\
 \theta_2 \end{array} \right\rrbracket .
 \label{eq:x}
 \end{equation}
-The $g$-factor is defined as $g_i=1-R_i/L$ where $R_i$ is the radius of
-curvature of each of the mirrors, respectively, and $L$ is the length
-of the cavity. It is $0.73$ ($0.71$) for the LLO (LHO) ITM and $0.54$
-($0.45$) for the LLO (LHO) ETM. 
+The $g$-factor is defined as $g_i=1-R_i/L$ where $R_i$ is the mirror
+radius of curvature, and $L$ is the length of the cavity. The
+$g$-factor is $0.73$ ($0.71$) for the LLO (LHO) ITM and $0.54$
+($0.45$) for the LLO (LHO) ETM.
 
 We saw in the previous chapter that the radiation pressure torque on a
 mirror depends on the position of the beam on the mirror, $\tau_{rp} =
@@ -248,11 +248,11 @@ Table \ref{table:cav_geometric}.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.6\columnwidth]{figures/eigenmodes.pdf}
+\includegraphics[width=0.7\columnwidth]{figures/eigenmodes.pdf}
 \caption[Illustration of the orthogonal modes of cavity
 tilt]{Illustration of the orthogonal modes of cavity tilt. The upper
   diagram shows tilts given by eigenvector $\vec{v}_b$ and the lower
-  diagram shows $\vec{v}_a$. \textcolor{blue}{Labels.}}
+  diagram shows $\vec{v}_a$.}
 \label{fig:ss}
 \end{centering}
 \end{figure}
@@ -341,7 +341,8 @@ respectively.
 \caption[Torsional spring constants of an optically coupled
   cavity]{Torsional spring constants (pitch) of an optically coupled
   cavity for LLO parameters. The soft mode is unstable when the spring
-  constant is negative. \textcolor{blue}{Include LHO.}}
+  constant is negative.}
+% Include LHO.
 \label{fig:k_hardsoft}
 \end{centering}
 \end{figure}
@@ -358,16 +359,16 @@ corresponds to approximately 6~W input power (for Enhanced LIGO
 efficiencies) to the interferometer. Above the critical power,
 radiation pressure creates an optical anti-spring. 
 
-Table \ref{table:k_tot} highlights the values of the spring constants
+Table~\ref{table:k_tot} highlights the values of the spring constants
 for the typical power that was used in Initial LIGO (9~kW) and for the
 highest of powers achieved in Enhanced LIGO (40~kW). The corresponding
 transfer functions for these spring constants is found in
-Fig. \ref{fig:optomechhardsoft}. The resonant frequency, $\omega_0 =
+Fig.~\ref{fig:optomechhardsoft}. The resonant frequency, $\omega_0 =
 \sqrt{\kappa_{tot}/I}$, increases with power for the hard modes and
 decreases for the soft modes. Once $\kappa_{tot}$ becomes negative, as
 is the case for the Enhanced LIGO soft mode, there is no real resonant
-frequency.
-
+frequency. A summary of the opto-mechanical parameters for LLO and LHO
+is found in Table~\ref{table:optomech}.
 
 \begin{table}
 \centering
@@ -375,8 +376,8 @@ frequency.
 modes]{Torsional spring constants (pitch) for the soft and hard modes
   of a typical Initial LIGO power and the highest of Enhanced LIGO
   powers. The soft mode in Enhanced LIGO is unstable. The $\kappa_p$
-  values assume a resonant frequency of 0.6~Hz. \textcolor{blue}{maybe
-  include aLIGO on this table as well.}}
+  values assume a resonant frequency of 0.6~Hz.}
+% \textcolor{blue}{maybe include aLIGO on this table as well.}}
 \begin{tabular}{l l l l l}
 \hline
  & $P_{circ}$ & $\kappa_{p}$ & $\kappa_{tot}$, soft mode &
@@ -406,26 +407,54 @@ Enhanced LIGO & 40 kW & 0.721 Nm/rad& -2.18 Nm/rad & 1.38 Nm/rad\\
 \end{figure}
 
 
+
+\begin{table}
+\centering
+\caption[Opto-mechanical parameters for the LIGO Livingston and LIGO
+Hanford cavities]{Opto-mechanical parameters for the LIGO Livingston and LIGO
+  Hanford cavities. Differences result because the mirrors at each site have different
+  radii of curvature.}
+\begin{tabular}{l l l l}
+\hline
+parameter & label & LLO & LHO \\
+\hline
+ITM $g$-factor & $g_1$ & 0.73 & 0.71 \\
+ETM $g$-factor & $g_2$ & 0.54 & 0.45 \\
+arm length & $L$ & 3995 m & 3995 m \\
+test mass moment of inertia & $I$ & 0.0507 kg m$^2$ &  0.0507 kg m$^2$ \\
+pendulum torsion constant & $\kappa_p$ & 0.72 Nm/rad (pitch)& 0.72 Nm/rad (pitch) \\ 
+& & 0.50 Nm/rad (yaw) & 0.50 Nm/rad (yaw) \\
+soft mode eigenvector & $\vec{v}_a$ & (1, 1.10) & (1, 1.14) \\
+hard mode eigenvector & $\vec{v}_b$ & (-1.10, 1) & (-1.14, 1) \\
+power when soft mode is unstable & $P_{crit}$ & 10.0 kW (pitch) & 11.6 kW (pitch)\\
+& & 7.0 kW (yaw) & 8.0 kW (yaw) \\
+\hline
+\end{tabular}
+\label{table:optomech}
+\end{table}
+
+
+\subsection{Pole analysis}
 One final comment about the analysis of the modified transfer function
 (Eq. \ref{eq:modalTF}) is that the two poles,
 \begin{equation}
 s = s_\pm = \frac{-\gamma \pm \sqrt{\gamma^2 - 4 I \kappa_{tot}}}{2 I},
 \label{eq:TFpoles}
 \end{equation}
-provide an additional \textcolor{blue}{(find better word)} way to view
-the stability of the system. As long as the poles are negative, the
-impulse response will decay or be sinusoidal. However, if a pole is
-positive, the system's motion will experience exponential growth. The
-constraints for $s_\pm$ to be in a particular half of the s-plane are
-easily derived from Eq. \ref{eq:TFpoles}. Note that $s_-$ will always
-be in the left half of the plane and that $s_+$ is the pole that has
-the potential of falling in the right half of the plane. Table
-\ref{table:s_0} show how the s-plane locations for $s_+$ depend on
-$\kappa_{tot}$. The sign of $\kappa_{tot}$ determines stability, as
-expected, and we see that the nature of the stable response depends on
-the damping coefficient. Figure \ref{fig:TFrainbow_poles} plots the
-pole locations for a range of $\kappa_{tot}$ experienced while
-powering up Enhanced LIGO.
+provide an alternative way to view the stability of the system. As
+long as the poles are negative, the impulse response will decay or be
+sinusoidal. However, if a pole is positive, the system's motion will
+experience exponential growth. The constraints for $s_\pm$ to be in a
+particular half of the s-plane are easily derived from
+Eq. \ref{eq:TFpoles}. Note that $s_-$ will always be in the left half
+of the plane and that $s_+$ is the pole that has the potential of
+falling in the right half of the plane. Table \ref{table:s_0} show how
+the s-plane locations for $s_+$ depend on $\kappa_{tot}$. The sign of
+$\kappa_{tot}$ determines stability, as expected, and we see that the
+nature of the stable response depends on the damping
+coefficient. Figure \ref{fig:TFrainbow_poles} plots the pole locations
+for a range of $\kappa_{tot}$ experienced while powering up Enhanced
+LIGO.
 
 % \begin{figure}
 % \begin{centering}
@@ -442,8 +471,9 @@ powering up Enhanced LIGO.
 
 \begin{table}
 \centering
-\caption[Conditions on total torsional constant for determining system stability]{Conditions on total torsional constant $\kappa_{tot}$ for determining
-  system stability.}
+\caption[Conditions on total torsional constant for determining system
+stability]{Conditions on total torsional constant $\kappa_{tot}$ for
+  determining system stability.}
 \begin{tabular}{l l l}
 $\kappa_{tot}$ condition & pole $s_+$ & impulse response \\
 \hline\hline
@@ -472,31 +502,6 @@ function]{Poles of the torque to pitch transfer function as a function
 
 
 
-
-\begin{table}
-\centering
-\caption[Opto-mechanical parameters for the LIGO Livingston and LIGO
- Hanford cavities]{Opto-mechanical parameters for the LIGO Livingston and LIGO
- Hanford cavities. Differences result because the mirrors at each site have different
- radii of curvature. \textcolor{blue}{Reference in text. put in appendix?}}
-\begin{tabular}{l l l l}
-\hline
-parameter & label & LLO & LHO \\
-\hline
-ITM $g$-factor & $g_1$ & 0.73 & 0.71 \\
-ETM $g$-factor & $g_2$ & 0.54 & 0.45 \\
-arm length & $L$ & 3995 m & 3995 m \\
-test mass moment of inertia & $I$ & 0.0507 kg m$^2$ &  0.0507 kg m$^2$ \\
-pendulum torsion constant & $\kappa_p$ & 0.72 Nm/rad (pitch)& 0.72 Nm/rad (pitch) \\ 
-& & 0.50 Nm/rad (yaw) & 0.50 Nm/rad (yaw) \\
-soft mode eigenvector & $\vec{v}_1$ & (1, 1.10) & (1, 1.14) \\
-hard mode eigenvector & $\vec{v}_2$ & (-1.10, 1) & (-1.14, 1) \\
-power when soft mode is unstable & $P_{crit}$ & 10.0 kW (pitch) & 11.6 kW (pitch)\\
-& & 7.0 kW (yaw) & 8.0 kW (yaw) \\
-\hline
-\end{tabular}
-\label{table:}
-\end{table}
 
 
 
@@ -536,19 +541,20 @@ compensation actually make the loops more stable (Ref. Barsotti).
 The sensors in Initial LIGO were not tuned to specifically look for
 the combined mirror motions that create the soft and hard modes. The
 only way to provide adequate control for both modes would be to
-increase the gain of all of the angular control loops. Since some of
-the sensors are \textcolor{blue}{less good} than others, this would
-result in excessive impression of sensor noise on DARM. To minimize
-impact on strain sensitivity while reducing the angular motion of the
-interferometer's mirrors to the levels necessary for stable operation,
-we need to pick out the combination of sensors that together sense
-specifically the hard mode or the soft mode, and then design controls
-that specifically address the characteristics of just one mode. This
-is the foundation of the ASC work for Enhanced LIGO: switching the WFS
-control to the radiation pressure eigenmode basis, and increasing the
-gains of only those loops that require it. \textcolor{blue}{I need to
-  make sure this is accurate.}
+increase the gain of all of the angular control loops. Because some of
+the sensors are not as good as others, this would result in excessive
+impression of sensor noise on DARM. To minimize impact on strain
+sensitivity while reducing the angular motion of the interferometer's
+mirrors to the levels necessary for stable operation, we need to pick
+out the combination of sensors that together sense specifically the
+hard mode or the soft mode, and then design controls that specifically
+address the characteristics of just one mode. This is the foundation
+of the ASC work for Enhanced LIGO: switching the WFS control to the
+radiation pressure eigenmode basis, and increasing the gains of only
+those loops that require it. \textcolor{blue}{I need to make sure this
+  is accurate.}
 
 
 
 
+%\subsection{WFS Control Basis for Enhanced LIGO}
