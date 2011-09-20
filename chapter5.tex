@@ -122,24 +122,25 @@
 % eigenbasis which has a single resonance for each mode.
 
 
-The meat of the Enhanced LIGO ASC upgrade was to switch the control servo
-from the sensor basis to the natural radiation pressure eigenmode
-basis, and to keep the contamination to DARM at a minimum. This
-chapter presents the design of the new basis and measurements that
-characterize it and its effect on DARM. 
+The meat of the Enhanced LIGO ASC upgrade was to switch the control
+servo from the sensor basis to the natural radiation pressure
+eigenmode basis, and to keep the contamination to DARM at a minimum. I
+present in this chapter the design of the new basis and measurements I
+made to characterize it and its effect on DARM.
 
-For completeness and for satisfaction for the trained eye, I include
-in Appendix \ref{sec:groundmotion} seismic spectra from the time of
-each measurement I present. For some people, this may seem excessive,
-but almost all of the mirror motion is in fact due to the ground, so
-the relevence is high.
+A critical aspect of the characterization of any system is to
+calibrate the data in physical units to facilitate comparison to
+models and to make meaningful statements. Since the LIGO data is
+collected digitally, the units are naturally in digital counts. Part
+of my work was therefore to calibrate each of the relevant ASC
+channels to physical units. I include the details of the calibrations
+in Appendix~\ref{ch:ASCcal}.
 
-
-
-
-% \textcolor{blue}{(fix wording)}. 
-
-
+Also, as shown in Sec.~\ref{sec:oplevspectra} almost all of the mirror
+motion is in fact due to the ground. Therefore, the measurements I
+made of the ASC are very sensitive to the particular state of seismic
+noise. I include in Appendix \ref{sec:groundmotion} seismic spectra
+from the time of each measurement I present.
 
 
 
@@ -164,6 +165,9 @@ degrees of freedom they represent:
 \item common hard (cHard) \\
 \item recycling mirror (RM)
 \end{itemize}
+Because each mode (for both pitch and yaw) has two possible
+directions, differential and common refer to the comparison of the
+sign of the mode in each arm.
 
 %\textcolor{blue}{make block figure!}
 
@@ -191,9 +195,9 @@ its error signal conveys the optical gain.
 % include subtlety of pick-off fractions at ports?
 
 The optical gain for each of the optics' motions is not concentrated
-in one place, although it can appear more strongly in one location
-compared to another. In order to make use of as much of the
-information as possible, we must use all sensors that witness a
+at any one particular port, although it can appear more strongly in
+one location compared to another. In order to make use of as much of
+the information as possible, we must use all sensors that witness a
 particular motion. However, when there are multiple signals at a
 particular place, the WFS error signals tell us the sum of all optical
 gains at its location. The amount of optical gain at each detector for
@@ -443,7 +447,9 @@ And after three weeks, it is:
 0 & 0.30 & 0 & -0.72 & 2.9 
 \end{array} \right\rrbracket\] 
 
-
+Despite these significant changes, the interferometer remained stable
+and the sensitivity remained constant. This shows that the ASC is a
+very robust sensing and control system.
 
 
 \section{Input Beam Motion}
@@ -582,7 +588,8 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
 \section{The Marginally-stable Power Recycling Cavity}
 The power recycling cavity (PRC) is the linear cavity formed by the RM
 and ITMs. Since the radius of curvature of both the RM and the ITMs
-points in the same direction, the cavity is geometrically
+points in the same direction and the waist is well outside the
+Rayleigh range of the mirrors, the cavity is geometrically
 unstable. For example, in its cold state at LLO the $g$-factor of the
 cavity is 1.00005 and at LHO it's 1.00003. The beam in the PRC is not
 spatially contained and the cavity is degenerate with respect to
@@ -1096,7 +1103,7 @@ Results are shown in figures~\ref{fig:hardTF} (hard mode) and
 ~\ref{fig:softTF} (soft mode); least-squares fits of second-order
 transfer functions are made to the data.  In the hard mode plot, we
 can clearly see the increase of the resonant frequency with power,
-from $\sim0.65 Hz$ at 1~W input power to $\sim0.95$ Hz at 10~W input
+from $\sim0.65$ Hz at 1~W input power to $\sim0.95$ Hz at 10~W input
 power.  Simultaneously, in the soft mode plot, we see the resonance
 decrease in frequency as the power is increased from 1~W to 6~W.  When
 the input power is increased to 10W and beyond, the resonance

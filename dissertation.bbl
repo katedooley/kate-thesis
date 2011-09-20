@@ -1,4 +1,4 @@
-\begin{thebibliography}{47}
+\begin{thebibliography}{55}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -24,11 +24,102 @@
   \bibinfo{pages}{379} (\bibinfo{year}{1978}),
   \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.17.379}.
 
+\bibitem[{\citenamefont{Carroll}(1997)}]{Carroll1997Lecture}
+\bibinfo{author}{\bibfnamefont{S.~M.} \bibnamefont{Carroll}}
+  (\bibinfo{year}{1997}), \eprint{gr-qc/9712019},
+  \urlprefix\url{http://arxiv.org/abs/gr-qc/9712019}.
+
+\bibitem[{\citenamefont{Saulson}(1994)}]{Saulson1994Fundamentals}
+\bibinfo{author}{\bibfnamefont{P.~R.} \bibnamefont{Saulson}},
+  \emph{\bibinfo{title}{{Fundamentals of interferometric gravitational wave
+  detectors}}} (\bibinfo{publisher}{World Scientific}, \bibinfo{year}{1994}),
+  ISBN \bibinfo{isbn}{9789810218201},
+  \urlprefix\url{http://www.worldcat.org/isbn/9789810218201}.
+
+\bibitem[{\citenamefont{Abbott et~al.}(2009{\natexlab{a}})\citenamefont{Abbott,
+  Abbott, Adhikari, Ajith, Allen, Allen, Amin, Anderson, Anderson, Arain
+  et~al.}}]{Abbott2009Search}
+\bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{R.~S.} \bibnamefont{Amin}},
+  \bibinfo{author}{\bibfnamefont{S.~B.} \bibnamefont{Anderson}},
+  \bibinfo{author}{\bibfnamefont{W.~G.} \bibnamefont{Anderson}},
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Arain}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Physical Review D (Particles, Fields,
+  Gravitation, and Cosmology)} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{102001+} (\bibinfo{year}{2009}{\natexlab{a}}),
+  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.80.102001}.
+
+\bibitem[{\citenamefont{Abadie et~al.}(2011)\citenamefont{Abadie, Abbott,
+  Abbott, Abernathy, Accadia, Acernese, Adams, Adhikari, Ajith, Allen
+  et~al.}}]{S5CBCnospin}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Abadie}},
+  \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Abernathy}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Accadia}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Acernese}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Physical Review D}
+  \textbf{\bibinfo{volume}{83}}, \bibinfo{pages}{122005+}
+  (\bibinfo{year}{2011}),
+  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.83.122005}.
+
+\bibitem[{\citenamefont{Abadie et~al.}(2010{\natexlab{a}})\citenamefont{Abadie,
+  Abbott, Abbott, Abernathy, Adams, Adhikari, Ajith, Allen, Allen, Amador~Ceron
+  et~al.}}]{Abadie2010First}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Abadie}},
+  \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Abernathy}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Amador~Ceron}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{The Astrophysical Journal}
+  \textbf{\bibinfo{volume}{722}}, \bibinfo{pages}{1504+}
+  (\bibinfo{year}{2010}{\natexlab{a}}), ISSN \bibinfo{issn}{0004-637X},
+  \urlprefix\url{http://dx.doi.org/10.1088/0004-637X/722/2/1504}.
+
+\bibitem[{\citenamefont{Allen and Romano}(1999)}]{Allen1999Detecting}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Romano}},
+  \bibinfo{journal}{Physical Review D} \textbf{\bibinfo{volume}{59}},
+  \bibinfo{pages}{102001+} (\bibinfo{year}{1999}),
+  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.59.102001}.
+
 \bibitem[{\citenamefont{Maggiore}(2000)}]{Maggiore2000Gravitational}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Maggiore}},
   \bibinfo{journal}{Physics Reports} \textbf{\bibinfo{volume}{331}},
   \bibinfo{pages}{283} (\bibinfo{year}{2000}),
   \urlprefix\url{http://dx.doi.org/10.1016/S0370-1573(99)00102-7}.
+
+\bibitem[{\citenamefont{Abadie et~al.}(2010{\natexlab{b}})\citenamefont{Abadie,
+  Abbott, Abbott, Abernathy, Accadia, Acernese, Adams, Adhikari, Ajith, Allen
+  et~al.}}]{Abadie2010Predictions}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Abadie}},
+  \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Abernathy}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Accadia}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Acernese}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{173001+}
+  (\bibinfo{year}{2010}{\natexlab{b}}), ISSN \bibinfo{issn}{0264-9381},
+  \urlprefix\url{http://dx.doi.org/10.1088/0264-9381/27/17/173001}.
 
 \bibitem[{\citenamefont{{Hulse} and {Taylor}}(1975)}]{Hulse1975Discovery}
 \bibinfo{author}{\bibfnamefont{R.~A.} \bibnamefont{{Hulse}}} \bibnamefont{and}
@@ -37,13 +128,13 @@
   \bibinfo{pages}{L51} (\bibinfo{year}{1975}),
   \urlprefix\url{http://dx.doi.org/10.1086/181708}.
 
-\bibitem[{\citenamefont{{Weisberg} and
-  {Taylor}}(2005)}]{Weisberg2005Relativistic}
-\bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{{Weisberg}}}
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~H.}
-  \bibnamefont{{Taylor}}}, in \emph{\bibinfo{booktitle}{Binary Radio Pulsars}},
-  edited by \bibinfo{editor}{\bibnamefont{{F.\~{}A.\~{}Rasio \&
-  I.\~{}H.\~{}Stairs}}} (\bibinfo{year}{2005}), vol. \bibinfo{volume}{328} of
+\bibitem[{\citenamefont{Weisberg and Taylor}(2005)}]{Weisberg2005Relativistic}
+\bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Weisberg}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Taylor}}, in
+  \emph{\bibinfo{booktitle}{Binary Radio Pulsars}}, edited by
+  \bibinfo{editor}{\bibfnamefont{F.~A.} \bibnamefont{Rasio}} \bibnamefont{and}
+  \bibinfo{editor}{\bibfnamefont{I.~H.} \bibnamefont{Stairs}}
+  (\bibinfo{year}{2005}), vol. \bibinfo{volume}{328} of
   \emph{\bibinfo{series}{Astronomical Society of the Pacific Conference
   Series}}, \eprint{astro-ph/0407149},
   \urlprefix\url{http://arxiv.org/abs/astro-ph/0407149}.
@@ -72,10 +163,11 @@
   \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Whitcomb}},
   \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T830001},
   \bibinfo{institution}{Massachusetts Institute of Technology}
-  (\bibinfo{year}{1983}).
+  (\bibinfo{year}{1983}),
+  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28038}.
 
-\bibitem[{\citenamefont{Abbott et~al.}(2009)\citenamefont{Abbott, Abbott,
-  Adhikari, Ajith, Allen, Allen, Amin, Anderson, Anderson, Arain
+\bibitem[{\citenamefont{Abbott et~al.}(2009{\natexlab{b}})\citenamefont{Abbott,
+  Abbott, Adhikari, Ajith, Allen, Allen, Amin, Anderson, Anderson, Arain
   et~al.}}]{Abbott2009LIGO}
 \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
   \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
@@ -89,7 +181,7 @@
   \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Arain}},
   \bibnamefont{et~al.}, \bibinfo{journal}{Reports on Progress in Physics}
   \textbf{\bibinfo{volume}{72}}, \bibinfo{pages}{076901+}
-  (\bibinfo{year}{2009}), ISSN \bibinfo{issn}{0034-4885},
+  (\bibinfo{year}{2009}{\natexlab{b}}), ISSN \bibinfo{issn}{0034-4885},
   \urlprefix\url{http://dx.doi.org/10.1088/0034-4885/72/7/076901}.
 
 \bibitem[{\citenamefont{Acernese et~al.}(2008)\citenamefont{Acernese, Amico,
@@ -248,6 +340,10 @@
   \urlprefix\url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid%
 =6570}.
 
+\bibitem[{\citenamefont{Fricke}(2011)}]{TobinThesis}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Fricke}}, Ph.D. thesis,
+  \bibinfo{school}{Louisiana State University} (\bibinfo{year}{2011}).
+
 \bibitem[{\citenamefont{Camp et~al.}(1996)\citenamefont{Camp, Reitze, and
   Tanner}}]{Camp1996InputOutput}
 \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Camp}},
@@ -345,7 +441,8 @@
 \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Raab}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Whitcomb}},
   \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T920004},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1992}).
+  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1992}),
+  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28296}.
 
 \bibitem[{\citenamefont{Khazanov et~al.}(2000)\citenamefont{Khazanov, Andreev,
   Babin, Kiselev, Palashov, and Reitze}}]{Khazanov2000Suppression}
@@ -429,7 +526,8 @@ um}
 \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Shoemaker}},
   \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T952007},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1997}).
+  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1997}),
+  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28608}.
 
 \bibitem[{\citenamefont{Group}(1998)}]{ISCGroup1998ASC}
 \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Group}}, \bibinfo{type}{Tech.
@@ -438,7 +536,8 @@ um}
 \bibitem[{\citenamefont{Sigg}(1996)}]{Sigg1996Wavefront}
 \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}}, \bibinfo{type}{Tech.
   Rep.} \bibinfo{number}{T960111}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{1996}).
+  (\bibinfo{year}{1996}),
+  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28694}.
 
 \bibitem[{\citenamefont{Anderson}(1984)}]{Anderson1984Alignment}
 \bibinfo{author}{\bibfnamefont{D.~Z.} \bibnamefont{Anderson}},

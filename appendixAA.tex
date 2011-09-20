@@ -12,12 +12,12 @@ damping loops on. Because of the two unity gain crossings, one at
 (velocity) damping. There is no DC control. 
 
 The model uses the pendulum torque to angle transfer function as the
-plant and the filters used during Enhanced LIGO as the control. The
-meausurement can be used to tune the pedulum parameters in the model
-to best determine the actual damping coefficient and resonant
-frequency. For ETMX, we find the pitch resonant frequency to be
-0.65~Hz, 8\% different from the theoretical 0.6~Hz. Also, we measure
-the ETMX damping coefficient to be 0.02. 
+plant and the filters used during Enhanced LIGO as the control. I use
+the meausurement to tune the pedulum parameters in the model to best
+determine the actual damping coefficient and resonant frequency. For
+ETMX, we find the pitch resonant frequency to be 0.65~Hz, 8\%
+different from the theoretical 0.6~Hz. Also, we measure the ETMX
+damping coefficient to be 0.02.
 
 % Make table of parameters determined for each optic for which I have a measurement?
 
@@ -211,34 +211,6 @@ P_0 = \exp{\left[- \frac{a^2}{w_0^2} \right]}
 
 
 
-\section{Parameters}
-\begin{table}
-\centering
-\caption{Mirror radii of curvatures.} 
-%References are \cite{Adhikari2005Input} and \href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn Billingsley's website}
-\begin{tabular}{l l l l}
-\hline
-optic & L1 ROC [km] & H1 ROC [km] \\
-\hline
-MC1 & 0.01725 & \\
-MC2 & 80 & \\ 
-MC3 & 0.01725 & \\ 
-MMT1 & 6.76 & 6.77 \\
-MMT2 & 3.16 & 3.17 \\
-MMT3 & 25.16 & 25.04\\
-RM & 15.78 & 14.40 \\
-BS & -189 & -336 \\
-ITMX & 14.760 & 13.910 \\ 
-ITMY & 14.520 & 13.600 \\
-ETMX & 8.730 & 7.260 \\
-ETMY & 8.720 & 7.320 \\
-\hline
-\end{tabular}
-\label{tab:ROCs}
-\end{table} 
-
-
-
 \section{Initial DC Alignment of the Interferometer}
 \label{sec:initial_alignment}
 After any kind of in-vacuum work, the DC alignment of the mirrors is
@@ -294,59 +266,59 @@ images and QPD readback provide the signals used for beam centering.
 
 
 
-\section{Seismic Contributions to Optical Lever Spectra}
-\label{sec:oplev_contributions}
-Wiener filtering \cite{Wiener1975Extrapolation} is a useful method to
-determine the likeness of two signals. In short, the Wiener filter
-coefficients are chosen to minimize the mean square difference between
-a Wiener filtered signal and a reference time series. If one signal is
-derived from the other, then there exists a Wiener filter that can
-precisely transform one signal into the other.
+% \section{Seismic Contributions to Optical Lever Spectra}
+% \label{sec:oplev_contributions}
+% Wiener filtering \cite{Wiener1975Extrapolation} is a useful method to
+% determine the likeness of two signals. In short, the Wiener filter
+% coefficients are chosen to minimize the mean square difference between
+% a Wiener filtered signal and a reference time series. If one signal is
+% derived from the other, then there exists a Wiener filter that can
+% precisely transform one signal into the other.
 
 
 
-The optical lever error signals ideally witness the mirror motion,
-which in turn is expected to come from the ground's motions. The
-optical lever signal, may, however, be contaminated by optical lever
-sensing (electronics) noise or acoustic couplings. It is therefore
-informative to calculate Wiener filters for the sesimometer signals to
-understand how much of the optical lever spectra are in fact due to
-ground motion. The contributions of the three seismometers to each
-large optic optical lever are shown in
-Fig.~\ref{fig:OLcontributions}. We see that the optical lever signals
-are almost entirely explained by ground motion, with the notable
-exceptions being a peak between 3 and 4~Hz for ITMY, and 0.3 and
-0.7~Hz for the RM, and broadband extra motion for the BS.
+% The optical lever error signals ideally witness the mirror motion,
+% which in turn is expected to come from the ground's motions. The
+% optical lever signal, may, however, be contaminated by optical lever
+% sensing (electronics) noise or acoustic couplings. It is therefore
+% informative to calculate Wiener filters for the sesimometer signals to
+% understand how much of the optical lever spectra are in fact due to
+% ground motion. The contributions of the three seismometers to each
+% large optic optical lever are shown in
+% Fig.~\ref{fig:OLcontributions}. We see that the optical lever signals
+% are almost entirely explained by ground motion, with the notable
+% exceptions being a peak between 3 and 4~Hz for ITMY, and 0.3 and
+% 0.7~Hz for the RM, and broadband extra motion for the BS.
 
-Furthermore, the relative magnitudes of the contributions from the
-three seismometers make sense. Greater than 1~Hz, coherence is
-greatest with the nearest seismometer, and less than 1~Hz,
-seismometers contribute more equally (except for the ITMs, which are
-everywhere very coherent with the corner station seismometer).
+% Furthermore, the relative magnitudes of the contributions from the
+% three seismometers make sense. Greater than 1~Hz, coherence is
+% greatest with the nearest seismometer, and less than 1~Hz,
+% seismometers contribute more equally (except for the ITMs, which are
+% everywhere very coherent with the corner station seismometer).
 
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIX.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
-\caption[Contribution of sesimic noise to optical lever error
-signal]{Contribution of sesimic noise to optical lever error signal
-  (called residual). The interferometer was unlocked and optical lever
-  and OSEM AC damping present.}
-\label{fig:OLcontributions}
-\end{centering}
-\end{figure}
+% \begin{figure}
+% \begin{centering}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIX.pdf}}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
+% \caption[Contribution of sesimic noise to optical lever error
+% signal]{Contribution of sesimic noise to optical lever error signal
+%   (called residual). The interferometer was unlocked and optical lever
+%   and OSEM AC damping present.}
+% \label{fig:OLcontributions}
+% \end{centering}
+% \end{figure}
 
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
-%\caption[]{Fig.~\ref{fig:OLcontributions} continued.}
-Fig.~\ref{fig:OLcontributions} continued.
-\end{centering}
-\end{figure}
+% \begin{figure}
+% \begin{centering}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
+% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
+% %\caption[]{Fig.~\ref{fig:OLcontributions} continued.}
+% Fig.~\ref{fig:OLcontributions} continued.
+% \end{centering}
+% \end{figure}
 
 
 
@@ -388,6 +360,37 @@ Fig.~\ref{fig:OLcontributions} continued.
 % good for getting only a sense in real-time of what's going on. Some
 % are typically recorded to disk, and some are not. These concepts
 % extend to other common name extensions as well. 
+
+
+
+
+\section{Parameters}
+Table \ref{tab:ROCs} shows the radii of curvature of the Enhanced LIGO mirrors. 
+\begin{table}
+\centering
+\caption{Mirror radii of curvatures.} 
+%References are \cite{Adhikari2005Input} and \href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn Billingsley's website}
+\begin{tabular}{l l l l}
+\hline
+optic & L1 ROC [km] & H1 ROC [km] \\
+\hline
+MC1 & 0.01725 & \\
+MC2 & 80 & \\ 
+MC3 & 0.01725 & \\ 
+MMT1 & 6.76 & 6.77 \\
+MMT2 & 3.16 & 3.17 \\
+MMT3 & 25.16 & 25.04\\
+RM & 15.78 & 14.40 \\
+BS & -189 & -336 \\
+ITMX & 14.760 & 13.910 \\ 
+ITMY & 14.520 & 13.600 \\
+ETMX & 8.730 & 7.260 \\
+ETMY & 8.720 & 7.320 \\
+\hline
+\end{tabular}
+\label{tab:ROCs}
+\end{table} 
+
 
 
 

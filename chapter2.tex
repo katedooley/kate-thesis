@@ -60,14 +60,14 @@ The LIGO detector configuration is a power-recycled Fabry-P\'{e}rot
 Michelson laser interferometer as depicted in
 Fig.~\ref{fig:IFOschematic}. A beam splitter (BS) directs 1064~nm
 light from a diode-pumped, power amplified, and intensity and
-frequency stabilized Nd:YAG laser to the Fabry-P\'{e}rot arms, which are
-made of an input test mass mirror (ITM) and an end test mass mirror
-(ETM). Both arms are of length $L \approx 4 \text{ km}$ and are set to maintain nearly
-perfect destructive interference of the recombined light at the
-anti-symmetric (AS) port, where a photodetector is placed to measure
-any change in power. A power recycling mirror (RM) at the symmetric
-port directs the constructively-interfered light back into the
-interferometer.
+frequency stabilized Nd:YAG laser to the Fabry-P\'{e}rot arms, which
+are made of an input test mass mirror (ITM) and an end test mass
+mirror (ETM). Both arms are of length $L \approx 4 \text{ km}$ and are
+set to maintain nearly perfect destructive interference of the
+recombined light at the anti-symmetric (AS) port, where a
+photodetector is placed to measure any change in power. A power
+recycling mirror (RM) at the symmetric port directs the
+constructively-interfered light back into the interferometer.
 
 \begin{figure}
 \begin{centering}
@@ -88,21 +88,27 @@ the light from the other arm. The effect is that Eq.~\ref{eq:deltaphi}
 for the Fabry-P\'{e}rot Michelson includes a frequency-dependent phase
 gain factor, $g_{\phi}(f)$:
 \begin{equation}
-\Delta \phi = \frac{2 L}{c} \omega g_{\phi}(f) \Delta h.
+\Delta \phi = \frac{2 L}{c} \omega g_{\phi}(f) h.
+%\Delta \phi = \frac{2 L}{c} \omega g_{\phi}(f) \Delta h.
 \label{eq:deltaphi}
 \end{equation}
 For Enhanced LIGO, $g_{\phi} = 137$ at DC and falls off as $1/f$ after
 85~Hz due to the storage time of the light in the arm cavities.
+
+The power recycling mirror is a modification to the Michelson
+interferometer that increases the circulating power by a factor of
+$g_{cr}^2 \approx 40$. Details are in Appendix~\ref{sec:impedance}.
 
 
 \subsection{DC readout}
 \label{sec:DCreadout}
 The gravitational wave readout in Enhanced LIGO was not operated
 precisely at the dark fringe at the AS port. Instead, it used a small
-offset from the quadratic minimum so that small changes in phase linearly
-produce power changes as is depicted in Figure~\ref{fig:DCreadout}. The
-offset used was $\phi_0 \approx 6 \times 10^{-5}$~rad; the
-technique is a form of homodyne detection called DC readout~\cite{Fricke2011DC}.
+offset from the quadratic minimum so that small changes in phase
+linearly produce power changes as is depicted in
+Figure~\ref{fig:DCreadout}. The offset used was $\phi_0 \approx 6
+\times 10^{-5}$~rad; the technique is a form of homodyne detection
+called DC readout~\cite{TobinThesis}.
 
 With a DC offset, the electric field at the AS port is $E_{AS} =
 E_{BS}\sin{(\phi_0 + \Delta\phi)}$. Squaring the electric field and

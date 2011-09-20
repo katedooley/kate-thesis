@@ -40,10 +40,10 @@ purpose of this dissertation in the context of these current effort.
 
 
 \section{The Theory of Gravitational Radiation}
-Gravitational radiation is a perturbation $|h_{\mu \nu}|
-\ll 1$ to the flat space-time Minkowski metric $\eta_{\mu \nu} =
-\mbox{diag}(-1, 1, 1, 1)$. The metric describing space-time in the
-presence of gravitational radiation is therefore
+Gravitational radiation is a perturbation $|h_{\mu \nu}| \ll 1$ to the
+flat space-time Minkowski metric $\eta_{\mu \nu} = \mbox{diag}(-1, 1,
+1, 1)$ \cite{Carroll1997Lecture}. The metric describing space-time in
+the presence of gravitational radiation is therefore
 \begin{equation}
 g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}.
 \end{equation}
@@ -66,7 +66,7 @@ where the $+$ and $\times$ represent two linearly independent
 polarizations. Without loss of generality, we consider the $h_+$
 polarization in the example that follows.
 
-For a gravitational wave traveling along the $z$ axis, the space-time
+For a gravitational wave traveling along the $z$-axis, the space-time
 metric is given by:
 \begin{equation}
 ds^2 = -c^2dt^2 + [1+h_+(t)] dx^2 + [1-h_+(t)] dy^2.
@@ -102,34 +102,36 @@ masses, as illustrated in Fig.~\ref{fig:strain}
 \section{Sources}
 Any object with an accelerating mass quadrupole moment generates
 gravitational waves. The typical strain amplitudes, however, are
-extremely tiny: a binary system of coalescing $1 \mbox{M}_\odot$
-neutron stars in the Virgo Cluster (a distance of 15 Mpc) would
-produce a maximum GW strain on Earth of only
-$10^{-23}$. 
-%\textcolor{blue}{Not right--fix this!!} 
-The strain is proportional to source mass and velocity, and inversely
-proportional to distance from the observer:
+extremely tiny: a binary system of coalescing $1.4 \mbox{M}_\odot$
+neutron stars in the Virgo Cluster (a distance of 15~Mpc) would
+produce a maximum GW strain on Earth of only $10^{-21}$ at 800~Hz
+\cite{Saulson1994Fundamentals}. The strain is proportional to source
+mass, $M$, and velocity, $v$, and inversely proportional to the
+distance from the observer, $R$:
 \begin{equation}
 h \approx \frac{GMv^2}{Rc^4}
 \end{equation}
-Consequently, the most promising sources of detectable gravitational
-waves are nearby, fast-moving, massive astrophysical objects that
-include
+The quantity $G/c^4$ is what sets the scale for strain amplitudes
+because of how small it is: $8.26 \times
+10^{-45}$~m$^{-1}$kg$^{-1}$s$^2$. Consequently, the most promising
+sources of detectable gravitational waves are nearby, fast-moving,
+massive astrophysical objects that include
 \begin{itemize}
-\item supernovae \vspace{-10pt}
-\item binary stars (orbiting or coalescing) \vspace{-10pt}
-\item spinning neutron stars \vspace{-10pt}
-\item cosmological/astrophysical background
+\item supernovae \cite{Abbott2009Search} \vspace{-10pt}
+\item binary stars (orbiting or coalescing) \cite{S5CBCnospin} \vspace{-10pt}
+\item spinning neutron stars \cite{Abadie2010First} \vspace{-10pt}
+\item cosmological/astrophysical background \cite{Allen1999Detecting}
 \end{itemize}
-and can be categorized as producing periodic, burst, or stochastic GWs.
+and can be categorized as producing periodic, burst, or stochastic
+GWs. 
 
 Stably orbiting binary star systems comprised of black holes or
 neutron stars as well as rapidly spinning non-axisymmetric pulsars are
 considered periodic sources since they will produce GWs of relatively
 constant frequency. These reliable sources of GWs require a long
-integration time to pick out their signal above noise. The
-Hulse-Taylor binary, for instance, falls into this
-category. Supernovae are burst sources since the gravitational
+integration time to pick out their signal above noise. 
+%The Hulse-Taylor binary, for instance, falls into this category. 
+Supernovae are burst sources since the gravitational
 collapse will produce a short-lived, unmodeled emission of
 GWs. Binaries in their final tens of milliseconds of inspiral also
 fall into this category. Finally, the anisotropies in the inflation of
@@ -137,13 +139,15 @@ the universe together with the hum of all distant astrophysical
 sources will create a stochastic background of radiation. Coherent
 cross-correlation between multiple detectors is necessary for
 measuring the constant amplitude, broad-spectrum GW
-background. \cite{Maggiore2000Gravitational}
+background \cite{Maggiore2000Gravitational}.
 
 Directly detecting gravitational radiation from any such source will
 reveal information that electromagnetic radiation cannot convey. The
 frequency of the GW tells about the dynamical timescale of the
 source. Only through GW radiation, for example, can mass and spin
-properties of a black hole be revealed.
+properties of a black hole be revealed. A first detection is expected
+to witness an event such as a binary black hole/neutron star
+coalesence \cite{Abadie2010Predictions}.
 
 
 
@@ -157,15 +161,15 @@ however, that has already proved successful, although the detection is
 not direct. Hulse and Taylor observed the rate of change of the
 orbital period of a binary star system, demonstrating beautifully a
 precise agreement with the predictions of GR should the rate of change
-be due to gravitational radiation \cite{Hulse1975Discovery}
-\cite{Weisberg2005Relativistic}. Awarded the Nobel Prize for their
-work, Hulse and Taylor's indirect evidence of GWs has fueled the field
-to produce a direct detection. Newer methods under active research
+be due to gravitational radiation \cite{Hulse1975Discovery,
+  Weisberg2005Relativistic}. Awarded the Nobel Prize for their work,
+Hulse and Taylor's indirect evidence of GWs has fueled the field to
+produce a direct detection. Newer methods under active research
 include pulsar timing \cite{Hobbs2009International} and B-mode
-meausurements of the CMB polarization. For an approachable overview of
-the history of the field, including detector design choices and
-estimated GW strain amplitudes of various sources, refer to
-Ref. \cite{Linsay1983Study}.
+meausurements of the cosmic microwave background polarization. For an
+approachable overview of the history of the field, including detector
+design choices and estimated GW strain amplitudes of various sources,
+refer to Ref. \cite{Linsay1983Study}.
 
 
 
@@ -237,14 +241,14 @@ interferometers]{Strain sensitivities of LIGO-VIRGO collaboration
 \end{figure}
 
 
-\section{Purpose of this Work}
+\section{Motivation for this Work}
 The purpose of this work is to demonstrate the capability of an
 interferometric gravitational wave detector to operate at several
 times the highest of laser powers previously used. From a na\"ive
 standpoint, more power is desirable since strain sensitivity improves
 by $\sqrt{P}$ in the high frequency ($>$ 200~Hz) shot-noise-limited
 region. However, as detectors become more sensitive at low frequencies
-($<$ 70 Hz) in the years to come, radiation pressure noise will become
+($<$ 40 Hz) in the years to come, radiation pressure noise will become
 the dominant noise source there, making high laser power operation a
 design trade-off. Currently, seismic noise limits low frequency
 sensitivity, so exploring the technical world of increasing the laser
@@ -263,13 +267,14 @@ becomes a daunting goal.
 
 The work presented in this dissertation was carried out during
 Enhanced LIGO to verify and investigate the predicted and unforeseen
-effects of as much as 25~W of laser power. I present the design and
-the measurements I made of the performance of two of the
-interferometer subsystems that are affected by an increase in laser
-power: the Input Optics and the Angular Sensing and Control. I show
-that the thermal and radiation pressure effects on these subsystems
-are well understood and should not pose problems for
-Advanced LIGO.
+effects of as much as 25~W of laser power. It also served the purpose
+of enabling the operation of LIGO at higher powers and record strain
+sensitivities. I present the design and the measurements I made of the
+performance of two of the interferometer subsystems that are affected
+by an increase in laser power: the Input Optics and the Angular
+Sensing and Control. I show that the thermal and radiation pressure
+effects on these subsystems are well understood. This work on the
+Enhanced LIGO detectors informs design choices for Advanced LIGO.
 
 %\textcolor{blue}{unsolvable, pick different word} 
 
@@ -285,14 +290,15 @@ result of absorbing too much heat while the input power ramped up to
 increase in power included thermal steering of the beam rejected by
 the interferometer, a decrease in the optical isolation, and thermal
 lensing that drove the spatial mode of the beam directed at the
-interferometer away from optimal. I describe the design of the
-improved Input Optics for Enhanced LIGO which includes less absorptive
-optical components in order to conquer thermal issues at the source
-and changes to the design architecture that compensate for any
-residual effects. I also present the set of measurements I made to
+interferometer away from optimal. We replaced two of the key Input
+Optics components and modified the others. I describe the design of
+the improved Input Optics for Enhanced LIGO which includes less
+absorptive optical components in order to conquer thermal issues at
+the source and changes to the design architecture that compensate for
+any residual effects. I also present the set of measurements I made to
 characterize the Input Optics performance with up to 30~W input
-power. I show that we can expect the Input Optics to perform well for
-Advanced LIGO.
+power. I show that we can expect the design of the Enhanced LIGO Input
+Optics to also perform well for Advanced LIGO.
 
 
 

@@ -17,48 +17,49 @@ A level-1 auxiliary file: appendixAA.aux
 The style file: apsrev.bst
 A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in Siegman1986Lasers
 Warning--empty note in Barsotti2008Untitled
-You've used 47 entries,
+You've used 55 entries,
             3411 wiz_defined-function locations,
-            1519 strings with 33691 characters,
-and the built_in function-call counts, 36355 in all, are:
-= -- 1836
-> -- 1581
-< -- 232
-+ -- 1387
-- -- 393
-* -- 5267
-:= -- 3794
-add.period$ -- 47
-call.type$ -- 47
-change.case$ -- 191
-chr.to.int$ -- 47
-cite$ -- 51
-duplicate$ -- 3268
-empty$ -- 2839
-format.name$ -- 909
-if$ -- 6604
-int.to.chr$ -- 1
-int.to.str$ -- 48
-missing$ -- 496
-newline$ -- 156
-num.names$ -- 139
-pop$ -- 765
+            1579 strings with 76410 characters,
+and the built_in function-call counts, 44237 in all, are:
+= -- 2208
+> -- 1976
+< -- 287
++ -- 1753
+- -- 492
+* -- 6436
+:= -- 4576
+add.period$ -- 55
+call.type$ -- 55
+change.case$ -- 223
+chr.to.int$ -- 53
+cite$ -- 59
+duplicate$ -- 3945
+empty$ -- 3439
+format.name$ -- 1129
+if$ -- 8049
+int.to.chr$ -- 3
+int.to.str$ -- 56
+missing$ -- 596
+newline$ -- 180
+num.names$ -- 163
+pop$ -- 857
 preamble$ -- 1
-purify$ -- 188
+purify$ -- 220
 quote$ -- 0
-skip$ -- 1369
+skip$ -- 1727
 stack$ -- 0
-substring$ -- 795
-swap$ -- 2777
-text.length$ -- 210
+substring$ -- 987
+swap$ -- 3375
+text.length$ -- 261
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 278
+type$ -- 324
 warning$ -- 2
-while$ -- 114
+while$ -- 135
 width$ -- 0
-write$ -- 523
+write$ -- 615
 (There were 2 warnings)

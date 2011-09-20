@@ -71,15 +71,16 @@ There is a continuous stream of changing torque inputs to the mirrors that cause
 
 
 \subsection{Ground Motion} 
+\label{sec:oplevspectra}
 The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions and thence to the mirrors. Ground motion is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Fig. \ref{fig:seismicMirror}.\footnote{These spectra include the effect of local velocity damping since the optical levers are always on (see Sec. \ref{sec:suspension}).}. The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\columnwidth]{figures/seismic_mirrormotion.pdf}
 \caption[Typical angular motion of the core suspended mirrors in the
-  absence of interferometric control]{Typical angular motion of the core suspended mirrors in the
+  absence of interferometric control]{Typical angular motion of the core suspended mirrors in the 
   absence of interferometric control. Velocity damping provided by the
-  OSEMs and the optical levers is present. Once the interferometer is locked, the OSEM damping is ramped off. Ground motion at the time of this measurement is shown in Fig. \ref{fig:seismic_nolock}.}
+  OSEMs and the optical levers is present. Once the interferometer is locked, the OSEM damping is turned off. Ground motion at the time of this measurement is shown in Fig. \ref{fig:seismic_nolock}.}
 \label{fig:seismicMirror}
 \end{centering}
 \end{figure}
@@ -91,8 +92,39 @@ The most egregious of these torque inputs is ground motion that makes its way th
 % times of day, probably for just one mirror. Write this section once I
 % see what I have to present.
 
-Proof that this motion indeed originates from the ground can be provided by computing Wiener filters for the seismomter signals to see their coherence with the optical lever error signals. See Appendix~\ref{sec:oplev_contributions}.
+I obtained these spectra using the optical levers as witnesses of the mirror motion, which in turn is expected to come from the ground's motions. The optical lever signal, may, however, be contaminated by optical lever sensing (electronics) noise or acoustic couplings. It is therefore informative to embark on a study of how much of the optical lever spectra are in fact due to ground motion. 
 
+I used a method of Wiener filtering \cite{Wiener1975Extrapolation} to show that the motion of Fig.~\ref{fig:seismicMirror}, indeed originates primarily from the ground. The Wiener filter is the best estimate of the contribution of one signal to another. The contributions of the three seismometers to each large optic optical lever are shown in Fig.~\ref{fig:OLcontributions}. We see that the optical lever signals are almost entirely explained by ground motion, with the notable exceptions being a peak between 3 and 4~Hz for ITMY, and 0.3 and 0.7~Hz for the RM, and broadband extra motion for the BS.
+
+Furthermore, the relative magnitudes of the contributions from the
+three seismometers make sense. Greater than 1~Hz, coherence is
+greatest with the nearest seismometer, and less than 1~Hz,
+seismometers contribute more equally (except for the ITMs, which are
+everywhere very coherent with the corner station seismometer).
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIX.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
+\caption[Contribution of sesimic noise to optical lever error
+signal]{Contribution of sesimic noise to optical lever error signal
+  (called residual). The interferometer was unlocked and optical lever
+  and OSEM AC damping present.}
+\label{fig:OLcontributions}
+\end{centering}
+\end{figure}
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
+%\caption[]{Fig.~\ref{fig:OLcontributions} continued.}
+Fig.~\ref{fig:OLcontributions} continued.
+\end{centering}
+\end{figure}
 
 
 
@@ -212,7 +244,7 @@ A quantity that is more familiar than $\gamma$ for describing the losses of a sy
 
 Figure \ref{fig:pendTF} shows the pendulum torque to angle transfer
 function (for pitch) using the parameters of a LIGO core optic. For
-external torques applied to the mirror above its resonant frequency,
+external torques applied to the mirror well above its resonant frequency,
 the mirror acts like a free mass, one that is not held in place by
 suspension wires nor subject to damping. For torques applied to the
 mirror below its resonant frequency, the mirror's angle is determined
@@ -328,6 +360,14 @@ One will notice that it is not a coincidence that the optical lever compensation
 
 
 
+\begin{figure} \begin{centering} \subfigure{\includegraphics{figures/WFS1Q_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2Q_darkres.pdf}} 
+\subfigure{\includegraphics{figures/WFS3I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS4I_darkres.pdf}} 
+\caption[WFS error signal and dark noise]{WFS dark noise compared to typical error signal. The excess signal above the dark noise in WFS3I and WFS4I above 20~Hz is likely acoustic noise, although this hypothesis has not been verified. WFS1 and WFS2 are on a floating table in a sound proof chamber, while WFS3 and WFS4 are on a non-seismically isolated table without a sound proof enclosure. Seismic noise at time of residual spectra is in Fig.~\ref{fig:seismic_locked}.}
+%\textcolor{blue}{Include shot noise, too, especially for WFS1.}
+\label{fig:WFSdarknoise}
+\end{centering}
+\end{figure}
+
 
 
 
@@ -337,14 +377,6 @@ One will notice that it is not a coincidence that the optical lever compensation
 \label{sec:ASClimits}
 The limits for how well we can control the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Fig. \ref{fig:WFSdarknoise}. Moreover, depending on the power level, WFS1Q may instead be limited by shot noise (see Eq. \ref{eq:shotnoise}). Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. The impression of sensor noise cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at frequencies where sensor noise dominates. 
 %Ultimately, it is the WFS noise floor that determines the best possible achievable suppression. 
-
-\begin{figure} \begin{centering} \subfigure{\includegraphics{figures/WFS1Q_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2Q_darkres.pdf}} 
-\subfigure{\includegraphics{figures/WFS3I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS4I_darkres.pdf}} 
-\caption[WFS error signal and dark noise]{WFS dark noise compared to typical error signal. The excess signal above the dark noise in WFS3I and WFS4I above 20~Hz is likely acoustic noise, although this hypothesis has not been verified. WFS1 and WFS2 are on a floating table in a sound proof chamber, while WFS3 and WFS4 are on a non-seismically isolated table without a sound proof enclosure. Seismic noise at time of residual spectra is in Fig.~\ref{fig:seismic_locked}.}
-%\textcolor{blue}{Include shot noise, too, especially for WFS1.}
-\label{fig:WFSdarknoise}
-\end{centering}
-\end{figure}
 
 Besides the sensing noise, there are also sometimes real signals that result in more harm than good when used as feedback. The HAM seismic isolation tables used by the Input Optics (the core optics are suspended from BSC tables) have stack modes at 0.8 to 3~Hz that ring up the MMTs.  At low frequencies, around 1~Hz, some of the WFS signals are dominated by these angular fluctuations of the input beam. The resulting attempt of the mirrors to follow the input beam jitter leads to a magnification of the motion because of the drastically different length scales. Large power fluctuations in both arms and the power recycling cavity ensue, leading to departure from the linear error signal regime and often lock loss. 
 
