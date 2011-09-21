@@ -154,7 +154,7 @@ described in the following subsections.
 The convention for the naming of the WFS control signals is WFS1,
 WFS2A, WFS2B, WFS3, and WFS4, as seen in the channel names. This can
 be misleading because of the similarity to the sensor names (WFS1Q,
-WFS2I, WFS2Q, WFS3, and WFS4), potentially leading one to assume a
+WFS2I, WFS2Q, WFS3I, and WFS4I), potentially leading one to assume a
 one-to-one correspondence. For clarity in this dissertation, I refer
 to the WFS control signals by the radiation pressure eigenbasis
 degrees of freedom they represent: 
@@ -242,7 +242,7 @@ control to the differential soft mode compared to the other modes.
   in the control system. All other elements are set to zero.}
 \begin{tabular}{l l l l l l}
 \hline
-WFS1Q & WFS2I & WFS2Q & WFS3I & WFS4I &  \\
+WFS1Q & WFS2Q & WFS2I & WFS3I & WFS4I &  \\
 \hline
 \fbox{2.0}   & \textcolor{gray}{0.03} &\textcolor{gray}{0.06} & \textcolor{gray}{-0.008}  &  \textcolor{gray}{0.01} & dSoft \\
 \fbox{0.31}  & \fbox{-0.03} &\textcolor{gray}{-0.04} &  \textcolor{gray}{0.002} & \textcolor{gray}{-0.01} & dHard \\
@@ -312,21 +312,22 @@ r & -1 & r & -1 & 0 & ITMX\\
 
 %\textcolor{blue}{fix this} 
 During the sensing matrix measurement, the optical levers provide a
-record of the motion of the test masses. Properly combining the
-optical lever responses (via the output matrix, Eq.~\ref{eq:output})
-tells the amplitude of each radiation pressure degree of freedom's
+record of the motion of the test masses. I combined the
+optical lever responses (via the output matrix, Table~\ref{table:output})
+to determine the amplitude of each radiation pressure degree of freedom's
 movement. The actual numbers for the measurement data presented in
-Table \ref{table:sensing} are found in Table
-\ref{table:excitations_calibrated}.
+Table~\ref{table:sensing} are found in Table~\ref{table:excitations_calibrated}.
 
 This matrix tells the extent to which the ASC control matrix excites
 the degree of freedom it is designed to excite. Columns are
 excitations and rows are the pitch motions at 9.7~Hz in units of
 \microrad. Ideally, this would be a diagonal matrix and it is up to at
-most a factor of two. Some modifications to the output matrix were
-necessary in order to achieve the eigenbasis motion matrix as diagonal
-as this one. The modifications take the form of gains to the mirror
-drives and are shown in Table~\ref{table:mirrorgains}.
+most a factor of two. I had to calculate modifications to the output
+matrix in order to achieve the eigenbasis motion matrix as diagonal as
+this one. The modifications take the form of gains to the mirror
+drives and are shown in Table~\ref{table:mirrorgains}. The 30\%
+difference with the model is a result of uncertainty in the cavity
+$g$-factors.
 
 
 % This now allows us to complete the
@@ -409,7 +410,7 @@ not be stable.
 
 By design, the input matrix is not exactly the inverse of the sensing
 matrix, meaning the system is not completely diagonal. For example,
-the input matrix times the sensing matrix is by design:
+the input matrix times the sensing matrix is, by design:
  \[ \left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.30 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
@@ -420,7 +421,8 @@ the input matrix times the sensing matrix is by design:
 
 Over time, the sensing matrix changes enough that the system is even less 
 diagonal. Only 10 minutes after having measured and created the input
-matrix, the product of the input matrix with the new sensing matrix is:
+matrix, the product of the input matrix with a newly measured new
+sensing matrix is: 
 \[ \left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.32 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
@@ -701,16 +703,20 @@ dependence.
 
 \begin{figure}
 \begin{centering}
-\subfigure{\includegraphics[width=0.5\textwidth]{figures/spob_gaintracking.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS1Q_track.pdf}}
-\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2Q_track.pdf}}
-\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS3I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS4I_track.pdf}}
+\subfigure{\includegraphics{figures/trackSPOB.pdf}}\subfigure{\includegraphics{figures/trackWFS1Q.pdf}}
+\subfigure{\includegraphics{figures/trackWFS2I.pdf}}\subfigure{\includegraphics{figures/trackWFS2Q.pdf}}
+\subfigure{\includegraphics{figures/trackWFS3I.pdf}}\subfigure{\includegraphics{figures/trackWFS4I.pdf}}
+% \subfigure{\includegraphics[width=0.5\textwidth]{figures/spob_gaintracking.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS1Q_track.pdf}}
+% \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2Q_track.pdf}}
+% \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS3I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS4I_track.pdf}}
 \caption[Measured dependence of the WFS error signals on the power
-recycling cavity geometry]{WFS optical response as a function of power
-  recycling cavity geometry. WFS1Q, WFS2I, WFS2Q are more sensitive to
-  test mass motion as the power in the recycling cavity increases. To
-  achieve a dependable feedback system, the error signals are scaled
-  in real-time, forcing their responses to be flat with power. This
-  range of SPOB is low for normal operations.} 
+recycling cavity geometry]{WFS optical response to test mass motion as
+  a function of power recycling cavity geometry. WFS1Q, WFS2I, WFS2Q
+  are more sensitive to test mass motion as the power in the recycling
+  cavity increases. Therefore, to achieve a dependable feedback
+  system, we scale the error signals in real-time, forcing their
+  responses to be flat with power. This range of PRC power is low for
+  normal operations.}
 %\textcolor{blue}{plot as ratio of first value and include fitted lines for satisfaction.}}
 \label{fig:WFStrack}
 \end{centering}
@@ -848,11 +854,10 @@ therefore with different seismic noise conditions. However, the effect
 of the ASC is stark at low frequencies where gain is high, as is seen
 in Figure~\ref{fig:ASConoff}. At 0.01~Hz angular motion of all degrees
 of freedom is suppressed by at least one order of magnitude. The
-effect of the high gain for the differential soft degree of freedom,
-in particular, is seen here, where order of magnitude suppression is
-seen already at 1~Hz. Note that the rms angular motion is generally
-$10^{-7}$ rad/$\sqrt{\mathrm{Hz}}$.
-
+typical residual rms angular motion is $10^{-7}$
+rad/$\sqrt{\mathrm{Hz}}$. The effect of the high gain for the
+differential soft degree of freedom, in particular, is seen here,
+where order of magnitude suppression is seen already at 1~Hz.
 
 \begin{figure}
 \begin{centering}
@@ -872,6 +877,13 @@ The background motion (``no ASC'') is the RP eigenbasis reconstruction of optica
 \label{fig:ASConoff}
 \end{centering}
 \end{figure}
+
+The magnitudes of the beam spot motion and the residual mirror motion
+are consistent and reasonable. For example, for $10^{-7}$ rad of soft
+or hard mode motion in one arm, the maximum cavity tilt and
+displacement are (from Table.~\ref{table:cav_geometric})
+0.12~\micro rad and 1.02~mm, respectively.
+
 
 Figure~\ref{fig:mirror_onoff} shows the same data as
 Fig.~\ref{fig:ASConoff} except in the mirror basis instead of the
@@ -954,14 +966,6 @@ a time when the interferometer was locked with 14~W input power.
 \end{centering}
 \end{figure}
 
-We also repeated the transfer function measurement with excitations
-and readback not at the suspension angular control point, but at the
-WFS error points. This allows us to view the breakdown of noise
-contributions in the WFS (radiation pressure eigenmode) basis rather
-than the optic basis. Figure~\ref{fig:wfs2DARM} shows the breakdown of
-WFS noise contributions to DARM for the same time as
-Fig.~\ref{fig:optic2DARM}.
-
 \begin{figure}
 \begin{centering}
 \subfigure[Pitch.]{\includegraphics{figures/WFSpittoDARM.pdf}}
@@ -972,13 +976,21 @@ Fig.~\ref{fig:optic2DARM}.
 \end{centering}
 \end{figure}
 
+We also repeated the transfer function measurement with excitations
+and readback not at the suspension angular control point, but at the
+WFS error points. This allows us to view the breakdown of noise
+contributions in the WFS (radiation pressure eigenmode) basis rather
+than the optic basis. Figure~\ref{fig:wfs2DARM} shows the breakdown of
+WFS noise contributions to DARM for the same time as
+Fig.~\ref{fig:optic2DARM}.
+
 Because two angular control signals, the WFS and the optical levers,
 independently contribute signals to the suspension angular control, we
 can separate their contributions in the noisebudget. Furthermore, we
 compute the quadrature sum of the pitch and yaw contributions,
 assuming these two degrees of freedom are de-coupled, thus creating an
 upper limit for the ASC contribution to the DARM
-noisebudget. Figure~\ref{fig:seismic_NB} shows the final ASC noise in
+noisebudget. Figure~\ref{fig:asc2darm} shows the final ASC noise in
 DARM summary for a 16~W lock at night.
 
 \begin{figure}
@@ -1007,20 +1019,6 @@ amount, is presented in the next section.
 
 
 \subsection{Tuning the Cut-off Filters} 
-The cut-off frequency of the lowpass filters for the WFS control are
-of particular importance in the DARM noisebudget. The lowpass filter
-is necessary for suppressing the impression of sensing noise on
-suspension control signals. Steepening the cut-off frequency results
-in less sensing noise impression, but each pole used to achieve the
-steeper drop-off introduces an extra $90^{\circ}$ of phase
-loss. Likewise, lowering the cut-off frequency reduces noise
-impression, but it pushes the phase loss to lower
-frequencies.Decreasing the phase margin of the WFS loops leads to
-gain peaking and a greater likelihood of loop instability. A fine
-balance must therefore be found between loop stability and noise
-impression. Figure~\ref{fig:WFS1cutoff} demonstrates the effect on
-DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
-30~Hz.
 
 \begin{figure}
 \begin{centering}
@@ -1032,6 +1030,21 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 \label{fig:WFS1cutoff}
 \end{centering}
 \end{figure}
+
+The cut-off frequency of the lowpass filters for the WFS control are
+of particular importance in the DARM noisebudget. The lowpass filter
+is necessary for suppressing the impression of sensing noise on
+suspension control signals. Steepening the cut-off frequency results
+in less sensing noise impression, but each pole used to achieve the
+steeper drop-off introduces an extra $90^{\circ}$ of phase
+loss. Likewise, lowering the cut-off frequency reduces noise
+impression, but it pushes the phase loss to lower
+frequencies. Decreasing the phase margin of the WFS loops leads to
+gain peaking and a greater likelihood of loop instability. A fine
+balance must therefore be found between loop stability and noise
+impression. Figure~\ref{fig:WFS1cutoff} demonstrates the effect on
+DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
+30~Hz.
 
 
 
@@ -1068,25 +1081,6 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 
 \section{Experimental measurement of the Sidles-Sigg effect}
 
-The digital control system in which the angular control feedback
-system is implemented provides a convenient milieu in which to measure
-the response of the optomechanical system.  By injecting a disturbance
-somewhere in the loop and measuring the response at selected points in
-the loop, we can produce a measurement of the optomechanical system
-that is not sensitive to the details of the control system.   Here we
-use this system to produce measurements of the optomechanical plant at
-several different operating powers, demonstrating the modifications due
-to radiation pressure, i.e. the Sigg-Sidles effect.
-
-The various elements of the plant and the control system are depicted
-in figure~\ref{fig:RPTFmeasurement}.  For this measurement, transfer
-functions are taken from torque input to the resulting angular
-displacement (as measured by the WFS), both in the radiation pressure
-eigenbasis.  Simultaneously, an excitation is injected into the
-control leg of the servo loop.  The resulting measurement reproduces
-the transfer function of the optomechanical plant, independent of the
-control system.
-
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\textwidth]{figures/ascservo_measurement.pdf}
@@ -1098,6 +1092,25 @@ control system.
 \label{fig:RPTFmeasurement}
 \end{centering}
 \end{figure}
+
+The digital control system in which the angular control feedback
+system is implemented provides a convenient milieu in which to measure
+the response of the optomechanical system.  By injecting a disturbance
+somewhere in the loop and measuring the response at selected points in
+the loop, we can produce a measurement of the optomechanical system
+that is not sensitive to the details of the control system.   Here we
+use this system to produce measurements of the optomechanical plant at
+several different operating powers, demonstrating the modifications due
+to radiation pressure, i.e. the Sidles-Sigg effect.
+
+The various elements of the plant and the control system are depicted
+in figure~\ref{fig:RPTFmeasurement}.  For this measurement, transfer
+functions are taken from torque input to the resulting angular
+displacement (as measured by the WFS), both in the radiation pressure
+eigenbasis.  Simultaneously, an excitation is injected into the
+control leg of the servo loop.  The resulting measurement reproduces
+the transfer function of the optomechanical plant, independent of the
+control system.
 
 Results are shown in figures~\ref{fig:hardTF} (hard mode) and
 ~\ref{fig:softTF} (soft mode); least-squares fits of second-order
@@ -1111,7 +1124,8 @@ disappears; the plant has become statically unstable.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/hard_dataandfit.pdf}
+\subfigure{\includegraphics{figures/hardmag.pdf}}
+\subfigure{\includegraphics{figures/hardphase.pdf}}
 \caption{Hard opto-mechanical mode measurement and fit for several
  powers.}
 \label{fig:hardTF}
@@ -1120,14 +1134,15 @@ disappears; the plant has become statically unstable.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/soft_dataandfit.pdf}
+\subfigure{\includegraphics{figures/softmag.pdf}}
+\subfigure{\includegraphics{figures/softphase.pdf}}
 \caption{Soft opto-mechanical mode measurement and fit for several
  powers.}
 \label{fig:softTF}
 \end{centering}
 \end{figure}
 
-These measurements show a clear confirmation of the Sigg-Sidles theory
+These measurements show a clear confirmation of the Sidles-Sigg theory
 and demonstrate a successful power-independent diagonalization of the
 sensing and control of the optomechanical system.
 
