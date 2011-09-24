@@ -22,42 +22,44 @@
 \contentsline {figure}{\numberline {{4-1}}{\ignorespaces Typical angular motion of the core suspended mirrors in the absence of interferometric control}}{61}{figure.4.1}
 \contentsline {figure}{\numberline {{4-2}}{\ignorespaces Contribution of sesimic noise to optical lever error signal}}{63}{figure.4.2}
 \contentsline {figure}{\numberline {{4-3}}{\ignorespaces Torque to pitch transfer function of a LIGO core optic}}{67}{figure.4.3}
-\contentsline {figure}{\numberline {{4-4}}{\ignorespaces Schematic of the alignment sensing and control system}}{68}{figure.4.4}
-\contentsline {figure}{\numberline {{4-5}}{\ignorespaces Beam centering servo image of beam splitter}}{70}{figure.4.5}
-\contentsline {figure}{\numberline {{4-6}}{\ignorespaces ASC control servo}}{72}{figure.4.6}
-\contentsline {figure}{\numberline {{4-7}}{\ignorespaces Optical lever compensation scheme}}{73}{figure.4.7}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {Zoom of the bottom part of Fig.\nobreakspace {}\ref {fig:ASCcontrolservo}. $P$ is the pendulum and $O$ is the optical lever control filters.}}}{73}{figure.4.7}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {Replacement of the optical lever controlled plant with the closed loop gain representation.}}}{73}{figure.4.7}
-\contentsline {subfigure}{\numberline {C}{\ignorespaces {Optical lever compensation removes the optical levers from the picture of the pendulum. External torque is still suppressed by the optical lever closed loop gain.}}}{73}{figure.4.7}
-\contentsline {figure}{\numberline {{4-8}}{\ignorespaces WFS error signal and dark noise}}{74}{figure.4.8}
-\contentsline {figure}{\numberline {{5-1}}{\ignorespaces Illustration of the orthogonal modes of cavity tilt}}{80}{figure.5.1}
-\contentsline {figure}{\numberline {{5-2}}{\ignorespaces Controls view of addition of radiation pressure to the pendulum transfer function}}{81}{figure.5.2}
-\contentsline {figure}{\numberline {{5-3}}{\ignorespaces Torsional spring constants of an optically coupled cavity}}{83}{figure.5.3}
-\contentsline {figure}{\numberline {{5-4}}{\ignorespaces Single cavity opto-mechanical transfer function}}{84}{figure.5.4}
-\contentsline {figure}{\numberline {{5-5}}{\ignorespaces Poles of the torque to pitch opto-mechanical transfer function}}{86}{figure.5.5}
-\contentsline {figure}{\numberline {{6-1}}{\ignorespaces Impression of input beam motion on the core mirrors}}{95}{figure.6.1}
-\contentsline {figure}{\numberline {{6-2}}{\ignorespaces Comparison of WFS error signals (the residual motion) during a time of normal operation and a time when the common WFS gains were $2.5\times $ higher than nominal}}{96}{figure.6.2}
-\contentsline {figure}{\numberline {{6-3}}{\ignorespaces Theoretical dependence of power recycling cavity power on $g$-factor and mirror angle}}{98}{figure.6.3}
-\contentsline {figure}{\numberline {{6-4}}{\ignorespaces Measured dependence of the WFS error signals on the power recycling cavity geometry}}{100}{figure.6.4}
-\contentsline {figure}{\numberline {{6-5}}{\ignorespaces Open loop gains (pitch) of the 5 WFS loops as measured with 6 W input power.}}{101}{figure.6.5}
-\contentsline {figure}{\numberline {{6-6}}{\ignorespaces Beam spot motion on the ITMs and ETMs during a 16\nobreakspace {}W lock}}{102}{figure.6.6}
-\contentsline {figure}{\numberline {{6-7}}{\ignorespaces Angular motion suppression due to the ASC}}{104}{figure.6.7}
-\contentsline {figure}{\numberline {{6-8}}{\ignorespaces Individual mirror motion with and without ASC}}{105}{figure.6.8}
-\contentsline {figure}{\numberline {{6-9}}{\ignorespaces Optic to DARM noisebudget}}{106}{figure.6.9}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{106}{figure.6.9}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{106}{figure.6.9}
-\contentsline {figure}{\numberline {{6-10}}{\ignorespaces Wavefront sensor to DARM noisebudget}}{107}{figure.6.10}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{107}{figure.6.10}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{107}{figure.6.10}
-\contentsline {figure}{\numberline {{6-11}}{\ignorespaces Total WFS and optical lever noise contribution to DARM during a 16 W lock at night}}{108}{figure.6.11}
-\contentsline {figure}{\numberline {{6-12}}{\ignorespaces Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}}{109}{figure.6.12}
-\contentsline {figure}{\numberline {{6-13}}{\ignorespaces Demonstration of radiation pressure eigenbasis torque to angle transfer function measurement}}{110}{figure.6.13}
-\contentsline {figure}{\numberline {{6-14}}{\ignorespaces Hard opto-mechanical mode measurement and fit for several powers.}}{112}{figure.6.14}
-\contentsline {figure}{\numberline {{6-15}}{\ignorespaces Soft opto-mechanical mode measurement and fit for several powers.}}{113}{figure.6.15}
-\contentsline {figure}{\numberline {{7-1}}{\ignorespaces Histogram of input powers used during S6}}{115}{figure.7.1}
-\contentsline {figure}{\numberline {{8-1}}{\ignorespaces Livingston mode cleaner intensity noise transfer function}}{117}{figure.8.1}
-\contentsline {figure}{\numberline {{8-2}}{\ignorespaces End of an 8.7 W lock at Livingston on Feb. 23, 2010}}{122}{figure.8.2}
-\contentsline {figure}{\numberline {{8-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{123}{figure.8.3}
-\contentsline {figure}{\numberline {{9-1}}{\ignorespaces Diagram of mirror and OSEM geometry}}{127}{figure.9.1}
-\contentsline {figure}{\numberline {{9-2}}{\ignorespaces Optical lever calibration data.}}{130}{figure.9.2}
-\contentsline {figure}{\numberline {{10-1}}{\ignorespaces Optical lever open loop transfer function}}{133}{figure.10.1}
+\contentsline {figure}{\numberline {{4-4}}{\ignorespaces Layout of ASC sensors and the mirrors they must control}}{68}{figure.4.4}
+\contentsline {figure}{\numberline {{4-5}}{\ignorespaces Beam centering servo image of beam splitter}}{69}{figure.4.5}
+\contentsline {figure}{\numberline {{4-6}}{\ignorespaces Schematic of the alignment sensing and control system}}{71}{figure.4.6}
+\contentsline {figure}{\numberline {{4-7}}{\ignorespaces ASC control servo}}{72}{figure.4.7}
+\contentsline {figure}{\numberline {{4-8}}{\ignorespaces Optical lever compensation scheme}}{73}{figure.4.8}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Zoom of the bottom part of Fig.\nobreakspace {}\ref {fig:ASCcontrolservo}. $P$ is the pendulum and $O$ is the optical lever control filters.}}}{73}{figure.4.8}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Replacement of the optical lever controlled plant with the closed loop gain representation.}}}{73}{figure.4.8}
+\contentsline {subfigure}{\numberline {C}{\ignorespaces {Optical lever compensation removes the optical levers from the picture of the pendulum. External torque is still suppressed by the optical lever closed loop gain.}}}{73}{figure.4.8}
+\contentsline {figure}{\numberline {{4-9}}{\ignorespaces WFS error signal and dark noise}}{75}{figure.4.9}
+\contentsline {figure}{\numberline {{5-1}}{\ignorespaces Illustration of the orthogonal modes of cavity tilt}}{81}{figure.5.1}
+\contentsline {figure}{\numberline {{5-2}}{\ignorespaces Controls view of addition of radiation pressure to the pendulum transfer function}}{82}{figure.5.2}
+\contentsline {figure}{\numberline {{5-3}}{\ignorespaces Torsional spring constants of an optically coupled cavity}}{84}{figure.5.3}
+\contentsline {figure}{\numberline {{5-4}}{\ignorespaces Single cavity opto-mechanical transfer function}}{85}{figure.5.4}
+\contentsline {figure}{\numberline {{5-5}}{\ignorespaces Poles of the torque to pitch opto-mechanical transfer function}}{87}{figure.5.5}
+\contentsline {figure}{\numberline {{6-1}}{\ignorespaces Impression of input beam motion on the core mirrors}}{96}{figure.6.1}
+\contentsline {figure}{\numberline {{6-2}}{\ignorespaces Comparison of WFS error signals (the residual motion) during a time of normal operation and a time when the common WFS gains were $2.5\times $ higher than nominal}}{97}{figure.6.2}
+\contentsline {figure}{\numberline {{6-3}}{\ignorespaces Theoretical dependence of power recycling cavity power on $g$-factor and mirror angle}}{99}{figure.6.3}
+\contentsline {figure}{\numberline {{6-4}}{\ignorespaces Measured dependence of the WFS error signals on the power recycling cavity geometry}}{101}{figure.6.4}
+\contentsline {figure}{\numberline {{6-5}}{\ignorespaces Open loop gains (pitch) of the 5 WFS loops as measured with 6 W input power.}}{102}{figure.6.5}
+\contentsline {figure}{\numberline {{6-6}}{\ignorespaces Beam spot motion on the ITMs and ETMs during a 16\nobreakspace {}W lock}}{103}{figure.6.6}
+\contentsline {figure}{\numberline {{6-7}}{\ignorespaces Angular motion suppression due to the ASC}}{105}{figure.6.7}
+\contentsline {figure}{\numberline {{6-8}}{\ignorespaces Individual mirror motion with and without ASC}}{106}{figure.6.8}
+\contentsline {figure}{\numberline {{6-9}}{\ignorespaces Optic to DARM noisebudget}}{107}{figure.6.9}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{107}{figure.6.9}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{107}{figure.6.9}
+\contentsline {figure}{\numberline {{6-10}}{\ignorespaces Wavefront sensor to DARM noisebudget}}{108}{figure.6.10}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{108}{figure.6.10}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{108}{figure.6.10}
+\contentsline {figure}{\numberline {{6-11}}{\ignorespaces Total WFS and optical lever noise contribution to DARM during a 16 W lock at night}}{109}{figure.6.11}
+\contentsline {figure}{\numberline {{6-12}}{\ignorespaces Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}}{110}{figure.6.12}
+\contentsline {figure}{\numberline {{6-13}}{\ignorespaces Demonstration of radiation pressure eigenbasis torque to angle transfer function measurement}}{111}{figure.6.13}
+\contentsline {figure}{\numberline {{6-14}}{\ignorespaces Hard opto-mechanical mode measurement and fit for several powers.}}{113}{figure.6.14}
+\contentsline {figure}{\numberline {{6-15}}{\ignorespaces Soft opto-mechanical mode measurement and fit for several powers.}}{114}{figure.6.15}
+\contentsline {figure}{\numberline {{7-1}}{\ignorespaces Histogram of input powers used during S6}}{116}{figure.7.1}
+\contentsline {figure}{\numberline {{7-2}}{\ignorespaces Zoom of the shot-noise-limited noise floors of the Initial LIGO and Enhanced LIGO detectors.}}{116}{figure.7.2}
+\contentsline {figure}{\numberline {{8-1}}{\ignorespaces Livingston mode cleaner intensity noise transfer function}}{118}{figure.8.1}
+\contentsline {figure}{\numberline {{8-2}}{\ignorespaces End of an 8.7 W lock at Livingston on Feb. 23, 2010}}{123}{figure.8.2}
+\contentsline {figure}{\numberline {{8-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{124}{figure.8.3}
+\contentsline {figure}{\numberline {{9-1}}{\ignorespaces Diagram of mirror and OSEM geometry}}{128}{figure.9.1}
+\contentsline {figure}{\numberline {{9-2}}{\ignorespaces Optical lever calibration data.}}{131}{figure.9.2}
+\contentsline {figure}{\numberline {{10-1}}{\ignorespaces Optical lever open loop transfer function}}{134}{figure.10.1}
