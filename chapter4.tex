@@ -1,503 +1,382 @@
-\chapter{The Effect of High Laser Power on Interferometer Alignment}
-\label{ch:eigenmodes}
+\chapter{Angular Motion of the Interferometer Mirrors}
 
-% \section{Dynamic response of coupled pendula}
-
-
-The torque induced by radiation pressure, as introduced in
-Sec. \ref{sec:rp_intro}, couples the angular motion of the suspended
-mirrors, complicating the plant for which controls must be
-designed. The derivation of the angular response of the mirrors to
-external torque in the presence of radiation pressure is presented in
-several publications, but I provide my own derivation here for
-completeness. Radiation pressure torque is, after all, the foundation
-for this work's investigation of high power effects in the angular
-sensing and control. We derive a set of eigenfunctions that
-diagonalize the linear cavity's response to radiation pressure and
-describe the mirrors' equations of motion in this new eigenbasis. We
-show that the torque to angle transfer functions of the new eigenmodes
-are modified such that one mode is statically unstable at Enhanced
-LIGO powers.
-
-% \textcolor{blue}{this needs re-writing} Namely, radiation pressure
-% torque has the effect of breaking the symmetry of the equations of
-% motion of each of the mirrors. Since Enhanced LIGO embarks on the path
-% of increasing the laser power, examining the effect of radiation
-% pressure torque in detail is warranted. 
+For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. It is necessary to actively align the mirrors for several reasons:
+\begin{itemize}
+\item to find the optimal DC alignment of the interferometer \vspace{-10 pt}
+\item to suppress any motion that results from external disturbances \vspace{-10 pt}
+\item to counteract a high power static instability
+\end{itemize}
+There are 16 angular degrees of freedom that need to be sensed and controlled, making the ASC one of the most complex interferometer subsystems. This chapter presents the ASC design, and discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer.
 
 
 
 
 
-\section{The Radiation Pressure Angular Spring}
-The geometric axis of a cavity formed by two spherical mirrors is
-dictated by the line joining the two centers of curvature. Only if the
-mirrors are pointed directly at one another will the cavity geometric
-axis pass through the centers of the mirrors. Should a laser beam
-resonate in the cavity, it will do so along this geometric axis. Thus,
-if the mirrors are tilted away from one another, the beam spot on each
-mirror will not be centered. The relationship between the positions of
-the beams on the mirrors relative to center, $x_i$, and the angles of
-the mirrors, $\theta_i$, is given by:
+% normalize out seismic motion for wfs on / wfs off residual motion comparison
+
+% include shot noise on at least WFS1 sensor noisebudget; maybe limiting
+% depending on power used
+
+% how low can you go before it falls apart? valera and kate tried this
+% out--find in elog
+
+% RF offsets changing 
+
+% possible in test runs to inc. hard/soft modes to 3
+% hz, higher than ever before; but operationally, need lower. talk to
+% matt and lisa to make sure to handle things politically correctly.
+
+% calculate time-lag as cavity light responds to mirror displacements --> damping from RP
+
+
+
+
+
+\section{Tolerance for Angular Motion}
+\label{sec:tolerance}
+%\textcolor{blue}{Make this section correct! power fluctations only couple quadratically (bi-linearly) to DARM, but the contrast defect thing is \emph{indistinguishable} from gravitational waves. the A2L should still be emphasized.}
+
+
+% Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residula motion must be held below 
+
+Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: failure to achieve maximum power gain, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
+
+Because the strain sensitivity is proportional to the power at the beam splitter (see Eq. \ref{eq:SNL}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Furthermore, differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other. A changing contrast defect creates power fluctuations at the AS port, making it indistinguishable from gravitational waves. Also, the DC power of the contrast defect contributes to increasing the shot noise noise-floor. Excessive fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
+
+Another deleterious effect of poor alignment is angle to length coupling. 
+When the beam is located a distance $x$  away from the center of the mirror, an
+angular displacement of the mirror $\theta$ about its center results in a path
+length change of the beam
 \begin{equation}
-\left\llbracket \begin{array}{c}
-x_1\\
-x_2 \end{array} \right\rrbracket = \frac{L}{1-g_1 g_2}
-\left\llbracket \begin{array}{cc}
-g_2 & 1\\
-1 & g_1\end{array} \right\rrbracket
-\left\llbracket \begin{array}{c}
-\theta_1\\
-\theta_2 \end{array} \right\rrbracket .
-\label{eq:x}
+\Delta{L} = x \theta
 \end{equation}
-The $g$-factor is defined as $g_i=1-R_i/L$ where $R_i$ is the mirror
-radius of curvature, and $L$ is the length of the cavity. The
-$g$-factor is $0.73$ ($0.71$) for the LLO (LHO) ITM and $0.54$
-($0.45$) for the LLO (LHO) ETM.
-
-We saw in the previous chapter that the radiation pressure torque on a
-mirror depends on the position of the beam on the mirror, $\tau_{rp} =
-2 P x / c$ (Eq. \ref{eq:tau_rp}). Based on Eq. \ref{eq:x} the
-radiation pressure torque on a mirror that is part of a
-Fabry-P\'{e}rot cavity is therefore dependent on the angle of both the
-mirror of interest and the second mirror forming the cavity:
-\begin{equation}
-\left\llbracket \begin{array}{c}
-\tau_{rp,1}\\
-\tau_{rp,2} \end{array} \right\rrbracket = \frac{2 P L}{c (1-g_1 g_2)}
-\left\llbracket \begin{array}{cc}
-g_2 & 1\\
-1 & g_1\end{array} \right\rrbracket
-\left\llbracket \begin{array}{c}
-\theta_1\\
-\theta_2 \end{array} \right\rrbracket.
-\end{equation}
-This is more succinctly expressed as
-\begin{equation}
-\vec{\tau}_{rp} = -\mathbf{K_{rp}} \vec{\theta},
-\label{eq:rpspring}
-\end{equation}
-where $\mathbf{K_{rp}}$ is the \emph{torsional stiffness
-  matrix}. Equation \ref{eq:rpspring} is the expression that describes
-the radiation pressure angular spring.
+which has a direct impact on DARM. Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x ~=~1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m. 
+%\textcolor{blue}{Convolve my bsm spectra and residual mirror motion spectra to show example.}
 
 
 
 
-\subsection{Diagonalizing the Modified Equations of Motion}
-\label{sec:eigenbasis}
-The radiation pressure spring modifies the pendulum angular equation
-of motion and therefore the torque to angle transfer function
-through the addition of an angle-dependent torque term. Re-writing
-Eq. \ref{eq:eqmotion} in matrix form and with the radiation pressure
-spring term, the two equations that describe the motion of two mirrors
-forming a Fabry-P\'{e}rot cavity is: 
-\begin{equation}
-\mathbf{I} \ddot{\vec{\theta}} 
-+ {\bm \gamma} \dot{\vec{\theta}} 
-+ \mathbf{\kappa_p} \vec{\theta}
-- \frac{2 P L}{c (1-g_1 g_2)}
-\left\llbracket \begin{array}{cc}
-g_2 & 1\\
-1 & g_1\end{array} \right\rrbracket \vec{\theta} 
-= \vec{\tau}_{ext}.
-\label{eq:motion_rp}
-\end{equation}
-$\mathbf{I}$, $\gamma$, and $\kappa_p$ are $2 \times 2$ diagonal
-matrices and $\vec{\theta}$ and $\vec{\tau}_{ext}$ are $2 \times 1$
-vectors as in the previous section. Due to the non-diagonal matrix in
-Eq. \ref{eq:motion_rp}, the motions of each of the mirrors forming the
-cavity are tied to one another. The natural way to work with such a
-system is to rotate the coupled equations into a new basis. The
-resulting de-coupled equations of motion will described specific
-combinations of mirror tilts instead of the tilt of an individual mirror. Vectors in
-the rotated basis are written with primes.
+\section{Sources of Angular Mirror Motion}
+There is a continuous stream of changing torque inputs to the mirrors that cause them to twist and turn in pitch and in yaw. Some torque inputs exist regardless of the state of the interferometer, while others are a direct consequence of the control systems. The primary torque inputs are introduced here, and further discussion of some of them is found later in the chapter. The list includes:
+\begin{itemize}
+\item ground motion \vspace{-10pt} 
+%\item seismic isolation \vspace{-10pt} 
+\item coil actuators (length to angle) \vspace{-10pt}
+\item noise impression from the angular control system \vspace{-10pt}
+\item radiation pressure
+\end{itemize}
 
-In order to decouple the two equations of Eq. \ref{eq:motion_rp}, we
-need to diagonalize $\mathbf{K_{rp}}$. The subscripts $a$ and $b$ are
-used to denote the elements of the diagonalized basis, to contrast the
-$1$ and $2$ which denote the mirror basis. Ignoring the constants of
-matrix $\mathbf{K_{rp}}$, its eigenvalues are
-\begin{align}
-\lambda_a &= \frac{g_1 + g_2 + \sqrt{(g_1 - g_2)^2 + 4}}{2} \\
-\lambda_b &= \frac{g_1 + g_2 - \sqrt{(g_1 - g_2)^2 + 4}}{2} 
-\label{eq:eigenvalues}
-\end{align}
-and its eigenvectors are
-\begin{align}
-\vec{v}_a &= \left\llbracket \begin{array}{c} 
-1 \\
-\frac{g_1 - g_2 + \sqrt{(g_1 - g_2)^2 + 4}} {2} \end{array} \right\rrbracket\\
-\vec{v}_b &= \left\llbracket \begin{array}{c}
-\frac{ -g_1 + g_2 - \sqrt{(g_1 - g_2)^2 + 4}}{2} \label{eq:eigenvectors}\\
-1 \end{array} \right\rrbracket .
-\end{align}
-Therefore, the matrix 
-\begin{equation}
-\mathbf{S} = \left\llbracket \begin{array}{cc} 
-\vec{v}_a & \vec{v}_b \end{array} \right\rrbracket =
-\left\llbracket \begin{array}{cc}
- 1 & \frac{-g_1 + g_2 - \sqrt{(g_1 - g_2)^2 + 4}} {2}\\
- \frac{g_1 - g_2 + \sqrt{(g_1 - g_2)^2 + 4}} {2} & 1\end{array} \right\rrbracket
-\label{eq:S}
-\end{equation}
-diagonalizes $\mathbf{K_{rp}}$ such that 
-\begin{equation}
-\mathbf{S^{-1} K_{rp} S} = \mathbf{D} = \left\llbracket \begin{array}{cc} 
-\lambda_a & 0 \\
-0 & \lambda_b \end{array} \right\rrbracket = \left\llbracket \begin{array}{cc}
- \frac{g_1 + g_2 + \sqrt{(g_1 - g_2)^2 + 4}}{2}  & 0\\
- 0 & \frac{g_1 + g_2 - \sqrt{(g_1 - g_2)^2 + 4}}{2}\end{array}
-\right\rrbracket .
-\label{eq:diag}
-\end{equation}
-The matrix of eigenvectors, $\mathbf{S}$, is the basis transformation
-matrix. It serves to define the torque and angle vectors in the new
-basis. For example,
-\begin{equation}
-\vec{\theta}^\prime = \left\llbracket \begin{array}{c}
-\theta_a\\
-\theta_b \end{array} \right\rrbracket = \mathbf{S^{-1}}
-\left\llbracket \begin{array}{c}
-\theta_1\\
-\theta_2 \end{array} \right\rrbracket
-= \mathbf{S^{-1}} \vec{\theta}.
-\end{equation}
-
-Rearranging Eq. \ref{eq:diag} to the form $\mathbf{K_{rp}} =
-\mathbf{S D S^{-1}}$ and substituting it into Eq. \ref{eq:motion_rp},
-we have:
-\begin{equation}
-\mathbf{I} \ddot{\vec{\theta}} 
-+ {\bm \gamma} \dot{\vec{\theta}} 
-+ \mathbf{\kappa_p} \vec{\theta}
-- \frac{2 P L}{c (1-g_1 g_2)} \mathbf{S D S^{-1}} \vec{\theta} 
-= \vec{\tau}_{ext} 
-\end{equation}
-Multiplying on the left by $\mathbf{S^{-1}}$, taking advantage of the
-diagonal $\mathbf{I}$, $\gamma$, and $\kappa_p$ matrices, and using
-$\mathbf{S^{-1}}$ to change the basis of each of the vectors, the
-de-coupled equations of motion are:
-\begin{equation}
-\mathbf{I} \ddot{\vec{\theta}}^\prime 
-+ {\bm \gamma} \dot{\vec{\theta}}^\prime 
-+ \mathbf{\kappa_p} \vec{\theta}^\prime
-- \frac{2 P L}{c (1-g_1 g_2)}
-\left\llbracket \begin{array}{cc}
-\lambda_a & 0\\
-0 & \lambda_b \end{array} \right\rrbracket \vec{\theta}^\prime 
-= \vec{\tau}_{ext}^\prime.
-\label{eq:rp_eqmotion}
-\end{equation}
-The radiation pressure torsion constant, $\kappa_{rp}$, is 
-\begin{equation}
-\kappa_{rp} = - \frac{2 P L}{c (1-g_1 g_2)} \lambda
-\end{equation}
-where $\lambda = \lambda_a$ or $\lambda_b$, depending on the mode in
-question. 
-
-The angular motion of the Fabry-P\'{e}rot cavity is no longer
-described by the motions of its individual mirrors. Due to radiation
-pressure, the cavity is treated as a unit and the two orthogonal modes
-of angular motion are combinations of the two mirrors' angles. The
-eigenvectors $\vec{v}_a$ and $\vec{v}_b$ describe these two sets of
-orthogonal mirror tilts, and the eigenvalues $\lambda_a$ and
-$\lambda_b$ (along with their common constants) quantify the magnitude
-of the radiation pressure torsional spring constant for each of the
-modes. While the equations of motion had been identical for each of
-the individual mirrors, the decoupled equations in the presence of
-radiation pressure breaks that symmetry.
+%\textcolor{blue}{say something about seismometer feed-forward signals. say something about imperfect HEPI pos actuation}
 
 
-\begin{table}
-\centering
-\caption[Geometric parameters of the LIGO arm cavity
-  eigenmodes]{Geometric parameters of the LIGO arm cavity
-  eigenmodes. $x_i$ are the beam locations on the mirrors relative
-  to center, $a$ is the cavity axis displacement at the waist, and
-  $\alpha$ is the cavity axis angle with respect to a line joining the
-  centers of the mirrors. Differences between LLO and LHO arise from the
-  mirrors at each site having different radii of curvature. Quantities
-  are expressed as a function of the amount of tilt in a particular mode.}
-\begin{tabular}{l l l l l l}
-\hline
-& & LLO & LLO & LHO & LHO \\
-cavity parameter & unit & $\vec{v}_a$ mode & $\vec{v}_b$ mode & $\vec{v}_a$ mode & $\vec{v}_b$ mode \\
-\hline
-$|x_1|$ & mm/urad & 9.88 & 2.44 & 8.20 & 2.51\\
-$|x_2|$ & mm/urad & 10.84 & 2.22 & 9.35 & 2.20\\
-$|a|$ & mm/urad & 10.17 & 1.01 & 8.48 & 1.34 \\
-$|\alpha|$ & urad/urad & 0.24 & 1.17 & 0.29 & 1.18 \\
-\hline
-\end{tabular}
-\label{table:cav_geometric}
-\end{table}
 
-
-Table \ref{table:cav_geometric} outlines the characteristics of these
-two eigenmodes for the specific geometry of the LIGO arm cavities. The
-amount of beam displacement on each mirror is given as a function of
-the amount of tilt in one eigenmode or the other. Furthermore, the
-amount of cavity axis displacement $a$ and cavity axis tilt $\alpha$
-is also calculated for each eigenmode using the geometric relationship
-between a set of mirror tilts and their cavity axis as derived in
-Appendix \ref{sec:misaligned_cavity}. Figure \ref{fig:ss} illustrates
-a cavity in each of the two eigenmodes when using the parameters from
-Table \ref{table:cav_geometric}.
-
+\subsection{Ground Motion} 
+\label{sec:oplevspectra}
+The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions and thence to the mirrors. Ground motion is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Fig. \ref{fig:seismicMirror}.\footnote{These spectra include the effect of local velocity damping since the optical levers are always on (see Sec. \ref{sec:suspension}).}. The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.7\columnwidth]{figures/eigenmodes.pdf}
-\caption[Illustration of the orthogonal modes of cavity
-tilt]{Illustration of the orthogonal modes of cavity tilt. The upper
-  diagram shows tilts given by eigenvector $\vec{v}_b$ and the lower
-  diagram shows $\vec{v}_a$.}
-\label{fig:ss}
+\includegraphics[width=1.0\columnwidth]{figures/seismic_mirrormotion.pdf}
+\caption[Typical angular motion of the core suspended mirrors in the
+  absence of interferometric control]{Typical angular motion of the core suspended mirrors in the 
+  absence of interferometric control. Velocity damping provided by the
+  OSEMs and the optical levers is present. Once the interferometer is locked, the OSEM damping is turned off. Ground motion at the time of this measurement is shown in Fig. \ref{fig:seismic_nolock}.}
+\label{fig:seismicMirror}
+\end{centering}
+\end{figure}
+
+% Take a model of the optical lever open loop gains and a spectrum of
+% optical lever error signal at a time when the interferometer is
+% unlocked, but optical levers are on to calculate the background mirror
+% motion due to seismic noise. Show the effect at a select few different
+% times of day, probably for just one mirror. Write this section once I
+% see what I have to present.
+
+I obtained these spectra using the optical levers as witnesses of the mirror motion, which in turn is expected to come from the ground's motions. The optical lever signal, may, however, be contaminated by optical lever sensing (electronics) noise or acoustic couplings. It is therefore informative to embark on a study of how much of the optical lever spectra are in fact due to ground motion. 
+
+I used a method of Wiener filtering \cite{Wiener1975Extrapolation} to show that the motion of Fig.~\ref{fig:seismicMirror}, indeed originates primarily from the ground. The Wiener filter is the best estimate of the contribution of one signal to another. The contributions of the three seismometers to each large optic optical lever are shown in Fig.~\ref{fig:OLcontributions}. We see that the optical lever signals are almost entirely explained by ground motion, with the notable exceptions being a peak between 3 and 4~Hz for ITMY, and 0.3 and 0.7~Hz for the RM, and broadband extra motion for the BS.
+
+Furthermore, the relative magnitudes of the contributions from the
+three seismometers make sense. Greater than 1~Hz, coherence is
+greatest with the nearest seismometer, and less than 1~Hz,
+seismometers contribute more equally (except for the ITMs, which are
+everywhere very coherent with the corner station seismometer).
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIX.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
+\caption[Contribution of sesimic noise to optical lever error
+signal]{Contribution of sesimic noise to optical lever error signal
+  (called residual). The interferometer was unlocked and optical lever
+  and OSEM AC damping present.}
+\label{fig:OLcontributions}
+\end{centering}
+\end{figure}
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
+%\caption[]{Fig.~\ref{fig:OLcontributions} continued.}
+Fig.~\ref{fig:OLcontributions} continued.
 \end{centering}
 \end{figure}
 
 
 
 
-\subsection{Soft and Hard Modes} 
-The torque to angle transfer function of each of these eigenmodes has
-the same form as that of a single pendulum (Eq. \ref{eq:TF}), but the
-torsion constant is modified. More importantly, the spring constant is
-modified differently for each mode, yielding distinct behaviors of the
-two eigenmodes. In this section, we analyze these behaviors and
-accordingly introduce the names \emph{soft} and \emph{hard} to use in
-place of $a$ and $b$ for describing the two modes.
+% \subsubsection{Seismic isolation}
+% Although the multiple layers of seismic isolation serve to make interferometer operation possible \textcolor{blue}{write something better!}, minor imperfections in their implementation can result in them serving as coupling mechanisms to mirror angle. The path from ground to mirror can be broken into two distinct parts: HEPI + stack position to angle, and suspension position to angle. The seismic tables (HEPI at LLO) are actively actuated upon in position, ie. for the tidal servo. Any position to angle coupling will twist the table. The suspension 
 
-Just as in Sec. \ref{sec:t2a}, we can take the Laplace transform of
-each of the equations in Eq. \ref{eq:rp_eqmotion} to get the general
-form of the modal torque to angle transfer function:
-\begin{equation}
-H^\prime(s) = \frac{\Theta^\prime(s)}{\tau_{ext}^\prime(s)} = \frac{1}{I s^2 + \gamma s +
-  \kappa_p + \kappa_{rp}}.
-\label{eq:modalTF}
-\end{equation} 
-Figure \ref{fig:pendloop} shows the control theory view of
-the addition of the radiation pressure spring constant to the transfer
-function.
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.6\textwidth]{figures/pendulumLoop.pdf}
-\caption[Controls view of addition of radiation pressure to the pendulum
-transfer function]{Demonstration of how radiation pressure modifies the torque to
-  angle transfer function of a Fabry-P\'{e}rot cavity's eigenmodes.}
-\label{fig:pendloop}
-\end{centering}
-\end{figure}
-
-The magnitude and sign of the total torsional spring constant,
-$\kappa_{tot} = \kappa_p + \kappa_{rp}$, conveys critical information
-about the stability of the cavity and the nature of its response to
-external torque. Recalling the equation of an angular spring, $\tau =
-- \kappa_{tot} \theta$, a restoring torque is provided only if
-$\kappa_{tot} > 0$, which is equivalent to the condition for
-stability. If $\kappa_{tot} < 0$, the spring is an anti-spring,
-resulting in an unstable, run-away situation. Furthermore, 
-while $\kappa_{tot}$ is positive, its magnitude directly relates to
-the stiffness of the spring.
-
-The stability criteria for the coupled cavity eigenmodes 
-depend on the relationship between $\kappa_p$ and $\kappa_{rp}$:
-\begin{align}
-\mbox{stable: } k_{tot} > 0 \implies & \frac{2 P L}{c (1-g_1 g_2)} \lambda < \kappa_p \\
-\mbox{unstable: } k_{tot} < 0 \implies & \frac{2 P L}{c (1-g_1 g_2)} \lambda > \kappa_p.
-\label{eq:stability}
-\end{align}
-The pendulum spring constant, $\kappa_p$, is always positive, so we
-can conclude with certainty that the cavity eigenmode is stable as
-long as the quantity on the left-hand side of Eq. \ref{eq:stability}
-is negative. However, if this quantity is positive, then its magnitude
-compared to $\kappa_p$ determines stability. Since $P$, $L$, and $c$
-are all positive numbers and the $g$-factor is restricted to $0 < g_1g_2
-< 1$ \footnote{This is the necessary condition for a two mirror
-  resonator to form a stable periodic focusing
-  system. \cite[p. 747]{Siegman1986Lasers}}, the sign of the left-hand
-side is determined solely by that of $\lambda$. From the $g$-parameter
-restriction, it can be shown that $\lambda_a$ is always positive and
-that $\lambda_b$ is always negative. Therefore, the mode whose mirror
-angles are described by $\vec{v}_a$ is either stable or unstable, and
-the mode described by $\vec{v}_b$ will always be stable.
-
-The precise situation for the potentially unstable mode depends on the
-one non-constant variable, the circulating power $P$. There is a
-critical power at which $\kappa_{rp}$ = - $\kappa_p$, and at any
-greater power, instability ensues. In general, as power increases, the
-total spring constant for the potentially unstable mode decreases,
-creating a softer spring, and the total spring constant for the
-unconditionally stable mode increases, creating a stiffer spring. Thus
-arise the terms \emph{soft} and \emph{hard} to describe the two
-eigenmodes that have been referred to by $\vec{v}_a$ and $\vec{v}_b$,
-respectively.
-
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/khardsoftLLO.pdf}
-\caption[Torsional spring constants of an optically coupled
-  cavity]{Torsional spring constants (pitch) of an optically coupled
-  cavity for LLO parameters. The soft mode is unstable when the spring
-  constant is negative.}
-% Include LHO.
-\label{fig:k_hardsoft}
-\end{centering}
-\end{figure}
-
-Figure~\ref{fig:k_hardsoft} shows the dependence of $\kappa_{tot}$ on
-circulating power for the soft and hard modes of a LIGO arm
-cavity. Without power in the cavity, the modes are identical and their
-spring constants are simply that of the individual pendula. The
-symmetry-breaking effect of radiation pressure comes into play as soon
-as light resonates in the cavity: the hard mode's spring constant
-increases and the soft mode's spring constant decreases. The critical
-power at which the soft mode becomes unstable is 10~kW, which
-corresponds to approximately 6~W input power (for Enhanced LIGO
-efficiencies) to the interferometer. Above the critical power,
-radiation pressure creates an optical anti-spring. 
-
-Table~\ref{table:k_tot} highlights the values of the spring constants
-for the typical power that was used in Initial LIGO (9~kW) and for the
-highest of powers achieved in Enhanced LIGO (40~kW). The corresponding
-transfer functions for these spring constants is found in
-Fig.~\ref{fig:optomechhardsoft}. The resonant frequency, $\omega_0 =
-\sqrt{\kappa_{tot}/I}$, increases with power for the hard modes and
-decreases for the soft modes. Once $\kappa_{tot}$ becomes negative, as
-is the case for the Enhanced LIGO soft mode, there is no real resonant
-frequency. A summary of the opto-mechanical parameters for LLO and LHO
-is found in Table~\ref{table:optomech}.
-
-\begin{table}
-\centering
-\caption[Torsional spring constants for the soft and hard cavity
-modes]{Torsional spring constants (pitch) for the soft and hard modes
-  of a typical Initial LIGO power and the highest of Enhanced LIGO
-  powers. The soft mode in Enhanced LIGO is unstable. The $\kappa_p$
-  values assume a resonant frequency of 0.6~Hz.}
-% \textcolor{blue}{maybe include aLIGO on this table as well.}}
-\begin{tabular}{l l l l l}
-\hline
- & $P_{circ}$ & $\kappa_{p}$ & $\kappa_{tot}$, soft mode &
- $\kappa_{tot}$, hard mode\\
-% & (kW) & (Nm/rad) & (Nm/rad) & (Nm/rad) \\
-\hline
-Initial LIGO & 9 kW & 0.721 Nm/rad& 0.0734 Nm/rad & 0.867 Nm/rad\\
-Enhanced LIGO & 40 kW & 0.721 Nm/rad& -2.18 Nm/rad & 1.38 Nm/rad\\
-\hline
-\end{tabular}
-\label{table:k_tot}
-\end{table}
-
-\begin{figure}
-\begin{centering}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/ieLIGOTFmags.pdf}}
-\subfigure{\includegraphics[width=1.0\textwidth]{figures/ieLIGOTFphases.pdf}}
-\caption[Single cavity opto-mechanical transfer function]{Single
-  cavity opto-mechanical transfer function for pitch. The resonant
-  frequency increases with power for the hard mode, but decreases for
-  the soft mode, eventually becoming imaginary. $P_{circ} = 9$ kW
-  (5.25 W input) was a typical operating power for Initial LIGO and
-  $P_{circ} = 40$ kW (23.5 W input) is the highest of powers reached
-  for Enhanced LIGO.}
-\label{fig:optomechhardsoft}
-\end{centering}
-\end{figure}
+% \subsubsection{Seismometers}
+% The seismometers are sensitive to six degrees of freedom: x, y, z, and rotation about x, y, and z. Ideally, they are set up to only measure ground motion in x, y, and z, but the signals may be contaminated by some tilt as well. \textcolor{blue}{???}
 
 
 
-\begin{table}
-\centering
-\caption[Opto-mechanical parameters for the LIGO Livingston and LIGO
-Hanford cavities]{Opto-mechanical parameters for the LIGO Livingston and LIGO
-  Hanford cavities. Differences result because the mirrors at each site have different
-  radii of curvature.}
-\begin{tabular}{l l l l}
-\hline
-parameter & label & LLO & LHO \\
-\hline
-ITM $g$-factor & $g_1$ & 0.73 & 0.71 \\
-ETM $g$-factor & $g_2$ & 0.54 & 0.45 \\
-arm length & $L$ & 3995 m & 3995 m \\
-test mass moment of inertia & $I$ & 0.0507 kg m$^2$ &  0.0507 kg m$^2$ \\
-pendulum torsion constant & $\kappa_p$ & 0.72 Nm/rad (pitch)& 0.72 Nm/rad (pitch) \\ 
-& & 0.50 Nm/rad (yaw) & 0.50 Nm/rad (yaw) \\
-soft mode eigenvector & $\vec{v}_a$ & (1, 1.10) & (1, 1.14) \\
-hard mode eigenvector & $\vec{v}_b$ & (-1.10, 1) & (-1.14, 1) \\
-power when soft mode is unstable & $P_{crit}$ & 10.0 kW (pitch) & 11.6 kW (pitch)\\
-& & 7.0 kW (yaw) & 8.0 kW (yaw) \\
-\hline
-\end{tabular}
-\label{table:optomech}
-\end{table}
 
-
-\subsection{Pole analysis}
-One final comment about the analysis of the modified transfer function
-(Eq. \ref{eq:modalTF}) is that the two poles,
-\begin{equation}
-s = s_\pm = \frac{-\gamma \pm \sqrt{\gamma^2 - 4 I \kappa_{tot}}}{2 I},
-\label{eq:TFpoles}
+\subsection{Coil Actuators} 
+\label{sec:L2A}
+Imperfections in the forces applied by the actuators on the rear of the test masses can convert piston (pure translation) drives into torque. The lengths of the cavities are carefully controlled (that's what we strive to be most sensitive to!) and any imbalances between the four electromagnets on a single mirror will create a coupling from length drive to angle (L2A). This effect is measurable, but is carefully tuned out through selecting appropriate digital gains for each of the coils. Relative gain variation is 10\% of average. The ability to tune the gains perfectly is limited and the residual length to angle coupling is about 1\%. For the typical rms length drive of 1~\micronspace on a core optic and OSEMs separated by a distance of $\sqrt{2} R$ where $R$ is the radius of the optic, the 1\% L2A coupling results in a $10^{-8}$ radian displacement: 
+\begin{equation} 
+\theta = \frac{0.01 * 10^{-6} \mbox{ m}}{\sqrt{2} * 0.125 \mbox{ m}} \approx 10^{-8} \mbox{ rad}.  
 \end{equation}
-provide an alternative way to view the stability of the system. As
-long as the poles are negative, the impulse response will decay or be
-sinusoidal. However, if a pole is positive, the system's motion will
-experience exponential growth. The constraints for $s_\pm$ to be in a
-particular half of the s-plane are easily derived from
-Eq. \ref{eq:TFpoles}. Note that $s_-$ will always be in the left half
-of the plane and that $s_+$ is the pole that has the potential of
-falling in the right half of the plane. Table \ref{table:s_0} show how
-the s-plane locations for $s_+$ depend on $\kappa_{tot}$. The sign of
-$\kappa_{tot}$ determines stability, as expected, and we see that the
-nature of the stable response depends on the damping
-coefficient. Figure \ref{fig:TFrainbow_poles} plots the pole locations
-for a range of $\kappa_{tot}$ experienced while powering up Enhanced
-LIGO.
 
-% \begin{figure}
-% \begin{centering}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/TFrainbow_mags.pdf}}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/TFrainbow_phases.pdf}}
-% \caption{Magnitude and phase of the torque to pitch transfer function
-%   as a function of torsional constant for a fixed damping coefficient
-%   of $\gamma^2/4I = 1.77 \times 10^{-4}$. This range of $\kappa$
-%   represents the torsional constants experienced while powering up
-%   Enhanced LIGO.}
-% \label{fig:TFrainbow}
-% \end{centering}
-% \end{figure}
+% Maybe include a figure that takes a typical length control spectrum signal to an optic and multiply by the above factors to show spectrum of angular motion induced by 1\% L2A.
 
-\begin{table}
-\centering
-\caption[Conditions on total torsional constant for determining system
-stability]{Conditions on total torsional constant $\kappa_{tot}$ for
-  determining system stability.}
-\begin{tabular}{l l l}
-$\kappa_{tot}$ condition & pole $s_+$ & impulse response \\
-\hline\hline
-$\kappa_{tot} < 0$ & real positive & statically unstable\\
-$\kappa_{tot} = 0$ & zero & \\
-$0 < \kappa_{tot} < \gamma^2/4I $ & real negative & stable decay \\
-$\kappa_{tot} > \gamma^2/4I$ & real negative, and imaginary & stable,
-oscillatory \\
-\hline
-\end{tabular}
-\label{table:s_0}
-\end{table}
 
+\subsection{Noise from Angular Control}
+The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also undercontrolled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues are explained in more detail in \ref{sec:ASClimits}.
+
+
+\subsection{Radiation Pressure} 
+\label{sec:rp_intro}
+Radiation pressure creates a torque when the beam impinges the mirror
+off-center. The force on the mirror due to radiation pressure is
+derived from the change in momentum of a photon upon reflection off
+the mirror and results in:
+\begin{equation}
+F_{rp} = \frac{2 P} {c}
+\end{equation}
+where $P$ is the power of the light reflected by the mirror and $c$ is the
+speed of light. Because the beam of photons strikes the mirror
+perpendicular to its surface, the torque exerted on a mirror due to
+radiation pressure is
+\begin{equation}
+\tau_{rp} = \frac{2 P x} {c}
+\label{eq:tau_rp}
+\end{equation}
+where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, yielding an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function (see Section~\ref{sec:pendTF}).
+
+Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. 
+%This is a result of the geometric coupling between beam displacements and mirror angles as will be shown in the next chapter. Radiation pressure therefore acts as an angular spring. 
+It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. Chapter~\ref{ch:eigenmodes} dedicates a discussion to the physics of radiation pressure torques. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
+
+
+
+
+
+
+\section{The Mirror as a Torsion Pendulum}
+\label{sec:pendTF}
+Understanding exactly how these sources of torque on the mirrors convert to angular motion requires a model of the mirror's torque to angle transfer function.
+% In order to design a control system that reduces the angular motion of
+% the interferometer mirrors to the levels necessary for stable
+% interferometer operation and minimal impact on strain sensitivity, the
+% angular response of the mirrors to external torque must be fully
+% understood. 
+The mirrors in LIGO may be regarded as torsion pendula. The mirror may twist an angle $\theta$ about a horizontal axis passing through its center of mass to create motion in \emph{pitch} and about a vertical axis passing through its center of mass to create a motion in \emph{yaw}.
+
+The angular equation of motion of the mirror is governed by the sum of
+all torques on the mirror. First, let's consider the most simplistic
+scenario where there is only a pendulum restoring torque
+$\tau_p=-\kappa_p \theta$, where $\kappa_p$ is the pendulum's
+torsional constant. The equation of motion is
+\begin{equation}
+I \ddot{\theta} + \kappa_p \theta = 0,
+\end{equation}
+which has a solution of $\theta(t) = \sin({\omega_0 t)}$, where
+$\omega_0 = \sqrt{\kappa_p/I}$ is the resonant angular frequency and
+$I$ is the mirror's moment of inertia. The pendulum torsional constant
+serves to make the mirror oscillate indefinitely about its equilibrium
+position upon the slightest of displacements.
+
+
+\subsection{Torque to Angle Transfer Function of a Pendulum}
+\label{sec:t2a}
+We are particularly interested in the pendulum's response to an
+external torque, such as seismic noise. In order to calculate the
+torque to angle transfer function, we must include an external torque
+term, $\tau_{ext}$, in the equation of motion:
+\begin{equation}
+I \ddot{\theta} + \gamma \dot{\theta} + \kappa_p \theta = \tau_{ext}.
+\label{eq:eqmotion}
+\end{equation}
+A velocity damping term, $\gamma$, is also included. Taking the Laplace transform to convert from the time domain to the frequency domain, we have:
+\begin{equation}
+I s^2 \Theta + \gamma s \Theta + \kappa_p \Theta = \tau_{ext}
+\end{equation}
+where $s$ is a complex parameter. The transfer function is then
+defined as
+\begin{equation}
+H(s) := \frac{\Theta(s)}{\tau_{ext}(s)} = \frac{1}{I s^2 + \gamma s + \kappa_p}.
+\label{eq:TF}
+\end{equation}
+We are only interested in examining the transfer function for a pure
+sine wave excitation, $e^{i\omega t}$, so we substitute $s=i\omega$ to
+get
+\begin{equation}
+H(\omega) = \frac{1/I}{\omega_0^2  - \omega^2 + i \gamma \omega / I}.
+\end{equation}
+The resonant frequency of this damped system can be computed by finding the
+$\omega$ at which the amplitude of the transfer function, $[I^2
+[\omega^2 - \omega_0^2]^2 + \gamma^2 \omega^2]^{-1/2}$, is maximized:
+\begin{equation}
+\omega_{res} = \sqrt{\omega_0^2 - \frac{\gamma^2}{2I^2}}.
+\end{equation}
+We note that damping reduces the resonant frequency, although the effect is usually insignificant.
+
+A quantity that is more familiar than $\gamma$ for describing the losses of a system with a real resonance is the quality factor, $Q~:=~\omega_{res}/\mathrm{FWHM}$, where FWHM is the full-width-half-max of the transfer function's amplitude-squared resonance. When the losses are small, $\omega_{res} \approx \omega_0$ and FWHM $\approx \gamma/I$ (see Feynman 23-4). The quality factor is then well approximated by $Q = \sqrt{\kappa_p I}/\gamma$. The transfer function written in terms of $Q$ is \begin{equation} H(\omega) = \frac{1/I}{\omega_0^2 - \omega^2 + i \omega \omega_0 / Q}.  \label{eq:TFpendulum} \end{equation}
+
+Figure \ref{fig:pendTF} shows the pendulum torque to angle transfer
+function (for pitch) using the parameters of a LIGO core optic. For
+external torques applied to the mirror well above its resonant frequency,
+the mirror acts like a free mass, one that is not held in place by
+suspension wires nor subject to damping. For torques applied to the
+mirror below its resonant frequency, the mirror's angle is determined
+by the inverse of the torsional constant.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.667\textwidth]{figures/TFrainbow_poles.pdf}
-\caption[Poles of the torque to pitch opto-mechanical transfer
-function]{Poles of the torque to pitch transfer function as a function
-  of torsional constant, $\kappa_{tot}$. Crosses show $s_+$ and
-  asterisks show $s_-$. Poles in the right half of the s-plane
-  indicate the system is unstable.}
-\label{fig:TFrainbow_poles}
+\includegraphics[width=1.0\textwidth]{figures/pendTF.pdf}
+\caption[Torque to pitch transfer function of a LIGO core
+optic]{Torque to pitch transfer function of a LIGO core optic
+  (blue). The optic acts like a free mass at high frequencies (red)
+  and the DC magnitude of the transfer function is determined by the
+  inverse torsional constant (green). A damping constant $\gamma =
+  0.006$ ($Q=32$) was selected for pictorial representation only. The
+  resonant frequency of LIGO core optics in yaw is 0.5~Hz.}
+\label{fig:pendTF}
+\end{centering}
+\end{figure}
+
+
+
+
+
+\section{Overview of Interferometer Alignment}
+\label{sec:alignment_overview}
+
+There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. The sensing is accomplished by 8 sensors, which fall into three groups:
+\begin{itemize}
+\item camera image (BS): senses the position of the beam on the BS \vspace{-10pt}
+\item quadrant photodiodes (QPDX, QPDY): sense the position of the light transmitted through the ETMs \vspace{-10pt}
+\item wavefront sensors (WFS1, WFS2\footnote{Two signals are derived from WFS2.}, WFS3, WFS4): sense the angular misalignment of the cavitites with respect to their input beams
+\end{itemize}
+Figure \ref{fig:ASCsensors} shows the locations of these sensors and the 8 mirrors they must control.  The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-P\'{e}rot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the beam from the beam splitter pointed at the y-arm.
+
+
+\begin{figure} 
+\begin{centering} 
+\includegraphics{figures/ASCsensors.pdf} 
+\caption[Layout of ASC sensors and the mirrors they must control]{Layout of ASC sensors and the mirrors they must
+ control.}
+\label{fig:ASCsensors}
+\end{centering}
+\end{figure}
+
+
+The self-contained alignment of the power recycled Fabry-P\'{e}rot Michelson is realized through the set of wavefront sensors (WFS)\footnote{Pronounced ``woofs''.}, whose principle of operation is described in Section \ref{sec:WFSsensing}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. Their control signals are used to control the relative motions of these five mirrors up to a couple Hz. 
+
+\begin{figure} 
+\begin{centering} \includegraphics[width=0.7\textwidth]{figures/BCSspiricon.pdf} 
+\caption[Beam centering servo image of beam splitter]{Image of beam on beam splitter as used in the beam centering servo. The beam appears stretched because the camera's viewing angle is at $45^{\circ}$ with respect to the mirror surface. The color scale is arbitrary, but orange is strong, violet is weak.}
+\label{fig:BCS}
+\end{centering}
+\end{figure}
+
+The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer over minute time scales; at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Fig. \ref{fig:BCS}. The higher frequency matching of the input beam to the interferometer is achieved by the reflected port Fabry-P\'{e}rot Michelson wavefront sensors, up to a couple Hz.
+
+The one additional step needed for full interferometer alignment is to maintain the relative alignment of the y-arm to the x-arm as the x-arm and input beam together move around. This is accomplished through the pitch and yaw signals of QPDY, the QPD that monitors the light transmitted through the y-arm, which sense how the beam splitter should be pointed. \footnote{QPDX also sends a signal to the BS to compensate for whatever it has MMT3 do.}
+
+\begin{figure} 
+\begin{centering} 
+\includegraphics[width=0.8\textwidth]{figures/ASClayout_wctrl_thesis.pdf} 
+\caption[Schematic of the alignment sensing and control system]{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo.}
+%\textcolor{blue}{Replace this with two drawings, one showing WFS and one showing other sensors. Label and make less cluttered.}}
+\label{fig:ASClayout}
+\end{centering}
+\end{figure}
+
+All mirror angles are of course interdependent and they must track each other. However, a rough hierarchy of who follows who can be established since ultimately the interferometer is bolted to the ground and necessarily maintains some DC orientation. This orientation comes from QPDX and QPDY, which are physically attached to piers standing on the ground and force the beams transmitted through the ETMs to stay put at a certain location on their sensors. In all, the input beam must make it to those two exact places and the other mirrors are left to line themselves up accordingly. A diagram of this alignment scheme is in Fig.~\ref{fig:ASClayout}.
+
+%two input beams, one to the x-arm, one to the y-arm; and the FPM
+
+
+This alignment process involving the WFS, QPDs, and BS camera relies on the entire interferometer already being locked. It manages the continuous fine-tuning of mirror angles so that maximal power buildup in the interferometer is maintained, and so that the interferometer does not wander from its linear operating point (see Sec.~\ref{sec:DCreadout}). How to achieve the initial alignment of all of the mirrors is an interesting process in itself and is documented in Appendix~\ref{sec:initial_alignment}.
+
+
+
+
+\section{The Wavefront Sensing Scheme}
+\label{sec:WFSsensing}
+Wavefront sensors for angular sensing are the quadrant photodiode equivalent of the single photodiodes used for length sensing. Wavefront sensors are quadrant photodiodes equipped with RF electronics and they rely on the Pound-Drever-Hall locking scheme to produce error signals \cite{Sigg1996Wavefront}. Angular misalignments of the interferometer cavities generate TEM$_{01}$ and TEM$_{10}$ spatial modes as explained in Ref.~\cite{Anderson1984Alignment}. Appendix~\ref{sec:cavitypower} also contains a derivation. The overlap of the higher order mode field with a TEM$_{00}$ reference sideband field produces an excess of power on one half of the detector compared to the other, which when demodulated at the sideband frequency, is the error signal. Reference \cite{Fritschel1998Alignment} contains a thorough description of the wavefront sensing scheme.
+
+
+
+\section{The Angular Control Servo}
+When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled Michelson with the input beam and the internal alignment of the power-recycled Michelson. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next. First, it is helpful to explain the servo without the effects of radiation pressure.
+
+%The broad picture is that we have a 
+Fig.~\ref{fig:ASCcontrolservo} is a block diagram of the major components to the angular control servo. The torsion-like pendula of the interferometer are subject to external torque which is converted to mirror angle. The interferometer, in turn, turns the mirror angles into $\mathrm{TEM}_{10}/\mathrm{TEM}_{01}$ modes at its various ports (details are in Appendix~\ref{sec:cavitypower}), and these modes are converted into error signals by the wavefront sensors. The voltages produced by the wavefront sensors are digitized and manipulated by the front-end computers to create control signals that are then converted back to analog for actuation on the mirrors. The result of this process is a suppression of the error signal seen by the WFS and therefore a suppression of the physical mirror motions. 
+
+\begin{figure} \begin{centering} 
+\includegraphics{figures/ASCcontrolservo.pdf} 
+\caption[ASC control servo]{ASC control servo. The external torque, torsion pendulum, interferometer, and WFS are analog; all other blocks are digital. Mirror angles are converted by the interferometer into signals the wavefront sensors can detect. These WFS error signals are digitized, filtered, and converted into analog control signals for individual mirrors. The details of each of the digital blocks are explained in Ch.~\ref{ch:characterization}.}
+\label{fig:ASCcontrolservo}
+\end{centering}
+\end{figure}
+
+In Initial LIGO, the wavefront sensor signals were combined via the input matrix to form error signals for the differential and common ETM and ITM motions.
+% (\textcolor{blue}{explain more}). 
+WFS control filters were designed for this basis and then those control signals were divvied out to appropriate mirrors via the output matrix. 
+
+
+
+\subsection{Optical lever compensation}
+
+\begin{figure} 
+\begin{centering} 
+\subfigure[Zoom of the bottom part of Fig.~\ref{fig:ASCcontrolservo}. $P$ is the pendulum and $O$ is the optical lever control filters.]{\includegraphics{figures/OLcompensation.pdf}} \subfigure[Replacement of the optical lever controlled plant with the closed loop gain representation.]{\includegraphics{figures/OLcompensation2.pdf}} 
+\subfigure[Optical lever compensation removes the optical levers from the picture of the pendulum. External torque is still suppressed by the optical lever closed loop gain.]{\includegraphics{figures/OLcompensation3.pdf}} 
+\caption[Optical lever compensation scheme]{Optical lever compensation scheme. Subfigures A, B, and C are equivalent.}  
+\label{fig:OLcomp} 
+\end{centering} 
+\end{figure}
+
+\label{sec:oplevcomp}
+Each of the large optics has its own optical lever servo that provides velocity damping. Since both the WFS and the optical levers control the mirror motion when the interferometer is locked, we must consider the interaction of the two servos. Whether one views the interaction as the WFS controlling the optical-lever-controlled mirrors, or as the optical levers controlling the WFS-controlled-mirrors is arbitrary. For the purpose of explanation here, I use the former viewpoint.
+
+Figure \ref{fig:OLcomp} zooms in on the portion of the Fig. \ref{fig:ASCcontrolservo} control loop picture that shows the optical lever controlling the pendulum. The torque to angle transfer function of the pendulum is our plant, $P$, the optical lever control is $O$, and the optical lever compensation is shown as $1+OP$. A result of basic control theory is that the optical lever controlled pendulum loop can be represented by its closed loop transfer function:
+\begin{equation}
+\mathrm{TF_{closed}} = \frac{P}{1+OP}
+\end{equation}
+as shown in Fig. \ref{fig:OLcomp}~B. 
+
+One will notice that it is not a coincidence that the optical lever compensation has the same form as the denominator of the closed loop transfer function. Together, they cancel each other out, and all that remains as the plant is the simple pendulum. Including the optical lever compensation in the ASC loop is not necessary, but it is a useful technique for simplifying the design process of the WFS control filters. One need only consider how to control the simple pendulum torque to angle transfer function, rather than the optical-lever controlled pendulum.
+
+
+
+
+\begin{figure} \begin{centering} \subfigure{\includegraphics{figures/WFS1Q_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2Q_darkres.pdf}} 
+\subfigure{\includegraphics{figures/WFS3I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS4I_darkres.pdf}} 
+\caption[WFS error signal and dark noise]{WFS dark noise compared to typical error signal. The excess signal above the dark noise in WFS3I and WFS4I above 20~Hz is likely acoustic noise, although this hypothesis has not been verified. WFS1 and WFS2 are on a floating table in a sound proof chamber, while WFS3 and WFS4 are on a non-seismically isolated table without a sound proof enclosure. Seismic noise at time of residual spectra is in Fig.~\ref{fig:seismic_locked}.}
+%\textcolor{blue}{Include shot noise, too, especially for WFS1.}
+\label{fig:WFSdarknoise}
 \end{centering}
 \end{figure}
 
@@ -506,58 +385,18 @@ function]{Poles of the torque to pitch transfer function as a function
 
 
 
+\section{Angular Control Limitations}
+\label{sec:ASClimits}
+The limits for how well we can control the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Fig. \ref{fig:WFSdarknoise}. Moreover, depending on the power level, WFS1Q may instead be limited by shot noise (see Eq. \ref{eq:shotnoise}). Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. The impression of sensor noise cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at frequencies where sensor noise dominates. 
+%Ultimately, it is the WFS noise floor that determines the best possible achievable suppression. 
 
-\section{Implications}
-The Enhanced LIGO goal of increasing the input power to 30 W from the
-Initial LIGO 7 W makes radiation pressure torques cross into the realm
-of significance. In particular, the soft opto-mechanical mode which
-just approached instability for Initial LIGO powers actually becomes
-unstable for Enhanced LIGO powers. The transfer functions for which
-controls must be designed are no longer those of a pendulum with
-resonance at 0.6~Hz (pitch) or 0.5~Hz (yaw), but those of the soft and
-hard eigenmodes, whose resonances change with power. For Enhanced
-LIGO, the angular control servo plant of
-Fig.~\ref{fig:ASCcontrolservo} is treated as the cavity's radiation
-pressure-modified torque to angle transfer function, not as a simple
-stand-alone pendulum transfer function. An elegant implication of the
-purely geometric description of the cavity axis is that the radiation
-pressure eigenmodes are orthogonal independently of power. Therefore,
-the modes remain independent and the control system need not be
-updated with power changes.
+Besides the sensing noise, there are also sometimes real signals that result in more harm than good when used as feedback. The HAM seismic isolation tables used by the Input Optics (the core optics are suspended from BSC tables) have stack modes at 0.8 to 3~Hz that ring up the MMTs.  At low frequencies, around 1~Hz, some of the WFS signals are dominated by these angular fluctuations of the input beam. The resulting attempt of the mirrors to follow the input beam jitter leads to a magnification of the motion because of the drastically different length scales. Large power fluctuations in both arms and the power recycling cavity ensue, leading to departure from the linear error signal regime and often lock loss. 
 
-%\textcolor{blue}{put this elsewhere?} 
-One complication of having a
-radiation pressure modified and therefore power dependent plant,
-$P_{rp}$, is that the optical lever compensation (described in
-Sec. \ref{sec:oplevcomp}) is no longer valid. The compensation of
-$1+OP$ is hard-coded in the digital control system, where the model
-for $P$ is that of a simple pendulum. The only way to achieve perfect
-compensation would be to load a new model of $P$ into the compensation
-filter bank for each new power and for each optic. Doing this in
-Enhanced LIGO was not practical, so only at low powers does the
-optical lever compensation actually cancel out the effect of the
-optical-lever-controlled radiation pressure-modified plant,
-$P_{rp}/1+OP_{rp}$, and leave simply $P_{rp}$ for the WFS to
-control. It this turns out that as power increases, the imperfect
-compensation actually make the loops more stable \cite{Barsotti2008Untitled}.
+Other limitations to the reduction of mirror motion result from the nature of control loops. The cut-off filter, for example, reduces the phase margin of the open loop gain, necessarily pushing down the unity gain frequency (UGF) and therefore the magnitude of suppression at all frequencies below the UGF. A less aggressive cut-off filter, while improving the servo's stability and allowing for higher overall gains, leads to more impression of sensing noise on the optics. Also, if the phase margin of the loop is low, mirror motion will be amplified through gain peaking.
 
-The sensors in Initial LIGO were not tuned to specifically look for
-the combined mirror motions that create the soft and hard modes. The
-only way to provide adequate control for both modes would be to
-increase the gain of all of the angular control loops. Because some of
-the sensors are not as good as others, this would result in excessive
-impression of sensor noise on DARM. To minimize impact on strain
-sensitivity while reducing the angular motion of the interferometer's
-mirrors to the levels necessary for stable operation, we need to pick
-out the combination of sensors that together sense specifically the
-hard mode or the soft mode, and then design controls that specifically
-address the characteristics of just one mode. This is the foundation
-of the ASC work for Enhanced LIGO: switching the WFS control to the
-radiation pressure eigenmode basis, and increasing the gains of only
-those loops that require it. 
-%\textcolor{blue}{I need to make sure this is accurate.}
+% A final point that should be noted, but is in fact insignificant, is a coupling from angular drive to length that results from the same principle of the length to angle coupling presented in \ref{sec:L2A}. 
+
+% We will show that we don't quite meet all of these requirements and the impression of sensing noise in fact plays a major role in the reduction of DARM sensitivity up to 70 Hz.
 
 
 
-
-%\subsection{WFS Control Basis for Enhanced LIGO}
