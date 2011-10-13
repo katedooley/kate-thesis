@@ -1,4 +1,4 @@
-\chapter{Laser Interferometers for Gravitational-wave Detection}
+\chapter{LASER INTERFEROMETERS FOR GRAVITATIONAL-WAVE DETECTION}
 
 We show in this chapter how a laser interferometer can detect
 gravitational wave strain, and we present the basic design principles
@@ -100,7 +100,7 @@ interferometer that increases the circulating power by a factor of
 $g_{cr}^2 \approx 40$. Details are in Appendix~\ref{sec:impedance}.
 
 
-\subsection{DC readout}
+\subsection{DC Readout}
 \label{sec:DCreadout}
 The gravitational wave readout in Enhanced LIGO was not operated
 precisely at the dark fringe at the AS port. Instead, it used a small
@@ -182,25 +182,24 @@ DARM optical gain of the LIGO interferometer with DC readout is:
 From Eq.~\ref{eq:opticalgain} we see three fundamental
 ways to increase the DARM optical gain and therefore produce more
 power at the AS port for a given GW strain:
-\begin{enumerate}
+\begin{itemize}
 \item Make the arms longer. \vspace{-10 pt}
 \item Increase the power at the beamsplitter. \vspace{-10 pt}
 \item Increase the phase gain of the Fabry-P\'{e}rot arms.
-\end{enumerate}
-Our ability to detect gravitational wave strain is
-dependent not only on the optical gain, but also on the detector noises,
-which will mask a weak GW signal. No matter how large a
-signal one might have, it won't be found confidently, or at all, if
-there is too much noise. 
+\end{itemize}
+Our ability to detect gravitational wave strain is dependent not only
+on the optical gain, but also on the detector noises, which will mask
+a weak GW signal. No matter how large a signal one might have, it will
+not be found confidently, or at all, if there is too much noise.
 
 
 \subsection{Noises}
 The sources of noise which contaminate the detector's output can be 
 generally grouped into two categories:
-\begin{enumerate}
+\begin{itemize}
 \item displacement noise \vspace{-10 pt}
 \item sensing noise
-\end{enumerate}
+\end{itemize}
 Displacement noises are those that create real motion of the mirrors
 (including the DARM degree of freedom), while sensing noises are those
 that arise in the process of measuring the electric field at the 
@@ -287,7 +286,7 @@ constant).
 % \begin{itemize}
 % \item input power \vspace{-10 pt}
 % \item input efficiency \vspace{-10 pt}
-% \item power reycling gain
+% \item power recycling gain
 % \end{itemize}
 % Improving the Input Optics allows for greater input power and better
 % input efficiency. Improving the Angular Sensing and Control allows for
@@ -383,7 +382,7 @@ The various LIGO subsystems operate at different sample rates.  The
 length sensing and control (LSC) subsystem, which measures and
 controls DARM, in addition to other length degrees of freedom,
 operates at 16384 samples/second, while the angular sensing and
-control (ASC) sytem, which maintains mirror alignment, operates at
+control (ASC) system, which maintains mirror alignment, operates at
 2048 samples/second.  In addition to the all-important DARM channel,
 many other auxiliary data streams are permanently recorded.
 
@@ -425,18 +424,15 @@ each coil on a given mirror to provide a piston force for changing the
 mirror's position.  OSEM sensing is accomplished through simple shadow
 sensors.
 
-To avoid thermal noise, the mirror suspensions are designed to minimize 
-dissipation.
-Damping for the large optics is achieved through
-electronic servos.  Motion of the optics corresponding to a change
-in cavity length is damped using simple velocity damping servoes
-implemented using the OSEM sensors and actuators, while angular
-motion is sensed via optical levers.
-The optical levers provide velocity damping\footnote{
-The open loop transfer function of the optical lever
-servo is described in Appendix~\ref{sec:oplevOLG}.
-} only (no DC control) between
-0.2~Hz and 2~Hz. 
+To avoid thermal noise, the mirror suspensions are designed to
+minimize dissipation.  Damping for the large optics is achieved
+through electronic servos.  Motion of the optics corresponding to a
+change in cavity length is damped using simple velocity damping servos
+implemented using the OSEM sensors and actuators, while angular motion
+is sensed via optical levers.  The optical levers provide velocity
+damping\footnote{ The open loop transfer function of the optical lever
+  servo is described in Appendix~\ref{sec:oplevOLG}.  } only (no DC
+control) between 0.2~Hz and 2~Hz.
 
 % The suspensions are AC damped at all times for each of the large
 % optics through optical lever witnesses. Keeping the mirrors quiet

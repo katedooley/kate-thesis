@@ -1,4 +1,4 @@
-\chapter{Angular Motion of the Interferometer Mirrors}
+\chapter{ANGULAR MOTION OF THE INTERFEROMETER MIRRORS}
 
 For light to resonate in the interferometer, the mirrors need to point at one another and remain stationary with respect to this pointing. It is necessary to actively align the mirrors for several reasons:
 \begin{itemize}
@@ -34,12 +34,12 @@ There are 16 angular degrees of freedom that need to be sensed and controlled, m
 
 \section{Tolerance for Angular Motion}
 \label{sec:tolerance}
-%\textcolor{blue}{Make this section correct! power fluctations only couple quadratically (bi-linearly) to DARM, but the contrast defect thing is \emph{indistinguishable} from gravitational waves. the A2L should still be emphasized.}
+%\textcolor{blue}{Make this section correct! power fluctuations only couple quadratically (bi-linearly) to DARM, but the contrast defect thing is \emph{indistinguishable} from gravitational waves. the A2L should still be emphasized.}
 
 
-% Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residula motion must be held below 
+% Unlike DARM where the uncontrolled length displacement is what matters, it's the controlled  motion of the mirrors that matters for angular displacement. Too much residual motion, and both the lever arm effect and power fluctuations create noise in DARM. To prevent angular mirror motion from creating length displacements, the mirrors must not move more than $10^{-8}$ rad rms and the beam spots no more than 1 mm rms, as The residual motion must be held below 
 
-Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: failure to achieve maximum power gain, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
+Besides allowing the interferometer to be in a locked state, minimal motion of the mirrors is necessary to achieve the highest possible sensitivity to strain. The requirements for how much motion is tolerable stem from two effects of misalignment that directly couple to strain sensitivity: failure to achieve maximum power gain, and angle to length coupling. The misalignment tolerances are dictated by what is necessary to prevent the strain sensitivity of the perfectly aligned interferometer from degrading by more than 0.5\% in the detection band of 40-7000~Hz \cite{Fritschel1997Alignment}.
 
 Because the strain sensitivity is proportional to the power at the beam splitter (see Eq. \ref{eq:SNL}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Furthermore, differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other. A changing contrast defect creates power fluctuations at the AS port, making it indistinguishable from gravitational waves. Also, the DC power of the contrast defect contributes to increasing the shot noise noise-floor. Excessive fluctuations in the power recycling cavity makes for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
 
@@ -108,8 +108,8 @@ everywhere very coherent with the corner station seismometer).
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
-\caption[Contribution of sesimic noise to optical lever error
-signal]{Contribution of sesimic noise to optical lever error signal
+\caption[Contribution of seismic noise to optical lever error
+signal]{Contribution of seismic noise to optical lever error signal
   (called residual). The interferometer was unlocked and optical lever
   and OSEM AC damping present.}
 \label{fig:OLcontributions}
@@ -150,7 +150,7 @@ Imperfections in the forces applied by the actuators on the rear of the test mas
 
 
 \subsection{Noise from Angular Control}
-The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also undercontrolled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues are explained in more detail in \ref{sec:ASClimits}.
+The angular control system, which strives to counteract the above torque inputs to reduce angular motion, introduces angular mirror motion itself. The primary way it contributes noise is through imperfect sensing of the angular displacements. The alignment is also under-controlled, which ends up allowing the control system to impress input beam motion on the mirrors. These issues are explained in more detail in \ref{sec:ASClimits}.
 
 
 \subsection{Radiation Pressure} 
@@ -275,14 +275,15 @@ There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. Th
 \begin{itemize}
 \item camera image (BS): senses the position of the beam on the BS \vspace{-10pt}
 \item quadrant photodiodes (QPDX, QPDY): sense the position of the light transmitted through the ETMs \vspace{-10pt}
-\item wavefront sensors (WFS1, WFS2\footnote{Two signals are derived from WFS2.}, WFS3, WFS4): sense the angular misalignment of the cavitites with respect to their input beams
+\item wavefront sensors (WFS1, WFS2\footnote{Two signals are derived from WFS2.}, WFS3, WFS4): sense the angular misalignment of the cavities with respect to their input beams
 \end{itemize}
 Figure \ref{fig:ASCsensors} shows the locations of these sensors and the 8 mirrors they must control.  The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-P\'{e}rot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the beam from the beam splitter pointed at the y-arm.
 
 
 \begin{figure} 
 \begin{centering} 
-\includegraphics{figures/ASCsensors.pdf} 
+%\includegraphics{figures/ASCsensors.pdf} 
+\includegraphics[width=0.9\textwidth]{figures/asclayout.pdf} 
 \caption[Layout of ASC sensors and the mirrors they must control]{Layout of ASC sensors and the mirrors they must
  control.}
 \label{fig:ASCsensors}

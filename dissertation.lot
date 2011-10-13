@@ -1,6 +1,6 @@
-\contentsline {table}{\numberline {{3-1}}{\ignorespaces Comparison of selected properties of the Initial and Enhanced LIGO EOM crystals}}{41}{table.3.1}
+\contentsline {table}{\numberline {{3-1}}{\ignorespaces Comparison of selected properties of the Initial and Enhanced LIGO EOM crystals}}{42}{table.3.1}
 \contentsline {table}{\numberline {{3-2}}{\ignorespaces Enhanced LIGO Input Optics power budget.}}{48}{table.3.2}
-\contentsline {table}{\numberline {{3-3}}{\ignorespaces Absorption values for the Livingston and Hanford mode cleaner mirrors}}{49}{table.3.3}
+\contentsline {table}{\numberline {{3-3}}{\ignorespaces Absorption values for the Livingston and Hanford mode cleaner mirrors}}{51}{table.3.3}
 \contentsline {table}{\numberline {{5-1}}{\ignorespaces Geometric parameters of the LIGO arm cavity eigenmodes}}{80}{table.5.1}
 \contentsline {table}{\numberline {{5-2}}{\ignorespaces Torsional spring constants for the soft and hard cavity modes}}{84}{table.5.2}
 \contentsline {table}{\numberline {{5-3}}{\ignorespaces Opto-mechanical parameters for the LIGO Livingston and LIGO Hanford cavities}}{85}{table.5.3}
@@ -9,7 +9,7 @@
 \contentsline {table}{\numberline {{6-2}}{\ignorespaces WFS output matrix}}{92}{table.6.2}
 \contentsline {table}{\numberline {{6-3}}{\ignorespaces Actual eigenbasis motion during sensing matrix excitations}}{92}{table.6.3}
 \contentsline {table}{\numberline {{6-4}}{\ignorespaces Mirror gains for diagonalization of drive matrix}}{93}{table.6.4}
-\contentsline {table}{\numberline {{9-1}}{\ignorespaces Beam spot motion calibrations}}{129}{table.9.1}
-\contentsline {table}{\numberline {{9-2}}{\ignorespaces Optical lever calibrations}}{132}{table.9.2}
-\contentsline {table}{\numberline {{9-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{132}{table.9.3}
-\contentsline {table}{\numberline {{10-1}}{\ignorespaces Mirror radii of curvatures.}}{139}{table.10.1}
+\contentsline {table}{\numberline {{B-1}}{\ignorespaces Beam spot motion calibrations}}{129}{table.B.1}
+\contentsline {table}{\numberline {{B-2}}{\ignorespaces Optical lever calibrations}}{132}{table.B.2}
+\contentsline {table}{\numberline {{B-3}}{\ignorespaces Demodulation chain calibration for each quadrant of each WFS}}{132}{table.B.3}
+\contentsline {table}{\numberline {{C-1}}{\ignorespaces Mirror radii of curvatures.}}{139}{table.C.1}

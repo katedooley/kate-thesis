@@ -5,26 +5,26 @@
 \contentsline {figure}{\numberline {{2-3}}{\ignorespaces Sketch of a LIGO suspension}}{32}{figure.2.3}
 \contentsline {figure}{\numberline {{3-1}}{\ignorespaces Block diagram of the Input Optics subsystem.}}{35}{figure.3.1}
 \contentsline {figure}{\numberline {{3-2}}{\ignorespaces Beam profile through the Input Optics}}{37}{figure.3.2}
-\contentsline {figure}{\numberline {{3-3}}{\ignorespaces Enhanced LIGO Input Optics optical and sensing configuration}}{39}{figure.3.3}
-\contentsline {figure}{\numberline {{3-4}}{\ignorespaces Photographs of Enhanced LIGO Input Optics \emph {in situ}}}{40}{figure.3.4}
-\contentsline {figure}{\numberline {{3-5}}{\ignorespaces Electro-optic modulator design}}{42}{figure.3.5}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {A single RTP crystal is sandwiched between three sets of electrodes that apply three different modulation frequencies. The wedged ends of the crystal separate the polarizations of the light. The p-polarized light is used in the interferometer.}}}{42}{figure.3.5}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {A schematic for each of the three impedance matching circuits of the EOM. For the three sets of electrodes, each of which creates its own $C_{crystal}$, a capacitor is placed parallel to the LC circuit formed by the crystal and a hand-wound inductor. The circuits provide 50\nobreakspace {}$\Omega $ input impedance on resonance and are housed in a separate box from the crystal.}}}{42}{figure.3.5}
+\contentsline {figure}{\numberline {{3-3}}{\ignorespaces Enhanced LIGO Input Optics optical and sensing configuration}}{40}{figure.3.3}
+\contentsline {figure}{\numberline {{3-4}}{\ignorespaces Photographs of Enhanced LIGO Input Optics \emph {in situ}}}{41}{figure.3.4}
+\contentsline {figure}{\numberline {{3-5}}{\ignorespaces Electro-optic modulator design}}{43}{figure.3.5}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {A single RTP crystal is sandwiched between three sets of electrodes that apply three different modulation frequencies. The wedged ends of the crystal separate the polarizations of the light. The p-polarized light is used in the interferometer.}}}{43}{figure.3.5}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {A schematic for each of the three impedance matching circuits of the EOM. For the three sets of electrodes, each of which creates its own $C_{crystal}$, a capacitor is placed parallel to the LC circuit formed by the crystal and a hand-wound inductor. The circuits provide 50\nobreakspace {}$\Omega $ input impedance on resonance and are housed in a separate box from the crystal.}}}{43}{figure.3.5}
 \contentsline {figure}{\numberline {{3-6}}{\ignorespaces Faraday isolator photograph and schematic.}}{45}{figure.3.6}
 \contentsline {figure}{\numberline {{3-7}}{\ignorespaces Photo of an indium-wrapped TGG crystal}}{47}{figure.3.7}
 \contentsline {figure}{\numberline {{3-8}}{\ignorespaces Data from the mode cleaner absorption measurement}}{50}{figure.3.8}
-\contentsline {figure}{\numberline {{3-9}}{\ignorespaces Faraday isolator isolation ratio as measured in air and in vacuum}}{51}{figure.3.9}
+\contentsline {figure}{\numberline {{3-9}}{\ignorespaces Faraday isolator isolation ratio as measured in air and in vacuum}}{52}{figure.3.9}
 \contentsline {figure}{\numberline {{3-10}}{\ignorespaces Mode cleaner and Faraday isolator thermal drift data.}}{54}{figure.3.10}
 \contentsline {subfigure}{\numberline {A}{\ignorespaces {Angular motion of the beam at the MC waist and FI rotator as the input power is stepped. The beam is double-passed through the Faraday isolator, so it experiences twice the input power.}}}{54}{figure.3.10}
 \contentsline {subfigure}{\numberline {B}{\ignorespaces {Average beam angle per power level in the MC and FI. Linear fits to the data are also shown. The slopes for MC yaw, MC pitch, FI yaw, and FI pitch, respectively, are 0.0047, 0.44, 1.8, and 3.2 \textmu {}rad/W.}}}{54}{figure.3.10}
 \contentsline {figure}{\numberline {{3-11}}{\ignorespaces Profile at high and low powers of mode cleaner transmitted beam}}{55}{figure.3.11}
 \contentsline {figure}{\numberline {{3-12}}{\ignorespaces Faraday isolator thermal lensing data}}{56}{figure.3.12}
 \contentsline {figure}{\numberline {{4-1}}{\ignorespaces Typical angular motion of the core suspended mirrors in the absence of interferometric control}}{61}{figure.4.1}
-\contentsline {figure}{\numberline {{4-2}}{\ignorespaces Contribution of sesimic noise to optical lever error signal}}{63}{figure.4.2}
+\contentsline {figure}{\numberline {{4-2}}{\ignorespaces Contribution of seismic noise to optical lever error signal}}{63}{figure.4.2}
 \contentsline {figure}{\numberline {{4-3}}{\ignorespaces Torque to pitch transfer function of a LIGO core optic}}{67}{figure.4.3}
 \contentsline {figure}{\numberline {{4-4}}{\ignorespaces Layout of ASC sensors and the mirrors they must control}}{68}{figure.4.4}
 \contentsline {figure}{\numberline {{4-5}}{\ignorespaces Beam centering servo image of beam splitter}}{69}{figure.4.5}
-\contentsline {figure}{\numberline {{4-6}}{\ignorespaces Schematic of the alignment sensing and control system}}{71}{figure.4.6}
+\contentsline {figure}{\numberline {{4-6}}{\ignorespaces Schematic of the alignment sensing and control system}}{70}{figure.4.6}
 \contentsline {figure}{\numberline {{4-7}}{\ignorespaces ASC control servo}}{72}{figure.4.7}
 \contentsline {figure}{\numberline {{4-8}}{\ignorespaces Optical lever compensation scheme}}{73}{figure.4.8}
 \contentsline {subfigure}{\numberline {A}{\ignorespaces {Zoom of the bottom part of Fig.\nobreakspace {}\ref {fig:ASCcontrolservo}. $P$ is the pendulum and $O$ is the optical lever control filters.}}}{73}{figure.4.8}
@@ -57,9 +57,9 @@
 \contentsline {figure}{\numberline {{6-15}}{\ignorespaces Soft opto-mechanical mode measurement and fit for several powers.}}{114}{figure.6.15}
 \contentsline {figure}{\numberline {{7-1}}{\ignorespaces Histogram of input powers used during S6}}{116}{figure.7.1}
 \contentsline {figure}{\numberline {{7-2}}{\ignorespaces Zoom of the shot-noise-limited noise floors of the Initial LIGO and Enhanced LIGO detectors.}}{116}{figure.7.2}
-\contentsline {figure}{\numberline {{8-1}}{\ignorespaces Livingston mode cleaner intensity noise transfer function}}{118}{figure.8.1}
-\contentsline {figure}{\numberline {{8-2}}{\ignorespaces End of an 8.7 W lock at Livingston on Feb. 23, 2010}}{123}{figure.8.2}
-\contentsline {figure}{\numberline {{8-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{124}{figure.8.3}
-\contentsline {figure}{\numberline {{9-1}}{\ignorespaces Diagram of mirror and OSEM geometry}}{128}{figure.9.1}
-\contentsline {figure}{\numberline {{9-2}}{\ignorespaces Optical lever calibration data.}}{131}{figure.9.2}
-\contentsline {figure}{\numberline {{10-1}}{\ignorespaces Optical lever open loop transfer function}}{134}{figure.10.1}
+\contentsline {figure}{\numberline {{A-1}}{\ignorespaces Livingston mode cleaner intensity noise transfer function}}{118}{figure.A.1}
+\contentsline {figure}{\numberline {{A-2}}{\ignorespaces End of an 8.7 W lock at Livingston on Feb. 23, 2010}}{123}{figure.A.2}
+\contentsline {figure}{\numberline {{A-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{124}{figure.A.3}
+\contentsline {figure}{\numberline {{B-1}}{\ignorespaces Diagram of mirror and OSEM geometry}}{128}{figure.B.1}
+\contentsline {figure}{\numberline {{B-2}}{\ignorespaces Optical lever calibration data.}}{131}{figure.B.2}
+\contentsline {figure}{\numberline {{C-1}}{\ignorespaces Optical lever open loop transfer function}}{134}{figure.C.1}

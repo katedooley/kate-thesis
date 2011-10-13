@@ -1,4 +1,4 @@
-\chapter{Input Optics Design and Characterization}
+\chapter{INPUT OPTICS DESIGN AND CHARACTERIZATION}
 
 \section{Function of the Input Optics}
 \label{sec:role}
@@ -9,14 +9,15 @@
 \caption[Block diagram of the Input Optics subsystem.]{Block diagram
   of the Input Optics subsystem. The IO is located between the
   pre-stabilized laser and the recycling mirror and consists of four
-  components: electro-optic modulator, mode cleaner, Farday isolator,
+  components: electro-optic modulator, mode cleaner, Faraday isolator,
   and mode-matching telescope. The electro-optic modulator is the only
   IO component outside of the vacuum system. Diagram is not to scale.}
 \label{fig:IOblock}
 \end{centering}
 \end{figure}
 
-The Input Optics is one of the primary subsystems of the LIGO
+The Input Optics (IO)\footnote{The Input Optics was originally called
+  the Input-Output Optics (IOO).} is one of the primary subsystems of the LIGO
 interferometers. Its purpose is to deliver an aligned, spatially
 pure, mode-matched beam with phase-modulation sidebands to the
 power-recycled Fabry-P\'{e}rot Michelson interferometer. The IO also
@@ -61,7 +62,7 @@ interferometer length and angle changes are measured
 resonant only in the recycling cavity or not resonant in the
 interferometer at all. The sidebands must be offset from the carrier
 by integer multiples of the mode cleaner free spectral range so that
-neither MC length fluctations nor phase modulation of the sidebands
+neither MC length fluctuations nor phase modulation of the sidebands
 (due to phase noise of the RF oscillator) are converted to amplitude modulation.
 
 
@@ -99,7 +100,7 @@ The mode cleaner acts as a passive laser amplitude fluctuation
 filter. Laser power fluctuations that couple to the antisymmetric port
 cause noise in the GW readout.  The mode cleaner suppresses laser
 amplitude noise above its pole frequency of about 4500~Hz. In
-addition, the MC passively supresses beam jitter at frequencies above
+addition, the MC passively suppresses beam jitter at frequencies above
 10~Hz.
 
 
@@ -154,7 +155,7 @@ propagating beam due to thermally-induced refractive index gradients
 in the Faraday isolator. A significant beam drift between the
 interferometer's locked and unlocked states led to clipping of the
 reflected beam on the photodiodes used for length and alignment
-contro. Our measurements determined a deflection of approximately
+control. Our measurements determined a deflection of approximately
 100~\microrad/W in the FI.  This was mitigated at the time by the
 design and implementation of an active beam steering servo on the beam
 rejected by the isolator.
@@ -188,6 +189,23 @@ recycling mirror was coupled into the arm cavity mode, room was left
 for improvement in the implementation of the MMT.
 
 
+
+\section{Enhanced LIGO Input Optics Design}
+\label{sec:design}
+The Enhanced LIGO Input Optics design addressed the thermal effects
+that compromised the performance of Initial LIGO, and accommodated up
+to four times the power of Initial LIGO. Also, the design was a
+prototype for handling the 165~W laser planned for Advanced
+LIGO. Since the adverse thermal properties of the Initial LIGO IO
+(beam drift, birefringence, and lensing) are all attributable
+primarily to absorption of laser light by the optical elements, the
+primary design consideration was finding optics with excellent
+thermo-optical properties \citep{UFLIGOGroup2006Upgrading}. Both the
+EOM and the FI were replaced for Enhanced LIGO. Only minor changes
+were made to the MC and MMT. A detailed layout of the Enhanced LIGO IO
+is shown in Figure \ref{fig:IOschematic} and photographs are in
+Figure~\ref{fig:IOpictures}.
+
 \begin{sidewaysfigure}
 \begin{centering}
 \includegraphics[width=1.0\textwidth]{figures/iopaperIO_withHam2.pdf}
@@ -219,23 +237,6 @@ Optics \emph{in situ}]{Photographs of Enhanced LIGO Input Optics
 \end{figure}
 
 
-
-\section{Enhanced LIGO Input Optics Design}
-\label{sec:design}
-The Enhanced LIGO Input Optics design addressed the thermal effects
-that compromised the performance of Initial LIGO, and accommodated up
-to four times the power of Initial LIGO. Also, the design was a
-prototype for handling the 165~W laser planned for Advanced
-LIGO. Since the adverse thermal properties of the Initial LIGO IO
-(beam drift, birefringence, and lensing) are all attributable
-primarily to absorption of laser light by the optical elements, the
-primary design consideration was finding optics with excellent
-thermo-optical properties \citep{UFLIGOGroup2006Upgrading}. Both the
-EOM and the FI were replaced for Enhanced LIGO. Only minor changes
-were made to the MC and MMT. A detailed layout of the Enhanced LIGO IO
-is shown in Figure \ref{fig:IOschematic}.
-
-
 \subsection{Electro-optic Modulator Design}
 We replaced the commercially-made New Focus 4003 resonant phase
 modulator of Initial LIGO with an EOM design and construction of our
@@ -254,27 +255,27 @@ LiNbO$_3$ have similar electro-optic coefficients. Also, RTP's $dn/dT$
 anisotropy is 50\% smaller. Table \ref{tab:EOMcrystals} compares the
 properties of most interest of the two crystals.
 
-\begin{table*}
+\begin{table}
 \centering
 \caption[Comparison of selected properties of the Initial and Enhanced
- LIGO EOM crystals]{Comparison of selected properties of the Initial and Enhanced
- LIGO EOM crystals, LiNbO$_3$ and RTP, respectively. RTP was
- preferred for Enhanced LIGO because of its lower absorption,
- superior thermal properties, and similar 
- electro-optic properties \citep{UFLIGOGroup2006Upgrading}.}  
-\begin{tabular}{l l l l}
+LIGO EOM crystals]{Comparison of selected properties of the Initial and Enhanced
+  LIGO EOM crystals, LiNbO$_3$ and RTP, respectively. RTP was
+  preferred for Enhanced LIGO because of its lower absorption,
+  superior thermal properties, and similar 
+  electro-optic properties \citep{UFLIGOGroup2006Upgrading}.}  
+\begin{tabular}{l l r@{}l r@{}l}
 \hline
- & units & LiNbO$_3$ & RTP \\
+ & units & \multicolumn{2}{l}{LiNbO$_3$} & \multicolumn{2}{l}{RTP} \\
 \hline
-damage threshold & MW/cm$^2$ & 280 & $>600$ \\
-absorption coeff. at 1064 nm & cm$^{-1}$ & $< 0.005$ & $< 0.0005$ \\
-electro-optic coeff. ($n_z^3 r_{33}$) & pm/V & 306 & 239 \\
-$dn_y/dT$ & 10$^{-6}$/K & 5.4 & 2.79 \\
-$dn_z/dT$ & 10$^{-6}$/K & 37.9 & 9.24 \\
+damage threshold & MW/cm$^2$ & 280 & & $>$600 & \\
+absorption coeff. at 1064 nm & cm$^{-1}$ & $<$ 0 & .005 & $<$ 0 & .0005 \\
+electro-optic coeff. ($n_z^3 r_{33}$) & pm/V & 306 & & 239 & \\
+$dn_y/dT$ & 10$^{-6}$/K & 5 & .4 & 2 & .79 \\
+$dn_z/dT$ & 10$^{-6}$/K & 37 & .9 & 9 & .24 \\
 \hline
 \end{tabular}
 \label{tab:EOMcrystals}
-\end{table*}
+\end{table}
 
 We procured the RTP crystals from Raicol and packaged them into
 specially designed custom built modulators. The crystal dimensions are
@@ -328,12 +329,11 @@ The MC has a round-trip length of 24.5~m. The beam waist has a radius of
 1.63~mm and is located between two 45$^\circ$ flat mirrors, MC1 and
 MC3 (see Fig. \ref{fig:IOschematic}). A concave third mirror, MC2,
 with an 18.15~m radius of curvature forms the far point of the mode
-cleaner's isoceles triangle shape. The power stored in the MC is 408
+cleaner's isosceles triangle shape. The power stored in the MC is 408
 times the amount coupled in, equivalent to about 2.7~kW in Initial
 LIGO and at most 11~kW for Enhanced LIGO. The peak irradiances are
 32~kW/cm$^2$ and 132~kW/cm$^2$ for Initial LIGO and Enhanced LIGO,
-respectively. The scattering losses of each mirror due to measured
-surface microroughness are 22~ppm.
+respectively.
 
 The mode cleaner mirrors are 75 mm in diameter and 25 mm thick. The
 substrate material is fused silica and the mirror coating is made of
@@ -349,7 +349,7 @@ to that in Initial LIGO.
 \subsection{Faraday Isolator Design}
 The Enhanced LIGO Faraday isolator design required not only the use of
 low absorption optics, but additional design choices to mitigate any
-residual thermal lensing and birefringence. In additon, trade-offs
+residual thermal lensing and birefringence. In addition, trade-offs
 between optical throughput in the forward direction, optical isolation
 in the backwards direction, and feasibility of physical access of the
 return beam for signal use were considered. The result is that the
@@ -534,16 +534,16 @@ power budget is found in Table \ref{tab:pwrbudget}.
   before the MC and is the product of the MC visibility and
   transmission. Initial LIGO values,
   where known, are included in parentheses and have errors of several percent.}
-\begin{tabular}{l l l}
+\begin{tabular}{l r@{}l r@{}l}
 \hline
- & Livingston & Hanford \\
+ & \multicolumn{2}{l}{Livingston} & \multicolumn{2}{l}{Hanford} \\
 \hline
-Mode cleaner visibility & 92\% & 97\% \\
-Mode cleaner transmission & 88\% & 90\% \\
-Composite MC transmission & 81\% (72\%) & 87\% \\
-Faraday transmission &       93\% (86\%) & 94\% (86\%) \\
-\hspace{0.5cm} - Thin film polarizer loss & 4.0\% & 2.7\% \\ 
-IO efficiency (PSL to RM) & 75\% (60\%) & 82\% \\
+Mode cleaner visibility & 92 & \% & 97 & \% \\
+Mode cleaner transmission & 88 & \% & 90 & \% \\
+Composite MC transmission & 81 & \% (72\%) & 87 & \% \\
+Faraday transmission &       93 & \% (86\%) & 94 & \% (86\%) \\
+\hspace{0.5cm} - Thin film polarizer loss & 4 & .0\% & 2 & .7\% \\ 
+IO efficiency (PSL to RM) & 75 & \% (60\%) & 82 & \% \\
 \hline
 \end{tabular}
 \label{tab:pwrbudget}
@@ -564,9 +564,11 @@ indication that thermal aberrations in the mode cleaner were
 negligible. 
 
 Of the light coupled into the mode cleaner, 88\% was transmitted,
-corresponding to an average loss of 98 ppm per mirror. Based on the
-mirrors' known surface micro-roughness, the scatter loss is expected
-to be 22 ppm/mirror. Part of the discrepancy between expectation and
+corresponding to an average loss of 98 ppm per mirror. 
+The scatter loss, $[4 \pi \sigma_{rms} / \lambda]^2$,
+is expected to be 22 ppm/mirror based on the
+mirrors' measured root mean square surface microroughness of $\sigma_{rms}< 0.4$
+nm \cite{1998Component}. Part of the discrepancy between expectation and
 measurement was determined to come from poor AR coatings. We measured
 a 1.3\% reflection from the AR coatings on MC mirrors at both
 Livingston and Hanford, a transmitted power loss equivalent to 10~ppm
@@ -618,18 +620,18 @@ are shown in Table \ref{tab:MCabsorption2}.
 cleaner mirrors]{Absorption values for the Livingston and Hanford mode
   cleaner mirrors before (in parentheses) and after drag wiping. The precision is $\pm 10\%$.} 
 %(from the March 8, 2008 elog and uses Muzammil's factor of $14/48$ correction.)
-\begin{tabular}{l l l}
+\begin{tabular}{l r@{.}l r@{.}l}
 \hline
-mirror & Livingston & Hanford\\
+mirror & \multicolumn{2}{l}{Livingston} & \multicolumn{2}{l}{Hanford}\\
 % mirror & before & after & before & after \\
 % \hline\hline
 % MC1 & 18.7 & 2.1  & 6.1  & 5.8 \\
 % MC2 & 5.5  & 2.0  & 23.9 & 7.6 \\
 % MC3 & 12.8 & 3.4  & 12.5 & 15.6 \\
 \hline
-MC1 & 2.1 ppm (18.7 ppm) & 5.8 (6.1 ppm) \\
-MC2 & 2.0 ppm (5.5 ppm) & 7.6 (23.9 ppm) \\
-MC3 & 3.4 ppm (12.8 ppm) & 15.6 (12.5 ppm) \\
+MC1 & 2&1 ppm (18.7 ppm) & 5&8 (6.1 ppm) \\
+MC2 & 2&0 ppm (5.5 ppm) & 7&6 (23.9 ppm) \\
+MC3 & 3&4 ppm (12.8 ppm) & 15&6 (12.5 ppm) \\
 \hline
 \end{tabular}
 \label{tab:MCabsorption2}
@@ -695,7 +697,7 @@ can put an upper limit of 11~K on the crystal temperature rise from
 air to vacuum. Furthermore, a degradation of 0.02~dB/W is measured in
 vacuum.
 
-\subsection{Thermal steering}
+\subsection{Thermal Steering}
 We measured the \emph{in situ} thermal angular drift of both the beam
 transmitted through the mode cleaner and of the reflected beam from
 the Faraday isolator with up to 25~W input power. Just as for the

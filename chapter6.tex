@@ -1,5 +1,5 @@
-\chapter{Angular sensing and control characterization and performance in the radiation pressure eigenbasis} 
-
+\chapter{ANGULAR SENSING AND CONTROL CHARACTERIZATION AND PERFORMANCE
+  IN THE RADIATION PRESSURE EIGENBASIS}
 \label{ch:characterization}
 
 
@@ -206,13 +206,13 @@ each motion at one particular frequency forms the \emph{sensing
 \emph{input matrix}, which tells how to take the appropriate weighted
 sum of signals in order to reconstruct a particular motion. The
 procedure for measuring the sensing matrix is as follows:
-\begin{enumerate}
+\begin{itemize}
 \item excite one of the mirrors (or specific combination of mirrors)
   at frequency $f$ \vspace{-10pt}
 \item demodulate each of the WFS signals at $f$ \vspace{-10pt}
 \item normalize to the phase of the excitation readback \vspace{-10pt}
 \item repeat for each mirror (or sets of mirrors)
-\end{enumerate}
+\end{itemize}
 A key aspect of the measurement is that a notch filter at frequency
 $f$ is engaged so the control servo does not suppress our excitation.
 
@@ -246,9 +246,9 @@ WFS1Q & WFS2Q & WFS2I & WFS3I & WFS4I &  \\
 \hline
 \fbox{2.0}   & \textcolor{gray}{0.03} &\textcolor{gray}{0.06} & \textcolor{gray}{-0.008}  &  \textcolor{gray}{0.01} & dSoft \\
 \fbox{0.31}  & \fbox{-0.03} &\textcolor{gray}{-0.04} &  \textcolor{gray}{0.002} & \textcolor{gray}{-0.01} & dHard \\
-   \textcolor{gray}{0.02} & \textcolor{gray}{-0.01} &  \fbox{0.18} & \fbox{\textcolor{gray}{-0.02}} &  \fbox{\textcolor{gray}{-0.10}} & cSoft \\
-   \textcolor{gray}{0.17} & \textcolor{gray}{-0.01} & \fbox{-0.21} &  \fbox{\textcolor{gray}{0.007}} & \fbox{-0.12} & cHard \\
-   \textcolor{gray}{0.09} & \textcolor{gray}{-0.01} & \fbox{-0.21}  &  \fbox{0.04} & \fbox{-0.21} & RM \\
+\textcolor{gray}{0.02} & \textcolor{gray}{-0.01} &  \fbox{0.18} & \fbox{\textcolor{gray}{-0.02}} &  \fbox{\textcolor{gray}{-0.10}} & cSoft \\
+\textcolor{gray}{0.17} & \textcolor{gray}{-0.01} & \fbox{-0.21} &  \fbox{\textcolor{gray}{0.007}} & \fbox{-0.12} & cHard \\
+\textcolor{gray}{0.09} & \textcolor{gray}{-0.01} & \fbox{-0.21}  &  \fbox{0.04} & \fbox{-0.21} & RM \\
 \hline
 \end{tabular}
 \label{table:sensing}
@@ -347,7 +347,7 @@ $g$-factors.
 
 % We have D = U*M*C. A drive is multiplied first by the output matrix (C),
 % then by the mirror gains (M), then put into hardware (U) to create what's
-% actually exicted.
+% actually excited.
 
 % To make D diagonal, we want to find a new M, M\_new, which must have the
 % property M\_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
@@ -359,15 +359,15 @@ $g$-factors.
   witnessed by the optical levers. Columns are excitations and rows are
   the pitch motions at 9.7~Hz in units of \microrad. Ideally, this
   would be a diagonal matrix. It mostly is.}
-\begin{tabular}{l l l l l l}
+\begin{tabular}{r@{.}l r@{.}l r@{.}l r@{.}l r@{.}l l}
 \hline
-dSoft & dHard  & cSoft & cHard & RM & \\
+\multicolumn{2}{l}{dSoft} & \multicolumn{2}{l}{dHard}  & \multicolumn{2}{l}{cSoft} & \multicolumn{2}{l}{cHard} & \multicolumn{2}{l}{RM} & \\
 \hline
-   \textbf{5.1e-06} & -5.2e-08  & 6.1e-07 & -3.8e-08 &  -1.8e-07 & dSoft\\
-  -3.4e-07 &  \textbf{5.0e-06}  &  7.3e-07 & -1.0e-06 &  2.4e-07 & dHard\\
-  -4.1e-07 & -3.3e-08 &  \textbf{5.9e-06} &  6.8e-07 &  2.5e-07 & cSoft\\
-  -6.4e-07 & -5.9e-07 &  1.1e-06 &  \textbf{5.7e-06} &  4.7e-07 & cHard\\
-  -1.6e-07 & -1.8e-06 & -5.5e-07 &   2.6e-06 &  \textbf{5.6e-06} & RM\\
+   \textbf{5}&\textbf{1e-06} & -5&2e-08  & 6&1e-07 & -3&8e-08 &  -1&8e-07 & dSoft\\
+  -3&4e-07 &  \textbf{5}&\textbf{0e-06}  &  7&3e-07 & -1&0e-06 &  2&4e-07 & dHard\\
+  -4&1e-07 & -3&3e-08 &  \textbf{5}&\textbf{9e-06} &  6&8e-07 &  2&5e-07 & cSoft\\
+  -6&4e-07 & -5&9e-07 &  1&1e-06 &  \textbf{5}&\textbf{7e-06} &  4&7e-07 & cHard\\
+  -1&6e-07 & -1&8e-06 & -5&5e-07 &   2&6e-06 &  \textbf{5}&\textbf{6e-06} & RM\\
 \hline
 \end{tabular}
 \label{table:excitations_calibrated}
@@ -500,7 +500,7 @@ increases by about 20\%.
   beam motion impression on the core mirrors (pitch). Residual mirror
   motion as witnessed by the optical levers when the common WFS gains
   (cSoft, cHard, RM) are increased to $2.5\times$ nominal is compared
-  to residual mirror motion when the WFS gains are nominal. Dased
+  to residual mirror motion when the WFS gains are nominal. Dashed
   lines are the root-mean-square of the amplitude spectral density
   integrated from the right. Both spectra come from a time of similar
   seismic activity (typical weekday afternoon noise), shown in
@@ -532,7 +532,7 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
   residual motion) during a time of normal operation and a time when
   the common WFS gains were $2.5\times$ higher than nominal. This
   excludes gain peaking as a cause of the extra mirror motion
-  witnessed during the time of high gain. Dased lines are the
+  witnessed during the time of high gain. Dashed lines are the
   root-mean-square of the amplitude spectral density integrated from
   the right. Fig.~\ref{fig:seismic_highgain} shows the ground motion
   spectra at the time of this measurement.}
@@ -606,7 +606,7 @@ of the hot PRC's $g$-factor is usually not constant.
 %SPOB.} 
 The changing $g$-factor has potentially severe consequences
 for the ASC. Because of its geometry, the power build-up in the PRC is
-very sensitve to both the mirror angles and the $g$-factor. Power
+very sensitive to both the mirror angles and the $g$-factor. Power
 fluctuation is detrimental because the signal to noise ratios of the
 sensors that probe the PRC light degrade due to the presence of
 increased junk light that contributes shot noise but not
@@ -616,11 +616,11 @@ sensitivity to mirror motion is therefore subject to change. Since
 achieving a flat power build-up in the PRC is a difficult task (too
 much motion in the PRC is quite often a cause of lock loss when making
 measurements), we must update the real-time control system to reflect
-their changing sensitivites. Otherwise, the mirror angles will not be
+their changing sensitivities. Otherwise, the mirror angles will not be
 accurately controlled.
 
 An estimate of the expected power fluctuations based on the $g$-factor
-and RM motion is a straightforward excercise when using
+and RM motion is a straightforward exercise when using
 Eq. \ref{eq:cavitydisptilt_mirrorangle} and Eq. \ref{eq:pwr_disptilt}
 as derived in the Appendix. If we estimate the $g$-factors of the RM
 and ITM as $g_{RM} = 1+\delta$ and $g_{ITM} = 1 - \delta$ (where
@@ -643,7 +643,7 @@ z(2+\delta)/\delta & z(2-\delta)/\delta \\
 Fig. \ref{fig:prc_power} plots the power in the PRC as a function of
 $\theta_{RM}$ for several values of $\delta$, demonstrating
 the sensitivity of the PRC to the ITM heating.  For example, the
-typcial RM angular displacement of $10^{-7}$ rad results in a 66\%
+typical RM angular displacement of $10^{-7}$ rad results in a 66\%
 power loss when the PRC $g$-factor is very near instability with a
 value of $1-0.0001$. Only as the $g$-factor moves further from $1$
 does the angular motion of the RM have less and less of an effect on
@@ -931,14 +931,14 @@ One of the most important figures of merit of ASC performance is how
 much noise the ASC contributes to DARM. We measure the coupling of the
 ASC to DARM by injecting broadband noise between 40 and 110 Hz in each
 of the suspension angular excitation
-points\footnote{ie. \texttt{L1:SUS-ETMX\_ASCPIT\_EXCMON}} and
+points\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_EXCMON}} and
 recording both the suspension angular control
-signal\footnote{ie. \texttt{L1:SUS-ETMX\_ASCPIT\_OUT}} and
+signal\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_OUT}} and
 DARM. Signals from a time without excitation are subtracted from those
 with the excitation, resulting in just the contribution to each
 spectra due to noise. Dividing the noisy DARM spectrum by the noisy
 suspension control spectrum provides the transfer function we use to
-mulitiply by a suspension signal at any time. 
+multiply by a suspension signal at any time. 
 
 % \begin{figure}
 % \begin{centering}
@@ -1000,7 +1000,7 @@ DARM summary for a 16~W lock at night.
 a 16 W lock at night]{Total WFS and optical lever noise contribution
   to DARM during a 16 W lock at night. Pitch and yaw contributions are
   added in quadrature under the assumption they are
-  de-coupled. Seismic spectra at the time of this measurment are found
+  de-coupled. Seismic spectra at the time of this measurement are found
   in Fig.~\ref{fig:seismic_NB}.}
 \label{fig:asc2darm}
 \end{centering}
@@ -1077,10 +1077,17 @@ DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
 % recycling cavity, and more circulating power. 
 
 
+% \begin{figure}
+% \begin{centering}
+% \includegraphics{figures/dSoftFF.pdf}
+% \caption{}
+% \label{fig:}
+% \end{centering}
+% \end{figure}
 
 
 
-\section{Experimental measurement of the Sidles-Sigg effect}
+\section{Experimental Measurement of the Sidles-Sigg Effect}
 
 \begin{figure}
 \begin{centering}
@@ -1201,7 +1208,7 @@ sensing and control of the optomechanical system.
 % \subsubsection{Moving the beam} 
 % Moving the beam on the mirrors in a controlled fashion is
 % straightforward because of the ASC system. All that we need to do is
-% introduce an offset to the setpoint of the of the beam centering
+% introduce an offset to the set point of the of the beam centering
 % aspect of the ASC servo. For the ETMs we put a DC offset in the
 % \texttt{L1:ASC-QPD\{X,Y\}\_\{PIT, YAW\}\_\{OFFSET\}} channel and for
 % the ITMs we changed the $X$ and $Y$ targets of the beam splitter beam
@@ -1296,7 +1303,7 @@ sensing and control of the optomechanical system.
 
 
 % \subsection{Angular Mirror Motion}
-% The optical levers provide a straightfoward measure of individual
+% The optical levers provide a straightforward measure of individual
 % mirror motion. The channels I calibrated were of the form
 % \texttt{L1:SUS-ETMX\_OPLEV\_\{P,Y\}ERROR}, the optical lever error
 % signals for each of the large optics. I made use of the dependence of

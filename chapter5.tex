@@ -1,4 +1,4 @@
-\chapter{The Effect of High Laser Power on Interferometer Alignment}
+\chapter{THE EFFECT OF HIGH LASER POWER ON INTERFEROMETER ALIGNMENT}
 \label{ch:eigenmodes}
 
 % \section{Dynamic response of coupled pendula}
@@ -220,15 +220,15 @@ radiation pressure breaks that symmetry.
   centers of the mirrors. Differences between LLO and LHO arise from the
   mirrors at each site having different radii of curvature. Quantities
   are expressed as a function of the amount of tilt in a particular mode.}
-\begin{tabular}{l l l l l l}
+\begin{tabular}{l l r@{}l l l l}
 \hline
-& & LLO & LLO & LHO & LHO \\
-cavity parameter & unit & $\vec{v}_a$ mode & $\vec{v}_b$ mode & $\vec{v}_a$ mode & $\vec{v}_b$ mode \\
+& & \multicolumn{2}{l}{LLO} & LLO & LHO & LHO \\
+cavity parameter & unit & \multicolumn{2}{l}{$\vec{v}_a$ mode} & $\vec{v}_b$ mode & $\vec{v}_a$ mode & $\vec{v}_b$ mode \\
 \hline
-$|x_1|$ & mm/urad & 9.88 & 2.44 & 8.20 & 2.51\\
-$|x_2|$ & mm/urad & 10.84 & 2.22 & 9.35 & 2.20\\
-$|a|$ & mm/urad & 10.17 & 1.01 & 8.48 & 1.34 \\
-$|\alpha|$ & urad/urad & 0.24 & 1.17 & 0.29 & 1.18 \\
+$|x_1|$ & mm/urad & 9&.88 & 2.44 & 8.20 & 2.51\\
+$|x_2|$ & mm/urad & 10&.84 & 2.22 & 9.35 & 2.20\\
+$|a|$ & mm/urad & 10&.17 & 1.01 & 8.48 & 1.34 \\
+$|\alpha|$ & urad/urad & 0&.24 & 1.17 & 0.29 & 1.18 \\
 \hline
 \end{tabular}
 \label{table:cav_geometric}
@@ -379,14 +379,14 @@ modes]{Torsional spring constants (pitch) for the soft and hard modes
   powers. The soft mode in Enhanced LIGO is unstable. The $\kappa_p$
   values assume a resonant frequency of 0.6~Hz.}
 % \textcolor{blue}{maybe include aLIGO on this table as well.}}
-\begin{tabular}{l l l l l}
+\begin{tabular}{l r@{ }l l r@{}l l}
 \hline
- & $P_{circ}$ & $\kappa_{p}$ & $\kappa_{tot}$, soft mode &
+ & \multicolumn{2}{l}{$P_{circ}$} & $\kappa_{p}$ & \multicolumn{2}{l}{$\kappa_{tot}$, soft mode} &
  $\kappa_{tot}$, hard mode\\
 % & (kW) & (Nm/rad) & (Nm/rad) & (Nm/rad) \\
 \hline
-Initial LIGO & 9 kW & 0.721 Nm/rad& 0.0734 Nm/rad & 0.867 Nm/rad\\
-Enhanced LIGO & 40 kW & 0.721 Nm/rad& -2.18 Nm/rad & 1.38 Nm/rad\\
+Initial LIGO & 9& kW & 0.721 Nm/rad& 0&.0734 Nm/rad & 0.867 Nm/rad\\
+Enhanced LIGO & 40& kW & 0.721 Nm/rad& -2&.18 Nm/rad & 1.38 Nm/rad\\
 \hline
 \end{tabular}
 \label{table:k_tot}
@@ -435,7 +435,7 @@ power when soft mode is unstable & $P_{crit}$ & 10.0 kW (pitch) & 11.6 kW (pitch
 \end{table}
 
 
-\subsection{Pole analysis}
+\subsection{Pole Analysis}
 One final comment about the analysis of the modified transfer function
 (Eq. \ref{eq:modalTF}) is that the two poles,
 \begin{equation}
@@ -476,8 +476,9 @@ LIGO.
 stability]{Conditions on total torsional constant $\kappa_{tot}$ for
   determining system stability.}
 \begin{tabular}{l l l}
+\hline
 $\kappa_{tot}$ condition & pole $s_+$ & impulse response \\
-\hline\hline
+\hline
 $\kappa_{tot} < 0$ & real positive & statically unstable\\
 $\kappa_{tot} = 0$ & zero & \\
 $0 < \kappa_{tot} < \gamma^2/4I $ & real negative & stable decay \\
@@ -526,20 +527,20 @@ the modes remain independent and the control system need not be
 updated with power changes.
 
 %\textcolor{blue}{put this elsewhere?} 
-One complication of having a
-radiation pressure modified and therefore power dependent plant,
-$P_{rp}$, is that the optical lever compensation (described in
-Sec. \ref{sec:oplevcomp}) is no longer valid. The compensation of
-$1+OP$ is hard-coded in the digital control system, where the model
-for $P$ is that of a simple pendulum. The only way to achieve perfect
-compensation would be to load a new model of $P$ into the compensation
-filter bank for each new power and for each optic. Doing this in
-Enhanced LIGO was not practical, so only at low powers does the
-optical lever compensation actually cancel out the effect of the
-optical-lever-controlled radiation pressure-modified plant,
-$P_{rp}/1+OP_{rp}$, and leave simply $P_{rp}$ for the WFS to
+One complication of having a radiation pressure modified and therefore
+power dependent plant, $P_{rp}$, is that the optical lever
+compensation (described in Sec. \ref{sec:oplevcomp}) is no longer
+valid. The compensation of $1+OP$ is hard-coded in the digital control
+system, where the model for $P$ is that of a simple pendulum. The only
+way to achieve perfect compensation would be to load a new model of
+$P$ into the compensation filter bank for each new power and for each
+optic. Doing this in Enhanced LIGO was not practical, so only at low
+powers does the optical lever compensation actually cancel out the
+effect of the optical-lever-controlled radiation pressure-modified
+plant, $P_{rp}/1+OP_{rp}$, and leave simply $P_{rp}$ for the WFS to
 control. It this turns out that as power increases, the imperfect
-compensation actually make the loops more stable \cite{Barsotti2008Untitled}.
+compensation actually make the loops more stable
+\cite{Barsotti2008}.
 
 The sensors in Initial LIGO were not tuned to specifically look for
 the combined mirror motions that create the soft and hard modes. The

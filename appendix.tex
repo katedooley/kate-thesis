@@ -1,23 +1,23 @@
-% The Editorial Office Requirements for the Table of Contents cause a significant problem 
-%in Latex if there is only one Appendix. The Appendix is no longer labeled "A" in the TOC
-%but has the word "APPENDIX" placed in front of the title of the Appendix. This can be done
-%without issue IF nothing needs to be numbered by LaTeX in the Appendix. Unfortunately, most of the time
-%something needs to be numbered in that single Appendix. For this reason we have included the IFTHENELSE switch
-%found in this document and at the beginning of AppendixA. We assume that if you have any appendices, that you have more than one.
-%So the default setting is noa = 2 (number of appendices = 2). Note: you don't need the actual number of appendices here
-%1 or 2 are the only relevant numbers. You just make sure to input the Appendices you do have in this file.
-%
-%If, however, you DO only have one appendix change the line:
-%
-%\setcounter{noa}{2} to
-%
-%\setcounter{noa}{1}
-%
-%And comment (or delete) all of the input{AppendixB} commands except the first one.
-%Then open the AppendixA.tex file and continue there.
+% The Editorial Office Requirements for the Table of Contents cause a
+%significant problem in Latex if there is only one Appendix. The
+%Appendix is no longer labeled "A" in the TOC but has the word
+%"APPENDIX" placed in front of the title of the Appendix. This can be
+%done without issue IF nothing needs to be numbered by LaTeX in the
+%Appendix. Unfortunately, most of the time something needs to be
+%numbered in that single Appendix. For this reason we have included
+%the IFTHENELSE switch found in this document and at the beginning of
+%AppendixA. We assume that if you have any appendices, that you have
+%more than one.  So the default setting is noa = 2 (number of
+%appendices = 2). Note: you don't need the actual number of appendices
+%here 1 or 2 are the only relevant numbers. You just make sure to
+%input the Appendices you do have in this file.  If, however, you DO
+%only have one appendix change the line: \setcounter{noa}{2} to
+%\setcounter{noa}{1} And comment (or delete) all of the
+%input{AppendixB} commands except the first one.  Then open the
+%AppendixA.tex file and continue there.
 
-%you can add/substract individual appendices through by using the /include{appendix'X'}
-% and creating/deleting the appropriate files
+%you can add/substract individual appendices through by using the
+% /include{appendix'X'} and creating/deleting the appropriate files
 \appendix 
 \clearpage
 \newcounter{noa} % noa= no. of appendices ... set to 1 for 1 and more otherwise.
@@ -28,8 +28,9 @@
 %...................else
 {\addtocontents{toc}{\protect\addvspace{10pt}\protect\noindent \protect APPENDIX}}
 %...................
-\input{appendixA} %
-\input{appendixB} % UNCOMMENT APPENDICES IF THERE ARE MORE APPENDICES
+\input{appendixIO}
+\input{appendix_cal} % UNCOMMENT APPENDICES IF THERE ARE MORE APPENDICES
+\input{appendixAA} %
 % \input{appendixC} %
 % \input{appendixD} %
 % \input{appendixE} %

@@ -1,578 +1,219 @@
-\begin{thebibliography}{55}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname bibnamefont\endcsname\relax
-  \def\bibnamefont#1{#1}\fi
-\expandafter\ifx\csname bibfnamefont\endcsname\relax
-  \def\bibfnamefont#1{#1}\fi
-\expandafter\ifx\csname citenamefont\endcsname\relax
-  \def\citenamefont#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\providecommand{\bibinfo}[2]{#2}
-\providecommand{\eprint}[2][]{\url{#2}}
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
 
-\bibitem[{\citenamefont{Weber}(1960)}]{Weber1960Detection}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Weber}},
-  \bibinfo{journal}{Physical Review Online Archive (Prola)}
-  \textbf{\bibinfo{volume}{117}}, \bibinfo{pages}{306} (\bibinfo{year}{1960}),
-  \urlprefix\url{http://dx.doi.org/10.1103/PhysRev.117.306}.
+\bibitem{Weber1960Detection}
+J.~Weber, Physical Review Online Archive (Prola) \textbf{117}, 306 (1960).
 
-\bibitem[{\citenamefont{Forward}(1978)}]{Forward1978Wideband}
-\bibinfo{author}{\bibfnamefont{R.~L.} \bibnamefont{Forward}},
-  \bibinfo{journal}{Physical Review D} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{379} (\bibinfo{year}{1978}),
-  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.17.379}.
+\bibitem{Forward1978Wideband}
+R.~L. Forward, Physical Review D \textbf{17}, 379 (1978).
 
-\bibitem[{\citenamefont{Carroll}(1997)}]{Carroll1997Lecture}
-\bibinfo{author}{\bibfnamefont{S.~M.} \bibnamefont{Carroll}}
-  (\bibinfo{year}{1997}), \eprint{gr-qc/9712019},
-  \urlprefix\url{http://arxiv.org/abs/gr-qc/9712019}.
+\bibitem{Carroll1997Lecture}
+S.~M. Carroll  (1997).
 
-\bibitem[{\citenamefont{Saulson}(1994)}]{Saulson1994Fundamentals}
-\bibinfo{author}{\bibfnamefont{P.~R.} \bibnamefont{Saulson}},
-  \emph{\bibinfo{title}{{Fundamentals of interferometric gravitational wave
-  detectors}}} (\bibinfo{publisher}{World Scientific}, \bibinfo{year}{1994}),
-  ISBN \bibinfo{isbn}{9789810218201},
-  \urlprefix\url{http://www.worldcat.org/isbn/9789810218201}.
+\bibitem{Saulson1994Fundamentals}
+P.~R. Saulson, \emph{{Fundamentals of interferometric gravitational wave
+  detectors}} (World Scientific, 1994).
 
-\bibitem[{\citenamefont{Abbott et~al.}(2009{\natexlab{a}})\citenamefont{Abbott,
-  Abbott, Adhikari, Ajith, Allen, Allen, Amin, Anderson, Anderson, Arain
-  et~al.}}]{Abbott2009Search}
-\bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Allen}},
-  \bibinfo{author}{\bibfnamefont{R.~S.} \bibnamefont{Amin}},
-  \bibinfo{author}{\bibfnamefont{S.~B.} \bibnamefont{Anderson}},
-  \bibinfo{author}{\bibfnamefont{W.~G.} \bibnamefont{Anderson}},
-  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Arain}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Physical Review D (Particles, Fields,
-  Gravitation, and Cosmology)} \textbf{\bibinfo{volume}{80}},
-  \bibinfo{pages}{102001+} (\bibinfo{year}{2009}{\natexlab{a}}),
-  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.80.102001}.
+\bibitem{Abbott2009Search}
+B.~P. Abbott \emph{et~al.}, Physical Review D (Particles, Fields, Gravitation,
+  and Cosmology) \textbf{80}, 102001+ (2009).
 
-\bibitem[{\citenamefont{Abadie et~al.}(2011)\citenamefont{Abadie, Abbott,
-  Abbott, Abernathy, Accadia, Acernese, Adams, Adhikari, Ajith, Allen
-  et~al.}}]{S5CBCnospin}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Abadie}},
-  \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Abernathy}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Accadia}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Acernese}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Physical Review D}
-  \textbf{\bibinfo{volume}{83}}, \bibinfo{pages}{122005+}
-  (\bibinfo{year}{2011}),
-  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.83.122005}.
+\bibitem{S5CBCnospin}
+J.~Abadie \emph{et~al.}, Physical Review D \textbf{83}, 122005+ (2011).
 
-\bibitem[{\citenamefont{Abadie et~al.}(2010{\natexlab{a}})\citenamefont{Abadie,
-  Abbott, Abbott, Abernathy, Adams, Adhikari, Ajith, Allen, Allen, Amador~Ceron
-  et~al.}}]{Abadie2010First}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Abadie}},
-  \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Abernathy}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Allen}},
-  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Amador~Ceron}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{The Astrophysical Journal}
-  \textbf{\bibinfo{volume}{722}}, \bibinfo{pages}{1504+}
-  (\bibinfo{year}{2010}{\natexlab{a}}), ISSN \bibinfo{issn}{0004-637X},
-  \urlprefix\url{http://dx.doi.org/10.1088/0004-637X/722/2/1504}.
+\bibitem{Abadie2010First}
+J.~Abadie \emph{et~al.}, The Astrophysical Journal \textbf{722}, 1504+ (2010).
 
-\bibitem[{\citenamefont{Allen and Romano}(1999)}]{Allen1999Detecting}
-\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Romano}},
-  \bibinfo{journal}{Physical Review D} \textbf{\bibinfo{volume}{59}},
-  \bibinfo{pages}{102001+} (\bibinfo{year}{1999}),
-  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.59.102001}.
+\bibitem{Allen1999Detecting}
+B.~Allen and J.~D. Romano, Physical Review D \textbf{59}, 102001+ (1999).
 
-\bibitem[{\citenamefont{Maggiore}(2000)}]{Maggiore2000Gravitational}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Maggiore}},
-  \bibinfo{journal}{Physics Reports} \textbf{\bibinfo{volume}{331}},
-  \bibinfo{pages}{283} (\bibinfo{year}{2000}),
-  \urlprefix\url{http://dx.doi.org/10.1016/S0370-1573(99)00102-7}.
+\bibitem{Maggiore2000Gravitational}
+M.~Maggiore, Physics Reports \textbf{331}, 283 (2000).
 
-\bibitem[{\citenamefont{Abadie et~al.}(2010{\natexlab{b}})\citenamefont{Abadie,
-  Abbott, Abbott, Abernathy, Accadia, Acernese, Adams, Adhikari, Ajith, Allen
-  et~al.}}]{Abadie2010Predictions}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Abadie}},
-  \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Abernathy}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Accadia}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Acernese}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Classical and Quantum Gravity}
-  \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{173001+}
-  (\bibinfo{year}{2010}{\natexlab{b}}), ISSN \bibinfo{issn}{0264-9381},
-  \urlprefix\url{http://dx.doi.org/10.1088/0264-9381/27/17/173001}.
+\bibitem{Abadie2010Predictions}
+J.~Abadie \emph{et~al.}, Classical and Quantum Gravity \textbf{27}, 173001+
+  (2010).
 
-\bibitem[{\citenamefont{{Hulse} and {Taylor}}(1975)}]{Hulse1975Discovery}
-\bibinfo{author}{\bibfnamefont{R.~A.} \bibnamefont{{Hulse}}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{{Taylor}}},
-  \bibinfo{journal}{Astrophys. J. Lett.} \textbf{\bibinfo{volume}{195}},
-  \bibinfo{pages}{L51} (\bibinfo{year}{1975}),
-  \urlprefix\url{http://dx.doi.org/10.1086/181708}.
+\bibitem{Hulse1975Discovery}
+R.~A. {Hulse} and J.~H. {Taylor}, Astrophys. J. Lett. \textbf{195}, L51 (1975).
 
-\bibitem[{\citenamefont{Weisberg and Taylor}(2005)}]{Weisberg2005Relativistic}
-\bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Weisberg}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Taylor}}, in
-  \emph{\bibinfo{booktitle}{Binary Radio Pulsars}}, edited by
-  \bibinfo{editor}{\bibfnamefont{F.~A.} \bibnamefont{Rasio}} \bibnamefont{and}
-  \bibinfo{editor}{\bibfnamefont{I.~H.} \bibnamefont{Stairs}}
-  (\bibinfo{year}{2005}), vol. \bibinfo{volume}{328} of
-  \emph{\bibinfo{series}{Astronomical Society of the Pacific Conference
-  Series}}, \eprint{astro-ph/0407149},
-  \urlprefix\url{http://arxiv.org/abs/astro-ph/0407149}.
+\bibitem{Weisberg2005Relativistic}
+J.~M. Weisberg and J.~H. Taylor, in \emph{Binary Radio Pulsars}, vol. 328 of
+  \emph{Astronomical Society of the Pacific Conference Series}, F.~A. Rasio and
+  I.~H. Stairs, eds. (2005), vol. 328 of \emph{Astronomical Society of the
+  Pacific Conference Series}.
 
-\bibitem[{\citenamefont{Hobbs et~al.}(2009)\citenamefont{Hobbs, Archibald,
-  Arzoumanian, Backer, Bailes, Bhat, Burgay, Burke-Spolaor, Champion, Cognard
-  et~al.}}]{Hobbs2009International}
-\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Hobbs}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Archibald}},
-  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Arzoumanian}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Backer}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Bailes}},
-  \bibinfo{author}{\bibfnamefont{N.~D.~R.} \bibnamefont{Bhat}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Burgay}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Burke-Spolaor}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Champion}},
-  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Cognard}},
-  \bibnamefont{et~al.} (\bibinfo{year}{2009}), \eprint{0911.5206},
-  \urlprefix\url{http://arxiv.org/abs/0911.5206}.
+\bibitem{Hobbs2009International}
+G.~Hobbs \emph{et~al.}  (2009).
 
-\bibitem[{\citenamefont{Linsay et~al.}(1983)\citenamefont{Linsay, Saulson,
-  Weiss, and Whitcomb}}]{Linsay1983Study}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Linsay}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Saulson}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Weiss}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Whitcomb}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T830001},
-  \bibinfo{institution}{Massachusetts Institute of Technology}
-  (\bibinfo{year}{1983}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28038}.
+\bibitem{Linsay1983Study}
+P.~Linsay, P.~Saulson, R.~Weiss, and S.~Whitcomb, \enquote{{A study of a long
+  baseline gravitational wave antenna system}}, Tech. Rep. T830001,
+  Massachusetts Institute of Technology (1983).
 
-\bibitem[{\citenamefont{Abbott et~al.}(2009{\natexlab{b}})\citenamefont{Abbott,
-  Abbott, Adhikari, Ajith, Allen, Allen, Amin, Anderson, Anderson, Arain
-  et~al.}}]{Abbott2009LIGO}
-\bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Allen}},
-  \bibinfo{author}{\bibfnamefont{R.~S.} \bibnamefont{Amin}},
-  \bibinfo{author}{\bibfnamefont{S.~B.} \bibnamefont{Anderson}},
-  \bibinfo{author}{\bibfnamefont{W.~G.} \bibnamefont{Anderson}},
-  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Arain}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Reports on Progress in Physics}
-  \textbf{\bibinfo{volume}{72}}, \bibinfo{pages}{076901+}
-  (\bibinfo{year}{2009}{\natexlab{b}}), ISSN \bibinfo{issn}{0034-4885},
-  \urlprefix\url{http://dx.doi.org/10.1088/0034-4885/72/7/076901}.
+\bibitem{Abbott2009LIGO}
+B.~P. Abbott \emph{et~al.}, Reports on Progress in Physics \textbf{72}, 076901+
+  (2009).
 
-\bibitem[{\citenamefont{Acernese et~al.}(2008)\citenamefont{Acernese, Amico,
-  Alshourbagy, Antonucci, Aoudia, Astone, Avino, Baggio, Ballardin, Barone
-  et~al.}}]{Acernese2008Virgo}
-\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Acernese}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Amico}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Alshourbagy}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Antonucci}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Aoudia}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Astone}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Avino}},
-  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Baggio}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Ballardin}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Barone}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Journal of Optics A: Pure and Applied
-  Optics} \textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{064009+}
-  (\bibinfo{year}{2008}), ISSN \bibinfo{issn}{1464-4258},
-  \urlprefix\url{http://dx.doi.org/10.1088/1464-4258/10/6/064009}.
+\bibitem{Acernese2008Virgo}
+F.~Acernese \emph{et~al.}, Journal of Optics A: Pure and Applied Optics
+  \textbf{10}, 064009+ (2008).
 
-\bibitem[{\citenamefont{L\"{u}ck et~al.}(2006)\citenamefont{L\"{u}ck, Hewitson,
-  Ajith, Allen, Aufmuth, Aulbert, Babak, Balasubramanian, Barr, Berukoff
-  et~al.}}]{Luck2006Status}
-\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{L\"{u}ck}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Hewitson}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Aufmuth}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Aulbert}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Babak}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Balasubramanian}},
-  \bibinfo{author}{\bibfnamefont{B.~W.} \bibnamefont{Barr}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Berukoff}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Classical and Quantum Gravity}
-  \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{S71} (\bibinfo{year}{2006}),
-  ISSN \bibinfo{issn}{0264-9381},
-  \urlprefix\url{http://dx.doi.org/10.1088/0264-9381/23/8/S10}.
+\bibitem{Luck2006Status}
+H.~L\"{u}ck \emph{et~al.}, Classical and Quantum Gravity \textbf{23}, S71
+  (2006).
 
-\bibitem[{\citenamefont{{Advanced LIGO Systems
-  Group}}(2009)}]{AdvLigoSysDesign}
-\bibinfo{author}{\bibnamefont{{Advanced LIGO Systems Group}}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T010075},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2009}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=5489}.
+\bibitem{AdvLigoSysDesign}
+{Advanced LIGO Systems Group}, \enquote{{Advanced LIGO Systems Design}}, Tech.
+  Rep. T010075, LIGO Laboratory (2009).
 
-\bibitem[{\citenamefont{Adhikari et~al.}(2006)\citenamefont{Adhikari,
-  Fritschel, and Waldman}}]{Adhikari2006Enhanced}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Waldman}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T060156},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{2006}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=7384}.
+\bibitem{Adhikari2006Enhanced}
+R.~Adhikari, P.~Fritschel, and S.~Waldman, \enquote{{Enhanced LIGO}}, Tech.
+  Rep. T060156, LIGO Laboratory (2006).
 
-\bibitem[{\citenamefont{Fricke et~al.}(2011)\citenamefont{Fricke, Smith,
-  Abbott, Adhikari, Dooley, Evans, Fritschel, Frolov, Kawabe, and
-  Waldman}}]{Fricke2011DC}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Fricke}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Smith}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Dooley}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Frolov}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Kawabe}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Waldman}},
-  \bibinfo{journal}{in preparation}  (\bibinfo{year}{2011}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid%
-=8442}.
+\bibitem{Fricke2011DC}
+T.~Fricke \emph{et~al.}, Classical and Quantum Gravity, in preparation  (2011).
 
-\bibitem[{\citenamefont{Kissel}(2010)}]{KisselThesis}
-\bibinfo{author}{\bibfnamefont{J.~S.} \bibnamefont{Kissel}}, Ph.D. thesis,
-  \bibinfo{school}{Louisiana State University} (\bibinfo{year}{2010}).
+\bibitem{KisselThesis}
+J.~S. Kissel, \enquote{Calibrating and improving the sensitivity of the {LIGO}
+  detectors}, Ph.D. thesis, Louisiana State University (2010).
 
-\bibitem[{\citenamefont{Frede et~al.}(2007)\citenamefont{Frede, Schulz,
-  Wilhelm, Kwee, Seifert, Willke, and Kracht}}]{Frede2007Fundamental}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Frede}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Schulz}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Wilhelm}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Kwee}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Seifert}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Willke}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kracht}},
-  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
-  \bibinfo{pages}{459} (\bibinfo{year}{2007}),
-  \urlprefix\url{http://dx.doi.org/10.1364/OE.15.000459}.
+\bibitem{Frede2007Fundamental}
+M.~Frede, B.~Schulz, R.~Wilhelm, P.~Kwee, F.~Seifert, B.~Willke, and D.~Kracht,
+  Opt. Express \textbf{15}, 459 (2007).
 
-\bibitem[{\citenamefont{Willems et~al.}(2009)\citenamefont{Willems, Brooks,
-  Mageswaran, Sannibale, Vorvick, Atkinson, Amin, and
-  Adams}}]{Willems2009Thermal}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Willems}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Brooks}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Mageswaran}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Sannibale}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Vorvick}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Atkinson}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Amin}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Adams}},
-  \emph{\bibinfo{title}{{Thermal Compensation in Enhanced LIGO}}}
-  (\bibinfo{year}{2009}).
+\bibitem{Willems2009Thermal}
+P.~Willems, A.~Brooks, M.~Mageswaran, V.~Sannibale, C.~Vorvick, D.~Atkinson,
+  R.~Amin, and C.~Adams, \enquote{{Thermal Compensation in Enhanced LIGO}},
+  (2009).
 
-\bibitem[{\citenamefont{L\"{u}ck et~al.}(2010)\citenamefont{L\"{u}ck, Affeldt,
-  Degallaix, Freise, Grote, Hewitson, Hild, Leong, Prijatelj, Strain
-  et~al.}}]{Luck2010Upgrade}
-\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{L\"{u}ck}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Affeldt}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Degallaix}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Freise}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Grote}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Hewitson}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Hild}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Leong}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Prijatelj}},
-  \bibinfo{author}{\bibfnamefont{K.~A.} \bibnamefont{Strain}},
-  \bibnamefont{et~al.}, \bibinfo{journal}{Journal of Physics: Conference
-  Series} \textbf{\bibinfo{volume}{228}}, \bibinfo{pages}{012012+}
-  (\bibinfo{year}{2010}), ISSN \bibinfo{issn}{1742-6596},
-  \urlprefix\url{http://dx.doi.org/10.1088/1742-6596/228/1/012012}.
+\bibitem{Luck2010Upgrade}
+H.~L\"{u}ck \emph{et~al.}, Journal of Physics: Conference Series \textbf{228},
+  012012+ (2010).
 
-\bibitem[{\citenamefont{Solimeno et~al.}(1991)\citenamefont{Solimeno, Barone,
-  de~Lisio, Di~Fiore, Milano, and Russo}}]{Solimeno1991FabryPerot}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Solimeno}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Barone}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{de~Lisio}},
-  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Di~Fiore}},
-  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Milano}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Russo}},
-  \bibinfo{journal}{Physical Review A} \textbf{\bibinfo{volume}{43}},
-  \bibinfo{pages}{6227} (\bibinfo{year}{1991}),
-  \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.43.6227}.
+\bibitem{Solimeno1991FabryPerot}
+S.~Solimeno, F.~Barone, C.~de~Lisio, L.~Di~Fiore, L.~Milano, and G.~Russo,
+  Physical Review A \textbf{43}, 6227 (1991).
 
-\bibitem[{\citenamefont{Sidles and Sigg}(2006)}]{Sidles2006Optical}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Sidles}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
-  \bibinfo{journal}{Physics Letters A} \textbf{\bibinfo{volume}{354}},
-  \bibinfo{pages}{167} (\bibinfo{year}{2006}), ISSN \bibinfo{issn}{03759601},
-  \urlprefix\url{http://dx.doi.org/10.1016/j.physleta.2006.01.051}.
+\bibitem{Sidles2006Optical}
+J.~Sidles and D.~Sigg, Physics Letters A \textbf{354}, 167 (2006).
 
-\bibitem[{\citenamefont{Hirose et~al.}(2010)\citenamefont{Hirose, Kawabe, Sigg,
-  Adhikari, and Saulson}}]{Hirose2010Angular}
-\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Hirose}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Kawabe}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.~R.} \bibnamefont{Saulson}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{49}},
-  \bibinfo{pages}{3474} (\bibinfo{year}{2010}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.49.003474}.
+\bibitem{Hirose2010Angular}
+E.~Hirose, K.~Kawabe, D.~Sigg, R.~Adhikari, and P.~R. Saulson, Appl. Opt.
+  \textbf{49}, 3474 (2010).
 
-\bibitem[{\citenamefont{Barsotti and Evans}(2009)}]{Barsotti2009Modeling}
-\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Barsotti}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Evans}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{T080186}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{2009}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid%
-=6570}.
+\bibitem{Barsotti2009Modeling}
+L.~Barsotti and M.~Evans, \enquote{{Modeling of Alignment Sensing and Control
+  for Enhanced LIGO}}, Tech. Rep. T080186, LIGO Laboratory (2009).
 
-\bibitem[{\citenamefont{Fricke}(2011)}]{TobinThesis}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Fricke}}, Ph.D. thesis,
-  \bibinfo{school}{Louisiana State University} (\bibinfo{year}{2011}).
+\bibitem{TobinThesis}
+T.~Fricke, \enquote{{DC Readout in Enhanced LIGO}}, Ph.D. thesis, Louisiana
+  State University (2011).
 
-\bibitem[{\citenamefont{Camp et~al.}(1996)\citenamefont{Camp, Reitze, and
-  Tanner}}]{Camp1996InputOutput}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Camp}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Reitze}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Tanner}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T960170},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1996}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28745}.
+\bibitem{Camp1996InputOutput}
+J.~Camp, D.~Reitze, and D.~Tanner, \enquote{{Input/Output Optics Conceptual
+  Design}}, Tech. Rep. T960170, LIGO Laboratory (1996).
 
-\bibitem[{\citenamefont{Camp et~al.}(1997)\citenamefont{Camp, Reitze, and
-  Tanner}}]{Camp1997Input}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Camp}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Reitze}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Tanner}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T960093},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1997}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28680}.
+\bibitem{Camp1997Input}
+J.~Camp, D.~Reitze, and D.~Tanner, \enquote{{Input Optics Design Requirements
+  Document}}, Tech. Rep. T960093, LIGO Laboratory (1997).
 
-\bibitem[{\citenamefont{Fritschel et~al.}(2001)\citenamefont{Fritschel, Bork,
-  Gonz\'{a}lez, Mavalvala, Ouimette, Rong, Sigg, and
-  Zucker}}]{Fritschel2001Readout}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Bork}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Gonz\'{a}lez}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Mavalvala}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Ouimette}},
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Rong}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Zucker}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{40}},
-  \bibinfo{pages}{4988} (\bibinfo{year}{2001}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.40.004988}.
+\bibitem{Fritschel2001Readout}
+P.~Fritschel, R.~Bork, G.~Gonz\'{a}lez, N.~Mavalvala, D.~Ouimette, H.~Rong,
+  D.~Sigg, and M.~Zucker, Appl. Opt. \textbf{40}, 4988 (2001).
 
-\bibitem[{\citenamefont{Zucker}(2002)}]{Zucker2002H1}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Zucker}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{T020113}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{2002}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=27031}.
+\bibitem{Zucker2002H1}
+M.~Zucker, \enquote{{H1 Common-Mode Wavelength Control Overview}}, Tech. Rep.
+  T020113, LIGO Laboratory (2002).
 
-\bibitem[{\citenamefont{Adhikari et~al.}(1998)\citenamefont{Adhikari, Bengston,
-  Buchler, Delker, Reitze, Shu, Tanner, and Yoshida}}]{Adhikari1998Input}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Bengston}},
-  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Buchler}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Delker}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Reitze}},
-  \bibinfo{author}{\bibfnamefont{Q.-z.} \bibnamefont{Shu}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Tanner}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Yoshida}},
-  \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{1998}).
+\bibitem{Adhikari1998Input}
+R.~Adhikari, A.~Bengston, Y.~Buchler, T.~Delker, D.~Reitze, Q.-z. Shu,
+  D.~Tanner, and S.~Yoshida, \enquote{{Input Optics Final Design}}, Tech. Rep.
+  T980009, LIGO Laboratory (1998).
 
-\bibitem[{\citenamefont{Group and Group}(2006)}]{UFLIGOGroup2006Upgrading}
-\bibinfo{author}{\bibfnamefont{U.~L.} \bibnamefont{Group}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Group}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{E060003}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{2006}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=23578}.
+\bibitem{UFLIGOGroup2006Upgrading}
+{UF LIGO Group} and {IAP Group}, \enquote{{Upgrading the Input Optics for High
+  Power Operation}}, Tech. Rep. E060003, LIGO Laboratory (2006).
 
-\bibitem[{\citenamefont{Khazanov et~al.}(1999)\citenamefont{Khazanov, Kulagin,
-  Yoshida, Tanner, and Reitze}}]{Khazanov1999Investigation}
-\bibinfo{author}{\bibfnamefont{E.~A.} \bibnamefont{Khazanov}},
-  \bibinfo{author}{\bibfnamefont{O.~V.} \bibnamefont{Kulagin}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Yoshida}},
-  \bibinfo{author}{\bibfnamefont{D.~B.} \bibnamefont{Tanner}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~H.}
-  \bibnamefont{Reitze}}, \bibinfo{journal}{IEEE Journal of Quantum Electronics}
-  \textbf{\bibinfo{volume}{35}}, \bibinfo{pages}{1116} (\bibinfo{year}{1999}),
-  ISSN \bibinfo{issn}{00189197},
-  \urlprefix\url{http://dx.doi.org/10.1109/3.777210}.
+\bibitem{Khazanov1999Investigation}
+E.~A. Khazanov, O.~V. Kulagin, S.~Yoshida, D.~B. Tanner, and D.~H. Reitze, IEEE
+  Journal of Quantum Electronics \textbf{35}, 1116 (1999).
 
-\bibitem[{\citenamefont{Bullington et~al.}(2008)\citenamefont{Bullington,
-  Lantz, Fejer, and Byer}}]{Bullington2008Modal}
-\bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Bullington}},
-  \bibinfo{author}{\bibfnamefont{B.~T.} \bibnamefont{Lantz}},
-  \bibinfo{author}{\bibfnamefont{M.~M.} \bibnamefont{Fejer}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{R.~L.} \bibnamefont{Byer}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{47}},
-  \bibinfo{pages}{2840} (\bibinfo{year}{2008}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.47.002840}.
+\bibitem{Bullington2008Modal}
+A.~L. Bullington, B.~T. Lantz, M.~M. Fejer, and R.~L. Byer, Appl. Opt.
+  \textbf{47}, 2840 (2008).
 
-\bibitem[{\citenamefont{Arain}(2007)}]{Arain2007Note}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Arain}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{T070095}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{2007}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=27807}.
+\bibitem{Arain2007Note}
+M.~Arain, \enquote{{A Note on Substrate Thermal Lensing in Mode Cleaner}},
+  Tech. Rep. T070095, LIGO Laboratory (2007).
 
-\bibitem[{Que(2008)}]{Quetschke2008ElectroOptic}
-\emph{\bibinfo{title}{{Electro-Optic Modulators and Modulation for Enhanced
-  LIGO and Beyond}}} (\bibinfo{publisher}{Optical Society of America},
-  \bibinfo{year}{2008}),
-  \urlprefix\url{http://www.opticsinfobase.org/abstract.cfm?id=169025}.
+\bibitem{Quetschke2008ElectroOptic}
+V.~Quetschke, Coherent Optical Technologies and Applications pp. CMC1+ (2008).
 
-\bibitem[{\citenamefont{Raab and Whitcomb}(1992)}]{Raab1992Estimation}
-\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Raab}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Whitcomb}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T920004},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1992}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28296}.
+\bibitem{Raab1992Estimation}
+F.~Raab and S.~Whitcomb, \enquote{{Estimation of Special Optical Properties of
+  a Triangular Ring Cavity}}, Tech. Rep. T920004, LIGO Laboratory (1992).
 
-\bibitem[{\citenamefont{Khazanov et~al.}(2000)\citenamefont{Khazanov, Andreev,
-  Babin, Kiselev, Palashov, and Reitze}}]{Khazanov2000Suppression}
-\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Khazanov}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Andreev}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Babin}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Kiselev}},
-  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Palashov}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.~H.} \bibnamefont{Reitze}},
-  \bibinfo{journal}{J. Opt. Soc. Am. B} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{99} (\bibinfo{year}{2000}),
-  \urlprefix\url{http://dx.doi.org/10.1364/JOSAB.17.000099}.
+\bibitem{Khazanov2000Suppression}
+E.~Khazanov, N.~Andreev, A.~Babin, A.~Kiselev, O.~Palashov, and D.~H. Reitze,
+  J. Opt. Soc. Am. B \textbf{17}, 99 (2000).
 
-\bibitem[{\citenamefont{Mueller et~al.}(2002)\citenamefont{Mueller, Amin,
-  Guagliardo, McFeron, Lundock, Reitze, and Tanner}}]{Mueller2002Method}
-\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Mueller}},
-  \bibinfo{author}{\bibfnamefont{R.~S.} \bibnamefont{Amin}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Guagliardo}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{McFeron}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Lundock}},
-  \bibinfo{author}{\bibfnamefont{D.~H.} \bibnamefont{Reitze}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~B.}
-  \bibnamefont{Tanner}}, \bibinfo{journal}{Classical and Quantum Gravity}
-  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{1793+} (\bibinfo{year}{2002}),
-  ISSN \bibinfo{issn}{0264-9381},
-  \urlprefix\url{http://dx.doi.org/10.1088/0264-9381/19/7/376}.
+\bibitem{Mueller2002Method}
+G.~Mueller, R.~S. Amin, D.~Guagliardo, D.~McFeron, R.~Lundock, D.~H. Reitze,
+  and D.~B. Tanner, Classical and Quantum Gravity \textbf{19}, 1793+ (2002).
 
-\bibitem[{\citenamefont{Khazanov et~al.}(2004)\citenamefont{Khazanov, Andreev,
-  Mal'shakov, Palashov, Poteomkin, Sergeev, Shaykin, Zelenogorsky, Ivanov, Amin
-  et~al.}}]{Khazanov2004Compensation}
-\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Khazanov}},
-  \bibinfo{author}{\bibfnamefont{N.~F.} \bibnamefont{Andreev}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Mal'shakov}},
-  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Palashov}},
-  \bibinfo{author}{\bibfnamefont{A.~K.} \bibnamefont{Poteomkin}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Sergeev}},
-  \bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Shaykin}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Zelenogorsky}},
-  \bibinfo{author}{\bibfnamefont{I.~A.} \bibnamefont{Ivanov}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Amin}}, \bibnamefont{et~al.},
-  \bibinfo{journal}{IEEE Journal of Quantum Electronics}
-  \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{1500} (\bibinfo{year}{2004}),
-  ISSN \bibinfo{issn}{0018-9197},
-  \urlprefix\url{http://dx.doi.org/10.1109/JQE.2004.834766}.
+\bibitem{Khazanov2004Compensation}
+E.~Khazanov \emph{et~al.}, IEEE Journal of Quantum Electronics \textbf{40},
+  1500 (2004).
 
-\bibitem[{\citenamefont{Collaboration}(2008)}]{TheVIRGOCollaboration2008Invacu%
-um}
-\bibinfo{author}{\bibfnamefont{T.~V.} \bibnamefont{Collaboration}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{47}},
-  \bibinfo{pages}{5853} (\bibinfo{year}{2008}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.47.005853}.
+\bibitem{TheVIRGOCollaboration2008Invacuum}
+{The VIRGO Collaboration}, Appl. Opt. \textbf{47}, 5853 (2008).
 
-\bibitem[{\citenamefont{Delker et~al.}(1997)\citenamefont{Delker, Adhikari,
-  Yoshida, and Reitze}}]{Delker1997Design}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Delker}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Yoshida}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Reitze}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T970143},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1997}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28875}.
+\bibitem{Delker1997Design}
+T.~Delker, R.~Adhikari, S.~Yoshida, and D.~Reitze, \enquote{{Design
+  Considerations for LIGO Mode-Matching Telescopes}}, Tech. Rep. T970143, LIGO
+  Laboratory (1997).
 
-\bibitem[{\citenamefont{Punturo}(2007)}]{Punturo2007Mirror}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Punturo}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{VIR-001A-07}, \bibinfo{institution}{VIRGO}
-  (\bibinfo{year}{2007}), \urlprefix\url{https://tds.ego-gw.it/ql/?c=1505}.
+\bibitem{1998Component}
+\enquote{{Component Specification: Substrate, Mode Cleaner Flat Mirror}}, Tech.
+  Rep. E970148, LIGO Laboratory (1998).
 
-\bibitem[{\citenamefont{Kwee et~al.}(2007)\citenamefont{Kwee, Seifert, Willke,
-  and Danzmann}}]{Kwee2007Laser}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Kwee}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Seifert}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Willke}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Danzmann}},
-  \bibinfo{journal}{The Review of scientific instruments}
-  \textbf{\bibinfo{volume}{78}} (\bibinfo{year}{2007}), ISSN
-  \bibinfo{issn}{0034-6748},
-  \urlprefix\url{http://dx.doi.org/10.1063/1.2754400}.
+\bibitem{Punturo2007Mirror}
+M.~Punturo, \enquote{{The mirror resonant modes method for measuring the
+  optical absorption}}, Tech. Rep. VIR-001A-07, VIRGO (2007).
 
-\bibitem[{\citenamefont{Fritschel and
-  Shoemaker}(1997)}]{Fritschel1997Alignment}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Shoemaker}},
-  \bibinfo{type}{Tech. Rep.} \bibinfo{number}{T952007},
-  \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1997}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28608}.
+\bibitem{Kwee2007Laser}
+P.~Kwee, F.~Seifert, B.~Willke, and K.~Danzmann, The Review of scientific
+  instruments \textbf{78} (2007).
 
-\bibitem[{\citenamefont{Group}(1998)}]{ISCGroup1998ASC}
-\bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Group}}, \bibinfo{type}{Tech.
-  Rep.}, \bibinfo{institution}{LIGO Laboratory} (\bibinfo{year}{1998}).
+\bibitem{Fritschel1997Alignment}
+P.~Fritschel and D.~Shoemaker, \enquote{{Alignment Sensing/Control Design
+  Requirements Document}}, Tech. Rep. T952007, LIGO Laboratory (1997).
 
-\bibitem[{\citenamefont{Sigg}(1996)}]{Sigg1996Wavefront}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}}, \bibinfo{type}{Tech.
-  Rep.} \bibinfo{number}{T960111}, \bibinfo{institution}{LIGO Laboratory}
-  (\bibinfo{year}{1996}),
-  \urlprefix\url{https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=28694}.
+\bibitem{ISCGroup1998ASC}
+{ISC Group}, \enquote{{ASC Wavefront Sensing Final Design}}, Tech. Rep.
+  T980064, LIGO Laboratory (1998).
 
-\bibitem[{\citenamefont{Anderson}(1984)}]{Anderson1984Alignment}
-\bibinfo{author}{\bibfnamefont{D.~Z.} \bibnamefont{Anderson}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{23}},
-  \bibinfo{pages}{2944} (\bibinfo{year}{1984}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.23.002944}.
+\bibitem{Wiener1975Extrapolation}
+N.~Wiener, \emph{{Extrapolation, Inerpolation, and Smoothing of Stationary Time
+  Series}} (The M.I.T. Press, 1975).
 
-\bibitem[{\citenamefont{Fritschel et~al.}(1998)\citenamefont{Fritschel,
-  Mavalvala, Shoemaker, Sigg, Zucker, and
-  Gonz\'{a}lez}}]{Fritschel1998Alignment}
-\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Fritschel}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Mavalvala}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Shoemaker}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Sigg}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Zucker}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Gonz\'{a}lez}},
-  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{37}},
-  \bibinfo{pages}{6734} (\bibinfo{year}{1998}),
-  \urlprefix\url{http://dx.doi.org/10.1364/AO.37.006734}.
+\bibitem{Sigg1996Wavefront}
+D.~Sigg, \enquote{{Wavefront Sensor}}, Tech. Rep. T960111, LIGO Laboratory
+  (1996).
 
-\bibitem[{\citenamefont{Siegman}(1986)}]{Siegman1986Lasers}
-\bibinfo{author}{\bibfnamefont{A.~E.} \bibnamefont{Siegman}},
-  \emph{\bibinfo{title}{{Lasers}}} (\bibinfo{publisher}{University Science
-  Books}, \bibinfo{address}{55D Gate Five Road, Sausalito, CA 94965},
-  \bibinfo{year}{1986}).
+\bibitem{Anderson1984Alignment}
+D.~Z. Anderson, Appl. Opt. \textbf{23}, 2944 (1984).
 
-\bibitem[{\citenamefont{Barsotti}(2008)}]{Barsotti2008Untitled}
-\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Barsotti}}
-  (\bibinfo{year}{2008}).
+\bibitem{Fritschel1998Alignment}
+P.~Fritschel, N.~Mavalvala, D.~Shoemaker, D.~Sigg, M.~Zucker, and
+  G.~Gonz\'{a}lez, Appl. Opt. \textbf{37}, 6734 (1998).
 
-\bibitem[{\citenamefont{Wiener}(1975)}]{Wiener1975Extrapolation}
-\bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Wiener}},
-  \emph{\bibinfo{title}{{Extrapolation, Inerpolation, and Smoothing of
-  Stationary Time Series}}} (\bibinfo{publisher}{The M.I.T. Press},
-  \bibinfo{year}{1975}), ISBN \bibinfo{isbn}{9780262730051},
-  \urlprefix\url{http://www.worldcat.org/isbn/9780262730051}.
+\bibitem{Siegman1986Lasers}
+A.~E. Siegman, \emph{{Lasers}} (University Science Books, 55D Gate Five Road,
+  Sausalito, CA 94965, 1986).
+
+\bibitem{Barsotti2008}
+L.~Barsotti, \enquote{//}, private communication (2008).
 
 \end{thebibliography}
