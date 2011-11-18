@@ -36,7 +36,7 @@ two different wave packets.\footnote{It should be noted that $h$ is
   use the approximation that the gravitational wave wavelength
   $\lambda_{gw}$ is much larger than the Michelson arm length
   $L$. This means that the temporal variation of $h(t)$ is negligible
-  during the time it takes the photon to make its roundtrip.}
+  during the time it takes the photon to make its round trip.}
 
 In practice we send a
 continuous electromagnetic wave into the interferometer. The
@@ -55,12 +55,12 @@ sensitivity.
 
 
 
-\section{Power-recycled Fabry-P\'{e}rot Michelson Interferometers} 
-The LIGO detector configuration is a power-recycled Fabry-P\'{e}rot
+\section{Power-recycled Fabry-Perot Michelson Interferometers} 
+The LIGO detector configuration is a power-recycled Fabry-Perot
 Michelson laser interferometer as depicted in
 Fig.~\ref{fig:IFOschematic}. A beam splitter (BS) directs 1064~nm
 light from a diode-pumped, power amplified, and intensity and
-frequency stabilized Nd:YAG laser to the Fabry-P\'{e}rot arms, which
+frequency stabilized Nd:YAG laser to the Fabry-Perot arms, which
 are made of an input test mass mirror (ITM) and an end test mass
 mirror (ETM). Both arms are of length $L \approx 4 \text{ km}$ and are
 set to maintain nearly perfect destructive interference of the
@@ -72,20 +72,20 @@ constructively-interfered light back into the interferometer.
 \begin{figure}
 \begin{centering}
 \includegraphics{figures/IFOsimple_thesis.pdf}
-\caption[Power-recycled Fabry-P\'{e}rot Michelson laser
-interferometer]{Power-recycled Fabry-P\'{e}rot Michelson laser
+\caption[Power-recycled Fabry-Perot Michelson laser
+interferometer]{Power-recycled Fabry-Perot Michelson laser
   interferometer.}
 \label{fig:IFOschematic}
 \end{centering}
 \end{figure}
 
-The Fabry-P\'{e}rot arms are a modification to the Michelson that
+The Fabry-Perot arms are a modification to the Michelson that
 increases the change in phase measured at the AS port compared to that
-for a simple Michelson. Rather than make a single roundtrip down each
-arm, the light is trapped by the Fabry-P\'{e}rot cavity, experiencing many
-roundtrips before returning to the beam splitter and interfering with
+for a simple Michelson. Rather than make a single round trip down each
+arm, the light is trapped by the Fabry-Perot cavity, experiencing many
+round trips before returning to the beam splitter and interfering with
 the light from the other arm. The effect is that Eq.~\ref{eq:deltaphi}
-for the Fabry-P\'{e}rot Michelson includes a frequency-dependent phase
+for the Fabry-Perot Michelson includes a frequency-dependent phase
 gain factor, $g_{\phi}(f)$:
 \begin{equation}
 \Delta \phi = \frac{2 L}{c} \omega g_{\phi}(f) h.
@@ -185,7 +185,7 @@ power at the AS port for a given GW strain:
 \begin{itemize}
 \item Make the arms longer. \vspace{-10 pt}
 \item Increase the power at the beamsplitter. \vspace{-10 pt}
-\item Increase the phase gain of the Fabry-P\'{e}rot arms.
+\item Increase the phase gain of the Fabry-Perot arms.
 \end{itemize}
 Our ability to detect gravitational wave strain is dependent not only
 on the optical gain, but also on the detector noises, which will mask
@@ -193,17 +193,18 @@ a weak GW signal. No matter how large a signal one might have, it will
 not be found confidently, or at all, if there is too much noise.
 
 
-\subsection{Noises}
+\subsection{Noise}
 The sources of noise which contaminate the detector's output can be 
 generally grouped into two categories:
 \begin{itemize}
 \item displacement noise \vspace{-10 pt}
 \item sensing noise
 \end{itemize}
-Displacement noises are those that create real motion of the mirrors
-(including the DARM degree of freedom), while sensing noises are those
-that arise in the process of measuring the electric field at the 
-detector's output.
+Displacement noises are those that create real motion of the mirrors,
+%(including those that affect the DARM degree of freedom)
+while
+sensing noises are those that arise in the process of measuring the
+electric field at the detector's output.
 
 The primary displacement noise that plagues terrestrial laser
 interferometers is motion of the ground, i.e. seismic noise.  Thermal
@@ -265,7 +266,7 @@ arrangements.
 The noise floor due to sensing noise is improved by increasing the
 optical gain. 
 In particular, the contribution due to shot noise  may be found by 
-dividing the shot noise amplitude spectral density by the optical gain,
+dividing the shot noise amplitude spectral density by the optical gain:
 \begin{equation}
 h_{shot} = \sqrt{\frac{h_p}{2 P_{BS} \nu}} \frac{c}{4 \pi L g_{\phi}}
 \quad \text{W}/\sqrt{\text{Hz}}.
@@ -321,15 +322,15 @@ constant).
 
 \section{Controlling the Interferometer}
 The ability of the interferometer to operate as described above
-requires that the many interferometer
-cavities be held on resonance. The motion
-of the mirrors in the absence of control is much too large 
---on the order of 1\micron, a full wavelength!--to maintain resonance.
-The motion of the interferometer mirrors must therefore be controlled.
-A feedback control system is implemented to hold the system sufficiently
-near (for DARM, within $\sim 10^{-13}$ m) the intended operating point so that the response to residual
-deviations remains linear.  (Calibration of the detector must take
-into account the action of the control system.)
+requires that the many interferometer cavities be held on
+resonance. The motion of the mirrors in the absence of control is much
+too large--on the order of 1~\micron, a full wavelength!--to maintain
+resonance.  The motion of the interferometer mirrors must therefore be
+controlled.  A feedback control system is implemented to hold the
+system sufficiently near (for DARM, within $\sim 10^{-13}$ m) the
+intended operating point so that the response to residual deviations
+remains linear. Calibration of the detector must take into account the
+action of the control system.
 
 % Since the strain sensitivity is determined
 % by mathematically undoing the (carefully measured) effect of the
@@ -397,13 +398,14 @@ many other auxiliary data streams are permanently recorded.
 \subsection{Mirror Suspension and Actuation}
 \label{sec:suspension}
 The primary interferometer optics are suspended in vacuum so that they
-act like free masses at the frequencies in the GW detection band, and
-so that they are isolated from ground motion. Each mirror is hung from
-a single wire that loops around the bottom of the barrel of the mirror
-as shown in Fig.~\ref{fig:suspension}. Stand-offs glued just above the
-mirror's center of mass on both sides of the barrel mark the final
-point of contact of the wire with the mirror, and both ends of the
-wire are clamped to the top of a suspension cage.
+act like free masses in the horizontal plane at the frequencies in the
+GW detection band, and so that they are isolated from ground
+motion. Each mirror is hung from a single wire that loops around the
+bottom of the barrel of the mirror as shown in
+Fig.~\ref{fig:suspension}. Stand-offs glued just above the mirror's
+center of mass on both sides of the barrel mark the final point of
+contact of the wire with the mirror, and both ends of the wire are
+clamped to the top of a suspension cage.
 
 \begin{figure}
 \begin{centering}
@@ -414,15 +416,14 @@ wire are clamped to the top of a suspension cage.
 \end{figure}
 
 Each mirror is equipped with four optical sensor and electro-magnetic
-(OSEM) actuators for rough sensing and fine control of the mirror position and orientation. Magnets arranged
-to form the four corners of a square are glued on the mirror's back
-surface which are enveloped by the OSEM solenoid coil. 
-The currents through each coil may be driven independently.
-Length control of the
-cavities, for instance, sends current of the same magnitude through
-each coil on a given mirror to provide a piston force for changing the
-mirror's position.  OSEM sensing is accomplished through simple shadow
-sensors.
+(OSEM) actuators for rough sensing and fine control of the mirror
+position and orientation. Magnets arranged to form the four corners of
+a square are glued on the mirror's back surface which are enveloped by
+the OSEM solenoid coil.  The currents through each coil may be driven
+independently.  Length control of the cavities, for instance, sends
+current of the same magnitude through each coil on a given mirror to
+provide a piston force for changing the mirror's position.  OSEM
+sensing is accomplished through simple shadow sensors.
 
 To avoid thermal noise, the mirror suspensions are designed to
 minimize dissipation.  Damping for the large optics is achieved
@@ -430,9 +431,9 @@ through electronic servos.  Motion of the optics corresponding to a
 change in cavity length is damped using simple velocity damping servos
 implemented using the OSEM sensors and actuators, while angular motion
 is sensed via optical levers.  The optical levers provide velocity
-damping\footnote{ The open loop transfer function of the optical lever
-  servo is described in Appendix~\ref{sec:oplevOLG}.  } only (no DC
-control) between 0.2~Hz and 2~Hz.
+damping only (no DC control) between 0.2~Hz and 2~Hz.\footnote{ The
+  open loop transfer function of the optical lever servo is described
+  in Appendix~\ref{sec:oplevOLG}.  }
 
 % The suspensions are AC damped at all times for each of the large
 % optics through optical lever witnesses. Keeping the mirrors quiet

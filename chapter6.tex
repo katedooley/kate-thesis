@@ -612,7 +612,7 @@ sensors that probe the PRC light degrade due to the presence of
 increased junk light that contributes shot noise but not
 signal. WFS1Q, WFS2I, and WFS2Q are the most sensitive to the PRC
 because their signals are derived from the 25~MHz sidebands. Their
-sensitivity to mirror motion is therefore subject to change. Since
+sensitivity to mirror motion is therefore subject to change. Because
 achieving a flat power build-up in the PRC is a difficult task (too
 much motion in the PRC is quite often a cause of lock loss when making
 measurements), we must update the real-time control system to reflect
@@ -926,7 +926,7 @@ to each other, not with respect to the ground.
 
 
 
-\section{ASC to DARM Noisebudget}
+\section{ASC to DARM Noise Budget}
 One of the most important figures of merit of ASC performance is how
 much noise the ASC contributes to DARM. We measure the coupling of the
 ASC to DARM by injecting broadband noise between 40 and 110 Hz in each
@@ -960,7 +960,7 @@ a time when the interferometer was locked with 14~W input power.
 \begin{centering}
 \subfigure[Pitch.]{\includegraphics{figures/opticspittoDARM.pdf}}
 \subfigure[Yaw.]{\includegraphics{figures/opticsyawtoDARM.pdf}}
-\caption[Optic to DARM noisebudget]{Optic to DARM noisebudget during a
+\caption[Optic to DARM noise budget]{Optic to DARM noise budget during a
   14~W lock.}% (July 17, 2009).
 \label{fig:optic2DARM}
 \end{centering}
@@ -970,8 +970,8 @@ a time when the interferometer was locked with 14~W input power.
 \begin{centering}
 \subfigure[Pitch.]{\includegraphics{figures/WFSpittoDARM.pdf}}
 \subfigure[Yaw.]{\includegraphics{figures/WFSyawtoDARM.pdf}}
-\caption[Wavefront sensor to DARM noisebudget]{Wavefront sensor to
-  DARM noisebudget during a 14~W lock.} % (July 17, 2009).}
+\caption[Wavefront sensor to DARM noise budget]{Wavefront sensor to
+  DARM noise budget during a 14~W lock.} % (July 17, 2009).}
 \label{fig:wfs2DARM}
 \end{centering}
 \end{figure}
@@ -986,11 +986,11 @@ Fig.~\ref{fig:optic2DARM}.
 
 Because two angular control signals, the WFS and the optical levers,
 independently contribute signals to the suspension angular control, we
-can separate their contributions in the noisebudget. Furthermore, we
+can separate their contributions in the noise budget. Furthermore, we
 compute the quadrature sum of the pitch and yaw contributions,
 assuming these two degrees of freedom are de-coupled, thus creating an
 upper limit for the ASC contribution to the DARM
-noisebudget. Figure~\ref{fig:asc2darm} shows the final ASC noise in
+noise budget. Figure~\ref{fig:asc2darm} shows the final ASC noise in
 DARM summary for a 16~W lock at night.
 
 \begin{figure}
@@ -1032,7 +1032,7 @@ sensitivity.]{Effect of the WFS1 lowpass filter cutoff frequency on
 \end{figure}
 
 The cut-off frequency of the lowpass filters for the WFS control are
-of particular importance in the DARM noisebudget. The lowpass filter
+of particular importance in the DARM noise budget. The lowpass filter
 is necessary for suppressing the impression of sensing noise on
 suspension control signals. Steepening the cut-off frequency results
 in less sensing noise impression, but each pole used to achieve the

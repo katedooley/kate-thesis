@@ -14,12 +14,12 @@
 \contentsline {subsection}{\numberline {1.5.2}The Angular Sensing and Control High Power Story}{24}{subsection.1.5.2}
 \contentsline {chapter}{\numberline {2}{LASER INTERFEROMETERS FOR GRAVITATIONAL-WAVE DETECTION}}{25}{chapter.2}
 \contentsline {section}{\numberline {2.1}Measuring Gravitational-wave Strain with Light}{25}{section.2.1}
-\contentsline {section}{\numberline {2.2}Power-recycled Fabry-P\'{e}rot Michelson Interferometers}{26}{section.2.2}
+\contentsline {section}{\numberline {2.2}Power-recycled Fabry-Perot Michelson Interferometers}{26}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}DC Readout}{27}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}DARM}{28}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}DARM Optical Gain}{29}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Signal Versus Noise}{29}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Noises}{29}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}Noise}{29}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Noise Floor}{30}{subsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.2.1}Displacement noise floor}{30}{subsubsection.2.3.2.1}
 \contentsline {subsubsection}{\numberline {2.3.2.2}Sensing noise floor}{30}{subsubsection.2.3.2.2}
@@ -34,18 +34,18 @@
 \contentsline {subsection}{\numberline {3.1.3}Faraday Isolator}{36}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Mode-matching Telescope}{36}{subsection.3.1.4}
 \contentsline {section}{\numberline {3.2}Thermal Problems in Initial LIGO}{37}{section.3.2}
-\contentsline {section}{\numberline {3.3}Enhanced LIGO Input Optics Design}{39}{section.3.3}
+\contentsline {section}{\numberline {3.3}Enhanced LIGO Input Optics Design}{38}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Electro-optic Modulator Design}{39}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Mode Cleaner Design}{42}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Faraday Isolator Design}{43}{subsection.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.3.1}Thermal birefringence}{44}{subsubsection.3.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.3.2}Thermal lensing}{44}{subsubsection.3.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3.3}Polarizers}{46}{subsubsection.3.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.3}Polarizers}{44}{subsubsection.3.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.3.4}Heat conduction}{46}{subsubsection.3.3.3.4}
 \contentsline {subsection}{\numberline {3.3.4}Mode-matching Telescope Design}{47}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Performance of the Enhanced LIGO Input Optics}{48}{section.3.4}
+\contentsline {section}{\numberline {3.4}Performance of the Enhanced LIGO Input Optics}{47}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Optical efficiency}{48}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Mode cleaner losses}{49}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Mode cleaner losses}{48}{subsubsection.3.4.1.1}
 \contentsline {subsubsection}{\numberline {3.4.1.2}Faraday isolator losses}{51}{subsubsection.3.4.1.2}
 \contentsline {subsection}{\numberline {3.4.2}Faraday Isolation Ratio}{51}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Thermal Steering}{52}{subsection.3.4.3}
@@ -84,7 +84,7 @@
 \contentsline {subsection}{\numberline {6.4.1}Power Scaling}{99}{subsection.6.4.1}
 \contentsline {section}{\numberline {6.5}WFS Servo Open Loop Transfer Functions}{100}{section.6.5}
 \contentsline {section}{\numberline {6.6}Residual Angular Motion}{102}{section.6.6}
-\contentsline {section}{\numberline {6.7}ASC to DARM Noisebudget}{104}{section.6.7}
+\contentsline {section}{\numberline {6.7}ASC to DARM Noise Budget}{104}{section.6.7}
 \contentsline {subsection}{\numberline {6.7.1}Tuning the Cut-off Filters}{110}{subsection.6.7.1}
 \contentsline {section}{\numberline {6.8}Experimental Measurement of the Sidles-Sigg Effect}{111}{section.6.8}
 \contentsline {chapter}{\numberline {7}{CONCLUSIONS}}{115}{chapter.7}

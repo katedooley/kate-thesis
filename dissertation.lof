@@ -1,15 +1,15 @@
 \contentsline {figure}{\numberline {{1-1}}{\ignorespaces Depiction of strain}}{19}{figure.1.1}
 \contentsline {figure}{\numberline {{1-2}}{\ignorespaces Strain sensitivities of LIGO-VIRGO collaboration interferometers}}{22}{figure.1.2}
-\contentsline {figure}{\numberline {{2-1}}{\ignorespaces Power-recycled Fabry-P\'{e}rot Michelson laser interferometer}}{27}{figure.2.1}
+\contentsline {figure}{\numberline {{2-1}}{\ignorespaces Power-recycled Fabry-Perot Michelson laser interferometer}}{27}{figure.2.1}
 \contentsline {figure}{\numberline {{2-2}}{\ignorespaces The DC readout dark fringe}}{28}{figure.2.2}
 \contentsline {figure}{\numberline {{2-3}}{\ignorespaces Sketch of a LIGO suspension}}{32}{figure.2.3}
 \contentsline {figure}{\numberline {{3-1}}{\ignorespaces Block diagram of the Input Optics subsystem.}}{35}{figure.3.1}
 \contentsline {figure}{\numberline {{3-2}}{\ignorespaces Beam profile through the Input Optics}}{37}{figure.3.2}
 \contentsline {figure}{\numberline {{3-3}}{\ignorespaces Enhanced LIGO Input Optics optical and sensing configuration}}{40}{figure.3.3}
 \contentsline {figure}{\numberline {{3-4}}{\ignorespaces Photographs of Enhanced LIGO Input Optics \emph {in situ}}}{41}{figure.3.4}
-\contentsline {figure}{\numberline {{3-5}}{\ignorespaces Electro-optic modulator design}}{43}{figure.3.5}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {A single RTP crystal is sandwiched between three sets of electrodes that apply three different modulation frequencies. The wedged ends of the crystal separate the polarizations of the light. The p-polarized light is used in the interferometer.}}}{43}{figure.3.5}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {A schematic for each of the three impedance matching circuits of the EOM. For the three sets of electrodes, each of which creates its own $C_{crystal}$, a capacitor is placed parallel to the LC circuit formed by the crystal and a hand-wound inductor. The circuits provide 50\nobreakspace {}$\Omega $ input impedance on resonance and are housed in a separate box from the crystal.}}}{43}{figure.3.5}
+\contentsline {figure}{\numberline {{3-5}}{\ignorespaces Electro-optic modulator design}}{42}{figure.3.5}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {A single RTP crystal is sandwiched between three sets of electrodes that apply three different modulation frequencies. The wedged ends of the crystal separate the polarizations of the light. The p-polarized light is used in the interferometer.}}}{42}{figure.3.5}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {A schematic for each of the three impedance matching circuits of the EOM. For the three sets of electrodes, each of which creates its own $C_{crystal}$, a capacitor is placed parallel to the LC circuit formed by the crystal and a hand-wound inductor. The circuits provide 50\nobreakspace {}$\Omega $ input impedance on resonance and are housed in a separate box from the crystal.}}}{42}{figure.3.5}
 \contentsline {figure}{\numberline {{3-6}}{\ignorespaces Faraday isolator photograph and schematic.}}{45}{figure.3.6}
 \contentsline {figure}{\numberline {{3-7}}{\ignorespaces Photo of an indium-wrapped TGG crystal}}{47}{figure.3.7}
 \contentsline {figure}{\numberline {{3-8}}{\ignorespaces Data from the mode cleaner absorption measurement}}{50}{figure.3.8}
@@ -44,10 +44,10 @@
 \contentsline {figure}{\numberline {{6-6}}{\ignorespaces Beam spot motion on the ITMs and ETMs during a 16\nobreakspace {}W lock}}{103}{figure.6.6}
 \contentsline {figure}{\numberline {{6-7}}{\ignorespaces Angular motion suppression due to the ASC}}{105}{figure.6.7}
 \contentsline {figure}{\numberline {{6-8}}{\ignorespaces Individual mirror motion with and without ASC}}{106}{figure.6.8}
-\contentsline {figure}{\numberline {{6-9}}{\ignorespaces Optic to DARM noisebudget}}{107}{figure.6.9}
+\contentsline {figure}{\numberline {{6-9}}{\ignorespaces Optic to DARM noise budget}}{107}{figure.6.9}
 \contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{107}{figure.6.9}
 \contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{107}{figure.6.9}
-\contentsline {figure}{\numberline {{6-10}}{\ignorespaces Wavefront sensor to DARM noisebudget}}{108}{figure.6.10}
+\contentsline {figure}{\numberline {{6-10}}{\ignorespaces Wavefront sensor to DARM noise budget}}{108}{figure.6.10}
 \contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{108}{figure.6.10}
 \contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{108}{figure.6.10}
 \contentsline {figure}{\numberline {{6-11}}{\ignorespaces Total WFS and optical lever noise contribution to DARM during a 16 W lock at night}}{109}{figure.6.11}

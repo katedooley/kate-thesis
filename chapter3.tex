@@ -20,7 +20,7 @@ The Input Optics (IO)\footnote{The Input Optics was originally called
   the Input-Output Optics (IOO).} is one of the primary subsystems of the LIGO
 interferometers. Its purpose is to deliver an aligned, spatially
 pure, mode-matched beam with phase-modulation sidebands to the
-power-recycled Fabry-P\'{e}rot Michelson interferometer. The IO also
+power-recycled Fabry-Perot Michelson interferometer. The IO also
 prevents the backscattering of light into the laser and distributes
 the control sidebands reflected from the interferometer (designated
 the \emph{reflected port}) to photodiodes for sensing and controlling
@@ -33,8 +33,8 @@ operation. The conceptual design is found in
 Ref.~\citep{Camp1996InputOutput}.
 
 As shown in Fig.~\ref{fig:IOblock}, the Input Optics subsystem
-consists of four components located between the pre-stabilized laser
-and the power recycling mirror:
+consists of four principle components located between the
+pre-stabilized laser and the power recycling mirror:
 \begin{itemize}
 \item electro-optic modulator (EOM) \vspace{-10 pt}
 \item mode cleaner cavity (MC) \vspace{-10 pt}
@@ -86,7 +86,7 @@ The mode cleaner also plays an active role in laser frequency
 stabilization \citep{Zucker2002H1}. A frequency-stabilized laser is
 necessary for ensuring that the signal at the anti-symmetric port is
 due to arm length fluctuations rather than laser frequency
-fluctuations. In principle, the two-arm geometry of LIGO facilitates
+fluctuations. In principle, the near-equal two-arm geometry of LIGO facilitates
 this distinction, but imbalances between the arms allow frequency
 noise to couple into the gravitational wave channel. At low
 frequencies ($<$~100 Hz) the average interferometer arm length drives
@@ -107,13 +107,13 @@ addition, the MC passively suppresses beam jitter at frequencies above
 \subsection{Faraday Isolator}
 Faraday isolators are four-port optical devices which utilize the
 Faraday effect to allow for non-reciprocal polarization switching of
-laser beams.  Any reflected light from the interferometer due to
-impedance mismatch, mode mismatch, non-resonant sidebands, or signal
+laser beams.  Any reflected light from the interferometer (due to
+impedance mismatch, mode mismatch, non-resonant sidebands, or signal)
 needs to be diverted to protect the laser from back propagating light,
 which can introduce amplitude and phase noise.  This diversion of the
 reflected light is also necessary for extracting length and angular
 information about the interferometer's cavities. The Faraday isolator
-accomplishes both needs.
+fulfils both needs.
 
 
 \subsection{Mode-matching Telescope}
@@ -196,7 +196,7 @@ The Enhanced LIGO Input Optics design addressed the thermal effects
 that compromised the performance of Initial LIGO, and accommodated up
 to four times the power of Initial LIGO. Also, the design was a
 prototype for handling the 165~W laser planned for Advanced
-LIGO. Since the adverse thermal properties of the Initial LIGO IO
+LIGO. Because the adverse thermal properties of the Initial LIGO IO
 (beam drift, birefringence, and lensing) are all attributable
 primarily to absorption of laser light by the optical elements, the
 primary design consideration was finding optics with excellent
@@ -278,7 +278,7 @@ $dn_z/dT$ & 10$^{-6}$/K & 37 & .9 & 9 & .24 \\
 \end{table}
 
 We procured the RTP crystals from Raicol and packaged them into
-specially designed custom built modulators. The crystal dimensions are
+specially-designed, custom-built modulators. The crystal dimensions are
 $4 \times 4 \times 40$ mm and their faces are wedged by $2.85^\circ$
 and anti-reflection (AR) coated. The wedge serves to separate the
 polarizations and prevents an etalon effect, resulting in a
@@ -326,7 +326,7 @@ astigmatism, but this effect is negligible due to the small opening
 angle of the mode cleaner.
 
 The MC has a round-trip length of 24.5~m. The beam waist has a radius of
-1.63~mm and is located between two 45$^\circ$ flat mirrors, MC1 and
+1.63~mm and is located between the two 45$^\circ$ flat mirrors, MC1 and
 MC3 (see Fig. \ref{fig:IOschematic}). A concave third mirror, MC2,
 with an 18.15~m radius of curvature forms the far point of the mode
 cleaner's isosceles triangle shape. The power stored in the MC is 408
@@ -369,7 +369,7 @@ TGG, and HWP elements is rotated by $+22.5^\circ - 67.5^\circ +
 22.5^\circ + 22.5^\circ = 0^\circ$. In the reverse direction, the
 rotation through HWP, TGG, QR, TGG is $-22.5^\circ + 22.5^\circ +
 67.5^\circ + 22.5^\circ = 90^\circ$. The TGG crystals are
-non-reciprocal devices while the QR is reciprocal.
+non-reciprocal devices while the QR and HWP are reciprocal.
 
 \begin{figure}
 \begin{centering}
@@ -422,7 +422,8 @@ beam drift. The CWPs have very high extinction ratios ($>10^5$) and
 high transmission ($>$ 99\%) contributing to good optical efficiency
 and isolation performance. However, the angle separating the exiting
 orthogonal polarizations of light is very small, on the order of 10
-mrad. This requires relatively large distances to pick off the beams
+mrad. This small angle requires the light to travel relatively large distances
+before we can pick off the beams
 needed for interferometer sensing and control. In addition, thermally
 induced index of refraction gradients due to the 4.95$^{\circ}$ wedge
 angle of the CWPs result in thermal drift. However, the CWPs for the
@@ -588,9 +589,9 @@ eigenfrequencies for each mirror at room temperature are 28164~Hz,
 
 We cycled the power into the mode cleaner between 0.9~W and 5.1~W at 3
 hour intervals, allowing enough time for a thermal characteristic time
-constant to be established.  At the same time, we recorded the
-frequencies of the high Q drumhead mode peaks as found in the mode
-cleaner frequency error signal, heterodyned down by 28~kHz. See Figure
+constant to be reached.  At the same time, we recorded the frequencies
+of the high Q drumhead mode peaks as found in the mode cleaner
+frequency error signal, heterodyned down by 28~kHz. See Figure
 \ref{fig:MCabsorption}. Correcting for ambient temperature
 fluctuations, we find a frequency shift of 0.043, 0.043, and 0.072
 Hz/W. As a result of drag-wiping the mirrors, the absorption decreased
@@ -675,10 +676,9 @@ the Faraday.
 \caption[Faraday isolator isolation ratio as measured in air and in
 vacuum]{Faraday isolator isolation ratio as measured in air prior to
   installation and \emph{in situ} in vacuum. The isolation worsens by
-  a factor of 6 upon placement of the Faraday in vacuum due to lack of
-  air convection. The linear fits to the data show a constant in-air
-  isolation ratio and an in-vacuum isolation ratio degradation of 0.02
-  dB/W.}
+  a factor of 6 upon placement of the Faraday in vacuum. The linear
+  fits to the data show a constant in-air isolation ratio and an
+  in-vacuum isolation ratio degradation of 0.02 dB/W.}
 \label{fig:IR}
 \end{centering}
 \end{figure}

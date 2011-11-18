@@ -14,12 +14,12 @@
 \BOOKMARK [2][-]{subsection.1.5.2}{The Angular Sensing and Control High Power Story}{section.1.5}
 \BOOKMARK [0][-]{chapter.2}{LASER INTERFEROMETERS FOR GRAVITATIONAL-WAVE DETECTION}{}
 \BOOKMARK [1][-]{section.2.1}{Measuring Gravitational-wave Strain with Light}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{Power-recycled Fabry-P\351rot Michelson Interferometers}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Power-recycled Fabry-Perot Michelson Interferometers}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{DC Readout}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.2}{DARM}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.3}{DARM Optical Gain}{section.2.2}
 \BOOKMARK [1][-]{section.2.3}{Signal Versus Noise}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.3.1}{Noises}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.1}{Noise}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.2}{Noise Floor}{section.2.3}
 \BOOKMARK [3][-]{subsubsection.2.3.2.1}{Displacement noise floor}{subsection.2.3.2}
 \BOOKMARK [3][-]{subsubsection.2.3.2.2}{Sensing noise floor}{subsection.2.3.2}
@@ -84,7 +84,7 @@
 \BOOKMARK [2][-]{subsection.6.4.1}{Power Scaling}{section.6.4}
 \BOOKMARK [1][-]{section.6.5}{WFS Servo Open Loop Transfer Functions}{chapter.6}
 \BOOKMARK [1][-]{section.6.6}{Residual Angular Motion}{chapter.6}
-\BOOKMARK [1][-]{section.6.7}{ASC to DARM Noisebudget}{chapter.6}
+\BOOKMARK [1][-]{section.6.7}{ASC to DARM Noise Budget}{chapter.6}
 \BOOKMARK [2][-]{subsection.6.7.1}{Tuning the Cut-off Filters}{section.6.7}
 \BOOKMARK [1][-]{section.6.8}{Experimental Measurement of the Sidles-Sigg Effect}{chapter.6}
 \BOOKMARK [0][-]{chapter.7}{CONCLUSIONS}{}
