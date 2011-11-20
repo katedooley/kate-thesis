@@ -5,7 +5,7 @@
 
 
 The torque induced by radiation pressure, as introduced in
-Sec. \ref{sec:rp_intro}, couples the angular motion of the suspended
+Section~\ref{sec:rp_intro}, couples the angular motion of the suspended
 mirrors, complicating the plant for which controls must be
 designed. The derivation of the angular response of the mirrors to
 external torque in the presence of radiation pressure is presented in
@@ -270,7 +270,7 @@ two eigenmodes. In this section, we analyze these behaviors and
 accordingly introduce the names \emph{soft} and \emph{hard} to use in
 place of $a$ and $b$ for describing the two modes.
 
-Just as in Sec. \ref{sec:t2a}, we can take the Laplace transform of
+Just as in Section~\ref{sec:pendTF}, we can take the Laplace transform of
 each of the equations in Eq. \ref{eq:rp_eqmotion} to get the general
 form of the modal torque to angle transfer function:
 \begin{equation}
@@ -364,7 +364,7 @@ Table~\ref{table:k_tot} highlights the values of the spring constants
 for the typical power that was used in Initial LIGO (9~kW) and for the
 highest of powers achieved in Enhanced LIGO (40~kW). The corresponding
 transfer functions for these spring constants is found in
-Fig.~\ref{fig:optomechhardsoft}. The resonant frequency, $\omega_0 =
+Figure~\ref{fig:optomechhardsoft}. The resonant frequency, $\omega_0 =
 \sqrt{\kappa_{tot}/I}$, increases with power for the hard modes and
 decreases for the soft modes. Once $\kappa_{tot}$ becomes negative, as
 is the case for the Enhanced LIGO soft mode, there is no real resonant
@@ -518,7 +518,7 @@ controls must be designed are no longer those of a pendulum with
 resonance at 0.6~Hz (pitch) or 0.5~Hz (yaw), but those of the soft and
 hard eigenmodes, whose resonances change with power. For Enhanced
 LIGO, the angular control servo plant of
-Fig.~\ref{fig:ASCcontrolservo} is treated as the cavity's radiation
+Figure~\ref{fig:ASCcontrolservo} is treated as the cavity's radiation
 pressure-modified torque to angle transfer function, not as a simple
 stand-alone pendulum transfer function. An elegant implication of the
 purely geometric description of the cavity axis is that the radiation
@@ -529,7 +529,7 @@ updated with power changes.
 %\textcolor{blue}{put this elsewhere?} 
 One complication of having a radiation pressure modified and therefore
 power dependent plant, $P_{rp}$, is that the optical lever
-compensation (described in Sec. \ref{sec:oplevcomp}) is no longer
+compensation (described in Section~\ref{sec:oplevcomp}) is no longer
 valid. The compensation of $1+OP$ is hard-coded in the digital control
 system, where the model for $P$ is that of a simple pendulum. The only
 way to achieve perfect compensation would be to load a new model of

@@ -2,7 +2,7 @@
 \BOOKMARK [0][-]{tableofcontents.0}{TABLE OF CONTENTS}{}
 \BOOKMARK [0][-]{chapter*.3}{LIST OF TABLES}{}
 \BOOKMARK [0][-]{chapter*.4}{LIST OF FIGURES}{}
-\BOOKMARK [0][-]{chapter*.5}{LIST OF SYMBOLS}{}
+\BOOKMARK [0][-]{chapter*.5}{LIST OF ABBREVIATIONS}{}
 \BOOKMARK [0][-]{section*.6}{ABSTRACT}{}
 \BOOKMARK [0][-]{chapter.1}{THE SEARCH FOR GRAVITATIONAL WAVES}{}
 \BOOKMARK [1][-]{section.1.1}{The Theory of Gravitational Radiation}{chapter.1}
@@ -44,7 +44,7 @@
 \BOOKMARK [3][-]{subsubsection.3.3.3.4}{Heat conduction}{subsection.3.3.3}
 \BOOKMARK [2][-]{subsection.3.3.4}{Mode-matching Telescope Design}{section.3.3}
 \BOOKMARK [1][-]{section.3.4}{Performance of the Enhanced LIGO Input Optics}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{Optical efficiency}{section.3.4}
+\BOOKMARK [2][-]{subsection.3.4.1}{Optical Efficiency}{section.3.4}
 \BOOKMARK [3][-]{subsubsection.3.4.1.1}{Mode cleaner losses}{subsection.3.4.1}
 \BOOKMARK [3][-]{subsubsection.3.4.1.2}{Faraday isolator losses}{subsection.3.4.1}
 \BOOKMARK [2][-]{subsection.3.4.2}{Faraday Isolation Ratio}{section.3.4}
@@ -61,7 +61,6 @@
 \BOOKMARK [2][-]{subsection.4.2.3}{Noise from Angular Control}{section.4.2}
 \BOOKMARK [2][-]{subsection.4.2.4}{Radiation Pressure}{section.4.2}
 \BOOKMARK [1][-]{section.4.3}{The Mirror as a Torsion Pendulum}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.3.1}{Torque to Angle Transfer Function of a Pendulum}{section.4.3}
 \BOOKMARK [1][-]{section.4.4}{Overview of Interferometer Alignment}{chapter.4}
 \BOOKMARK [1][-]{section.4.5}{The Wavefront Sensing Scheme}{chapter.4}
 \BOOKMARK [1][-]{section.4.6}{The Angular Control Servo}{chapter.4}

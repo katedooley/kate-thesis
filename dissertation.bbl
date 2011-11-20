@@ -15,14 +15,219 @@ P.~R. Saulson, \emph{{Fundamentals of interferometric gravitational wave
   detectors}} (World Scientific, 1994).
 
 \bibitem{Abbott2009Search}
-B.~P. Abbott \emph{et~al.}, Physical Review D (Particles, Fields, Gravitation,
-  and Cosmology) \textbf{80}, 102001+ (2009).
+B.~P. Abbott, R.~Abbott, R.~Adhikari, P.~Ajith, B.~Allen, G.~Allen, R.~S. Amin,
+  S.~B. Anderson, W.~G. Anderson, M.~A. Arain, M.~Araya, H.~Armandula,
+  P.~Armor, Y.~Aso, S.~Aston, P.~Aufmuth, C.~Aulbert, S.~Babak, P.~Baker,
+  S.~Ballmer, C.~Barker, D.~Barker, B.~Barr, P.~Barriga, L.~Barsotti, M.~A.
+  Barton, I.~Bartos, R.~Bassiri, M.~Bastarrika, B.~Behnke, M.~Benacquista,
+  J.~Betzwieser, P.~T. Beyersdorf, I.~A. Bilenko, G.~Billingsley, R.~Biswas,
+  E.~Black, J.~K. Blackburn, L.~Blackburn, D.~Blair, B.~Bland, T.~P. Bodiya,
+  L.~Bogue, R.~Bork, V.~Boschi, S.~Bose, P.~R. Brady, V.~B. Braginsky, J.~E.
+  Brau, D.~O. Bridges, M.~Brinkmann, A.~F. Brooks, D.~A. Brown, A.~Brummit,
+  G.~Brunet, A.~Bullington, A.~Buonanno, O.~Burmeister, R.~L. Byer,
+  L.~Cadonati, J.~B. Camp, J.~Cannizzo, K.~C. Cannon, J.~Cao, L.~Cardenas,
+  S.~Caride, G.~Castaldi, S.~Caudill, M.~Cavagli\`{a}, C.~Cepeda,
+  T.~Chalermsongsak, E.~Chalkley, P.~Charlton, S.~Chatterji, S.~Chelkowski,
+  Y.~Chen, N.~Christensen, C.~T.~Y. Chung, D.~Clark, J.~Clark, J.~H. Clayton,
+  T.~Cokelaer, C.~N. Colacino, R.~Conte, D.~Cook, T.~R.~C. Corbitt, N.~Cornish,
+  D.~Coward, D.~C. Coyne, J.~D.~E. Creighton, T.~D. Creighton, A.~M. Cruise,
+  R.~M. Culter, A.~Cumming, L.~Cunningham, S.~L. Danilishin, K.~Danzmann,
+  B.~Daudert, G.~Davies, E.~J. Daw, D.~DeBra, J.~Degallaix, V.~Dergachev,
+  S.~Desai, R.~DeSalvo, S.~Dhurandhar, M.~D'iaz, A.~Di~Credico, A.~Dietz,
+  F.~Donovan, K.~L. Dooley, E.~E. Doomes, R.~W.~P. Drever, J.~Dueck, I.~Duke,
+  J.~C. Dumas, J.~G. Dwyer, C.~Echols, M.~Edgar, A.~Effler, P.~Ehrens,
+  E.~Espinoza, T.~Etzel, M.~Evans, T.~Evans, S.~Fairhurst, Y.~Faltas, Y.~Fan,
+  D.~Fazi, H.~Fehrmann, L.~S. Finn, K.~Flasch, S.~Foley, C.~Forrest,
+  N.~Fotopoulos, A.~Franzen, M.~Frede, M.~Frei, Z.~Frei, A.~Freise, R.~Frey,
+  T.~Fricke, P.~Fritschel, V.~V. Frolov, M.~Fyffe, V.~Galdi, J.~A. Garofoli,
+  I.~Gholami, J.~A. Giaime, S.~Giampanis, K.~D. Giardina, K.~Goda, E.~Goetz,
+  L.~M. Goggin, G.~Gonz\'{a}lez, M.~L. Gorodetsky, S.~G. Ler, R.~Gouaty,
+  A.~Grant, S.~Gras, C.~Gray, M.~Gray, R.~J.~S. Greenhalgh, A.~M. Gretarsson,
+  F.~Grimaldi, R.~Grosso, H.~Grote, S.~Grunewald, M.~Guenther, E.~K. Gustafson,
+  R.~Gustafson, B.~Hage, J.~M. Hallam, D.~Hammer, G.~D. Hammond, C.~Hanna,
+  J.~Hanson, J.~Harms, G.~M. Harry, I.~W. Harry, E.~D. Harstad, K.~Haughian,
+  K.~Hayama, J.~Heefner, I.~S. Heng, A.~Heptonstall, M.~Hewitson, S.~Hild,
+  E.~Hirose, D.~Hoak, K.~A. Hodge, K.~Holt, D.~J. Hosken, J.~Hough, D.~Hoyland,
+  B.~Hughey, S.~H. Huttner, D.~R. Ingram, T.~Isogai, M.~Ito, A.~Ivanov,
+  B.~Johnson, W.~W. Johnson, D.~I. Jones, G.~Jones, R.~Jones, L.~Ju, P.~Kalmus,
+  V.~Kalogera, S.~Kandhasamy, J.~Kanner, D.~Kasprzyk, E.~Katsavounidis,
+  K.~Kawabe, S.~Kawamura, F.~Kawazoe, W.~Kells, D.~G. Keppel, A.~Khalaidovski,
+  F.~Y. Khalili, R.~Khan, E.~Khazanov, P.~King, J.~S. Kissel, S.~Klimenko,
+  K.~Kokeyama, V.~Kondrashov, R.~Kopparapu, S.~Koranda, D.~Kozak, B.~Krishnan,
+  R.~Kumar, P.~Kwee, P.~K. Lam, M.~Landry, B.~Lantz, A.~Lazzarini, H.~Lei,
+  M.~Lei, N.~Leindecker, I.~Leonor, C.~Li, H.~Lin, P.~E. Lindquist, T.~B.
+  Littenberg, N.~A. Lockerbie, D.~Lodhia, M.~Longo, M.~Lormand, P.~Lu,
+  M.~Lubinski, A.~Lucianetti, H.~L\"{u}ck, B.~Machenschalk, M.~MacInnis,
+  M.~Mageswaran, K.~Mailand, I.~Mandel, V.~Mandic, S.~M\'{a}rka, Z.~M\'{a}rka,
+  A.~Markosyan, J.~Markowitz, E.~Maros, I.~W. Martin, R.~M. Martin, J.~N. Marx,
+  K.~Mason, F.~Matichard, L.~Matone, R.~A. Matzner, N.~Mavalvala, R.~McCarthy,
+  D.~E. McClelland, S.~C. McGuire, M.~McHugh, G.~McIntyre, D.~J.~A. McKechan,
+  K.~McKenzie, M.~Mehmet, A.~Melatos, A.~C. Melissinos, D.~F. Men\'{e}ndez,
+  G.~Mendell, R.~A. Mercer, S.~Meshkov, C.~Messenger, M.~S. Meyer, J.~Miller,
+  J.~Minelli, Y.~Mino, V.~P. Mitrofanov, G.~Mitselmakher, R.~Mittleman,
+  O.~Miyakawa, B.~Moe, S.~D. Mohanty, S.~R.~P. Mohapatra, G.~Moreno,
+  T.~Morioka, K.~Mors, K.~Mossavi, C.~MowLowry, G.~Mueller, H.~M. Ebhardt,
+  D.~Muhammad, S.~Mukherjee, H.~Mukhopadhyay, A.~Mullavey, J.~Munch, P.~G.
+  Murray, E.~Myers, J.~Myers, T.~Nash, J.~Nelson, G.~Newton, A.~Nishizawa,
+  K.~Numata, J.~O'Dell, B.~O'Reilly, R.~O'Shaughnessy, E.~Ochsner, G.~H. Ogin,
+  D.~J. Ottaway, R.~S. Ottens, H.~Overmier, B.~J. Owen, Y.~Pan, C.~Pankow,
+  M.~A. Papa, V.~Parameshwaraiah, P.~Patel, M.~Pedraza, S.~Penn, A.~Perraca,
+  V.~Pierro, I.~M. Pinto, M.~Pitkin, H.~J. Pletsch, M.~V. Plissi,
+  F.~Postiglione, M.~Principe, R.~Prix, L.~Prokhorov, O.~Puncken, V.~Quetschke,
+  F.~J. Raab, D.~S. Rabeling, H.~Radkins, P.~Raffai, Z.~Raics, N.~Rainer,
+  M.~Rakhmanov, V.~Raymond, C.~M. Reed, T.~Reed, H.~Rehbein, S.~Reid, D.~H.
+  Reitze, R.~Riesen, K.~Riles, B.~Rivera, P.~Roberts, N.~A. Robertson,
+  C.~Robinson, E.~L. Robinson, S.~Roddy, C.~R\"{o}ver, J.~Rollins, J.~D.
+  Romano, J.~H. Romie, S.~Rowan, A.~R\"{u}diger, P.~Russell, K.~Ryan,
+  S.~Sakata, S.~de~la Jordana, V.~Sandberg, V.~Sannibale, L.~Santamar'ia,
+  S.~Saraf, P.~Sarin, B.~S. Sathyaprakash, S.~Sato, M.~Satterthwaite, P.~R.
+  Saulson, R.~Savage, P.~Savov, M.~Scanlan, R.~Schilling, R.~Schnabel,
+  R.~Schofield, B.~Schulz, B.~F. Schutz, P.~Schwinberg, J.~Scott, S.~M. Scott,
+  A.~C. Searle, B.~, Physical Review D (Particles, Fields, Gravitation, and
+  Cosmology) \textbf{80}, 102001+ (2009).
 
 \bibitem{S5CBCnospin}
-J.~Abadie \emph{et~al.}, Physical Review D \textbf{83}, 122005+ (2011).
+J.~Abadie, B.~P. Abbott, R.~Abbott, M.~Abernathy, T.~Accadia, F.~Acernese,
+  C.~Adams, R.~Adhikari, P.~Ajith, B.~Allen, G.~S. Allen, E.~A. Ceron, R.~S.
+  Amin, S.~B. Anderson, W.~G. Anderson, F.~Antonucci, M.~A. Arain, M.~C. Araya,
+  M.~Aronsson, Y.~Aso, S.~M. Aston, P.~Astone, D.~Atkinson, P.~Aufmuth,
+  C.~Aulbert, S.~Babak, P.~Baker, G.~Ballardin, T.~Ballinger, S.~Ballmer,
+  D.~Barker, S.~Barnum, F.~Barone, B.~Barr, P.~Barriga, L.~Barsotti,
+  M.~Barsuglia, M.~A. Barton, I.~Bartos, R.~Bassiri, M.~Bastarrika,
+  J.~Bauchrowitz, Th, B.~Behnke, M.~G. Beker, A.~Belletoile, M.~Benacquista,
+  A.~Bertolini, J.~Betzwieser, N.~Beveridge, P.~T. Beyersdorf, I.~A. Bilenko,
+  G.~Billingsley, J.~Birch, S.~Birindelli, R.~Biswas, M.~Bitossi, M.~A.
+  Bizouard, E.~Black, J.~K. Blackburn, L.~Blackburn, D.~Blair, B.~Bland,
+  M.~Blom, C.~Boccara, O.~Bock, T.~P. Bodiya, R.~Bondarescu, F.~Bondu,
+  L.~Bonelli, R.~Bonnand, R.~Bork, M.~Born, V.~Boschi, S.~Bose, L.~Bosi,
+  B.~Bouhou, M.~Boyle, S.~Braccini, C.~Bradaschia, P.~R. Brady, V.~B.
+  Braginsky, J.~E. Brau, J.~Breyer, D.~O. Bridges, A.~Brillet, M.~Brinkmann,
+  V.~Brisson, M.~Britzger, A.~F. Brooks, D.~A. Brown, R.~Budzy\'{n}ski,
+  T.~Bulik, H.~J. Bulten, A.~Buonanno, J.~B. Castell, O.~Burmeister,
+  D.~Buskulic, C.~Buy, R.~L. Byer, L.~Cadonati, G.~Cagnoli, J.~Cain,
+  E.~Calloni, J.~B. Camp, E.~Campagna, P.~Campsie, J.~Cannizzo, K.~Cannon,
+  B.~Canuel, J.~Cao, C.~Capano, F.~Carbognani, S.~Caride, S.~Caudill,
+  M.~Cavagli\`{a}, F.~Cavalier, R.~Cavalieri, G.~Cella, C.~Cepeda, E.~Cesarini,
+  O.~Chaibi, T.~Chalermsongsak, E.~Chalkley, P.~Charlton, E.~C. Mottin,
+  S.~Chelkowski, Y.~Chen, A.~Chincarini, N.~Christensen, S.~S.~Y. Chua,
+  C.~T.~Y. Chung, D.~Clark, J.~Clark, J.~H. Clayton, F.~Cleva, E.~Coccia, C.~N.
+  Colacino, J.~Colas, A.~Colla, M.~Colombini, R.~Conte, D.~Cook, T.~R. Corbitt,
+  N.~Cornish, A.~Corsi, C.~A. Costa, J.~P. Coulon, D.~M. Coward, D.~C. Coyne,
+  J.~D.~E. Creighton, T.~D. Creighton, A.~M. Cruise, R.~M. Culter, A.~Cumming,
+  L.~Cunningham, E.~Cuoco, K.~Dahl, S.~L. Danilishin, R.~Dannenberg,
+  S.~D'Antonio, K.~Danzmann, K.~Das, V.~Dattilo, B.~Daudert, M.~Davier,
+  G.~Davies, A.~Davis, E.~J. Daw, R.~Day, T.~Dayanga, R.~DeRosa, D.~DeBra,
+  G.~Debreczeni, J.~Degallaix, M.~D. Prete, V.~Dergachev, R.~De~Rosa,
+  R.~DeSalvo, P.~Devanka, S.~Dhurandhar, L.~Di~Fiore, A.~Di~Lieto, I.~Di~Palma,
+  D.~P. Emilio, A.~Di~Virgilio, M.~D'iaz, A.~Dietz, F.~Donovan, K.~L. Dooley,
+  E.~E. Doomes, S.~Dorsher, E.~S.~D. Douglas, M.~Drago, R.~W.~P. Drever, J.~C.
+  Driggers, J.~Dueck, J.~C. Dumas, T.~Eberle, M.~Edgar, M.~Edwards, A.~Effler,
+  P.~Ehrens, G.~Ely, R.~Engel, T.~Etzel, M.~Evans, T.~Evans, V.~Fafone,
+  S.~Fairhurst, Y.~Fan, B.~F. Farr, D.~Fazi, H.~Fehrmann, D.~Feldbaum,
+  I.~Ferrante, F.~Fidecaro, L.~S. Finn, I.~Fiori, R.~Flaminio, M.~Flanigan,
+  K.~Flasch, S.~Foley, C.~Forrest, E.~Forsi, L.~A. Forte, N.~Fotopoulos, J.~D.
+  Fournier, J.~Franc, S.~Frasca, F.~Frasconi, M.~Frede, M.~Frei, Z.~Frei,
+  A.~Freise, R.~Frey, T.~T. Fricke, D.~Friedrich, P.~Fritschel, V.~V. Frolov,
+  P.~Fulda, M.~Fyffe, M.~Galimberti, L.~Gammaitoni, J.~A. Garofoli, F.~Garufi,
+  M.~E. G\'{a}sp\'{a}r, G.~Gemme, E.~Genin, A.~Gennai, I.~Gholami, S.~Ghosh,
+  J.~A. Giaime, S.~Giampanis, K.~D. Giardina, A.~Giazotto, C.~Gill, E.~Goetz,
+  L.~M. Goggin, G.~Gonz\'{a}lez, M.~L. Gorodetsky, S.~Goss{}ler, R.~Gouaty,
+  C.~Graef, M.~Granata, A.~Grant, S.~Gras, C.~Gray, R.~J.~S. Greenhalgh, A.~M.
+  Gretarsson, C.~Greverie, R.~Grosso, H.~Grote, S.~Grunewald, G.~M. Guidi,
+  E.~K. Gustafson, R.~Gustafson, B.~Hage, P.~Hall, J.~M. Hallam, D.~Hammer,
+  G.~Hammond, J.~Hanks, C.~Hanna, J.~Hanson, J.~Harms, G.~M. Harry, I.~W.
+  Harry, E.~D. Harstad, K.~Haughian, K.~Hayama, J.~F. Hayau, T.~Hayler,
+  J.~Heefner, H.~Heitmann, P.~Hello, I.~S. Heng, A.~W. Heptonstall,
+  M.~Hewitson, S.~Hild, E.~Hirose, D.~Hoak, K.~A. Hodge, K.~Holt, D.~J. Hosken,
+  J.~Hough, E.~J. Howell, D.~Hoyland, D.~Huet, B.~Hughey, S.~Husa, S.~H.
+  Huttner, T.~H. Dinh, D.~R. Ingram, R.~Inta, T.~Isogai, A.~Ivanov,
+  P.~Jaranowski, W.~W. Johnson, D.~I. Jones, G.~Jones, R.~Jones, L.~Ju,
+  P.~Kalmus, V.~Kalogera, S.~Kandhasamy, J.~B. Kanner, E.~Katsavounidis,
+  K.~Kawabe, S.~Kawamura, F.~Kawazoe, W.~Kells, D.~G. Keppel, A.~Khalaidovski,
+  F.~Y. Khalili, E.~A. Khazanov, H.~Kim, P.~J. King, D.~L. Kinzel, J.~S.
+  Kissel, S.~Klimenko, V.~Kondrashov, R.~Kopparapu, S.~Koranda, I.~Kowalska,
+  D.~Kozak, T.~Krause, V.~Kringel, S.~Krishnamurthy, B.~Krishnan,
+  A.~Kr\'{o}lak, G.~Kuehn, J.~Kullman, R.~Kumar, P.~Kwee, M.~Landry, M.~Lang,
+  B.~Lantz, N.~Lastzka, A.~Lazzarini, P.~Leaci, J.~Leong, I.~Leonor, N.~Leroy,
+  N.~Letendre, J.~Li, T.~G.~F. Li, N.~Liguori, H.~Lin, P.~E. Lindquist, N.~A.
+  Lockerbie, D.~Lodhia, M.~Lorenzini, V.~Loriette, M.~Lormand, G.~Losurdo,
+  P.~Lu, J.~Luan, M.~Lubinski, A.~Lucianetti, H.~L\"{u}ck, A.~D. Lundgren,
+  B.~Machenschalk, M.~MacInnis, M.~Mageswaran, K.~Mailand, E.~Majorana, C.~Mak,
+  I.~Maksimovic, N.~Man, I.~Mandel, V.~Mandic, M.~Mantovani, F.~Marchesoni,
+  F.~Marion, S.~M\'{a}rka, Z.~M\'{a}rka, E.~Maros, J.~Marque, F.~Martelli,
+  I.~W. Martin, R.~M. Martin, J.~N. Marx, K.~Mason,, Physical Review D
+  \textbf{83}, 122005+ (2011).
 
 \bibitem{Abadie2010First}
-J.~Abadie \emph{et~al.}, The Astrophysical Journal \textbf{722}, 1504+ (2010).
+J.~Abadie, B.~P. Abbott, R.~Abbott, M.~Abernathy, C.~Adams, R.~Adhikari,
+  P.~Ajith, B.~Allen, G.~Allen, E.~Amador~Ceron, R.~S. Amin, S.~B. Anderson,
+  W.~G. Anderson, M.~A. Arain, M.~Araya, M.~Aronsson, Y.~Aso, S.~Aston, D.~E.
+  Atkinson, P.~Aufmuth, C.~Aulbert, S.~Babak, P.~Baker, S.~Ballmer, D.~Barker,
+  S.~Barnum, B.~Barr, P.~Barriga, L.~Barsotti, M.~A. Barton, I.~Bartos,
+  R.~Bassiri, M.~Bastarrika, J.~Bauchrowitz, B.~Behnke, M.~Benacquista,
+  A.~Bertolini, J.~Betzwieser, N.~Beveridge, P.~T. Beyersdorf, I.~A. Bilenko,
+  G.~Billingsley, J.~Birch, R.~Biswas, E.~Black, J.~K. Blackburn, L.~Blackburn,
+  D.~Blair, B.~Bland, O.~Bock, T.~P. Bodiya, R.~Bondarescu, R.~Bork, M.~Born,
+  S.~Bose, M.~Boyle, P.~R. Brady, V.~B. Braginsky, J.~E. Brau, J.~Breyer, D.~O.
+  Bridges, M.~Brinkmann, M.~Britzger, A.~F. Brooks, D.~A. Brown, A.~Buonanno,
+  J.~Burguet-Castell, O.~Burmeister, R.~L. Byer, L.~Cadonati, J.~B. Camp,
+  P.~Campsie, J.~Cannizzo, K.~C. Cannon, J.~Cao, C.~Capano, S.~Caride,
+  S.~Caudill, M.~Cavagli\`{a}, C.~Cepeda, T.~Chalermsongsak, E.~Chalkley,
+  P.~Charlton, S.~Chelkowski, Y.~Chen, N.~Christensen, S.~S.~Y. Chua, C.~T.~Y.
+  Chung, D.~Clark, J.~Clark, J.~H. Clayton, R.~Conte, D.~Cook, T.~R. Corbitt,
+  N.~Cornish, C.~A. Costa, D.~Coward, D.~C. Coyne, J.~D.~E. Creighton, T.~D.
+  Creighton, A.~M. Cruise, R.~M. Culter, A.~Cumming, L.~Cunningham, K.~Dahl,
+  S.~L. Danilishin, R.~Dannenberg, K.~Danzmann, K.~Das, B.~Daudert, G.~Davies,
+  A.~Davis, E.~J. Daw, T.~Dayanga, D.~DeBra, J.~Degallaix, V.~Dergachev,
+  R.~DeRosa, R.~DeSalvo, P.~Devanka, S.~Dhurandhar, I.~Di~Palma, M.~D\'{\i}az,
+  F.~Donovan, K.~L. Dooley, E.~E. Doomes, S.~Dorsher, E.~S.~D. Douglas,
+  R.~W.~P. Drever, J.~C. Driggers, J.~Dueck, J.~C. Dumas, T.~Eberle, M.~Edgar,
+  M.~Edwards, A.~Effler, P.~Ehrens, R.~Engel, T.~Etzel, M.~Evans, T.~Evans,
+  S.~Fairhurst, Y.~Fan, B.~F. Farr, D.~Fazi, H.~Fehrmann, D.~Feldbaum, L.~S.
+  Finn, M.~Flanigan, K.~Flasch, S.~Foley, C.~Forrest, E.~Forsi, N.~Fotopoulos,
+  M.~Frede, M.~Frei, Z.~Frei, A.~Freise, R.~Frey, T.~T. Fricke, D.~Friedrich,
+  P.~Fritschel, V.~V. Frolov, P.~Fulda, M.~Fyffe, J.~A. Garofoli, I.~Gholami,
+  S.~Ghosh, J.~A. Giaime, S.~Giampanis, K.~D. Giardina, C.~Gill, E.~Goetz,
+  L.~M. Goggin, G.~Gonz\'{a}lez, M.~L. Gorodetsky, S.~Go{\ss}ler, C.~Graef,
+  A.~Grant, S.~Gras, C.~Gray, R.~J.~S. Greenhalgh, A.~M. Gretarsson, R.~Grosso,
+  H.~Grote, S.~Grunewald, E.~K. Gustafson, R.~Gustafson, B.~Hage, P.~Hall,
+  J.~M. Hallam, D.~Hammer, G.~Hammond, J.~Hanks, C.~Hanna, J.~Hanson, J.~Harms,
+  G.~M. Harry, I.~W. Harry, E.~D. Harstad, K.~Haughian, K.~Hayama, J.~Heefner,
+  I.~S. Heng, A.~Heptonstall, M.~Hewitson, S.~Hild, E.~Hirose, D.~Hoak, K.~A.
+  Hodge, K.~Holt, D.~J. Hosken, J.~Hough, E.~Howell, D.~Hoyland, B.~Hughey,
+  S.~Husa, S.~H. Huttner, T.~Huynh-Dinh, D.~R. Ingram, R.~Inta, T.~Isogai,
+  A.~Ivanov, W.~W. Johnson, D.~I. Jones, G.~Jones, R.~Jones, L.~Ju, P.~Kalmus,
+  V.~Kalogera, S.~Kandhasamy, J.~Kanner, E.~Katsavounidis, K.~Kawabe,
+  S.~Kawamura, F.~Kawazoe, W.~Kells, D.~G. Keppel, A.~Khalaidovski, F.~Y.
+  Khalili, E.~A. Khazanov, H.~Kim, P.~J. King, D.~L. Kinzel, J.~S. Kissel,
+  S.~Klimenko, V.~Kondrashov, R.~Kopparapu, S.~Koranda, D.~Kozak, T.~Krause,
+  V.~Kringel, S.~Krishnamurthy, B.~Krishnan, G.~Kuehn, J.~Kullman, R.~Kumar,
+  P.~Kwee, M.~Landry, M.~Lang, B.~Lantz, N.~Lastzka, A.~Lazzarini, P.~Leaci,
+  J.~Leong, I.~Leonor, J.~Li, H.~Lin, P.~E. Lindquist, N.~A. Lockerbie,
+  D.~Lodhia, M.~Lormand, P.~Lu, J.~Luan, M.~Lubinski, A.~Lucianetti,
+  H.~L\"{u}ck, A.~Lundgren, B.~Machenschalk, M.~MacInnis, M.~Mageswaran,
+  K.~Mailand, C.~Mak, I.~Mandel, V.~Mandic, S.~M\'{a}rka, Z.~M\'{a}rka,
+  E.~Maros, I.~W. Martin, R.~M. Martin, J.~N. Marx, K.~Mason, F.~Matichard,
+  L.~Matone, R.~A. Matzner, N.~Mavalvala, R.~McCarthy, D.~E. McClelland, S.~C.
+  McGuire, G.~McIntyre, G.~McIvor, D.~J.~A. McKechan, G.~Meadors, M.~Mehmet,
+  T.~Meier, A.~Melatos, A.~C. Melissinos, G.~Mendell, D.~F. Men\'{e}ndez, R.~A.
+  Mercer, L.~Merill, S.~Meshkov, C.~Messenger, M.~S. Meyer, H.~Miao, J.~Miller,
+  Y.~Mino, S.~Mitra, V.~P. Mitrofanov, G.~Mitselmakher, R.~Mittleman, B.~Moe,
+  S.~D. Mohanty, S.~R.~P. Mohapatra, D.~Moraru, G.~Moreno, T.~Morioka, K.~Mors,
+  K.~Mossavi, C.~MowLowry, G.~Mueller, S.~Mukherjee, A.~Mullavey,
+  H.~M\"{u}ller-Ebhardt, J.~Munch, P.~G. Murray, T.~Nash, R.~Nawrodt,
+  J.~Nelson, G.~Newton, A.~Nishizawa, D.~Nolting, E.~Ochsner, J.~O'Dell, G.~H.
+  Ogin, R.~G. Oldenburg, B.~O'Reilly, R.~O'Shaughnessy, C.~Osthelder, D.~J.
+  Ottaway, R.~S. Ottens, H.~Overmier, B.~J. Owen, A.~Page, Y.~Pan, C.~Pankow,
+  M.~A. Papa, M.~Pareja, P.~Patel, M.~Pedraza, L.~Pekowsky, S.~Penn,
+  C.~Peralta, A.~Perreca, M.~Pickenpack, I.~M. Pinto, M.~Pitkin, H.~J. Pletsch,
+  M.~V. Plissi, F.~Postiglione, V.~Predoi, L.~R. Price, M.~Prijatelj,
+  M.~Principe, R.~Prix, L.~Prokhorov, O.~Puncken, V.~Quetschke, F.~J. Raab,
+  T.~Radke, H.~Radkins, P.~Raffai, M.~Rakhmanov, B.~Rankins, V.~Raymond, C.~M.
+  Reed, T.~Reed, S.~Reid, D.~H. Reitze, R.~Riesen, K.~Riles, P.~Roberts, N.~A.
+  Robertson, C.~Robinson, E.~L. Robinson, S.~Roddy, C.~R\"{o}ver, J.~Rollins,
+  J.~D. Romano, J.~H. Romie, S, The Astrophysical Journal \textbf{722}, 1504+
+  (2010).
 
 \bibitem{Allen1999Detecting}
 B.~Allen and J.~D. Romano, Physical Review D \textbf{59}, 102001+ (1999).
@@ -31,8 +236,76 @@ B.~Allen and J.~D. Romano, Physical Review D \textbf{59}, 102001+ (1999).
 M.~Maggiore, Physics Reports \textbf{331}, 283 (2000).
 
 \bibitem{Abadie2010Predictions}
-J.~Abadie \emph{et~al.}, Classical and Quantum Gravity \textbf{27}, 173001+
-  (2010).
+J.~Abadie, B.~P. Abbott, R.~Abbott, M.~Abernathy, T.~Accadia, F.~Acernese,
+  C.~Adams, R.~Adhikari, P.~Ajith, B.~Allen, G.~Allen, E.~A. Ceron, R.~S. Amin,
+  S.~B. Anderson, W.~G. Anderson, F.~Antonucci, S.~Aoudia, M.~A. Arain,
+  M.~Araya, M.~Aronsson, K.~G. Arun, Y.~Aso, S.~Aston, P.~Astone, D.~E.
+  Atkinson, P.~Aufmuth, C.~Aulbert, S.~Babak, P.~Baker, G.~Ballardin,
+  S.~Ballmer, D.~Barker, S.~Barnum, F.~Barone, B.~Barr, P.~Barriga,
+  L.~Barsotti, M.~Barsuglia, M.~A. Barton, I.~Bartos, R.~Bassiri,
+  M.~Bastarrika, J.~Bauchrowitz, T.~S. Bauer, B.~Behnke, M.~G. Beker,
+  M.~Benacquista, A.~Bertolini, J.~Betzwieser, N.~Beveridge, P.~T. Beyersdorf,
+  S.~Bigotta, I.~A. Bilenko, G.~Billingsley, J.~Birch, S.~Birindelli,
+  R.~Biswas, M.~Bitossi, M.~A. Bizouard, E.~Black, J.~K. Blackburn,
+  L.~Blackburn, D.~Blair, B.~Bland, M.~Blom, A.~Blomberg, C.~Boccara, O.~Bock,
+  T.~P. Bodiya, R.~Bondarescu, F.~Bondu, L.~Bonelli, R.~Bork, M.~Born, S.~Bose,
+  L.~Bosi, M.~Boyle, S.~Braccini, C.~Bradaschia, P.~R. Brady, V.~B. Braginsky,
+  J.~E. Brau, J.~Breyer, D.~O. Bridges, A.~Brillet, M.~Brinkmann, V.~Brisson,
+  M.~Britzger, A.~F. Brooks, D.~A. Brown, R.~Budzy\'{n}ski, T.~Bulik, H.~J.
+  Bulten, A.~Buonanno, J.~Burguet-Castell, O.~Burmeister, D.~Buskulic, R.~L.
+  Byer, L.~Cadonati, G.~Cagnoli, E.~Calloni, J.~B. Camp, E.~Campagna,
+  P.~Campsie, J.~Cannizzo, K.~C. Cannon, B.~Canuel, J.~Cao, C.~Capano,
+  F.~Carbognani, S.~Caride, S.~Caudill, M.~Cavagli\`{a}, F.~Cavalier,
+  R.~Cavalieri, G.~Cella, C.~Cepeda, E.~Cesarini, T.~Chalermsongsak,
+  E.~Chalkley, P.~Charlton, E.~Chassande~Mottin, S.~Chelkowski, Y.~Chen,
+  A.~Chincarini, N.~Christensen, S.~S.~Y. Chua, C.~T.~Y. Chung, D.~Clark,
+  J.~Clark, J.~H. Clayton, F.~Cleva, E.~Coccia, C.~N. Colacino, J.~Colas,
+  A.~Colla, M.~Colombini, R.~Conte, D.~Cook, T.~R. Corbitt, C.~Corda,
+  N.~Cornish, A.~Corsi, C.~A. Costa, J.~P. Coulon, D.~Coward, D.~C. Coyne,
+  J.~D.~E. Creighton, T.~D. Creighton, A.~M. Cruise, R.~M. Culter, A.~Cumming,
+  L.~Cunningham, E.~Cuoco, K.~Dahl, S.~L. Danilishin, R.~Dannenberg,
+  S.~D'Antonio, K.~Danzmann, A.~Dari, K.~Das, V.~Dattilo, B.~Daudert,
+  M.~Davier, G.~Davies, A.~Davis, E.~J. Daw, R.~Day, T.~Dayanga, R.~De~Rosa,
+  D.~DeBra, J.~Degallaix, M.~del Prete, V.~Dergachev, R.~DeRosa, R.~DeSalvo,
+  P.~Devanka, S.~Dhurandhar, L.~D. Fiore, A.~D. Lieto, I.~D. Palma, Emilio,
+  A.~D. Virgilio, M.~D\'{\i}az, A.~Dietz, F.~Donovan, K.~L. Dooley, E.~E.
+  Doomes, S.~Dorsher, E.~S.~D. Douglas, M.~Drago, R.~W.~P. Drever, J.~C.
+  Driggers, J.~Dueck, J.~C. Dumas, T.~Eberle, M.~Edgar, M.~Edwards, A.~Effler,
+  P.~Ehrens, R.~Engel, T.~Etzel, M.~Evans, T.~Evans, V.~Fafone, S.~Fairhurst,
+  Y.~Fan, B.~F. Farr, D.~Fazi, H.~Fehrmann, D.~Feldbaum, I.~Ferrante,
+  F.~Fidecaro, L.~S. Finn, I.~Fiori, R.~Flaminio, M.~Flanigan, K.~Flasch,
+  S.~Foley, C.~Forrest, E.~Forsi, N.~Fotopoulos, J.~D. Fournier, J.~Franc,
+  S.~Frasca, F.~Frasconi, M.~Frede, M.~Frei, Z.~Frei, A.~Freise, R.~Frey, T.~T.
+  Fricke, D.~Friedrich, P.~Fritschel, V.~V. Frolov, P.~Fulda, M.~Fyffe,
+  L.~Gammaitoni, J.~A. Garofoli, F.~Garufi, G.~Gemme, E.~Genin, A.~Gennai,
+  I.~Gholami, S.~Ghosh, J.~A. Giaime, S.~Giampanis, K.~D. Giardina,
+  A.~Giazotto, C.~Gill, E.~Goetz, L.~M. Goggin, G.~Gonz\'{a}lez, M.~L.
+  Gorodetsky, S.~Go{\ss}ler, R.~Gouaty, C.~Graef, M.~Granata, A.~Grant,
+  S.~Gras, C.~Gray, R.~J.~S. Greenhalgh, A.~M. Gretarsson, C.~Greverie,
+  R.~Grosso, H.~Grote, S.~Grunewald, G.~M. Guidi, E.~K. Gustafson,
+  R.~Gustafson, B.~Hage, P.~Hall, J.~M. Hallam, D.~Hammer, G.~Hammond,
+  J.~Hanks, C.~Hanna, J.~Hanson, J.~Harms, G.~M. Harry, I.~W. Harry, E.~D.
+  Harstad, K.~Haughian, K.~Hayama, J.~Heefner, H.~Heitmann, P.~Hello, I.~S.
+  Heng, A.~Heptonstall, M.~Hewitson, S.~Hild, E.~Hirose, D.~Hoak, K.~A. Hodge,
+  K.~Holt, D.~J. Hosken, J.~Hough, E.~Howell, D.~Hoyland, D.~Huet, B.~Hughey,
+  S.~Husa, S.~H. Huttner, T.~Huynh-Dinh, D.~R. Ingram, R.~Inta, T.~Isogai,
+  A.~Ivanov, P.~Jaranowski, W.~W. Johnson, D.~I. Jones, G.~Jones, R.~Jones,
+  L.~Ju, P.~Kalmus, V.~Kalogera, S.~Kandhasamy, J.~Kanner, E.~Katsavounidis,
+  K.~Kawabe, S.~Kawamura, F.~Kawazoe, W.~Kells, D.~G. Keppel, A.~Khalaidovski,
+  F.~Y. Khalili, E.~A. Khazanov, C.~Kim, H.~Kim, P.~J. King, D.~L. Kinzel,
+  J.~S. Kissel, S.~Klimenko, V.~Kondrashov, R.~Kopparapu, S.~Koranda,
+  I.~Kowalska, D.~Kozak, T.~Krause, V.~Kringel, S.~Krishnamurthy, B.~Krishnan,
+  A.~Kr\'{o}lak, G.~Kuehn, J.~Kullman, R.~Kumar, P.~Kwee, M.~Landry, M.~Lang,
+  B.~Lantz, N.~Lastzka, A.~Lazzarini, P.~Leaci, J.~Leong, I.~Leonor, N.~Leroy,
+  N.~Letendre, J.~Li, T.~G.~F. Li, H.~Lin, P.~E. Lindquist, N.~A. Lockerbie,
+  D.~Lodhia, M.~Lorenzini, V.~Loriette, M.~Lormand, G.~Losurdo, P.~Lu, J.~Luan,
+  M.~Lubinski, A.~Lucianetti, H.~L\"{u}ck, A.~Lundgren, B.~Machenschalk,
+  M.~MacInnis, J.~M. Mackowski, M.~Mageswaran, K.~Mailand, E.~Majorana, C.~Mak,
+  N.~Man, I.~Mandel, V.~Mandic, M.~Mantovani, F.~Marchesoni, F.~Marion,
+  S.~M\'{a}rka, Z.~M\'{a}rka, E.~Maros, J.~Marque, F.~Martelli, I.~W. Martin,
+  R.~M. Martin, J.~N. Marx, K.~Mason, A.~Masserot, F.~Matichard, L.~Matone,
+  R.~A. Matzner, N.~Mavalvala, R.~McCarthy, D.~E. McClelland, S.~C. McGuire,
+  G.~, Classical and Quantum Gravity \textbf{27}, 173001+ (2010).
 
 \bibitem{Hulse1975Discovery}
 R.~A. {Hulse} and J.~H. {Taylor}, Astrophys. J. Lett. \textbf{195}, L51 (1975).
@@ -44,7 +317,16 @@ J.~M. Weisberg and J.~H. Taylor, in \emph{Binary Radio Pulsars}, vol. 328 of
   Pacific Conference Series}.
 
 \bibitem{Hobbs2009International}
-G.~Hobbs \emph{et~al.}  (2009).
+G.~Hobbs, A.~Archibald, Z.~Arzoumanian, D.~Backer, M.~Bailes, N.~D.~R. Bhat,
+  M.~Burgay, S.~Burke-Spolaor, D.~Champion, I.~Cognard, W.~Coles, J.~Cordes,
+  P.~Demorest, G.~Desvignes, R.~D. Ferdman, L.~Finn, P.~Freire, M.~Gonzalez,
+  J.~Hessels, A.~Hotan, G.~Janssen, F.~Jenet, A.~Jessner, C.~Jordan, V.~Kaspi,
+  M.~Kramer, V.~Kondratiev, J.~Lazio, K.~Lazaridis, K.~J. Lee, Y.~Levin,
+  A.~Lommen, D.~Lorimer, R.~Lynch, A.~Lyne, R.~Manchester, M.~McLaughlin,
+  D.~Nice, S.~Oslowski, M.~Pilia, A.~Possenti, M.~Purver, S.~Ransom,
+  J.~Reynolds, S.~Sanidas, J.~Sarkissian, A.~Sesana, R.~Shannon, X.~Siemens,
+  I.~Stairs, B.~Stappers, D.~Stinebring, G.~Theureau, R.~van Haasteren, W.~van
+  Straten, J.~P.~W. Verbiest, D.~R.~B. Yardley, and X.~P. You  (2009).
 
 \bibitem{Linsay1983Study}
 P.~Linsay, P.~Saulson, R.~Weiss, and S.~Whitcomb, \enquote{{A study of a long
@@ -52,16 +334,125 @@ P.~Linsay, P.~Saulson, R.~Weiss, and S.~Whitcomb, \enquote{{A study of a long
   Massachusetts Institute of Technology (1983).
 
 \bibitem{Abbott2009LIGO}
-B.~P. Abbott \emph{et~al.}, Reports on Progress in Physics \textbf{72}, 076901+
-  (2009).
+B.~P. Abbott, R.~Abbott, R.~Adhikari, P.~Ajith, B.~Allen, G.~Allen, R.~S. Amin,
+  S.~B. Anderson, W.~G. Anderson, M.~A. Arain, M.~Araya, H.~Armandula,
+  P.~Armor, Y.~Aso, S.~Aston, P.~Aufmuth, C.~Aulbert, S.~Babak, P.~Baker,
+  S.~Ballmer, C.~Barker, D.~Barker, B.~Barr, P.~Barriga, L.~Barsotti, M.~A.
+  Barton, I.~Bartos, R.~Bassiri, M.~Bastarrika, B.~Behnke, M.~Benacquista,
+  J.~Betzwieser, P.~T. Beyersdorf, I.~A. Bilenko, G.~Billingsley, R.~Biswas,
+  E.~Black, J.~K. Blackburn, L.~Blackburn, D.~Blair, B.~Bland, T.~P. Bodiya,
+  L.~Bogue, R.~Bork, V.~Boschi, S.~Bose, P.~R. Brady, V.~B. Braginsky, J.~E.
+  Brau, D.~O. Bridges, M.~Brinkmann, A.~F. Brooks, D.~A. Brown, A.~Brummit,
+  G.~Brunet, A.~Bullington, A.~Buonanno, O.~Burmeister, R.~L. Byer,
+  L.~Cadonati, J.~B. Camp, J.~Cannizzo, K.~C. Cannon, J.~Cao, L.~Cardenas,
+  S.~Caride, G.~Castaldi, S.~Caudill, M.~Cavagli\`{a}, C.~Cepeda,
+  T.~Chalermsongsak, E.~Chalkley, P.~Charlton, S.~Chatterji, S.~Chelkowski,
+  Y.~Chen, N.~Christensen, C.~T.~Y. Chung, D.~Clark, J.~Clark, J.~H. Clayton,
+  T.~Cokelaer, C.~N. Colacino, R.~Conte, D.~Cook, T.~R.~C. Corbitt, N.~Cornish,
+  D.~Coward, D.~C. Coyne, J.~D.~E. Creighton, T.~D. Creighton, A.~M. Cruise,
+  R.~M. Culter, A.~Cumming, L.~Cunningham, S.~L. Danilishin, K.~Danzmann,
+  B.~Daudert, G.~Davies, E.~J. Daw, D.~DeBra, J.~Degallaix, V.~Dergachev,
+  S.~Desai, R.~DeSalvo, S.~Dhurandhar, M.~D\'{\i}az, A.~Dietz, F.~Donovan,
+  K.~L. Dooley, E.~E. Doomes, R.~W.~P. Drever, J.~Dueck, I.~Duke, J.~C. Dumas,
+  J.~G. Dwyer, C.~Echols, M.~Edgar, A.~Effler, P.~Ehrens, E.~Espinoza,
+  T.~Etzel, M.~Evans, T.~Evans, S.~Fairhurst, Y.~Faltas, Y.~Fan, D.~Fazi,
+  H.~Fehrmenn, L.~S. Finn, K.~Flasch, S.~Foley, C.~Forrest, N.~Fotopoulos,
+  A.~Franzen, M.~Frede, M.~Frei, Z.~Frei, A.~Freise, R.~Frey, T.~Fricke,
+  P.~Fritschel, V.~V. Frolov, M.~Fyffe, V.~Galdi, J.~A. Garofoli, I.~Gholami,
+  J.~A. Giaime, S.~Giampanis, K.~D. Giardina, K.~Goda, E.~Goetz, L.~M. Goggin,
+  G.~Gonz\'{a}lez, M.~L. Gorodetsky, S.~Go{\ss}ler, R.~Gouaty, A.~Grant,
+  S.~Gras, C.~Gray, M.~Gray, R.~J.~S. Greenhalgh, A.~M. Gretarsson,
+  F.~Grimaldi, R.~Grosso, H.~Grote, S.~Grunewald, M.~Guenther, E.~K. Gustafson,
+  R.~Gustafson, B.~Hage, J.~M. Hallam, D.~Hammer, G.~D. Hammond, C.~Hanna,
+  J.~Hanson, J.~Harms, G.~M. Harry, I.~W. Harry, E.~D. Harstad, K.~Haughian,
+  K.~Hayama, J.~Heefner, I.~S. Heng, A.~Heptonstall, M.~Hewitson, S.~Hild,
+  E.~Hirose, D.~Hoak, K.~A. Hodge, K.~Holt, D.~J. Hosken, J.~Hough, D.~Hoyland,
+  B.~Hughey, S.~H. Huttner, D.~R. Ingram, T.~Isogai, M.~Ito, A.~Ivanov,
+  B.~Johnson, W.~W. Johnson, D.~I. Jones, G.~Jones, R.~Jones, L.~Ju, P.~Kalmus,
+  V.~Kalogera, S.~Kandhasamy, J.~Kanner, D.~Kasprzyk, E.~Katsavounidis,
+  K.~Kawabe, S.~Kawamura, F.~Kawazoe, W.~Kells, D.~G. Keppel, A.~Khalaidovski,
+  F.~Y. Khalili, R.~Khan, E.~Khazanov, P.~King, J.~S. Kissel, S.~Klimenko,
+  K.~Kokeyama, V.~Kondrashov, R.~Kopparapu, S.~Koranda, D.~Kozak, B.~Krishnan,
+  R.~Kumar, P.~Kwee, P.~K. Lam, M.~Landry, B.~Lantz, A.~Lazzarini, H.~Lei,
+  M.~Lei, N.~Leindecker, I.~Leonor, C.~Li, H.~Lin, P.~E. Lindquist, T.~B.
+  Littenberg, N.~A. Lockerbie, D.~Lodhia, M.~Longo, M.~Lormand, P.~Lu,
+  M.~Lubinski, A.~Lucianetti, H.~L\"{u}ck, B.~Machenschalk, M.~MacInnis,
+  M.~Mageswaran, K.~Mailand, I.~Mandel, V.~Mandic, S.~M\'{a}rka, Z.~M\'{a}rka,
+  A.~Markosyan, J.~Markowitz, E.~Maros, I.~W. Martin, R.~M. Martin, J.~N. Marx,
+  K.~Mason, F.~Matichard, L.~Matone, R.~A. Matzner, N.~Mavalvala, R.~McCarthy,
+  D.~E. McClelland, S.~C. McGuire, M.~McHugh, G.~McIntyre, D.~J.~A. McKechan,
+  K.~McKenzie, M.~Mehmet, A.~Melatos, A.~C. Melissinos, D.~F. Men\'{e}ndez,
+  G.~Mendell, R.~A. Mercer, S.~Meshkov, C.~Messenger, M.~S. Meyer, J.~Miller,
+  J.~Minelli, Y.~Mino, V.~P. Mitrofanov, G.~Mitselmakher, R.~Mittleman,
+  O.~Miyakawa, B.~Moe, S.~D. Mohanty, S.~R.~P. Mohapatra, G.~Moreno,
+  T.~Morioka, K.~Mors, K.~Mossavi, C.~MowLowry, G.~Mueller,
+  H.~M\"{u}ller-Ebhardt, D.~Muhammad, S.~Mukherjee, H.~Mukhopadhyay,
+  A.~Mullavey, J.~Munch, P.~G. Murray, E.~Myers, J.~Myers, T.~Nash, J.~Nelson,
+  G.~Newton, A.~Nishizawa, K.~Numata, J.~O'Dell, B.~O'Reilly, R.~O'Shaughnessy,
+  E.~Ochsner, G.~H. Ogin, D.~J. Ottaway, R.~S. Ottens, H.~Overmier, B.~J. Owen,
+  Y.~Pan, C.~Pankow, M.~A. Papa, V.~Parameshwaraiah, P.~Patel, M.~Pedraza,
+  S.~Penn, A.~Perraca, V.~Pierro, I.~M. Pinto, M.~Pitkin, H.~J. Pletsch, M.~V.
+  Plissi, F.~Postiglione, M.~Principe, R.~Prix, L.~Prokhorov, O.~Punken,
+  V.~Quetschke, F.~J. Raab, D.~S. Rabeling, H.~Radkins, P.~Raffai, Z.~Raics,
+  N.~Rainer, M.~Rakhmanov, V.~Raymond, C.~M. Reed, T.~Reed, H.~Rehbein,
+  S.~Reid, D.~H. Reitze, R.~Riesen, K.~Riles, B.~Rivera, P.~Roberts, N.~A.
+  Robertson, C.~Robinson, E.~L. Robinson, S.~Roddy, C.~R\"{o}ver, J.~Rollins,
+  J.~D. Romano, J.~H. Romie, S.~Rowan, A.~R\"{u}diger, P.~Russell, K.~Ryan,
+  S.~Sakata, L.~S. de~la Jordana, V.~Sandberg, V.~Sannibale,
+  L.~Santamar\'{\i}a, S.~Saraf, P.~Sarin, B.~S. Sathyaprakash, S.~Sato,
+  M.~Satterthwaite, P.~R. Saulson, R.~Savage, P.~Savov, M.~Scanlan,
+  R.~Schilling, R.~Schnabel, R.~Schofield, B.~Schulz, B.~F. Schutz,
+  P.~Schwinberg, J.~Scott, S.~M. Scott, A.~C. Sear, Reports on Progress in
+  Physics \textbf{72}, 076901+ (2009).
 
 \bibitem{Acernese2008Virgo}
-F.~Acernese \emph{et~al.}, Journal of Optics A: Pure and Applied Optics
-  \textbf{10}, 064009+ (2008).
+F.~Acernese, P.~Amico, M.~Alshourbagy, F.~Antonucci, S.~Aoudia, P.~Astone,
+  S.~Avino, L.~Baggio, G.~Ballardin, F.~Barone, L.~Barsotti, M.~Barsuglia,
+  T.~S. Bauer, S.~Bigotta, M.~A. Bizouard, C.~Boccara, F.~Bondu, L.~Bosi,
+  C.~Bradaschia, J.~F.~J. van~den Brand, S.~Birindelli, S.~Braccini,
+  A.~Brillet, V.~Brisson, D.~Buskulic, G.~Cagnoli, E.~Calloni, E.~Campagna,
+  F.~Carbognani, F.~Cavalier, R.~Cavalieri, G.~Cella, E.~Cesarini,
+  E.~Chassande-Mottin, A.~C. Clapson, F.~Cleva, E.~Coccia, C.~Corda, A.~Corsi,
+  F.~Cottone, J.~P. Coulon, E.~Cuoco, S.~D'Antonio, A.~Dari, V.~Dattilo,
+  M.~Davier, M.~del Prete, R.~De~Rosa, L.~Di~Fiore, A.~Di~Lieto,
+  A.~Di~Virgilio, B.~Dujardin, M.~Evans, V.~Fafone, I.~Ferrante, F.~Fidecaro,
+  I.~Fiori, R.~Flaminio, J.~D. Fournier, S.~Frasca, F.~Frasconi, L.~Gammaitoni,
+  F.~Garufi, E.~Genin, A.~Gennai, A.~Giazotto, L.~Giordano, V.~Granata,
+  C.~Greverie, D.~Grosjean, G.~Guidi, S.~Hamdani, S.~Hebri, H.~Heitmann,
+  P.~Hello, D.~Huet, S.~Kreckelbergh, P.~La~Penna, M.~Laval, N.~Leroy,
+  N.~Letendre, B.~Lopez, M.~Lorenzini, V.~Loriette, G.~Losurdo, J.~M.
+  Mackowski, E.~Majorana, C.~N. Man, M.~Mantovani, F.~Marchesoni, F.~Marion,
+  J.~Marque, F.~Martelli, A.~Masserot, F.~Menzinger, L.~Milano, Y.~Minenkov,
+  C.~Moins, J.~Moreau, N.~Morgado, S.~Mosca, B.~Mours, I.~Neri, F.~Nocera,
+  G.~Pagliaroli, G.~V. Pallottino, C.~Palomba, F.~Paoletti, S.~Pardi,
+  A.~Pasqualetti, R.~Passaquieti, D.~Passuello, F.~Piergiovanni, L.~Pinard,
+  R.~Poggiani, M.~Punturo, P.~Puppo, S.~van~der Putten, P.~Rapagnani,
+  T.~Regimbau, V.~Reita, A.~Remillieux, F.~Ricci, I.~Ricciardi, A.~Rocchi,
+  R.~Romano, P.~Ruggi, G.~Russo, S.~Solimeno, A.~Spallicci, M.~Tarallo,
+  R.~Terenzi, M.~Tonelli, A.~Toncelli, E.~Tournefier, F.~Travasso, C.~Tremola,
+  G.~Vajente, D.~Verkindt, F.~Vetrano, A.~Vicer\'{e}, J.~Y. Vinet, H.~Vocca,
+  and M.~Yvert, Journal of Optics A: Pure and Applied Optics \textbf{10},
+  064009+ (2008).
 
 \bibitem{Luck2006Status}
-H.~L\"{u}ck \emph{et~al.}, Classical and Quantum Gravity \textbf{23}, S71
-  (2006).
+H.~L\"{u}ck, M.~Hewitson, P.~Ajith, B.~Allen, P.~Aufmuth, C.~Aulbert, S.~Babak,
+  R.~Balasubramanian, B.~W. Barr, S.~Berukoff, A.~Bunkowski, G.~Cagnoli, C.~A.
+  Cantley, M.~M. Casey, S.~Chelkowski, Y.~Chen, D.~Churches, T.~Cokelaer, C.~N.
+  Colacino, D.~R.~M. Crooks, C.~Cutler, K.~Danzmann, R.~J. Dupuis, E.~Elliffe,
+  C.~Fallnich, A.~Franzen, A.~Freise, I.~Gholami, S.~Go{\ss}ler, A.~Grant,
+  H.~Grote, S.~Grunewald, J.~Harms, B.~Hage, G.~Heinzel, I.~S. Heng,
+  A.~Hepstonstall, M.~Heurs, S.~Hild, J.~Hough, Y.~Itoh, G.~Jones, R.~Jones,
+  S.~H. Huttner, K.~K\"{o}tter, B.~Krishnan, P.~Kwee, M.~Luna, B.~Machenschalk,
+  M.~Malec, R.~A. Mercer, T.~Meier, C.~Messenger, S.~Mohanty, K.~Mossavi,
+  S.~Mukherjee, P.~Murray, G.~P. Newton, M.~A. Papa, M.~Perreur-Lloyd,
+  M.~Pitkin, M.~V. Plissi, R.~Prix, V.~Quetschke, V.~Re, T.~Regimbau,
+  H.~Rehbein, S.~Reid, L.~Ribichini, D.~I. Robertson, N.~A. Robertson,
+  C.~Robinson, J.~D. Romano, S.~Rowan, A.~R\"{u}diger, B.~S. Sathyaprakash,
+  R.~Schilling, R.~Schnabel, B.~F. Schutz, F.~Seifert, A.~M. Sintes, J.~R.
+  Smith, P.~H. Sneddon, K.~A. Strain, I.~Taylor, R.~Taylor, A.~Th\"{u}ring,
+  C.~Ungarelli, H.~Vahlbruch, A.~Vecchio, J.~Veitch, H.~Ward, U.~Weiland,
+  H.~Welling, L.~Wen, P.~Williams, B.~Willke, W.~Winkler, G.~Woan, and R.~Zhu,
+  Classical and Quantum Gravity \textbf{23}, S71 (2006).
 
 \bibitem{AdvLigoSysDesign}
 {Advanced LIGO Systems Group}, \enquote{{Advanced LIGO Systems Design}}, Tech.
@@ -72,7 +463,9 @@ R.~Adhikari, P.~Fritschel, and S.~Waldman, \enquote{{Enhanced LIGO}}, Tech.
   Rep. T060156, LIGO Laboratory (2006).
 
 \bibitem{Fricke2011DC}
-T.~Fricke \emph{et~al.}, Classical and Quantum Gravity, in preparation  (2011).
+T.~Fricke, N.~Smith-Lefebvre, R.~Abbott, R.~Adhikari, K.~Dooley, M.~Evans,
+  P.~Fritschel, V.~Frolov, K.~Kawabe, J.~Kissel, B.~Slagmolen, and S.~Waldman,
+  Classical and Quantum Gravity, accepted for publication  (2011).
 
 \bibitem{KisselThesis}
 J.~S. Kissel, \enquote{Calibrating and improving the sensitivity of the {LIGO}
@@ -88,8 +481,10 @@ P.~Willems, A.~Brooks, M.~Mageswaran, V.~Sannibale, C.~Vorvick, D.~Atkinson,
   (2009).
 
 \bibitem{Luck2010Upgrade}
-H.~L\"{u}ck \emph{et~al.}, Journal of Physics: Conference Series \textbf{228},
-  012012+ (2010).
+H.~L\"{u}ck, C.~Affeldt, J.~Degallaix, A.~Freise, H.~Grote, M.~Hewitson,
+  S.~Hild, J.~Leong, M.~Prijatelj, K.~A. Strain, B.~Willke, H.~Wittel, and
+  K.~Danzmann, Journal of Physics: Conference Series \textbf{228}, 012012+
+  (2010).
 
 \bibitem{Solimeno1991FabryPerot}
 S.~Solimeno, F.~Barone, C.~de~Lisio, L.~Di~Fiore, L.~Milano, and G.~Russo,
@@ -163,8 +558,10 @@ G.~Mueller, R.~S. Amin, D.~Guagliardo, D.~McFeron, R.~Lundock, D.~H. Reitze,
   and D.~B. Tanner, Classical and Quantum Gravity \textbf{19}, 1793+ (2002).
 
 \bibitem{Khazanov2004Compensation}
-E.~Khazanov \emph{et~al.}, IEEE Journal of Quantum Electronics \textbf{40},
-  1500 (2004).
+E.~Khazanov, N.~F. Andreev, A.~Mal'shakov, O.~Palashov, A.~K. Poteomkin,
+  A.~Sergeev, A.~A. Shaykin, V.~Zelenogorsky, I.~A. Ivanov, R.~Amin,
+  G.~Mueller, D.~B. Tanner, and D.~H. Reitze, IEEE Journal of Quantum
+  Electronics \textbf{40}, 1500 (2004).
 
 \bibitem{TheVIRGOCollaboration2008Invacuum}
 {The VIRGO Collaboration}, Appl. Opt. \textbf{47}, 5853 (2008).
@@ -197,6 +594,10 @@ P.~Fritschel and D.~Shoemaker, \enquote{{Alignment Sensing/Control Design
 \bibitem{Wiener1975Extrapolation}
 N.~Wiener, \emph{{Extrapolation, Inerpolation, and Smoothing of Stationary Time
   Series}} (The M.I.T. Press, 1975).
+
+\bibitem{Feynman1970Feynman}
+R.~P. Feynman, \emph{{Feynman lectures on physics.}} (Addison Wesley Longman,
+  1970).
 
 \bibitem{Sigg1996Wavefront}
 D.~Sigg, \enquote{{Wavefront Sensor}}, Tech. Rep. T960111, LIGO Laboratory

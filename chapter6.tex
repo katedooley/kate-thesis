@@ -58,7 +58,7 @@
 % video camera monitors the location of the spot on the beam splitter,
 % thus serving as a sensor of the pointing of the input beam. The image
 % of the speckle of light reflected off of the beam splitter (see
-% Fig. \ref{fig:BCS}) is fed into a labview program which integrates the
+% Figure \ref{fig:BCS}) is fed into a labview program which integrates the
 % intensity of the image to identify the coordinates of the center of
 % the beam spot. This is compared with a hardcoded desired center
 % location and a mirror upstream, MMT1 is moved to redirect the input
@@ -136,7 +136,7 @@ of my work was therefore to calibrate each of the relevant ASC
 channels to physical units. I include the details of the calibrations
 in Appendix~\ref{ch:ASCcal}.
 
-Also, as shown in Sec.~\ref{sec:oplevspectra} almost all of the mirror
+Also, as shown in Section~\ref{sec:oplevspectra} almost all of the mirror
 motion is in fact due to the ground. Therefore, the measurements I
 made of the ASC are very sensitive to the particular state of seismic
 noise. I include in Appendix \ref{sec:groundmotion} seismic spectra
@@ -148,7 +148,7 @@ from the time of each measurement I present.
 \section{The ASC Change of Basis}
 The change in control basis from Initial LIGO to Enhanced LIGO was a
 rather straightforward operation of changing only the ASC input matrix
-and the ASC output matrix, as shown in Fig.~\ref{fig:ASCcontrolservo} and
+and the ASC output matrix, as shown in Figure~\ref{fig:ASCcontrolservo} and
 described in the following subsections.
 
 The convention for the naming of the WFS control signals is WFS1,
@@ -230,7 +230,7 @@ that the sensing matrix is in fact composed of two sub-matrices: one
 for the differential degrees of freedom, and one for the common
 degrees of freedom. Also, WFS1Q has particularly strong signal
 compared to the other wavefront sensors. We see in
-Sec.~\ref{sec:WFSolgs} that this allows us to provide much more
+Section~\ref{sec:WFSolgs} that this allows us to provide much more
 control to the differential soft mode compared to the other modes.
 
 \begin{table}
@@ -478,7 +478,7 @@ impinging the cavity. If either the input beam or the cavity angle
 changes, the WFS will move the mirrors to correct for the angle
 mismatch. Thus, even if the mirrors are perfectly quiet, a
 non-stationary input beam will result in mirror motion and mirror
-motion in turn creates beam spot motion (see Eq. \ref{eq:x}).
+motion in turn creates beam spot motion. See Eq. \ref{eq:x}.
 
 I measured the impression of the input beam motion on the mirrors by
 increasing the gain of the common-degree-of-freedom WFS servos (cHard,
@@ -486,7 +486,7 @@ cSoft, RM) for about 10~minutes. Comparing the amount of angular motion
 of the mirrors as witnessed by the optical levers from this time of
 high common WFS gain to a time with nominal WFS gain and similar
 seismic motion, we can see the effect
-directly. Fig. \ref{fig:inputbeam_impression} shows comparison
+directly. Figure \ref{fig:inputbeam_impression} shows comparison
 spectra, demonstrating how there is higher test mass motion around
 1~Hz when the common WFS gains are higher. The rms mirror motion also
 increases by about 20\%.
@@ -504,7 +504,7 @@ increases by about 20\%.
   lines are the root-mean-square of the amplitude spectral density
   integrated from the right. Both spectra come from a time of similar
   seismic activity (typical weekday afternoon noise), shown in
-  Fig. \ref{fig:seismic_highgain}.}
+  Figure \ref{fig:seismic_highgain}.}
 \label{fig:inputbeam_impression}
 \end{centering}
 \end{figure}
@@ -513,7 +513,7 @@ It is possible for the extra mirror motion to result from gain peaking
 of the WFS servos. However, a plot of the WFS error signals during the
 time of nominal gain and high gain shows that there is not, in fact,
 any evidence of gain peaking. The common WFS spectra in
-Fig. \ref{fig:WFS_inputbeam} do not show any extra noise when their
+Figure \ref{fig:WFS_inputbeam} do not show any extra noise when their
 gains are higher. It is worth noting that the higher gain is evident
 in the common WFS spectra by the extra suppression seen below
 1~Hz. Also, the differential WFS spectra are unchanged, as
@@ -534,7 +534,7 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
   excludes gain peaking as a cause of the extra mirror motion
   witnessed during the time of high gain. Dashed lines are the
   root-mean-square of the amplitude spectral density integrated from
-  the right. Fig.~\ref{fig:seismic_highgain} shows the ground motion
+  the right. Figure~\ref{fig:seismic_highgain} shows the ground motion
   spectra at the time of this measurement.}
 \label{fig:WFS_inputbeam}
 \end{centering}
@@ -554,7 +554,7 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
 % frequency to other frequencies. The result is a transfer function
 % useful for making a noisebudget of input beam motion to test mass
 % motion. Selecting a science mode time of typical day-time seismic
-% noise, I made a noisebudget as found in Fig. \ref{fig:inputbeam_NB}.
+% noise, I made a noisebudget as found in Figure \ref{fig:inputbeam_NB}.
 
 
 % \begin{table}
@@ -640,7 +640,7 @@ z(2+\delta)/\delta & z(2-\delta)/\delta \\
 \theta_{ITM} \end{array} \right\rrbracket.
 \end{equation}
 
-Fig. \ref{fig:prc_power} plots the power in the PRC as a function of
+Figure \ref{fig:prc_power} plots the power in the PRC as a function of
 $\theta_{RM}$ for several values of $\delta$, demonstrating
 the sensitivity of the PRC to the ITM heating.  For example, the
 typical RM angular displacement of $10^{-7}$ rad results in a 66\%
@@ -694,7 +694,7 @@ demodulated signals for a particular excitation $f$ by $(f/9.7)^2$. I
 also normalized the response by the phase of the mirror's motion as
 witnessed by the optical levers.
 
-The results are shown in Fig. \ref{fig:WFStrack}, and include a plot
+The results are shown in Figure \ref{fig:WFStrack}, and include a plot
 of how NSPOB changed over time. As expected, WFS1Q, WFS2I, and WFS2Q
 show dependence on the PRC power, and therefore the $g$-factor. The
 WFS3 and WFS4 sensing elements are flat. Fitting lines to each of the
@@ -763,7 +763,7 @@ recycling cavity geometry]{WFS optical response to test mass motion as
 \section{WFS Servo Open Loop Transfer Functions}
 \label{sec:WFSolgs}
 The open loop transfer functions of the wavefront sensor loops as
-measured during a 6~W lock are shown in Fig.~\ref{fig:olgs6W}. As
+measured during a 6~W lock are shown in Figure~\ref{fig:olgs6W}. As
 anticipated from the large differential soft signal seen by WFS1 in
 the sensing matrix measurement (Table~\ref{table:sensing}), that is
 the mode for which we provide the strongest suppression. However, it
@@ -810,9 +810,9 @@ and 1~Hz. Each loop has a phase margin of 30 to $40^{\circ}$.
 
 
 \section{Residual Angular Motion}
-The residual beam spot motion is shown in Fig.~\ref{fig:bsm}. We see
+The residual beam spot motion is shown in Figure~\ref{fig:bsm}. We see
 the rms beam spot motion on the ETMs is 1~mm and on the ITMs it is
-0.8~mm. This meets the requirements of Sec.~\ref{sec:tolerance}.
+0.8~mm. This meets the requirements of Section~\ref{sec:tolerance}.
 
 \begin{figure}
 \begin{centering}
@@ -821,7 +821,7 @@ the rms beam spot motion on the ETMs is 1~mm and on the ITMs it is
 \caption[Beam spot motion on the ITMs and ETMs during a 16~W
 lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
   night. Ground motion at the time of this measurement is shown in
-  Fig.~\ref{fig:seismic_bsm}}%(May21, 2010, 06:02:30 UTC).}
+  Figure~\ref{fig:seismic_bsm}}%(May21, 2010, 06:02:30 UTC).}
 \label{fig:bsm}
 \end{centering}
 \end{figure}
@@ -837,10 +837,10 @@ lock]{Beam spot motion on the ITMs and ETMs during a 16~W lock at
 %   degrees of freedom using calibrated WFS error signals during a 10~W
 %   lock compared to dark noise and the background motion as calculated
 %   using the open loop transfer function measurements. The sensor dark
-%   noises (see Fig.~\ref{fig:WFSdarknoise}) are put in the RP
+%   noises (see Figure~\ref{fig:WFSdarknoise}) are put in the RP
 %   eigenbasis by propagation through the WFS power scaling and WFS
 %   input matrix. Ground motion at the time of the residual motion
-%   spectra is found in Fig.~\ref{fig:seismic_locked}.}
+%   spectra is found in Figure~\ref{fig:seismic_locked}.}
 % \label{fig:WFSresidual}
 % \end{centering}
 % \end{figure}
@@ -866,7 +866,7 @@ where order of magnitude suppression is seen already at 1~Hz.
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/onoff_RM.pdf}}
 \caption[Angular motion suppression due to the ASC]{Demonstration of
   angular motion suppression down to 4~mHz due to the ASC. 
-%Same as Fig.~\ref{fig:WFSresidual}, but the background (here called
+%Same as Figure~\ref{fig:WFSresidual}, but the background (here called
 %``no  ASC'') 
 The background motion (``no ASC'') is the RP eigenbasis reconstruction of optical lever signals
   when the interferometer is not locked. Data are taken 45 minutes
@@ -881,12 +881,12 @@ The background motion (``no ASC'') is the RP eigenbasis reconstruction of optica
 The magnitudes of the beam spot motion and the residual mirror motion
 are consistent and reasonable. For example, for $10^{-7}$ rad of soft
 or hard mode motion in one arm, the maximum cavity tilt and
-displacement are (from Table.~\ref{table:cav_geometric})
-0.12~\micro rad and 1.02~mm, respectively.
+displacement are 0.12~\micro rad and 1.02~mm, respectively. Refer to
+Table~\ref{table:cav_geometric}.
 
 
 Figure~\ref{fig:mirror_onoff} shows the same data as
-Fig.~\ref{fig:ASConoff} except in the mirror basis instead of the
+Figure~\ref{fig:ASConoff} except in the mirror basis instead of the
 radiation pressure eigenmode basis. The ASC on/off comparison of
 mirror motion is interesting because it shows that the mirrors
 actually move more with respect to the ground when they are controlled
@@ -982,7 +982,7 @@ WFS error points. This allows us to view the breakdown of noise
 contributions in the WFS (radiation pressure eigenmode) basis rather
 than the optic basis. Figure~\ref{fig:wfs2DARM} shows the breakdown of
 WFS noise contributions to DARM for the same time as
-Fig.~\ref{fig:optic2DARM}.
+Figure~\ref{fig:optic2DARM}.
 
 Because two angular control signals, the WFS and the optical levers,
 independently contribute signals to the suspension angular control, we
@@ -1001,7 +1001,7 @@ a 16 W lock at night]{Total WFS and optical lever noise contribution
   to DARM during a 16 W lock at night. Pitch and yaw contributions are
   added in quadrature under the assumption they are
   de-coupled. Seismic spectra at the time of this measurement are found
-  in Fig.~\ref{fig:seismic_NB}.}
+  in Figure~\ref{fig:seismic_NB}.}
 \label{fig:asc2darm}
 \end{centering}
 \end{figure}
@@ -1103,16 +1103,16 @@ DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
 
 The digital control system in which the angular control feedback
 system is implemented provides a convenient milieu in which to measure
-the response of the optomechanical system.  By injecting a disturbance
+the response of the optomechanical system. By injecting a disturbance
 somewhere in the loop and measuring the response at selected points in
 the loop, we can produce a measurement of the optomechanical system
-that is not sensitive to the details of the control system.   Here we
+that is not sensitive to the details of the control system. Here we
 use this system to produce measurements of the optomechanical plant at
 several different operating powers, demonstrating the modifications due
 to radiation pressure, i.e. the Sidles-Sigg effect.
 
 The various elements of the plant and the control system are depicted
-in figure~\ref{fig:RPTFmeasurement}.  For this measurement, transfer
+in Figure~\ref{fig:RPTFmeasurement}.  For this measurement, transfer
 functions are taken from torque input to the resulting angular
 displacement (as measured by the WFS), both in the radiation pressure
 eigenbasis.  Simultaneously, an excitation is injected into the
@@ -1120,7 +1120,7 @@ control leg of the servo loop.  The resulting measurement reproduces
 the transfer function of the optomechanical plant, independent of the
 control system.
 
-Results are shown in figures~\ref{fig:hardTF} (hard mode) and
+Results are shown in Figures~\ref{fig:hardTF} (hard mode) and
 ~\ref{fig:softTF} (soft mode); least-squares fits of second-order
 transfer functions are made to the data.  In the hard mode plot, we
 can clearly see the increase of the resonant frequency with power,
@@ -1256,7 +1256,7 @@ sensing and control of the optomechanical system.
 
 % Relating the OSEM gains to absolute beam position on the mirror
 % requires only the geometry of the mirror and OSEM setup as sketched in
-% Fig. \ref{fig:mirror_osem_geometry}. We estimate the OSEM locations as
+% Figure \ref{fig:mirror_osem_geometry}. We estimate the OSEM locations as
 % being on the edge of the mirror such that the length $d$ of one side
 % of the square that they form is given by $d =\sqrt{2} R$, where $R =
 % 12.5$ cm is the radius of the mirror. Then, collapsing the four OSEMs
@@ -1350,7 +1350,7 @@ sensing and control of the optomechanical system.
 % The terms in the numerators on the right hand side are fixed constants
 % based on the cavity geometry and can be calculated using
 % Eq. \ref{eq:cavitydisptilt_mirrorangle}. The measurement data and fits
-% are shown for both pitch and yaw in Fig. \ref{fig:OLcal}. The ETM
+% are shown for both pitch and yaw in Figure \ref{fig:OLcal}. The ETM
 % optical levers make use of a broader range of optical lever signal
 % than do the ITMs. (Also note that the maximum power in the y-arm is about
 % 10\% less than that in the x-arm. This is true at both Hanford and
@@ -1461,7 +1461,7 @@ sensing and control of the optomechanical system.
 % % The voltage created per Watt of signal on the WFS is determined by the
 % % responsivity (Amps/Watt) and transimpedance (Volts/Amp) of the
 % % diode. A model of the 25~MHz WFS transimpedance is shown in
-% % Fig. \ref{fig:wfs25MHzTF}, indicating a magnitude of 90~dB at
+% % Figure \ref{fig:wfs25MHzTF}, indicating a magnitude of 90~dB at
 % % 25~MHz. The responsivity is found in Section \ref{sec:pds}. It is
 % % 0.86~A/W. 
 

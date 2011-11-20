@@ -1,4 +1,5 @@
-This is BibTeX, Version 0.99c (Web2C 7.5.7)
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: TOC.aux
@@ -14,50 +15,66 @@ A level-1 auxiliary file: chapter7.aux
 A level-1 auxiliary file: appendix.aux
 The style file: ol.bst
 A level-1 auxiliary file: bio.aux
-Database file #1: group-1530_mod.bib
+Database file #1: group-1530.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty journal in Carroll1997Lecture
+Warning--you've exceeded 5000, the global-string-size, for entry Abbott2009Search
+while executing--line 2639 of file ol.bst
+*Please notify the bibstyle designer*
+Warning--you've exceeded 5000, the global-string-size, for entry S5CBCnospin
+while executing--line 2639 of file ol.bst
+*Please notify the bibstyle designer*
+Warning--you've exceeded 5000, the global-string-size, for entry Abadie2010First
+while executing--line 2639 of file ol.bst
+*Please notify the bibstyle designer*
+Warning--you've exceeded 5000, the global-string-size, for entry Abadie2010Predictions
+while executing--line 2639 of file ol.bst
+*Please notify the bibstyle designer*
 Warning--empty journal in Hobbs2009International
+Warning--you've exceeded 5000, the global-string-size, for entry Abbott2009LIGO
+while executing--line 2639 of file ol.bst
+*Please notify the bibstyle designer*
 Warning--empty author in 1998Component
 Warning--can't use both author and editor fields in Siegman1986Lasers
-You've used 56 entries,
+You've used 57 entries,
             2553 wiz_defined-function locations,
-            939 strings with 13323 characters,
-and the built_in function-call counts, 15351 in all, are:
-= -- 940
-> -- 544
+            950 strings with 68301 characters,
+and the built_in function-call counts, 87934 in all, are:
+= -- 949
+> -- 10424
 < -- 20
-+ -- 206
-- -- 150
-* -- 919
-:= -- 1850
-add.period$ -- 56
-call.type$ -- 56
++ -- 3500
+- -- 3443
+* -- 7523
+:= -- 11736
+add.period$ -- 57
+call.type$ -- 57
 change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 60
-duplicate$ -- 1623
-empty$ -- 1488
-format.name$ -- 187
-if$ -- 3418
+cite$ -- 61
+duplicate$ -- 8215
+empty$ -- 4799
+format.name$ -- 3480
+if$ -- 16622
 int.to.chr$ -- 0
-int.to.str$ -- 56
-missing$ -- 438
-newline$ -- 172
-num.names$ -- 57
-pop$ -- 629
+int.to.str$ -- 57
+missing$ -- 3736
+newline$ -- 175
+num.names$ -- 58
+pop$ -- 3933
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 345
+skip$ -- 350
 stack$ -- 0
 substring$ -- 404
-swap$ -- 1085
+swap$ -- 7678
 text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 84
-width$ -- 58
-write$ -- 460
-(There were 4 warnings)
+while$ -- 85
+width$ -- 59
+write$ -- 467
+(There were 9 warnings)
