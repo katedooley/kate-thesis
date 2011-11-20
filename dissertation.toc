@@ -36,16 +36,16 @@
 \contentsline {section}{\numberline {3.2}Thermal Problems in Initial LIGO}{36}{section.3.2}
 \contentsline {section}{\numberline {3.3}Enhanced LIGO Input Optics Design}{37}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Electro-optic Modulator Design}{38}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Mode Cleaner Design}{41}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Mode Cleaner Design}{42}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Faraday Isolator Design}{42}{subsection.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.3.1}Thermal birefringence}{43}{subsubsection.3.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.3.2}Thermal lensing}{43}{subsubsection.3.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3.3}Polarizers}{43}{subsubsection.3.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.3}Polarizers}{45}{subsubsection.3.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.3.4}Heat conduction}{45}{subsubsection.3.3.3.4}
 \contentsline {subsection}{\numberline {3.3.4}Mode-matching Telescope Design}{46}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Performance of the Enhanced LIGO Input Optics}{46}{section.3.4}
+\contentsline {section}{\numberline {3.4}Performance of the Enhanced LIGO Input Optics}{47}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Optical Efficiency}{47}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Mode cleaner losses}{47}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Mode cleaner losses}{48}{subsubsection.3.4.1.1}
 \contentsline {subsubsection}{\numberline {3.4.1.2}Faraday isolator losses}{50}{subsubsection.3.4.1.2}
 \contentsline {subsection}{\numberline {3.4.2}Faraday Isolation Ratio}{50}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Thermal Steering}{51}{subsection.3.4.3}
@@ -81,23 +81,24 @@
 \contentsline {section}{\numberline {6.3}Input Beam Motion}{93}{section.6.3}
 \contentsline {section}{\numberline {6.4}The Marginally-stable Power Recycling Cavity}{94}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Power Scaling}{98}{subsection.6.4.1}
-\contentsline {section}{\numberline {6.5}WFS Servo Open Loop Transfer Functions}{99}{section.6.5}
-\contentsline {section}{\numberline {6.6}Residual Angular Motion}{101}{section.6.6}
+\contentsline {subsection}{\numberline {6.4.2}Sideband imbalance}{99}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}WFS Servo Open Loop Transfer Functions}{101}{section.6.5}
+\contentsline {section}{\numberline {6.6}Residual Angular Motion}{102}{section.6.6}
 \contentsline {section}{\numberline {6.7}ASC to DARM Noise Budget}{103}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Tuning the Cut-off Filters}{109}{subsection.6.7.1}
-\contentsline {section}{\numberline {6.8}Experimental Measurement of the Sidles-Sigg Effect}{110}{section.6.8}
+\contentsline {subsection}{\numberline {6.7.1}Tuning the Cut-off Filters}{106}{subsection.6.7.1}
+\contentsline {section}{\numberline {6.8}Experimental Measurement of the Sidles-Sigg Effect}{109}{section.6.8}
 \contentsline {chapter}{\numberline {7}{CONCLUSIONS}}{114}{chapter.7}
 \addvspace {10pt}\noindent {APPENDIX}\hfill \par 
 \contentsline {chapter}{\numberline {A}{INPUT OPTICS SUPPORTING MATERIAL}}{116}{appendix.A}
 \contentsline {section}{\numberline {A.1}Mode Cleaner Pole}{116}{section.A.1}
 \contentsline {section}{\numberline {A.2}Gaussian Beam on a Split Photodetector}{116}{section.A.2}
 \contentsline {section}{\numberline {A.3}Beam Propagation Formalism}{118}{section.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Beam Drift Calibration}{119}{subsection.A.3.1}
-\contentsline {section}{\numberline {A.4}Carrier Mode-matching into the Interferometer}{120}{section.A.4}
-\contentsline {subsection}{\numberline {A.4.1}Interferometer Visibility}{120}{subsection.A.4.1}
-\contentsline {subsection}{\numberline {A.4.2}Impedance Matching}{121}{subsection.A.4.2}
-\contentsline {subsection}{\numberline {A.4.3}Mode-matching}{123}{subsection.A.4.3}
-\contentsline {section}{\numberline {A.5}Overlap Integrals}{124}{section.A.5}
+\contentsline {section}{\numberline {A.4}Beam Drift Calibration}{119}{section.A.4}
+\contentsline {section}{\numberline {A.5}Carrier Mode-matching into the Interferometer}{120}{section.A.5}
+\contentsline {subsection}{\numberline {A.5.1}Interferometer Visibility}{121}{subsection.A.5.1}
+\contentsline {subsection}{\numberline {A.5.2}Impedance Matching}{122}{subsection.A.5.2}
+\contentsline {subsection}{\numberline {A.5.3}Mode-matching}{123}{subsection.A.5.3}
+\contentsline {section}{\numberline {A.6}Overlap Integrals}{123}{section.A.6}
 \contentsline {chapter}{\numberline {B}{ANGULAR SENSING AND CONTROL CALIBRATIONS}}{126}{appendix.B}
 \contentsline {section}{\numberline {B.1}Beam Spot Motion}{126}{section.B.1}
 \contentsline {subsection}{\numberline {B.1.1}Moving the Beam}{126}{subsection.B.1.1}
@@ -114,7 +115,7 @@
 \contentsline {subsection}{\numberline {C.3.2}Tilted Cavity}{135}{subsection.C.3.2}
 \contentsline {subsection}{\numberline {C.3.3}Displaced and Tilted Cavity}{136}{subsection.C.3.3}
 \contentsline {section}{\numberline {C.4}Initial DC Alignment of the Interferometer}{136}{section.C.4}
-\contentsline {section}{\numberline {C.5}Parameters}{137}{section.C.5}
-\contentsline {section}{\numberline {C.6}Seismic Spectra}{138}{section.C.6}
-\contentsline {extrachapter}{REFERENCES}{142}{appendix*.7}
-\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{153}{appendix*.8}
+\contentsline {section}{\numberline {C.5}Photodiodes}{137}{section.C.5}
+\contentsline {section}{\numberline {C.6}Seismic Spectra}{139}{section.C.6}
+\contentsline {extrachapter}{REFERENCES}{143}{appendix*.7}
+\contentsline {extrachapter}{BIOGRAPHICAL SKETCH}{154}{appendix*.8}

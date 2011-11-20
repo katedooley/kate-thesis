@@ -8,8 +8,8 @@
 \contentsline {figure}{\numberline {{3-3}}{\ignorespaces Enhanced LIGO Input Optics optical and sensing configuration}}{39}{figure.3.3}
 \contentsline {figure}{\numberline {{3-4}}{\ignorespaces Photographs of Enhanced LIGO Input Optics \emph {in situ}}}{40}{figure.3.4}
 \contentsline {figure}{\numberline {{3-5}}{\ignorespaces Electro-optic modulator design}}{41}{figure.3.5}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {A single RTP crystal is sandwiched between three sets of electrodes that apply three different modulation frequencies. The wedged ends of the crystal separate the polarizations of the light. The p-polarized light is used in the interferometer.}}}{41}{figure.3.5}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {A schematic for each of the three impedance matching circuits of the EOM. For the three sets of electrodes, each of which creates its own $C_{crystal}$, a capacitor is placed parallel to the LC circuit formed by the crystal and a hand-wound inductor. The circuits provide 50\nobreakspace {}$\Omega $ input impedance on resonance and are housed in a separate box from the crystal.}}}{41}{figure.3.5}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {}}}{41}{figure.3.5}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {}}}{41}{figure.3.5}
 \contentsline {figure}{\numberline {{3-6}}{\ignorespaces Faraday isolator photograph and schematic.}}{44}{figure.3.6}
 \contentsline {figure}{\numberline {{3-7}}{\ignorespaces Photograph of an indium-wrapped TGG crystal}}{46}{figure.3.7}
 \contentsline {figure}{\numberline {{3-8}}{\ignorespaces Data from the mode cleaner absorption measurement}}{49}{figure.3.8}
@@ -44,22 +44,23 @@
 \contentsline {figure}{\numberline {{6-6}}{\ignorespaces Beam spot motion on the ITMs and ETMs during a 16\nobreakspace {}W lock}}{102}{figure.6.6}
 \contentsline {figure}{\numberline {{6-7}}{\ignorespaces Angular motion suppression due to the ASC}}{104}{figure.6.7}
 \contentsline {figure}{\numberline {{6-8}}{\ignorespaces Individual mirror motion with and without ASC}}{105}{figure.6.8}
-\contentsline {figure}{\numberline {{6-9}}{\ignorespaces Optic to DARM noise budget}}{106}{figure.6.9}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{106}{figure.6.9}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{106}{figure.6.9}
-\contentsline {figure}{\numberline {{6-10}}{\ignorespaces Wavefront sensor to DARM noise budget}}{107}{figure.6.10}
-\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{107}{figure.6.10}
-\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{107}{figure.6.10}
-\contentsline {figure}{\numberline {{6-11}}{\ignorespaces Total WFS and optical lever noise contribution to DARM during a 16 W lock at night}}{108}{figure.6.11}
-\contentsline {figure}{\numberline {{6-12}}{\ignorespaces Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}}{109}{figure.6.12}
-\contentsline {figure}{\numberline {{6-13}}{\ignorespaces Demonstration of radiation pressure eigenbasis torque to angle transfer function measurement}}{110}{figure.6.13}
+\contentsline {figure}{\numberline {{6-9}}{\ignorespaces Optic to DARM noise budget}}{107}{figure.6.9}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{107}{figure.6.9}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{107}{figure.6.9}
+\contentsline {figure}{\numberline {{6-10}}{\ignorespaces Wavefront sensor to DARM noise budget}}{108}{figure.6.10}
+\contentsline {subfigure}{\numberline {A}{\ignorespaces {Pitch.}}}{108}{figure.6.10}
+\contentsline {subfigure}{\numberline {B}{\ignorespaces {Yaw.}}}{108}{figure.6.10}
+\contentsline {figure}{\numberline {{6-11}}{\ignorespaces Total WFS and optical lever noise contribution to DARM during a 16 W lock at night}}{109}{figure.6.11}
+\contentsline {figure}{\numberline {{6-12}}{\ignorespaces Effect of the WFS1 lowpass filter cutoff frequency on strain sensitivity.}}{110}{figure.6.12}
+\contentsline {figure}{\numberline {{6-13}}{\ignorespaces Demonstration of radiation pressure eigenbasis torque to angle transfer function measurement}}{111}{figure.6.13}
 \contentsline {figure}{\numberline {{6-14}}{\ignorespaces Hard opto-mechanical mode measurement and fit for several powers.}}{112}{figure.6.14}
 \contentsline {figure}{\numberline {{6-15}}{\ignorespaces Soft opto-mechanical mode measurement and fit for several powers.}}{113}{figure.6.15}
 \contentsline {figure}{\numberline {{7-1}}{\ignorespaces Histogram of input powers used during S6}}{115}{figure.7.1}
 \contentsline {figure}{\numberline {{7-2}}{\ignorespaces Zoom of the shot-noise-limited noise floors of the Initial LIGO and Enhanced LIGO detectors.}}{115}{figure.7.2}
 \contentsline {figure}{\numberline {{A-1}}{\ignorespaces Livingston mode cleaner intensity noise transfer function}}{117}{figure.A.1}
 \contentsline {figure}{\numberline {{A-2}}{\ignorespaces End of an 8.7 W lock at Livingston on Feb. 23, 2010}}{122}{figure.A.2}
-\contentsline {figure}{\numberline {{A-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{123}{figure.A.3}
+\contentsline {figure}{\numberline {{A-3}}{\ignorespaces Interferometer reflectivity due to impedance mismatch}}{124}{figure.A.3}
 \contentsline {figure}{\numberline {{B-1}}{\ignorespaces Diagram of mirror and OSEM geometry}}{127}{figure.B.1}
 \contentsline {figure}{\numberline {{B-2}}{\ignorespaces Optical lever calibration data.}}{130}{figure.B.2}
 \contentsline {figure}{\numberline {{C-1}}{\ignorespaces Optical lever open loop transfer function}}{133}{figure.C.1}
+\contentsline {figure}{\numberline {{C-2}}{\ignorespaces Schematic of a basic photoconductive photodiode.}}{138}{figure.C.2}

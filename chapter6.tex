@@ -617,17 +617,18 @@ achieving a flat power build-up in the PRC is a difficult task (too
 much motion in the PRC is quite often a cause of lock loss when making
 measurements), we must update the real-time control system to reflect
 their changing sensitivities. Otherwise, the mirror angles will not be
-accurately controlled.
+controlled accurately.
 
 An estimate of the expected power fluctuations based on the $g$-factor
 and RM motion is a straightforward exercise when using
 Eq. \ref{eq:cavitydisptilt_mirrorangle} and Eq. \ref{eq:pwr_disptilt}
-as derived in the Appendix. If we estimate the $g$-factors of the RM
-and ITM as $g_{RM} = 1+\delta$ and $g_{ITM} = 1 - \delta$ (where
-$\delta =6 \times 10^{-4}$ for LLO the cold state) and approximate the
-distance of each mirror to the cavity waist as $z$ since the two
-mirrors are very close to each other compared to the waist location,
-then Eq. \ref{eq:cavitydisptilt_mirrorangle} reduces to:
+as derived in Appendix~\ref{appendix:ASCextra}. If we estimate the
+$g$-factors of the RM and ITM as $g_{RM} = 1+\delta$ and $g_{ITM} = 1
+- \delta$ (where $\delta =6 \times 10^{-4}$ for LLO the cold state)
+and approximate the distance of each mirror to the cavity waist as $z$
+because the two mirrors are very close to each other compared to the
+waist location, then Eq. \ref{eq:cavitydisptilt_mirrorangle} reduces
+to:
 \begin{equation}
 \left\llbracket \begin{array}{c}
 a_{PRC} \\
@@ -661,6 +662,7 @@ $g$-factor and mirror angle]{Dependence of power build-up in the power
 \label{fig:prc_power}
 \end{centering}
 \end{figure}
+
 
 
 \subsection{Power Scaling}
@@ -706,9 +708,6 @@ dependence.
 \subfigure{\includegraphics{figures/trackSPOB.pdf}}\subfigure{\includegraphics{figures/trackWFS1Q.pdf}}
 \subfigure{\includegraphics{figures/trackWFS2I.pdf}}\subfigure{\includegraphics{figures/trackWFS2Q.pdf}}
 \subfigure{\includegraphics{figures/trackWFS3I.pdf}}\subfigure{\includegraphics{figures/trackWFS4I.pdf}}
-% \subfigure{\includegraphics[width=0.5\textwidth]{figures/spob_gaintracking.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS1Q_track.pdf}}
-% \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2Q_track.pdf}}
-% \subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS3I_track.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS4I_track.pdf}}
 \caption[Measured dependence of the WFS error signals on the power
 recycling cavity geometry]{WFS optical response to test mass motion as
   a function of power recycling cavity geometry. WFS1Q, WFS2I, WFS2Q
@@ -723,21 +722,23 @@ recycling cavity geometry]{WFS optical response to test mass motion as
 \end{figure}
 
 
-% \subsection{Sideband imbalance}
-% Another important effect of the PRC on the ASC signals is the
-% balancing of the upper and lower 24.4~MHz sideband amplitudes. If
-% they're not the same, then SPOB does not accurately represent the
-% power in the cavity, and the WFS signals are not
-% corrupted. \textcolor{blue}{(Expand.)}
 
-% We set up a temporary optical spectrum analyzer at a pickoff of the
-% anti-symmetric port beam in order to measure them. Without any TCS, we
-% saw that with less than 6~W input power, the lower sideband is smaller
-% than the upper sideband, at 6~W the amplitudes are equal, and above
-% 6~W, the upper sideband is smaller than the lower. Thus, if TCS is not
-% tuned perfectly at all times, we can expect unequal sidebands.
+\subsection{Sideband imbalance}
+Another important effect of the PRC on the ASC signals is the
+balancing of the upper and lower 24.4~MHz sideband amplitudes. If they
+are not the same, then SPOB does not accurately represent the power in
+the cavity, and the WFS signals are
+corrupted. %\textcolor{blue}{(Expand.)}
+
+We set up a temporary optical spectrum analyzer at a pickoff of the
+anti-symmetric port beam in order to measure them. Without any TCS, we
+saw that with less than 6~W input power, the lower sideband is smaller
+than the upper sideband, at 6~W the amplitudes are equal, and above
+6~W, the upper sideband is smaller than the lower. Thus, if TCS is not
+tuned perfectly at all times, we can expect unequal sidebands.
 % \textcolor{blue}{April 1, 2009 notebook. I don't have OSA data, only
 %   sketches in notebook. Worth saying anything?}
+
 
 
 
@@ -772,7 +773,8 @@ after the servo is turned on), as seen by the phase dropping below
 $-180^{\circ}$ at two frequencies. The unity gain frequency must be
 held between roughly 2 and 10~Hz. As shown here, the dSoft UGF is at
 5~Hz. For the other degrees of freedom, the UGFs are all between 0.8
-and 1~Hz. Each loop has a phase margin of 30 to $40^{\circ}$.
+and 1~Hz. Each loop has a phase margin of $30^{\circ}$ to
+$40^{\circ}$.
 
 \begin{figure}
 \begin{centering}
@@ -810,9 +812,10 @@ and 1~Hz. Each loop has a phase margin of 30 to $40^{\circ}$.
 
 
 \section{Residual Angular Motion}
-The residual beam spot motion is shown in Figure~\ref{fig:bsm}. We see
-the rms beam spot motion on the ETMs is 1~mm and on the ITMs it is
-0.8~mm. This meets the requirements of Section~\ref{sec:tolerance}.
+The residual beam spot motion on the test masses is shown in
+Figure~\ref{fig:bsm}. We see the rms beam spot motion on the ETMs is
+1~mm and on the ITMs it is 0.8~mm. This meets the requirements of
+Section~\ref{sec:tolerance}.
 
 \begin{figure}
 \begin{centering}
@@ -989,9 +992,9 @@ independently contribute signals to the suspension angular control, we
 can separate their contributions in the noise budget. Furthermore, we
 compute the quadrature sum of the pitch and yaw contributions,
 assuming these two degrees of freedom are de-coupled, thus creating an
-upper limit for the ASC contribution to the DARM
-noise budget. Figure~\ref{fig:asc2darm} shows the final ASC noise in
-DARM summary for a 16~W lock at night.
+upper limit for the ASC contribution to the DARM noise
+budget. Figure~\ref{fig:asc2darm} shows the final summary of ASC noise
+in DARM for a 16~W lock at night.
 
 \begin{figure}
 \begin{centering}
@@ -1047,10 +1050,7 @@ DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
 30~Hz.
 
 
-
-
-
-% \section{Feed-Forward}
+% \subsection{Seismic Feed-Forward to the ASC}
 % Implementing a method of Wiener ﬁltering, I show that the angular
 % sensing and control error signals can be predicted by ground motion
 % witnessed by local seismometers.
@@ -1071,6 +1071,8 @@ DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
 
 % \textcolor{blue}{put in Wiener filter figures; explain Wiener
 %   filtering or reference?}
+
+
 
 % \section{Advanced LIGO}
 % The Advanced LIGO interferometers will have more massive mirrors, a stable

@@ -1,5 +1,5 @@
 \chapter{ANGULAR SENSING AND CONTROL SUPPORTING MATERIAL}
-
+\label{appendix:ASCextra}
 
 
 \section{Optical Lever Open Loop Transfer Function}
@@ -264,82 +264,52 @@ images and QPD readback provide the signals used for beam centering.
 
 
 
+\section{Photodiodes}
+\label{sec:pds}
+The basic photoconductive photodiode is depicted in Figure
+\ref{fig:PD}. A negative voltage applied to the anode, called the bias
+voltage $V_{\mathrm{bias}}$, does not yield any current across the
+photodiode until electrons are released by the energy of photons
+striking the diode. Electrons flow in the direction of the cathode
+which is connected to ground, and produce a current
+\begin{equation}
+i_\gamma = \frac{q_e}{h \nu} P \epsilon
+\end{equation}
+where $q_e$ is the electron charge, $h$ is Planck's constant, $\nu$ is
+the frequency of the incident light, $P$ is the power of the light,
+and $\epsilon$ is the quantum efficiency of the diode. The quantity
+$q_e/h \nu$ is known as the \emph{responsivity}. For LIGO where
+$\lambda = 1064$ nm, the responsivity is $0.86$ A/W.
 
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\textwidth]{/Users/kate/Documents/diagrams/photodiode.pdf}}
+\caption[Schematic of a basic photoconductive photodiode.]{Schematic of a basic photoconductive photodiode.}
+\label{fig:PD}
+\end{centering}
+\end{figure}
 
-% \section{Seismic Contributions to Optical Lever Spectra}
-% \label{sec:oplev_contributions}
-% Wiener filtering \cite{Wiener1975Extrapolation} is a useful method to
-% determine the likeness of two signals. In short, the Wiener filter
-% coefficients are chosen to minimize the mean square difference between
-% a Wiener filtered signal and a reference time series. If one signal is
-% derived from the other, then there exists a Wiener filter that can
-% precisely transform one signal into the other.
-
-
-
-% The optical lever error signals ideally witness the mirror motion,
-% which in turn is expected to come from the ground's motions. The
-% optical lever signal, may, however, be contaminated by optical lever
-% sensing (electronics) noise or acoustic couplings. It is therefore
-% informative to calculate Wiener filters for the sesimometer signals to
-% understand how much of the optical lever spectra are in fact due to
-% ground motion. The contributions of the three seismometers to each
-% large optic optical lever are shown in
-% Figure~\ref{fig:OLcontributions}. We see that the optical lever signals
-% are almost entirely explained by ground motion, with the notable
-% exceptions being a peak between 3 and 4~Hz for ITMY, and 0.3 and
-% 0.7~Hz for the RM, and broadband extra motion for the BS.
-
-% Furthermore, the relative magnitudes of the contributions from the
-% three seismometers make sense. Greater than 1~Hz, coherence is
-% greatest with the nearest seismometer, and less than 1~Hz,
-% seismometers contribute more equally (except for the ITMs, which are
-% everywhere very coherent with the corner station seismometer).
-
-% \begin{figure}
-% \begin{centering}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIX.pdf}}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockIY.pdf}}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEX.pdf}}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockEY.pdf}}
-% \caption[Contribution of sesimic noise to optical lever error
-% signal]{Contribution of sesimic noise to optical lever error signal
-%   (called residual). The interferometer was unlocked and optical lever
-%   and OSEM AC damping present.}
-% \label{fig:OLcontributions}
-% \end{centering}
-% \end{figure}
-
-% \begin{figure}
-% \begin{centering}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
-% \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
-% %\caption[]{Figure~\ref{fig:OLcontributions} continued.}
-% Figure~\ref{fig:OLcontributions} continued.
-% \end{centering}
-% \end{figure}
-
-
-
-% \section{Photodiodes}
-% \label{sec:pds}
-% The basic photoconductive photodiode is depicted in Figure \ref{}. A
-% negative voltage applied to the anode, represented by the line, does
-% not yield any current across the photodiode until electrons are
-% released by the energy of photons striking the diode. Electrons flow
-% in the direction of the cathode which is connected to ground,
-% producing a current
-% \begin{equation}
-% i_\gamma = \frac{q_e}{h \nu} P \epsilon
-% \end{equation}
-% where $q_e$ is the electron charge, $h$ is Planck's constant, $\nu$ is
-% the frequency of the incident light, $P$ is the power of the light,
-% and $\epsilon$ is the quantum efficiency of the diode. The quantity
-% $q_e/h \nu$ is known as the \emph{responsivity}. For LIGO where
-% $\lambda = 1064$ nm, the responsivity is $0.86$ A/W.
-
-
+To have an accurate measure of the power on the photodiode, we must
+measure the produced current $i_\gamma$. This is accomplished by
+inserting a resistor in series between the cathode and ground and
+measuring the voltage drop across the resistor, whose resistance is
+called the \emph{transimpedance}, $R_t$.
+%, $i_\gamma = V / R$. This resistance is called the \emph{transimpedance}.
+A typical voltmeter, despite having high resistance, will inevitably
+draw some small amount of current, thereby underestimating the current
+produced by the light. The clever solution is to make use of an op-amp
+as a voltmeter. Op-amps have two primary properties:
+\begin{itemize}
+\item{the inputs draw no current} \vspace{-10pt}
+\item{the voltages at the inputs to the op-amp are the same}
+\end{itemize}
+The voltage at the input to the op-amp, $V_1$, is determined by
+measuring the voltage at the output of the op-amp, $V_2$, and
+accounting for the op-amp's gain such that:
+\begin{equation}
+V_1 = \frac{R_a}{R_a + R_b} V_2.
+\end{equation}
+The photo current is therefore $i_\gamma = V_1/R_t$.
 
 % \section{Channel Names}
 % \textcolor{blue}{finish this or skip!}
@@ -364,32 +334,32 @@ images and QPD readback provide the signals used for beam centering.
 
 
 
-\section{Parameters}
-Table \ref{tab:ROCs} shows the radii of curvature (ROC) of the Enhanced LIGO mirrors. 
-\begin{table}
-\centering
-\caption{Mirror radii of curvatures.} 
-%References are \cite{Adhikari2005Input} and \href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn Billingsley's website}
-\begin{tabular}{l r@{}l r@{}l}
-\hline
-optic & \multicolumn{2}{l}{L1 ROC [km]} & \multicolumn{2}{l}{H1 ROC [km]} \\
-\hline
-MC1 & 0&.01725 & & \\
-MC2 & 80&  & & \\ 
-MC3 & 0&.01725 & & \\ 
-MMT1 & 6&.76 & 6&.77 \\
-MMT2 & 3&.16 & 3&.17 \\
-MMT3 & 25&.16 & 25&.04\\
-RM & 15&.78 & 14&.40 \\
-BS & -189& & -336& \\
-ITMX & 14&.760 & 13&.910 \\ 
-ITMY & 14&.520 & 13&.600 \\
-ETMX & 8&.730 & 7&.260 \\
-ETMY & 8&.720 & 7&.320 \\
-\hline
-\end{tabular}
-\label{tab:ROCs}
-\end{table} 
+% \section{Parameters}
+% Table \ref{tab:ROCs} shows the radii of curvature (ROC) of the Enhanced LIGO mirrors. 
+% \begin{table}
+% \centering
+% \caption{Mirror radii of curvatures.} 
+% %References are \cite{Adhikari2005Input} and \href{http://www.ligo.caltech.edu/~gari/COCAsBuilt.htm}{Garilynn Billingsley's website}
+% \begin{tabular}{l r@{}l r@{}l}
+% \hline
+% optic & \multicolumn{2}{l}{L1 ROC [km]} & \multicolumn{2}{l}{H1 ROC [km]} \\
+% \hline
+% MC1 & 0&.01725 & & \\
+% MC2 & 80&  & & \\ 
+% MC3 & 0&.01725 & & \\ 
+% MMT1 & 6&.76 & 6&.77 \\
+% MMT2 & 3&.16 & 3&.17 \\
+% MMT3 & 25&.16 & 25&.04\\
+% RM & 15&.78 & 14&.40 \\
+% BS & -189& & -336& \\
+% ITMX & 14&.760 & 13&.910 \\ 
+% ITMY & 14&.520 & 13&.600 \\
+% ETMX & 8&.730 & 7&.260 \\
+% ETMY & 8&.720 & 7&.320 \\
+% \hline
+% \end{tabular}
+% \label{tab:ROCs}
+% \end{table} 
 
 
 
