@@ -6,16 +6,11 @@ For light to resonate in the interferometer, the mirrors need to point at one an
 \item to suppress any motion that results from external disturbances \vspace{-10 pt}
 \item to counteract a high power static instability
 \end{itemize}
-There are 16 angular degrees of freedom that need to be sensed and controlled, making the ASC one of the most complex interferometer subsystems. This chapter presents the ASC design, and discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer.
-
-
+There are 16 angular degrees of freedom that need to be sensed and controlled, making the ASC one of the most complex interferometer subsystems. This chapter presents the ASC design, and discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer. 
 
 
 
 % normalize out seismic motion for wfs on / wfs off residual motion comparison
-
-% include shot noise on at least WFS1 sensor noisebudget; maybe limiting
-% depending on power used
 
 % how low can you go before it falls apart? valera and kate tried this
 % out--find in elog
@@ -72,7 +67,7 @@ There is a continuous stream of changing torque inputs to the mirrors that cause
 
 \subsection{Ground Motion} 
 \label{sec:oplevspectra}
-The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions and thence to the mirrors. Ground motion is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Figure \ref{fig:seismicMirror}.\footnote{These spectra include the effect of local velocity damping since the optical levers are always on. See Section~\ref{sec:suspension}.}. The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
+The most egregious of these torque inputs is ground motion that makes its way through the multiple stages of seismic isolation to the mirror suspensions and thence to the mirrors. Ground motion is the only source of angular motion that is present regardless of the state of interferometer operation. An example of the shape and amount of angular motion experienced by the core optics due to seismic noise during a relatively quiet seismic time is shown in Figure \ref{fig:seismicMirror}.\footnote{These spectra include the effect of local velocity damping because the optical levers are always on. See Section~\ref{sec:suspension}.}. The rms mirror motion is of the order $10^{-7}$ rad. This is the motion that needs to be controlled interferometrically.
 
 \begin{figure}
 \begin{centering}
@@ -121,7 +116,6 @@ signal]{Contribution of seismic noise to optical lever error signal
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockRM.pdf}}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockBS.pdf}}
 \subfigure{\includegraphics[width=1.0\textwidth]{figures/nolockMMT3.pdf}}
-%\caption[]{Figure~\ref{fig:OLcontributions} continued.}
 Figure~\ref{fig:OLcontributions} continued.
 \end{centering}
 \end{figure}
@@ -172,9 +166,7 @@ radiation pressure is
 \end{equation}
 where $x$ is the distance of the beam from the mirror's center of mass. For a 40~kW beam 1~mm off-center, the torque is on the order of $10^{-7}$ Nm, yielding an angular displacement of the order $10^{-7}$ rad as determined by the pendulum torque to angle transfer function. Refer to Section~\ref{sec:pendTF}.
 
-Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. 
-%This is a result of the geometric coupling between beam displacements and mirror angles as will be shown in the next chapter. Radiation pressure therefore acts as an angular spring. 
-It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. Chapter~\ref{ch:eigenmodes} dedicates a discussion to the physics of radiation pressure torques. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
+Amongst the various torque inputs, radiation pressure plays a unique role in mirror motion because the torque it exerts depends on the angles of the mirrors. A result of the geometric coupling between beam displacements and mirror angles, radiation pressure therefore acts as an angular spring. It is best treated not as an external torque, but as a modification to the pendulum torque to angle transfer function. Chapter~\ref{ch:eigenmodes} dedicates a discussion to the physics of radiation pressure torques. In all, radiation pressure shapes the angular dynamics of the mirrors in LIGO and plays an important role in the design of an angular control system.
 
 
 
@@ -183,13 +175,7 @@ It is best treated not as an external torque, but as a modification to the pendu
 
 \section{The Mirror as a Torsion Pendulum}
 \label{sec:pendTF}
-Understanding exactly how these sources of torque on the mirrors convert to angular motion requires a model of the mirror's torque to angle transfer function.
-% In order to design a control system that reduces the angular motion of
-% the interferometer mirrors to the levels necessary for stable
-% interferometer operation and minimal impact on strain sensitivity, the
-% angular response of the mirrors to external torque must be fully
-% understood. 
-The mirrors in LIGO may be regarded as torsion pendula. The mirror may twist an angle $\theta$ about a horizontal axis passing through its center of mass to create motion in \emph{pitch} and about a vertical axis passing through its center of mass to create a motion in \emph{yaw}.
+In order to design a control system that reduces the angular motion of the interferometer mirrors to the levels necessary for stable interferometer operation and minimal impact on strain sensitivity, the angular response of the mirrors to external torque must be fully understood. A model of the mirror's torque to angle transfer function is thus required. To start, the mirrors in LIGO may be regarded as torsion pendula. The mirror may twist an angle $\theta$ about a horizontal axis passing through its center of mass to create motion in \emph{pitch} and about a vertical axis passing through its center of mass to create a motion in \emph{yaw}.
 
 The angular equation of motion of the mirror is governed by the sum of
 all torques on the mirror. First, let's consider the most simplistic
@@ -205,9 +191,6 @@ $I$ is the mirror's moment of inertia. The pendulum torsional constant
 serves to make the mirror oscillate indefinitely about its equilibrium
 position upon the slightest of displacements.
 
-
-%\subsection{Torque to Angle Transfer Function of a Pendulum}
-%\label{sec:t2a}
 We are particularly interested in the pendulum's angular response to an
 external torque, such as seismic noise. In order to calculate the
 torque to angle transfer function, we must include an external torque
@@ -240,9 +223,7 @@ $\omega$ at which the amplitude of the transfer function, $[I^2
 \end{equation}
 We note that damping reduces the resonant frequency, although the effect is usually insignificant.
 
-A quantity that is more familiar than $\gamma$ for describing the losses of a system with a real resonance is the quality factor, $Q~:=~\omega_{res}/\mathrm{FWHM}$, where FWHM is the full-width-half-max of the transfer function's amplitude-squared resonance. When the losses are small, $\omega_{res} \approx \omega_0$ and FWHM $\approx \gamma/I$ \cite[23-4]{Feynman1970Feynman}.
-%(see Feynman 23-4). 
-The quality factor is then well approximated by $Q = \sqrt{\kappa_p I}/\gamma$. The transfer function written in terms of $Q$ is \begin{equation} H(\omega) = \frac{1/I}{\omega_0^2 - \omega^2 + i \omega \omega_0 / Q}.  \label{eq:TFpendulum} \end{equation}
+A quantity that is more familiar than $\gamma$ for describing the losses of a system with a real resonance is the quality factor, $Q~:=~\omega_{res}/\mathrm{FWHM}$, where FWHM is the full-width-half-max of the transfer function's amplitude-squared resonance. When the losses are small, $\omega_{res} \approx \omega_0$ and FWHM $\approx \gamma/I$ \cite[23-4]{Feynman1970Feynman}. The quality factor is then well approximated by $Q = \sqrt{\kappa_p I}/\gamma$. The transfer function written in terms of $Q$ is \begin{equation} H(\omega) = \frac{1/I}{\omega_0^2 - \omega^2 + i \omega \omega_0 / Q}.  \label{eq:TFpendulum} \end{equation}
 
 Figure \ref{fig:pendTF} shows the pendulum torque to angle transfer
 function (for pitch) using the parameters of a LIGO core optic. For
@@ -279,21 +260,24 @@ There are 8 mirrors whose pitch and yaw angles must be sensed and controlled. Th
 \item quadrant photodiodes (QPDX, QPDY): sense the position of the light transmitted through the ETMs \vspace{-10pt}
 \item wavefront sensors (WFS1, WFS2\footnote{Two signals are derived from WFS2.}, WFS3, WFS4): sense the angular misalignment of the cavities with respect to their input beams
 \end{itemize}
-Figure \ref{fig:ASCsensors} shows the locations of these sensors and the 8 mirrors they must control.  The alignment of these mirrors using these sensors can be simplified by considering the interferometer alignment as happening in two basic units: the input beam and the power recycled Fabry-Perot Michelson. The alignment of the latter is nearly self-contained and can in fact be compacted down to a representative single mirror. The remaining jobs are to align the input beam and this ``single mirror'' to one another and to keep the beam from the beam splitter pointed at the y-arm.
-
+Figure~\ref{fig:ASCsensors} shows the locations of these sensors and the 8 mirrors they must control. The alignment scheme can be simplified by considering it in two basic units: the input beam and the power-recycled Fabry-Perot Michelson (FPM). The alignment of the latter is self-contained (with the exception of the BS) and uses the WFS to keep the mirrors aligned to one another from DC up to several Hz. The alignment of the input beam to the power recycled FPM unit is accomplished via the BS camera image and QPDX at frequencies well below the pendulum resonances. Finally, as part of the input beam alignment, QPDY keeps the beam that is reflected from the BS pointed at the y-arm. The alignment scheme is depicted in Figure~\ref{fig:ASClayout} and explained in more detail in the remainder of this section.
 
 \begin{figure} 
 \begin{centering} 
-%\includegraphics{figures/ASCsensors.pdf} 
-\includegraphics[width=0.9\textwidth]{figures/asclayout.pdf} 
-\caption[Layout of ASC sensors and the mirrors they must control]{Layout of ASC sensors and the mirrors they must
- control.}
+\includegraphics{figures/ASCsensors.pdf} 
+\caption[Layout of ASC sensors and the mirrors they must control]{Layout of ASC sensors (WFS, QPDs, and camera) and the 8 mirrors they must control (ITMs, ETMs, MMTs, BS, and RM).}
 \label{fig:ASCsensors}
 \end{centering}
 \end{figure}
 
+\begin{figure} \begin{centering} \subfigure[]{\includegraphics{figures/asc_inputctrl.pdf}}\subfigure[]{\includegraphics{figures/asc_PRFPMctrl.pdf}} \caption[Schematic of the alignment sensing and control system, viewed as two different units.]{Schematic of the alignment sensing and control system, viewed as two different units. A) The QPD servo and beam centering servo (BCS) together direct the input beam on minute time scales. B) The wavefront sensing servo maintains the alignment of the power-recycled FPM mirrors with respect to each other up to several Hz.}
+\label{fig:ASClayout}
+\end{centering}
+\end{figure}
 
-The self-contained alignment of the power recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS)\footnote{Pronounced ``woofs''.}, whose principle of operation is described in Section \ref{sec:WFSsensing}. The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. Their control signals are used to control the relative motions of these five mirrors up to a couple Hz. 
+The self-contained alignment of the power-recycled Fabry-Perot Michelson is realized through the set of wavefront sensors (WFS)\footnote{Pronounced ``woofs''.} which provide the most sophisticated form of measuring angular motion of the mirrors and whose principle of operation is described in Section~\ref{sec:WFSsensing}.  The pitch and yaw motions of the five mirrors in this unit, ETMX, ETMY, ITMX, ITMY, and the PRM, are sensed by the pitch and yaw of five WFS signals, WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I, where I and Q denote in-phase and quadrature demodulation, respectively. These WFS look at light at the AS port, at the reflected port, and in the power recycling cavity. Their error signals are used to control the relative motions of these five mirrors up to a couple Hz. The original design of wavefront sensing for a power-recycled Michelson with Fabry-Perot cavities in the arms was created and tested by Mavalvala \cite{Mavalvala1998Experimental, Mavalvala1997Alignment}.
+
+The MMT-directed input beam and the power-recycled FPM unit need to be aligned to one another such that the input beam is perfectly reflected upon itself. Over minute time scales, the input beam follows the interferometer and over faster time scales the interferometer follows the input beam. This is achieved via a blend of all sensors. The low frequency matching of the input beam to the interferometer is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arms, and the pitch and yaw signals of a camera that monitors the location of the beam spot on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 at about 30~mHz. The camera's beam centering servo (BCS) works by taking the image of the speckle of light reflected off of the beam splitter as shown in Figure \ref{fig:BCS} and feeding it into a labview program which integrates the intensity of the image to identify the coordinates of the center of the beam spot. These coordinates are compared with a hardcoded desired center location. A mirror upstream, MMT1, is moved to redirect the input beam, minimizing the difference between the desired and actual beam spot location on the BS. The QPD servos work in a similar fashion. The higher frequency matching of the input beam and the interferometer to one another is achieved by the reflected port wavefront sensors (WFS3 and WFS4), up to a couple Hz.
 
 \begin{figure} 
 \begin{centering} \includegraphics[width=0.7\textwidth]{figures/BCSspiricon.pdf} 
@@ -302,68 +286,55 @@ The self-contained alignment of the power recycled Fabry-Perot Michelson is real
 \end{centering}
 \end{figure}
 
-The MMT-directed input beam and the interferometer ``mirror'' need to be aligned so that the input beam is perfectly reflected upon itself. The input beam follows the interferometer over minute time scales; at higher frequencies the interferometer follows the input beam. The low frequency matching of the input beam to the interferometer ``mirror'' is realized through the pitch and yaw signals of QPDX, a QPD which monitors the position of the light transmitted through the x-arm, and the pitch and yaw signals of a camera that monitors the beam location on the beam splitter. These two alignment sensors adjust the pointing of MMT1 and MMT3 on about minute time scales. An example of the BS camera image is shown in Figure \ref{fig:BCS}. The higher frequency matching of the input beam to the interferometer is achieved by the reflected port Fabry-Perot Michelson wavefront sensors, up to a couple Hz.
+The one additional step needed for full interferometer alignment is to maintain the relative alignment of the y-arm to the x-arm as the x-arm and input beam together move around. This is accomplished through the pitch and yaw signals of QPDY, the QPD that monitors the light transmitted through the y-arm, which sense how the beam splitter should be pointed. QPDX also sends a signal to the BS to compensate for the signal it sends to MMT3.
 
-The one additional step needed for full interferometer alignment is to maintain the relative alignment of the y-arm to the x-arm as the x-arm and input beam together move around. This is accomplished through the pitch and yaw signals of QPDY, the QPD that monitors the light transmitted through the y-arm, which sense how the beam splitter should be pointed. \footnote{QPDX also sends a signal to the BS to compensate for whatever it has MMT3 do.}
+All mirror angles are of course inter-dependent and they must track each other. However, a rough hierarchy of who follows who can be established because ultimately the interferometer is bolted to the ground and necessarily maintains some DC orientation. This orientation comes from QPDX and QPDY, which are physically attached to piers standing on the ground and force the beams transmitted through the ETMs to stay put at a certain location on their sensors. In all, the input beam must make it to those two exact places and the other mirrors are left to line themselves up accordingly. 
 
-\begin{figure} 
-\begin{centering} 
-\includegraphics[width=0.8\textwidth]{figures/ASClayout_wctrl_thesis.pdf} 
-\caption[Schematic of the alignment sensing and control system]{Schematic of the alignment sensing and control system, showing the placement of sensors and which mirrors they control. The QPD servo and Beam Centering Servo (BCS) together direct the input beam to follow the FPM unit on minute time scales. The QPD servo additionally keeps the BS properly directing light into the y-arm. The wavefront sensing servo maintains the alignment of the FPM mirrors with respect to each other up to several Hz. Each of the seven large optics has its own velocity damping optical lever servo.}
-%\textcolor{blue}{Replace this with two drawings, one showing WFS and one showing other sensors. Label and make less cluttered.}}
-\label{fig:ASClayout}
-\end{centering}
-\end{figure}
-
-All mirror angles are of course interdependent and they must track each other. However, a rough hierarchy of who follows who can be established since ultimately the interferometer is bolted to the ground and necessarily maintains some DC orientation. This orientation comes from QPDX and QPDY, which are physically attached to piers standing on the ground and force the beams transmitted through the ETMs to stay put at a certain location on their sensors. In all, the input beam must make it to those two exact places and the other mirrors are left to line themselves up accordingly. A diagram of this alignment scheme is in Figure~\ref{fig:ASClayout}.
-
-%two input beams, one to the x-arm, one to the y-arm; and the FPM
-
-
-This alignment process involving the WFS, QPDs, and BS camera relies on the entire interferometer already being locked. It manages the continuous fine-tuning of mirror angles so that maximal power buildup in the interferometer is maintained, and so that the interferometer does not wander from its linear operating point. See Section~\ref{sec:DCreadout}. How to achieve the initial alignment of all of the mirrors is an interesting process in itself and is documented in Appendix~\ref{sec:initial_alignment}.
+This alignment process involving the WFS, QPDs, and BS camera relies on the entire interferometer already being locked. It manages the continuous fine-tuning of mirror angles so that maximal power buildup in the interferometer is maintained, and so that the interferometer does not wander from its linear operating point (described in Section~\ref{sec:DCreadout}). How to achieve the initial alignment of all of the mirrors is an interesting process in itself and is documented in Appendix~\ref{sec:initial_alignment}.
 
 
 
-
-\section{The Wavefront Sensing Scheme}
-\label{sec:WFSsensing}
-Wavefront sensors for angular sensing are the quadrant photodiode equivalent of the single photodiodes used for length sensing. Wavefront sensors are quadrant photodiodes equipped with RF electronics and they rely on the Pound-Drever-Hall locking scheme to produce error signals \cite{Sigg1996Wavefront}. Angular misalignments of the interferometer cavities generate TEM$_{01}$ and TEM$_{10}$ spatial modes as explained in Ref.~\cite{Anderson1984Alignment}. Appendix~\ref{sec:cavitypower} also contains a derivation. The overlap of the higher order mode field with a TEM$_{00}$ reference sideband field produces an excess of power on one half of the detector compared to the other, which when demodulated at the sideband frequency, is the error signal. Reference \cite{Fritschel1998Alignment} contains a thorough description of the wavefront sensing scheme.
-
-
-
-\section{The Angular Control Servo}
-When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled Michelson with the input beam and the internal alignment of the power-recycled Michelson. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next. First, it is helpful to explain the servo without the effects of radiation pressure.
-
-%The broad picture is that we have a 
-Figure~\ref{fig:ASCcontrolservo} is a block diagram of the major components to the angular control servo. The torsion-like pendula of the interferometer are subject to external torque which is converted to mirror angle. The interferometer, in turn, turns the mirror angles into $\mathrm{TEM}_{10}/\mathrm{TEM}_{01}$ modes at its various ports (details are in Appendix~\ref{sec:cavitypower}), and these modes are converted into error signals by the wavefront sensors. The voltages produced by the wavefront sensors are digitized and manipulated by the front-end computers to create control signals that are then converted back to analog for actuation on the mirrors. The result of this process is a suppression of the error signal seen by the WFS and therefore a suppression of the physical mirror motions. 
+\section{The Angular Sensing and Control Servo}
+When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled FPM with the input beam and the internal alignment of the power-recycled FPM. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next. First, it is helpful to present an overview of the servo without the effects of radiation pressure.
 
 \begin{figure} \begin{centering} 
 \includegraphics{figures/ASCcontrolservo.pdf} 
-\caption[ASC control servo]{ASC control servo. The external torque, torsion pendulum, interferometer, and WFS are analog; all other blocks are digital. Mirror angles are converted by the interferometer into signals the wavefront sensors can detect. These WFS error signals are digitized, filtered, and converted into analog control signals for individual mirrors. The details of each of the digital blocks are explained in Chapter~\ref{ch:characterization}.}
+\caption[ASC control servo]{ASC control servo, showing both the WFS and optical lever loops. The external torque, torsion pendulum, interferometer, and WFS are analog; all other blocks are digital. Mirror angles are converted by the interferometer into signals the wavefront sensors can detect. These WFS error signals are digitized, filtered, and converted into analog control signals for individual mirrors. The details of each of the digital blocks are explained in Chapter~\ref{ch:characterization}.}
 \label{fig:ASCcontrolservo}
 \end{centering}
 \end{figure}
 
-In Initial LIGO, the wavefront sensor signals were combined via the input matrix to form error signals for the differential and common ETM and ITM motions.
-% (\textcolor{blue}{explain more}). 
-WFS control filters were designed for this basis and then those control signals were divvied out to appropriate mirrors via the output matrix. 
+Figure~\ref{fig:ASCcontrolservo} is a block diagram of the major components to the angular control servo. The torsion-like pendula of the interferometer are subject to external torque which is converted to mirror angle. The interferometer, in turn, turns the mirror angles into $\mathrm{TEM}_{10}/\mathrm{TEM}_{01}$ modes at its various ports, and these modes are converted into error signals by the wavefront sensors. The voltages produced by the wavefront sensors are digitized and manipulated by the front-end computers to create control signals that are then converted back to analog signals for actuation on the mirrors. The result of this process is a suppression of the error signal seen by the WFS and therefore a suppression of the physical relative mirror motions. 
 
 
 
-\subsection{Optical lever compensation}
+\subsection{The Wavefront Sensing Scheme}
+\label{sec:WFSsensing}
+The wavefront sensors provide the most sophisticated form of measuring angular motion of the mirrors. They are quadrant photodiodes equipped with RF electronics that rely on the Pound-Drever-Hall locking scheme to produce error signals \cite{Sigg1996Wavefront}. WFS are the angular equivalent of the single element PDs used for length sensing. Their frame of reference is the fundamental Gaussian mode of the interferometer cavities; angular misalignments of the cavities generate TEM$_{01}$ and TEM$_{10}$ spatial modes of the carrier light as explained in Ref.~\cite{Anderson1984Alignment} and derived in Appendix~\ref{sec:cavitypower}. The overlap of the higher order mode carrier field with a TEM$_{00}$ reference sideband field produces an excess of power on one half of the detector compared to the other when demodulated at the sideband frequency. This is the error signal. The sidebands 
+
+Reference \cite{Fritschel1998Alignment} contains a thorough description of the wavefront sensing scheme. In summary, the idea is that the WFS are located where optical gain, the amount of laser power produced at some interferometer port for a given physical change of some aspect of the interferometer, is high. The WFS optical gain in, particular, is determined by how much TEM$_{01}$/TEM$_{10}$ mode shows up at the locations of the WFS when a mirror (or specific combination of mirrors) moves in angle. One WFS is placed at the anti-symmetric port where differential-mode signals are transmitted, one is placed at a pick-off of the beam from the recycling cavity which contains common and differential information, and two are placed at the reflected port, where common-mode signals are transmitted. The precise locations are determined from the Gouy phases of the light and details are found in Ref.~\cite{Barsotti2009Modeling}.
+
+
+
+\subsection{The Digital Path}
+The digital portion of the servo, from the power scaling through the optical lever compensation, experiences two changes of basis which are effected by the input matrix and the output matrix. The input matrix takes the appropriate linear combination of WFS error signals to create error signals for which control filters may be designed easily. The output matrix creates a linear combination of the digital control signals in order to distribute them appropriately to specific mirrors. Both the power scaling and the mirror gains are diagonal matrices that provide minor modifications to the amplitude of the error and control signals, respectively. The power scaling is updated in real time to compensate for any changes in laser power on the WFS. The mirror gains are hard-coded scaling factors to reflect deviations from the theoretical cavity geometry. See Sections \ref{sec:powerscaling} and \ref{sec:mirrorgains}, respectively, for details.
+
+
+
+\subsection{Optical Lever Compensation}
 
 \begin{figure} 
 \begin{centering} 
 \subfigure[]{\includegraphics{figures/OLcompensation.pdf}} 
 \subfigure[]{\includegraphics{figures/OLcompensation2.pdf}} 
 \subfigure[]{\includegraphics{figures/OLcompensation3.pdf}} 
-\caption[Optical lever compensation scheme]{Optical lever compensation scheme. Subfigures A, B, and C are equivalent. A) Zoom of the bottom part of Figure~\ref{fig:ASCcontrolservo}. $P$ is the pendulum and $O$ is the optical lever control filters. B) Replacement of the optical lever controlled plant with the closed loop gain representation. C) Optical lever compensation removes the optical levers from the picture of the pendulum. External torque is still suppressed by the optical lever closed loop gain.}
+\caption[Optical lever compensation scheme]{Optical lever compensation scheme. Subfigures A, B, and C are equivalent. A) Zoom of the bottom part of Figure~\ref{fig:ASCcontrolservo}. $P$ is the pendulum and $O$ is the optical lever digital control filters. B) Replacement of the optical lever controlled plant with the closed loop gain representation. C) Optical lever compensation removes the optical levers from the picture of the pendulum. External torque is still suppressed by the optical lever closed loop gain.}
 \label{fig:OLcomp} 
 \end{centering} 
 \end{figure}
 
 \label{sec:oplevcomp}
-Each of the large optics has its own optical lever servo that provides velocity damping. Since both the WFS and the optical levers control the mirror motion when the interferometer is locked, we must consider the interaction of the two servos. Whether one views the interaction as the WFS controlling the optical-lever-controlled mirrors, or as the optical levers controlling the WFS-controlled-mirrors is arbitrary. For the purpose of explanation here, I use the former viewpoint.
+Each of the large optics has its own optical lever servo that provides velocity damping. Since both the WFS and the optical levers control the mirror motion when the interferometer is locked, we must consider the interaction of the two servos. Whether one views the interaction as the WFS controlling the optical-lever-controlled mirrors or as the optical levers controlling the WFS-controlled-mirrors is arbitrary. For the purpose of explanation here, I use the former viewpoint.
 
 Figure \ref{fig:OLcomp} zooms in on the portion of the Figure \ref{fig:ASCcontrolservo} control loop picture that shows the optical lever controlling the pendulum. The torque to angle transfer function of the pendulum is our plant, $P$, the optical lever control is $O$, and the optical lever compensation is shown as $1+OP$. A result of basic control theory is that the optical lever controlled pendulum loop can be represented by its closed loop transfer function:
 \begin{equation}
@@ -372,9 +343,6 @@ Figure \ref{fig:OLcomp} zooms in on the portion of the Figure \ref{fig:ASCcontro
 as shown in Figure \ref{fig:OLcomp}~B. 
 
 One will notice that it is not a coincidence that the optical lever compensation has the same form as the denominator of the closed loop transfer function. Together, they cancel each other out, and all that remains as the plant is the simple pendulum. Including the optical lever compensation in the ASC loop is not necessary, but it is a useful technique for simplifying the design process of the WFS control filters. One need only consider how to control the simple pendulum torque to angle transfer function, rather than the optical-lever controlled pendulum.
-
-
-
 
 \begin{figure} \begin{centering} \subfigure{\includegraphics{figures/WFS1Q_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS2Q_darkres.pdf}} 
 \subfigure{\includegraphics{figures/WFS3I_darkres.pdf}}\subfigure{\includegraphics{figures/WFS4I_darkres.pdf}} 
@@ -386,12 +354,9 @@ One will notice that it is not a coincidence that the optical lever compensation
 
 
 
-
-
-
 \section{Angular Control Limitations}
 \label{sec:ASClimits}
-The limits for how well we can control the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Figure \ref{fig:WFSdarknoise}. Moreover, depending on the power level, WFS1Q may instead be limited by shot noise. See Eq. \ref{eq:shotnoise}. Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. The impression of sensor noise cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at frequencies where sensor noise dominates. 
+The limits for how well we can control the angular motion of the interferometer are governed by how well we are able to sense the angular motion. Several of the wavefront sensors' signals are dark-noise-limited above 20-25~Hz, as seen in Figure \ref{fig:WFSdarknoise}. Moreover, depending on the power level, WFS1Q may instead be limited by shot noise (refer to Eq. \ref{eq:shotnoise}). Any control signal derived from frequencies in the sensing noise limited regime will impress the sensor noise on the mirrors. The impression of sensor noise cannot be avoided entirely in the presence of feedback, but can be mitigated by including amongst the control filters a steep cut-off beginning at frequencies where sensor noise dominates. 
 %Ultimately, it is the WFS noise floor that determines the best possible achievable suppression. 
 
 Besides the sensing noise, there are also sometimes real signals that result in more harm than good when used as feedback. The HAM seismic isolation tables used by the Input Optics (the core optics are suspended from BSC tables) have stack modes at 0.8 to 3~Hz that ring up the MMTs.  At low frequencies, around 1~Hz, some of the WFS signals are dominated by these angular fluctuations of the input beam. The resulting attempt of the mirrors to follow the input beam jitter leads to a magnification of the motion because of the drastically different length scales. Large power fluctuations in both arms and the power recycling cavity ensue, leading to departure from the linear error signal regime and often lock loss. 
