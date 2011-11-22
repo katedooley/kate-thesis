@@ -9,119 +9,6 @@
 % why control filters implemented in the eigenbasis of radiation
 % pressure torques is best. 
 
-
-
-% \section{Sensing}
-% There are five main subsets of sensor systems for the ASC:
-% \begin{itemize}
-% \item OSEMs
-% \item optical levers (MMT3, RM, BS, ITMX, ITMY, ETMX, ETMY) \vspace{-10pt}
-% \item camera image (BS)
-% \item quadrant photodiodes (QPDX, QPDY) \vspace{-10pt}
-% \item wavefront sensors (WFS1, WFS2, WFS3, WFS4) \vspace{-10pt}
-% \end{itemize}
-% Together, these sensors need to provide enough information to derive
-% adequate control signals for 9 mirrors in both pitch and yaw. Both
-% absolute motion (AC) and relative motion (DC) need to be
-% suppressed. The OSEMs and optical levers provide local AC control to
-% the mirrors. The video camera and the QPDs control the pointing of the
-% input beam; the video camera works at DC and the QPDs at both DC and
-% AC. The WFS provide the top level fine tuning of DC and AC control to
-% the 5 main mirrors.
-
-
-% \subsection{OSEMs}
-% The most basic level of control is local damping of each suspended
-% optic provided by the OSEMs. This is always on, even when the
-% interferometer loses lock. It works by sending current through the
-% OSEM coils to keep a constant amount of light on the OSEM shadow
-% sensor.
-
-
-% \subsection{Optical levers}
-% The optical levers are local to each large optic and provide a record
-% at all times of pitch and yaw pointing of each mirror with respect to
-% the ground. The mirrors are velocity-damped only by the optical
-% levers; they are not controlled at DC. The optical lever is a HeNe
-% laser beam that reflects off of the mirror and onto a QPD. Both the
-% laser and QPD are mounted on heavy piers to reduce the seismic noise
-% contribution to the QPD signal. The optical lever provides a feedback
-% signal to the mirror's coils to reduce the sensed motion. Each large
-% optic has its own independent optical lever loop which is almost
-% always on, even when the interferometer is out of lock. The optical
-% lever loops provide the second level of controlled stabilization of
-% the mirrors, after only the local damping.
-
-
-% \subsection{Camera image}
-% The most primitive sensor is that of the physical video camera.  The
-% video camera monitors the location of the spot on the beam splitter,
-% thus serving as a sensor of the pointing of the input beam. The image
-% of the speckle of light reflected off of the beam splitter (see
-% Figure \ref{fig:BCS}) is fed into a labview program which integrates the
-% intensity of the image to identify the coordinates of the center of
-% the beam spot. This is compared with a hardcoded desired center
-% location and a mirror upstream, MMT1 is moved to redirect the input
-% beam, minimizing the difference between the desired and actual beam
-% spot location on the BS.
-
-% \begin{figure}
-% \begin{centering}
-% \includegraphics[width=0.8\textwidth]{figures/BCSspiricon.pdf}
-% \caption{Image of beam on beam splitter as used for the beam centering servo.}
-% \label{fig:BCS}
-% \end{centering}
-% \end{figure}
-
-
-% \subsection{QPDs}  
-% QPDX and QPDY see the small amount light that is transmitted through
-% the ETMs, providing a monitor of the modal axes of the arm cavities. Together with the , they maintain the alignment of the input . QPDX 
-
-
-% \subsection{WFSs}  
-% The wavefront sensors provide the most sophisticated form of
-% measuring angular motion of the mirrors. Their frame of reference is
-% the fundamental Gaussian mode of the interferometer cavities (x-arm,
-% y-arm, recycling cavity) as aligned to ???. All of the mirrors
-% globally follow the pointing of the input beam (via the QPDs) which is
-% in turn stabilized to the center of the beam splitter (via the BCS) at frequencies well
-% below the pendulum resonances. The job of the wavefront sensors is to
-% keep the mirrors aligned to one another up to several Hz within this
-% hierarchy of alignment. The WFS provide DC and AC control to the
-% mirror angles. 
-
-
-
-
-% \section{Control}
-% When the gain is really high, comparing the calibrated error and
-% control signals shows just what the control loop is doing. The error
-% is the residual and the control is what there would be without the
-% loop.
-
-% error * (1+G) is the motion without the loop, where G is the open loop gain.
-
-% \begin{itemize} 
-% \item optical lever calibration
-% \item residuals, perhaps for different kinds of seismic
-% \item compare to mirror motion with no ifo (demonstrate ASC suppression)
-% \end{itemize}
-
-% \textcolor{blue}{This intro is a work in progress! Set up reader to
-%   hear about measurements of the Enhanced LIGO system.}
-% The basis for angular control in Initial LIGO was the sensor
-% basis. The wavefront sensors are located such that they sense
-% common/differential ETM/ITM angular motion and the filters were
-% designed to feed back to those sets of motions. This does not, however,
-% lend itself to easily handling radiation pressure torque. Since the
-% WFS basis is not the radiation pressure eigenbasis of Section
-% \ref{sec:eigenbasis}, each control servo handled combinations of the
-% soft and hard modes. Due to radiation pressure, each mirror has two
-% resonances, a more complicated plant than that offered by the
-% eigenbasis which has a single resonance for each mode.
-
-
 The meat of the Enhanced LIGO ASC upgrade was to switch the control
 servo from the sensor basis to the natural radiation pressure
 eigenmode basis, and to keep the contamination to DARM at a minimum. I
@@ -130,7 +17,7 @@ made to characterize it and its effect on DARM.
 
 A critical aspect of the characterization of any system is to
 calibrate the data in physical units to facilitate comparison to
-models and to make meaningful statements. Since the LIGO data is
+models and to make meaningful statements. Because the LIGO data is
 collected digitally, the units are naturally in digital counts. Part
 of my work was therefore to calibrate each of the relevant ASC
 channels to physical units. I include the details of the calibrations
@@ -145,7 +32,21 @@ from the time of each measurement I present.
 
 
 
+% In Initial LIGO, the wavefront sensor signals were combined via the
+% input matrix to form error signals for the differential and common
+% ETM and ITM motions.
 \section{The ASC Change of Basis}
+The basis for angular control in Initial LIGO was the sensor
+basis. The wavefront sensors are located such that they sense
+common/differential ETM/ITM angular motion and the control filters
+were designed to feed back to those sets of motions. This does not,
+however, lend itself to easily handling radiation pressure
+torque. Because the sensor basis is not the radiation pressure eigenbasis
+of Section \ref{sec:eigenbasis}, each control servo handled
+combinations of the soft and hard modes. Due to radiation pressure,
+each mirror has two resonances, a more complicated plant than that
+offered by the eigenbasis which has a single resonance for each mode.
+
 The change in control basis from Initial LIGO to Enhanced LIGO was a
 rather straightforward operation of changing only the ASC input matrix
 and the ASC output matrix, as shown in Figure~\ref{fig:ASCcontrolservo} and
@@ -174,26 +75,6 @@ sign of the mode in each arm.
 
 
 \subsection{WFS Input Matrix}
-%\textcolor{blue}{(Move optical gain discussion somewhere else?)}
-Optical gain is a term used in LIGO to described the amount of laser
-power produced at some interferometer port for a given physical change
-of some aspect of the interferometer. Ideally, photodiodes are placed
-where the optical gain is high. For the case of the wavefront sensors,
-one is placed at the anti-symmetric port where differential-mode
-signals are transmitted, one is placed to look at a pick-off of the
-beam in the recycling cavity which contains common and differential
-information, and two are placed at the reflected port, where
-common-mode signals end up. The precise locations are determined from
-the Gouy phases of the light. Details are found in
-Ref.~\cite{Barsotti2009Modeling}. 
-
-The WFS optical gain is a measure of how much TEM01/TEM10 mode shows
-up at the locations of the wavefront sensors when a mirror (or
-specific combination of mirrors) moves in angle. Given the wavefront
-sensor is designed to measure the amplitude of this higher order mode,
-its error signal conveys the optical gain.
-% include subtlety of pick-off fractions at ports?
-
 The optical gain for each of the optics' motions is not concentrated
 at any one particular port, although it can appear more strongly in
 one location compared to another. In order to make use of as much of
@@ -309,7 +190,7 @@ r & -1 & r & -1 & 0 & ITMX\\
 
 
 \subsection{Diagonalizing the WFS Drive Matrix}
-
+\label{sec:mirrorgains}
 %\textcolor{blue}{fix this} 
 During the sensing matrix measurement, the optical levers provide a
 record of the motion of the test masses. I combined the
@@ -353,6 +234,7 @@ $g$-factors.
 % property M\_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
 
 
+
 \begin{table}
 \centering
 \caption[Actual eigenbasis motion during sensing matrix excitations]{Actual eigenbasis motion during sensing matrix excitations as
@@ -372,7 +254,6 @@ $g$-factors.
 \end{tabular}
 \label{table:excitations_calibrated}
 \end{table}
-
 
 
 \begin{table}
@@ -411,43 +292,51 @@ not be stable.
 By design, the input matrix is not exactly the inverse of the sensing
 matrix, meaning the system is not completely diagonal. For example,
 the input matrix times the sensing matrix is, by design:
- \[ \left\llbracket \begin{array}{ccccc}
+\begin{equation}
+\left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.30 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
 0 & 0 & 1.0 & 0 & 0 \\
 0 & 0 & 0 & 1.0 & 0 \\
 0 & 0 & 0 & 0 & 1.0 
-\end{array} \right\rrbracket\] 
+\end{array} \right\rrbracket
+\end{equation}
 
 Over time, the sensing matrix changes enough that the system is even less 
 diagonal. Only 10 minutes after having measured and created the input
 matrix, the product of the input matrix with a newly measured new
 sensing matrix is: 
-\[ \left\llbracket \begin{array}{ccccc}
+\begin{equation}
+\left\llbracket \begin{array}{ccccc}
 0.79 & 0 & 0.32 & 0 & 0 \\
 0 & 1.0 & 0 & 0 & 0 \\
 -0.02 & 0 & 1.0 & 0 & 0 \\
 0 & -0.02 & 0 & 1.0 & 0.02 \\
 0 & 0.02 & 0 & 0.05 & 1.03 
-\end{array} \right\rrbracket\] 
+\end{array} \right\rrbracket
+\end{equation}
 
 After one week, it is:
- \[ \left\llbracket \begin{array}{ccccc}
+\begin{equation}
+\left\llbracket \begin{array}{ccccc}
 0.67 & 0 & 0.27 & 0 & 0 \\
 0 & 0.91 & 0 & 0.03 & -0.03 \\
 0.09 & 0 & 0.84 & 0 & 0 \\
 0 & 0.15 & 0 & 0.83 & 0.27 \\
 0 & 0.06 & 0 & 0.07 & 1.04 
-\end{array} \right\rrbracket\] 
+\end{array} \right\rrbracket
+\end{equation}
 
 And after three weeks, it is:
- \[ \left\llbracket \begin{array}{ccccc}
+\begin{equation}
+\left\llbracket \begin{array}{ccccc}
 1.4 & 0 & 0.55 & 0 & 0 \\
 0 & 1.8 & 0 & -0.09 & 0.15 \\
 -0.08 & 0 & 2.0 & 0 & 0 \\
 0 & -0.22 & 0 & 1.4 & 0.64 \\
 0 & 0.30 & 0 & -0.72 & 2.9 
-\end{array} \right\rrbracket\] 
+\end{array} \right\rrbracket\
+\end{equation}
 
 Despite these significant changes, the interferometer remained stable
 and the sensitivity remained constant. This shows that the ASC is a
@@ -457,7 +346,7 @@ very robust sensing and control system.
 \section{Input Beam Motion}
 The beam centering and QPD servos operate up to only about 50~mHz,
 meaning the beam-centering degree of freedom is uncontrolled at higher
-frequencies. Since beam spot motion on the test masses couples to
+frequencies. Because beam spot motion on the test masses couples to
 DARM, anything that causes the beam's position on the test mass to
 change on time scales faster than half a minute becomes itself a
 direct noise source for DARM. The HAM seismic isolation tables from
@@ -469,16 +358,16 @@ test masses.
 
 % can't move the input beam faster than the interferometer can follow it!
 
-The wavefront servos are the mechanism by which input beam motion is
-impressed on the test masses; they are responsible, among other
-things, for making the interferometer follow the input beam up to
-several Hz. The WFS detect differences between the angle of the cavity
-(as determined by the angles of the mirrors) and the angle of the beam
-impinging the cavity. If either the input beam or the cavity angle
-changes, the WFS will move the mirrors to correct for the angle
+The wavefront sensor servos are the mechanism by which input beam
+motion is impressed on the test masses; they are responsible, among
+other things, for making the interferometer follow the input beam up
+to several Hz. The WFS detect differences between the angle of the
+cavity (as determined by the angles of the mirrors) and the angle of
+the beam impinging the cavity. If either the input beam or the cavity
+angle changes, the WFS will move the mirrors to correct for the angle
 mismatch. Thus, even if the mirrors are perfectly quiet, a
 non-stationary input beam will result in mirror motion and mirror
-motion in turn creates beam spot motion. See Eq. \ref{eq:x}.
+motion in turn creates beam spot motion as seen from Eq.~\ref{eq:x}.
 
 I measured the impression of the input beam motion on the mirrors by
 increasing the gain of the common-degree-of-freedom WFS servos (cHard,
@@ -486,7 +375,7 @@ cSoft, RM) for about 10~minutes. Comparing the amount of angular motion
 of the mirrors as witnessed by the optical levers from this time of
 high common WFS gain to a time with nominal WFS gain and similar
 seismic motion, we can see the effect
-directly. Figure \ref{fig:inputbeam_impression} shows comparison
+directly. Figure~\ref{fig:inputbeam_impression} shows comparison
 spectra, demonstrating how there is higher test mass motion around
 1~Hz when the common WFS gains are higher. The rms mirror motion also
 increases by about 20\%.
@@ -532,7 +421,8 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
   residual motion) during a time of normal operation and a time when
   the common WFS gains were $2.5\times$ higher than nominal. This
   excludes gain peaking as a cause of the extra mirror motion
-  witnessed during the time of high gain. Dashed lines are the
+  witnessed during the time of high gain
+  (Figure~\ref{fig:inputbeam_impression}). Dashed lines are the
   root-mean-square of the amplitude spectral density integrated from
   the right. Figure~\ref{fig:seismic_highgain} shows the ground motion
   spectra at the time of this measurement.}
@@ -549,7 +439,7 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
 % appear in the common WFS spectra. I compared the amplitudes of the
 % lines in the MMT spectra with those in the WFS spectra. The counts to
 % counts transfer coefficients are shown in Table
-% \ref{table:inputbeam_TFcoeffs}. Since sensing is flat, I use the shape
+% \ref{table:inputbeam_TFcoeffs}. Because sensing is flat, I use the shape
 % of the WFS loop to extrapolate this transfer coefficient at one
 % frequency to other frequencies. The result is a transfer function
 % useful for making a noisebudget of input beam motion to test mass
@@ -589,7 +479,7 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
 
 \section{The Marginally-stable Power Recycling Cavity}
 The power recycling cavity (PRC) is the linear cavity formed by the RM
-and ITMs. Since the radius of curvature of both the RM and the ITMs
+and ITMs. Because the radius of curvature of both the RM and the ITMs
 points in the same direction and the waist is well outside the
 Rayleigh range of the mirrors, the cavity is geometrically
 unstable. For example, in its cold state at LLO the $g$-factor of the
@@ -666,6 +556,7 @@ $g$-factor and mirror angle]{Dependence of power build-up in the power
 
 
 \subsection{Power Scaling}
+\label{sec:powerscaling}
 The signal at the wavefront sensors is proportional to the amplitude
 of the sidebands, or the square root of the sideband power. Thus, as
 the PRC $g$-factor and therefore the power in the recycling cavity
@@ -771,9 +662,9 @@ the mode for which we provide the strongest suppression. However, it
 is also conditionally stable (due to a pole at zero that is engaged
 after the servo is turned on), as seen by the phase dropping below
 $-180^{\circ}$ at two frequencies. The unity gain frequency must be
-held between roughly 2 and 10~Hz. As shown here, the dSoft UGF is at
-5~Hz. For the other degrees of freedom, the UGFs are all between 0.8
-and 1~Hz. Each loop has a phase margin of $30^{\circ}$ to
+held between roughly 2~Hz and 10~Hz. As shown here, the dSoft UGF is
+at 5~Hz. For the other degrees of freedom, the UGFs are all between
+0.8 and 1~Hz. Each loop has a phase margin of $30^{\circ}$ to
 $40^{\circ}$.
 
 \begin{figure}
@@ -884,8 +775,8 @@ The background motion (``no ASC'') is the RP eigenbasis reconstruction of optica
 The magnitudes of the beam spot motion and the residual mirror motion
 are consistent and reasonable. For example, for $10^{-7}$ rad of soft
 or hard mode motion in one arm, the maximum cavity tilt and
-displacement are 0.12~\micro rad and 1.02~mm, respectively. Refer to
-Table~\ref{table:cav_geometric}.
+displacement are 0.12~\micro rad and 1.02~mm, respectively, as found
+in Table~\ref{table:cav_geometric}.
 
 
 Figure~\ref{fig:mirror_onoff} shows the same data as
@@ -934,14 +825,14 @@ One of the most important figures of merit of ASC performance is how
 much noise the ASC contributes to DARM. We measure the coupling of the
 ASC to DARM by injecting broadband noise between 40 and 110 Hz in each
 of the suspension angular excitation
-points\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_EXCMON}} and
-recording both the suspension angular control
+points\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_EXC}} and recording
+both the suspension angular control
 signal\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_OUT}} and
 DARM. Signals from a time without excitation are subtracted from those
-with the excitation, resulting in just the contribution to each
-spectra due to noise. Dividing the noisy DARM spectrum by the noisy
+with the excitation, resulting in the contribution to each spectra due
+just to noise. Dividing the noisy DARM spectrum by the noisy
 suspension control spectrum provides the transfer function we use to
-multiply by a suspension signal at any time. 
+multiply by a suspension signal at any time.
 
 % \begin{figure}
 % \begin{centering}
@@ -955,26 +846,22 @@ multiply by a suspension signal at any time.
 % \end{centering}
 % \end{figure}
 
-Figure~\ref{fig:optic2DARM} shows the result of applying the measured
-ASC to DARM transfer function to each of the optic's angular control signals at
-a time when the interferometer was locked with 14~W input power.
-
 \begin{figure}
 \begin{centering}
-\subfigure[Pitch.]{\includegraphics{figures/opticspittoDARM.pdf}}
-\subfigure[Yaw.]{\includegraphics{figures/opticsyawtoDARM.pdf}}
+\subfigure[]{\includegraphics{figures/opticspittoDARM.pdf}}
+\subfigure[]{\includegraphics{figures/opticsyawtoDARM.pdf}}
 \caption[Optic to DARM noise budget]{Optic to DARM noise budget during a
-  14~W lock.}% (July 17, 2009).
+  14~W lock. A) Pitch. B) Yaw.}% (July 17, 2009).
 \label{fig:optic2DARM}
 \end{centering}
 \end{figure}
 
 \begin{figure}
 \begin{centering}
-\subfigure[Pitch.]{\includegraphics{figures/WFSpittoDARM.pdf}}
-\subfigure[Yaw.]{\includegraphics{figures/WFSyawtoDARM.pdf}}
+\subfigure[]{\includegraphics{figures/WFSpittoDARM.pdf}}
+\subfigure[]{\includegraphics{figures/WFSyawtoDARM.pdf}}
 \caption[Wavefront sensor to DARM noise budget]{Wavefront sensor to
-  DARM noise budget during a 14~W lock.} % (July 17, 2009).}
+  DARM noise budget during a 14~W lock. A) Pitch. B) Yaw.} % (July 17, 2009).}
 \label{fig:wfs2DARM}
 \end{centering}
 \end{figure}
@@ -983,12 +870,25 @@ We also repeated the transfer function measurement with excitations
 and readback not at the suspension angular control point, but at the
 WFS error points. This allows us to view the breakdown of noise
 contributions in the WFS (radiation pressure eigenmode) basis rather
-than the optic basis. Figure~\ref{fig:wfs2DARM} shows the breakdown of
-WFS noise contributions to DARM for the same time as
-Figure~\ref{fig:optic2DARM}.
+than the optic basis. The view using the WFS basis is useful for
+commissioning purposes, whereas the optic basis is better suited for
+including ASC noise in full interferometer noise budget plots. The
+primary reason is that suspension control channel is recorded to disk.
 
-Because two angular control signals, the WFS and the optical levers,
-independently contribute signals to the suspension angular control, we
+The noise budget for both pitch and yaw at a time when the
+interferometer was locked with 14~W input power is shown in
+Figure~\ref{fig:optic2DARM} for the optics basis and in
+Figure~\ref{fig:wfs2DARM} for the WFS basis. Each optic's contribution
+to DARM is the same within about a factor of two, except for the RM,
+which is not included in these plots. We were not able to measure the
+transfer function for RM motion to DARM because so large of an
+excitation was required to see an effect that the interferometer would
+lose lock. This is thus an indication that the RM's contribution to
+DARM is insignificant. In the WFS basis, the soft modes contribute
+more to DARM than the hard modes.
+
+Because two different angular control signals, the WFS and the optical
+levers, independently contribute to the suspension angular control, we
 can separate their contributions in the noise budget. Furthermore, we
 compute the quadrature sum of the pitch and yaw contributions,
 assuming these two degrees of freedom are de-coupled, thus creating an
@@ -1013,15 +913,22 @@ The important message is that the angular sensing and control is, in
 fact, a limiting noise source for frequencies between 20~Hz and
 55~Hz. The ASC becomes less and less of a primary noise source as
 frequency increases, and by 100~Hz the ASC noise floor is a factor of
-10 below DARM. The seismic noise contribution to DARM (not shown) does
-in fact sit just below the ASC floor, so the sensitivity is not
-dramatically hindered by the ASC. An example, however, that
-demonstrates how we can reduce the ASC noise floor, if only by a small
-amount, is presented in the next section.
+10 below DARM. The specific structure of the noise contributions,
+including the apparent notches, is a direct result of the shape of the
+control filters. Imperfections in the estimate of DARM below 50~Hz
+arise because the transfer function is not perfectly stable in time.
+The seismic noise contribution to DARM (not shown) does in fact sit
+just below the ASC floor, so the interferometer sensitivity to GWs is
+not dramatically hindered by the ASC. An example, however, of how to
+reduce the ASC noise floor, is found through evaluating the WFS
+control filters.
+% The next two sections, however,
+% provide realized and theoretcial examples of how to reduce the ASC
+% noise floor.
 
 
 
-\subsection{Tuning the Cut-off Filters} 
+%\subsection{Tuning the Cut-off Filters} 
 
 \begin{figure}
 \begin{centering}
@@ -1041,38 +948,47 @@ suspension control signals. Steepening the cut-off frequency results
 in less sensing noise impression, but each pole used to achieve the
 steeper drop-off introduces an extra $90^{\circ}$ of phase
 loss. Likewise, lowering the cut-off frequency reduces noise
-impression, but it pushes the phase loss to lower
-frequencies. Decreasing the phase margin of the WFS loops leads to
-gain peaking and a greater likelihood of loop instability. A fine
-balance must therefore be found between loop stability and noise
-impression. Figure~\ref{fig:WFS1cutoff} demonstrates the effect on
-DARM of decreasing the WFS1 cutoff filter frequency from 35~Hz to
-30~Hz.
+impression, but it pushes the phase loss to lower frequencies. The
+effect is a decrease in phase margin of the WFS loops for a particular
+UGF, which leads to gain peaking and a greater likelihood of loop
+instability. A fine balance must therefore be found between loop
+stability and noise impression. Because WFS1 (differential soft) is
+the dominant contibutor to the noise budget, we put forth effort to
+tune its low pass filter's frequency. Figure~\ref{fig:WFS1cutoff}
+demonstrates the effect on DARM of decreasing the WFS1 cut-off filter
+frequency from 35~Hz to 30~Hz.
 
 
-% \subsection{Seismic Feed-Forward to the ASC}
-% Implementing a method of Wiener ﬁltering, I show that the angular
-% sensing and control error signals can be predicted by ground motion
-% witnessed by local seismometers.
+\section{Seismic Feed-Forward to the ASC}
+Implementing a method of Wiener ﬁltering, I show that the angular
+sensing and control error signals can be predicted by ground motion
+witnessed by local seismometers.
 
-% Using S6 data, I evaluated the potential benefits of seismic
-% feed-forward for the angular degrees of freedom. I designed FIR Wiener
-% filters from simultaneous seismometer and ASC error signal time
-% series. The Wiener filter minimizes the mean square error between the
-% ASC error signal and the Wiener filtered seismometer data. The
-% filtered seismometer data can be a good approximation to the ASC error
-% signal and thus fed-forward. I found that with a sufficiently long
-% Wiener filter and 30 minutes worth of data, we can accurately predict
-% the ASC error signal from 0.1 to 20 Hz. If implemented, the rms
-% angular mirror motion would be reduced by a factor of ten and yield a
-% potential reduction in DARM at low frequencies. More importantly, less
-% angular mirror motion would make for a more stable interferometer,
-% necessary for high power operation, a key challenge for aLIGO.
+Using S6 data, I evaluated the potential benefits of seismic
+feed-forward for the angular degrees of freedom. I designed FIR Wiener
+filters from simultaneous seismometer and ASC error signal time
+series. The Wiener filter minimizes the mean square error between the
+ASC error signal and the Wiener filtered seismometer data. The
+filtered seismometer data can be a good approximation to the ASC error
+signal and thus fed-forward. I found that with a sufficiently long
+Wiener filter and 30 minutes worth of data, we can accurately predict
+the ASC error signal from 0.1 to 20 Hz. If implemented, the rms
+angular mirror motion would be reduced by a factor of ten and yield a
+potential reduction in DARM at low frequencies. More importantly, less
+angular mirror motion would make for a more stable interferometer,
+necessary for high power operation, a key challenge for aLIGO.
 
-% \textcolor{blue}{put in Wiener filter figures; explain Wiener
-%   filtering or reference?}
+\textcolor{blue}{put in Wiener filter figures; explain Wiener
+  filtering or reference?}
 
 
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{figures/wienerDU_FF.pdf}
+\caption[]{}
+\label{fig:wienerFF}
+\end{centering}
+\end{figure}
 
 % \section{Advanced LIGO}
 % The Advanced LIGO interferometers will have more massive mirrors, a stable
@@ -1170,7 +1086,7 @@ sensing and control of the optomechanical system.
 
 
 % \section{Calibrations}
-% Since the data is collected digitally, the units are in digital
+% Because the data is collected digitally, the units are in digital
 % counts. This must be converted into physical units in order to
 % facilitate comparison to models and to make meaningful statements. The
 % typical method of calibrating a digital channel is to inject a signal
@@ -1280,7 +1196,7 @@ sensing and control of the optomechanical system.
 % \end{equation}
 
 % The final calibrations of these channels are shown in Table
-% \ref{table:bsmcal}. \footnote{A minor technicality is that since there
+% \ref{table:bsmcal}. \footnote{A minor technicality is that because there
 %   are no filters between the QPD error signals and the offset channel,
 %   their units are exactly the same. Thus, calculating meters of beam
 %   spot motion as a function of offset serves to calibrate the error

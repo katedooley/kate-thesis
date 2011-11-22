@@ -331,7 +331,7 @@ intended operating point so that the response to residual deviations
 remains linear. Calibration of the detector must take into account the
 action of the control system.
 
-% Since the strain sensitivity is determined
+% Because the strain sensitivity is determined
 % by mathematically undoing the (carefully measured) effect of the
 % control system on DARM, control does not directly improve the strain
 % sensitivity. The purpose length control does serves is to make the
@@ -432,7 +432,7 @@ implemented using the OSEM sensors and actuators, while angular motion
 is sensed via optical levers.  The optical levers provide velocity
 damping only (no DC control) between 0.2~Hz and 2~Hz.\footnote{ The
   open loop transfer function of the optical lever servo is described
-  in Appendix~\ref{sec:oplevOLG}.  }
+  in Appendix~\ref{sec:oplevOLG}.} 
 
 % The suspensions are AC damped at all times for each of the large
 % optics through optical lever witnesses. Keeping the mirrors quiet
@@ -441,6 +441,13 @@ damping only (no DC control) between 0.2~Hz and 2~Hz.\footnote{ The
 % small and large, is quieted by its OSEM signals during the initial
 % locking stages. After the interferometer is locked, the angular OSEM
 % feedback is turned off, and the position OSEM feedback remains.
+
+% \subsection{OSEMs}
+% The most basic level of control is local damping of each suspended
+% optic provided by the OSEMs. This is always on, even when the
+% interferometer loses lock. It works by sending current through the
+% OSEM coils to keep a constant amount of light on the OSEM shadow
+% sensor.
 
 \section{Summary}
 The modified Michelson interferometer provides a robust foundation on
