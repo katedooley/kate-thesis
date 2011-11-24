@@ -34,13 +34,18 @@ In a most general sense, it is the controlled angular motion of the mirrors that
 Because the strain sensitivity is proportional to the power at the beam splitter (refer to Eq.~\ref{eq:SNL}), a decrease in circulating power directly results in a decrease of shot-noise-limited DARM. Furthermore, differing power fluctuations in the two arm cavities results in a changing contrast defect, a difference in the amount of light returning from one arm compared to the other. A changing contrast defect creates power fluctuations at the AS port, making it indistinguishable from gravitational waves. Also, the DC power of the contrast defect contributes to increasing the shot noise noise-floor. Power fluctuations couple quadratically to DARM, and in the power recycling cavity in particular, power fluctuations make for inconsistent signal to noise ratios for the signals that depend on sideband power. To maintain a power buildup within 1\% of maximum, the core optics must have an angular displacement of less than $10^{-8}$ rad rms with respect to the cavity axis \cite{ISCGroup1998ASC}. The derivation of power buildup as a function of mirror angle displacement is found in Appendix \ref{sec:cavitypower}.
 
 Another deleterious effect of poor alignment is angle to length coupling. 
-When the beam is located a distance $x$ away from the center of the mirror, an
+When the axis of rotation of a mirror coincides with
+the center of the beam, any tilt of the mirror about this axis does
+not affect the path length of the reflected beam. However, if there is
+a mismatch between rotation axis and beam location, then the light
+will pick up a longitudinal phase shift when the mirror is
+tilted. During a full interferometer lock, this is recorded by DARM. Explicitly, when the beam is located a distance $x$ away from the center of the mirror, an
 angular displacement of the mirror $\theta$ about its center results in a path
 length change of the beam
 \begin{equation}
-\Delta{L} = x \theta
+\Delta{L} = x \theta.
 \end{equation}
-which has a direct impact on DARM. Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x = 1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m. 
+Therefore, the alignment specifications must include not only tolerable levels of angular motion, but requirements for the physical centering of the beam spots on the mirrors. As detailed in Ref. \cite{ISCGroup1998ASC}, the beams must be centered on the core optics within 1~mm. At DC, for x = 1 mm and $\theta = 10^{-7}$ rad, $\Delta{L} = 10^{-10}$ m which is four orders of magnitude below the DARM rms of $10^{-6}$ m.
 %\textcolor{blue}{Convolve my bsm spectra and residual mirror motion spectra to show example.}
 
 
@@ -357,4 +362,4 @@ Besides the sensing noise, there are also sometimes real signals that result in 
 
 Other limitations to the reduction of mirror motion result from the nature of control loops. The cut-off filter, for example, reduces the phase margin of the open loop gain, necessarily pushing down the unity gain frequency (UGF) and therefore the magnitude of suppression at all frequencies below the UGF. A less aggressive cut-off filter, while improving the servo's stability and allowing for higher overall gains, leads to more impression of sensing noise on the optics. Also, if the phase margin of the loop is low, mirror motion will be amplified through gain peaking. 
 
-A final point that should be noted is that there is a coupling from angular drive to length that results from the same principle of the length to angle coupling presented in Section~\ref{sec:L2A}. In all, we will show in Chapter~\ref{ch:characterization} that it is ultimately the WFS noise floor that determines the best possible achievable suppression because through angular control, the impression of WFS sensing noise plays a major role in the reduction of DARM sensitivity up to 55~Hz.
+A final point that should be noted is that there is an angular drive to length coupling due to OSEM imbalances that results from the same principle of the length to angle coupling presented in Section~\ref{sec:L2A}. In all, we will show in Chapter~\ref{ch:characterization} that it is ultimately the WFS noise floor that determines the best possible achievable suppression because through angular control the impression of WFS sensing noise plays a major role in the reduction of DARM sensitivity up to 55~Hz.
