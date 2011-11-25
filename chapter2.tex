@@ -38,26 +38,24 @@ two different wave packets.\footnote{It should be noted that $h$ is
   $L$. This means that the temporal variation of $h(t)$ is negligible
   during the time it takes the photon to make its round trip.}
 
-In practice we send a
-continuous electromagnetic wave into the interferometer. The
-difference in travel times turns into a difference in phase of
-the beams returning to the beamsplitter:
+In practice we send a continuous electromagnetic wave into the
+interferometer. The difference in travel times turns into a difference
+in phase of the beams returning to the beamsplitter:
 \begin{equation}
-\Delta \phi_{\mathrm{MICH}} = \omega \Delta t = \frac{2 L}{c} \omega h,
-\label{eq:deltaphi}
+\Delta \phi_{\mathrm{BS\_MICH}} = \omega \Delta t = \frac{2 L}{c} \omega h,
+\label{eq:deltaphi_mich}
 \end{equation}
-where $\omega$ is the angular frequency of the laser light. We now
-introduce the modified Michelson interferometer used in LIGO, and in
-this context continue the discussion of strain measurement and
-sensitivity.
-
-% reference to treatment as a wave, gauge-independent quantity.
-
+where $\omega$ is the angular frequency of the laser
+light. Ref.~\cite{Garfinkle2005Gauge} provides a nice discussion about
+why GW detectors should work from the viewpoint of gauge
+invariance. We now introduce the modified Michelson interferometer
+used in LIGO, and in this context continue the discussion of strain
+measurement and sensitivity.
 
 
 \section{Power-recycled Fabry-Perot Michelson Interferometers} 
 The LIGO detector configuration is a power-recycled Fabry-Perot
-Michelson laser interferometer as depicted in
+Michelson (FPM) laser interferometer as depicted in
 Figure~\ref{fig:IFOschematic}. A beam splitter (BS) directs 1064~nm
 light from a diode-pumped, power amplified, and intensity and
 frequency stabilized Nd:YAG laser to the Fabry-Perot arms, which
@@ -84,20 +82,20 @@ increases the change in phase measured at the AS port compared to that
 for a simple Michelson. Rather than make a single round trip down each
 arm, the light is trapped by the Fabry-Perot cavity, experiencing many
 round trips before returning to the beam splitter and interfering with
-the light from the other arm. The effect is that Eq.~\ref{eq:deltaphi}
+the light from the other arm. The effect is that Eq.~\ref{eq:deltaphi_mich}
 for the Fabry-Perot Michelson includes a frequency-dependent phase
 gain factor, $g_{\phi}(f)$:
 \begin{equation}
-\Delta \phi = \frac{2 L}{c} \omega g_{\phi}(f) h.
+\Delta \phi_{\mathrm{BS\_FPM}} = \frac{2 L}{c} \omega g_{\phi}(f) h(f).
 %\Delta \phi = \frac{2 L}{c} \omega g_{\phi}(f) \Delta h.
 \label{eq:deltaphi}
 \end{equation}
 For Enhanced LIGO, $g_{\phi} = 137$ at DC and falls off as $1/f$ after
-85~Hz due to the storage time of the light in the arm cavities.
-
-The power recycling mirror is a modification to the Michelson
+85~Hz due to the storage time of the light in the arm cavities. The
+power recycling mirror is a modification to the Michelson
 interferometer that increases the circulating power by a factor of
-$g_{cr}^2 \approx 40$. Details are in Appendix~\ref{sec:impedance}.
+$g_{cr}^2 \approx 40$. Details are found in
+Appendix~\ref{sec:impedance}.
 
 
 \subsection{DC Readout}
@@ -165,37 +163,43 @@ We see that $L$ is the conversion factor between GW strain and DARM.
 
 
 
-\subsection{DARM Optical Gain}
-The DARM optical gain tells how displacement is converted to power at
-the AS port and has units of Watts per meter. Combining
+\subsection{DARM and Strain Optical Gain}
+The DARM optical gain tells how differential displacement is converted
+to power at the AS port and has units of Watts per meter. Combining
 Eqs.~\ref{eq:deltaphi}, \ref{eq:dP_dphi}, and \ref{eq:DARMandh}, the
-DARM optical gain of the LIGO interferometer with DC readout is:
+DARM optical gain at DC of the LIGO interferometer with DC readout is:
 \begin{equation}
 \frac{d P_{AS}}{dL_-} = \frac{4}{c} P_{BS} \phi_0 \omega g_{\phi}.
 \label{eq:opticalgain}
+\end{equation} 
+Likewise, the strain optical gain is:
+\begin{equation}
+\frac{d P_{AS}}{dh} = \frac{4}{c} P_{BS} \phi_0 L \omega g_{\phi}.
+\label{eq:opticalgain_h}
 \end{equation}
 
 
 
-
 \section{Signal Versus Noise} 
-From Eq.~\ref{eq:opticalgain} we see three fundamental
-ways to increase the DARM optical gain and therefore produce more
-power at the AS port for a given GW strain:
+From Eq.~\ref{eq:opticalgain_h} we note four fundamental ways to
+increase the strain optical gain for a constant DARM offset and
+therefore produce more power at the AS port for a given GW strain:
 \begin{itemize}
-\item Make the arms longer. \vspace{-10 pt}
+\item Increase the arm length. \vspace{-10 pt}
 \item Increase the power at the beamsplitter. \vspace{-10 pt}
-\item Increase the phase gain of the Fabry-Perot arms.
+\item Increase the phase gain of the Fabry-Perot arms. \vspace{-10 pt}
+\item Increase the laser frequency.
 \end{itemize}
-Our ability to detect gravitational wave strain is dependent not only
-on the optical gain, but also on the detector noises, which will mask
-a weak GW signal. No matter how large a signal one might have, it will
-not be found confidently, or at all, if there is too much noise.
+Although addressing each of these points will improve the strain
+signal, our ability to detect gravitational wave strain is also
+dependent on the detector noises which will mask a weak GW signal. No
+matter how large a signal one might have, it will not be found
+confidently, or at all, if there is too much noise.
 
 
 \subsection{Noise}
-The sources of noise which contaminate the detector's output can be 
-generally grouped into two categories:
+The sources of noise which contaminate the detector's output can be
+grouped into two categories:
 \begin{itemize}
 \item displacement noise \vspace{-10 pt}
 \item sensing noise
@@ -209,25 +213,13 @@ electric field at the detector's output.
 The primary displacement noise that plagues terrestrial laser
 interferometers is motion of the ground, i.e. seismic noise.  Thermal
 motion of the mirrors and their suspensions are another source of
-displacement noise. 
-
-%% \begin{equation}
-%% F(f) = \sqrt{4k_BTb(f)},
-%% \end{equation}
-%% where $k_B$ is Boltzmann's constant, $T$ is temperature, and $b$ is
-%% the mirror's dissipation.
-
-%%  With improvements in seismic isolation, future
-%% detectors will be limited at low frequency by photon radiation pressure
-%% noise.
-
-The primary sensing noises are electronics (`dark') noise (due to
-thermal noise in resistors and electronic amplifiers), and shot
-noise, which arises from the Poisson statistics of photon arrival
-at the photodetector. Shot noise appears as a
-fluctuating power with amplitude spectral density:
+displacement noise \cite{Saulson1990Thermal}. The primary sensing
+noises are electronics (`dark') noise due to thermal noise in
+resistors and electronic amplifiers, and shot noise which arises from
+the Poisson statistics of photon arrival at the photodetector. Shot
+noise appears as a fluctuating power with amplitude spectral density
 \begin{equation}
-P_{SN} = \sqrt{2 P h_p \nu}
+P_{SN} = \sqrt{2 P h_p \nu}, % (with units of W/$\sqrt{\mathrm{Hz}}$) 
 \label{eq:shotnoise}
 \end{equation}
 where $P$ is the mean power on the photodiode, $h_p$ is Planck's
@@ -235,41 +227,52 @@ constant, and $\nu$ is the frequency of the incident light. Shot noise
 is spectrally white.  The detector electronics are typically designed
 so that electronics noise is never limiting.
 
-% (with units of W/$\sqrt{\mathrm{Hz}}$) 
+
 \subsection{Noise Floor}
 The detector's noise floor is limited by seismic noise below 40~Hz and
-by shot noise above 200~Hz.   In general we endeavor to push the noise floor down as far as possible
-so that any underlying GW signals will be revealed.  Whether
-limited by displacement noise or by sensing noise, the noise floor,
-calibrated in strain, can be lowered by increasing the length of the
-arms, which acts as the conversion from strain to effective displacement
-(Eq.~\ref{eq:DARMandh}).
-Further improvements require considering the noise
-sources individually.
+by shot noise above 200~Hz.  In general we endeavor to push the noise
+floor down as far as possible so that any underlying GW signals will
+be revealed.  Whether limited by displacement noise or by sensing
+noise, the noise floor
+%calibrated in strain, 
+can be lowered by increasing the length of the arms, which acts as the
+conversion from strain to differential displacement
+(Eq.~\ref{eq:DARMandh}) \footnote{In the context of LIGO, increasing
+  the arm lengths is not actually an option.}. Further improvements
+require considering the noise sources individually.
+
+
+%A summary of the noise budget is shown in Figure \ref{fig:NB}.
+
+% \begin{figure}
+% \begin{centering}
+% %\includegraphics[width=0.8\textwidth]{figures/.pdf}
+% \caption[LIGO noise budget]{Noise budget place holder.}
+% \label{fig:NB}
+% \end{centering}
+% \end{figure}
+
 
 \subsubsection{Displacement noise floor} 
 At frequencies where the noise floor is limited by displacement noise,
-simply increasing the DARM optical gain will not help. The mirror
-displacements, whether due to gravitational waves or due to ground
-motion, are converted into power at the AS port in the exact same
-way.   Reduction of displacement noises mainly relies on the development
-of more sophisticated seismic isolation systems and mirror suspension
-arrangements.
-
-% You should make the point that improvements in the displacement noise
-% floor are only linear in the arm length, whereas each additional stage
-% of seismic isolation can potentially reduce the displacement noise 
-% by 1/f^2.  Make the point that we already have 1/f^n attenuation.  Also, 
-% of course, increasing the LIGO arm lengths is not actually an option.
+simply increasing the DARM optical gain (Eq.~\ref{eq:opticalgain})
+will not help. The mirror differential displacements, whether due to
+gravitational waves or due to ground motion, are converted into power
+at the AS port in the exact same way. Reduction of displacement noises
+relies primarily on the development of more sophisticated seismic
+isolation systems and mirror suspension arrangements. Note that
+improvements in the displacement noise floor are only linear with
+respect to arm length, whereas each additional stage of seismic
+isolation can potentially reduce the displacement noise by $1/f^2$.
 
 \subsubsection{Sensing noise floor}
 The noise floor due to sensing noise is improved by increasing the
-optical gain. 
-In particular, the contribution due to shot noise  may be found by 
-dividing the shot noise amplitude spectral density by the optical gain:
+DARM optical gain. In particular, the contribution due to shot noise
+may be found by dividing the shot noise amplitude spectral density
+by the strain optical gain:
 \begin{equation}
-h_{shot} = \sqrt{\frac{h_p}{2 P_{BS} \nu}} \frac{c}{4 \pi L g_{\phi}}
-\quad \text{W}/\sqrt{\text{Hz}}.
+h_{shot} = \sqrt{\frac{h_p}{2 P_{BS} \nu}} \frac{c}{4 \pi \phi_0 L g_{\phi}}
+%\quad \text{W}/\sqrt{\text{Hz}}.
 \label{eq:SNL}
 \end{equation}
 
@@ -306,18 +309,6 @@ like $\sqrt{P_{BS}}$, assuming the DARM offset is held constant).
 % on a detector due to shot noise is:
 
 
-%A summary of the noise budget is shown in Figure \ref{fig:NB}.
-
-% \begin{figure}
-% \begin{centering}
-% %\includegraphics[width=0.8\textwidth]{figures/.pdf}
-% \caption[LIGO noise budget]{Noise budget place holder.}
-% \label{fig:NB}
-% \end{centering}
-% \end{figure}
-
-
-
 
 \section{Controlling the Interferometer}
 The ability of the interferometer to operate as described above
@@ -326,71 +317,46 @@ resonance. The motion of the mirrors in the absence of control is much
 too large--on the order of 1~\micron, a full wavelength!--to maintain
 resonance.  The motion of the interferometer mirrors must therefore be
 controlled.  A feedback control system is implemented to hold the
-system sufficiently near (for DARM, within $\sim 10^{-13}$ m) the
-intended operating point so that the response to residual deviations
+system sufficiently near the intended operating point (for DARM,
+within $\sim 10^{-13}$ m) so that the response to residual deviations
 remains linear. Calibration of the detector must take into account the
-action of the control system.
-
-% Because the strain sensitivity is determined
-% by mathematically undoing the (carefully measured) effect of the
-% control system on DARM, control does not directly improve the strain
-% sensitivity. The purpose length control does serves is to make the
-% strain measurement possible. For other degrees of freedom, such as
-% angular motion, only the controlled residual matters ..  Control,
-% however, introduces noise so there is a fine balance that must be
-% found between too much and too little control.
-
-% Design considerations for the control loops include how much motion at
-% what frequencies can be tolerated, and the signal to noise ratio of
-% the motion sensor.
+action of the control system \cite{KisselCalibrationPaper}.
 
 
-% \subsection{RF Sidebands}
-% Phase modulation multiplies carrier light with field
-% $E_0e^{i\omega t}$ by $e^{i \Gamma \sin{(\Omega t)}}$, where $\Gamma$
-% is the modulation index and $\Omega$ is the frequency of the phase
-% modulation. Using the Jacobi-Anger expression,
-% \begin{equation}
-% e^{i z \sin{\theta}} = \sum_{n=-\infty}^{\infty} J_n(z) e^{i n \theta},
-% \end{equation}
-% where $J_n$ are the Bessel functions, we can write the first few terms
-% (n = 0, 1, -1) of the phase-modulated field:
-% \begin{equation}
-% E_{modulated} = E_0 J_0(\Gamma) e^{i\omega t} + E_0 J_1(\Gamma)
-% e^{i(\omega + \Omega) t} + E_0 J_{-1}(\Gamma)
-% e^{i(\omega - \Omega) t} + ...
-% \end{equation}
-% We see that both an upper and lower primary sideband are created, with
-% frequencies $\omega + \Omega$ and $\omega - \Omega$. Phase modulation
-% does produce an infinite number of sidebands, yet the amplitude of the
-% Bessel function decays rapidly with higher $|n|$, so only this first
-% set of sidebands are significant.
-
-
+\subsection{RF Sidebands}
+The various length and angular degrees of freedom are sensed through
+the use of radio-frequency (RF) sidebands on the carrier light.  The
+standard technique for locking optical cavities is the
+Pound--Drever--Hall method of laser frequency stabilization as
+explained in Ref.~\cite{Black2001Introduction}. LIGO uses three sets
+of RF sidebands at 24.4~MHz, 33.3~MHz, and 61.1~MHz for locking the
+Fabry-Perot arm cavities, input mode cleaner, and power recycling
+cavity, respectively. An electro-optic modulater (EOM) phase modulates
+the 1064~nm carrier light to produces these reference fields that are
+critical for interferometer control. Phase modulation is explained in
+Appendix~\ref{sec:phasemodulation}.
 
 
 \subsection{Digital Control in LIGO}
 Although the interferometer is an analog instrument, it is interfaced
-through a digital control system. The analog sensor signals are sent
-through analog-to-digital converters (ADCs), digitally filtered, and
-then sent through digital-to-analog converters (DACs) before returning
-to the interferometer's actuators as control signals. The 
+through a digital control system.\footnote{There are a select few
+  control systems that remain completely analog, like the laser
+  intensity stabilization servo (ISS). When the frequencies of
+  interest extend beyond several tens of thousands of Hz, the use of
+  computers becomes impractical.} The analog sensor signals are sent
+through analog-to-digital converters (ADCs), are digitally filtered,
+and then sent through digital-to-analog converters (DACs) before
+returning to the interferometer's actuators as control signals. The
 digital control system allows complex filters to be implemented and
 tuned from a comfortable control-room environment.
 
 The various LIGO subsystems operate at different sample rates.  The
 length sensing and control (LSC) subsystem, which measures and
-controls DARM, in addition to other length degrees of freedom,
+controls DARM in addition to other length degrees of freedom,
 operates at 16384 samples/second, while the angular sensing and
 control (ASC) system, which maintains mirror alignment, operates at
 2048 samples/second.  In addition to the all-important DARM channel,
 many other auxiliary data streams are permanently recorded.
-
-% There are a select few control systems that remain completely analog, like
-% the laser intensity stabilization servo (ISS). When the frequencies of
-% interest extend beyond several tens of thousands of Hz, the use of
-% computers becomes impractical.
-
 
 
 
@@ -409,7 +375,7 @@ clamped to the top of a suspension cage.
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.3\textwidth]{/Users/kate/kate-thesis/figures/suspension.pdf}
-\caption[Sketch of a LIGO suspension]{Sketch of a LIGO suspension.}
+\caption[Simple sketch of a LIGO suspension]{Simple sketch of a LIGO suspension.}
 \label{fig:suspension}
 \end{centering}
 \end{figure}
@@ -421,33 +387,21 @@ a square are glued on the mirror's back surface which are enveloped by
 the OSEM solenoid coil.  The currents through each coil may be driven
 independently.  Length control of the cavities, for instance, sends
 current of the same magnitude through each coil on a given mirror to
-provide a piston force for changing the mirror's position.  OSEM
+provide a piston force for changing the mirror's position. OSEM
 sensing is accomplished through simple shadow sensors.
 
 To avoid thermal noise, the mirror suspensions are designed to
-minimize dissipation.  Damping for the large optics is achieved
-through electronic servos.  Motion of the optics corresponding to a
-change in cavity length is damped using simple velocity damping servos
-implemented using the OSEM sensors and actuators, while angular motion
-is sensed via optical levers.  The optical levers provide velocity
-damping only (no DC control) between 0.2~Hz and 2~Hz.\footnote{ The
-  open loop transfer function of the optical lever servo is described
-  in Appendix~\ref{sec:oplevOLG}.} 
+minimize dissipation.  Damping for the large optics is therefore
+achieved through electronic servos.  Motion of the optics
+corresponding to a change in cavity length is damped at all times by
+simple velocity damping servos that use the OSEM sensors and
+actuators. Angular motion is sensed and controlled at all times via
+optical levers which provide velocity damping between 0.2~Hz and
+2~Hz.\footnote{ The open loop transfer function of the optical lever
+  servo is described in Appendix~\ref{sec:oplevOLG}.} The OSEM signals
+also provide angular feedback, but only when the interferometer is not
+locked. 
 
-% The suspensions are AC damped at all times for each of the large
-% optics through optical lever witnesses. Keeping the mirrors quiet
-% enough with respect to their local ground is necessary to allow for
-% the initial locking of the interferometer, so each suspended optic,
-% small and large, is quieted by its OSEM signals during the initial
-% locking stages. After the interferometer is locked, the angular OSEM
-% feedback is turned off, and the position OSEM feedback remains.
-
-% \subsection{OSEMs}
-% The most basic level of control is local damping of each suspended
-% optic provided by the OSEMs. This is always on, even when the
-% interferometer loses lock. It works by sending current through the
-% OSEM coils to keep a constant amount of light on the OSEM shadow
-% sensor.
 
 \section{Summary}
 The modified Michelson interferometer provides a robust foundation on

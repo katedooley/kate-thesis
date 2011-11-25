@@ -1,6 +1,28 @@
 \chapter{INPUT OPTICS SUPPORTING MATERIAL}
 
 
+\section{Phase Modulation}
+\label{sec:phasemodulation}
+Phase modulation multiplies carrier light with field
+$E_0e^{i\omega t}$ by $e^{i \Gamma \sin{(\Omega t)}}$, where $\Gamma$
+is the modulation index and $\Omega$ is the frequency of the phase
+modulation. Using the Jacobi-Anger expression,
+\begin{equation}
+e^{i z \sin{\theta}} = \sum_{n=-\infty}^{\infty} J_n(z) e^{i n \theta},
+\end{equation}
+where $J_n$ are the Bessel functions, we can write the first few terms
+(n = 0, 1, -1) of the phase-modulated field:
+\begin{equation}
+E_{\mathrm{modulated}} = E_0 J_0(\Gamma) e^{i\omega t} + E_0 J_1(\Gamma)
+e^{i(\omega + \Omega) t} + E_0 J_{-1}(\Gamma)
+e^{i(\omega - \Omega) t} + ...
+\end{equation}
+We see that both an upper and lower primary sideband are created, with
+frequencies $\omega + \Omega$ and $\omega - \Omega$. Phase modulation
+does produce an infinite number of sidebands, yet the amplitude of the
+Bessel function decays rapidly with higher $|n|$, so only this first
+set of sidebands are significant.
+
 
 \section{Mode Cleaner Pole}
 \label{sec:MCpole}
