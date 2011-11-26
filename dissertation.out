@@ -17,15 +17,16 @@
 \BOOKMARK [1][-]{section.2.2}{Power-recycled Fabry-Perot Michelson Interferometers}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{DC Readout}{section.2.2}
 \BOOKMARK [2][-]{subsection.2.2.2}{DARM}{section.2.2}
-\BOOKMARK [2][-]{subsection.2.2.3}{DARM Optical Gain}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{DARM and Strain Optical Gain}{section.2.2}
 \BOOKMARK [1][-]{section.2.3}{Signal Versus Noise}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.3.1}{Noise}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.2}{Noise Floor}{section.2.3}
 \BOOKMARK [3][-]{subsubsection.2.3.2.1}{Displacement noise floor}{subsection.2.3.2}
 \BOOKMARK [3][-]{subsubsection.2.3.2.2}{Sensing noise floor}{subsection.2.3.2}
 \BOOKMARK [1][-]{section.2.4}{Controlling the Interferometer}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.4.1}{Digital Control in LIGO}{section.2.4}
-\BOOKMARK [2][-]{subsection.2.4.2}{Mirror Suspension and Actuation}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.1}{RF Sidebands}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.2}{Digital Control in LIGO}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.3}{Mirror Suspension and Actuation}{section.2.4}
 \BOOKMARK [1][-]{section.2.5}{Summary}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{INPUT OPTICS DESIGN AND CHARACTERIZATION}{}
 \BOOKMARK [1][-]{section.3.1}{Function of the Input Optics}{chapter.3}
@@ -62,10 +63,11 @@
 \BOOKMARK [2][-]{subsection.4.2.4}{Radiation Pressure}{section.4.2}
 \BOOKMARK [1][-]{section.4.3}{The Mirror as a Torsion Pendulum}{chapter.4}
 \BOOKMARK [1][-]{section.4.4}{Overview of Interferometer Alignment}{chapter.4}
-\BOOKMARK [1][-]{section.4.5}{The Wavefront Sensing Scheme}{chapter.4}
-\BOOKMARK [1][-]{section.4.6}{The Angular Control Servo}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.6.1}{Optical lever compensation}{section.4.6}
-\BOOKMARK [1][-]{section.4.7}{Angular Control Limitations}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{The Angular Sensing and Control Servo}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.5.1}{The Wavefront Sensing Scheme}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.2}{The Digital Path}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.3}{Optical Lever Compensation}{section.4.5}
+\BOOKMARK [1][-]{section.4.6}{Angular Control Limitations}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{THE EFFECT OF HIGH LASER POWER ON INTERFEROMETER ALIGNMENT}{}
 \BOOKMARK [1][-]{section.5.1}{The Radiation Pressure Angular Spring}{chapter.5}
 \BOOKMARK [2][-]{subsection.5.1.1}{Diagonalizing the Modified Equations of Motion}{section.5.1}
@@ -85,19 +87,23 @@
 \BOOKMARK [1][-]{section.6.5}{WFS Servo Open Loop Transfer Functions}{chapter.6}
 \BOOKMARK [1][-]{section.6.6}{Residual Angular Motion}{chapter.6}
 \BOOKMARK [1][-]{section.6.7}{ASC to DARM Noise Budget}{chapter.6}
-\BOOKMARK [2][-]{subsection.6.7.1}{Tuning the Cut-off Filters}{section.6.7}
-\BOOKMARK [1][-]{section.6.8}{Experimental Measurement of the Sidles-Sigg Effect}{chapter.6}
+\BOOKMARK [1][-]{section.6.8}{Seismic Feed-Forward to the ASC}{chapter.6}
+\BOOKMARK [1][-]{section.6.9}{Experimental Measurement of the Sidles-Sigg Effect}{chapter.6}
+\BOOKMARK [1][-]{section.6.10}{Summary}{chapter.6}
 \BOOKMARK [0][-]{chapter.7}{CONCLUSIONS}{}
+\BOOKMARK [1][-]{section.7.1}{Higher power in Enhanced LIGO}{chapter.7}
+\BOOKMARK [1][-]{section.7.2}{Summary}{chapter.7}
 \BOOKMARK [0][-]{appendix.A}{INPUT OPTICS SUPPORTING MATERIAL}{}
-\BOOKMARK [1][-]{section.A.1}{Mode Cleaner Pole}{appendix.A}
-\BOOKMARK [1][-]{section.A.2}{Gaussian Beam on a Split Photodetector}{appendix.A}
-\BOOKMARK [1][-]{section.A.3}{Beam Propagation Formalism}{appendix.A}
-\BOOKMARK [1][-]{section.A.4}{Beam Drift Calibration}{appendix.A}
-\BOOKMARK [1][-]{section.A.5}{Carrier Mode-matching into the Interferometer}{appendix.A}
-\BOOKMARK [2][-]{subsection.A.5.1}{Interferometer Visibility}{section.A.5}
-\BOOKMARK [2][-]{subsection.A.5.2}{Impedance Matching}{section.A.5}
-\BOOKMARK [2][-]{subsection.A.5.3}{Mode-matching}{section.A.5}
-\BOOKMARK [1][-]{section.A.6}{Overlap Integrals}{appendix.A}
+\BOOKMARK [1][-]{section.A.1}{Phase Modulation}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{Mode Cleaner Pole}{appendix.A}
+\BOOKMARK [1][-]{section.A.3}{Gaussian Beam on a Split Photodetector}{appendix.A}
+\BOOKMARK [1][-]{section.A.4}{Beam Propagation Formalism}{appendix.A}
+\BOOKMARK [1][-]{section.A.5}{Beam Drift Calibration}{appendix.A}
+\BOOKMARK [1][-]{section.A.6}{Carrier Mode-matching into the Interferometer}{appendix.A}
+\BOOKMARK [2][-]{subsection.A.6.1}{Interferometer Visibility}{section.A.6}
+\BOOKMARK [2][-]{subsection.A.6.2}{Impedance Matching}{section.A.6}
+\BOOKMARK [2][-]{subsection.A.6.3}{Mode-matching}{section.A.6}
+\BOOKMARK [1][-]{section.A.7}{Overlap Integrals}{appendix.A}
 \BOOKMARK [0][-]{appendix.B}{ANGULAR SENSING AND CONTROL CALIBRATIONS}{}
 \BOOKMARK [1][-]{section.B.1}{Beam Spot Motion}{appendix.B}
 \BOOKMARK [2][-]{subsection.B.1.1}{Moving the Beam}{section.B.1}
@@ -106,6 +112,7 @@
 \BOOKMARK [2][-]{subsection.B.2.1}{ETM and ITM Optical Levers}{section.B.2}
 \BOOKMARK [2][-]{subsection.B.2.2}{RM, BS, and MMT3 Optical Levers}{section.B.2}
 \BOOKMARK [1][-]{section.B.3}{WFS Error Signals}{appendix.B}
+\BOOKMARK [1][-]{section.B.4}{Angular Optical Gain}{appendix.B}
 \BOOKMARK [0][-]{appendix.C}{ANGULAR SENSING AND CONTROL SUPPORTING MATERIAL}{}
 \BOOKMARK [1][-]{section.C.1}{Optical Lever Open Loop Transfer Function}{appendix.C}
 \BOOKMARK [1][-]{section.C.2}{Misaligned Cavity Axis}{appendix.C}

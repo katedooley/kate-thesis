@@ -33,6 +33,7 @@ angular sensing channels.
 
 
 \section{Beam Spot Motion}
+\label{sec:bsmcal}
 A quantity of interest is how much the beam moves on the ITMs and
 ETMs. It is this beam spot motion which, together with the mirror
 angular motion, creates a length signal that contributes noise to
@@ -114,7 +115,6 @@ position, $\Delta x$, is:
 \begin{equation}
 |\Delta{x}| = \frac{|\Delta{\mbox{gain}}| R}{\sqrt{2}} .
 \end{equation}
-
 The final calibrations of these channels are shown in Table
 \ref{table:bsmcal}. \footnote{A minor technicality is that since there
   are no filters between the QPD error signals and the offset channel,
@@ -141,14 +141,14 @@ yaw & $0.88\times10^{-5}$ m/ct & $0.80\times10^{-5}$ m/ct & $4.79\times10^{-2}$ 
 
 
 \section{Angular Mirror Motion}
+\label{sec:oplevcal}
 The optical levers provide a straightfoward measure of individual
 mirror motion. The channels I calibrated were of the form
 \texttt{L1:SUS-ETMX\_OPLEV\_\{P,Y\}ERROR}, the optical lever error
 signals for each of the large optics. I made use of the dependence of
-power in a misaligned cavity to calibrate the ETM and ITM optical
-levers, and used a less precise, rudimentary method to calibrate the
-RM, BS, and MMT3 optical levers.
-
+power in a misaligned cavity (refer to Appendix~\ref{sec:cavitypower})
+to calibrate the ETM and ITM optical levers, and used a less precise,
+rudimentary method to calibrate the RM, BS, and MMT3 optical levers.
 
 \subsection{ETM and ITM Optical Levers} 
 I calibrated the arm cavity optical levers by tracking the power loss
@@ -242,10 +242,9 @@ yaw & 50.7 & 43.3 & 20.1 & 20.2 & 42.5 & 63.5 & 55.5 \\
 
 
 
-
-
 \section{WFS Error Signals}
-The WFS error signals\footnote{i.e. \texttt{L1:ASC-WFS1\_Q1}} are physically
+\label{sec:cal_sensing}
+The WFS error signals\footnote{i.e. \texttt{L1:ASC-WFS1\_QP}} are physically
 Watts of power at the detectors, which the WFS electronics convert
 into a voltage. To turn WFS counts into voltage of signal at the
 output of the detector, we must backtrack through the electronics and
@@ -329,3 +328,14 @@ error signals.
 
 
 
+\section{Angular Optical Gain}
+\label{sec:cal_opticalgain}
+The calibrated WFS sensing matrix (using the calibration presented in
+Sec.~\ref{sec:cal_sensing}) can be used in conjuction with the
+simultaneously measured drive matrix (as described in
+Sec.~\ref{sec:mirrorgains}) to calculate the angular optical
+gain. Each row of the sensing matrix must be divided by the measured
+amplitude of that row's DOF excitation, which is found as the diagonal
+elements of Table~\ref{table:excitations_calibrated}. The result of
+doing so gives the angular optical gain of the interferometer in terms
+of WFS Volts per radian.

@@ -16,6 +16,8 @@ A level-1 auxiliary file: appendix.aux
 The style file: ol.bst
 A level-1 auxiliary file: bio.aux
 Database file #1: group-1530.bib
+Warning--entry type for "COMSOL" isn't style-file defined
+--line 222 of file group-1530.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty journal in Carroll1997Lecture
 Warning--you've exceeded 5000, the global-string-size, for entry Abbott2009Search
@@ -35,46 +37,47 @@ Warning--you've exceeded 5000, the global-string-size, for entry Abbott2009LIGO
 while executing--line 2639 of file ol.bst
 *Please notify the bibstyle designer*
 Warning--empty author in 1998Component
+Warning--missing school in Mavalvala1997Alignment
 Warning--can't use both author and editor fields in Siegman1986Lasers
-You've used 57 entries,
+You've used 65 entries,
             2553 wiz_defined-function locations,
-            950 strings with 68301 characters,
-and the built_in function-call counts, 87934 in all, are:
-= -- 949
-> -- 10424
-< -- 20
-+ -- 3500
-- -- 3443
-* -- 7523
-:= -- 11736
-add.period$ -- 57
-call.type$ -- 57
-change.case$ -- 21
+            996 strings with 69778 characters,
+and the built_in function-call counts, 90080 in all, are:
+= -- 1081
+> -- 10502
+< -- 19
++ -- 3530
+- -- 3465
+* -- 7655
+:= -- 11994
+add.period$ -- 65
+call.type$ -- 65
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 8215
-empty$ -- 4799
-format.name$ -- 3480
-if$ -- 16622
+cite$ -- 70
+duplicate$ -- 8425
+empty$ -- 5009
+format.name$ -- 3506
+if$ -- 17106
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 3736
-newline$ -- 175
-num.names$ -- 58
-pop$ -- 3933
+int.to.str$ -- 65
+missing$ -- 3794
+newline$ -- 199
+num.names$ -- 65
+pop$ -- 4009
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 350
+skip$ -- 412
 stack$ -- 0
-substring$ -- 404
-swap$ -- 7678
-text.length$ -- 20
+substring$ -- 486
+swap$ -- 7818
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 85
-width$ -- 59
-write$ -- 467
-(There were 9 warnings)
+warning$ -- 5
+while$ -- 99
+width$ -- 67
+write$ -- 527
+(There were 11 warnings)

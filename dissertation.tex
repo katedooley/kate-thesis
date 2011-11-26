@@ -7,13 +7,8 @@
 \include{packages}
 \include{extraparameters}
 
-%\usepackage{graphicx}
 %\usepackage{booktabs}
 %\usepackage{multirow}
-%\usepackage{amsmath}
-
-% This is for section numbers in equations. Remove it if it's already in the (inactive?) style file
-%\numberwithin{equation}{section}
 
 % Prevent figures, tables or algorithms from using a separate page or column alone
 \renewcommand{\topfraction}{0.85}
@@ -22,7 +17,6 @@
 
 
 \include{userinfo}
-
 \include{usersetcommands}
 
 \begin{document}
@@ -35,7 +29,8 @@
 \include{TOC}
 \include{abbreviations}
 
-\addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}% This extra line adds the word CHAPTER to the table of contents %
+\addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}
+% This extra line adds the word CHAPTER to the table of contents %
 \phantomsection
 
 \include{abstract}

@@ -9,8 +9,8 @@
 % why control filters implemented in the eigenbasis of radiation
 % pressure torques is best. 
 
-The meat of the Enhanced LIGO ASC upgrade was to switch the control
-servo from the sensor basis to the natural radiation pressure
+The primary aspect of the Enhanced LIGO ASC upgrade was to switch the
+control servo from the sensor basis to the natural radiation pressure
 eigenmode basis, and to keep the contamination to DARM at a minimum. I
 present in this chapter the design of the new basis and measurements I
 made to characterize it and its effect on DARM.
@@ -58,7 +58,7 @@ be misleading because of the similarity to the sensor names (WFS1Q,
 WFS2I, WFS2Q, WFS3I, and WFS4I), potentially leading one to assume a
 one-to-one correspondence. For clarity in this dissertation, I refer
 to the WFS control signals by the radiation pressure eigenbasis
-degrees of freedom they represent: 
+degrees of freedom (DOFs) they represent: 
 \begin{itemize}
 \item differential soft (dSoft) \\
 \item common soft (cSoft) \\
@@ -66,15 +66,16 @@ degrees of freedom they represent:
 \item common hard (cHard) \\
 \item recycling mirror (RM)
 \end{itemize}
-Because each mode (for both pitch and yaw) has two possible
-directions, differential and common refer to the comparison of the
-sign of the mode in each arm.
+Because each mode (for both pitch and yaw) has two possible directions
+of rotation with respect to the beam, differential and common refer to
+the comparison of the sign of the mode in each arm.
 
 %\textcolor{blue}{make block figure!}
 
 
 
 \subsection{WFS Input Matrix}
+\label{sec:inputmatrix}
 The optical gain for each of the optics' motions is not concentrated
 at any one particular port, although it can appear more strongly in
 one location compared to another. In order to make use of as much of
@@ -98,29 +99,31 @@ A key aspect of the measurement is that a notch filter at frequency
 $f$ is engaged so the control servo does not suppress our excitation.
 
 An example calibrated sensing matrix in the radiation pressure
-eigenbasis as taken during a 10~W lock 
-% April 14, 2010 
-is shown in Table \ref{table:sensing}. Rows represent excitation and
-columns are the wavefront sensors.  Before inverting to create the
-input matrix, the smallest of the elements (which are more or less
-equivalent to the elements for which optical gain is also expected to
-be weak), are artificially set to zero. This avoids the contamination
-of strong signals by those with weak signal-to-noise ratios. The
-elements that remain after this process are highlighted by boxes. Note
-that the sensing matrix is in fact composed of two sub-matrices: one
-for the differential degrees of freedom, and one for the common
-degrees of freedom. Also, WFS1Q has particularly strong signal
-compared to the other wavefront sensors. We see in
+eigenbasis as taken during a 10~W lock is shown in
+Table~\ref{table:sensing}.\footnote{Refer to Appendix
+  \ref{sec:cal_sensing} and \ref{sec:cal_opticalgain} for a
+  description of how the calibration is done.} Rows represent
+excitation and columns are the wavefront sensors. Before inverting to
+create the input matrix, the smallest of the elements (which are more
+or less equivalent to the elements for which optical gain is also
+expected to be weak), are artificially set to zero. This avoids the
+contamination of strong signals by those with weak signal-to-noise
+ratios. The elements that remain after this process are highlighted by
+boxes. Note that the sensing matrix is in fact composed of two
+sub-matrices: one for the differential degrees of freedom, and one for
+the common degrees of freedom. Also, WFS1Q has particularly strong
+signal compared to the other wavefront sensors. We see in
 Section~\ref{sec:WFSolgs} that this allows us to provide much more
 control to the differential soft mode compared to the other modes.
 
 \begin{table}
 \centering
-\caption[WFS optical gain matrix]{Optical gain at 9.7~Hz in units of
+\caption[WFS optical gain matrix]{Angular optical gain at 9.7~Hz in units of
   Volts per degree of freedom microradian (pitch). Numbers in
   \textcolor{gray}{gray} are the measurement results that have
   coherences less than 0.9. Boxes highlight the elements actually used
   in the control system. All other elements are set to zero.}
+% April 14, 2010
 \begin{tabular}{l l l l l l}
 \hline
 WFS1Q & WFS2Q & WFS2I & WFS3I & WFS4I &  \\
@@ -164,10 +167,10 @@ WFS1Q & WFS2Q & WFS2I & WFS3I & WFS4I &  \\
 The WFS output matrix determines how to convert the radiation pressure
 eigenbasis control signals into individual mirror control signals. It
 is the basis transformation matrix, $S$, as defined in
-Eq. \ref{eq:S}. The matrix is arbitrarily normalized so the largest
+Eq.~\ref{eq:S}. The matrix is arbitrarily normalized so the largest
 element is $1$, and it is repeated with appropriate sign changes to
 form differential and common soft and hard modes of the two arms. The
-output matrix is shown in Table \ref{table:output}, where the $r$ is
+output matrix is shown in Table~\ref{table:output}, where the $r$ is
 0.91 for Livingston and 0.87 for Hanford. 
 
 \begin{table}
@@ -189,58 +192,79 @@ r & -1 & r & -1 & 0 & ITMX\\
 \end{table}
 
 
+
 \subsection{Diagonalizing the WFS Drive Matrix}
 \label{sec:mirrorgains}
-%\textcolor{blue}{fix this} 
-During the sensing matrix measurement, the optical levers provide a
-record of the motion of the test masses. I combined the
-optical lever responses (via the output matrix, Table~\ref{table:output})
-to determine the amplitude of each radiation pressure degree of freedom's
-movement. The actual numbers for the measurement data presented in
-Table~\ref{table:sensing} are found in Table~\ref{table:excitations_calibrated}.
+The mirror gain matrix (introduced in Fig.~\ref{fig:ASCcontrolservo})
+is a diagonal matrix that modifies the amplitude of the control signal
+to each optic by some factor close to unity. It corrects for
+experimentally measured deviations from the theoretical output
+matrix. The purpose of the mirror gain matrix, $\mathbf{M}$, is to
+ensure that when a particular WFS is driven, only its DOF is
+excited. We call the matrix of observed DOF motions per WFS excitation
+the drive matrix, $\mathbf{D}$.
 
-This matrix tells the extent to which the ASC control matrix excites
-the degree of freedom it is designed to excite. Columns are
+The mirror gain matrix is what we tune to make the drive matrix
+diagonal. The drive matrix can be represented as:
+\begin{equation}
+\mathbf{D} = \mathbf{U M C}.
+\end{equation}
+A WFS control signal is multiplied first by the output (control)
+matrix, $\mathbf{C}$, then by the mirror gains, and then put into
+hardware with an unknown transfer function, $\mathbf{U}$, to create a
+physical torque on the mirrors. To make $\mathbf{D}$ diagonal, we
+start with $\mathbf{M}=\mathbf{1}$, experimentally construct the drive
+matrix, and calculate the new mirror gain matrix,
+$\mathbf{M_{\mathrm{new}}}$, which must have the property:
+\begin{equation}
+\mathbf{M_{\mathrm{new}}} = \mathbf{U^{-1}} \mathbf{C^{-1}} = \mathbf{M C D^{-1} C^{-1}}.
+\end{equation}
+Note that the set of unknown transfer functions $\mathbf{U}$ is
+eliminated.
+
+I measured $\mathbf{D}$ by recording the demodulated optical lever
+error signals during the sensing matrix measurement (refer to
+Sec.~\ref{sec:inputmatrix}). Because the optical levers provide a
+record of the motion of the test masses, combining their calibrated
+responses via the output matrix (Table~\ref{table:output}) allows one
+to convert the individual mirror motions during each DOF excitation to
+motions in the radiation pressure DOF basis. \footnote{The optical
+  lever calibration procedure and measurement results are found in
+  Appendix~\ref{sec:oplevcal}.}
+
+The mirror gain matrix is shown in Table~\ref{table:mirrorgains}. The
+30\% difference with the model is a result of uncertainty in the
+cavity geometry. The resulting drive matrix, corresponding to the same
+measurement time as the sensing matrix of Table~\ref{table:sensing},
+is presented in Table~\ref{table:excitations_calibrated}. Columns are
 excitations and rows are the pitch motions at 9.7~Hz in units of
-\microrad. Ideally, this would be a diagonal matrix and it is up to at
-most a factor of two. I had to calculate modifications to the output
-matrix in order to achieve the eigenbasis motion matrix as diagonal as
-this one. The modifications take the form of gains to the mirror
-drives and are shown in Table~\ref{table:mirrorgains}. The 30\%
-difference with the model is a result of uncertainty in the cavity
-$g$-factors.
-
-
-% This now allows us to complete the
-% first part of obtaining an optical gain matrix. Each row of the
-% sensing matrix should be divided by the amplitude of that dof's
-% excitation, the diagonal elements of Table
-% \ref{table:excitations_calibrated}. The result of doing so gives the
-% angular optical gain of the interferometer in terms of WFS digital
-% counts per radian.
-
-
-%\textcolor{blue}{write out the rest of this section}
-% D = 'drive' = DOF excitation to DOF excited matrix (theta\_dof)
-% U = 'unknown' = hardware mostly; coils, etc.
-% M = 'mirror' = mirror gains; a diagonal matrix
-% C = 'control' = ASC output matrix
-
-% We have D = U*M*C. A drive is multiplied first by the output matrix (C),
-% then by the mirror gains (M), then put into hardware (U) to create what's
-% actually excited.
-
-% To make D diagonal, we want to find a new M, M\_new, which must have the
-% property M\_new = inv(U)*inv(C) = M*C*inv(D)*inv(C)
-
-
+\microrad. The absolute amplitude of DOF motions for each excitation
+is not of significance; only the amplitudes in each column should be
+compared. Ideally, this drive matrix should be diagonal and it is up
+to at most a factor of two.
 
 \begin{table}
 \centering
-\caption[Actual eigenbasis motion during sensing matrix excitations]{Actual eigenbasis motion during sensing matrix excitations as
-  witnessed by the optical levers. Columns are excitations and rows are
-  the pitch motions at 9.7~Hz in units of \microrad. Ideally, this
-  would be a diagonal matrix. It mostly is.}
+\caption[Mirror gains for diagonalization of drive matrix]{Mirror
+  gains for diagonalization of drive matrix.} 
+\begin{tabular}{l l l l l l}
+\hline
+ETMX & ETMY & ITMX & ITMY & RM & \\
+\hline
+1.33 & 1.38 & 0.96 & 0.87 & 1.0 \\
+\hline
+\end{tabular}
+\label{table:mirrorgains}
+\end{table}
+
+\begin{table}
+\centering
+\caption[Actual eigenbasis motion during sensing matrix
+excitations]{Actual eigenbasis motion during sensing matrix
+  excitations as witnessed by the optical levers. Columns are
+  excitations and rows are the pitch motions at 9.7~Hz in units of
+  \microrad. The mirror gains are selected to make this matrix as
+  diagonal as possible.} 
 \begin{tabular}{r@{.}l r@{.}l r@{.}l r@{.}l r@{.}l l}
 \hline
 \multicolumn{2}{l}{dSoft} & \multicolumn{2}{l}{dHard}  & \multicolumn{2}{l}{cSoft} & \multicolumn{2}{l}{cHard} & \multicolumn{2}{l}{RM} & \\
@@ -256,33 +280,18 @@ $g$-factors.
 \end{table}
 
 
-\begin{table}
-\centering
-\caption[Mirror gains for diagonalization of drive matrix]{Mirror
-  gains for diagonalization of drive matrix.} 
-\begin{tabular}{l l l l l l}
-\hline
-ETMX & ETMY & ITMX & ITMY & RM & \\
-\hline
-1.33 & 1.38 & 0.96 & 0.87 & 1.0 \\
-% 1.33 & 0 & 0 & 0 & 0 & ETMX\\
-% 0 & 1.38 & 0 & 0 & 0 & ETMY \\
-% 0 & 0 & 0.96 & 0 & 0 & ITMX\\
-% 0 & 0 & 0 & 0.87 & 0 & ITMY\\
-%  0 & 0 & 0 & 0 & 1 & RM\\
-\hline
-\end{tabular}
-\label{table:mirrorgains}
-\end{table}
+% This now allows us to complete the
+% first part of obtaining an optical gain matrix. Each row of the
+% sensing matrix should be divided by the amplitude of that dof's
+% excitation, the diagonal elements of Table
+% \ref{table:excitations_calibrated}. The result of doing so gives the
+% angular optical gain of the interferometer in terms of WFS digital
+% counts per radian.
 
 
 
 
 \section{Sensing Matrix Stability}
-%\textcolor{blue}{Show how the sensing matrix changes in time (APS presentation).}
-%sensing matrix stability over time, with power;
-%just how diagonal is the system?
-
 As the interferometer conditions change, so does the sensing
 matrix. The inverse of the sensing matrix, the input matrix, is
 hardcoded in the digital control servo and not actively
@@ -398,18 +407,6 @@ increases by about 20\%.
 \end{centering}
 \end{figure}
 
-It is possible for the extra mirror motion to result from gain peaking
-of the WFS servos. However, a plot of the WFS error signals during the
-time of nominal gain and high gain shows that there is not, in fact,
-any evidence of gain peaking. The common WFS spectra in
-Figure \ref{fig:WFS_inputbeam} do not show any extra noise when their
-gains are higher. It is worth noting that the higher gain is evident
-in the common WFS spectra by the extra suppression seen below
-1~Hz. Also, the differential WFS spectra are unchanged, as
-expected. It can therefore be concluded with reasonable certainty that
-the increase in test mass motion between 1 and 2~Hz during this test
-is indeed due to the WFS impressing input beam motion on the mirrors.
-
 \begin{figure}
 \begin{centering}
 \subfigure{\includegraphics[width=0.5\textwidth]{figures/testWFS1_highnom.pdf}}\subfigure{\includegraphics[width=0.5\textwidth]{figures/WFS2A_highnom.pdf}}
@@ -429,6 +426,18 @@ $2.5\times$ higher than nominal]{Comparison of WFS error signals (the
 \label{fig:WFS_inputbeam}
 \end{centering}
 \end{figure}
+
+It is possible for the extra mirror motion to result from gain peaking
+of the WFS servos. However, a plot of the WFS error signals during the
+time of nominal gain and high gain shows that there is not, in fact,
+any evidence of gain peaking. The common WFS spectra in
+Figure \ref{fig:WFS_inputbeam} do not show any extra noise when their
+gains are higher. It is worth noting that the higher gain is evident
+in the common WFS spectra by the extra suppression seen below
+1~Hz. Also, the differential WFS spectra are unchanged, as
+expected. It can therefore be concluded with reasonable certainty that
+the increase in test mass motion between 1 and 2~Hz during this test
+is indeed due to the WFS impressing input beam motion on the mirrors.
 
 
 % A more quantitative study of the effects of input beam motion is to
@@ -531,14 +540,6 @@ z(2+\delta)/\delta & z(2-\delta)/\delta \\
 \theta_{ITM} \end{array} \right\rrbracket.
 \end{equation}
 
-Figure \ref{fig:prc_power} plots the power in the PRC as a function of
-$\theta_{RM}$ for several values of $\delta$, demonstrating
-the sensitivity of the PRC to the ITM heating.  For example, the
-typical RM angular displacement of $10^{-7}$ rad results in a 66\%
-power loss when the PRC $g$-factor is very near instability with a
-value of $1-0.0001$. Only as the $g$-factor moves further from $1$
-does the angular motion of the RM have less and less of an effect on
-the power build-up.
 
 \begin{figure}
 \begin{centering}
@@ -552,6 +553,16 @@ $g$-factor and mirror angle]{Dependence of power build-up in the power
 \label{fig:prc_power}
 \end{centering}
 \end{figure}
+
+Figure \ref{fig:prc_power} plots the power in the PRC as a function of
+$\theta_{RM}$ for several values of $\delta$, demonstrating
+the sensitivity of the PRC to the ITM heating.  For example, the
+typical RM angular displacement of $10^{-7}$ rad results in a 66\%
+power loss when the PRC $g$-factor is very near instability with a
+value of $1-0.0001$. Only as the $g$-factor moves further from $1$
+does the angular motion of the RM have less and less of an effect on
+the power build-up.
+
 
 
 
@@ -587,13 +598,6 @@ demodulated signals for a particular excitation $f$ by $(f/9.7)^2$. I
 also normalized the response by the phase of the mirror's motion as
 witnessed by the optical levers.
 
-The results are shown in Figure \ref{fig:WFStrack}, and include a plot
-of how NSPOB changed over time. As expected, WFS1Q, WFS2I, and WFS2Q
-show dependence on the PRC power, and therefore the $g$-factor. The
-WFS3 and WFS4 sensing elements are flat. Fitting lines to each of the
-tracked elements, we find a good fit with the expected power of $1/2$
-dependence. 
-
 \begin{figure}
 \begin{centering}
 \subfigure{\includegraphics{figures/trackSPOB.pdf}}\subfigure{\includegraphics{figures/trackWFS1Q.pdf}}
@@ -611,6 +615,13 @@ recycling cavity geometry]{WFS optical response to test mass motion as
 \label{fig:WFStrack}
 \end{centering}
 \end{figure}
+
+The results are shown in Figure \ref{fig:WFStrack}, and include a plot
+of how NSPOB changed over time. As expected, WFS1Q, WFS2I, and WFS2Q
+show dependence on the PRC power, and therefore the $g$-factor. The
+WFS3 and WFS4 sensing elements are flat. Fitting lines to each of the
+tracked elements, we find a good fit with the expected power of $1/2$
+dependence. 
 
 
 
@@ -661,7 +672,7 @@ the sensing matrix measurement (Table~\ref{table:sensing}), that is
 the mode for which we provide the strongest suppression. However, it
 is also conditionally stable (due to a pole at zero that is engaged
 after the servo is turned on), as seen by the phase dropping below
-$-180^{\circ}$ at two frequencies. The unity gain frequency must be
+$-180^{\circ}$ at two frequencies. The unity gain frequency (UGF) must be
 held between roughly 2~Hz and 10~Hz. As shown here, the dSoft UGF is
 at 5~Hz. For the other degrees of freedom, the UGFs are all between
 0.8 and 1~Hz. Each loop has a phase margin of $30^{\circ}$ to
@@ -669,7 +680,6 @@ $40^{\circ}$.
 
 \begin{figure}
 \begin{centering}
-%\includegraphics[width=0.8\columnwidth]{figures/olgs6W.pdf}
 \subfigure{\includegraphics[width=1.0\columnwidth]{figures/allolgs_6W_mags.pdf}}
 \subfigure{\includegraphics[width=1.0\columnwidth]{figures/allolgs_6W_phases.pdf}}
 \caption{Open loop gains (pitch) of the 5 WFS loops as measured with 6 W
@@ -705,8 +715,9 @@ $40^{\circ}$.
 \section{Residual Angular Motion}
 The residual beam spot motion on the test masses is shown in
 Figure~\ref{fig:bsm}. We see the rms beam spot motion on the ETMs is
-1~mm and on the ITMs it is 0.8~mm. This meets the requirements of
-Section~\ref{sec:tolerance}.
+1~mm and on the ITMs it is 0.8~mm which meets the requirements of
+Section~\ref{sec:tolerance}. The beam spot motion calibration method
+and results are presented in Appendix~\ref{sec:bsmcal}.
 
 \begin{figure}
 \begin{centering}
@@ -778,7 +789,6 @@ or hard mode motion in one arm, the maximum cavity tilt and
 displacement are 0.12~\micro rad and 1.02~mm, respectively, as found
 in Table~\ref{table:cav_geometric}.
 
-
 Figure~\ref{fig:mirror_onoff} shows the same data as
 Figure~\ref{fig:ASConoff} except in the mirror basis instead of the
 radiation pressure eigenmode basis. The ASC on/off comparison of
@@ -806,45 +816,67 @@ to each other, not with respect to the ground.
 
 
 
-% \begin{figure}
-% \begin{centering}
-% \includegraphics[width=1.0\columnwidth]{figures/timeseries_ifolocked.pdf}
-% \caption[Striptool example]{Time series of interferometer signals
-%   showing a typical lock loss and re-lock followed by an increase of
-%   power to 14~W.} 
-% % (From July 23, 2009 elog.) \textcolor{blue}{work this in somewhere.}}
-% \label{fig:striptool}
-% \end{centering}
-% \end{figure}
-
-
-
-
 \section{ASC to DARM Noise Budget}
-One of the most important figures of merit of ASC performance is how
-much noise the ASC contributes to DARM. We measure the coupling of the
-ASC to DARM by injecting broadband noise between 40 and 110 Hz in each
-of the suspension angular excitation
-points\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_EXC}} and recording
-both the suspension angular control
-signal\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_OUT}} and
-DARM. Signals from a time without excitation are subtracted from those
-with the excitation, resulting in the contribution to each spectra due
-just to noise. Dividing the noisy DARM spectrum by the noisy
-suspension control spectrum provides the transfer function we use to
-multiply by a suspension signal at any time.
+One of the most important figures of merit for the ASC is how much
+noise it contributes to DARM. As introduced in
+Section~\ref{sec:tolerance}, the combination of beam spot motion on
+the mirror together with the angular motion of the mirror creates an
+angle to length (A2L) coupling. As long as the length displacement due
+to this coupling is well below the desired displacement sensitivity,
+the ASC has done a good enough job. However, being of the most
+complex of interferometer systems, the ASC does in fact limit the
+strain sensitivity.
 
-% \begin{figure}
-% \begin{centering}
-% \includegraphics[width=1.0\columnwidth]{figures/ASC2DARM_TFs.pdf}
-% \caption[Measured ASC to DARM transfer functions]{ASC to DARM transfer
-%   function for four of the five wavefront sensor loops. The RM to DARM
-%   transfer function could not be measured because the contribution is
-%   so small. The fitted curves can be multiplied by the WFS error
-%   signals at any time to calculate the ASC noise contribution to
-%   DARM. \textcolor{blue}{Need to turn cts into radians.}}
-% \end{centering}
-% \end{figure}
+To measure the coupling, a broadband noise injection rather than a
+typical swept-sine injection is necessary because of the non-linearity of the
+A2L process (in particular, it is the convolution of the beam spot and
+mirror angle spectra). In addition, for the measurement itself to be
+linear, the amplitude of the noise injection must be only large enough
+for an effect to be observed; it must not overwhelmingly
+dominate. Therefore, for both DARM and the appropriate ASC channel, I
+subtracted quadratically a quiet, no-noise spectrum, $q$, taken
+immediately prior to the measurement from the spectrum with noise,
+$n$, so as to not assume that the entirety of the observed effect is
+due to the excitation:
+\begin{equation}
+N = \sqrt{n^2 - q^2}.
+\end{equation}
+The transfer function from the ASC to DARM is then:
+\begin{equation}
+\mathrm{ASC} \rightarrow \mathrm{DARM} = \frac{N_{\mathrm{DARM}}}{N_{\mathrm{ASC}}}
+\end{equation}
+which can be multiplied by an ASC signal at any time to determine a
+noise budget.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1.0\columnwidth]{figures/ASC2DARM_TFs.pdf}
+\caption[WFS to DARM transfer functions]{ASC to DARM transfer
+  function for four of the five wavefront sensor loops. The RM to DARM
+  transfer function could not be measured because the contribution is
+  too small. The fitted curves can be multiplied by the WFS error
+  signals at any time to calculate the ASC noise contribution to
+  DARM.}
+\label{fig:asc2darmTF}
+\end{centering}
+\end{figure}
+
+There are two places in the ASC loop from where I made transfer
+function measurements by putting in a 40 to 110~Hz broadband
+excitation: the suspension angular control
+point,\footnote{i.e. \texttt{L1:SUS-ETMX\_ASCPIT\_EXC}} and the WFS
+error point.\footnote{i.e. \texttt{L1:ASC-WFS1\_PIT\_EXC}} Each
+provides ultimately the same information, but allows the ASC noises to
+be broken down in different bases. The view using the WFS (radiation
+pressure eigenmode) basis is useful for commissioning purposes,
+whereas the optic basis is better suited for including the ASC noise
+in full interferometer noise budget plots. The primary reasons are
+that the suspension control channel is recorded to disk and it also
+serves as the transfer function for the optical lever noise to DARM.
+Figure~\ref{fig:asc2darmTF} shows the set of WFS to DARM measured
+transfer functions, as an example. The units are DARM meters per WFS
+error point digital counts, so that the digital WFS error signal may
+be multiplied by the transfer function at any time.
 
 \begin{figure}
 \begin{centering}
@@ -860,20 +892,11 @@ multiply by a suspension signal at any time.
 \begin{centering}
 \subfigure[]{\includegraphics{figures/WFSpittoDARM.pdf}}
 \subfigure[]{\includegraphics{figures/WFSyawtoDARM.pdf}}
-\caption[Wavefront sensor to DARM noise budget]{Wavefront sensor to
+\caption[WFS to DARM noise budget]{Wavefront sensor to
   DARM noise budget during a 14~W lock. A) Pitch. B) Yaw.} % (July 17, 2009).}
 \label{fig:wfs2DARM}
 \end{centering}
 \end{figure}
-
-We also repeated the transfer function measurement with excitations
-and readback not at the suspension angular control point, but at the
-WFS error points. This allows us to view the breakdown of noise
-contributions in the WFS (radiation pressure eigenmode) basis rather
-than the optic basis. The view using the WFS basis is useful for
-commissioning purposes, whereas the optic basis is better suited for
-including ASC noise in full interferometer noise budget plots. The
-primary reason is that suspension control channel is recorded to disk.
 
 The noise budget for both pitch and yaw at a time when the
 interferometer was locked with 14~W input power is shown in
@@ -883,9 +906,10 @@ to DARM is the same within about a factor of two, except for the RM,
 which is not included in these plots. We were not able to measure the
 transfer function for RM motion to DARM because so large of an
 excitation was required to see an effect that the interferometer would
-lose lock. This is thus an indication that the RM's contribution to
-DARM is insignificant. In the WFS basis, the soft modes contribute
-more to DARM than the hard modes.
+lose lock. I proved this indication that the RM's contribution to DARM
+is indeed insignificant by observing no change in DARM upon turning
+off the WFS4 cut-off filters. In the WFS basis, the soft modes
+contribute more to DARM than the hard modes.
 
 Because two different angular control signals, the WFS and the optical
 levers, independently contribute to the suspension angular control, we
@@ -910,7 +934,7 @@ a 16 W lock at night]{Total WFS and optical lever noise contribution
 \end{figure}
 
 The important message is that the angular sensing and control is, in
-fact, a limiting noise source for frequencies between 20~Hz and
+fact, a limiting noise source for frequencies between 20 and
 55~Hz. The ASC becomes less and less of a primary noise source as
 frequency increases, and by 100~Hz the ASC noise floor is a factor of
 10 below DARM. The specific structure of the noise contributions,
@@ -1009,12 +1033,13 @@ necessary for high power operation, a key challenge for aLIGO.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/ascservo_measurement.pdf}
+%\includegraphics[width=1.0\textwidth]{figures/ascservo_measurement.pdf}
+\includegraphics{figures/RPmeasurement_thesis.pdf}
 \caption[Demonstration of radiation pressure eigenbasis torque to
-  angle transfer function measurement]{Demonstration of radiation pressure eigenbasis torque to
-  angle transfer function measurement. Through a proper choice of measurement
-  locations within the ASC servo, the plant's transfer function can be
-  singled out.}
+angle transfer function measurement]{Demonstration of radiation
+  pressure eigenbasis torque to angle transfer function
+  measurement. Through a proper choice of measurement locations within
+  the ASC servo, the plant's transfer function can be singled out.}
 \label{fig:RPTFmeasurement}
 \end{centering}
 \end{figure}
@@ -1072,340 +1097,13 @@ These measurements show a clear confirmation of the Sidles-Sigg theory
 and demonstrate a successful power-independent diagonalization of the
 sensing and control of the optomechanical system.
 
-% \section{Summary}
-% \textcolor{blue}{from Guido: add another summary here that ASC in
-%   neither base was limiting us but that the experience gained for
-%   aLIGO is priceless. Some catch phrase that highlights a particular
-%   lesson learned would be good}
 
 
-
-
-
-
-
-
-% \section{Calibrations}
-% Because the data is collected digitally, the units are in digital
-% counts. This must be converted into physical units in order to
-% facilitate comparison to models and to make meaningful statements. The
-% typical method of calibrating a digital channel is to inject a signal
-% of known amplitude into the system and take the ratio with the
-% amplitude of the digital measurement of the signal. Two ways of
-% determining the physical amplitude of the injected signal are
-% \textcolor{blue}{(see if I can classify calibration methods)}
-% \begin{itemize}
-% \item 
-% \item 
-% \end{itemize}
-% I describe in this section the calibrations I made of some of the
-% angular sensing channels, all the while demonstrating particular
-% examples of these methods.
-
-
-% \subsection{Beam Spot Motion}
-% A quantity of interest is how much the beam moves on the ITMs and
-% ETMs. It is this beam spot motion which, together with the mirror
-% angular motion, creates a length signal that contributes noise to
-% DARM. An elegant way of following the motion of the beam on the test
-% masses is to track pickoffs of the light transmitted or reflected from
-% the mirrors. We have such signals naturally available for the ETMs and
-% ITMs from the QPDs which are otherwise used for ASC sensing. For
-% example, QPDX and QPDY see the light transmitted through each of the
-% ETMs and WFS2 sees the pickoff of light from the wedge of ITMX.
-
-% To calibrate the counts of the QPD and WFS2 pitch and yaw error
-% signals,\footnote{\texttt{L1:ASC-QPDY\_\{PIT,YAW\}\_IN1} and
-% \texttt{L1:ASC-WFS2\_DC\{Pitch, Yaw\}Mon}} I moved the beam a
-% known distance on the test mass, $\Delta x$, and recorded the
-% corresponding $\Delta y$ of the QPD and WFS2 readback. The ratio
-% $\Delta x /\Delta y$ is the calibration from counts to meters. The
-% details of the procedure are described below.
-
-
-% \subsubsection{Moving the beam} 
-% Moving the beam on the mirrors in a controlled fashion is
-% straightforward because of the ASC system. All that we need to do is
-% introduce an offset to the set point of the of the beam centering
-% aspect of the ASC servo. For the ETMs we put a DC offset in the
-% \texttt{L1:ASC-QPD\{X,Y\}\_\{PIT, YAW\}\_\{OFFSET\}} channel and for
-% the ITMs we changed the $X$ and $Y$ targets of the beam splitter beam
-% centering servo.
-
-% \subsubsection{Measuring how much the beam has moved} 
-% The more difficult task is measuring just how much the beam has
-% moved. For this, we make use of the lever arm mechanism of angle to
-% length coupling. \textcolor{blue}{(This should be explained in the
-%   previous chapter, so maybe just reference it.)} The idea is that
-% when the axis of rotation of a mirror coincides with the center of the
-% beam, any tilt of the mirror about this axis does not affect the path
-% length of the reflected beam. However, if there is a mismatch between
-% rotation axis and beam location, then the light will pick up a
-% longitudinal phase shift when the mirror is tilted. During a full
-% interferometer lock, this is recorded by DARM.
-
-% The concept of the measurement is to move the axis of rotation of the
-% mirror so that it passes through the center of the beam. We use the
-% OSEMs to change the location of the axis of rotation, and we use DARM
-% to determine when the axis is aligned with the beam center. For
-% example, if we drive the top two OSEMs more than the bottom two OSEMs,
-% we've created an axis of rotation that sits below the center of
-% mass. The result of such tuning is an effective rebalance of the
-% center of mass of the mirror so that it is aligned with the center of
-% the beam. The procedure is:
-% \begin{enumerate}
-% \item Shake the mirror at some frequency $f$ (we use
-% 39.5 Hz) during a full lock \vspace{-10pt}
-% \item Demodulate DARM at $f$ for several different sets of OSEM gains \vspace{-10pt}
-% \item Fit a quadratic to the demodulated data to pinpoint the OSEM gains that
-%   minimize the coupling to DARM
-% \end{enumerate}
-
-% \begin{figure}
-% \begin{centering}
-% \includegraphics[width=0.5\columnwidth]{figures/geometry_mirror_osems.pdf}
-% \caption[Diagram of mirror and OSEM geometry]{Geometry of OSEMs and
-%   mirror as used for calculating the location of the axis of rotation
-%   when the torques are unequal. \textcolor{blue}{Need latex in
-%     inkscape!}}
-% \label{fig:mirror_osem_geometry}
-% \end{centering}
-% \end{figure}
-
-% Relating the OSEM gains to absolute beam position on the mirror
-% requires only the geometry of the mirror and OSEM setup as sketched in
-% Figure \ref{fig:mirror_osem_geometry}. We estimate the OSEM locations as
-% being on the edge of the mirror such that the length $d$ of one side
-% of the square that they form is given by $d =\sqrt{2} R$, where $R =
-% 12.5$ cm is the radius of the mirror. Then, collapsing the four OSEMs
-% into a representative two at the centers of two opposite sides of the
-% square and assigning them gains of $1 + \alpha$ and $-(1-\alpha)$ for
-% a force $F$, we can evaluate where the pivot point $x$ is located by
-% setting the sum of the torques equal to zero:
-% \begin{equation}
-% F [1+\alpha] x = F [1-\alpha][d-x].
-% \end{equation}
-% Therefore, the beam location relative to center, $\Delta x$, is
-% \begin{equation}
-% \Delta x := \frac{d}{2} - x = \alpha \frac{d}{2},
-% \end{equation}
-% and for a change in a pitch or yaw coil gain, the change in beam
-% position, $\Delta x$, is:
-% \begin{equation}
-% |\Delta{x}| = \frac{|\Delta{\mbox{gain}}| R}{\sqrt{2}} .
-% \end{equation}
-
-% The final calibrations of these channels are shown in Table
-% \ref{table:bsmcal}. \footnote{A minor technicality is that because there
-%   are no filters between the QPD error signals and the offset channel,
-%   their units are exactly the same. Thus, calculating meters of beam
-%   spot motion as a function of offset serves to calibrate the error
-%   point. For convenience, this is what I did.}
-
-% \begin{table}
-% \centering
-% \caption[Beam spot motion calibrations]{Calibrations to be used with
-%  the QPDX, QPDY, and WFS2 DC pitch and yaw error signals for a
-%  measure of beam spot motion.} 
-% \begin{tabular}{l l l l}
-% \hline
-%          & ETMX & ETMY & ITMs \\
-% \hline
-% pitch & 1.03e-5 m/ct & 1.21e-5 m/ct & 5.52e-2 m/ct \\
-% yaw & 0.88e-5 m/ct & 0.80e-5 m/ct & 4.79e-2 m/ct \\
-% \hline
-% \end{tabular}
-% \label{table:bsmcal}
-% \end{table}
-
-
-
-% \subsection{Angular Mirror Motion}
-% The optical levers provide a straightforward measure of individual
-% mirror motion. The channels I calibrated were of the form
-% \texttt{L1:SUS-ETMX\_OPLEV\_\{P,Y\}ERROR}, the optical lever error
-% signals for each of the large optics. I made use of the dependence of
-% power in a misaligned cavity to calibrate the ETM and ITM optical
-% levers, and used a less precise, rudimentary method to calibrate the
-% RM, BS, and MMT3 optical levers.
-
-
-% \subsubsection{ETM and ITM optical levers} 
-% I calibrated the arm cavity optical levers by tracking the power loss
-% in the locked arm as one of its mirrors is tilted. The closed form
-% expression for cavity power as a function of mirror tilt is derived in
-% Appendix \ref{sec:cavitypower}. All that is needed is a quadratic fit
-% to the data collected. From the fit parameters, I can determine the
-% factor, $\Delta \theta / \Delta y$, which converts the digital counts
-% of the optical lever channel, $y$, to units of radians.
-
-% To make the measurement, I locked a single arm and maximized the power
-% build up. Then I slowly stepped the pitch or yaw pointing of one of
-% the mirrors away to one side of resonance, and then back and to the
-% other side, repeating this several times. All the while, I recorded
-% the optical lever error signal of the mirror whose angle I was
-% changing, and the power in the arm as determined from the amount of
-% light transmitted through the
-% ETMs.\footnote{\texttt{L1:LSC-NPTR\{X,Y\}\_OUT16}}
-
-% From Eq.~\ref{eq:pwr_disptilt}, we see that the power in the arm, $P$,
-% is a function of the form 
-% \begin{equation}
-% P = P_{max} \exp{[-b (y-y_0)^2]},
-% \label{eq:OLcalfit}
-% \end{equation}
-% where $y_0$ is the DC offset of the optical lever channel and $b$ is
-% related to physical cavity axis displacement $a$ and tilt $\alpha$ by
-% $by^2~=~(a/w_0)^2+(\alpha/\theta_0)^2$. In order to relate the optical
-% lever signal, $y$, to physical cavity parameters, we divide by
-% $\Delta{\theta}^2$ and rearrange to get:
-% \begin{equation}
-% \frac{\Delta \theta}{\Delta y} = \sqrt{b} \left[
-%   \left[\frac{\Delta a/\Delta\theta}{w_0}\right]^2 +
-%   \left[\frac{\Delta\alpha/\Delta\theta}{\theta_0}\right]^2
-% \right]^{-\frac{1}{2}} .
-% \end{equation}
-% The terms in the numerators on the right hand side are fixed constants
-% based on the cavity geometry and can be calculated using
-% Eq. \ref{eq:cavitydisptilt_mirrorangle}. The measurement data and fits
-% are shown for both pitch and yaw in Figure \ref{fig:OLcal}. The ETM
-% optical levers make use of a broader range of optical lever signal
-% than do the ITMs. (Also note that the maximum power in the y-arm is about
-% 10\% less than that in the x-arm. This is true at both Hanford and
-% Livingston, and is due to the priority given to the x-arm in the
-% alignment scheme, as explained in Appendix
-% \ref{sec:initial_alignment}.)
-
-% \begin{figure}
-% \begin{centering}
-% \subfigure{\includegraphics[width=0.5\columnwidth]{figures/olcal_pitch.pdf}}\subfigure{\includegraphics[width=0.5\columnwidth]{figures/olcal_yaw.pdf}}
-% %\includegraphics[width=1.0\columnwidth]{figures/oplevcal_pitch.pdf}
-% \caption[Optical lever calibration data.]{Optical lever calibration data and
-%   fits to Eq. \ref{eq:OLcalfit}.}
-% \label{fig:OLcal}
-% \end{centering}
-% \end{figure}
-
-
-% \subsubsection{RM, BS, and MMT3 optical levers}
-% To calibrate the RM, BS and MMT3 optical levers, I used my own eyes
-% and the camera images and known dimensions of the ETM beam cages. With
-% the interferometer unlocked, I moved the optics in pitch and yaw,
-% tracking the beam's movement on the ETM cages. In order to calibrate
-% the RM, I used the reflection off ITMY to the RM and onto the ETMY
-% cage. The BS and MMT3 required only straight shots to the ETMs. For
-% yaw, I moved the mirrors until the beam was centered on each vertical
-% suspension post, and for pitch I moved the beam from the center of the
-% mirror to the top of the cage. The beam moves by $x = 2\theta$ on
-% across the cage when the mirror moves by $\theta$, so with small angle
-% approximations, the mirror angle is simply $x/2L$ where $L$ is the
-% distance from mirror to ETM cage.
-
-% The final $\Delta\theta / \Delta x$ calibrations of all optical levers
-% are in Table \ref{table:oplevcal}. 
-
-% \begin{table}
-% \centering
-% \caption[Optical lever calibrations]{Calibrations to be used
-%   with the optical lever error signals 
-%   for a measure of angular mirror motion. Units are \microrad/ct.}
-% \begin{tabular}{l l l l l l l l}
-% \hline
-%         & ETMX & ETMY & ITMX & ITMY & RM & BS & MMT3 \\
-% \hline
-% pitch & 49.4 & 43.0 & 14.9 & 15.6 & 61.9 & 47.3 & 57.4 \\
-% yaw & 50.7 & 43.3 & 20.1 & 20.2 & 42.5 & 63.5 & 55.5 \\
-% \hline
-% \end{tabular}
-% \label{table:oplevcal}
-% \end{table}
-
-
-
-
-
-% \subsection{WFS Error Signals}
-% The WFS error signals (i.e. \texttt{L1:ASC-WFS1\_Q1}) are physically
-% Watts of power at the detectors, which the WFS electronics convert
-% into a voltage. To turn WFS counts into voltage of signal at the
-% output of the detector, we must backtrack through the electronics and
-% calibrate the WFS demodulation chain.
-
-% % The WFS error signals (i.e. \texttt{L1:ASC-WFS1\_Q1}) are physically
-% % Watts of power at the detectors. Converting the error signal in
-% % digital counts to Watts requires working backwards through the
-% % electronics, and can be divided into two parts. First, we must
-% % calibrate the WFS demodulation chain to backtrack WFS counts into
-% % voltage of signal at the input to the mixer. Second, we must convert
-% % voltage at the mixer into Watts at the sensor based on properties of
-% % the photodetector RF electronics. \textcolor{blue}{For now, it
-% %   suffices to calibrate the signal in Volts.}
-
-% %\subsubsection{Counts to Volts} 
-% The analog to digital RF chain for the WFS includes a demodulation
-% board, a whitening board, an anti-alias board, and the ADC. This chain
-% can be calibrated by injecting a sine wave of the same frequency as a
-% typical WFS signal, yet of known voltage into the WFS demodulation
-% board. Comparing the peak to peak voltage of this input sine wave to
-% the peak to peak amplitude of the resulting digital counts signal
-% provides the Volts per count conversion. The calibrations are
-% presented in Table \ref{table:demodcal}.
-
-% \begin{table}
-% \centering
-% \caption[Demodulation chain calibration for each quadrant of each
-%  WFS]{Demodulation chain calibration for each quadrant of each
-%  WFS. Units are \micro V/count.}
-% \begin{tabular}{l l l l l l}
-% \hline
-%  & q1 & q2 & q3 & q4 & average \\
-% \hline
-%  WFS1  & 0.35 &   0.32 &   0.34 &   0.35 & 0.34 \\
-%  WFS2  & 8.8 &   8.6 &   8.7  &  8.5 & 8.7       \\
-%  WFS3  & 6.4 &   5.8 &   5.8 &   5.7 & 5.9     \\
-%  WFS4  & 6.3 &   5.4 &   5.3  &  7.4 & 6.1    \\
-% \hline
-% \end{tabular}
-% \label{table:demodcal}
-% \end{table}
-
-% It should be noted that the demodulation chain calibration numbers for
-% all quadrants of a particular WFS differ no more than 20\% from the
-% average. The demodulation chain does not significantly distort the
-% error signals.
-
-
-% % \subsubsection{Volts to Watts}
-% % The voltage created per Watt of signal on the WFS is determined by the
-% % responsivity (Amps/Watt) and transimpedance (Volts/Amp) of the
-% % diode. A model of the 25~MHz WFS transimpedance is shown in
-% % Figure \ref{fig:wfs25MHzTF}, indicating a magnitude of 90~dB at
-% % 25~MHz. The responsivity is found in Section \ref{sec:pds}. It is
-% % 0.86~A/W. 
-
-% % The final WFS calibration numbers are found in Table \ref{tab:WFScal}.
-
-% % \begin{figure}
-% % \begin{centering}
-% % \includegraphics[width=1.0\textwidth]{figures/wfs25MHzTF.pdf}
-% % \caption{Transimpedance of the 25 MHz resonant RF WFS front end
-% %   electronics. The model was made using software called LISO.}
-% % \label{fig:wfs25MHzTF}
-% % \end{centering}
-% % \end{figure}
-
-% % \begin{table}
-% % \centering
-% % \caption[]{WFS error signal calibrations from digital counts to Watts.}
-% % \begin{tabular}{l l l l}
-% % \hline
-% % WFS1 & WFS2 & WFS3 & WFS4 \\
-% % \hline
-% % $3.9\times10^{-16}$ & $1.0\times10^{-14}$ & & \\
-% % \hline
-% % \end{tabular}
-% % \label{table:WFScal}
-% % \end{table}
+\section{Summary}
+\textcolor{blue}{add a summary here that ASC in
+  neither base was limiting us but that the experience gained for
+  aLIGO is priceless. Some catch phrase that highlights a particular
+  lesson learned would be good}
 
 
 

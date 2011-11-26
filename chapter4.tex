@@ -6,7 +6,7 @@ For light to resonate in the interferometer, the mirrors need to point at one an
 \item to suppress any motion that results from external disturbances \vspace{-10 pt}
 \item to counteract a high power static instability
 \end{itemize}
-There are 16 angular degrees of freedom that need to be sensed and controlled, making the ASC one of the most complex interferometer subsystems. This chapter presents the ASC design, and discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer. 
+There are 16 angular degrees of freedom (DOFs) that need to be sensed and controlled, making the ASC one of the most complex interferometer subsystems. This chapter presents the ASC design, and discusses the causes of mirror angular displacement and the effects of residual mirror motion on the interferometer.
 
 
 
@@ -298,7 +298,7 @@ This alignment process involving the WFS, QPDs, and BS camera relies on the enti
 When the interferometer is locked, the optical levers and the wavefront sensors provide simultaneous feedback to the mirror angles. The optical levers provide local damping, and the WFS maintain both the alignment of the power-recycled FPM with the input beam and the internal alignment of the power-recycled FPM. The study and characterization of the elements of this angular control system when the laser power is increased is the topic of the remainder of this chapter and the next. First, it is helpful to present an overview of the servo without the effects of radiation pressure.
 
 \begin{figure} \begin{centering} 
-\includegraphics{figures/ASCcontrolservo.pdf} 
+\includegraphics{figures/ASCcontrolservo_thesis.pdf} 
 \caption[ASC control servo]{ASC control servo, showing both the WFS and optical lever loops. The external torque, torsion pendulum, interferometer, and WFS are analog; all other blocks are digital. Mirror angles are converted by the interferometer into signals the wavefront sensors can detect. These WFS error signals are digitized, filtered, and converted into analog control signals for individual mirrors. The details of each of the digital blocks are explained in Chapter~\ref{ch:characterization}.}
 \label{fig:ASCcontrolservo}
 \end{centering}
@@ -310,7 +310,7 @@ Figure~\ref{fig:ASCcontrolservo} is a block diagram of the major components to t
 
 \subsection{The Wavefront Sensing Scheme}
 \label{sec:WFSsensing}
-The wavefront sensors provide the most sophisticated form of measuring angular motion of the mirrors. They are quadrant photodiodes equipped with RF electronics that rely on the Pound-Drever-Hall locking scheme to produce error signals \cite{Sigg1996Wavefront}. WFS are the angular equivalent of the single element PDs used for length sensing. Their frame of reference is the fundamental Gaussian mode of the interferometer cavities; angular misalignments of the cavities generate TEM$_{01}$ and TEM$_{10}$ spatial modes of the carrier light as explained in Ref.~\cite{Anderson1984Alignment} and derived in Appendix~\ref{sec:cavitypower}. The overlap of the higher order mode carrier field with a TEM$_{00}$ reference sideband field produces an excess of power on one half of the detector compared to the other when demodulated at the sideband frequency. This is the error signal. The sidebands 
+The wavefront sensors provide the most sophisticated form of measuring angular motion of the mirrors. They are quadrant photodiodes equipped with RF electronics that rely on the Pound--Drever--Hall locking scheme to produce error signals \cite{Sigg1996Wavefront}. WFS are the angular equivalent of the single element PDs used for length sensing. Their frame of reference is the fundamental Gaussian mode of the interferometer cavities; angular misalignments of the cavities generate TEM$_{01}$ and TEM$_{10}$ spatial modes of the carrier light as explained in Ref.~\cite{Anderson1984Alignment} and derived in Appendix~\ref{sec:cavitypower}. The overlap of the higher order mode carrier field with a TEM$_{00}$ reference sideband field produces an excess of power on one half of the detector compared to the other when demodulated at the sideband frequency. This is the error signal. The sidebands
 
 Reference \cite{Fritschel1998Alignment} contains a thorough description of the wavefront sensing scheme. In summary, the idea is that the WFS are located where optical gain, the amount of laser power produced at some interferometer port for a given physical change of some aspect of the interferometer, is high. The WFS optical gain in, particular, is determined by how much TEM$_{01}$/TEM$_{10}$ mode shows up at the locations of the WFS when a mirror (or specific combination of mirrors) moves in angle. One WFS is placed at the anti-symmetric port where differential-mode signals are transmitted, one is placed at a pick-off of the beam from the recycling cavity which contains common and differential information, and two are placed at the reflected port, where common-mode signals are transmitted. The precise locations are determined from the Gouy phases of the light and details are found in Ref.~\cite{Barsotti2009Modeling}.
 

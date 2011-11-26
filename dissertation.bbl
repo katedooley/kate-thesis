@@ -501,9 +501,24 @@ E.~Hirose, K.~Kawabe, D.~Sigg, R.~Adhikari, and P.~R. Saulson, Appl. Opt.
 L.~Barsotti and M.~Evans, \enquote{{Modeling of Alignment Sensing and Control
   for Enhanced LIGO}}, Tech. Rep. T080186, LIGO Laboratory (2009).
 
+\bibitem{Garfinkle2005Gauge}
+D.~Garfinkle, American Journal of Physics \textbf{74}, 196+ (2005).
+
 \bibitem{TobinThesis}
 T.~Fricke, \enquote{{DC Readout in Enhanced LIGO}}, Ph.D. thesis, Louisiana
   State University (2011).
+
+\bibitem{Saulson1990Thermal}
+P.~R. Saulson, Physical Review D \textbf{42}, 2437 (1990).
+
+\bibitem{KisselCalibrationPaper}
+J.~Abadie, B.~P. Abbott, R.~Abbott, M.~Abernathy, C.~Adams, R.~Adhikari,
+  P.~Ajith, B.~Allen, G.~Allen, and E.~Amador~Ceron, Nuclear Instruments and
+  Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors
+  and Associated Equipment \textbf{624}, 223 (2010).
+
+\bibitem{Black2001Introduction}
+E.~D. Black, American Journal of Physics \textbf{69}, 79 (2001).
 
 \bibitem{Camp1996InputOutput}
 J.~Camp, D.~Reitze, and D.~Tanner, \enquote{{Input/Output Optics Conceptual
@@ -516,10 +531,6 @@ J.~Camp, D.~Reitze, and D.~Tanner, \enquote{{Input Optics Design Requirements
 \bibitem{Fritschel2001Readout}
 P.~Fritschel, R.~Bork, G.~Gonz\'{a}lez, N.~Mavalvala, D.~Ouimette, H.~Rong,
   D.~Sigg, and M.~Zucker, Appl. Opt. \textbf{40}, 4988 (2001).
-
-\bibitem{Zucker2002H1}
-M.~Zucker, \enquote{{H1 Common-Mode Wavelength Control Overview}}, Tech. Rep.
-  T020113, LIGO Laboratory (2002).
 
 \bibitem{Adhikari1998Input}
 R.~Adhikari, A.~Bengston, Y.~Buchler, T.~Delker, D.~Reitze, Q.-z. Shu,
@@ -566,6 +577,9 @@ E.~Khazanov, N.~F. Andreev, A.~Mal'shakov, O.~Palashov, A.~K. Poteomkin,
 \bibitem{TheVIRGOCollaboration2008Invacuum}
 {The VIRGO Collaboration}, Appl. Opt. \textbf{47}, 5853 (2008).
 
+\bibitem{Barnes1992Variation}
+N.~P. Barnes and L.~B. Petway, J. Opt. Soc. Am. B \textbf{9}, 1912 (1992).
+
 \bibitem{Delker1997Design}
 T.~Delker, R.~Adhikari, S.~Yoshida, and D.~Reitze, \enquote{{Design
   Considerations for LIGO Mode-Matching Telescopes}}, Tech. Rep. T970143, LIGO
@@ -579,9 +593,16 @@ T.~Delker, R.~Adhikari, S.~Yoshida, and D.~Reitze, \enquote{{Design
 M.~Punturo, \enquote{{The mirror resonant modes method for measuring the
   optical absorption}}, Tech. Rep. VIR-001A-07, VIRGO (2007).
 
+\bibitem{COMSOL}
+\enquote{{COMSOL}}, .
+
 \bibitem{Kwee2007Laser}
 P.~Kwee, F.~Seifert, B.~Willke, and K.~Danzmann, The Review of scientific
   instruments \textbf{78} (2007).
+
+\bibitem{Snetkov2011Compensation}
+I.~Snetkov, I.~Mukhin, O.~Palashov, and E.~Khazanov, Opt. Express \textbf{19},
+  6366 (2011).
 
 \bibitem{Fritschel1997Alignment}
 P.~Fritschel and D.~Shoemaker, \enquote{{Alignment Sensing/Control Design
@@ -598,6 +619,13 @@ N.~Wiener, \emph{{Extrapolation, Inerpolation, and Smoothing of Stationary Time
 \bibitem{Feynman1970Feynman}
 R.~P. Feynman, \emph{{Feynman lectures on physics.}} (Addison Wesley Longman,
   1970).
+
+\bibitem{Mavalvala1998Experimental}
+N.~Mavalvala, D.~Sigg, and D.~Shoemaker, Appl. Opt. \textbf{37}, 7743 (1998).
+
+\bibitem{Mavalvala1997Alignment}
+N.~Mavalvala, \enquote{{Alignment issues in laser interferometric
+  gravitational-wave detectors}}, Ph.D. thesis (1997).
 
 \bibitem{Sigg1996Wavefront}
 D.~Sigg, \enquote{{Wavefront Sensor}}, Tech. Rep. T960111, LIGO Laboratory
