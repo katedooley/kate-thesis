@@ -30,35 +30,34 @@ noise. I include in Appendix \ref{sec:groundmotion} seismic spectra
 from the time of each measurement I present.
 
 
-
-
-% In Initial LIGO, the wavefront sensor signals were combined via the
-% input matrix to form error signals for the differential and common
-% ETM and ITM motions.
 \section{The ASC Change of Basis}
-The basis for angular control in Initial LIGO was the sensor
-basis. The wavefront sensors are located such that they sense
-common/differential ETM/ITM angular motion and the control filters
-were designed to feed back to those sets of motions. This does not,
-however, lend itself to easily handling radiation pressure
-torque. Because the sensor basis is not the radiation pressure eigenbasis
-of Section \ref{sec:eigenbasis}, each control servo handled
-combinations of the soft and hard modes. Due to radiation pressure,
-each mirror has two resonances, a more complicated plant than that
-offered by the eigenbasis which has a single resonance for each mode.
+The basis for angular control in Initial LIGO was that of the physical
+sensors. The wavefront sensors are located such that they sense common
+and differential ETM and common and differential ITM angular
+motions. The input matrix was diagonal and the control filters were
+designed to feed back to those sets of motions via the output
+matrix. This does not, however, lend itself to easily handling
+radiation pressure torque. Because the sensor basis is not the
+radiation pressure eigenbasis of Section \ref{sec:eigenbasis}, each
+control servo handled combinations of the soft and hard modes. Due to
+radiation pressure, each mirror has two resonances, a more complicated
+plant than that offered by the eigenbasis which has a single resonance
+for each mode.  The change in control basis from Initial LIGO to
+Enhanced LIGO was a rather straightforward operation of changing only
+the ASC input matrix and the ASC output matrix as described in the
+following subsections. Refer to Figure~\ref{fig:ASCcontrolservo} for
+the locations of these matrices in the servo.
 
-The change in control basis from Initial LIGO to Enhanced LIGO was a
-rather straightforward operation of changing only the ASC input matrix
-and the ASC output matrix, as shown in Figure~\ref{fig:ASCcontrolservo} and
-described in the following subsections.
-
-The convention for the naming of the WFS control signals is WFS1,
-WFS2A, WFS2B, WFS3, and WFS4, as seen in the channel names. This can
-be misleading because of the similarity to the sensor names (WFS1Q,
-WFS2I, WFS2Q, WFS3I, and WFS4I), potentially leading one to assume a
-one-to-one correspondence. For clarity in this dissertation, I refer
-to the WFS control signals by the radiation pressure eigenbasis
-degrees of freedom (DOFs) they represent: 
+Although we changed the meaning of the WFS control signals for
+Enhanced LIGO, we did not update the convention for their naming as
+seen in the channel names: WFS1, WFS2A, WFS2B, WFS3, and WFS4. This
+can be misleading because of the similarity to the sensor names
+(WFS1Q, WFS2I, WFS2Q, WFS3I, and WFS4I), potentially leading one to
+assume a one-to-one correspondence. Although a one-to-one
+correspondence was accurate for Initial LIGO, it is not true for
+Enhanced LIGO. Therefore, for clarity in this dissertation, I refer to
+the WFS control signals by the radiation pressure eigenbasis degrees
+of freedom (DOFs) they represent:
 \begin{itemize}
 \item differential soft (dSoft) \\
 \item common soft (cSoft) \\
@@ -66,9 +65,7 @@ degrees of freedom (DOFs) they represent:
 \item common hard (cHard) \\
 \item recycling mirror (RM)
 \end{itemize}
-Because each mode (for both pitch and yaw) has two possible directions
-of rotation with respect to the beam, differential and common refer to
-the comparison of the sign of the mode in each arm.
+Differential and common refer to the comparison of the sign of the mode in each arm.
 
 %\textcolor{blue}{make block figure!}
 
@@ -565,7 +562,6 @@ the power build-up.
 
 
 
-
 \subsection{Power Scaling}
 \label{sec:powerscaling}
 The signal at the wavefront sensors is proportional to the amplitude
@@ -625,19 +621,23 @@ dependence.
 
 
 
-\subsection{Sideband imbalance}
+\subsection{Sideband Imbalance}
 Another important effect of the PRC on the ASC signals is the
-balancing of the upper and lower 24.4~MHz sideband amplitudes. If they
-are not the same, then SPOB does not accurately represent the power in
-the cavity, and the WFS signals are
-corrupted. %\textcolor{blue}{(Expand.)}
+balancing of the upper and lower 24.4~MHz sideband amplitudes. SPOB is
+the product of the amplitude of the upper and lower sidebands, but the
+total sideband power is the sum of the power in the lower sideband and
+the power in the upper sideband. Therefore, if the upper and lower
+sidebands are not the same, SPOB does not accurately represent the
+power in the cavity. This creates inaccuracies in the WFS power
+scaling.
 
 We set up a temporary optical spectrum analyzer at a pickoff of the
-anti-symmetric port beam in order to measure them. Without any TCS, we
-saw that with less than 6~W input power, the lower sideband is smaller
-than the upper sideband, at 6~W the amplitudes are equal, and above
-6~W, the upper sideband is smaller than the lower. Thus, if TCS is not
-tuned perfectly at all times, we can expect unequal sidebands.
+anti-symmetric port beam in order to measure amplitudes of the
+sidebands. Without any TCS, we saw that with less than 6~W input
+power, the lower sideband is smaller than the upper sideband, at 6~W
+the amplitudes are equal, and above 6~W, the upper sideband is smaller
+than the lower. Thus, if TCS is not tuned perfectly at all times, we
+can expect unequal sidebands.
 % \textcolor{blue}{April 1, 2009 notebook. I don't have OSA data, only
 %   sketches in notebook. Worth saying anything?}
 
@@ -665,18 +665,20 @@ tuned perfectly at all times, we can expect unequal sidebands.
 
 \section{WFS Servo Open Loop Transfer Functions}
 \label{sec:WFSolgs}
-The open loop transfer functions of the wavefront sensor loops as
-measured during a 6~W lock are shown in Figure~\ref{fig:olgs6W}. As
-anticipated from the large differential soft signal seen by WFS1 in
-the sensing matrix measurement (Table~\ref{table:sensing}), that is
-the mode for which we provide the strongest suppression. However, it
-is also conditionally stable (due to a pole at zero that is engaged
-after the servo is turned on), as seen by the phase dropping below
-$-180^{\circ}$ at two frequencies. The unity gain frequency (UGF) must be
-held between roughly 2~Hz and 10~Hz. As shown here, the dSoft UGF is
-at 5~Hz. For the other degrees of freedom, the UGFs are all between
-0.8 and 1~Hz. Each loop has a phase margin of $30^{\circ}$ to
-$40^{\circ}$.
+
+The open loop transfer function, or open loop gain (OLG), is an
+informative measure of the characteristics of a control servo. It is
+the product of each of the elements of the loop, and is often
+summarized as being the product of the plant, $H$, with the control
+filters, $G$:
+\begin{equation}
+\mathrm{OLG} = HG.
+\end{equation}
+In our case, the plant is the radiation-pressure-modified pendulum
+transfer function (Eq.~\ref{eq:modalTF}) and the control filters are
+the digital filters between the input and output matrices. The
+amplitude of the OLG tells the suppression the control loop provides
+and the phase tells about the stability of the system.
 
 \begin{figure}
 \begin{centering}
@@ -688,16 +690,44 @@ $40^{\circ}$.
 \end{centering}
 \end{figure}
 
+We measure the open loop transfer function while the loop is
+closed. This is done by injecting a swept-sine excitation just before
+the digital filters and taking the ratio of the signals just before
+and just after the excitation. Figure~\ref{fig:olgs6W} shows the open
+loop transfer functions of each of the wavefront sensor loops as
+measured during a 6~W lock. As anticipated from the large differential
+soft signal seen by WFS1 in the sensing matrix measurement
+(Table~\ref{table:sensing}), that is the mode for which we can and do
+provide the strongest suppression. However, it is also conditionally
+stable (due to a pole at zero that is engaged after the servo is
+turned on), as seen by the phase dropping below $-180^{\circ}$ at two
+different frequencies. The unity gain frequency (UGF) must be held
+between roughly 2~Hz and 10~Hz. As shown here, the dSoft UGF is at
+5~Hz. For the other degrees of freedom, the UGFs are all between 0.8
+and 1~Hz. Each loop has a phase margin of $30^{\circ}$ to
+$40^{\circ}$.
 
-% \begin{figure}
-% \begin{centering}
-% \subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_mags.pdf}}
-% \subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_phases.pdf}}
-% \caption{Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four
-%   different powers.}
-% \label{fig:DSolgs}
-% \end{centering}
-% \end{figure}
+Figure~\ref{fig:DSolgs} shows measurements of how the dSoft (WFS1) OLG
+changes with power. The 6~W measurement data is the same as that
+presented in Figure~\ref{fig:olgs6W}. From 1~W to 14~W input power the
+suppression provided by the control loop remains constant, but the
+stability of the loop changes. The phase margin at the UGF decreases
+by about $10^{\circ}$ and a third $-180^{\circ}$ phase crossing
+appears at about 500~mHz. The digital filters are fixed with power, so
+the observed changes are due to a changing plant. This is precisely
+the result of the radiation pressure angular spring. I present the
+direct measurement of the plant's modified transfer function in
+Section~\ref{sec:siggsidles_measured}.
+
+\begin{figure}
+\begin{centering}
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_mags.pdf}}
+\subfigure{\includegraphics[width=1.0\columnwidth]{figures/wfs1_olgs_phases.pdf}}
+\caption{Open loop gains (pitch) of the differential soft (WFS1) loop as measured at four
+  different powers.}
+\label{fig:DSolgs}
+\end{centering}
+\end{figure}
 
 % \begin{figure}
 % \begin{centering}
@@ -1014,6 +1044,7 @@ necessary for high power operation, a key challenge for aLIGO.
 \end{centering}
 \end{figure}
 
+
 % \section{Advanced LIGO}
 % The Advanced LIGO interferometers will have more massive mirrors, a stable
 % recycling cavity, and more circulating power. 
@@ -1030,10 +1061,10 @@ necessary for high power operation, a key challenge for aLIGO.
 
 
 \section{Experimental Measurement of the Sidles-Sigg Effect}
+\label{sec:siggsidles_measured}
 
 \begin{figure}
 \begin{centering}
-%\includegraphics[width=1.0\textwidth]{figures/ascservo_measurement.pdf}
 \includegraphics{figures/RPmeasurement_thesis.pdf}
 \caption[Demonstration of radiation pressure eigenbasis torque to
 angle transfer function measurement]{Demonstration of radiation
