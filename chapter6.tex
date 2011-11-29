@@ -59,10 +59,10 @@ Enhanced LIGO. Therefore, for clarity in this dissertation, I refer to
 the WFS control signals by the radiation pressure eigenbasis degrees
 of freedom (DOFs) they represent:
 \begin{itemize}
-\item differential soft (dSoft) \\
-\item common soft (cSoft) \\
-\item differential hard (dHard) \\
-\item common hard (cHard) \\
+\item differential soft (dSoft) \vspace{-10 pt}\\
+\item common soft (cSoft) \vspace{-10 pt}\\
+\item differential hard (dHard) \vspace{-10 pt}\\
+\item common hard (cHard) \vspace{-10 pt}\\
 \item recycling mirror (RM)
 \end{itemize}
 Differential and common refer to the comparison of the sign of the mode in each arm.
@@ -675,10 +675,11 @@ filters, $G$:
 \mathrm{OLG} = HG.
 \end{equation}
 In our case, the plant is the radiation-pressure-modified pendulum
-transfer function (Eq.~\ref{eq:modalTF}) and the control filters are
-the digital filters between the input and output matrices. The
-amplitude of the OLG tells the suppression the control loop provides
-and the phase tells about the stability of the system.
+transfer function (Eq.~\ref{eq:modalTF}) and the control filters
+(found in Appendix~\ref{sec:WFSfilters}) are the digital filters
+between the input and output matrices. The amplitude of the OLG tells
+the suppression the control loop provides and the phase tells about
+the stability of the system.
 
 \begin{figure}
 \begin{centering}
@@ -847,6 +848,7 @@ to each other, not with respect to the ground.
 
 
 \section{ASC to DARM Noise Budget}
+\label{sec:asc2darm}
 One of the most important figures of merit for the ASC is how much
 noise it contributes to DARM. As introduced in
 Section~\ref{sec:tolerance}, the combination of beam spot motion on
@@ -1013,36 +1015,78 @@ demonstrates the effect on DARM of decreasing the WFS1 cut-off filter
 frequency from 35~Hz to 30~Hz.
 
 
-\section{Seismic Feed-Forward to the ASC}
-Implementing a method of Wiener ﬁltering, I show that the angular
-sensing and control error signals can be predicted by ground motion
-witnessed by local seismometers.
+\section{Seismic Feed-forward to the ASC}
+We show in Section~\ref{sec:asc2darm} that angular control limits the
+strain sensitivity at low frequencies and we see from
+Figure~\ref{fig:h_all} that Advanced LIGO aims to improve the low
+frequency sensitivity by up to two orders of magnitude. Although much
+of the improvement comes from better seismic isolation, it is prudent
+to develop methods to reduce the angular control noise for future
+interferometers. A promising technique that I investigated using
+Enhanced LIGO data is seismic feed-forward to the ASC.
 
-Using S6 data, I evaluated the potential benefits of seismic
-feed-forward for the angular degrees of freedom. I designed FIR Wiener
-filters from simultaneous seismometer and ASC error signal time
-series. The Wiener filter minimizes the mean square error between the
-ASC error signal and the Wiener filtered seismometer data. The
-filtered seismometer data can be a good approximation to the ASC error
-signal and thus fed-forward. I found that with a sufficiently long
-Wiener filter and 30 minutes worth of data, we can accurately predict
-the ASC error signal from 0.1 to 20 Hz. If implemented, the rms
-angular mirror motion would be reduced by a factor of ten and yield a
-potential reduction in DARM at low frequencies. More importantly, less
-angular mirror motion would make for a more stable interferometer,
-necessary for high power operation, a key challenge for aLIGO.
-
-\textcolor{blue}{put in Wiener filter figures; explain Wiener
-  filtering or reference?}
-
+The concept is to use Wiener filtering \cite{Wiener1975Extrapolation}
+to predict the ASC signals from seismometer signals and feed-forward
+the filtered sesimometer data in real time. The Wiener filter
+coefficients are chosen to minimize the mean square difference between
+the WFS error signals and the filtered seismometer signals. For this
+to work, there must be a correlation between the seismic and ASC
+signals. I designed FIR Wiener filters from simultaneous seismometer
+and ASC error signal time series and found that with a sufficiently
+long Wiener filter (on the order of 1024 taps) and 30 minutes worth of
+data, we can accurately predict the ASC error signal from 0.1 to
+20~Hz. Figure~\ref{fig:wienerFF} shows the comparison of the nominal
+dSoft (WFS1) error signal with the reduced error signal that one can
+hope to achieve through feed-forward. Called the residual, this
+reduced error signal is the result of subtracting the
+seismometer-predicted ASC error signal from the original error signal.
+We see that if implemented, feed-forward may reduce the rms angular
+mirror motion by a factor of two. Further studies may reveal even
+greater reduction can be achieved.
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=1.0\textwidth]{figures/wienerDU_FF.pdf}
-\caption[]{}
+\caption[Demonstration of potential reduction of WFS error signals
+using seismic feed-forward]{Demonstration of potential reduction of
+  WFS error signals using seismic feed-forward.}
 \label{fig:wienerFF}
 \end{centering}
 \end{figure}
+
+There are several ways in which feed-forward might be
+accomplished. The two primary options are to send the
+seismometer-predicted ASC drive to either the mirror coils or to the
+hydraulic external pre-isolator (HEPI) seismic isolation tables. The
+benefit of both of these methods is that they would physically reduce
+the mirror motion and therefore reduce the need for ASC feedback. This
+would allow for more flexible loop shape design such as lower cut-off
+filters and result in less impression of ASC noise in DARM. The
+simplest of these two options is sending the signal to the coils
+because the transfer function from the coils to the mirror motion is
+well known. A disadvantage is that the total coil currents would not
+be reduced, meaning the noise from magnetic domain flipping,
+Barkhausen noise, would not be reduced. Feeding-forward to HEPI would
+reduce the Barkhausen noise, but would require a carefully measured
+transfer function from HEPI to angular mirror motion. Seismic
+feed-forward to HEPI to reduce LSC signals was demonstrated during
+Enhanced LIGO \cite{DeRosa2011Global}.
+
+An alternative method to reducing the ASC noise in DARM does not
+involve the seismometers or feed-forward to the ASC, but feed-forward
+to DARM itself. From a carefully measured ASC to DARM transfer
+function, the predicted contribution of ASC noise in DARM can be
+subtracted from DARM in real time. This type of feed-forward was
+implemented in Initial and Enhanced LIGO for the Michelson (MICH) and
+power recycling cavity (PRC) loops \cite[Ch. 2]{Ballmer2006LIGO}. 
+
+Any of these methods may be implemented in post-processing of the DARM
+data, but there are benefits to doing it in real-time. The primary
+advantage is the actual reduction of mirror motion which would make
+for an all-around more stable interferometer. Second, eliminating
+known noises from the strain spectrum is very useful for
+commissioning. It allows us to then see other noises in real-time and
+to be more efficient at the endless game of noise hunting.
 
 
 % \section{Advanced LIGO}
@@ -1060,8 +1104,14 @@ necessary for high power operation, a key challenge for aLIGO.
 
 
 
-\section{Experimental Measurement of the Sidles-Sigg Effect}
+\section{Experimental Measurement of the Radiation Pressure Angular Spring}
 \label{sec:siggsidles_measured}
+
+I directly measured the expected radiation-pressure-modified torque to
+angle transfer function of the LIGO arm cavities that I first
+introduced in Chapter~\ref{ch:eigenmodes}. Through a clever
+measurement method, I witness both the stable and unstable modes
+without any post-data-taking manipulation.
 
 \begin{figure}
 \begin{centering}
@@ -1081,27 +1131,29 @@ the response of the optomechanical system. By injecting a disturbance
 somewhere in the loop and measuring the response at selected points in
 the loop, we can produce a measurement of the optomechanical system
 that is not sensitive to the details of the control system. Here we
-use this system to produce measurements of the optomechanical plant at
+use this system to produce measurements of the opto-mechanical plant at
 several different operating powers, demonstrating the modifications due
-to radiation pressure, i.e. the Sidles-Sigg effect.
+to radiation pressure, i.e. the soft and hard modes, sometimes also
+referred to as the Sidles-Sigg effect.
 
 The various elements of the plant and the control system are depicted
-in Figure~\ref{fig:RPTFmeasurement}.  For this measurement, transfer
-functions are taken from torque input to the resulting angular
+in Figure~\ref{fig:RPTFmeasurement}.  For this measurement, I took
+transfer functions from the torque input to the resulting angular
 displacement (as measured by the WFS), both in the radiation pressure
-eigenbasis.  Simultaneously, an excitation is injected into the
-control leg of the servo loop.  The resulting measurement reproduces
-the transfer function of the optomechanical plant, independent of the
-control system.
+eigenbasis. Simultaneously, I injected an excitation into the control
+leg of the servo loop, as is done for the sensing matrix mesaurement
+described in Section~\ref{sec:inputmatrix}. The resulting measurement
+reproduces the transfer function of the opto-mechanical plant,
+independent of the control system.
 
 Results are shown in Figures~\ref{fig:hardTF} (hard mode) and
 ~\ref{fig:softTF} (soft mode); least-squares fits of second-order
 transfer functions are made to the data.  In the hard mode plot, we
 can clearly see the increase of the resonant frequency with power,
-from $\sim0.65$ Hz at 1~W input power to $\sim0.95$ Hz at 10~W input
+from $\sim0.65$ Hz at 1~W input power to $\sim$0.95~Hz at 10~W input
 power.  Simultaneously, in the soft mode plot, we see the resonance
 decrease in frequency as the power is increased from 1~W to 6~W.  When
-the input power is increased to 10W and beyond, the resonance
+the input power is increased to 10~W and beyond, the resonance
 disappears; the plant has become statically unstable.
 
 \begin{figure}
@@ -1126,15 +1178,24 @@ disappears; the plant has become statically unstable.
 
 These measurements show a clear confirmation of the Sidles-Sigg theory
 and demonstrate a successful power-independent diagonalization of the
-sensing and control of the optomechanical system.
+sensing and control of the opto-mechanical plant.
 
 
 
 \section{Summary}
-\textcolor{blue}{add a summary here that ASC in
-  neither base was limiting us but that the experience gained for
-  aLIGO is priceless. Some catch phrase that highlights a particular
-  lesson learned would be good}
+The ASC performed as it needed to for Enhanced LIGO to operate at
+higher powers without introducing an excess of control noise. The ASC
+does limit strain sensitivity at the lowest end of the detection band,
+but we offer possible solutions to decrease that noise in future
+detectors. We directly measured the radiation pressure angular spring,
+confirming our theoretcial understanding of the basic physics that
+drives the ASC design. Although the ASC in neither base was limiting
+us, the experience gained for Advanced LIGO is priceless. Advanced
+LIGO will have heavier mirrors with a different geometry such that
+radiation pressure torque will not play so large a role
+\cite{Barsotti2010Alignment} and its power recycling cavity will be
+stable \cite{AdvLigoSysDesign}.
+
 
 
 

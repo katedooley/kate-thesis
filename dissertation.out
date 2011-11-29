@@ -83,12 +83,12 @@
 \BOOKMARK [1][-]{section.6.3}{Input Beam Motion}{chapter.6}
 \BOOKMARK [1][-]{section.6.4}{The Marginally-stable Power Recycling Cavity}{chapter.6}
 \BOOKMARK [2][-]{subsection.6.4.1}{Power Scaling}{section.6.4}
-\BOOKMARK [2][-]{subsection.6.4.2}{Sideband imbalance}{section.6.4}
+\BOOKMARK [2][-]{subsection.6.4.2}{Sideband Imbalance}{section.6.4}
 \BOOKMARK [1][-]{section.6.5}{WFS Servo Open Loop Transfer Functions}{chapter.6}
 \BOOKMARK [1][-]{section.6.6}{Residual Angular Motion}{chapter.6}
 \BOOKMARK [1][-]{section.6.7}{ASC to DARM Noise Budget}{chapter.6}
-\BOOKMARK [1][-]{section.6.8}{Seismic Feed-Forward to the ASC}{chapter.6}
-\BOOKMARK [1][-]{section.6.9}{Experimental Measurement of the Sidles-Sigg Effect}{chapter.6}
+\BOOKMARK [1][-]{section.6.8}{Seismic Feed-forward to the ASC}{chapter.6}
+\BOOKMARK [1][-]{section.6.9}{Experimental Measurement of the Radiation Pressure Angular Spring}{chapter.6}
 \BOOKMARK [1][-]{section.6.10}{Summary}{chapter.6}
 \BOOKMARK [0][-]{chapter.7}{CONCLUSIONS}{}
 \BOOKMARK [1][-]{section.7.1}{Higher power in Enhanced LIGO}{chapter.7}
@@ -122,6 +122,7 @@
 \BOOKMARK [2][-]{subsection.C.3.3}{Displaced and Tilted Cavity}{section.C.3}
 \BOOKMARK [1][-]{section.C.4}{Initial DC Alignment of the Interferometer}{appendix.C}
 \BOOKMARK [1][-]{section.C.5}{Photodiodes}{appendix.C}
-\BOOKMARK [1][-]{section.C.6}{Seismic Spectra}{appendix.C}
+\BOOKMARK [1][-]{section.C.6}{WFS Control Filters}{appendix.C}
+\BOOKMARK [1][-]{section.C.7}{Seismic Spectra}{appendix.C}
 \BOOKMARK [0][-]{appendix*.7}{REFERENCES}{}
 \BOOKMARK [0][-]{appendix*.8}{BIOGRAPHICAL SKETCH}{}

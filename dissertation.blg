@@ -15,69 +15,51 @@ A level-1 auxiliary file: chapter7.aux
 A level-1 auxiliary file: appendix.aux
 The style file: ol.bst
 A level-1 auxiliary file: bio.aux
-Database file #1: group-1530.bib
-Warning--entry type for "COMSOL" isn't style-file defined
---line 222 of file group-1530.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Database file #1: group-1530_final.bib
 Warning--empty journal in Carroll1997Lecture
-Warning--you've exceeded 5000, the global-string-size, for entry Abbott2009Search
-while executing--line 2639 of file ol.bst
-*Please notify the bibstyle designer*
-Warning--you've exceeded 5000, the global-string-size, for entry S5CBCnospin
-while executing--line 2639 of file ol.bst
-*Please notify the bibstyle designer*
-Warning--you've exceeded 5000, the global-string-size, for entry Abadie2010First
-while executing--line 2639 of file ol.bst
-*Please notify the bibstyle designer*
-Warning--you've exceeded 5000, the global-string-size, for entry Abadie2010Predictions
-while executing--line 2639 of file ol.bst
-*Please notify the bibstyle designer*
 Warning--empty journal in Hobbs2009International
-Warning--you've exceeded 5000, the global-string-size, for entry Abbott2009LIGO
-while executing--line 2639 of file ol.bst
-*Please notify the bibstyle designer*
 Warning--empty author in 1998Component
 Warning--missing school in Mavalvala1997Alignment
 Warning--can't use both author and editor fields in Siegman1986Lasers
-You've used 65 entries,
+You've used 68 entries,
             2553 wiz_defined-function locations,
-            996 strings with 69778 characters,
-and the built_in function-call counts, 90080 in all, are:
-= -- 1081
-> -- 10502
+            1006 strings with 15484 characters,
+and the built_in function-call counts, 18555 in all, are:
+= -- 1134
+> -- 667
 < -- 19
-+ -- 3530
-- -- 3465
-* -- 7655
-:= -- 11994
-add.period$ -- 65
-call.type$ -- 65
++ -- 253
+- -- 185
+* -- 1112
+:= -- 2251
+add.period$ -- 68
+call.type$ -- 68
 change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 70
-duplicate$ -- 8425
-empty$ -- 5009
-format.name$ -- 3506
-if$ -- 17106
+cite$ -- 73
+duplicate$ -- 1941
+empty$ -- 1800
+format.name$ -- 228
+if$ -- 4134
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 3794
-newline$ -- 199
-num.names$ -- 65
-pop$ -- 4009
+int.to.str$ -- 68
+missing$ -- 527
+newline$ -- 208
+num.names$ -- 69
+pop$ -- 751
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 412
+skip$ -- 425
 stack$ -- 0
-substring$ -- 486
-swap$ -- 7818
+substring$ -- 508
+swap$ -- 1291
 text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 99
-width$ -- 67
-write$ -- 527
-(There were 11 warnings)
+while$ -- 104
+width$ -- 70
+write$ -- 554
+(There were 5 warnings)
